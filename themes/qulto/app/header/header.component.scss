@@ -1,0 +1,11 @@
+@import 'src/app/header/header.component.scss';
+
+.navbar ::ng-deep {
+  a {
+    color: $primary;
+
+    &:hover, &focus {
+      color: #8EB812;
+    }
+  }
+}
