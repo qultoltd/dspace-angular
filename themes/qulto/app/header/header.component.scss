@@ -1,5 +1,9 @@
 @import 'src/app/header/header.component.scss';
 
+.navbar-brand img{
+  margin-right: 20px;
+}
+
 .navbar ::ng-deep {
   a {
     color: $primary;

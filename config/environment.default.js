@@ -153,6 +153,10 @@ module.exports = {
     code: 'lv',
     label: 'Latviešu',
     active: true,
+  }, {
+    code: 'hu',
+    label: 'Magyar',
+    active: true,
   }],
   // Browse-By Pages
   browseBy: {

@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-family-monospace: 'Roboto', sans-serif;
+$font-family-base: 'Roboto', sans-serif;
+
 $theme-colors: (
   primary: #29528D,
-  secondary: #29528D,
+  secondary: #8EADD9,
   success: #8EB812,
   info: #2790B0,
   warning: #ec9433,
   danger: red,
-  light: lightblue,
+  light: #8EADD9,
   dark: #29528D
 ) !default;
