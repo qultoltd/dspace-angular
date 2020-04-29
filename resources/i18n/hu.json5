@@ -137,7 +137,7 @@
   
   // "admin.registries.bitstream-formats.table.delete": "Delete selected",
   // TODO New key - Add a translation
-  "admin.registries.bitstream-formats.table.delete": "Delete selected",
+  "admin.registries.bitstream-formats.table.delete": "Kijelöltek törlése",
   
   // "admin.registries.bitstream-formats.table.deselect-all": "Deselect all",
   // TODO New key - Add a translation
@@ -211,7 +211,7 @@
   
   // "admin.registries.metadata.schemas.table.delete": "Delete selected",
   // TODO New key - Add a translation
-  "admin.registries.metadata.schemas.table.delete": "Delete selected",
+  "admin.registries.metadata.schemas.table.delete": "Kijelöltek törlése",
   
   // "admin.registries.metadata.schemas.table.id": "ID",
   // TODO New key - Add a translation
@@ -245,7 +245,7 @@
   
   // "admin.registries.schema.fields.table.delete": "Delete selected",
   // TODO New key - Add a translation
-  "admin.registries.schema.fields.table.delete": "Delete selected",
+  "admin.registries.schema.fields.table.delete": "Kijelöltek törlése",
   
   // "admin.registries.schema.fields.table.field": "Field",
   // TODO New key - Add a translation
@@ -375,15 +375,15 @@
   
   // "admin.access-control.epeople.table.edit": "Edit",
   // TODO New key - Add a translation
-  "admin.access-control.epeople.table.edit": "Edit",
+  "admin.access-control.epeople.table.edit": "Szerkesztés",
   
   // "admin.access-control.epeople.table.edit.buttons.edit": "Edit \"{{name}}\"",
   // TODO New key - Add a translation
-  "admin.access-control.epeople.table.edit.buttons.edit": "Edit \"{{name}}\"",
+  "admin.access-control.epeople.table.edit.buttons.edit": "\"{{name}}\" Szerkesztése",
   
   // "admin.access-control.epeople.table.edit.buttons.remove": "Delete \"{{name}}\"",
   // TODO New key - Add a translation
-  "admin.access-control.epeople.table.edit.buttons.remove": "Delete \"{{name}}\"",
+  "admin.access-control.epeople.table.edit.buttons.remove": "\"{{name}}\" törlése",
   
   // "admin.access-control.epeople.no-items": "No EPeople to show.",
   // TODO New key - Add a translation
@@ -395,7 +395,7 @@
   
   // "admin.access-control.epeople.form.edit": "Edit EPerson",
   // TODO New key - Add a translation
-  "admin.access-control.epeople.form.edit": "Edit EPerson",
+  "admin.access-control.epeople.form.edit": "EPerson Szerkesztése",
   
   // "admin.access-control.epeople.form.firstName": "First name",
   // TODO New key - Add a translation
@@ -517,15 +517,15 @@
   
   // "admin.access-control.groups.table.edit": "Edit",
   // TODO New key - Add a translation
-  "admin.access-control.groups.table.edit": "Edit",
+  "admin.access-control.groups.table.edit": "Szerkesztés",
   
   // "admin.access-control.groups.table.edit.buttons.edit": "Edit \"{{name}}\"",
   // TODO New key - Add a translation
-  "admin.access-control.groups.table.edit.buttons.edit": "Edit \"{{name}}\"",
+  "admin.access-control.groups.table.edit.buttons.edit": "\"{{name}}\" szerkesztése",
   
   // "admin.access-control.groups.table.edit.buttons.remove": "Delete \"{{name}}\"",
   // TODO New key - Add a translation
-  "admin.access-control.groups.table.edit.buttons.remove": "Delete \"{{name}}\"",
+  "admin.access-control.groups.table.edit.buttons.remove": "\"{{name}}\" törlése",
   
   // "admin.access-control.groups.no-items": "No groups found with this in their name or this as UUID",
   // TODO New key - Add a translation
@@ -728,23 +728,23 @@
   
   // "admin.search.breadcrumbs": "Administrative Search",
   // TODO New key - Add a translation
-  "admin.search.breadcrumbs": "Administrative Search",
+  "admin.search.breadcrumbs": "Adminisztratív keresés",
   
   // "admin.search.collection.edit": "Edit",
   // TODO New key - Add a translation
-  "admin.search.collection.edit": "Edit",
+  "admin.search.collection.edit": "Szerkesztés",
   
   // "admin.search.community.edit": "Edit",
   // TODO New key - Add a translation
-  "admin.search.community.edit": "Edit",
+  "admin.search.community.edit": "Szerkesztés",
   
   // "admin.search.item.delete": "Delete",
   // TODO New key - Add a translation
-  "admin.search.item.delete": "Delete",
+  "admin.search.item.delete": "Törlés",
   
   // "admin.search.item.edit": "Edit",
   // TODO New key - Add a translation
-  "admin.search.item.edit": "Edit",
+  "admin.search.item.edit": "Szerkesztés",
   
   // "admin.search.item.make-private": "Make Private",
   // TODO New key - Add a translation
@@ -768,15 +768,15 @@
   
   // "admin.search.item.withdraw": "Withdraw",
   // TODO New key - Add a translation
-  "admin.search.item.withdraw": "Withdraw",
+  "admin.search.item.withdraw": "Visszavonás",
   
   // "admin.search.item.withdrawn": "Withdrawn",
   // TODO New key - Add a translation
-  "admin.search.item.withdrawn": "Withdrawn",
+  "admin.search.item.withdrawn": "Visszavonás",
   
   // "admin.search.title": "Administrative Search",
   // TODO New key - Add a translation
-  "admin.search.title": "Administrative Search",
+  "admin.search.title": "Adminisztratív keresés",
   
   
   
@@ -1300,7 +1300,7 @@
   "community.create.notifications.success": "Közösség sikeresen létrehozva",
   
   // "community.create.sub-head": "Create a Sub-Community for Community {{ parent }}",
-  "community.create.sub-head": "Készíts egy Alkategóriát a {{ parent }} Közösségen belül",
+  "community.create.sub-head": "Készíts egy alárendelt közösséget a(z) {{ parent }} Közösségen belül",
   
   // "community.delete.cancel": "Cancel",
   "community.delete.cancel": "Mégsem",
@@ -1321,7 +1321,7 @@
   "community.delete.text": "Biztosan törölni szeretné a következő kategóriát: \"{{ dso }}\"",
   
   // "community.edit.delete": "Delete this community",
-  "community.edit.delete": "Töröld a következő Közösséget",
+  "community.edit.delete": "Töröld a következő közösséget",
   
   // "community.edit.head": "Edit Community",
   "community.edit.head": "Közösség szerkesztése",
@@ -1764,7 +1764,7 @@
   
   // "item.edit.bitstreams.edit.buttons.edit": "Edit",
   // TODO New key - Add a translation
-  "item.edit.bitstreams.edit.buttons.edit": "Edit",
+  "item.edit.bitstreams.edit.buttons.edit": "Szerkesztés",
   
   // "item.edit.bitstreams.edit.buttons.remove": "Remove",
   // TODO New key - Add a translation
@@ -1868,7 +1868,7 @@
   
   // "item.edit.delete.header": "Delete item: {{ id }}",
   // TODO New key - Add a translation
-  "item.edit.delete.header": "Delete item: {{ id }}",
+  "item.edit.delete.header": "Tétel törlése: {{ id }}",
   
   // "item.edit.delete.success": "The item has been deleted",
   // TODO New key - Add a translation
@@ -1964,7 +1964,7 @@
   
   // "item.edit.metadata.edit.buttons.edit": "Edit",
   // TODO New key - Add a translation
-  "item.edit.metadata.edit.buttons.edit": "Edit",
+  "item.edit.metadata.edit.buttons.edit": "Szerkesztés",
   
   // "item.edit.metadata.edit.buttons.remove": "Remove",
   // TODO New key - Add a translation
@@ -1980,7 +1980,7 @@
   
   // "item.edit.metadata.headers.edit": "Edit",
   // TODO New key - Add a translation
-  "item.edit.metadata.headers.edit": "Edit",
+  "item.edit.metadata.headers.edit": "Szerkesztés",
   
   // "item.edit.metadata.headers.field": "Field",
   // TODO New key - Add a translation
@@ -2314,7 +2314,7 @@
   
   // "item.edit.tabs.status.buttons.withdraw.button": "Withdraw...",
   // TODO New key - Add a translation
-  "item.edit.tabs.status.buttons.withdraw.button": "Withdraw...",
+  "item.edit.tabs.status.buttons.withdraw.button": "Visszavonás...",
   
   // "item.edit.tabs.status.buttons.withdraw.label": "Withdraw item from the repository",
   // TODO New key - Add a translation
@@ -2376,7 +2376,7 @@
   
   // "item.edit.withdraw.confirm": "Withdraw",
   // TODO New key - Add a translation
-  "item.edit.withdraw.confirm": "Withdraw",
+  "item.edit.withdraw.confirm": "Visszavonás",
   
   // "item.edit.withdraw.description": "Are you sure this item should be withdrawn from the archive?",
   // TODO New key - Add a translation
@@ -2388,7 +2388,7 @@
   
   // "item.edit.withdraw.header": "Withdraw item: {{ id }}",
   // TODO New key - Add a translation
-  "item.edit.withdraw.header": "Withdraw item: {{ id }}",
+  "item.edit.withdraw.header": "Tétel visszavonása: {{ id }}",
   
   // "item.edit.withdraw.success": "The item was withdrawn successfully",
   // TODO New key - Add a translation
@@ -2636,7 +2636,7 @@
   "loading.sub-collections": "Algyűjtemények betöltése...",
   
   // "loading.sub-communities": "Loading sub-communities...",
-  "loading.sub-communities": "Alkategóriák betöltése...",
+  "loading.sub-communities": "Alárendelt közösségek betöltése...",
   
   // "loading.top-level-communities": "Loading top-level communities...",
   "loading.top-level-communities": "Legfelső szintű kategóriák betöltése...",
@@ -2653,7 +2653,7 @@
   "login.form.header": "Kérjük jelentkezzen be",
   
   // "login.form.new-user": "New user? Click here to register.",
-  "login.form.new-user": "Új felhasználó? Kattintson ide hogy regisztráljon.",
+  "login.form.new-user": "Regisztráció",
   
   // "login.form.or-divider": "or",
   "login.form.or-divider": "vagy",
@@ -3667,7 +3667,7 @@
   "search.sidebar.results": "találatok",
   
   // "search.sidebar.settings.rpp": "Results per page",
-  "search.sidebar.settings.rpp": "Találat per oldal",
+  "search.sidebar.settings.rpp": "Találat oldalanként",
   
   // "search.sidebar.settings.sort-by": "Sort By",
   "search.sidebar.settings.sort-by": "Rendezés mikéntje",
@@ -4127,7 +4127,7 @@
   
   // "submission.sections.upload.delete.submit": "Delete",
   // TODO New key - Add a translation
-  "submission.sections.upload.delete.submit": "Delete",
+  "submission.sections.upload.delete.submit": "Törlés",
   
   // "submission.sections.upload.drop-message": "Drop files to attach them to the item",
   // TODO New key - Add a translation
@@ -4211,7 +4211,7 @@
   
   // "submission.workflow.generic.delete": "Delete",
   // TODO New key - Add a translation
-  "submission.workflow.generic.delete": "Delete",
+  "submission.workflow.generic.delete": "Törlés",
   
   // "submission.workflow.generic.delete-help": "If you would to discard this item, select \"Delete\".  You will then be asked to confirm it.",
   // TODO New key - Add a translation
@@ -4219,7 +4219,7 @@
   
   // "submission.workflow.generic.edit": "Edit",
   // TODO New key - Add a translation
-  "submission.workflow.generic.edit": "Edit",
+  "submission.workflow.generic.edit": "Szerkesztés",
   
   // "submission.workflow.generic.edit-help": "Select this option to change the item's metadata.",
   // TODO New key - Add a translation
@@ -4245,7 +4245,7 @@
   
   // "submission.workflow.tasks.claimed.edit": "Edit",
   // TODO New key - Add a translation
-  "submission.workflow.tasks.claimed.edit": "Edit",
+  "submission.workflow.tasks.claimed.edit": "Szerkesztés",
   
   // "submission.workflow.tasks.claimed.edit_help": "Select this option to change the item's metadata.",
   // TODO New key - Add a translation
