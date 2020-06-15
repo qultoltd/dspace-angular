@@ -23,9 +23,9 @@ $header-logo-height: 80px !default;
 $header-logo-height-xs: 50px !default;
 $header-icon-color: $link-color !default;
 
-$admin-sidebar-bg: darken(#2B4E72, 17%) !default;
-$admin-sidebar-active-bg: darken($admin-sidebar-bg, 3%) !default;
-$admin-sidebar-header-bg: darken($admin-sidebar-bg, 7%) !default;
+$admin-sidebar-bg: #29528D !default;
+$admin-sidebar-active-bg: #29528D !default;
+$admin-sidebar-header-bg: #133B76 !default;
 
 $dark-scrollbar-background: $admin-sidebar-active-bg !default;
 $dark-scrollbar-foreground: #47495d !default;

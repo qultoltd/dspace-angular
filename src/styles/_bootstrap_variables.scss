@@ -30,14 +30,14 @@ $red: #CF4444 !default;
 $dark: darken($blue, 17%) !default;
 
 $theme-colors: (
-        primary: $blue,
-        secondary: $gray-700,
-        success: $green,
-        info: $cyan,
-        warning: $yellow,
-        danger: $red,
-        light: $gray-100,
-        dark: $dark
+        primary: #29528D,
+        secondary: #8EADD9,
+        success: #8EB812,
+        info: #2790B0,
+        warning: #ec9433,
+        danger: red,
+        light: #8EADD9,
+        dark: #29528D
 ) !default;
 /* Fonts */
 $link-color: map-get($theme-colors, info) !default;
