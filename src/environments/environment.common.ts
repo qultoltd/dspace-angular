@@ -1,7 +1,7 @@
-import { GlobalConfig } from '../config/global-config.interface';
-import { NotificationAnimationsType } from '../app/shared/notifications/models/notification-animations-type';
-import { BrowseByType } from '../app/+browse-by/+browse-by-switcher/browse-by-decorator';
-import { RestRequestMethod } from '../app/core/data/rest-request-method';
+import { GlobalConfig } from "../config/global-config.interface";
+import { NotificationAnimationsType } from "../app/shared/notifications/models/notification-animations-type";
+import { BrowseByType } from "../app/+browse-by/+browse-by-switcher/browse-by-decorator";
+import { RestRequestMethod } from "../app/core/data/rest-request-method";
 
 export const environment: GlobalConfig = {
   production: true,
@@ -9,20 +9,20 @@ export const environment: GlobalConfig = {
   // NOTE: these must be "synced" with the 'dspace.ui.url' setting in your backend's local.cfg.
   ui: {
     ssl: false,
-    host: 'localhost',
+    host: "localhost",
     port: 4000,
     // NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
-    nameSpace: '/',
+    nameSpace: "/",
   },
   // The REST API server settings.
   // NOTE: these must be "synced" with the 'dspace.server.url' setting in your backend's local.cfg.
   // The 'nameSpace' must always end in "/api" as that's the subpath of the REST API in the backend.
   rest: {
-    ssl: true,
-    host: 'dspace7.4science.cloud',
-    port: 443,
+    ssl: false,
+    host: "localhost",
+    port: 8080,
     // NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
-    nameSpace: '/server/api',
+    nameSpace: "/server",
   },
   // Caching settings
   cache: {
@@ -31,39 +31,44 @@ export const environment: GlobalConfig = {
       default: 15 * 60 * 1000, // 15 minutes
     },
     // msToLive: 1000, // 15 minutes
-    control: 'max-age=60', // revalidate browser
+    control: "max-age=60", // revalidate browser
     autoSync: {
       defaultTime: 0,
       maxBufferSize: 100,
-      timePerMethod: {[RestRequestMethod.PATCH]: 3} as any // time in seconds
-    }
+      timePerMethod: { [RestRequestMethod.PATCH]: 3 } as any, // time in seconds
+    },
   },
   // Form settings
   form: {
     // NOTE: Map server-side validators to comparative Angular form validators
     validatorMap: {
-      required: 'required',
-      regex: 'pattern'
-    }
+      required: "required",
+      regex: "pattern",
+    },
   },
   // Notifications
   notifications: {
     rtl: false,
-    position: ['top', 'right'],
+    position: ["top", "right"],
     maxStack: 8,
     // NOTE: after how many seconds notification is closed automatically. If set to zero notifications are not closed automatically
     timeOut: 5000, // 5 second
     clickToClose: true,
     // NOTE: 'fade' | 'fromTop' | 'fromRight' | 'fromBottom' | 'fromLeft' | 'rotate' | 'scale'
-    animate: NotificationAnimationsType.Scale
+    animate: NotificationAnimationsType.Scale,
   },
   // Submission settings
   submission: {
     autosave: {
       // NOTE: which metadata trigger an autosave
-      metadata: ['dc.title', 'dc.identifier.doi', 'dc.identifier.pmid', 'dc.identifier.arxiv'],
+      metadata: [
+        "dc.title",
+        "dc.identifier.doi",
+        "dc.identifier.pmid",
+        "dc.identifier.arxiv",
+      ],
       // NOTE: every how many minutes submission is saved automatically
-      timer: 5
+      timer: 5,
     },
     icons: {
       metadata: [
@@ -77,14 +82,14 @@ export const environment: GlobalConfig = {
          * }
          */
         {
-          name: 'dc.author',
-          style: 'fas fa-user'
+          name: "dc.author",
+          style: "fas fa-user",
         },
         // default configuration
         {
-          name: 'default',
-          style: ''
-        }
+          name: "default",
+          style: "",
+        },
       ],
       authority: {
         confidence: [
@@ -99,75 +104,88 @@ export const environment: GlobalConfig = {
            */
           {
             value: 600,
-            style: 'text-success'
+            style: "text-success",
           },
           {
             value: 500,
-            style: 'text-info'
+            style: "text-info",
           },
           {
             value: 400,
-            style: 'text-warning'
+            style: "text-warning",
           },
           // default configuration
           {
-            value: 'default',
-            style: 'text-muted'
+            value: "default",
+            style: "text-muted",
           },
-
-        ]
-      }
-    }
+        ],
+      },
+    },
   },
   // Angular Universal settings
   universal: {
     preboot: true,
     async: true,
-    time: false
+    time: false,
   },
   // Google Analytics tracking id
-  gaTrackingId: '',
+  gaTrackingId: "",
   // Log directory
-  logDirectory: '.',
+  logDirectory: ".",
   // NOTE: will log all redux actions and transfers in console
   debug: false,
   // Default Language in which the UI will be rendered if the user's browser language is not an active language
-  defaultLanguage: 'en',
+  defaultLanguage: "en",
   // Languages. DSpace Angular holds a message catalog for each of the following languages.
   // When set to active, users will be able to switch to the use of this language in the user interface.
-  languages: [{
-    code: 'en',
-    label: 'English',
-    active: true,
-  }, {
-    code: 'de',
-    label: 'Deutsch',
-    active: true,
-  }, {
-    code: 'cs',
-    label: 'Čeština',
-    active: true,
-  }, {
-    code: 'nl',
-    label: 'Nederlands',
-    active: true,
-  }, {
-    code: 'pt',
-    label: 'Português',
-    active: true,
-  }, {
-    code: 'fr',
-    label: 'Français',
-    active: true,
-  }, {
-    code: 'lv',
-    label: 'Latviešu',
-    active: true,
-  },{
-    code: 'fi',
-    label: 'Suomi',
-    active: true,
-  }],
+  languages: [
+    {
+      code: "en",
+      label: "English",
+      active: true,
+    },
+    {
+      code: "de",
+      label: "Deutsch",
+      active: true,
+    },
+    {
+      code: "cs",
+      label: "Čeština",
+      active: true,
+    },
+    {
+      code: "nl",
+      label: "Nederlands",
+      active: true,
+    },
+    {
+      code: "pt",
+      label: "Português",
+      active: true,
+    },
+    {
+      code: "fr",
+      label: "Français",
+      active: true,
+    },
+    {
+      code: "lv",
+      label: "Latviešu",
+      active: true,
+    },
+    {
+      code: "fi",
+      label: "Suomi",
+      active: true,
+    },
+    {
+      code: "hu",
+      label: "Magyar",
+      active: true,
+    },
+  ],
   // Browse-By Pages
   browseBy: {
     // Amount of years to display using jumps of one year (current year - oneYearLimit)
@@ -185,35 +203,35 @@ export const environment: GlobalConfig = {
     //    metadataField:  The metadata-field used to create starts-with options (only necessary when the type is set to 'date')
     types: [
       {
-        id: 'title',
+        id: "title",
         type: BrowseByType.Title,
       },
       {
-        id: 'dateissued',
+        id: "dateissued",
         type: BrowseByType.Date,
-        metadataField: 'dc.date.issued'
+        metadataField: "dc.date.issued",
       },
       {
-        id: 'author',
-        type: BrowseByType.Metadata
+        id: "author",
+        type: BrowseByType.Metadata,
       },
       {
-        id: 'subject',
-        type: BrowseByType.Metadata
-      }
-    ]
+        id: "subject",
+        type: BrowseByType.Metadata,
+      },
+    ],
   },
   item: {
     edit: {
-      undoTimeout: 10000 // 10 seconds
-    }
+      undoTimeout: 10000, // 10 seconds
+    },
   },
   collection: {
     edit: {
-      undoTimeout: 10000 // 10 seconds
-    }
+      undoTimeout: 10000, // 10 seconds
+    },
   },
   theme: {
-    name: 'default',
+    name: "digitize",
   },
 };

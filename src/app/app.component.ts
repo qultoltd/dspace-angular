@@ -116,7 +116,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.cssService.addCSSVariable('mdMin', '768px');
     this.cssService.addCSSVariable('lgMin', '576px');
     this.cssService.addCSSVariable('smMin', '0');
-    this.cssService.addCSSVariable('adminSidebarActiveBg', '#0f1b28');
+    this.cssService.addCSSVariable('adminSidebarActiveBg', '#476a4a');
     this.cssService.addCSSVariable('sidebarItemsWidth', '250px');
     this.cssService.addCSSVariable('collapsedSidebarWidth', '53.234px');
     this.cssService.addCSSVariable('totalSidebarWidth', '303.234px');
