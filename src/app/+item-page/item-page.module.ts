@@ -35,6 +35,7 @@ import { VgCoreModule } from "videogular2/compiled/core";
 import { VgControlsModule } from "videogular2/compiled/controls";
 import { VgOverlayPlayModule } from "videogular2/compiled/overlay-play";
 import { VgBufferingModule } from "videogular2/compiled/buffering";
+import { MediaViewerComponent } from './media-viewer/media-viewer.component';
 
 @NgModule({
   imports: [
@@ -48,8 +49,8 @@ import { VgBufferingModule } from "videogular2/compiled/buffering";
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
-  ],
-  declarations: [
+],
+declarations: [
     ItemPageComponent,
     FullItemPageComponent,
     MetadataUriValuesComponent,
@@ -71,8 +72,9 @@ import { VgBufferingModule } from "videogular2/compiled/buffering";
     UploadBitstreamComponent,
     TabbedRelatedEntitiesSearchComponent,
     AbstractIncrementalListComponent,
-  ],
-  exports: [
+    MediaViewerComponent
+],
+exports: [
     ItemComponent,
     MetadataValuesComponent,
     MetadataFieldWrapperComponent,

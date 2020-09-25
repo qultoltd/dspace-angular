@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
-import { BitstreamFormatDataService } from "../core/data/bitstream-format-data.service";
-import { BitstreamFormat } from "../core/shared/bitstream-format.model";
-import { Bitstream } from "../core/shared/bitstream.model";
-import { getFirstSucceededRemoteDataPayload } from "../core/shared/operators";
+import { BitstreamFormatDataService } from 'src/app/core/data/bitstream-format-data.service';
+import { BitstreamFormat } from 'src/app/core/shared/bitstream-format.model';
+import { Bitstream } from 'src/app/core/shared/bitstream.model';
+import { getFirstSucceededRemoteDataPayload } from 'src/app/core/shared/operators';
 
 @Component({
   selector: "ds-media-viewer",
@@ -16,7 +16,7 @@ export class MediaViewerComponent implements OnInit {
   playlist$: BehaviorSubject<any>;
 
   showFlag: boolean = false;
-  currentIndex: number = -1;
+  currentIndex: number = 0;
 
   constructor(
     protected bitstreamFormatDataService: BitstreamFormatDataService
@@ -29,7 +29,7 @@ export class MediaViewerComponent implements OnInit {
 
   closeEventHandler() {
     this.showFlag = false;
-    this.currentIndex = -1;
+    this.currentIndex = 0;
   }
 
   ngOnInit() {
