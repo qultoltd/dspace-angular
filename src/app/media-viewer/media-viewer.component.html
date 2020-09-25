@@ -1,0 +1,14 @@
+<div *ngVar="playlist$ | async as playlist">
+  <div *ngFor="let item of playlist; let index">
+    <!-- <video *ngIf="item.video" controls>
+      <source [src]="item.video" />
+    </video> -->
+    <img [src]="item.image || item.video" (click)="showLightbox(index)" />
+    <ng-image-fullscreen-view
+      [images]="playlist"
+      [imageIndex]="currentIndex"
+      [show]="showFlag"
+      (close)="closeEventHandler()"
+    ></ng-image-fullscreen-view>
+  </div>
+</div>

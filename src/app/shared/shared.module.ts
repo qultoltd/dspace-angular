@@ -209,6 +209,8 @@ import { CollectionDropdownComponent } from './collection-dropdown/collection-dr
 import { DsSelectComponent } from './ds-select/ds-select.component';
 import { VocabularyTreeviewComponent } from './vocabulary-treeview/vocabulary-treeview.component';
 import { CurationFormComponent } from '../curation-form/curation-form.component';
+import { MediaViewerComponent } from '../media-viewer/media-viewer.component';
+import { NgImageFullscreenViewModule } from 'ng-image-fullscreen-view';
 
 const MODULES = [
   // Do NOT include UniversalModule, HttpModule, or JsonpModule here
@@ -231,7 +233,8 @@ const MODULES = [
   TextMaskModule,
   MenuModule,
   DragDropModule,
-  CdkTreeModule
+  CdkTreeModule,
+  NgImageFullscreenViewModule
 ];
 
 const ROOT_MODULES = [
@@ -306,6 +309,7 @@ const COMPONENTS = [
   SidebarFilterComponent,
   SidebarFilterSelectedOptionComponent,
   ThumbnailComponent,
+  MediaViewerComponent,
   GridThumbnailComponent,
   UploaderComponent,
   FileDropzoneNoUploaderComponent,
@@ -402,7 +406,7 @@ const COMPONENTS = [
   CollectionDropdownComponent,
   ExportMetadataSelectorComponent,
   ConfirmationModalComponent,
-  VocabularyTreeviewComponent
+  VocabularyTreeviewComponent,
 ];
 
 const ENTRY_COMPONENTS = [

@@ -34,7 +34,8 @@
               "src/robots.txt"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/videogular2/fonts/videogular.css"
             ],
             "scripts": []
           },
