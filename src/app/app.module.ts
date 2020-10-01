@@ -135,6 +135,7 @@ const EXPORTS = [
     ...DECLARATIONS,
     BreadcrumbsComponent,
     UnauthorizedComponent,
+    ,
   ],
   exports: [
     ...EXPORTS

@@ -1,15 +1,52 @@
-<div *ngVar="playlist$ | async as playlist">
-  <!-- <div *ngFor="let item of playlist; let index"> -->
-    <!-- <video *ngIf="item.video" controls>
-      <source [src]="item.video" />
-    </video> -->
-    <img *ngIf="playlist.lenght > 0" [src]="playlist[0].image || playlist[0].video" (click)="showLightbox(0)" />
-    <span>{{playlist[0].image || playlist[0].video}}</span>
-    <ng-image-fullscreen-view
-      [images]="playlist"
-      [imageIndex]="currentIndex"
-      [show]="showFlag"
-      (close)="closeEventHandler()"
-    ></ng-image-fullscreen-view>
-  <!-- </div> -->
-</div>
+<ng-container *ngVar="medialist$ | async as medialist">
+  <ng-container *ngVar="thumbnails$ | async as thumbnails">
+    <ds-metadata-field-wrapper *ngIf="medialist?.length > 0">
+      <div class="media-viewer">
+        <div *ngIf="medialist[currentIndex]?.format === 'video'">
+          <!-- <pre>{{ medialist[currentIndex]?.format | json }}</pre> -->
+          <video
+            #media
+            [vgMedia]="media"
+            src="{{
+              medialist[currentIndex]?.bitstream?._links?.content?.href
+            }}"
+            id="singleVideo"
+            [poster]="
+              thumbnails[currentIndex]?._links.content.href ||
+              replacements.video
+            "
+            preload="auto"
+            controls
+          ></video>
+        </div>
+        <div *ngIf="medialist[currentIndex]?.format === 'audio'">
+          <video
+            #media
+            [vgMedia]="media"
+            [src]="medialist[currentIndex]?.bitstream?._links?.content?.href"
+            id="singleVideo"
+            [poster]="
+              thumbnails[currentIndex]?._links.content.href ||
+              replacements.audio
+            "
+            preload="auto"
+            controls
+          ></video>
+        </div>
+        <div *ngIf="medialist[currentIndex]?.format === 'image'">
+          <img
+            [src]="medialist[currentIndex]?.bitstream?._links?.content?.href"
+          />
+        </div>
+        <!-- <ul *ngIf="medialist?.length > 1">
+          <li
+            *ngFor="let item of medialist; let i = index"
+            (click)="selectedMedia(i)"
+          >
+            {{ item.bitstream.name }}
+          </li>
+        </ul> -->
+      </div>
+    </ds-metadata-field-wrapper>
+  </ng-container>
+</ng-container>

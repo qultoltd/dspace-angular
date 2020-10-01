@@ -36,6 +36,7 @@ import { VgControlsModule } from "videogular2/compiled/controls";
 import { VgOverlayPlayModule } from "videogular2/compiled/overlay-play";
 import { VgBufferingModule } from "videogular2/compiled/buffering";
 import { MediaViewerComponent } from './media-viewer/media-viewer.component';
+import { MediaViewerVideoComponent } from './media-viewer/media-viewer-video/media-viewer-video.component';
 
 @NgModule({
   imports: [
@@ -72,7 +73,8 @@ declarations: [
     UploadBitstreamComponent,
     TabbedRelatedEntitiesSearchComponent,
     AbstractIncrementalListComponent,
-    MediaViewerComponent
+    MediaViewerComponent,
+    MediaViewerVideoComponent
 ],
 exports: [
     ItemComponent,
