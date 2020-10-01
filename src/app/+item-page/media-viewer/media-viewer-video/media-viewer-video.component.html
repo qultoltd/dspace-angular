@@ -1,1 +1,9 @@
-<p>media-viewer-video works!</p>
+<video
+  #media
+  [vgMedia]="media"
+  [src]="src"
+  id="singleVideo"
+  [poster]="thumbnail || replacementThumbnail"
+  preload="auto"
+  controls
+></video>

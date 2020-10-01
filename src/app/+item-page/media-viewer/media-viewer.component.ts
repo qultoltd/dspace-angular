@@ -25,11 +25,12 @@ export class MediaViewerComponent implements OnInit {
 
   medialist$: BehaviorSubject<Array<object>>;
 
-  currentIndex: number;
+  currentIndex = 0;
 
   pageSize = 5;
 
   replacements: Object;
+  isCollapsed: boolean;
 
   constructor(
     protected bitstreamDataService: BitstreamDataService,
@@ -41,15 +42,7 @@ export class MediaViewerComponent implements OnInit {
     this.bitstreams$ = new BehaviorSubject([]);
     this.medialist$ = new BehaviorSubject([]);
     this.thumbnails$ = new BehaviorSubject([]);
-
-    this.replacements = {
-      video: "./assets/images/replacement_video.svg",
-      audio: "./assets/images/replacements_audio.svg",
-      document: "./assets/images/replacements_document.svg",
-      image: "./assets/images/replacements_image.svg",
-    };
-    console.log("init");
-    this.currentIndex = 0;
+    this.isCollapsed = false;
     this.bitstreamDataService
       .findAllByItemAndBundleName(this.item, "ORIGINAL", {
         currentPage: 1,
@@ -73,7 +66,6 @@ export class MediaViewerComponent implements OnInit {
             .findByBitstream(bitstream)
             .pipe(getFirstSucceededRemoteDataPayload())
             .subscribe((format: BitstreamFormat) => {
-              console.log("bit", bitstream);
               const currentMedias: Array<object> = this.medialist$.getValue();
               this.medialist$.next([
                 ...currentMedias,
@@ -101,7 +93,6 @@ export class MediaViewerComponent implements OnInit {
         )
       )
       .subscribe((thumbnail: RemoteData<PaginatedList<Bitstream>>) => {
-        console.log("thumbnail", thumbnail);
         const currentThumbnails: Bitstream[] = this.thumbnails$.getValue();
         this.thumbnails$.next([
           ...currentThumbnails,
@@ -112,5 +103,13 @@ export class MediaViewerComponent implements OnInit {
   selectedMedia(index: number) {
     console.log(index);
     this.currentIndex = index;
+  }
+  nextMedia() {
+    // this.currentIndex = this.currentIndex + 1;
+    this.currentIndex++;
+    console.log(this.currentIndex)
+  }
+  prevMedia() {
+    this.currentIndex = this.currentIndex - 1;
   }
 }
