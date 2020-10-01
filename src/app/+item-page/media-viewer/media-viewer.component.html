@@ -1,65 +1,60 @@
 <ng-container *ngVar="medialist$ | async as medialist">
   <ng-container *ngVar="thumbnails$ | async as thumbnails">
-    <ds-metadata-field-wrapper *ngIf="medialist?.length > 0">
-      <div class="media-viewer">
-        <div
-          *ngIf="
-            medialist[currentIndex]?.format === 'video' ||
-            medialist[currentIndex]?.format === 'audio'
-          "
-        >
-          <div>
-            <p>{{ medialist[currentIndex]?.bitstream.name }}</p>
-            <ds-media-viewer-video
-              [src]="medialist[currentIndex]?.bitstream._links.content.href"
-              [thumbnail]="thumbnails[currentIndex]?._links.content.href"
-              [format]="medialist[currentIndex]?.format"
-            ></ds-media-viewer-video>
-            <!-- <pre>{{ medialist[currentIndex]?.format | json }}</pre> -->
-          </div>
-          <div class="buttons">
-            <button
-              class="btn btn-primary"
-              [disabled]="currentIndex === 0"
-              (click)="prevMedia()"
-            >
-              előző
-            </button>
+    <div class="media-viewer" *ngIf="medialist?.length > 0">
+      <div
+        *ngIf="
+          medialist[currentIndex]?.format === 'video' ||
+          medialist[currentIndex]?.format === 'audio'
+        "
+      >
+        <div>
+          <ds-media-viewer-video
+            [src]="medialist[currentIndex]?.bitstream._links.content.href"
+            [thumbnail]="thumbnails[currentIndex]?._links.content.href"
+            [format]="medialist[currentIndex]?.format"
+          ></ds-media-viewer-video>
+        </div>
+        <div class="buttons" *ngIf="medialist?.length > 1">
+          <button
+            class="btn btn-primary"
+            [disabled]="currentIndex === 0"
+            (click)="prevMedia()"
+          >
+            előző
+          </button>
 
+          <button
+            class="btn btn-primary"
+            [disabled]="currentIndex === medialist.length - 1"
+            (click)="nextMedia()"
+          >
+            következő
+          </button>
+          <div ngbDropdown class="d-inline-block">
             <button
-              class="btn btn-primary"
-              [disabled]="currentIndex === medialist.length - 1"
-              (click)="nextMedia()"
+              class="btn btn-outline-primary"
+              id="dropdownBasic1"
+              ngbDropdownToggle
             >
-              következő
+              Lejátszási lista
             </button>
-            <div ngbDropdown class="d-inline-block">
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
               <button
-                *ngIf="medialist?.length > 1"
-                class="btn btn-outline-primary"
-                id="dropdownBasic1"
-                ngbDropdownToggle
+                ngbDropdownItem
+                *ngFor="let item of medialist; let i = index"
+                (click)="selectedMedia(i)"
               >
-                Lejátszási lista
+                {{ item.bitstream.name }}
               </button>
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button
-                  ngbDropdownItem
-                  *ngFor="let item of medialist; let i = index"
-                  (click)="selectedMedia(i)"
-                >
-                  {{ item.bitstream.name }}
-                </button>
-              </div>
             </div>
           </div>
         </div>
-        <div *ngIf="medialist[currentIndex]?.format === 'image'">
-          <img
-            [src]="medialist[currentIndex]?.bitstream?._links?.content?.href"
-          />
-        </div>
       </div>
-    </ds-metadata-field-wrapper>
+      <div *ngIf="medialist[currentIndex]?.format === 'image'">
+        <img
+          [src]="medialist[currentIndex]?.bitstream?._links?.content?.href"
+        />
+      </div>
+    </div>
   </ng-container>
 </ng-container>

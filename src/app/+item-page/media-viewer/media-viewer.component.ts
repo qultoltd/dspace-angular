@@ -29,8 +29,16 @@ export class MediaViewerComponent implements OnInit {
 
   pageSize = 5;
 
-  replacements: Object;
   isCollapsed: boolean;
+
+  replacementThumbnail: string;
+
+  replacements = {
+    video: "./assets/images/replacement_video.svg",
+    audio: "./assets/images/replacements_audio.svg",
+    document: "./assets/images/replacements_document.svg",
+    image: "./assets/images/replacements_image.svg",
+  };
 
   constructor(
     protected bitstreamDataService: BitstreamDataService,
@@ -43,6 +51,7 @@ export class MediaViewerComponent implements OnInit {
     this.medialist$ = new BehaviorSubject([]);
     this.thumbnails$ = new BehaviorSubject([]);
     this.isCollapsed = false;
+
     this.bitstreamDataService
       .findAllByItemAndBundleName(this.item, "ORIGINAL", {
         currentPage: 1,
@@ -94,10 +103,13 @@ export class MediaViewerComponent implements OnInit {
       )
       .subscribe((thumbnail: RemoteData<PaginatedList<Bitstream>>) => {
         const currentThumbnails: Bitstream[] = this.thumbnails$.getValue();
-        this.thumbnails$.next([
-          ...currentThumbnails,
-          ...thumbnail.payload.page,
-        ]);
+        console.log(thumbnail);
+        if (thumbnail.payload) {
+          this.thumbnails$.next([
+            ...currentThumbnails,
+            ...thumbnail.payload.page,
+          ]);
+        }
       });
   }
   selectedMedia(index: number) {
@@ -107,7 +119,7 @@ export class MediaViewerComponent implements OnInit {
   nextMedia() {
     // this.currentIndex = this.currentIndex + 1;
     this.currentIndex++;
-    console.log(this.currentIndex)
+    console.log(this.currentIndex);
   }
   prevMedia() {
     this.currentIndex = this.currentIndex - 1;
