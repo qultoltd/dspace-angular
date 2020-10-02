@@ -31,12 +31,10 @@ import { TabbedRelatedEntitiesSearchComponent } from "./simple/related-entities/
 import { StatisticsModule } from "../statistics/statistics.module";
 import { AbstractIncrementalListComponent } from "./simple/abstract-incremental-list/abstract-incremental-list.component";
 
-import { VgCoreModule } from "videogular2/compiled/core";
-import { VgControlsModule } from "videogular2/compiled/controls";
-import { VgOverlayPlayModule } from "videogular2/compiled/overlay-play";
-import { VgBufferingModule } from "videogular2/compiled/buffering";
 import { MediaViewerComponent } from './media-viewer/media-viewer.component';
 import { MediaViewerVideoComponent } from './media-viewer/media-viewer-video/media-viewer-video.component';
+import { MediaViewerImageComponent } from './media-viewer/media-viewer-image/media-viewer-image.component';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 @NgModule({
   imports: [
@@ -46,10 +44,7 @@ import { MediaViewerVideoComponent } from './media-viewer/media-viewer-video/med
     EditItemPageModule,
     SearchPageModule,
     StatisticsModule.forRoot(),
-    VgCoreModule,
-    VgControlsModule,
-    VgOverlayPlayModule,
-    VgBufferingModule,
+    NgxGalleryModule
 ],
 declarations: [
     ItemPageComponent,
@@ -74,7 +69,8 @@ declarations: [
     TabbedRelatedEntitiesSearchComponent,
     AbstractIncrementalListComponent,
     MediaViewerComponent,
-    MediaViewerVideoComponent
+    MediaViewerVideoComponent,
+    MediaViewerImageComponent
 ],
 exports: [
     ItemComponent,

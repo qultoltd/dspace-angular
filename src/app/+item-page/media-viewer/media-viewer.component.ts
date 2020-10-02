@@ -103,7 +103,6 @@ export class MediaViewerComponent implements OnInit {
       )
       .subscribe((thumbnail: RemoteData<PaginatedList<Bitstream>>) => {
         const currentThumbnails: Bitstream[] = this.thumbnails$.getValue();
-        console.log(thumbnail);
         if (thumbnail.payload) {
           this.thumbnails$.next([
             ...currentThumbnails,

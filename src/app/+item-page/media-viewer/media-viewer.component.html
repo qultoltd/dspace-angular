@@ -51,9 +51,10 @@
         </div>
       </div>
       <div *ngIf="medialist[currentIndex]?.format === 'image'">
-        <img
+        <ds-media-viewer-image [bitstreams]="medialist"></ds-media-viewer-image>
+        <!-- <img
           [src]="medialist[currentIndex]?.bitstream?._links?.content?.href"
-        />
+        /> -->
       </div>
     </div>
   </ng-container>
