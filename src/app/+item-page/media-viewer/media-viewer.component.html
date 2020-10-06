@@ -1,61 +1,15 @@
-<ng-container *ngVar="medialist$ | async as medialist">
-  <ng-container *ngVar="thumbnails$ | async as thumbnails">
-    <div class="media-viewer" *ngIf="medialist?.length > 0">
-      <div
-        *ngIf="
-          medialist[currentIndex]?.format === 'video' ||
-          medialist[currentIndex]?.format === 'audio'
-        "
-      >
-        <div>
-          <ds-media-viewer-video
-            [src]="medialist[currentIndex]?.bitstream._links.content.href"
-            [thumbnail]="thumbnails[currentIndex]?._links.content.href"
-            [format]="medialist[currentIndex]?.format"
-          ></ds-media-viewer-video>
-        </div>
-        <div class="buttons" *ngIf="medialist?.length > 1">
-          <button
-            class="btn btn-primary"
-            [disabled]="currentIndex === 0"
-            (click)="prevMedia()"
-          >
-            előző
-          </button>
-
-          <button
-            class="btn btn-primary"
-            [disabled]="currentIndex === medialist.length - 1"
-            (click)="nextMedia()"
-          >
-            következő
-          </button>
-          <div ngbDropdown class="d-inline-block">
-            <button
-              class="btn btn-outline-primary"
-              id="dropdownBasic1"
-              ngbDropdownToggle
-            >
-              Lejátszási lista
-            </button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button
-                ngbDropdownItem
-                *ngFor="let item of medialist; let i = index"
-                (click)="selectedMedia(i)"
-              >
-                {{ item.bitstream.name }}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div *ngIf="medialist[currentIndex]?.format === 'image'">
-        <ds-media-viewer-image [bitstreams]="medialist"></ds-media-viewer-image>
-        <!-- <img
-          [src]="medialist[currentIndex]?.bitstream?._links?.content?.href"
-        /> -->
-      </div>
+<ng-container *ngVar="mediaList$ | async as mediaList">
+  <div class="media-viewer" *ngIf="mediaList.length > 0">
+    <!-- <pre>{{ mediaList | json }}</pre> -->
+    <div
+      *ngIf="
+        mediaList[0]?.format === 'video' || mediaList[0]?.format === 'audio'
+      "
+    >
+      <ds-media-viewer-video [medias]="mediaList"></ds-media-viewer-video>
     </div>
-  </ng-container>
+    <div *ngIf="mediaList[0]?.format === 'image'">
+      <ds-media-viewer-image [images]="mediaList"></ds-media-viewer-image>
+    </div>
+  </div>
 </ng-container>

@@ -14,7 +14,7 @@ import { Bitstream } from "src/app/core/shared/bitstream.model";
   styleUrls: ["./media-viewer-image.component.scss"],
 })
 export class MediaViewerImageComponent implements OnInit {
-  @Input() bitstreams: any[];
+  @Input() images: any[];
   constructor() {}
 
   galleryOptions: NgxGalleryOptions[];
@@ -29,17 +29,19 @@ export class MediaViewerImageComponent implements OnInit {
         thumbnails: false,
         imageArrows: false,
         width: "340px",
-        height: "279px"
+        height: "279px",
       },
     ];
-    for (const { bitstream } of this.bitstreams) {
-      console.log("for", bitstream);
+    console.log(this.images);
+    for (const image of this.images) {
       this.galleryImages = [
         ...this.galleryImages,
         {
-          small: bitstream._links.content.href,
-          medium: bitstream._links.content.href,
-          big: bitstream._links.content.href,
+          small: image.thumbnail
+            ? image.thumbnail
+            : "./assets/images/replacements_image.svg",
+          medium: image.bitstream._links.content.href,
+          big: image.bitstream._links.content.href,
         },
       ];
     }

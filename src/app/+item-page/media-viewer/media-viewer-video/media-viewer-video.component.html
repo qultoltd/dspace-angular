@@ -1,8 +1,48 @@
-<video
-  #media
-  [src]="src"
-  id="singleVideo"
-  [poster]="thumbnail || replacementThumbnail"
-  preload="auto"
-  controls
-></video>
+<ng-container>
+  <video
+    #media
+    [src]="medias[currentIndex].bitstream._links.content.href"
+    id="singleVideo"
+    [poster]="
+      medias[currentIndex].thumbnail ||
+      this.replacements[this.medias[this.currentIndex].format]
+    "
+    preload="auto"
+    controls
+  ></video>
+  <div class="buttons" *ngIf="medias?.length > 1">
+    <button
+      class="btn btn-primary"
+      [disabled]="currentIndex === 0"
+      (click)="prevMedia()"
+    >
+      előző
+    </button>
+
+    <button
+      class="btn btn-primary"
+      [disabled]="currentIndex === medias.length - 1"
+      (click)="nextMedia()"
+    >
+      következő
+    </button>
+    <div ngbDropdown class="d-inline-block">
+      <button
+        class="btn btn-outline-primary"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+      >
+        Lejátszási lista
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button
+          ngbDropdownItem
+          *ngFor="let item of medias; let i = index"
+          (click)="selectedMedia(i)"
+        >
+          {{ item.bitstream.name }}
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-container>
