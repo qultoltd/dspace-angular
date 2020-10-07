@@ -1,20 +1,21 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from '@angular/core';
+import { MediaViewerItem } from '../../../core/shared/media-viewer-item.model';
 
 @Component({
-  selector: "ds-media-viewer-video",
-  templateUrl: "./media-viewer-video.component.html",
-  styleUrls: ["./media-viewer-video.component.scss"],
+  selector: 'ds-media-viewer-video',
+  templateUrl: './media-viewer-video.component.html',
+  styleUrls: ['./media-viewer-video.component.scss'],
 })
 export class MediaViewerVideoComponent implements OnInit {
-  @Input() medias: any[];
+  @Input() medias: MediaViewerItem[];
 
   isCollapsed: boolean;
   currentIndex = 0;
 
   replacements = {
-    video: "./assets/images/replacement_video.svg",
-    audio: "./assets/images/replacement_audio.svg",
-    document: "./assets/images/replacement_document.svg",
+    video: './assets/images/replacement_video.svg',
+    audio: './assets/images/replacement_audio.svg',
+    document: './assets/images/replacement_document.svg',
   };
 
   replacementThumbnail: string;
@@ -22,7 +23,6 @@ export class MediaViewerVideoComponent implements OnInit {
 
   ngOnInit() {
     this.isCollapsed = false;
-    console.log("media", this.medias);
   }
 
   selectedMedia(index: number) {

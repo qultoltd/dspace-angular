@@ -1,20 +1,15 @@
-import { Component, Input, OnInit } from "@angular/core";
-import { map } from "lodash";
+import { Component, Input, OnInit } from '@angular/core';
 
-import {
-  NgxGalleryOptions,
-  NgxGalleryImage,
-  NgxGalleryAnimation,
-} from "ngx-gallery";
-import { Bitstream } from "src/app/core/shared/bitstream.model";
+import { NgxGalleryOptions, NgxGalleryImage } from 'ngx-gallery';
+import { MediaViewerItem } from '../../../core/shared/media-viewer-item.model';
 
 @Component({
-  selector: "ds-media-viewer-image",
-  templateUrl: "./media-viewer-image.component.html",
-  styleUrls: ["./media-viewer-image.component.scss"],
+  selector: 'ds-media-viewer-image',
+  templateUrl: './media-viewer-image.component.html',
+  styleUrls: ['./media-viewer-image.component.scss'],
 })
 export class MediaViewerImageComponent implements OnInit {
-  @Input() images: any[];
+  @Input() images: MediaViewerItem[];
   constructor() {}
 
   galleryOptions: NgxGalleryOptions[];
@@ -25,11 +20,11 @@ export class MediaViewerImageComponent implements OnInit {
     this.galleryOptions = [
       {
         image: true,
-        imageSize: "contain",
+        imageSize: 'contain',
         thumbnails: false,
         imageArrows: false,
-        width: "340px",
-        height: "279px",
+        width: '340px',
+        height: '279px',
       },
     ];
     console.log(this.images);
@@ -39,7 +34,7 @@ export class MediaViewerImageComponent implements OnInit {
         {
           small: image.thumbnail
             ? image.thumbnail
-            : "./assets/images/replacements_image.svg",
+            : './assets/images/replacements_image.svg',
           medium: image.bitstream._links.content.href,
           big: image.bitstream._links.content.href,
         },
