@@ -21,8 +21,6 @@ export class MediaViewerComponent implements OnInit {
 
   mediaList$: BehaviorSubject<MediaViewerItem[]>;
 
-  pageSize = 5;
-
   constructor(
     protected bitstreamDataService: BitstreamDataService,
     protected bitstreamFormatDataService: BitstreamFormatDataService
@@ -32,6 +30,7 @@ export class MediaViewerComponent implements OnInit {
     this.mediaList$ = new BehaviorSubject([]);
 
     this.loadRemoteData('ORIGINAL').subscribe((bitstreamsRD) => {
+      console.log(bitstreamsRD);
       this.loadRemoteData('THUMBNAIL').subscribe((thumbnailsRD) => {
         for (let index = 0; index < bitstreamsRD.payload.page.length; index++) {
           this.bitstreamFormatDataService
@@ -55,10 +54,7 @@ export class MediaViewerComponent implements OnInit {
 
   loadRemoteData(bundleName: string) {
     return this.bitstreamDataService
-      .findAllByItemAndBundleName(this.item, bundleName, {
-        currentPage: 1,
-        elementsPerPage: this.pageSize,
-      })
+      .findAllByItemAndBundleName(this.item, bundleName)
       .pipe(
         filter((bitstreamsRD: RemoteData<PaginatedList<Bitstream>>) =>
           hasValue(bitstreamsRD)

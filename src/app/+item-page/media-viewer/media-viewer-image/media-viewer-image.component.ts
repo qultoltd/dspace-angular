@@ -27,7 +27,6 @@ export class MediaViewerImageComponent implements OnInit {
         height: '279px',
       },
     ];
-    console.log(this.images);
     for (const image of this.images) {
       this.galleryImages = [
         ...this.galleryImages,
