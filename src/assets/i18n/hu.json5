@@ -2978,6 +2978,10 @@
 // "publication.search.title": "DSpace Angular :: Publication Search",
   "publication.search.title": "DSpace Angular :: Publikáció keresése",
 
+  "media-viewer.next": "Következő",
+  "media-viewer.previus": "Előző",
+  "media-viewer.playlist": "Lejátszási lista",
+
 
 
 // "relationships.isAuthorOf": "Authors",

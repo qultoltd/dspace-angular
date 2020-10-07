@@ -13,8 +13,8 @@ export class MediaViewerVideoComponent implements OnInit {
 
   replacements = {
     video: "./assets/images/replacement_video.svg",
-    audio: "./assets/images/replacements_audio.svg",
-    document: "./assets/images/replacements_document.svg",
+    audio: "./assets/images/replacement_audio.svg",
+    document: "./assets/images/replacement_document.svg",
   };
 
   replacementThumbnail: string;
@@ -30,11 +30,9 @@ export class MediaViewerVideoComponent implements OnInit {
     this.currentIndex = index;
   }
   nextMedia() {
-    // this.currentIndex = this.currentIndex + 1;
     this.currentIndex++;
-    console.log(this.currentIndex);
   }
   prevMedia() {
-    this.currentIndex = this.currentIndex - 1;
+    this.currentIndex--;
   }
 }
