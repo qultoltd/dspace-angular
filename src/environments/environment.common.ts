@@ -6,6 +6,7 @@ import { RestRequestMethod } from '../app/core/data/rest-request-method';
 export const environment: GlobalConfig = {
   production: true,
   // Angular Universal server settings.
+  // NOTE: these must be "synced" with the 'dspace.ui.url' setting in your backend's local.cfg.
   ui: {
     ssl: false,
     host: 'localhost',
@@ -14,12 +15,13 @@ export const environment: GlobalConfig = {
     nameSpace: '/',
   },
   // The REST API server settings.
+  // NOTE: these must be "synced" with the 'dspace.server.url' setting in your backend's local.cfg.
   rest: {
     ssl: true,
     host: 'dspace7.4science.cloud',
     port: 443,
     // NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
-    nameSpace: '/server/api',
+    nameSpace: '/server',
   },
   // Caching settings
   cache: {
@@ -212,5 +214,7 @@ export const environment: GlobalConfig = {
   },
   theme: {
     name: 'default',
-  }
+  },
+  // Whether the UI should rewrite file download URLs to match its domain. Only necessary to enable when running UI and REST API on separate domains
+  rewriteDownloadUrls: false,
 };
