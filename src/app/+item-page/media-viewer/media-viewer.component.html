@@ -1,6 +1,10 @@
 <ng-container *ngVar="mediaList$ | async as mediaList">
+  <ds-loading
+    *ngIf="isLoading"
+    message="{{ 'loading.default' | translate }}"
+    [showMessage]="false"
+  ></ds-loading>
   <div class="media-viewer" *ngIf="mediaList.length > 0">
-    <!-- <pre>{{ mediaList | json }}</pre> -->
     <ng-container
       *ngIf="
         mediaList[0]?.format === 'video' || mediaList[0]?.format === 'audio'

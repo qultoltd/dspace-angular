@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { filter, takeWhile } from 'rxjs/operators';
 import { BitstreamDataService } from '../../core/data/bitstream-data.service';
 import { BitstreamFormatDataService } from '../../core/data/bitstream-format-data.service';
@@ -21,6 +21,8 @@ export class MediaViewerComponent implements OnInit {
 
   mediaList$: BehaviorSubject<MediaViewerItem[]>;
 
+  isLoading: boolean;
+
   constructor(
     protected bitstreamDataService: BitstreamDataService,
     protected bitstreamFormatDataService: BitstreamFormatDataService
@@ -28,6 +30,7 @@ export class MediaViewerComponent implements OnInit {
 
   ngOnInit(): void {
     this.mediaList$ = new BehaviorSubject([]);
+    this.isLoading = true;
 
     this.loadRemoteData('ORIGINAL').subscribe((bitstreamsRD) => {
       console.log(bitstreamsRD);
@@ -48,11 +51,14 @@ export class MediaViewerComponent implements OnInit {
               this.mediaList$.next([...current, mediaItem]);
             });
         }
+        this.isLoading = false;
       });
     });
   }
 
-  loadRemoteData(bundleName: string) {
+  loadRemoteData(
+    bundleName: string
+  ): Observable<RemoteData<PaginatedList<Bitstream>>> {
     return this.bitstreamDataService
       .findAllByItemAndBundleName(this.item, bundleName)
       .pipe(
