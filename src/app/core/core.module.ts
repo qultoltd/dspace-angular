@@ -171,6 +171,7 @@ import { EndUserAgreementCurrentUserGuard } from './end-user-agreement/end-user-
 import { EndUserAgreementCookieGuard } from './end-user-agreement/end-user-agreement-cookie.guard';
 import { EndUserAgreementService } from './end-user-agreement/end-user-agreement.service';
 import { SiteRegisterGuard } from './data/feature-authorization/feature-authorization-guard/site-register.guard';
+import { UsageReport } from './statistics/models/usage-report.model';
 import { MediaViewerItem } from './shared/media-viewer-item.model';
 
 /**
@@ -373,6 +374,7 @@ export const models =
     VocabularyEntry,
     VocabularyEntryDetail,
     ConfigurationProperty,
+    UsageReport,
     MediaViewerItem
   ];
 

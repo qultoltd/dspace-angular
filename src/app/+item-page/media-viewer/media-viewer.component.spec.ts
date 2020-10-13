@@ -15,16 +15,12 @@ import { MediaViewerItem } from '../../core/shared/media-viewer-item.model';
 import { VarDirective } from '../../shared/utils/var.directive';
 import { MetadataFieldWrapperComponent } from '../field-components/metadata-field-wrapper/metadata-field-wrapper.component';
 import { FileSizePipe } from '../../shared/utils/file-size-pipe';
+import { BitstreamFormat } from '../../core/shared/bitstream-format.model';
+import { BitstreamFormatDataService } from '../../core/data/bitstream-format-data.service';
 
 describe('MediaViewerComponent', () => {
   let comp: MediaViewerComponent;
   let fixture: ComponentFixture<MediaViewerComponent>;
-
-  const bitstreamDataService = jasmine.createSpyObj('bitstreamDataService', {
-    findAllByItemAndBundleName: createSuccessfulRemoteDataObject$(
-      createPaginatedList([])
-    ),
-  });
 
   const mockBitstream: Bitstream = Object.assign(new Bitstream(), {
     sizeBytes: 10201,
@@ -55,6 +51,19 @@ describe('MediaViewerComponent', () => {
     },
   });
 
+  const bitstreamDataService = jasmine.createSpyObj('bitstreamDataService', {
+    findAllByItemAndBundleName: createSuccessfulRemoteDataObject$(
+      createPaginatedList([])
+    ),
+  });
+
+  const bitstreamFormatDataService = jasmine.createSpyObj(
+    'bitstreamFormatDataService',
+    {
+      findByBitstream: createSuccessfulRemoteDataObject$(new BitstreamFormat()),
+    }
+  );
+
   const mockMediaViewerItem: MediaViewerItem = Object.assign(
     new MediaViewerItem(),
     { bitstream: mockBitstream, format: 'image', thumbnail: null }
@@ -79,6 +88,10 @@ describe('MediaViewerComponent', () => {
       ],
       providers: [
         { provide: BitstreamDataService, useValue: bitstreamDataService },
+        {
+          provide: BitstreamFormatDataService,
+          useValue: bitstreamFormatDataService,
+        },
       ],
 
       schemas: [NO_ERRORS_SCHEMA],
@@ -98,9 +111,20 @@ describe('MediaViewerComponent', () => {
       fixture.detectChanges();
     });
 
+    it('should call the createMediaViewerItem', () => {
+      const mediaItem = comp.createMediaViewerItem(
+        mockBitstream,
+        MockBitstreamFormat1,
+        undefined
+      );
+      expect(mediaItem).toBeTruthy();
+      expect(mediaItem.thumbnail).toBe(null);
+    });
+
     it('should display a loading component', () => {
       const loading = fixture.debugElement.query(By.css('ds-loading'));
       expect(loading.nativeElement).toBeDefined();
     });
   });
+
 });

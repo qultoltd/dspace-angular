@@ -16,7 +16,6 @@ export const environment: GlobalConfig = {
   },
   // The REST API server settings.
   // NOTE: these must be "synced" with the 'dspace.server.url' setting in your backend's local.cfg.
-  // The 'nameSpace' must always end in "/api" as that's the subpath of the REST API in the backend.
   rest: {
     ssl: false,
     host: "localhost",
@@ -234,4 +233,6 @@ export const environment: GlobalConfig = {
   theme: {
     name: "digitize",
   },
+  // Whether the UI should rewrite file download URLs to match its domain. Only necessary to enable when running UI and REST API on separate domains
+  rewriteDownloadUrls: false,
 };

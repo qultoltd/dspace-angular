@@ -1107,6 +1107,10 @@
 
 
 
+  "file-section.error.header": "Error obtaining files for this item",
+
+
+
   "footer.copyright": "copyright © 2002-{{ year }}",
 
   "footer.link.dspace": "DSpace software",
@@ -1436,6 +1440,8 @@
   "item.edit.metadata.notifications.discarded.content": "Your changes were discarded. To reinstate your changes click the 'Undo' button",
 
   "item.edit.metadata.notifications.discarded.title": "Changed discarded",
+
+  "item.edit.metadata.notifications.error.title": "An error occurred",
 
   "item.edit.metadata.notifications.invalid.content": "Your changes were not saved. Please make sure all fields are valid before you save.",
 
@@ -2443,6 +2449,13 @@
   "publication.search.results.head": "Publication Search Results",
 
   "publication.search.title": "DSpace Angular :: Publication Search",
+  
+
+  "media-viewer.next": "Next",
+
+  "media-viewer.previus": "Previus",
+
+  "media-viewer.playlist": "Playlist",
 
   "media-viewer.next": "Next",
   "media-viewer.previus": "Previus",
@@ -2847,6 +2860,30 @@
   "sorting.dc.title.DESC": "Title Descending",
 
   "sorting.score.DESC": "Relevance",
+
+
+
+  "statistics.title": "Statistics",
+
+  "statistics.header": "Statistics for {{ scope }}",
+
+  "statistics.breadcrumbs": "Statistics",
+
+  "statistics.page.no-data": "No data available",
+
+  "statistics.table.no-data": "No data available",
+
+  "statistics.table.title.TotalVisits": "Total visits",
+
+  "statistics.table.title.TotalVisitsPerMonth": "Total visits per month",
+
+  "statistics.table.title.TotalDownloads": "File Visits",
+
+  "statistics.table.title.TopCountries": "Top country views",
+
+  "statistics.table.title.TopCities": "Top city views",
+
+  "statistics.table.header.views": "Views",
 
 
 

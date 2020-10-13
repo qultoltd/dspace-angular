@@ -36,6 +36,11 @@ import { MediaViewerVideoComponent } from './media-viewer/media-viewer-video/med
 import { MediaViewerImageComponent } from './media-viewer/media-viewer-image/media-viewer-image.component';
 import { NgxGalleryModule } from 'ngx-gallery';
 
+import { MediaViewerComponent } from './media-viewer/media-viewer.component';
+import { MediaViewerVideoComponent } from './media-viewer/media-viewer-video/media-viewer-video.component';
+import { MediaViewerImageComponent } from './media-viewer/media-viewer-image/media-viewer-image.component';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -44,9 +49,9 @@ import { NgxGalleryModule } from 'ngx-gallery';
     EditItemPageModule,
     SearchPageModule,
     StatisticsModule.forRoot(),
-    NgxGalleryModule
-],
-declarations: [
+    NgxGalleryModule,
+  ],
+  declarations: [
     ItemPageComponent,
     FullItemPageComponent,
     MetadataUriValuesComponent,
@@ -70,9 +75,9 @@ declarations: [
     AbstractIncrementalListComponent,
     MediaViewerComponent,
     MediaViewerVideoComponent,
-    MediaViewerImageComponent
-],
-exports: [
+    MediaViewerImageComponent,
+  ],
+  exports: [
     ItemComponent,
     MetadataValuesComponent,
     MetadataFieldWrapperComponent,

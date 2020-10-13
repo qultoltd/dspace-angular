@@ -66,6 +66,7 @@
     "@angular/platform-server": "~8.2.14",
     "@angular/router": "~8.2.14",
     "@angularclass/bootloader": "1.0.1",
+    "@kolkov/ngx-gallery": "^1.2.3",
     "@ng-bootstrap/ng-bootstrap": "5.2.1",
     "@ng-dynamic-forms/core": "8.1.1",
     "@ng-dynamic-forms/ui-ng-bootstrap": "8.1.1",
