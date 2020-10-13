@@ -135,7 +135,7 @@
   "admin.registries.bitstream-formats.table.supportLevel.head": "Támogatási szint",
 
 // "admin.registries.bitstream-formats.title": "DSpace Angular :: Bitstream Format Registry",
-  "admin.registries.bitstream-formats.title": "DSpace Angular :: Bitfolyam formátum leíró adatbázis",
+  "admin.registries.bitstream-formats.title": "BMK Digilabor :: Bitfolyam formátum leíró adatbázis",
 
 
 
@@ -173,7 +173,7 @@
   "admin.registries.metadata.schemas.table.namespace": "Névhely",
 
 // "admin.registries.metadata.title": "DSpace Angular :: Metadata Registry",
-  "admin.registries.metadata.title": "DSpace Angular :: Metaadat leíró adatbázis",
+  "admin.registries.metadata.title": "BMK Digilabor :: Metaadat leíró adatbázis",
 
 
 
@@ -247,7 +247,7 @@
   "admin.registries.schema.return": "Vissza",
 
 // "admin.registries.schema.title": "DSpace Angular :: Metadata Schema Registry",
-  "admin.registries.schema.title": "DSpace Angular :: Metaadat Séma leíró adatbázis",
+  "admin.registries.schema.title": "BMK Digilabor :: Metaadat Séma leíró adatbázis",
 
 
 
@@ -264,7 +264,7 @@
   "admin.access-control.epeople.actions.stop-impersonating": "EPerson megszemélyesítésének befejezése",
 
 // "admin.access-control.epeople.title": "DSpace Angular :: EPeople",
-  "admin.access-control.epeople.title": "DSpace Angular :: EPeople",
+  "admin.access-control.epeople.title": "BMK Digilabor :: EPeople",
 
 // "admin.access-control.epeople.head": "EPeople",
   "admin.access-control.epeople.head": "EPeople",
@@ -374,7 +374,7 @@
 
 
 // "admin.access-control.groups.title": "DSpace Angular :: Groups",
-  "admin.access-control.groups.title": "DSpace Angular :: Csoportok",
+  "admin.access-control.groups.title": "BMK Digilabor :: Csoportok",
 
 // "admin.access-control.groups.head": "Groups",
   "admin.access-control.groups.head": "Csoportok",
@@ -1446,7 +1446,7 @@
   "home.description": "",
 
 // "home.title": "DSpace Angular :: Home",
-  "home.title": "DSpace Angular :: Haza",
+  "home.title": "BMK Digilabor :: Nyitóoldal",
 
 // "home.top-level-communities.head": "Communities in DSpace",
   "home.top-level-communities.head": "Közösségek a DSpace-en",
@@ -2152,7 +2152,7 @@
   "journal.search.results.head": "Folyóirat keresési eredmények",
 
 // "journal.search.title": "DSpace Angular :: Journal Search",
-  "journal.search.title": "DSpace Angular :: Folyóirat keresés",
+  "journal.search.title": "BMK Digilabor :: Folyóirat keresés",
 
 
 
@@ -2743,7 +2743,7 @@
   "person.search.results.head": "Személy keresési eredmények",
 
 // "person.search.title": "DSpace Angular :: Person Search",
-  "person.search.title": "DSpace Angular :: Személy keresése",
+  "person.search.title": "BMK Digilabor :: Személy keresése",
 
 
 
@@ -2976,7 +2976,7 @@
   "publication.search.results.head": "Publikáció keresési eredmények",
 
 // "publication.search.title": "DSpace Angular :: Publication Search",
-  "publication.search.title": "DSpace Angular :: Publikáció keresése",
+  "publication.search.title": "BMK Digilabor :: Publikáció keresése",
 
   "media-viewer.next": "Következő",
   "media-viewer.previus": "Előző",
@@ -3170,7 +3170,7 @@
   "search.switch-configuration.title": "Megtekintés",
 
 // "search.title": "DSpace Angular :: Search",
-  "search.title": "DSpace Angular :: Keresés",
+  "search.title": "BMK Digilabor :: Keresés",
 
 // "search.breadcrumbs": "Search",
   "search.breadcrumbs": "Keresés",
