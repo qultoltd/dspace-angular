@@ -199,7 +199,7 @@
   "admin.registries.schema.form.create": "Metaadat mező létrehozása",
 
 // "admin.registries.schema.form.edit": "Edit metadata field",
-  "admin.registries.schema.form.edit": "metaadat mező szerkesztése",
+  "admin.registries.schema.form.edit": "Metaadat mező szerkesztése",
 
 // "admin.registries.schema.form.element": "Element",
   "admin.registries.schema.form.element": "Elem",
@@ -238,7 +238,7 @@
   "admin.registries.schema.notification.field.deleted.success": "A{{amount}} metaadat mezők törlése sikerült",
 
 // "admin.registries.schema.notification.field.edited": "Successfully edited metadata field \"{{field}}\"",
-  "admin.registries.schema.notification.field.edited": "metaadat mező szerkesztése sikerült\"{{field}}\"",
+  "admin.registries.schema.notification.field.edited": "Metaadat mező szerkesztése sikerült\"{{field}}\"",
 
 // "admin.registries.schema.notification.success": "Success",
   "admin.registries.schema.notification.success": "Sikerült",
@@ -386,7 +386,7 @@
   "admin.access-control.groups.search.head": "Csoportok keresése",
 
 // "admin.access-control.groups.button.see-all": "Browse all",
-  "admin.access-control.groups.button.see-all": "valamennyi böngészése",
+  "admin.access-control.groups.button.see-all": "Valamennyi böngészése",
 
 // "admin.access-control.groups.search.button": "Search",
   "admin.access-control.groups.search.button": "Keresés",
@@ -507,13 +507,13 @@
   "admin.access-control.groups.form.subgroups-list.search.head": "Alcsoport hozzáadása",
 
 // "admin.access-control.groups.form.subgroups-list.button.see-all": "Browse All",
-  "admin.access-control.groups.form.subgroups-list.button.see-all": "valamennyi böngészése",
+  "admin.access-control.groups.form.subgroups-list.button.see-all": "Valamennyi böngészése",
 
 // "admin.access-control.groups.form.subgroups-list.headSubgroups": "Current Subgroups",
   "admin.access-control.groups.form.subgroups-list.headSubgroups": "jelenlegi alcsoportok",
 
 // "admin.access-control.groups.form.subgroups-list.search.button": "Search",
-  "admin.access-control.groups.form.subgroups-list.search.button": "keresés",
+  "admin.access-control.groups.form.subgroups-list.search.button": "Keresés",
 
 // "admin.access-control.groups.form.subgroups-list.table.id": "ID",
   "admin.access-control.groups.form.subgroups-list.table.id": "Azonosító",
@@ -958,7 +958,7 @@
   "collection.edit.tabs.source.form.options.harvestType.METADATA_AND_BITSTREAMS": "Metaadat és bitfolyam begyűjtése (ORE támogatás szükséges)",
 
 // "collection.edit.tabs.source.form.options.harvestType.METADATA_AND_REF": "Harvest metadata and references to bitstreams (requires ORE support)",
-  "collection.edit.tabs.source.form.options.harvestType.METADATA_AND_REF": "metaadatok és referenciák begyűjtése bitfolyamhoz (ORE támogatás szükséges)",
+  "collection.edit.tabs.source.form.options.harvestType.METADATA_AND_REF": "Metaadatok és referenciák begyűjtése bitfolyamhoz (ORE támogatás szükséges)",
 
 // "collection.edit.tabs.source.form.options.harvestType.METADATA_ONLY": "Harvest metadata only",
   "collection.edit.tabs.source.form.options.harvestType.METADATA_ONLY": "Csupán metaadatok begyűjtése",
@@ -1084,7 +1084,7 @@
   "community.delete.notification.fail": "Közösség törlése nem sikerült",
 
 // "community.delete.notification.success": "Successfully deleted community",
-  "community.delete.notification.success": "SKözösség sikeresen törölve",
+  "community.delete.notification.success": "Közösség sikeresen törölve",
 
 // "community.delete.text": "Are you sure you want to delete community \"{{ dso }}\"",
   "community.delete.text": "Biztos benne, hogy törölni szeretné a közösséget \"{{ dso }}\"",
@@ -1330,7 +1330,7 @@
   "error.recent-submissions": "Friss feltöltések megjelenítésekor hiba történt",
 
 // "error.search-results": "Error fetching search results",
-  "error.search-results": "keresési eredmények megjelenítésekor hiba történt",
+  "error.search-results": "Keresési eredmények megjelenítésekor hiba történt",
 
 // "error.sub-collections": "Error fetching sub-collections",
   "error.sub-collections": "Algyűjtemények megjelenítésekor hiba történt",
@@ -1345,7 +1345,7 @@
   "error.top-level-communities": "Csúcsszintű közösségek megjelenítésekor hiba történt",
 
 // "error.validation.license.notgranted": "You must grant this license to complete your submission. If you are unable to grant this license at this time you may save your work and return later or remove the submission.",
-  "error.validation.license.notgranted": "ezt az engedélyt meg kell adnia ahhoz, hogy befejezze a feltöltést. Ha jelenleg ez nem lehetséges, elmentheti az eddigi munkát és később folytathatja, vagy törölheti a feltöltést.",
+  "error.validation.license.notgranted": "Ezt az engedélyt meg kell adnia ahhoz, hogy befejezze a feltöltést. Ha jelenleg ez nem lehetséges, elmentheti az eddigi munkát és később folytathatja, vagy törölheti a feltöltést.",
 
 // "error.validation.pattern": "This input is restricted by the current pattern: {{ pattern }}.",
   "error.validation.pattern": "Ezt a bevitelt korlátozza a jelenlegi útvonal: {{ pattern }}.",
@@ -1797,7 +1797,7 @@
   "item.edit.private.header": "Legyen a tárgy privát: {{ id }}",
 
 // "item.edit.private.success": "The item is now private",
-  "item.edit.private.success": "Ezx a tárgy most privát",
+  "item.edit.private.success": "Ez a tárgy most privát",
 
 
 
@@ -1805,16 +1805,16 @@
   "item.edit.public.cancel": "Mégse",
 
 // "item.edit.public.confirm": "Make it Public",
-  "item.edit.public.confirm": "legyen nyilvános",
+  "item.edit.public.confirm": "Legyen nyilvános",
 
 // "item.edit.public.description": "Are you sure this item should be made public in the archive?",
-  "item.edit.public.description": "ABiztos legyen ez a tárgy nyilvános ebben az archívumban?",
+  "item.edit.public.description": "Biztos legyen ez a tárgy nyilvános ebben az archívumban?",
 
 // "item.edit.public.error": "An error occurred while making the item public",
   "item.edit.public.error": "Tárgy nyilvánossá tétele közben hiba történt",
 
 // "item.edit.public.header": "Make item public: {{ id }}",
-  "item.edit.public.header": "MLegyen a tárgy nyilvános: {{ id }}",
+  "item.edit.public.header": "Legyen a tárgy nyilvános: {{ id }}",
 
 // "item.edit.public.success": "The item is now public",
   "item.edit.public.success": "A tárgy most nyilvános",
@@ -2218,7 +2218,7 @@
   "loading.collections": "Gyűjtemények betöltése...",
 
 // "loading.content-source": "Loading content source...",
-  "loading.content-source": "tartalom forrásának betöltése...",
+  "loading.content-source": "Tartalom forrásának betöltése...",
 
 // "loading.community": "Loading community...",
   "loading.community": "Közösség betöltése...",
@@ -2236,13 +2236,13 @@
   "loading.mydspace-results": "Tárgyak betöltése...",
 
 // "loading.objects": "Loading...",
-  "loading.objects": "betöltés...",
+  "loading.objects": "Betöltés...",
 
 // "loading.recent-submissions": "Loading recent submissions...",
   "loading.recent-submissions": "Legújabb feltöltések betöltése...",
 
 // "loading.search-results": "Loading search results...",
-  "loading.search-results": "keresési eredmények betöltése...",
+  "loading.search-results": "Keresési eredmények betöltése...",
 
 // "loading.sub-collections": "Loading sub-collections...",
   "loading.sub-collections": "Algyűjtemények betöltése...",
@@ -2302,7 +2302,7 @@
   "menu.header.admin": "Admin",
 
 // "menu.header.image.logo": "Repository logo",
-  "menu.header.image.logo": "Adattár logo",
+  "menu.header.image.logo": "Adattár logó",
 
 
 
@@ -2313,7 +2313,7 @@
   "menu.section.access_control_authorizations": "Engedélyezések",
 
 // "menu.section.access_control_groups": "Groups",
-  "menu.section.access_control_groups": "csoportok",
+  "menu.section.access_control_groups": "Csoportok",
 
 // "menu.section.access_control_people": "People",
   "menu.section.access_control_people": "Emberek",
@@ -2326,7 +2326,7 @@
 
 
 // "menu.section.browse_community": "This Community",
-  "menu.section.browse_community": "ez a közösség",
+  "menu.section.browse_community": "Ez a közösség",
 
 // "menu.section.browse_community_by_author": "By Author",
   "menu.section.browse_community_by_author": "Szerző szerint",
@@ -2474,7 +2474,7 @@
 
 
 // "menu.section.registries": "Registries",
-  "menu.section.registries": "leíró adatbázisok",
+  "menu.section.registries": "Leíró adatbázisok",
 
 // "menu.section.registries_format": "Format",
   "menu.section.registries_format": "Formátum",
@@ -2728,7 +2728,7 @@
   "person.page.lastname": "Családnév",
 
 // "person.page.link.full": "Show all metadata",
-  "person.page.link.full": "valamennyi metaadat megjelenítése",
+  "person.page.link.full": "Valamennyi metaadat megjelenítése",
 
 // "person.page.orcid": "ORCID",
   "person.page.orcid": "ORCID",
@@ -3400,7 +3400,7 @@
 
 
 // "search.form.search": "Search",
-  "search.form.search": "keresés",
+  "search.form.search": "Keresés",
 
 // "search.form.search_dspace": "Search DSpace",
   "search.form.search_dspace": "Keres a DSpace-en",
@@ -3759,13 +3759,13 @@
   "submission.sections.submit.progressbar.describe.recycle": "Reciklál",
 
 // "submission.sections.submit.progressbar.describe.stepcustom": "Describe",
-  "submission.sections.submit.progressbar.describe.stepcustom": "Leír",
+  "submission.sections.submit.progressbar.describe.stepcustom": "Leírás",
 
 // "submission.sections.submit.progressbar.describe.stepone": "Describe",
-  "submission.sections.submit.progressbar.describe.stepone": "Leír",
+  "submission.sections.submit.progressbar.describe.stepone": "Leírás",
 
 // "submission.sections.submit.progressbar.describe.steptwo": "Describe",
-  "submission.sections.submit.progressbar.describe.steptwo": "Leír",
+  "submission.sections.submit.progressbar.describe.steptwo": "Leírás",
 
 // "submission.sections.submit.progressbar.detect-duplicate": "Potential duplicates",
   "submission.sections.submit.progressbar.detect-duplicate": "Potenciális duplázódás",
