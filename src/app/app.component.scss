@@ -45,7 +45,7 @@ body {
 
 ds-admin-sidebar {
   position: fixed;
-  // z-index: $sidebar-z-index;
+  z-index: $sidebar-z-index;
 }
 
 .ds-full-screen-loader {
