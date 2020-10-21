@@ -1,18 +1,20 @@
   <div class="card" [@focusShadow]="(isCollapsed$ | async)?'blur':'focus'">
+    
     <ds-truncatable [id]="dso.id">
       <ng-content></ng-content>
-      <a *ngIf="linkType != linkTypes.None" [target]="(linkType == linkTypes.ExternalLink) ? '_blank' : '_self'" rel="noopener noreferrer" [routerLink]="['/items/' + dso.id]"
-         class="card-img-top full-width">
-          <div>
-              <ds-grid-thumbnail [thumbnail]="getThumbnail() | async">
-              </ds-grid-thumbnail>
-          </div>
+
+        <a *ngIf="linkType != linkTypes.None" [target]="(linkType == linkTypes.ExternalLink) ? '_blank' : '_self'" rel="noopener noreferrer" [routerLink]="['/items/' + dso.id]"
+        class="card-img-top full-width">
+        <div>
+          <ds-grid-thumbnail [item]="dso">
+          </ds-grid-thumbnail>
+        </div>
       </a>
       <span *ngIf="linkType == linkTypes.None" class="card-img-top full-width">
-          <div>
-              <ds-grid-thumbnail [thumbnail]="getThumbnail() | async">
-              </ds-grid-thumbnail>
-          </div>
+        <div>
+          <ds-grid-thumbnail [item]="dso">
+          </ds-grid-thumbnail>
+        </div>
       </span>
       <div class="card-body">
           <ds-item-type-badge *ngIf="showLabel" [object]="dso"></ds-item-type-badge>
