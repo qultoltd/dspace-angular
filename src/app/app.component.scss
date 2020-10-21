@@ -1,6 +1,6 @@
-@import '../styles/helpers/font_awesome_imports.scss';
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
-@import '../../node_modules/nouislider/distribute/nouislider.min';
+@import "../styles/helpers/font_awesome_imports.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/nouislider/distribute/nouislider.min";
 
 html {
   position: relative;
@@ -39,22 +39,22 @@ body {
   margin: 0;
 }
 
-ds-header-navbar-wrapper {
-  // z-index: $nav-z-index;
-}
+// ds-header-navbar-wrapper {
+// z-index: $nav-z-index;
+// }
 
 ds-admin-sidebar {
   position: fixed;
-  z-index: $sidebar-z-index;
+  // z-index: $sidebar-z-index;
 }
 
 .ds-full-screen-loader {
   height: 100vh;
 }
 
-.sticky-top{
+.sticky-top {
   z-index: 0;
-  }
+}
 .btn-primary,
 .btn-secondary,
 .btn-light,
@@ -119,4 +119,3 @@ a,
 .text-light {
   color: white !important;
 }
-
