@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Rockwell";
+  src: local("Rockwell"),
+    url("/assets/fonts/Rockwell.TTF") format("truetype");
+}
+
 $admin-sidebar-bg: $blue !default;
 $admin-sidebar-active-bg: $blue !default;
 $admin-sidebar-header-bg: $dark !default;
