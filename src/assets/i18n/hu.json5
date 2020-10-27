@@ -3896,7 +3896,7 @@
   "dc.date.issued": "Megjelenés/készítés dátuma/éve:",
   "dc.publisher.place": "Megjelenés/készítés helye:",
   "dc.publisher": "Kiadó:",
-  "dc.format.extent": "Fizikai jellemzők	méret:",
+  "dc.format.extent": "Fizikai jellemzők méret:",
   "dc.format.color": "Szín:",
   "dc.format.medium": "Formátum:",
   "dc.format": "Felbontás:",
@@ -3909,5 +3909,5 @@
   "dc.date.accessioned": "Csatlakozotási dátum",
   "dc.date.available": "Elérhetőségi dátum",
   "dc.identifier": "Azonosító",
-  "dc.identifier.uri": "Azonosító Uri",
+  "dc.identifier.uri": "Azonosító uri:",
 }
