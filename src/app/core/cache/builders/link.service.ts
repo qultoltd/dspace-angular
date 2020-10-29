@@ -27,7 +27,7 @@ export class LinkService {
    */
   public resolveLinks<T extends HALResource>(model: T, ...linksToFollow: Array<FollowLinkConfig<T>>): T {
     linksToFollow.forEach((linkToFollow: FollowLinkConfig<T>) => {
-      this.resolveLink(model, linkToFollow);
+        this.resolveLink(model, linkToFollow);
     });
     return model;
   }
@@ -42,7 +42,8 @@ export class LinkService {
     const matchingLinkDef = getLinkDefinition(model.constructor, linkToFollow.name);
 
     if (hasNoValue(matchingLinkDef)) {
-      throw new Error(`followLink('${linkToFollow.name}') was used for a ${model.constructor.name}, but there is no property on ${model.constructor.name} models with an @link() for ${linkToFollow.name}`);
+      console.error(`followLink('${linkToFollow.name}') was used for a ${model.constructor.name}, but there is no property on ${model.constructor.name} models with an @link() for ${linkToFollow.name}`);
+      return model;
     } else {
       const provider = getDataServiceFor(matchingLinkDef.resourceType);
 
