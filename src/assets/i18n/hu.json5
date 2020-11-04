@@ -3910,4 +3910,67 @@
   "dc.date.available": "Elérhetőségi dátum",
   "dc.identifier": "Azonosító",
   "dc.identifier.uri": "Azonosító uri:",
+
+
+
+  "cookies.consent.accept-all": "Összes elfogadása",
+
+  "cookies.consent.accept-selected": "A kiválasztottak elfogadása",
+
+  "cookies.consent.app.opt-out.description": "Ez az alkalmazás alapértelmezés szerint be van töltve (de leiratkozhat)",
+
+  "cookies.consent.app.opt-out.title": "(opt-out)",
+
+  "cookies.consent.app.purpose": "cél",
+
+  "cookies.consent.app.required.description": "Ez az alkalmazás mindig szükséges",
+
+  "cookies.consent.app.required.title": "(mindig szükséges)",
+
+  "cookies.consent.update": "A legutóbbi látogatás óta változások történtek, kérjük, frissítse beleegyezését.",
+
+  "cookies.consent.close": "Bezárás",
+
+  "cookies.consent.decline": "Elutasítás",
+
+  "cookies.consent.content-notice.description": "Az Ön személyes adatait a következő célokból gyűjtjük és dolgozjuk fel: <strong> Hitelesítés, Beállítások, Nyugtázás és Statisztikák </strong>. <br/> További információkért kérjük, olvassa el a {privacyPolicy}.",
+
+  "cookies.consent.content-notice.learnMore": "Testreszabás",
+
+  "cookies.consent.content-modal.description": "Itt megtekintheti és testreszabhatja az Önről gyűjtött információkat.",
+
+  "cookies.consent.content-modal.privacy-policy.name": "adatvédelmi irányelvek",
+
+  "cookies.consent.content-modal.privacy-policy.text": "További információért olvassa el a {privacyPolicy} oldalunkat.",
+
+  "cookies.consent.content-modal.title": "Az általunk gyűjtött információk",
+
+
+
+  "cookies.consent.app.title.authentication": "Hitelesítés",
+
+  "cookies.consent.app.description.authentication": "Szükséges a bejelentkezéshez",
+
+
+  "cookies.consent.app.title.preferences": "Beállítások",
+
+  "cookies.consent.app.description.preferences": "Szükséges a beállítások mentéséhez",
+
+
+
+  "cookies.consent.app.title.acknowledgement": "Nyugtázás",
+
+  "cookies.consent.app.description.acknowledgement": "Szükséges a nyugták és beleegyezéseik mentéséhez",
+
+
+
+  "cookies.consent.app.title.google-analytics": "Google Analytics",
+
+  "cookies.consent.app.description.google-analytics": "Lehetővé teszi számunkra a statisztikai adatok nyomon követését",
+
+
+
+  "cookies.consent.purpose.functional": "Funkcionális",
+
+  "cookies.consent.purpose.statistical": "Statisztikai",
 }
