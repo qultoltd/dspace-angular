@@ -2463,7 +2463,7 @@
   "mydspace.status.validation": "Érvényesítés",
 
   // "mydspace.status.waiting-for-controller": "Waiting for controller",
-  "mydspace.status.waiting-for-controller": "Várakozás a kontrollerre",
+  "mydspace.status.waiting-for-controller": "Ellenörzésre várakozás",
 
   // "mydspace.status.workflow": "Workflow",
   "mydspace.status.workflow": "Munkafolyamat",
