@@ -14,6 +14,7 @@ import { NotificationsService } from '../../../../shared/notifications/notificat
 import { TranslateService } from '@ngx-translate/core';
 import { hasValue, isEmpty } from '../../../../shared/empty.util';
 import { tap } from 'rxjs/internal/operators/tap';
+import { getFirstSucceededRemoteDataPayload } from '../../../../core/shared/operators';
 
 /**
  * This component renders the file section of the item
@@ -114,5 +115,11 @@ export class FullFileSectionComponent extends FileSectionComponent implements On
 
   hasValuesInBundle(bundle: PaginatedList<Bitstream>) {
     return hasValue(bundle) && !isEmpty(bundle.page);
+  }
+
+  getThumbnail(): Observable<Bitstream> {
+    return this.bitstreamDataService.getThumbnailFor(this.item).pipe(
+      getFirstSucceededRemoteDataPayload()
+    );
   }
 }
