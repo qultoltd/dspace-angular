@@ -3258,8 +3258,8 @@
   // "search.sidebar.settings.sort-by": "Sort By",
   "search.sidebar.settings.sort-by": "Rendszerezés eszerint",
 
-  // "search.sidebar.settings.title": "Settings",
-  "search.sidebar.settings.title": "Állítások",
+// "search.sidebar.settings.title": "Settings",
+  "search.sidebar.settings.title": "Beállítások",
 
   // "search.view-switch.show-detail": "Show detail",
   "search.view-switch.show-detail": "Részletek megjelenítése",
