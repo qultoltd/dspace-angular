@@ -4027,4 +4027,162 @@
 
 // "workflow-item.send-back.button.confirm": "Send back",
   "workflow-item.send-back.button.confirm": "Visszaküld",
+
+
+  
+  "dc.contributor.author": "Szerző:",
+  "dc.title": "Cím:",
+  "dc.date.issued": "Megjelenés/készítés dátuma/éve:",
+  "dc.publisher.place": "Megjelenés/készítés helye:",
+  "dc.publisher": "Kiadó:",
+  "dc.format.extent": "Fizikai jellemzők méret:",
+  "dc.format.color": "Szín:",
+  "dc.format.medium": "Formátum:",
+  "dc.format": "Felbontás:",
+  "dc.description": "Leírás:",
+  "dc.type": "Dokumentumtípus:",
+  "dc.subject": "Tárgyszó:",
+  "dc.coverage.spatial": "Földrajzi név tárgyszó:",
+  "dc.subject.name": "Személynév/testületi név tárgyszó:",
+  "dc.rights": "Felhasználási jogok:",
+  "dc.date.accessioned": "Csatlakozotási dátum",
+  "dc.date.available": "Elérhetőségi dátum",
+  "dc.identifier": "Azonosító",
+  "dc.identifier.uri": "Azonosító uri:",
+
+  "cookies.consent.accept-all": "Összes elfogadása",
+
+  "cookies.consent.accept-selected": "A kiválasztottak elfogadása",
+
+  "cookies.consent.app.opt-out.description": "Ez az alkalmazás alapértelmezés szerint be van töltve (de leiratkozhat)",
+
+  "cookies.consent.app.opt-out.title": "(opt-out)",
+
+  "cookies.consent.app.purpose": "cél",
+
+  "cookies.consent.app.required.description": "Ez az alkalmazás mindig szükséges",
+
+  "cookies.consent.app.required.title": "(mindig szükséges)",
+
+  "cookies.consent.update": "A legutóbbi látogatás óta változások történtek, kérjük, frissítse beleegyezését.",
+
+  "cookies.consent.close": "Bezárás",
+
+  "cookies.consent.decline": "Elutasítás",
+
+  "cookies.consent.content-notice.description": "Az Ön személyes adatait a következő célokból gyűjtjük és dolgozjuk fel: <strong> Hitelesítés, Beállítások, Nyugtázás és Statisztikák </strong>. <br/> További információkért kérjük, olvassa el a {privacyPolicy}.",
+
+  "cookies.consent.content-notice.learnMore": "Testreszabás",
+
+  "cookies.consent.content-modal.description": "Itt megtekintheti és testreszabhatja az Önről gyűjtött információkat.",
+
+  "cookies.consent.content-modal.privacy-policy.name": "adatvédelmi irányelvek",
+
+  "cookies.consent.content-modal.privacy-policy.text": "További információért olvassa el a {privacyPolicy} oldalunkat.",
+
+  "cookies.consent.content-modal.title": "Az általunk gyűjtött információk",
+
+  "cookies.consent.app.title.authentication": "Hitelesítés",
+
+  "cookies.consent.app.description.authentication": "Szükséges a bejelentkezéshez",
+
+  "cookies.consent.app.title.preferences": "Beállítások",
+
+  "cookies.consent.app.description.preferences": "Szükséges a beállítások mentéséhez",
+
+  "cookies.consent.app.title.acknowledgement": "Nyugtázás",
+
+  "cookies.consent.app.description.acknowledgement": "Szükséges a nyugták és beleegyezéseik mentéséhez",
+
+  "cookies.consent.app.title.google-analytics": "Google Analytics",
+
+  "cookies.consent.app.description.google-analytics": "Lehetővé teszi számunkra a statisztikai adatok nyomon követését",
+
+  "cookies.consent.purpose.functional": "Funkcionális",
+
+  "cookies.consent.purpose.statistical": "Statisztikai",
+
+  "register-email.title": "Új felhasználó regisztráció",
+
+  "register-page.create-profile.header": "Profil létrehozása",
+
+  "register-page.create-profile.identification.header": "Azonosítani",
+
+  "register-page.create-profile.identification.email": "E-mail cím",
+
+  "register-page.create-profile.identification.first-name": "Keresztnév *",
+
+  "register-page.create-profile.identification.first-name.error": "Kérjük, adja meg a keresztnevét",
+
+  "register-page.create-profile.identification.last-name": "Vezetéknév *",
+
+  "register-page.create-profile.identification.last-name.error": "Kérjük, töltse ki a vezetéknevet",
+
+  "register-page.create-profile.identification.contact": "Kapcsolattartó telefon",
+
+  "register-page.create-profile.identification.language": "Nyelv",
+
+  "register-page.create-profile.security.header": "Biztonság",
+
+  "register-page.create-profile.security.info": "Kérjük, írja be a jelszót az alábbi mezőbe, és erősítse meg újra beírva a második mezőbe. Legalább hat karakter hosszúnak kell lennie.",
+
+  "register-page.create-profile.security.label.password": "Jelszó *",
+
+  "register-page.create-profile.security.label.passwordrepeat": "Írja be újra a megerősítéshez *",
+
+  "register-page.create-profile.security.error.empty-password": "Kérjük, írja be a jelszót az alábbi mezőbe.",
+
+  "register-page.create-profile.security.error.matching-passwords": "A jelszavak nem egyeznek.",
+
+  "register-page.create-profile.security.error.password-length": "A jelszónak legalább 6 karakter hosszúnak kell lennie.",
+
+  "register-page.create-profile.submit": "Teljes regisztráció",
+
+  "register-page.create-profile.submit.error.content": "Hiba történt egy új felhasználó regisztrálása közben.",
+
+  "register-page.create-profile.submit.error.head": "A regisztráció nem sikerült",
+
+  "register-page.create-profile.submit.success.content": "A regisztráció sikeres volt. Ön létrehozott felhasználóként jelentkezett be.",
+
+  "register-page.create-profile.submit.success.head": "A regisztráció befejeződött",
+
+  "register-page.registration.header": "Új felhasználó regisztráció",
+
+  "register-page.registration.info": "Regisztráljon egy fiókot, hogy feliratkozhasson az e-mailes frissítések gyűjteményeire, és új elemeket küldjön be a DSpace-be.",
+
+  "register-page.registration.email": "E-mail cím *",
+
+  "register-page.registration.email.error.required": "Kérjük, töltse ki az e-mail címet",
+
+  "register-page.registration.email.error.pattern": "Kérjük, adjon meg egy érvényes e-mail címet",
+
+  "register-page.registration.email.hint": "Ezt a címet ellenőrizzük és felhasználjuk bejelentkezési névként.",
+
+  "register-page.registration.submit": "Regisztráció",
+
+  "register-page.registration.success.head": "Ellenőrző e-mail elküldve",
+
+  "register-page.registration.success.content": "Egy e-mailt küldtünk a (z) {{email}} címre, amely egy speciális URL-t és további utasításokat tartalmaz.",
+
+  "register-page.registration.error.head": "Hiba történt az e-mail regisztrálásakor",
+
+  "register-page.registration.error.content": "Hiba történt a következő e-mail cím regisztrálásakor: {{email}}",
+
+  "footer.link.end-user-agreement": "Végfelhasználói megállapodás",
+
+  "info.end-user-Agreement.accept": "Elolvastam és elfogadom a Végfelhasználói megállapodást",
+
+  "info.end-user-Agreement.accept.error": "Hiba történt a végfelhasználói megállapodás elfogadásakor",
+
+  "info.end-user-Agreement.accept.success": "A végfelhasználói megállapodást sikeresen frissítettük",
+
+  "info.end-user-Agreement.breadcrumbs": "Végfelhasználói megállapodás",
+
+  "info.end-user-Agreement.buttons.cancel": "Mégse",
+
+  "info.end-user-agreement.buttons.save": "Mentés",
+
+  "info.end-user-Agreement.head": "Végfelhasználói megállapodás",
+
+  "info.end-user-Agreement.title": "Végfelhasználói megállapodás",
 }
