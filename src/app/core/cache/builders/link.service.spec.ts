@@ -6,7 +6,6 @@ import { HALLink } from '../../shared/hal-link.model';
 import { HALResource } from '../../shared/hal-resource.model';
 import { ResourceType } from '../../shared/resource-type';
 import * as decorators from './build-decorators';
-import { getDataServiceFor } from './build-decorators';
 import { LinkService } from './link.service';
 
 const spyOnFunction = <T>(obj: T, func: keyof T) => {
@@ -139,10 +138,13 @@ describe('LinkService', () => {
     });
 
     describe(`when the specified link doesn't exist on the model's class`, () => {
-      it('should return with the same model', () => {
-        expect(
+      beforeEach(() => {
+        spyOnFunction(decorators, 'getLinkDefinition').and.returnValue(undefined);
+      });
+      it('should throw an error', () => {
+        expect(() => {
           service.resolveLink(testModel, followLink('predecessor', {}, true, followLink('successor')))
-        ).toEqual(testModel);
+        }).toThrow();
       });
     });
 

@@ -45,11 +45,15 @@ export class GridThumbnailComponent implements OnInit, OnChanges {
     this.checkThumbnail(this.thumbnail);
   }
 
+  /**
+   * If the old input is undefined and the new one is a bitsream then set src
+   */
   ngOnChanges(changes: SimpleChanges): void {
     if (
       !hasValue(changes.thumbnail.previousValue) &&
       hasValue(changes.thumbnail.currentValue)
     ) {
+      console.log('this.thumbnail', changes.thumbnail.currentValue);
       this.checkThumbnail(changes.thumbnail.currentValue);
     }
   }
