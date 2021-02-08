@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,7 +14,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { CommunityAdminSearchResultGridElementComponent } from './community-admin-search-result-grid-element.component';
 import { CommunitySearchResult } from '../../../../../shared/object-collection/shared/community-search-result.model';
 import { Community } from '../../../../../core/shared/community.model';
-import { CommunityAdminSearchResultListElementComponent } from '../../admin-search-result-list-element/community-search-result/community-admin-search-result-list-element.component';
 import { getCommunityEditRoute } from '../../../../../+community-page/community-page-routing-paths';
 import { LinkService } from '../../../../../core/cache/builders/link.service';
 
@@ -35,7 +34,7 @@ describe('CommunityAdminSearchResultGridElementComponent', () => {
     resolveLink: {}
   });
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     init();
     TestBed.configureTestingModule({
       imports: [
@@ -48,7 +47,7 @@ describe('CommunityAdminSearchResultGridElementComponent', () => {
       providers: [
         { provide: TruncatableService, useValue: mockTruncatableService },
         { provide: BitstreamDataService, useValue: {} },
-        { provide: LinkService, useValue: linkService}
+        { provide: LinkService, useValue: linkService }
       ],
       schemas: [NO_ERRORS_SCHEMA]
     })
@@ -73,5 +72,5 @@ describe('CommunityAdminSearchResultGridElementComponent', () => {
     const a = fixture.debugElement.query(By.css('a.edit-link'));
     const link = a.nativeElement.href;
     expect(link).toContain(getCommunityEditRoute(id));
-  })
+  });
 });

@@ -2,12 +2,15 @@ import { of as observableOf } from 'rxjs';
 import { getMockRemoteDataBuildService } from '../../shared/mocks/remote-data-build.service.mock';
 import { getMockRequestService } from '../../shared/mocks/request.service.mock';
 import { HALEndpointServiceStub } from '../../shared/testing/hal-endpoint-service.stub';
-import { createSuccessfulRemoteDataObject, createSuccessfulRemoteDataObject$ } from '../../shared/remote-data.utils';
+import {
+  createSuccessfulRemoteDataObject,
+  createSuccessfulRemoteDataObject$
+} from '../../shared/remote-data.utils';
 import { ObjectCacheService } from '../cache/object-cache.service';
 import { ItemType } from '../shared/item-relationships/item-type.model';
 import { RelationshipType } from '../shared/item-relationships/relationship-type.model';
 import { PageInfo } from '../shared/page-info.model';
-import { PaginatedList } from './paginated-list';
+import { buildPaginatedList } from './paginated-list.model';
 import { RelationshipTypeService } from './relationship-type.service';
 import { RequestService } from './request.service';
 
@@ -37,9 +40,9 @@ describe('RelationshipTypeService', () => {
     publicationTypeString = 'Publication';
     personTypeString = 'Person';
     orgUnitTypeString = 'OrgUnit';
-    publicationType = Object.assign(new ItemType(), {label: publicationTypeString});
-    personType = Object.assign(new ItemType(), {label: personTypeString});
-    orgUnitType = Object.assign(new ItemType(), {label: orgUnitTypeString});
+    publicationType = Object.assign(new ItemType(), { label: publicationTypeString });
+    personType = Object.assign(new ItemType(), { label: personTypeString });
+    orgUnitType = Object.assign(new ItemType(), { label: orgUnitTypeString });
 
     relationshipType1 = Object.assign(new RelationshipType(), {
       id: '1',
@@ -59,7 +62,7 @@ describe('RelationshipTypeService', () => {
       rightType: createSuccessfulRemoteDataObject$(orgUnitType)
     });
 
-    buildList = createSuccessfulRemoteDataObject(new PaginatedList(new PageInfo(), [relationshipType1, relationshipType2]));
+    buildList = createSuccessfulRemoteDataObject(buildPaginatedList(new PageInfo(), [relationshipType1, relationshipType2]));
     rdbService = getMockRemoteDataBuildService(undefined, observableOf(buildList));
     objectCache = Object.assign({
       /* tslint:disable:no-empty */
@@ -72,6 +75,7 @@ describe('RelationshipTypeService', () => {
     itemService = undefined;
 
   }
+
   function initTestService() {
     return new RelationshipTypeService(
       itemService,
@@ -93,17 +97,6 @@ describe('RelationshipTypeService', () => {
     service = initTestService();
   });
 
-  describe('getAllRelationshipTypes', () => {
-
-    it('should return all relationshipTypes', (done) => {
-      const expected = service.getAllRelationshipTypes({});
-      expected.subscribe((e) => {
-        expect(e).toBe(buildList);
-        done();
-      })
-    });
-  });
-
   describe('getRelationshipTypeByLabelAndTypes', () => {
 
     it('should return the type filtered by label and type strings', (done) => {
@@ -111,7 +104,7 @@ describe('RelationshipTypeService', () => {
       expected.subscribe((e) => {
         expect(e).toBe(relationshipType1);
         done();
-      })
+      });
     });
   });
 

@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { filter, take } from 'rxjs/operators';
 import { BitstreamDataService } from '../../core/data/bitstream-data.service';
-import { PaginatedList } from '../../core/data/paginated-list';
+import { PaginatedList } from '../../core/data/paginated-list.model';
 import { RemoteData } from '../../core/data/remote-data';
 import { BitstreamFormat } from '../../core/shared/bitstream-format.model';
 import { Bitstream } from '../../core/shared/bitstream.model';
@@ -23,6 +23,7 @@ import { followLink } from '../../shared/utils/follow-link-config.model';
 })
 export class MediaViewerComponent implements OnInit {
   @Input() item: Item;
+  @Input() videoOptions: boolean;
 
   mediaList$: BehaviorSubject<MediaViewerItem[]>;
 
@@ -30,9 +31,7 @@ export class MediaViewerComponent implements OnInit {
 
   thumbnailPlaceholder = './assets/images/replacement_document.svg';
 
-  constructor(
-    protected bitstreamDataService: BitstreamDataService,
-  ) {}
+  constructor(protected bitstreamDataService: BitstreamDataService) {}
 
   /**
    * This metod loads all the Bitstreams and Thumbnails and contert it to media item
@@ -41,22 +40,31 @@ export class MediaViewerComponent implements OnInit {
     this.mediaList$ = new BehaviorSubject([]);
     this.isLoading = true;
     this.loadRemoteData('ORIGINAL').subscribe((bitstreamsRD) => {
-      this.loadRemoteData('THUMBNAIL').subscribe((thumbnailsRD) => {
-        for (let index = 0; index < bitstreamsRD.payload.page.length; index++) {
-          bitstreamsRD.payload.page[index].format
-          .pipe(getFirstSucceededRemoteDataPayload())
-            .subscribe((format) => {
-              const current = this.mediaList$.getValue();
-              const mediaItem = this.createMediaViewerItem(
-                bitstreamsRD.payload.page[index],
-                format,
-                thumbnailsRD.payload && thumbnailsRD.payload.page[index]
-              );
-              this.mediaList$.next([...current, mediaItem]);
-            });
-        }
+      if (bitstreamsRD.payload.page.length === 0) {
         this.isLoading = false;
-      });
+        this.mediaList$.next([]);
+      } else {
+        this.loadRemoteData('THUMBNAIL').subscribe((thumbnailsRD) => {
+          for (
+            let index = 0;
+            index < bitstreamsRD.payload.page.length;
+            index++
+          ) {
+            bitstreamsRD.payload.page[index].format
+              .pipe(getFirstSucceededRemoteDataPayload())
+              .subscribe((format) => {
+                const current = this.mediaList$.getValue();
+                const mediaItem = this.createMediaViewerItem(
+                  bitstreamsRD.payload.page[index],
+                  format,
+                  thumbnailsRD.payload && thumbnailsRD.payload.page[index]
+                );
+                this.mediaList$.next([...current, mediaItem]);
+              });
+          }
+          this.isLoading = false;
+        });
+      }
     });
   }
 
@@ -68,12 +76,18 @@ export class MediaViewerComponent implements OnInit {
     bundleName: string
   ): Observable<RemoteData<PaginatedList<Bitstream>>> {
     return this.bitstreamDataService
-      .findAllByItemAndBundleName(this.item, bundleName, {}, followLink('format'))
+      .findAllByItemAndBundleName(
+        this.item,
+        bundleName,
+        {},
+        true,
+        followLink('format')
+      )
       .pipe(
         filter(
           (bitstreamsRD: RemoteData<PaginatedList<Bitstream>>) =>
             hasValue(bitstreamsRD) &&
-            (hasValue(bitstreamsRD.error) || hasValue(bitstreamsRD.payload))
+            (hasValue(bitstreamsRD.errorMessage) || hasValue(bitstreamsRD.payload))
         ),
         take(1)
       );

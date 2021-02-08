@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-
 import { SearchResultGridElementComponent } from '../search-result-grid-element.component';
 import { Collection } from '../../../../core/shared/collection.model';
 import { CollectionSearchResult } from '../../../object-collection/shared/collection-search-result.model';
@@ -31,6 +30,7 @@ export class CollectionSearchResultGridElementComponent extends SearchResultGrid
     super(truncatableService, bitstreamDataService);
   }
 
+  // @ts-ignore
   @Input() set dso(dso: Collection) {
     this._dso = dso;
     if (hasValue(this._dso) && hasNoValue(this._dso.logo)) {

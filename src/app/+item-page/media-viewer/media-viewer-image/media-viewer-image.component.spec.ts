@@ -8,10 +8,15 @@ import { MockBitstreamFormat1 } from '../../../shared/mocks/item.mock';
 import { MediaViewerImageComponent } from './media-viewer-image.component';
 
 import { of as observableOf } from 'rxjs';
+import { AuthService } from '../../../core/auth/auth.service';
 
 describe('MediaViewerImageComponent', () => {
   let component: MediaViewerImageComponent;
   let fixture: ComponentFixture<MediaViewerImageComponent>;
+
+  const authService = jasmine.createSpyObj('authService', {
+    isAuthenticated: observableOf(false)
+  });
 
   const mockBitstream: Bitstream = Object.assign(new Bitstream(), {
     sizeBytes: 10201,
@@ -52,8 +57,12 @@ describe('MediaViewerImageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports:[],
       declarations: [MediaViewerImageComponent],
       schemas: [NO_ERRORS_SCHEMA],
+      providers: [
+        { provide: AuthService, useValue: authService },
+      ],
     }).compileComponents();
   }));
 
