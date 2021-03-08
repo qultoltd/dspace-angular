@@ -27,10 +27,12 @@ import {
   ITEM_EDIT_PUBLIC_PATH,
   ITEM_EDIT_PRIVATE_PATH,
   ITEM_EDIT_REINSTATE_PATH,
-  ITEM_EDIT_WITHDRAW_PATH
+  ITEM_EDIT_WITHDRAW_PATH,
+  ITEM_EDIT_COPY_PATH
 } from './edit-item-page.routing-paths';
 import { ItemPageReinstateGuard } from './item-page-reinstate.guard';
 import { ItemPageWithdrawGuard } from './item-page-withdraw.guard';
+import { ItemCopyComponent } from './item-copy/item-copy.component';
 
 /**
  * Routing module that handles the routing for the Edit Item page administrator functionality
@@ -128,6 +130,11 @@ import { ItemPageWithdrawGuard } from './item-page-withdraw.guard';
             path: ITEM_EDIT_MOVE_PATH,
             component: ItemMoveComponent,
             data: { title: 'item.edit.move.title' },
+          },
+          {
+            path: ITEM_EDIT_COPY_PATH,
+            component: ItemCopyComponent,
+            data: { title: 'item.edit.copy.title' },
           },
           {
             path: ITEM_EDIT_AUTHORIZATIONS_PATH,

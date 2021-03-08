@@ -16,3 +16,4 @@ export function getItemEditRoute(id: string) {
 
 export const ITEM_EDIT_PATH = 'edit';
 export const UPLOAD_BITSTREAM_PATH = 'bitstreams/new';
+export const ITEM_COPY_PATH = 'copy';

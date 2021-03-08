@@ -9,10 +9,11 @@ import { ItemBreadcrumbResolver } from '../core/breadcrumbs/item-breadcrumb.reso
 import { DSOBreadcrumbsService } from '../core/breadcrumbs/dso-breadcrumbs.service';
 import { LinkService } from '../core/cache/builders/link.service';
 import { UploadBitstreamComponent } from './bitstreams/upload/upload-bitstream.component';
-import { UPLOAD_BITSTREAM_PATH, ITEM_EDIT_PATH } from './item-page-routing-paths';
+import { UPLOAD_BITSTREAM_PATH, ITEM_EDIT_PATH, ITEM_COPY_PATH } from './item-page-routing-paths';
 import { ItemPageAdministratorGuard } from './item-page-administrator.guard';
 import { MenuItemType } from '../shared/menu/initial-menus-state';
 import { LinkMenuItemModel } from '../shared/menu/menu-item/models/link.model';
+import { ItemCopyComponent } from './edit-item-page/item-copy/item-copy.component';
 
 @NgModule({
   imports: [
@@ -39,6 +40,10 @@ import { LinkMenuItemModel } from '../shared/menu/menu-item/models/link.model';
             loadChildren: () => import('./edit-item-page/edit-item-page.module')
               .then((m) => m.EditItemPageModule),
             canActivate: [ItemPageAdministratorGuard]
+          },
+          {
+            path:ITEM_COPY_PATH,
+            component: ItemCopyComponent,
           },
           {
             path: UPLOAD_BITSTREAM_PATH,
