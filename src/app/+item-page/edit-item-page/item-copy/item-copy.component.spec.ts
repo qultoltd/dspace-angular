@@ -48,11 +48,11 @@ describe('ItemCopyComponent', () => {
   });
 
   const mockItemDataService = jasmine.createSpyObj({
-    moveToCollection: createSuccessfulRemoteDataObject$(collection1)
+    copyToCollection: createSuccessfulRemoteDataObject$(collection1)
   });
 
   const mockItemDataServiceFail = jasmine.createSpyObj({
-    moveToCollection: createFailedRemoteDataObject$('Internal server error', 500)
+    copyToCollection: createFailedRemoteDataObject$('Internal server error', 500)
   });
 
   const routeStub = {
@@ -120,17 +120,17 @@ describe('ItemCopyComponent', () => {
       expect(comp.selectedCollectionName).toEqual('Test collection 1');
       expect(comp.selectedCollection).toEqual(collection1);
     });
-    describe('moveCollection', () => {
-      it('should call itemDataService.moveToCollection', () => {
+    describe('copyCollection', () => {
+      it('should call itemDataService.copyToCollection', () => {
         comp.itemId = 'item-id';
         comp.selectedCollectionName = 'selected-collection-id';
         comp.selectedCollection = collection1;
-        comp.moveCollection();
+        comp.copyCollection();
 
-        expect(mockItemDataService.moveToCollection).toHaveBeenCalledWith('item-id', collection1);
+        expect(mockItemDataService.copyToCollection).toHaveBeenCalledWith('item-id', collection1);
       });
       it('should call notificationsService success message on success', () => {
-        comp.moveCollection();
+        comp.copyCollection();
 
         expect(notificationsServiceStub.success).toHaveBeenCalled();
       });
@@ -158,7 +158,7 @@ describe('ItemCopyComponent', () => {
     });
 
     it('should call notificationsService error message on fail', () => {
-      comp.moveCollection();
+      comp.copyCollection();
 
       expect(notificationsServiceStub.error).toHaveBeenCalled();
     });
