@@ -6,7 +6,7 @@ import { ItemBreadcrumbResolver } from '../core/breadcrumbs/item-breadcrumb.reso
 import { DSOBreadcrumbsService } from '../core/breadcrumbs/dso-breadcrumbs.service';
 import { LinkService } from '../core/cache/builders/link.service';
 import { UploadBitstreamComponent } from './bitstreams/upload/upload-bitstream.component';
-import { ITEM_EDIT_PATH, UPLOAD_BITSTREAM_PATH } from './item-page-routing-paths';
+import { ITEM_EDIT_PATH, UPLOAD_BITSTREAM_PATH,ITEM_COPY_PATH } from './item-page-routing-paths';
 import { ItemPageAdministratorGuard } from './item-page-administrator.guard';
 import { MenuItemType } from '../shared/menu/initial-menus-state';
 import { LinkMenuItemModel } from '../shared/menu/menu-item/models/link.model';
@@ -37,6 +37,10 @@ import { ThemedFullItemPageComponent } from './full/themed-full-item-page.compon
             path: ITEM_EDIT_PATH,
             loadChildren: () => import('./edit-item-page/edit-item-page.module')
               .then((m) => m.EditItemPageModule),
+          },
+          {
+            path:ITEM_COPY_PATH,
+            component: ItemCopyComponent,
           },
           {
             path: UPLOAD_BITSTREAM_PATH,

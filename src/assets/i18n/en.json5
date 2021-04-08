@@ -1641,6 +1641,30 @@
 
 
 
+  "item.edit.copy.cancel": "Cancel",
+
+  "item.edit.copy.description": "Select the collection you wish to copy this item to. To narrow down the list of displayed collections, you can enter a search query in the box.",
+
+  "item.edit.copy.error": "An error occurred when attempting to copy the item",
+
+  "item.edit.copy.head": "Copy item: {{id}}",
+
+  "item.edit.copy.inheritpolicies.checkbox": "Inherit policies",
+
+  "item.edit.copy.inheritpolicies.description": "Inherit the default policies of the destination collection",
+
+  "item.edit.copy.copy": "Copy",
+
+  "item.edit.copy.processing": "Copying...",
+
+  "item.edit.copy.search.placeholder": "Enter a search query to look for collections",
+
+  "item.edit.copy.success": "The item has been copied successfully",
+
+  "item.edit.copy.title": "Copy item",
+
+
+
   "item.edit.private.cancel": "Cancel",
 
   "item.edit.private.confirm": "Make it Private",
@@ -1747,7 +1771,11 @@
 
   "item.edit.tabs.status.buttons.move.button": "Move...",
 
+  "item.edit.tabs.status.buttons.copy.button": "Copy...",
+
   "item.edit.tabs.status.buttons.move.label": "Move item to another collection",
+
+  "item.edit.tabs.status.buttons.copy.label": "Copy item to another collection",
 
   "item.edit.tabs.status.buttons.private.button": "Make it private...",
 

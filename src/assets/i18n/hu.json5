@@ -2324,6 +2324,44 @@
   
   // "item.edit.move.title": "Move item",
   "item.edit.move.title": "Tárgy mozgatása",
+
+
+  // "item.edit.move.cancel": "Cancel",
+  "item.edit.copy.cancel": "Mégse",
+
+// "item.edit.move.description": "Select the collection you wish to move this item to. To narrow down the list of displayed collections, you can enter a search query in the box.",
+  "item.edit.copy.description": "Válassza ki a gyűjteményt amelyhez ezt a tárgyat hozzá kívánja adni. A látható gyűjtemények listájának szűkítéséhez írjon be keresőszót a mezőbe.",
+
+// "item.edit.move.error": "An error occurred when attempting to move the item",
+  "item.edit.copy.error": "Tárgy másolásakor hiba történt",
+
+// "item.edit.move.head": "Move item: {{id}}",
+  "item.edit.copy.head": "Tárgy másolása: {{id}}",
+
+// "item.edit.move.inheritpolicies.checkbox": "Inherit policies",
+  "item.edit.copy.inheritpolicies.checkbox": "Szabályzatok öröklése",
+
+// "item.edit.move.inheritpolicies.description": "Inherit the default policies of the destination collection",
+  "item.edit.copy.inheritpolicies.description": "Örökölje a célgyűjtemény alapértelmezett szabályzatát",
+
+// "item.edit.move.move": "Move",
+  "item.edit.copy.copy": "Másolás",
+
+// "item.edit.move.processing": "Moving...",
+  "item.edit.copy.processing": "Másolás...",
+
+// "item.edit.move.search.placeholder": "Enter a search query to look for collections",
+  "item.edit.copy.search.placeholder": "Írjon be keresőszót hogy gyűjteményeket találjon",
+
+// "item.edit.move.success": "The item has been moved successfully",
+  "item.edit.copy.success": "Tárgy másolása sikerült",
+
+// "item.edit.move.title": "Move item",
+  "item.edit.copy.title": "Tárgy másolása",
+
+
+
+// "item.edit.private.cancel": "Cancel",
   
   
   
@@ -2484,6 +2522,14 @@
   "item.edit.tabs.status.buttons.move.label": "Tárgy másik gyűjteménybe költöztetése",
   
   // "item.edit.tabs.status.buttons.private.button": "Make it private...",
+  "item.edit.tabs.status.buttons.copy.button": "Másolás...",
+
+// "item.edit.tabs.status.buttons.move.label": "Move item to another collection",
+  "item.edit.tabs.status.buttons.move.label": "Tárgy másik gyűjteménybe költöztetése",
+  
+  "item.edit.tabs.status.buttons.copy.label": "Tárgy másik gyűjteménybe duplikálása",
+
+// "item.edit.tabs.status.buttons.private.button": "Make it private...",
   "item.edit.tabs.status.buttons.private.button": "Legyen privát...",
   
   // "item.edit.tabs.status.buttons.private.label": "Make item private",
@@ -2716,6 +2762,14 @@
   
   
   // "item.select.confirm": "Confirm selected",
+
+  "item.page.edit": "Elem szerkesztése",
+  
+  "item.page.copy": "Elem másolása",
+
+
+
+// "item.select.confirm": "Confirm selected",
   "item.select.confirm": "Kiválasztás igazolása",
   
   // "item.select.empty": "No items to show",
