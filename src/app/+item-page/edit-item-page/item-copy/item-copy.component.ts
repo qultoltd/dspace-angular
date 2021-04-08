@@ -42,7 +42,7 @@ export class ItemCopyComponent implements OnInit {
   selectedCollection: Collection;
   canSubmit = false;
 
-  itemId: string;
+  item: Item;
   processing = false;
 
   pagination = new PaginationComponentOptions();
@@ -58,7 +58,7 @@ export class ItemCopyComponent implements OnInit {
   ngOnInit(): void {
     this.itemRD$ = this.route.data.pipe(map((data) => data.dso), getFirstSucceededRemoteData()) as Observable<RemoteData<Item>>;
     this.itemRD$.subscribe((rd) => {
-        this.itemId = rd.payload.id;
+        this.item = rd.payload;
       }
     );
     this.pagination.pageSize = 5;
@@ -115,9 +115,9 @@ export class ItemCopyComponent implements OnInit {
    */
   copyCollection() {
     this.processing = true;
-    this.itemDataService.copyToCollection(this.itemId, this.selectedCollection).pipe(getFirstCompletedRemoteData()).subscribe(
+    this.itemDataService.copyToCollection(this.item.id, this.selectedCollection).pipe(getFirstCompletedRemoteData()).subscribe(
       (response: RemoteData<Collection>) => {
-        this.router.navigate([getItemPageRoute(this.itemId)]);
+        this.router.navigate([getItemPageRoute(this.item)]);
         console.log(response)
         if (response.hasSucceeded) {
           this.notificationsService.success(this.translateService.get('item.edit.copy.success'));

@@ -12,6 +12,7 @@ import { MenuItemType } from '../shared/menu/initial-menus-state';
 import { LinkMenuItemModel } from '../shared/menu/menu-item/models/link.model';
 import { ThemedItemPageComponent } from './simple/themed-item-page.component';
 import { ThemedFullItemPageComponent } from './full/themed-full-item-page.component';
+import { ItemCopyComponent } from './edit-item-page/item-copy/item-copy.component';
 
 @NgModule({
   imports: [
