@@ -78,4 +78,12 @@ export class FileSectionComponent implements OnInit {
       }
     });
   }
+
+  isPdf(filename: String): boolean {
+    return filename.includes(".pdf")
+  }
+
+  getAnnotatorUrl(id: String): String {
+    return "http://localhost:3000/annotation/" + id
+  }
 }
