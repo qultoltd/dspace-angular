@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { BitstreamDataService } from '../../../../core/data/bitstream-data.service';
 
 import { Bitstream } from '../../../../core/shared/bitstream.model';
@@ -10,6 +10,7 @@ import { PaginatedList } from '../../../../core/data/paginated-list.model';
 import { NotificationsService } from '../../../../shared/notifications/notifications.service';
 import { TranslateService } from '@ngx-translate/core';
 import { getFirstCompletedRemoteData } from '../../../../core/shared/operators';
+import { AuthService } from '../../../../core/auth/auth.service';
 
 /**
  * This component renders the file section of the item
@@ -37,14 +38,18 @@ export class FileSectionComponent implements OnInit {
 
   pageSize = 5;
 
+  isAuthenticated$: Observable<boolean>;
+
   constructor(
     protected bitstreamDataService: BitstreamDataService,
     protected notificationsService: NotificationsService,
-    protected translateService: TranslateService
+    protected translateService: TranslateService,
+    protected authService: AuthService,
   ) {
   }
 
   ngOnInit(): void {
+    this.isAuthenticated$ = this.authService.isAuthenticated();
     this.getNextPage();
   }
 
