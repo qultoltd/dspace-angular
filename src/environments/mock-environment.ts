@@ -221,4 +221,5 @@ export const environment: Partial<GlobalConfig> = {
     image: true,
     video: true
   },
+  pdfAnnotatorUrl:'http://localhost:3000'
 };

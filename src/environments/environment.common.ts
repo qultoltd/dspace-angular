@@ -270,4 +270,5 @@ export const environment: GlobalConfig = {
     image: true,
     video: true,
   },
+  pdfAnnotatorUrl:'http://localhost:3000'
 };

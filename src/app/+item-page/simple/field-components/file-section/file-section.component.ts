@@ -11,6 +11,7 @@ import { NotificationsService } from '../../../../shared/notifications/notificat
 import { TranslateService } from '@ngx-translate/core';
 import { getFirstCompletedRemoteData } from '../../../../core/shared/operators';
 import { AuthService } from '../../../../core/auth/auth.service';
+import { environment } from '../../../../../environments/environment';
 
 /**
  * This component renders the file section of the item
@@ -39,6 +40,7 @@ export class FileSectionComponent implements OnInit {
   pageSize = 5;
 
   isAuthenticated$: Observable<boolean>;
+
 
   constructor(
     protected bitstreamDataService: BitstreamDataService,
@@ -89,6 +91,6 @@ export class FileSectionComponent implements OnInit {
   }
 
   getAnnotatorUrl(id: String): String {
-    return "http://localhost:3000/annotation/" + id
+    return environment.pdfAnnotatorUrl + "/annotation/" + id
   }
 }
