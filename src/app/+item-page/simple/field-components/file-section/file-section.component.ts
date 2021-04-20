@@ -10,8 +10,9 @@ import { PaginatedList } from '../../../../core/data/paginated-list.model';
 import { NotificationsService } from '../../../../shared/notifications/notifications.service';
 import { TranslateService } from '@ngx-translate/core';
 import { getFirstCompletedRemoteData } from '../../../../core/shared/operators';
-import { AuthService } from '../../../../core/auth/auth.service';
 import { environment } from '../../../../../environments/environment';
+import { AuthorizationDataService } from '../../../../core/data/feature-authorization/authorization-data.service';
+import { FeatureID } from '../../../../core/data/feature-authorization/feature-id';
 
 /**
  * This component renders the file section of the item
@@ -39,19 +40,19 @@ export class FileSectionComponent implements OnInit {
 
   pageSize = 5;
 
-  isAuthenticated$: Observable<boolean>;
+  isAuthorized$: Observable<boolean>;
 
 
   constructor(
     protected bitstreamDataService: BitstreamDataService,
     protected notificationsService: NotificationsService,
     protected translateService: TranslateService,
-    protected authService: AuthService,
+    protected authorizationService: AuthorizationDataService,
   ) {
   }
 
   ngOnInit(): void {
-    this.isAuthenticated$ = this.authService.isAuthenticated();
+    this.isAuthorized$ = this.authorizationService.isAuthorized(FeatureID.CanEditMetadata, this.item.self);;
     this.getNextPage();
   }
 

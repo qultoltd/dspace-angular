@@ -14,7 +14,7 @@ import { NotificationsService } from '../../../../shared/notifications/notificat
 import { TranslateService } from '@ngx-translate/core';
 import { hasValue, isEmpty } from '../../../../shared/empty.util';
 import { PaginationService } from '../../../../core/pagination/pagination.service';
-import { AuthService } from '../../../../core/auth/auth.service';
+import { AuthorizationDataService } from '../../../../core/data/feature-authorization/authorization-data.service';
 
 /**
  * This component renders the file section of the item
@@ -53,9 +53,9 @@ export class FullFileSectionComponent extends FileSectionComponent implements On
     protected notificationsService: NotificationsService,
     protected translateService: TranslateService,
     protected paginationService: PaginationService,
-    protected authService: AuthService,
+    protected authorizationService: AuthorizationDataService,
   ) {
-    super(bitstreamDataService, notificationsService, translateService,authService);
+    super(bitstreamDataService, notificationsService, translateService, authorizationService);
   }
 
   ngOnInit(): void {
