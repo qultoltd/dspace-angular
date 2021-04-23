@@ -18,7 +18,8 @@ export const environment: GlobalConfig = {
     rateLimiter: {
       windowMs: 1 * 60 * 1000,   // 1 minute
       max: 500 // limit each IP to 500 requests per windowMs
-    }
+    },
+    other:''
   },
   // The REST API server settings.
   // NOTE: these must be "synced" with the 'dspace.server.url' setting in your backend's local.cfg.

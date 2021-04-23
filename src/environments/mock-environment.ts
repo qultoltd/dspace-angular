@@ -19,7 +19,8 @@ export const environment: Partial<GlobalConfig> = {
     port: 80,
     // NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
     nameSpace: '/angular-dspace',
-    rateLimiter: undefined
+    rateLimiter: undefined,
+    other:''
   },
     // Caching settings
   cache: {

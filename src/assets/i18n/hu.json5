@@ -610,13 +610,13 @@
   "admin.access-control.groups.form.subgroups-list.search.head": "Alcsoport hozzáadása",
   
   // "admin.access-control.groups.form.subgroups-list.button.see-all": "Browse All",
-  "admin.access-control.groups.form.subgroups-list.button.see-all": "valamennyi böngészése",
+  "admin.access-control.groups.form.subgroups-list.button.see-all": "Valamennyi böngészése",
   
   // "admin.access-control.groups.form.subgroups-list.headSubgroups": "Current Subgroups",
-  "admin.access-control.groups.form.subgroups-list.headSubgroups": "jelenlegi alcsoportok",
+  "admin.access-control.groups.form.subgroups-list.headSubgroups": "Jelenlegi alcsoportok",
   
   // "admin.access-control.groups.form.subgroups-list.search.button": "Search",
-  "admin.access-control.groups.form.subgroups-list.search.button": "keresés",
+  "admin.access-control.groups.form.subgroups-list.search.button": "Keresés",
   
   // "admin.access-control.groups.form.subgroups-list.table.id": "ID",
   "admin.access-control.groups.form.subgroups-list.table.id": "Azonosító",
@@ -1346,10 +1346,10 @@
   "community.edit.tabs.roles.title": "Közösség szerkesztése - Feladatok",
   
   // "community.edit.tabs.authorizations.head": "Authorizations",
-  "community.edit.tabs.authorizations.head": "Jogosultásgok",
+  "community.edit.tabs.authorizations.head": "Jogosultságok",
   
   // "community.edit.tabs.authorizations.title": "Community Edit - Authorizations",
-  "community.edit.tabs.authorizations.title": "Közösségi szerkesztés - Jogosultásgok",
+  "community.edit.tabs.authorizations.title": "Közösségi szerkesztés - Jogosultságok",
   
   
   
@@ -1712,7 +1712,7 @@
   "error.recent-submissions": "Friss feltöltések megjelenítésekor hiba történt",
   
   // "error.search-results": "Error fetching search results",
-  "error.search-results": "keresési eredmények megjelenítésekor hiba történt",
+  "error.search-results": "Keresési eredmények megjelenítésekor hiba történt",
   
   // "error.sub-collections": "Error fetching sub-collections",
   "error.sub-collections": "Algyűjtemények megjelenítésekor hiba történt",
@@ -1985,7 +1985,7 @@
   "item.edit.authorizations.heading": "Evvel a szerkesztővel megnézheti vagy szerkesztheti egy elem jogosutságát, és szerkesztheti egy egyedi elem componenseinek jogosutságát: bundles és bitstreams. Röviden, egy elem a kötegek gyűjteménye, és a kötegek a bitsteramek gyűjteménye. A kötegeknek többnyire van ADD/REMOVE/READ/WRITE jogosultsága, miközben a bitstreameknek csak READ/WRITE jogosultsága.",
   
   // "item.edit.authorizations.title": "Edit item's Policies",
-  "item.edit.authorizations.title": "Jogosultásgok elem szerkesztése",
+  "item.edit.authorizations.title": "Jogosultságok elem szerkesztése",
   
   
   
@@ -2940,7 +2940,7 @@
   "loading.recent-submissions": "Legújabb feltöltések betöltése...",
   
   // "loading.search-results": "Loading search results...",
-  "loading.search-results": "keresési eredmények betöltése...",
+  "loading.search-results": "Keresési eredmények betöltése...",
   
   // "loading.sub-collections": "Loading sub-collections...",
   "loading.sub-collections": "Algyűjtemények betöltése...",
@@ -3011,7 +3011,7 @@
   "menu.section.access_control_authorizations": "Engedélyezések",
   
   // "menu.section.access_control_groups": "Groups",
-  "menu.section.access_control_groups": "csoportok",
+  "menu.section.access_control_groups": "Csoportok",
   
   // "menu.section.access_control_people": "People",
   "menu.section.access_control_people": "Emberek",
@@ -3024,7 +3024,7 @@
   
   
   // "menu.section.browse_community": "This Community",
-  "menu.section.browse_community": "ez a közösség",
+  "menu.section.browse_community": "Ez a közösség",
   
   // "menu.section.browse_community_by_author": "By Author",
   "menu.section.browse_community_by_author": "Szerző szerint",
@@ -3602,7 +3602,7 @@
   "process.overview.table.user" : "Felhasználó",
   
   // "process.overview.title": "Processes Overview",
-  "process.overview.title": "Folyaamt áttekintő",
+  "process.overview.title": "Folyamta áttekintő",
   
   // "process.overview.breadcrumbs": "Processes Overview",
   "process.overview.breadcrumbs": "Folyamat áttekintő",
@@ -4314,7 +4314,7 @@
   
   
   // "search.form.search": "Search",
-  "search.form.search": "keresés",
+  "search.form.search": "Keresés",
   
   // "search.form.search_dspace": "Search DSpace",
   "search.form.search_dspace": "Keres a DSpace-en",
