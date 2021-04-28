@@ -10,5 +10,5 @@ export class UIServerConfig extends ServerConfig {
     windowMs: number;
     max: number;
   };
-
+  other?:string
 }

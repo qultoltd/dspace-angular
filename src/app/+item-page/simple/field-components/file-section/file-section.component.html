@@ -7,7 +7,7 @@
           <span>({{(file?.sizeBytes) | dsFileSize }})</span>
           <span *ngIf="!last" innerHTML="{{separator}}"></span>
         </ds-file-download-link>
-        <a *ngIf="(isAuthorized$ | async) && isPdf(file?.name)" class="btn btn-primary" [href]="getAnnotatorUrl(file?.id)">Annotator</a>
+        <a *ngIf="(isAuthorized$ | async) && isPdf(file?.name)" class="btn btn-primary" [href]="getAnnotatorUrl(file?.id)">Annotate</a>
       </div>
       <ds-loading *ngIf="isLoading" message="{{'loading.default' | translate}}" [showMessage]="false"></ds-loading>
       <div *ngIf="!isLastPage" class="mt-1" id="view-more">

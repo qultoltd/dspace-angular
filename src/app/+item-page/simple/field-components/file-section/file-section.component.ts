@@ -92,6 +92,6 @@ export class FileSectionComponent implements OnInit {
   }
 
   getAnnotatorUrl(id: String): String {
-    return environment.pdfAnnotatorUrl + "/annotation/" + id
+    return environment.pdfAnnotatorUrl + id
   }
 }
