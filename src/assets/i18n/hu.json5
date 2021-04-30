@@ -66,7 +66,7 @@
   "admin.registries.bitstream-formats.delete.failure.head": "Nem sikerült",
 
   // "admin.registries.bitstream-formats.delete.success.amount": "Successfully removed {{ amount }} format(s)",
-  "admin.registries.bitstream-formats.delete.success.amount": "A {{ amount }} formátum(ok) sikeresen törölve",
+  "admin.registries.bitstream-formats.delete.success.amount": "{{ amount }} formátum sikeresen törölve",
 
   // "admin.registries.bitstream-formats.delete.success.head": "Success",
   "admin.registries.bitstream-formats.delete.success.head": "Sikerült",
@@ -75,8 +75,7 @@
   "admin.registries.bitstream-formats.description": "Ez a bitfolyam formátum lista ismert formátumokról és azok támogatásáról nyújt információt.",
 
   // "admin.registries.bitstream-formats.edit.breadcrumbs": "Bitstream format",
-  // TODO New key - Add a translation
-  "admin.registries.bitstream-formats.edit.breadcrumbs": "Bitstream format",
+  "admin.registries.bitstream-formats.edit.breadcrumbs": "Bitfolyam formátum",
 
   // "admin.registries.bitstream-formats.edit.description.hint": "",
   "admin.registries.bitstream-formats.edit.description.hint": "",
@@ -187,7 +186,7 @@
   "admin.registries.metadata.form.name": "Név",
 
   // "admin.registries.metadata.form.namespace": "Namespace",
-  "admin.registries.metadata.form.namespace": "Névhely",
+  "admin.registries.metadata.form.namespace": "Névtér",
 
   // "admin.registries.metadata.head": "Metadata Registry",
   "admin.registries.metadata.head": "Metaadat leíró adatbázis",
@@ -205,7 +204,7 @@
   "admin.registries.metadata.schemas.table.name": "Név",
 
   // "admin.registries.metadata.schemas.table.namespace": "Namespace",
-  "admin.registries.metadata.schemas.table.namespace": "Névhely",
+  "admin.registries.metadata.schemas.table.namespace": "Névtér",
 
   // "admin.registries.metadata.title": "DSpace Angular :: Metadata Registry",
   "admin.registries.metadata.title": "DSpace Angular :: Metaadat leíró adatbázis",
@@ -244,19 +243,19 @@
   "admin.registries.schema.form.qualifier": "Minősítő",
 
   // "admin.registries.schema.form.scopenote": "Scope Note",
-  "admin.registries.schema.form.scopenote": "Cél megjegyzés",
+  "admin.registries.schema.form.scopenote": "Scope megjegyzés",
 
   // "admin.registries.schema.head": "Metadata Schema",
-  "admin.registries.schema.head": "Metaadat Séma",
+  "admin.registries.schema.head": "Metaadat séma",
 
   // "admin.registries.schema.notification.created": "Successfully created metadata schema \"{{prefix}}\"",
   "admin.registries.schema.notification.created": 'Metaadat séma létrehozása sikerült "{{prefix}}"',
 
   // "admin.registries.schema.notification.deleted.failure": "Failed to delete {{amount}} metadata schemas",
-  "admin.registries.schema.notification.deleted.failure": "A {{amount}} metaadat sémák törlése nem sikerült",
+  "admin.registries.schema.notification.deleted.failure": "{{amount}} metaadat sémá törlése nem sikerült",
 
   // "admin.registries.schema.notification.deleted.success": "Successfully deleted {{amount}} metadata schemas",
-  "admin.registries.schema.notification.deleted.success": "A {{amount}} metaadat sémák törlése sikerült",
+  "admin.registries.schema.notification.deleted.success": "{{amount}} metaadat sémá törlése sikerült",
 
   // "admin.registries.schema.notification.edited": "Successfully edited metadata schema \"{{prefix}}\"",
   "admin.registries.schema.notification.edited": 'Metaadat séma szerkesztése sikerült "{{prefix}}"',
@@ -265,16 +264,16 @@
   "admin.registries.schema.notification.failure": "Hiba",
 
   // "admin.registries.schema.notification.field.created": "Successfully created metadata field \"{{field}}\"",
-  "admin.registries.schema.notification.field.created": 'Metaadat mező létrehozva"{{field}}"',
+  "admin.registries.schema.notification.field.created": 'Metaadat mező létrehozva "{{field}}"',
 
   // "admin.registries.schema.notification.field.deleted.failure": "Failed to delete {{amount}} metadata fields",
-  "admin.registries.schema.notification.field.deleted.failure": "A{{amount}} metaadat mezők törlése nem sikerült",
+  "admin.registries.schema.notification.field.deleted.failure": "{{amount}} metaadat mező törlése nem sikerült",
 
   // "admin.registries.schema.notification.field.deleted.success": "Successfully deleted {{amount}} metadata fields",
-  "admin.registries.schema.notification.field.deleted.success": "A{{amount}} metaadat mezők törlése sikerült",
+  "admin.registries.schema.notification.field.deleted.success": "{{amount}} metaadat mező törlése sikerült",
 
   // "admin.registries.schema.notification.field.edited": "Successfully edited metadata field \"{{field}}\"",
-  "admin.registries.schema.notification.field.edited": 'Metaadat mező szerkesztése sikerült"{{field}}"',
+  "admin.registries.schema.notification.field.edited": 'Metaadat mező szerkesztése sikerült "{{field}}"',
 
   // "admin.registries.schema.notification.success": "Success",
   "admin.registries.schema.notification.success": "Sikerült",
@@ -401,7 +400,7 @@
   "admin.access-control.epeople.form.table.name": "Név",
 
   // "admin.access-control.epeople.form.memberOfNoGroups": "This EPerson is not a member of any groups",
-  "admin.access-control.epeople.form.memberOfNoGroups": "Ez azEPerson egyetlen csoportnak sem tagja",
+  "admin.access-control.epeople.form.memberOfNoGroups": "Ez az EPerson egyetlen csoportnak sem tagja",
 
   // "admin.access-control.epeople.form.goToGroups": "Add to groups",
   "admin.access-control.epeople.form.goToGroups": "Hozzáadás csoportokhoz",
@@ -585,8 +584,7 @@
   "admin.access-control.groups.form.members-list.no-items": "Ez a keresés nem talált EPeople-t",
 
   // "admin.access-control.groups.form.subgroups-list.notification.failure": "Something went wrong: \"{{cause}}\"",
-  // TODO New key - Add a translation
-  "admin.access-control.groups.form.subgroups-list.notification.failure": 'Something went wrong: "{{cause}}"',
+  "admin.access-control.groups.form.subgroups-list.notification.failure": 'Valami elromlott: "{{cause}}"',
 
   // "admin.access-control.groups.form.subgroups-list.head": "Groups",
   "admin.access-control.groups.form.subgroups-list.head": "Csoportok",
@@ -928,12 +926,10 @@
   "collection.edit.breadcrumbs": "Gyűjtemény szerkesztése",
 
   // "collection.edit.tabs.mapper.head": "Item Mapper",
-  // TODO New key - Add a translation
-  "collection.edit.tabs.mapper.head": "Item Mapper",
+  "collection.edit.tabs.mapper.head": "Tárgytérképező",
 
   // "collection.edit.tabs.item-mapper.title": "Collection Edit - Item Mapper",
-  // TODO New key - Add a translation
-  "collection.edit.tabs.item-mapper.title": "Collection Edit - Item Mapper",
+  "collection.edit.tabs.item-mapper.title": "Gyűjtemény Szerkesztés - Tárgytérképező",
 
   // "collection.edit.item-mapper.cancel": "Cancel",
   "collection.edit.item-mapper.cancel": "Mégse",
@@ -1020,12 +1016,10 @@
   "collection.edit.tabs.curate.title": "Gyűjtemény szerkesztés - gondozás",
 
   // "collection.edit.tabs.authorizations.head": "Authorizations",
-  // TODO New key - Add a translation
-  "collection.edit.tabs.authorizations.head": "Authorizations",
+  "collection.edit.tabs.authorizations.head": "Engedélyek",
 
   // "collection.edit.tabs.authorizations.title": "Collection Edit - Authorizations",
-  // TODO New key - Add a translation
-  "collection.edit.tabs.authorizations.title": "Collection Edit - Authorizations",
+  "collection.edit.tabs.authorizations.title": "Gyűjtemény szerkesztés - Engedélyek",
 
   // "collection.edit.tabs.metadata.head": "Edit Metadata",
   "collection.edit.tabs.metadata.head": "Metaadat szerkesztés",
@@ -1817,10 +1811,10 @@
   "home.description": "",
 
   // "home.breadcrumbs": "Home",
-  "home.breadcrumbs": "Haza",
+  "home.breadcrumbs": "Főoldal",
 
   // "home.title": "DSpace Angular :: Home",
-  "home.title": "DSpace Angular :: Haza",
+  "home.title": "DSpace Angular :: Főoldal",
 
   // "home.top-level-communities.head": "Communities in DSpace",
   "home.top-level-communities.head": "Közösségek a DSpace-en",
@@ -2027,12 +2021,10 @@
   "item.edit.breadcrumbs": "Tárgy szerkesztése",
 
   // "item.edit.tabs.mapper.head": "Collection Mapper",
-  // TODO New key - Add a translation
-  "item.edit.tabs.mapper.head": "Collection Mapper",
+  "item.edit.tabs.mapper.head": "Gyűjtemény Mepper",
 
   // "item.edit.tabs.item-mapper.title": "Item Edit - Collection Mapper",
-  // TODO New key - Add a translation
-  "item.edit.tabs.item-mapper.title": "Item Edit - Collection Mapper",
+  "item.edit.tabs.item-mapper.title": "Tárgy Szerkesztés - Gyűjtemény Mapper",
 
   // "item.edit.item-mapper.buttons.add": "Map item to selected collections",
   "item.edit.item-mapper.buttons.add": "Térképezze a tárgyat a kiválasztott gyűjteményekhez",
@@ -2272,7 +2264,6 @@
   "item.edit.relationships.notifications.discarded.title": "Módosítások elvetve",
 
   // "item.edit.relationships.notifications.failed.title": "Error editing relationships",
-  // TODO Source message changed - Revise the translation
   "item.edit.relationships.notifications.failed.title": "Kapcsolat törlésekor hiba történt",
 
   // "item.edit.relationships.notifications.outdated.content": "The item you're currently working on has been changed by another user. Your current changes are discarded to prevent conflicts",
@@ -3596,16 +3587,13 @@
   "register-page.registration.error.content": "Hiba történt a következő e-mail cím regisztrációjakor: {{ email }}",
 
   // "relationships.add.error.relationship-type.content": "No suitable match could be found for relationship type {{ type }} between the two items",
-  // TODO New key - Add a translation
-  "relationships.add.error.relationship-type.content": "No suitable match could be found for relationship type {{ type }} between the two items",
+  "relationships.add.error.relationship-type.content": "Nem található megfelelő egyezés a(z) {{type}} kapcsolattípushoz a két elem között",
 
   // "relationships.add.error.server.content": "The server returned an error",
-  // TODO New key - Add a translation
-  "relationships.add.error.server.content": "The server returned an error",
+  "relationships.add.error.server.content": "A szerver hibát adott vissza",
 
   // "relationships.add.error.title": "Unable to add relationship",
-  // TODO New key - Add a translation
-  "relationships.add.error.title": "Unable to add relationship",
+  "relationships.add.error.title": "Nem lehet hozzáadni a kapcsolatot",
 
   // "relationships.isAuthorOf": "Authors",
   "relationships.isAuthorOf": "Szerzők",
@@ -3716,7 +3704,6 @@
   "resource-policies.form.action-type.required": "Ki kell válasszon egy műveletet.",
 
   // "resource-policies.form.eperson-group-list.label": "The eperson or group that will be granted the permission",
-  // TODO Source message changed - Revise the translation
   "resource-policies.form.eperson-group-list.label": "Az eperson vagy csoport amihez rendeli a jogosultságot",
 
   // "resource-policies.form.eperson-group-list.select.btn": "Select",
@@ -4227,8 +4214,7 @@
   "submission.sections.describe.relationship-lookup.external-source.added": "Helyi bevitel sikeresen hozzáadva a kiválasztotthoz",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.isAuthorOfPublication": "Import remote author",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.isAuthorOfPublication": "Import remote author",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.isAuthorOfPublication": "Távoli szerző importálása",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal": "Import remote journal",
   "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal": "Távoli folyóirat importálása",
@@ -4240,16 +4226,13 @@
   "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal Volume": "Távoli folyóirat kötet importálása",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.title": "Import Remote Author",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.title": "Import Remote Author",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.title": "Távoli szerző importálása",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.local-entity": "Successfully added local author to the selection",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.local-entity": "Successfully added local author to the selection",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.local-entity": "Helyi szerző sikeresen hozzáadva a kiválasztáshoz",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.new-entity": "Successfully imported and added external author to the selection",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.new-entity": "Successfully imported and added external author to the selection",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.new-entity": "Sikeres importálás és külső szerző hozzáadása a kiválasztáshoz",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.authority": "Authority",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.authority": "Autoritás",
@@ -4603,8 +4586,7 @@
   "submission.sections.general.sections_not_valid": "Egyes szakaszok nem teljesek.",
 
   // "submission.sections.submit.progressbar.CClicense": "Creative commons license",
-  // TODO New key - Add a translation
-  "submission.sections.submit.progressbar.CClicense": "Creative commons license",
+  "submission.sections.submit.progressbar.CClicense": "Creative commons liszensz",
 
   // "submission.sections.submit.progressbar.describe.recycle": "Recycle",
   "submission.sections.submit.progressbar.describe.recycle": "Reciklál",
@@ -5118,4 +5100,7 @@
   "siek.interviewee.age": "Interjúalany életkora:",
   "siek.interviewee.gender": "Interjúalany neme:",
   "siek.interviewee.role": "Interjúalany szerepe:",
+
+  "item.page.copy": "Elem másolása",
+  "item.page.annotate": "Annotate",
 }
