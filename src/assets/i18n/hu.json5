@@ -2735,7 +2735,7 @@
   "login.form.email": "Email cím",
 
   // "login.form.forgot-password": "Have you forgotten your password?",
-  "login.form.forgot-password": "új jelszó",
+  "login.form.forgot-password": "Új jelszó",
 
   // "login.form.header": "Please log in to DSpace",
   "login.form.header": "Lépjen be a DSpace-re",
