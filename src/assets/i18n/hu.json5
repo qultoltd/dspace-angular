@@ -2735,7 +2735,7 @@
   "login.form.email": "Email cím",
 
   // "login.form.forgot-password": "Have you forgotten your password?",
-  "login.form.forgot-password": "Elfelejtette a jelszót?",
+  "login.form.forgot-password": "új jelszó",
 
   // "login.form.header": "Please log in to DSpace",
   "login.form.header": "Lépjen be a DSpace-re",
@@ -2783,7 +2783,7 @@
   "menu.section.access_control_authorizations": "Engedélyezések",
 
   // "menu.section.access_control_groups": "Groups",
-  "menu.section.access_control_groups": "csoportok",
+  "menu.section.access_control_groups": "Csoportok",
 
   // "menu.section.access_control_people": "People",
   "menu.section.access_control_people": "Emberek",
