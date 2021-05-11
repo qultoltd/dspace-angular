@@ -42,10 +42,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/assets",
-              "src/robots.txt"
-            ],
+            "assets": ["src/assets", "src/robots.txt"],
             "styles": [
               {
                 "input": "src/styles/base-theme.scss",
@@ -61,6 +58,11 @@
                 "input": "src/themes/dspace/styles/theme.scss",
                 "inject": false,
                 "bundleName": "dspace-theme"
+              },
+              {
+                "input": "src/themes/qrepo/styles/theme.scss",
+                "inject": false,
+                "bundleName": "qrepo-theme"
               }
             ],
             "scripts": []
@@ -127,9 +129,7 @@
               "hidden": false,
               "vendor": false
             },
-            "assets": [
-              "src/assets"
-            ],
+            "assets": ["src/assets"],
             "styles": [
               {
                 "input": "src/styles/base-theme.scss",
@@ -148,9 +148,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -207,9 +205,7 @@
           "options": {
             "browserTarget": "dspace-angular:build:production",
             "serverTarget": "dspace-angular:server:production",
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {}

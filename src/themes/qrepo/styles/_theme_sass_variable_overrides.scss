@@ -1,0 +1,44 @@
+// DSpace works with CSS variables for its own components, and has a mapping of all bootstrap Sass
+// variables to CSS equivalents (see src/styles/_bootstrap_variables_mapping.scss). However Bootstrap
+// still uses Sass variables internally. So if you want to override bootstrap (or other sass
+// variables) you can do so here. Their CSS counterparts will include the changes you make here
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-family-monospace: 'Roboto', sans-serif;
+$font-family-base: 'Roboto', sans-serif;
+$gray-100: #e8ebf3 !default;
+$gray-400: #ced4da !default;
+$gray-600: #959595 !default;
+$gray-800: #444444 !default;
+
+$navbar-dark-color: #FFFFFF;
+
+/* Reassign color vars to semantic color scheme */
+$blue: #29528D !default;
+$green: #8EB812 !default;
+$cyan: #29528D !default;
+$yellow: #ec9433 !default;
+$red: #CF4444 !default;
+$dark: #29528D !default;
+
+// primary: #29528D,
+// secondary: #29528D,
+// success: #8EB812,
+// info: #2790B0,
+// warning: #ec9433,
+// danger: red,
+// light: lightblue,
+// dark: #29528D
+
+$body-color: $gray-800 !default;
+
+$table-accent-bg:             $gray-100 !default;
+$table-hover-bg:              $gray-400 !default;
+
+$yiq-contrasted-threshold:  170 !default;
+$admin-sidebar-bg: #29528D !default;
+$admin-sidebar-active-bg: #29528D !default;
+$admin-sidebar-header-bg: #133B76 !default;
+

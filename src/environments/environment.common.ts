@@ -23,9 +23,9 @@ export const environment: GlobalConfig = {
   // The REST API server settings.
   // NOTE: these must be "synced" with the 'dspace.server.url' setting in your backend's local.cfg.
   rest: {
-    ssl: true,
-    host: 'api7.dspace.org',
-    port: 443,
+    ssl: false,
+    host: 'localhost',
+    port: 8080,
     // NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
     nameSpace: '/server',
   },
@@ -179,7 +179,7 @@ export const environment: GlobalConfig = {
     active: true,
   },{
     code: 'hu',
-    label: 'magyar',
+    label: 'Magyar',
     active: true,
   }],
   // Browse-By Pages
@@ -262,7 +262,7 @@ export const environment: GlobalConfig = {
 
     {
       // The default dspace theme
-      name: 'dspace'
+      name: 'qrepo'
     },
   ],
   // Whether the UI should rewrite file download URLs to match its domain. Only necessary to enable when running UI and REST API on separate domains
@@ -271,7 +271,7 @@ export const environment: GlobalConfig = {
   // For images, this enables a gallery viewer where you can zoom or page through images. 
   // For videos, this enables embedded video streaming
   mediaViewer: {
-    image: false,
-    video: false,
+    image: true,
+    video: true,
   },
 };
