@@ -66,6 +66,7 @@
   "admin.registries.bitstream-formats.delete.failure.head": "Nem sikerült",
 
   // "admin.registries.bitstream-formats.delete.success.amount": "Successfully removed {{ amount }} format(s)",
+  "admin.registries.bitstream-formats.delete.success.amount": "A {{ amount }} formátum(ok) sikeresen törölve",
   "admin.registries.bitstream-formats.delete.success.amount": "{{ amount }} formátum sikeresen törölve",
 
   // "admin.registries.bitstream-formats.delete.success.head": "Success",
@@ -1641,10 +1642,10 @@
 
   // "footer.link.dspace": "DSpace software",
   "footer.link.dspace": "DSpace szoftver",
-  
+
   // "footer.link.lyrasis": "LYRASIS",
   "footer.link.lyrasis": "LYRASIS",
-  
+
   // "footer.link.cookies": "Cookie settings",
   "footer.link.cookies": "Süti beállítások",
 
