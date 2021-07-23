@@ -34,4 +34,5 @@ export interface GlobalConfig extends Config {
   themes: ThemeConfig[];
   rewriteDownloadUrls: boolean;
   mediaViewer: MediaViewerConfig;
+  pdfAnnotatorUrl:string;
 }

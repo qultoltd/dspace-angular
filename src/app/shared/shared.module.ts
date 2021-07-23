@@ -235,6 +235,7 @@ import { OnClickMenuItemComponent } from './menu/menu-item/onclick-menu-item.com
 import { TextMenuItemComponent } from './menu/menu-item/text-menu-item.component';
 import { ThemedConfigurationSearchPageComponent } from '../+search-page/themed-configuration-search-page.component';
 import { SearchNavbarComponent } from '../search-navbar/search-navbar.component';
+import { ItemCopyButtonComponent } from './item-copy-button/item-copy-button.component';
 
 /**
  * Declaration needed to make sure all decorator functions are called in time
@@ -542,7 +543,8 @@ const SHARED_ITEM_PAGE_COMPONENTS = [
   MetadataRepresentationListComponent,
   RelatedItemsComponent,
   RelatedEntitiesSearchComponent,
-  TabbedRelatedEntitiesSearchComponent
+  TabbedRelatedEntitiesSearchComponent,
+  ItemCopyButtonComponent
 ];
 
 const PROVIDERS = [

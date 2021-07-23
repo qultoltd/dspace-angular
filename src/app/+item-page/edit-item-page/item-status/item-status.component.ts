@@ -92,6 +92,7 @@ export class ItemStatusComponent implements OnInit {
       }
       operations.push(new ItemOperation('delete', this.getCurrentUrl(item) + '/delete', FeatureID.CanDelete, true));
       operations.push(new ItemOperation('move', this.getCurrentUrl(item) + '/move', FeatureID.CanMove, true));
+	  operations.push(new ItemOperation('copy', this.getCurrentUrl(item) + '/copy', FeatureID.CanMove, true));
 
       this.operations$.next(operations);
 

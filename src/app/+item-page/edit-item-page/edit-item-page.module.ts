@@ -31,6 +31,7 @@ import { VirtualMetadataComponent } from './virtual-metadata/virtual-metadata.co
 import { ItemVersionHistoryComponent } from './item-version-history/item-version-history.component';
 import { ItemAuthorizationsComponent } from './item-authorizations/item-authorizations.component';
 import { ObjectValuesPipe } from '../../shared/utils/object-values-pipe';
+import { ItemCopyComponent } from './item-copy/item-copy.component';
 
 /**
  * Module that contains all components related to the Edit Item page administrator functionality
@@ -67,6 +68,7 @@ import { ObjectValuesPipe } from '../../shared/utils/object-values-pipe';
     EditRelationshipListComponent,
     ItemCollectionMapperComponent,
     ItemMoveComponent,
+    ItemCopyComponent,
     ItemEditBitstreamDragHandleComponent,
     VirtualMetadataComponent,
     ItemAuthorizationsComponent

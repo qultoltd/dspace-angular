@@ -223,7 +223,7 @@ export class ItemDataService extends DataService<Item> {
       map((endpoint: string) => `${endpoint}/owningCollection`)
     );
   }
-
+  
   /**
    * Move the item to a different owning collection
    * @param itemId
@@ -237,6 +237,42 @@ export class ItemDataService extends DataService<Item> {
 
     const requestId = this.requestService.generateRequestId();
     const hrefObs = this.getMoveItemEndpoint(itemId);
+
+    hrefObs.pipe(
+      find((href: string) => hasValue(href)),
+      map((href: string) => {
+        const request = new PutRequest(requestId, href, collection._links.self.href, options);
+        this.requestService.send(request);
+      })
+    ).subscribe();
+
+    return this.rdbService.buildFromRequestUUID(requestId);
+  } 
+
+  /**
+   * Get the endpoint to copy the item
+   * @param itemId
+   */
+  public getCopyItemEndpoint(itemId: string): Observable<string> {
+    return this.halService.getEndpoint(this.linkPath).pipe(
+      map((endpoint: string) => this.getIDHref(endpoint, itemId)),
+      map((endpoint: string) => `${endpoint}/copy`)
+    );
+  }
+  
+  /**
+   * Move the item to a different owning collection
+   * @param itemId
+   * @param collection
+   */
+  public copyToCollection(itemId: string, collection: Collection): Observable<RemoteData<Collection>> {
+    const options: HttpOptions = Object.create({});
+    let headers = new HttpHeaders();
+    headers = headers.append('Content-Type', 'text/uri-list');
+    options.headers = headers;
+
+    const requestId = this.requestService.generateRequestId();
+    const hrefObs = this.getCopyItemEndpoint(itemId);
 
     hrefObs.pipe(
       find((href: string) => hasValue(href)),

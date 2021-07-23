@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { BitstreamDataService } from '../../../../core/data/bitstream-data.service';
 
 import { Bitstream } from '../../../../core/shared/bitstream.model';
@@ -10,6 +10,9 @@ import { PaginatedList } from '../../../../core/data/paginated-list.model';
 import { NotificationsService } from '../../../../shared/notifications/notifications.service';
 import { TranslateService } from '@ngx-translate/core';
 import { getFirstCompletedRemoteData } from '../../../../core/shared/operators';
+import { environment } from '../../../../../environments/environment';
+import { AuthorizationDataService } from '../../../../core/data/feature-authorization/authorization-data.service';
+import { FeatureID } from '../../../../core/data/feature-authorization/feature-id';
 
 /**
  * This component renders the file section of the item
@@ -37,14 +40,19 @@ export class FileSectionComponent implements OnInit {
 
   pageSize = 5;
 
+  isAuthorized$: Observable<boolean>;
+
+
   constructor(
     protected bitstreamDataService: BitstreamDataService,
     protected notificationsService: NotificationsService,
-    protected translateService: TranslateService
+    protected translateService: TranslateService,
+    protected authorizationService: AuthorizationDataService,
   ) {
   }
 
   ngOnInit(): void {
+    this.isAuthorized$ = this.authorizationService.isAuthorized(FeatureID.CanEditMetadata, this.item.self);;
     this.getNextPage();
   }
 
@@ -77,5 +85,13 @@ export class FileSectionComponent implements OnInit {
         this.isLastPage = this.currentPage === bitstreamsRD.payload.totalPages;
       }
     });
+  }
+
+  isPdf(filename: String): boolean {
+    return filename.includes(".pdf")
+  }
+
+  getAnnotatorUrl(id: String): String {
+    return environment.pdfAnnotatorUrl + id
   }
 }
