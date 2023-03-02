@@ -10,5 +10,5 @@ themes:
       - tagName: link
         attributes:
           rel: icon
-          href: /assets/custom/images/qultoIcon.svg
+          href: /assets/qulto/images/qultoIcon.svg
           type: image/svg+xml

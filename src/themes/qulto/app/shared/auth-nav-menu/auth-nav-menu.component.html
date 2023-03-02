@@ -20,7 +20,7 @@
   <li *ngIf="(isAuthenticated | async) && !(isXsOrSm$ | async) && (showAuth | async)" class="nav-item">
     <div ngbDropdown display="dynamic" placement="bottom-right" class="d-inline-block" @fadeInOut>
       <a href="javascript:void(0);" role="button" [attr.aria-label]="'nav.user-profile-menu-and-logout' |translate" (click)="$event.preventDefault()" [title]="'nav.user-profile-menu-and-logout' | translate" class="px-1" [attr.data-test]="'user-menu' | dsBrowserOnly" ngbDropdownToggle>
-        <i class="far fa-user-circle fa-lg"></i></a>
+        <i class="fas fa-user-circle fa-lg"></i></a>
       <div class="logoutDropdownMenu" ngbDropdownMenu [attr.aria-label]="'nav.user-profile-menu-and-logout' |translate">
         <ds-user-menu></ds-user-menu>
       </div>
