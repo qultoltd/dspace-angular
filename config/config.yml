@@ -3,3 +3,12 @@ rest:
   host: api7.dspace.org
   port: 443
   nameSpace: /server
+
+themes:
+  - name: "custom"
+    headTags:
+      - tagName: link
+        attributes:
+          rel: icon
+          href: /assets/custom/images/qultoIcon.svg
+          type: image/svg+xml
