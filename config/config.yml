@@ -5,7 +5,7 @@ rest:
   nameSpace: /server
 
 themes:
-  - name: "custom"
+  - name: "qulto"
     headTags:
       - tagName: link
         attributes:

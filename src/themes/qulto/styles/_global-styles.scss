@@ -1,0 +1,16 @@
+// Add any global css for the theme here
+
+// imports the base global style
+@import '../../../styles/_global-styles.scss';
+
+.dropdown-item.active {
+  color: $white !important
+}
+
+.sidebar-section, .sidebar-top-level-items  {
+  background-color: $blue !important;
+}
+
+.admin-menu-header {
+  background-color: $dark !important;
+}
