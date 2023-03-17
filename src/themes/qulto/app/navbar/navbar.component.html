@@ -1,0 +1,34 @@
+<nav
+  [ngClass]="{ open: !(menuCollapsed | async) }"
+  [@slideMobileNav]="
+    !(windowService.isXsOrSm() | async)
+      ? 'default'
+      : (menuCollapsed | async)
+      ? 'collapsed'
+      : 'expanded'
+  "
+  class="navbar navbar-light navbar-expand-md p-md-0 navbar-container"
+  role="navigation"
+  [attr.aria-label]="'nav.main.description' | translate"
+>
+  <div class="container d-flex align-items-center jusitfy-content-center">
+    <div
+      class="reset-padding-md w-100 d-flex align-items-center jusitfy-content-center text-nowrap"
+    >
+      <div id="collapsingNav">
+        <ul
+          class="navbar-nav navbar-navigation mr-auto shadow-none d-flex align-items-center jusitfy-content-center"
+        >
+          <ng-container *ngFor="let section of sections | async">
+            <ng-container
+              *ngComponentOutlet="
+                (sectionMap$ | async).get(section.id)?.component;
+                injector: (sectionMap$ | async).get(section.id)?.injector
+              "
+            ></ng-container>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

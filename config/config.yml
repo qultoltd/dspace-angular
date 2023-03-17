@@ -3,3 +3,19 @@ rest:
   host: api7.dspace.org
   port: 443
   nameSpace: /server
+  themes:
+    - name: "qulto"
+      headTags:
+        - tagName: link
+          attributes:
+            rel: icon
+            href: /assets/qulto/images/qultoIcon.svg
+            type: image/svg+xml
+themes:
+  - name: qulto
+    headTags:
+      - tagName: link
+        attributes:
+          rel: icon
+          href: /assets/qulto/images/qultoIcon.svg
+          sizes: image/svg+xml
