@@ -1,7 +1,9 @@
 {
-  // DSpace default: "All of DSpace"
-  "menu.section.browse_global": "Browse DSpace",
+  "repository.title.prefix": "QULTO Repository :: ",
 
-  // DSpace default: "DSpace Angular :: "
-  "repository.title.prefix": "DSpace :: ",
+  "qulto.home.welcome.title": "Welcome at the QULTO Repository frontpage!",
+
+  "qulto.home.welcome.description": "The Repository is a digital storage for electronical documents, is used for archiving and making documents accessible.",
+
+  "qulto.home.welcome.functions": "You can search and browse collections within the categories.",
 }

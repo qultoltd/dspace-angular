@@ -3122,7 +3122,7 @@
 
   "repository.image.logo": "Repository logo",
 
-  "repository.title.prefix": "DSpace :: ",
+  "repository.title.prefix": "QULTO Repository :: ",
 
   "repository.title.prefixDSpace": "DSpace Angular ::",
 
@@ -4575,4 +4575,10 @@
   "person.orcid.registry.auth": "ORCID Authorizations",
 
   "home.recent-submissions.head": "Recent Submissions",
+
+  "qulto.home.welcome.title": "Welcome at the QULTO Repository frontpage!",
+
+  "qulto.home.welcome.description": "The Repository is a digital storage for electronical documents, is used for archiving and making documents accessible.",
+
+  "qulto.home.welcome.functions": "You can search and browse collections within the categories.",
 }

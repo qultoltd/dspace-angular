@@ -112,7 +112,7 @@
 
   "admin.registries.bitstream-formats.table.supportLevel.head": "Támogatási szint",
 
-  "admin.registries.bitstream-formats.title": "Bitfolyam formátum leíró adatbázis",
+  "admin.registries.bitstream-formats.title": "DSpace Angular :: Bitfolyam formátum leíró adatbázis",
 
   "admin.registries.metadata.breadcrumbs": "Metaadat leíró adatbázis",
 
@@ -138,7 +138,7 @@
 
   "admin.registries.metadata.schemas.table.namespace": "Névtér",
 
-  "admin.registries.metadata.title": "Metaadat leíró adatbázis",
+  "admin.registries.metadata.title": "DSpace Angular :: Metaadat leíró adatbázis",
 
   "admin.registries.schema.breadcrumbs": "Metaadat séma",
 
@@ -188,7 +188,7 @@
 
   "admin.registries.schema.return": "Vissza",
 
-  "admin.registries.schema.title": "Metaadat Séma leíró adatbázis",
+  "admin.registries.schema.title": "DSpace Angular :: Metaadat Séma leíró adatbázis",
 
   "admin.access-control.epeople.actions.delete": "EPerson törlése",
 
@@ -198,7 +198,7 @@
 
   "admin.access-control.epeople.actions.stop-impersonating": "EPerson megszemélyesítésének befejezése",
 
-  "admin.access-control.epeople.title": "EPeople",
+  "admin.access-control.epeople.title": "DSpace Angular :: EPeople",
 
   "admin.access-control.epeople.head": "EPeople",
 
@@ -274,11 +274,11 @@
 
   "admin.access-control.epeople.notification.deleted.success": "EPerson: \"{{name}}\" törlése sikerült",
 
-  "admin.access-control.groups.title": "Csoportok",
+  "admin.access-control.groups.title": "DSpace Angular :: Csoportok",
 
-  "admin.access-control.groups.title.singleGroup": "Csoport szerkesztése",
+  "admin.access-control.groups.title.singleGroup": "DSpace Angular :: Csoport szerkesztése",
 
-  "admin.access-control.groups.title.addGroup": "Új csoport",
+  "admin.access-control.groups.title.addGroup": "DSpace Angular :: Új csoport",
 
   "admin.access-control.groups.head": "Csoportok",
 
@@ -586,7 +586,7 @@
 
   "browse.startsWith.type_text": "Vagy írja be az első betűket:",
 
-  "browse.title": "Böngészés {{ collection }} szerint {{ field }} {{ value }}",
+  "browse.title": "Böngészés {{ collection }} {{ field }} {{ value }} szerint",
 
   "chips.remove": "Vegye ki a chipet",
 
@@ -640,11 +640,11 @@
 
   "collection.edit.item-mapper.notifications.map.success.head": "Csatolás befejezve",
 
-  "collection.edit.item-mapper.notifications.unmap.error.content": "A {{amount}} tételak térképezésének törlésekor hiba történt.",
+  "collection.edit.item-mapper.notifications.unmap.error.content": "A {{amount}} tételek térképezésének csatolásakor hiba történt.",
 
   "collection.edit.item-mapper.notifications.unmap.error.head": "Csatolási hibák törlése",
 
-  "collection.edit.item-mapper.notifications.unmap.success.content": "A {{amount}} tételak csatolása sikeresen törölve.",
+  "collection.edit.item-mapper.notifications.unmap.success.content": "A {{amount}} tételek csatolása sikeresen törölve.",
 
   "collection.edit.item-mapper.notifications.unmap.success.head": "Csatolás törlése befejeződött",
 
@@ -652,21 +652,21 @@
 
   "collection.edit.item-mapper.tabs.browse": "Csatolt tételek böngészése",
 
-  "collection.edit.item-mapper.tabs.map": "Új tételak csatolása",
+  "collection.edit.item-mapper.tabs.map": "Új tételek csatolása",
 
-  "collection.edit.logo.label": "Gyűjtemény logo",
+  "collection.edit.logo.label": "Gyűjtemény logó",
 
-  "collection.edit.logo.notifications.add.error": "Gyűjtemény logo feltöltése nem sikerült. Kérjük, ellenőrizze a tartalmat, mielőtt újra próbálkozna.",
+  "collection.edit.logo.notifications.add.error": "Gyűjtemény logó feltöltése nem sikerült. Kérjük, ellenőrizze a tartalmat, mielőtt újra próbálkozna.",
 
-  "collection.edit.logo.notifications.add.success": "Gyűjtemény logo feltöltése sikerült.",
+  "collection.edit.logo.notifications.add.success": "Gyűjtemény logó feltöltése sikerült.",
 
-  "collection.edit.logo.notifications.delete.success.title": "Logo törölve",
+  "collection.edit.logo.notifications.delete.success.title": "Logó törölve",
 
-  "collection.edit.logo.notifications.delete.success.content": "Gyűjteménylogo sikeresen törölve",
+  "collection.edit.logo.notifications.delete.success.content": "Gyűjteménylogó sikeresen törölve",
 
-  "collection.edit.logo.notifications.delete.error.title": "Logo törlése közben hiba történt",
+  "collection.edit.logo.notifications.delete.error.title": "A logó törlése közben hiba történt",
 
-  "collection.edit.logo.upload": "Feltöltéshez húzza ide a gyűjtemény Logót",
+  "collection.edit.logo.upload": "Feltöltéshez húzza ide a gyűjtemény logót",
 
   "collection.edit.notifications.success": "Gyűjtemény szerkesztése sikerült",
 
@@ -796,7 +796,7 @@
 
   "community.create.sub-head": "Hozzon létre egy alkategóriát a kategória alatt{{ parent }}",
 
-  "community.curate.header": "kategória gondozása: {{community}}",
+  "community.curate.header": "Kategória gondozása: {{community}}",
 
   "community.delete.cancel": "Mégse",
 
@@ -828,7 +828,7 @@
 
   "community.edit.logo.notifications.delete.error.title": "Logo törlése közben hiba történt",
 
-  "community.edit.logo.upload": "Feltöltéshez húzza ide a kategóriai logót",
+  "community.edit.logo.upload": "A feltöltéshez húzza ide a kategória logót",
 
   "community.edit.notifications.success": "Kategória szerkesztése sikerült",
 
@@ -884,7 +884,7 @@
 
   "comcol-role.edit.bitstream_read.name": "Bitfolyam olvasási hozzáférés alapbeállítás",
 
-  "comcol-role.edit.bitstream_read.description": "A kategóriák adminisztrátorai létrehozhatnak alkategóriákat vagy gyűjteményeket, irányíthatják azokat, vagy kijelölhetik azok irányítását. Továbbá ők döntik el ki tölthet fel tételeket bármely algyűjteménybe, ki szerkesztheti a tételak metaadatait (feltöltést követően) és ki adhat hozzá (csatolhat) létező tételeket más gyűjteményekből (felhatalmazás szükséges).",
+  "comcol-role.edit.bitstream_read.description": "A kategóriák adminisztrátorai létrehozhatnak alkategóriákat vagy gyűjteményeket, irányíthatják azokat, vagy kijelölhetik azok irányítását. Továbbá ők döntik el ki tölthet fel tételeket bármely algyűjteménybe, ki szerkesztheti a tételek metaadatait (feltöltést követően) és ki adhat hozzá (csatolhat) létező tételeket más gyűjteményekből (felhatalmazás szükséges).",
 
   "comcol-role.edit.bitstream_read.anonymous-group": "Beérkező bitfolyamok olvasási alapbeállítása jelenleg Anonymous.",
 
@@ -1008,11 +1008,11 @@
 
   "dso-selector.create.collection.head": "Új gyűjtemény",
 
-  "dso-selector.create.collection.sub-level": "Új kategória létrehozása benne",
+  "dso-selector.create.collection.sub-level": "Új gyűjtemény létrehozása",
 
   "dso-selector.create.community.head": "Új kategória",
 
-  "dso-selector.create.community.sub-level": "Hozzon létre új kategóriát benne",
+  "dso-selector.create.community.sub-level": "Hozzon létre új alkategóriát",
 
   "dso-selector.create.community.top-level": "Hozzon létre csúcsszintű kategóriát",
 
@@ -1058,7 +1058,7 @@
 
   "error.collections": "Gyűjtemények megjelenítése közben hiba történt",
 
-  "error.community": "kategória megjelenítése közben hiba történty",
+  "error.community": "kategória megjelenítése közben hiba történt",
 
   "error.identifier": "Ehhez az azonosítóhoz nem találtunk tételeket",
 
@@ -1068,7 +1068,7 @@
 
   "error.items": "Tételek megjelenítésekor hiba történt",
 
-  "error.objects": "Tételak megjelenítésekor hiba történt",
+  "error.objects": "Tételek megjelenítésekor hiba történt",
 
   "error.recent-submissions": "Friss feltöltések megjelenítésekor hiba történt",
 
@@ -1208,7 +1208,7 @@
 
   "home.breadcrumbs": "Főoldal",
 
-  "home.title": "Főoldal",
+  "home.title": "DSpace Angular :: Főoldal",
 
   "home.top-level-communities.head": "Kategóriák a DSpace-ben",
 
@@ -1240,7 +1240,7 @@
 
   "item.alerts.withdrawn": "Ez az elem vissza lett vonva",
 
-  "item.edit.authorizations.heading": "Evvel a szerkesztővel megnézheti vagy szerkesztheti egy elem jogosutságát, és szerkesztheti egy egyedi elem componenseinek jogosutságát: bundles és bitstreams. Röviden, egy elem a kötegek gyűjteménye, és a kötegek a bitsteramek gyűjteménye. A kötegeknek többnyire van ADD/REMOVE/READ/WRITE jogosultsága, miközben a bitstreameknek csak READ/WRITE jogosultsága.",
+  "item.edit.authorizations.heading": "A szerkesztővel megnézheti vagy szerkesztheti egy elem jogosutságát, és szerkesztheti egy egyedi elem componenseinek jogosutságát: bundles és bitstreams. Röviden, egy elem a kötegek gyűjteménye, és a kötegek a bitsteramek gyűjteménye. A kötegeknek többnyire van ADD/REMOVE/READ/WRITE jogosultsága, miközben a bitstreameknek csak READ/WRITE jogosultsága.",
 
   "item.edit.authorizations.title": "Jogosultásgok elem szerkesztése",
 
@@ -1626,7 +1626,7 @@
 
   "item.search.results.head": "Elem keresésének eredménye",
 
-  "item.search.title": "Elem Keresése",
+  "item.search.title": "DSpace Angular :: Elem Keresése",
 
   "item.page.abstract": "Kivonat",
 
@@ -1750,7 +1750,7 @@
 
   "journal.search.results.head": "Folyóirat keresési eredmények",
 
-  "journal.search.title": "Folyóirat keresés",
+  "journal.search.title": "DSpace Angular :: Folyóirat keresés",
 
   "journalissue.listelement.badge": "Folyóirat szám",
 
@@ -1804,7 +1804,7 @@
 
   "loading.items": "Tételek betöltése...",
 
-  "loading.mydspace-results": "Tételak betöltése...",
+  "loading.mydspace-results": "Tételek betöltése...",
 
   "loading.objects": "Betöltés...",
 
@@ -1846,7 +1846,7 @@
 
   "menu.header.admin": "Admin",
 
-  "menu.header.image.logo": "Adattár logo",
+  "menu.header.image.logo": "Adattár logó",
 
   "menu.section.access_control": "Hozzáférési kontroll",
 
@@ -2060,7 +2060,7 @@
 
   "mydspace.upload.upload-failed-moreonefile": "Feldolgozhatalan kérés. Csak egy fájl van engedélyezve.",
 
-  "mydspace.upload.upload-multiple-successful": "{{qty}} Új munkafelület tételak létrehozva.",
+  "mydspace.upload.upload-multiple-successful": "{{qty}} Új munkafelület tételek létrehozva.",
 
   "mydspace.upload.upload-successful": "Új munkafelület tétel létrehozva. Kattintson {{here}} hogy szerkessze.",
 
@@ -2136,7 +2136,7 @@
 
   "person.search.results.head": "Személy keresési eredmények",
 
-  "person.search.title": "Személy keresése",
+  "person.search.title": "DSpace Angular :: Személy keresése",
 
   "process.new.select-parameters": "Paraméterek",
 
@@ -2258,11 +2258,11 @@
 
   "profile.notifications.warning.no-changes.title": "Nincs változtatás",
 
-  "profile.security.form.error.matching-passwords": "A jelszavak nem találnak.",
+  "profile.security.form.error.matching-passwords": "A jelszavak nem egyeznek.",
 
   "profile.security.form.error.password-length": "A jelszó legalább 6 karakter hosszú kell, hogy legyen",
 
-  "profile.security.form.info": "Opcionálisan beírhatja jelszavát az alsó mezőbe majd igazolhatja azt, beírva a második mezőbe. Legalább hat karakter hosszú kell, hogy legyen.",
+  "profile.security.form.info": "Opcionálisan új jelszót állíthat be, írja be az alsó mezőbe, majd ismételje meg a második mezőben. Legalább hat karakter hosszú kell, hogy legyen.",
 
   "profile.security.form.label.password": "Jelszó",
 
@@ -2274,7 +2274,7 @@
 
   "profile.security.form.notifications.error.title": "Jelszó megváltoztatásakor hiba történt",
 
-  "profile.security.form.notifications.error.not-long-enough": "A jelszó legalább 8 karakter kell, hogy legyen.",
+  "profile.security.form.notifications.error.not-long-enough": "A jelszó legalább 6 karakter kell, hogy legyen.",
 
   "profile.security.form.notifications.error.not-same": "A megadott jelszavak nem azonosak.",
 
@@ -2320,7 +2320,7 @@
 
   "publication.search.results.head": "Publikáció keresési eredmények",
 
-  "publication.search.title": "Publikáció keresése",
+  "publication.search.title": "DSpace Angular :: Publikáció keresése",
 
   "register-email.title": "Új felhasználó regisztrálása",
 
@@ -2368,7 +2368,7 @@
 
   "register-page.registration.header": "Új felhasználó regisztrálása",
 
-  "register-page.registration.info": "Hozzon létre egy felhasználót, hogy feliratkozhasson gyűjtemények e-mail értesítésére, és új elemeket tölthessen fel a DSpace-be.",
+  "register-page.registration.info": "Hozzon létre egy felhasználói profilt, hogy feliratkozhasson gyűjtemények e-mail értesítésére, és új elemeket tölthessen fel a DSpace-be.",
 
   "register-page.registration.email": "E-mail cím *",
 
@@ -2376,7 +2376,7 @@
 
   "register-page.registration.email.error.pattern": "Írjon be egy érvényes e-mail címet",
 
-  "register-page.registration.email.hint": "Az e-mail cím ellenőrizve lesz és evvel tud belépni a rendszerbe.",
+  "register-page.registration.email.hint": "Az email címet ellenőrzi a rendszer és felhasználói névként ezt lehet használni.",
 
   "register-page.registration.submit": "Regisztráció",
 
@@ -2466,7 +2466,7 @@
 
   "resource-policies.form.action-type.required": "Ki kell válasszon egy műveletet.",
 
-  "resource-policies.form.eperson-group-list.label": "Az eperson vagy csoport amihez rendeli a jogosultságot",
+  "resource-policies.form.eperson-group-list.label": "Az felhasználó vagy csoport amihez rendeli a jogosultságot",
 
   "resource-policies.form.eperson-group-list.select.btn": "Kiválaszt",
 
@@ -2528,7 +2528,7 @@
 
   "search.switch-configuration.title": "Megtekintés",
 
-  "search.title": "Keresés",
+  "search.title": "DSpace Angular :: Keresés",
 
   "search.breadcrumbs": "Keresés",
 
@@ -2880,7 +2880,7 @@
 
   "submission.sections.describe.relationship-lookup.search-tab.select-page": "Oldal választása",
 
-  "submission.sections.describe.relationship-lookup.selected": "Kiválasztott {{ size }} tételak",
+  "submission.sections.describe.relationship-lookup.selected": "Kiválasztott {{ size }} tételek",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAuthorOfPublication": "Helyi szerzők ({{ count }})",
 
@@ -3064,11 +3064,11 @@
 
   "submission.sections.submit.progressbar.describe.recycle": "Reciklál",
 
-  "submission.sections.submit.progressbar.describe.stepcustom": "Leír",
+  "submission.sections.submit.progressbar.describe.stepcustom": "Leírás",
 
-  "submission.sections.submit.progressbar.describe.stepone": "Leír",
+  "submission.sections.submit.progressbar.describe.stepone": "Leírás",
 
-  "submission.sections.submit.progressbar.describe.steptwo": "Leír",
+  "submission.sections.submit.progressbar.describe.steptwo": "Leírás",
 
   "submission.sections.submit.progressbar.detect-duplicate": "Potenciális duplázódás",
 
@@ -3086,7 +3086,7 @@
 
   "submission.sections.upload.delete.submit": "Törlés",
 
-  "submission.sections.upload.drop-message": "Húzza ide az állományokat, hogy a tételhoz csatolja",
+  "submission.sections.upload.drop-message": "Húzza ide az állományokat, hogy a tételhez csatolja",
 
   "submission.sections.upload.form.access-condition-label": "Elérhetőségi feltétel típusa",
 
@@ -3170,7 +3170,7 @@
 
   "submission.workflow.tasks.pool.claim": "Követelés",
 
-  "submission.workflow.tasks.pool.claim_help": "Ossza ki a feladatot önmagának.",
+  "submission.workflow.tasks.pool.claim_help": "Feladat magamhoz rendelése",
 
   "submission.workflow.tasks.pool.hide-detail": "Részletek elrejtése",
 
@@ -3192,7 +3192,7 @@
 
   "vocabulary-treeview.tree.description.srsc": "Kutatási téma kategóriák",
 
-  "uploader.browse": "böngészés",
+  "uploader.browse": "tallózon",
 
   "uploader.drag-message": "Húzza ide az állományokat",
 
@@ -3206,7 +3206,7 @@
 
   "virtual-metadata.delete-item.modal-head": "Ennek a kapcsolatnak a virtuális metaadatai",
 
-  "virtual-metadata.delete-relationship.modal-head": "Válassza ki azokat a tételakat, amelyekhez óhajtja a virtuális metaadatok elmentését valódi metaadatokként",
+  "virtual-metadata.delete-relationship.modal-head": "Válassza ki azokat a tételeket, amelyekhez óhajtja a virtuális metaadatok elmentését valódi metaadatokként",
 
   "workflowAdmin.search.results.head": "Munkafolyamat szervezése",
 
@@ -3226,21 +3226,27 @@
 
   "workflow-item.delete.button.confirm": "Töröl",
 
-  "workflow-item.send-back.notification.success.title": "Visszaküldve a feladónak",
+  "workflow-item.send-back.notification.success.title": "Visszaküldve a feltöltőnek",
 
-  "workflow-item.send-back.notification.success.content": "Munkafolyamat elem sikeresen visszaküldve a feladónak",
+  "workflow-item.send-back.notification.success.content": "Munkafolyamat elem sikeresen visszaküldve a feltöltőnek",
 
   "workflow-item.send-back.notification.error.title": "Valami hiba keletkezett",
 
-  "workflow-item.send-back.notification.error.content": "Munkafolyamat elem visszaküldése a feladónak nem sikerült",
+  "workflow-item.send-back.notification.error.content": "Munkafolyamat elem visszaküldése a feltöltőnek nem sikerült",
 
-  "workflow-item.send-back.title": "Munkafolyamt elemet visszaküld a feladónak",
+  "workflow-item.send-back.title": "Munkafolyamt elemet visszaküld a feltöltőnek",
 
-  "workflow-item.send-back.header": "Munkafolyamt elemet visszaküld a feladónak",
+  "workflow-item.send-back.header": "Munkafolyamt elemet visszaküld a feltöltőnek",
 
   "workflow-item.send-back.button.cancel": "Mégse",
 
   "workflow-item.send-back.button.confirm": "Visszaküld",
 
-  "repository.title.prefix": "Qulto Repozitórium :: ",
+  "repository.title.prefix": "QULTO Repozitórium :: ",
+
+  "qulto.home.welcome.title": "Üdvözöljük a QULTO Repozitórium nyitóoldalán!",
+
+  "qulto.home.welcome.description": "A Repozitórium elektronikus dokumentumok digitális tárhelye, archiválásra és a dokumentumok hozzáférhetővé tételére szolgál.",
+
+  "qulto.home.welcome.functions": "A kategóriákon belül gyűjteményekben kereshetünk, böngészhetünk.",
 }
