@@ -112,7 +112,7 @@
 
   "admin.registries.bitstream-formats.table.supportLevel.head": "Támogatási szint",
 
-  "admin.registries.bitstream-formats.title": "DSpace Angular :: Bitfolyam formátum leíró adatbázis",
+  "admin.registries.bitstream-formats.title": "Bitfolyam formátum leíró adatbázis",
 
   "admin.registries.metadata.breadcrumbs": "Metaadat leíró adatbázis",
 
@@ -138,7 +138,7 @@
 
   "admin.registries.metadata.schemas.table.namespace": "Névtér",
 
-  "admin.registries.metadata.title": "DSpace Angular :: Metaadat leíró adatbázis",
+  "admin.registries.metadata.title": "Metaadat leíró adatbázis",
 
   "admin.registries.schema.breadcrumbs": "Metaadat séma",
 
@@ -188,7 +188,7 @@
 
   "admin.registries.schema.return": "Vissza",
 
-  "admin.registries.schema.title": "DSpace Angular :: Metaadat Séma leíró adatbázis",
+  "admin.registries.schema.title": "Metaadat Séma leíró adatbázis",
 
   "admin.access-control.epeople.actions.delete": "EPerson törlése",
 
@@ -198,7 +198,7 @@
 
   "admin.access-control.epeople.actions.stop-impersonating": "EPerson megszemélyesítésének befejezése",
 
-  "admin.access-control.epeople.title": "DSpace Angular :: EPeople",
+  "admin.access-control.epeople.title": "EPeople",
 
   "admin.access-control.epeople.head": "EPeople",
 
@@ -274,11 +274,11 @@
 
   "admin.access-control.epeople.notification.deleted.success": "EPerson: \"{{name}}\" törlése sikerült",
 
-  "admin.access-control.groups.title": "DSpace Angular :: Csoportok",
+  "admin.access-control.groups.title": "Csoportok",
 
-  "admin.access-control.groups.title.singleGroup": "DSpace Angular :: Csoport szerkesztése",
+  "admin.access-control.groups.title.singleGroup": "Csoport szerkesztése",
 
-  "admin.access-control.groups.title.addGroup": "DSpace Angular :: Új csoport",
+  "admin.access-control.groups.title.addGroup": "Új csoport",
 
   "admin.access-control.groups.head": "Csoportok",
 
@@ -1208,7 +1208,7 @@
 
   "home.breadcrumbs": "Főoldal",
 
-  "home.title": "DSpace Angular :: Főoldal",
+  "home.title": "Főoldal",
 
   "home.top-level-communities.head": "Kategóriák a DSpace-ben",
 
@@ -1626,7 +1626,7 @@
 
   "item.search.results.head": "Elem keresésének eredménye",
 
-  "item.search.title": "DSpace Angular :: Elem Keresése",
+  "item.search.title": "Elem Keresése",
 
   "item.page.abstract": "Kivonat",
 
@@ -1750,7 +1750,7 @@
 
   "journal.search.results.head": "Folyóirat keresési eredmények",
 
-  "journal.search.title": "DSpace Angular :: Folyóirat keresés",
+  "journal.search.title": "Folyóirat keresés",
 
   "journalissue.listelement.badge": "Folyóirat szám",
 
@@ -2136,7 +2136,7 @@
 
   "person.search.results.head": "Személy keresési eredmények",
 
-  "person.search.title": "DSpace Angular :: Személy keresése",
+  "person.search.title": "Személy keresése",
 
   "process.new.select-parameters": "Paraméterek",
 
@@ -2320,7 +2320,7 @@
 
   "publication.search.results.head": "Publikáció keresési eredmények",
 
-  "publication.search.title": "DSpace Angular :: Publikáció keresése",
+  "publication.search.title": "Publikáció keresése",
 
   "register-email.title": "Új felhasználó regisztrálása",
 
@@ -2528,7 +2528,7 @@
 
   "search.switch-configuration.title": "Megtekintés",
 
-  "search.title": "DSpace Angular :: Keresés",
+  "search.title": "Keresés",
 
   "search.breadcrumbs": "Keresés",
 
@@ -2544,7 +2544,7 @@
 
   "search.filters.applied.f.entityType": "Tétel típusa",
 
-  "search.filters.applied.f.has_content_in_original_bundle": "Állományokat tartalmaz",
+  "search.filters.applied.f.has_content_in_original_bundle": "Fájlokat tartalmaz",
 
   "search.filters.applied.f.itemtype": "Típus",
 
@@ -2604,7 +2604,7 @@
 
   "search.filters.filter.entityType.placeholder": "Tétel típusa",
 
-  "search.filters.filter.has_content_in_original_bundle.head": "Állományokat tartalmaz",
+  "search.filters.filter.has_content_in_original_bundle.head": "Fájlokat tartalmaz",
 
   "search.filters.filter.itemtype.head": "Típus",
 
