@@ -1,0 +1,31 @@
+// DSpace works with CSS variables for its own components, and has a mapping of all bootstrap Sass
+// variables to CSS equivalents (see src/styles/_bootstrap_variables_mapping.scss). However Bootstrap
+// still uses Sass variables internally. So if you want to override bootstrap (or other sass
+// variables) you can do so here. Their CSS counterparts will include the changes you make here
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Rubik&display=swap");
+
+$font-family-sans-serif: "Roboto", sans-serif;
+
+$gray-700: #495057 !default;
+$gray-100: #f6f7f9 !default;
+
+$blue: #174b85 !default;
+$green: #97b513 !default;
+$cyan: #174b85 !default;
+$yellow: #f4530e !default;
+$red: #cf4444 !default;
+$dark: #092e56 !default;
+$white: #ffffff;
+
+$theme-colors: (
+  primary: $blue,
+  secondary: $green,
+  success: $green,
+  info: $blue,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $dark,
+) !default;

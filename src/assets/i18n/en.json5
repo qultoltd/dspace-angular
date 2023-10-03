@@ -4726,7 +4726,7 @@
 
   "thumbnail.person.placeholder": "No Profile Picture Available",
 
-  "title": "DSpace",
+  title: "DSpace",
 
   "vocabulary-treeview.header": "Hierarchical tree view",
 
@@ -5216,4 +5216,9 @@
 
   "access-control-option-end-date-note": "Select the date until which the related access condition is applied",
 
+  "qulto.home.welcome.title": "Welcome at the Qulto Repozitórium page!",
+
+  "qulto.home.welcome.description": "The repozitory is a digital storage for electronic documents, is used for archiving and making documents accessible.",
+
+  "qulto.home.welcome.functions": "You can search and browse collections within the categories.",
 }
