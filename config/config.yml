@@ -1,13 +1,9 @@
 rest:
-  ssl: false
-  host: 192.168.6.101
-  port: 8080
+  ssl: true
+  host: api7.dspace.org
+  port: 443
   nameSpace: /server
-ui:
-  ssl: false
-  host: 192.168.6.101
-  port: 4000
-  nameSpace: /
+
 themes:
   - name: qulto
     headTags:
