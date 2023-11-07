@@ -1,5 +1,4 @@
 {
-
   // "401.help": "You're not authorized to access this page. You can use the button below to get back to the home page.",
   "401.help": "Non sei autorizzato ad accedere a questa pagina. Puoi usare il pulsante qui sotto per tornare alla home page.",
 
@@ -8,8 +7,6 @@
 
   // "401.unauthorized": "unauthorized",
   "401.unauthorized": "Non autorizzato",
-
-
 
   // "403.help": "You don't have permission to access this page. You can use the button below to get back to the home page.",
   "403.help": "Non si dispone dell'autorizzazione per accedere a questa pagina. Puoi usare il pulsante qui sotto per tornare alla home page.",
@@ -28,7 +25,6 @@
 
   // "500.link.home-page": "Take me to the home page",
   "500.link.home-page": "Torna alla home page",
-
 
   // "404.help": "We can't find the page you're looking for. The page may have been moved or deleted. You can use the button below to get back to the home page. ",
   "404.help": "Non riusciamo a trovare la pagina che stai cercando. La pagina potrebbe essere stata spostata o eliminata. Puoi usare il pulsante qui sotto per tornare alla home page.",
@@ -216,8 +212,6 @@
   // "admin.registries.bitstream-formats.title": "Bitstream Format Registry",
   "admin.registries.bitstream-formats.title": "Registro di sistema del formato Bitstream",
 
-
-
   // "admin.registries.metadata.breadcrumbs": "Metadata registry",
   "admin.registries.metadata.breadcrumbs": "Registro dei metadati",
 
@@ -257,13 +251,11 @@
   // "admin.registries.metadata.title": "Metadata Registry",
   "admin.registries.metadata.title": "Registro dei metadati",
 
-
-
   // "admin.registries.schema.breadcrumbs": "Metadata schema",
   "admin.registries.schema.breadcrumbs": "Metadata Schema",
 
   // "admin.registries.schema.description": "This is the metadata schema for \"{{namespace}}\".",
-  "admin.registries.schema.description": "Questo è il Metadata Schema per \"{{namespace}}.",
+  "admin.registries.schema.description": 'Questo è il Metadata Schema per "{{namespace}}.',
 
   // "admin.registries.schema.fields.head": "Schema metadata fields",
   "admin.registries.schema.fields.head": "Campi dei metadati dello schema",
@@ -302,7 +294,7 @@
   "admin.registries.schema.head": "Metadata Schema",
 
   // "admin.registries.schema.notification.created": "Successfully created metadata schema \"{{prefix}}\"",
-  "admin.registries.schema.notification.created": "Metadata Schema creato correttamente \"{{prefix}}\"",
+  "admin.registries.schema.notification.created": 'Metadata Schema creato correttamente "{{prefix}}"',
 
   // "admin.registries.schema.notification.deleted.failure": "Failed to delete {{amount}} metadata schemas",
   "admin.registries.schema.notification.deleted.failure": "Impossibile eliminare il Metadata Schema {{amount}}",
@@ -311,13 +303,13 @@
   "admin.registries.schema.notification.deleted.success": "Metadata Schema {{amount}} eliminato correttamente",
 
   // "admin.registries.schema.notification.edited": "Successfully edited metadata schema \"{{prefix}}\"",
-  "admin.registries.schema.notification.edited": "Schema di metadati modificato correttamente \"{{prefix}}\"",
+  "admin.registries.schema.notification.edited": 'Schema di metadati modificato correttamente "{{prefix}}"',
 
   // "admin.registries.schema.notification.failure": "Error",
   "admin.registries.schema.notification.failure": "Errore",
 
   // "admin.registries.schema.notification.field.created": "Successfully created metadata field \"{{field}}\"",
-  "admin.registries.schema.notification.field.created": "Campo dei metadati creato correttamente \"{{field}}\"",
+  "admin.registries.schema.notification.field.created": 'Campo dei metadati creato correttamente "{{field}}"',
 
   // "admin.registries.schema.notification.field.deleted.failure": "Failed to delete {{amount}} metadata fields",
   "admin.registries.schema.notification.field.deleted.failure": "Impossibile eliminare i campi di metadati {{amount}}",
@@ -326,7 +318,7 @@
   "admin.registries.schema.notification.field.deleted.success": "Campi di metadati {{amount}} eliminati correttamente",
 
   // "admin.registries.schema.notification.field.edited": "Successfully edited metadata field \"{{field}}\"",
-  "admin.registries.schema.notification.field.edited": "Campo dei metadati modificato correttamente \"{{field}}\"",
+  "admin.registries.schema.notification.field.edited": 'Campo dei metadati modificato correttamente "{{field}}"',
 
   // "admin.registries.schema.notification.success": "Success",
   "admin.registries.schema.notification.success": "Successo",
@@ -336,8 +328,6 @@
 
   // "admin.registries.schema.title": "Metadata Schema Registry",
   "admin.registries.schema.title": "Registro del Metadata Schema",
-
-
 
   // "admin.access-control.epeople.actions.delete": "Delete EPerson",
   "admin.access-control.epeople.actions.delete": "Eliminare EPerson",
@@ -394,13 +384,13 @@
   "admin.access-control.epeople.table.edit": "Editare",
 
   // "admin.access-control.epeople.table.edit.buttons.edit": "Edit \"{{name}}\"",
-  "admin.access-control.epeople.table.edit.buttons.edit": "Modifica \"{{name}}\"",
+  "admin.access-control.epeople.table.edit.buttons.edit": 'Modifica "{{name}}"',
 
   // "admin.access-control.epeople.table.edit.buttons.edit-disabled": "You are not authorized to edit this group",
   "admin.access-control.epeople.table.edit.buttons.edit-disabled": "Non sei autorizzato a modificare questo gruppo",
 
   // "admin.access-control.epeople.table.edit.buttons.remove": "Delete \"{{name}}\"",
-  "admin.access-control.epeople.table.edit.buttons.remove": "Eliminare \"{{name}}\"",
+  "admin.access-control.epeople.table.edit.buttons.remove": 'Eliminare "{{name}}"',
 
   // "admin.access-control.epeople.no-items": "No EPeople to show.",
   "admin.access-control.epeople.no-items": "Nessuna EPersona da mostrare.",
@@ -433,28 +423,28 @@
   "admin.access-control.epeople.form.return": "Indietro",
 
   // "admin.access-control.epeople.form.notification.created.success": "Successfully created EPerson \"{{name}}\"",
-  "admin.access-control.epeople.form.notification.created.success": "EPerson creato con successo \"{{name}}\"",
+  "admin.access-control.epeople.form.notification.created.success": 'EPerson creato con successo "{{name}}"',
 
   // "admin.access-control.epeople.form.notification.created.failure": "Failed to create EPerson \"{{name}}\"",
-  "admin.access-control.epeople.form.notification.created.failure": "Impossibile creare EPerson \"{{name}}\"",
+  "admin.access-control.epeople.form.notification.created.failure": 'Impossibile creare EPerson "{{name}}"',
 
   // "admin.access-control.epeople.form.notification.created.failure.emailInUse": "Failed to create EPerson \"{{name}}\", email \"{{email}}\" already in use.",
-  "admin.access-control.epeople.form.notification.created.failure.emailInUse": "Impossibile creare EPerson \"{{name}}\",  email \"{{email}}\" già in uso.",
+  "admin.access-control.epeople.form.notification.created.failure.emailInUse": 'Impossibile creare EPerson "{{name}}",  email "{{email}}" già in uso.',
 
   // "admin.access-control.epeople.form.notification.edited.failure.emailInUse": "Failed to edit EPerson \"{{name}}\", email \"{{email}}\" already in use.",
-  "admin.access-control.epeople.form.notification.edited.failure.emailInUse": "Impossibile modificare EPerson \"{{name}}\", email \"{{email}}\" già in uso.",
+  "admin.access-control.epeople.form.notification.edited.failure.emailInUse": 'Impossibile modificare EPerson "{{name}}", email "{{email}}" già in uso.',
 
   // "admin.access-control.epeople.form.notification.edited.success": "Successfully edited EPerson \"{{name}}\"",
-  "admin.access-control.epeople.form.notification.edited.success": "EPerson modificato con successo \"{{name}}\"",
+  "admin.access-control.epeople.form.notification.edited.success": 'EPerson modificato con successo "{{name}}"',
 
   // "admin.access-control.epeople.form.notification.edited.failure": "Failed to edit EPerson \"{{name}}\"",
-  "admin.access-control.epeople.form.notification.edited.failure": "Impossibile modificare EPerson \"{{name}}\"",
+  "admin.access-control.epeople.form.notification.edited.failure": 'Impossibile modificare EPerson "{{name}}"',
 
   // "admin.access-control.epeople.form.notification.deleted.success": "Successfully deleted EPerson \"{{name}}\"",
-  "admin.access-control.epeople.form.notification.deleted.success": "EPerson eliminato con successo \"{{name}}\"",
+  "admin.access-control.epeople.form.notification.deleted.success": 'EPerson eliminato con successo "{{name}}"',
 
   // "admin.access-control.epeople.form.notification.deleted.failure": "Failed to delete EPerson \"{{name}}\"",
-  "admin.access-control.epeople.form.notification.deleted.failure": "Impossibile eliminare EPerson \"{{name}}\"",
+  "admin.access-control.epeople.form.notification.deleted.failure": 'Impossibile eliminare EPerson "{{name}}"',
 
   // "admin.access-control.epeople.form.groupsEPersonIsMemberOf": "Member of these groups:",
   "admin.access-control.epeople.form.groupsEPersonIsMemberOf": "Membro dei seguenti gruppi:",
@@ -475,12 +465,10 @@
   "admin.access-control.epeople.form.goToGroups": "Aggiungi ai gruppi",
 
   // "admin.access-control.epeople.notification.deleted.failure": "Failed to delete EPerson: \"{{name}}\"",
-  "admin.access-control.epeople.notification.deleted.failure": "Impossibile eliminare l'EPerson: \"{{name}}\"",
+  "admin.access-control.epeople.notification.deleted.failure": 'Impossibile eliminare l\'EPerson: "{{name}}"',
 
   // "admin.access-control.epeople.notification.deleted.success": "Successfully deleted EPerson: \"{{name}}\"",
-  "admin.access-control.epeople.notification.deleted.success": "EPerson eliminata con successo: \"{{name}}\"",
-
-
+  "admin.access-control.epeople.notification.deleted.success": 'EPerson eliminata con successo: "{{name}}"',
 
   // "admin.access-control.groups.title": "Groups",
   "admin.access-control.groups.title": "Gruppi",
@@ -535,31 +523,29 @@
   "admin.access-control.groups.table.edit": "Editare",
 
   // "admin.access-control.groups.table.edit.buttons.edit": "Edit \"{{name}}\"",
-  "admin.access-control.groups.table.edit.buttons.edit": "Modifica \"{{name}}\"",
+  "admin.access-control.groups.table.edit.buttons.edit": 'Modifica "{{name}}"',
 
   // "admin.access-control.groups.table.edit.buttons.remove": "Delete \"{{name}}\"",
   // TODO New key - Add a translation
-  "admin.access-control.groups.table.edit.buttons.remove": "Delete \"{{name}}\"",
+  "admin.access-control.groups.table.edit.buttons.remove": 'Delete "{{name}}"',
 
   // "admin.access-control.groups.no-items": "No groups found with this in their name or this as UUID",
   "admin.access-control.groups.no-items": "Nessun gruppo trovato con questo nel loro nome o questo come UUID",
 
   // "admin.access-control.groups.notification.deleted.success": "Successfully deleted group \"{{name}}\"",
-  "admin.access-control.groups.notification.deleted.success": "Gruppo eliminato con successo \"{{name}}\"",
+  "admin.access-control.groups.notification.deleted.success": 'Gruppo eliminato con successo "{{name}}"',
 
   // "admin.access-control.groups.notification.deleted.failure.title": "Failed to delete group \"{{name}}\"",
-  "admin.access-control.groups.notification.deleted.failure.title": "Impossibile eliminare il gruppo \"{{name}}\"",
+  "admin.access-control.groups.notification.deleted.failure.title": 'Impossibile eliminare il gruppo "{{name}}"',
 
   // "admin.access-control.groups.notification.deleted.failure.content": "Cause: \"{{cause}}\"",
-  "admin.access-control.groups.notification.deleted.failure.content": "Causa: \"{{cause}}\"",
-
-
+  "admin.access-control.groups.notification.deleted.failure.content": 'Causa: "{{cause}}"',
 
   // "admin.access-control.groups.form.alert.permanent": "This group is permanent, so it can't be edited or deleted. You can still add and remove group members using this page.",
   "admin.access-control.groups.form.alert.permanent": "Questo gruppo è permanente, quindi non può essere modificato o eliminato. Puoi comunque aggiungere e rimuovere membri del gruppo utilizzando questa pagina.",
 
   // "admin.access-control.groups.form.alert.workflowGroup": "This group can’t be modified or deleted because it corresponds to a role in the submission and workflow process in the \"{{name}}\" {{comcol}}. You can delete it from the <a href='{{comcolEditRolesRoute}}'>\"assign roles\"</a> tab on the edit {{comcol}} page. You can still add and remove group members using this page.",
-  "admin.access-control.groups.form.alert.workflowGroup": "Questo gruppo non può essere modificato o eliminato perché corrisponde a un ruolo nella submission e processo del workflow nel \"{{name}}\"  {{comcol}}. Puoi eliminarlo dal Tab <a href='{{comcolEditRolesRoute}}'>\"assegna ruoli\"</a> nella pagina di modifica {{comcol}}. Puoi ancora aggiungere e rimuovere membri del gruppo da questa pagina.",
+  "admin.access-control.groups.form.alert.workflowGroup": 'Questo gruppo non può essere modificato o eliminato perché corrisponde a un ruolo nella submission e processo del workflow nel "{{name}}"  {{comcol}}. Puoi eliminarlo dal Tab <a href=\'{{comcolEditRolesRoute}}\'>"assegna ruoli"</a> nella pagina di modifica {{comcol}}. Puoi ancora aggiungere e rimuovere membri del gruppo da questa pagina.',
 
   // "admin.access-control.groups.form.head.create": "Create group",
   "admin.access-control.groups.form.head.create": "Crea gruppo",
@@ -577,31 +563,31 @@
   "admin.access-control.groups.form.groupDescription": "Descrizione",
 
   // "admin.access-control.groups.form.notification.created.success": "Successfully created Group \"{{name}}\"",
-  "admin.access-control.groups.form.notification.created.success": "Gruppo creato con successo \"{{name}}\"",
+  "admin.access-control.groups.form.notification.created.success": 'Gruppo creato con successo "{{name}}"',
 
   // "admin.access-control.groups.form.notification.created.failure": "Failed to create Group \"{{name}}\"",
-  "admin.access-control.groups.form.notification.created.failure": "Impossibile creare il gruppo \"{{name}}\"",
+  "admin.access-control.groups.form.notification.created.failure": 'Impossibile creare il gruppo "{{name}}"',
 
   // "admin.access-control.groups.form.notification.created.failure.groupNameInUse": "Failed to create Group with name: \"{{name}}\", make sure the name is not already in use.",
-  "admin.access-control.groups.form.notification.created.failure.groupNameInUse": "Impossibile creare il Gruppo con nome: \"{{name}}\", assicurarsi che il nome non sia già in uso.",
+  "admin.access-control.groups.form.notification.created.failure.groupNameInUse": 'Impossibile creare il Gruppo con nome: "{{name}}", assicurarsi che il nome non sia già in uso.',
 
   // "admin.access-control.groups.form.notification.edited.failure": "Failed to edit Group \"{{name}}\"",
-  "admin.access-control.groups.form.notification.edited.failure": "Impossibile modificare il gruppo \"{{name}}\"",
+  "admin.access-control.groups.form.notification.edited.failure": 'Impossibile modificare il gruppo "{{name}}"',
 
   // "admin.access-control.groups.form.notification.edited.failure.groupNameInUse": "Name \"{{name}}\" already in use!",
-  "admin.access-control.groups.form.notification.edited.failure.groupNameInUse": "Nome \"{{name}}\" già in uso!",
+  "admin.access-control.groups.form.notification.edited.failure.groupNameInUse": 'Nome "{{name}}" già in uso!',
 
   // "admin.access-control.groups.form.notification.edited.success": "Successfully edited Group \"{{name}}\"",
-  "admin.access-control.groups.form.notification.edited.success": "Gruppo modificato correttamente \"{{name}}\"",
+  "admin.access-control.groups.form.notification.edited.success": 'Gruppo modificato correttamente "{{name}}"',
 
   // "admin.access-control.groups.form.actions.delete": "Delete Group",
   "admin.access-control.groups.form.actions.delete": "Elimina gruppo",
 
   // "admin.access-control.groups.form.delete-group.modal.header": "Delete Group \"{{ dsoName }}\"",
-  "admin.access-control.groups.form.delete-group.modal.header": "Elimina gruppo \"{{ dsoName }}\"",
+  "admin.access-control.groups.form.delete-group.modal.header": 'Elimina gruppo "{{ dsoName }}"',
 
   // "admin.access-control.groups.form.delete-group.modal.info": "Are you sure you want to delete Group \"{{ dsoName }}\"",
-  "admin.access-control.groups.form.delete-group.modal.info": "Sei sicuro di voler eliminare gruppo \"{{ dsoName }}\"",
+  "admin.access-control.groups.form.delete-group.modal.info": 'Sei sicuro di voler eliminare gruppo "{{ dsoName }}"',
 
   // "admin.access-control.groups.form.delete-group.modal.cancel": "Cancel",
   "admin.access-control.groups.form.delete-group.modal.cancel": "Annulla",
@@ -610,13 +596,13 @@
   "admin.access-control.groups.form.delete-group.modal.confirm": "Cancellare",
 
   // "admin.access-control.groups.form.notification.deleted.success": "Successfully deleted group \"{{ name }}\"",
-  "admin.access-control.groups.form.notification.deleted.success": "Gruppo eliminato con successo \"{{ name }}\"",
+  "admin.access-control.groups.form.notification.deleted.success": 'Gruppo eliminato con successo "{{ name }}"',
 
   // "admin.access-control.groups.form.notification.deleted.failure.title": "Failed to delete group \"{{ name }}\"",
-  "admin.access-control.groups.form.notification.deleted.failure.title": "Impossibile eliminare il gruppo \"{{ name }}\"",
+  "admin.access-control.groups.form.notification.deleted.failure.title": 'Impossibile eliminare il gruppo "{{ name }}"',
 
   // "admin.access-control.groups.form.notification.deleted.failure.content": "Cause: \"{{ cause }}\"",
-  "admin.access-control.groups.form.notification.deleted.failure.content": "Causa: \"{{ cause }}\"",
+  "admin.access-control.groups.form.notification.deleted.failure.content": 'Causa: "{{ cause }}"',
 
   // "admin.access-control.groups.form.members-list.head": "EPeople",
   "admin.access-control.groups.form.members-list.head": "EPeople",
@@ -658,22 +644,22 @@
   "admin.access-control.groups.form.members-list.table.edit": "Rimuovi / Aggiungi",
 
   // "admin.access-control.groups.form.members-list.table.edit.buttons.remove": "Remove member with name \"{{name}}\"",
-  "admin.access-control.groups.form.members-list.table.edit.buttons.remove": "Rimuovi membro con nome \"{{name}}\"",
+  "admin.access-control.groups.form.members-list.table.edit.buttons.remove": 'Rimuovi membro con nome "{{name}}"',
 
   // "admin.access-control.groups.form.members-list.notification.success.addMember": "Successfully added member: \"{{name}}\"",
-  "admin.access-control.groups.form.members-list.notification.success.addMember": "Membro aggiunto con successo: \"{{name}}\"",
+  "admin.access-control.groups.form.members-list.notification.success.addMember": 'Membro aggiunto con successo: "{{name}}"',
 
   // "admin.access-control.groups.form.members-list.notification.failure.addMember": "Failed to add member: \"{{name}}\"",
-  "admin.access-control.groups.form.members-list.notification.failure.addMember": "Impossibile aggiungere il membro: \"{{name}}\"",
+  "admin.access-control.groups.form.members-list.notification.failure.addMember": 'Impossibile aggiungere il membro: "{{name}}"',
 
   // "admin.access-control.groups.form.members-list.notification.success.deleteMember": "Successfully deleted member: \"{{name}}\"",
-  "admin.access-control.groups.form.members-list.notification.success.deleteMember": "Membro eliminato con successo: \"{{name}}\"",
+  "admin.access-control.groups.form.members-list.notification.success.deleteMember": 'Membro eliminato con successo: "{{name}}"',
 
   // "admin.access-control.groups.form.members-list.notification.failure.deleteMember": "Failed to delete member: \"{{name}}\"",
-  "admin.access-control.groups.form.members-list.notification.failure.deleteMember": "Impossibile eliminare il membro: \"{{name}}\"",
+  "admin.access-control.groups.form.members-list.notification.failure.deleteMember": 'Impossibile eliminare il membro: "{{name}}"',
 
   // "admin.access-control.groups.form.members-list.table.edit.buttons.add": "Add member with name \"{{name}}\"",
-  "admin.access-control.groups.form.members-list.table.edit.buttons.add": "Aggiungi membro con nome \"{{name}}\"",
+  "admin.access-control.groups.form.members-list.table.edit.buttons.add": 'Aggiungi membro con nome "{{name}}"',
 
   // "admin.access-control.groups.form.members-list.notification.failure.noActiveGroup": "No current active group, submit a name first.",
   "admin.access-control.groups.form.members-list.notification.failure.noActiveGroup": "Nessun gruppo corrente attivo, invia prima un nome.",
@@ -685,7 +671,7 @@
   "admin.access-control.groups.form.members-list.no-items": "Nessun EPeople trovato in quella ricerca",
 
   // "admin.access-control.groups.form.subgroups-list.notification.failure": "Something went wrong: \"{{cause}}\"",
-  "admin.access-control.groups.form.subgroups-list.notification.failure": "Qualcosa è andato storto: \"{{cause}}\"",
+  "admin.access-control.groups.form.subgroups-list.notification.failure": 'Qualcosa è andato storto: "{{cause}}"',
 
   // "admin.access-control.groups.form.subgroups-list.head": "Groups",
   "admin.access-control.groups.form.subgroups-list.head": "Gruppi",
@@ -715,25 +701,25 @@
   "admin.access-control.groups.form.subgroups-list.table.edit": "Rimuovi / Aggiungi",
 
   // "admin.access-control.groups.form.subgroups-list.table.edit.buttons.remove": "Remove subgroup with name \"{{name}}\"",
-  "admin.access-control.groups.form.subgroups-list.table.edit.buttons.remove": "Rimuovi sottogruppo con nome \"{{name}}\"",
+  "admin.access-control.groups.form.subgroups-list.table.edit.buttons.remove": 'Rimuovi sottogruppo con nome "{{name}}"',
 
   // "admin.access-control.groups.form.subgroups-list.table.edit.buttons.add": "Add subgroup with name \"{{name}}\"",
-  "admin.access-control.groups.form.subgroups-list.table.edit.buttons.add": "Aggiungi sottogruppo con nome \"{{name}}\"",
+  "admin.access-control.groups.form.subgroups-list.table.edit.buttons.add": 'Aggiungi sottogruppo con nome "{{name}}"',
 
   // "admin.access-control.groups.form.subgroups-list.table.edit.currentGroup": "Current group",
   "admin.access-control.groups.form.subgroups-list.table.edit.currentGroup": "Gruppo attuale",
 
   // "admin.access-control.groups.form.subgroups-list.notification.success.addSubgroup": "Successfully added subgroup: \"{{name}}\"",
-  "admin.access-control.groups.form.subgroups-list.notification.success.addSubgroup": "Sottogruppo aggiunto con successo: \"{{name}}\"",
+  "admin.access-control.groups.form.subgroups-list.notification.success.addSubgroup": 'Sottogruppo aggiunto con successo: "{{name}}"',
 
   // "admin.access-control.groups.form.subgroups-list.notification.failure.addSubgroup": "Failed to add subgroup: \"{{name}}\"",
-  "admin.access-control.groups.form.subgroups-list.notification.failure.addSubgroup": "Impossibile aggiungere il sottogruppo: \"{{name}}\"",
+  "admin.access-control.groups.form.subgroups-list.notification.failure.addSubgroup": 'Impossibile aggiungere il sottogruppo: "{{name}}"',
 
   // "admin.access-control.groups.form.subgroups-list.notification.success.deleteSubgroup": "Successfully deleted subgroup: \"{{name}}\"",
-  "admin.access-control.groups.form.subgroups-list.notification.success.deleteSubgroup": "Sottogruppo eliminato con successo: \"{{name}}\"",
+  "admin.access-control.groups.form.subgroups-list.notification.success.deleteSubgroup": 'Sottogruppo eliminato con successo: "{{name}}"',
 
   // "admin.access-control.groups.form.subgroups-list.notification.failure.deleteSubgroup": "Failed to delete subgroup: \"{{name}}\"",
-  "admin.access-control.groups.form.subgroups-list.notification.failure.deleteSubgroup": "Impossibile eliminare il sottogruppo: \"{{name}}\"",
+  "admin.access-control.groups.form.subgroups-list.notification.failure.deleteSubgroup": 'Impossibile eliminare il sottogruppo: "{{name}}"',
 
   // "admin.access-control.groups.form.subgroups-list.notification.failure.noActiveGroup": "No current active group, submit a name first.",
   "admin.access-control.groups.form.subgroups-list.notification.failure.noActiveGroup": "Al momento nessun gruppo attivo, invia prima un nome.",
@@ -798,9 +784,6 @@
   // "administrativeView.search.results.head": "Administrative Search",
   "administrativeView.search.results.head": "Ricerca amministrativa",
 
-
-
-
   // "admin.workflow.breadcrumbs": "Administer Workflow",
   "admin.workflow.breadcrumbs": "Amministrare il flusso di lavoro",
 
@@ -827,8 +810,6 @@
   // "admin.workflow.item.supervision": "Supervision",
   // TODO New key - Add a translation
   "admin.workflow.item.supervision": "Supervision",
-
-
 
   // "admin.metadata-import.breadcrumbs": "Import Metadata",
   "admin.metadata-import.breadcrumbs": "Importare metadati",
@@ -919,7 +900,6 @@
   // TODO New key - Add a translation
   "advanced-workflow-action.rating.description-requiredDescription": "Please select a rating below and also add a review",
 
-
   // "advanced-workflow-action.select-reviewer.description-single": "Please select a single reviewer below before submitting",
   // TODO New key - Add a translation
   "advanced-workflow-action.select-reviewer.description-single": "Please select a single reviewer below before submitting",
@@ -927,7 +907,6 @@
   // "advanced-workflow-action.select-reviewer.description-multiple": "Please select one or more reviewers below before submitting",
   // TODO New key - Add a translation
   "advanced-workflow-action.select-reviewer.description-multiple": "Please select one or more reviewers below before submitting",
-
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.head": "EPeople",
   // TODO New key - Add a translation
@@ -983,27 +962,27 @@
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit.buttons.remove": "Remove member with name \"{{name}}\"",
   // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit.buttons.remove": "Remove member with name \"{{name}}\"",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit.buttons.remove": 'Remove member with name "{{name}}"',
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.success.addMember": "Successfully added member: \"{{name}}\"",
   // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.success.addMember": "Successfully added member: \"{{name}}\"",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.success.addMember": 'Successfully added member: "{{name}}"',
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.addMember": "Failed to add member: \"{{name}}\"",
   // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.addMember": "Failed to add member: \"{{name}}\"",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.addMember": 'Failed to add member: "{{name}}"',
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.success.deleteMember": "Successfully deleted member: \"{{name}}\"",
   // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.success.deleteMember": "Successfully deleted member: \"{{name}}\"",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.success.deleteMember": 'Successfully deleted member: "{{name}}"',
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.deleteMember": "Failed to delete member: \"{{name}}\"",
   // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.deleteMember": "Failed to delete member: \"{{name}}\"",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.deleteMember": 'Failed to delete member: "{{name}}"',
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit.buttons.add": "Add member with name \"{{name}}\"",
   // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit.buttons.add": "Add member with name \"{{name}}\"",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit.buttons.add": 'Add member with name "{{name}}"',
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.noActiveGroup": "No current active group, submit a name first.",
   // TODO New key - Add a translation
@@ -1038,15 +1017,12 @@
   // "auth.messages.token-refresh-failed": "Refreshing your session token failed. Please log in again.",
   "auth.messages.token-refresh-failed": "Aggiornamento del token di sessione non riuscito. Effettua nuovamente l'accesso.",
 
-
-
   // "bitstream.download.page": "Now downloading {{bitstream}}..." ,
   "bitstream.download.page": "Sto scaricando {{bitstream}}...",
 
   // "bitstream.download.page.back": "Back" ,
   // TODO Source message changed - Revise the translation
   "bitstream.download.page.back": "Indietro",
-
 
   // "bitstream.edit.authorizations.link": "Edit bitstream's Policies",
   "bitstream.edit.authorizations.link": "Modificare i criteri di bitstream",
@@ -1061,7 +1037,7 @@
   "bitstream.edit.bitstream": "Bitstream: ",
 
   // "bitstream.edit.form.description.hint": "Optionally, provide a brief description of the file, for example \"<i>Main article</i>\" or \"<i>Experiment data readings</i>\".",
-  "bitstream.edit.form.description.hint": "Facoltativamente, fornire una breve descrizione del file, ad esempio \"<i>Articolo principale</i>\" o \"<i>Dati dell'esperimento </i>\".",
+  "bitstream.edit.form.description.hint": 'Facoltativamente, fornire una breve descrizione del file, ad esempio "<i>Articolo principale</i>" o "<i>Dati dell\'esperimento </i>".',
 
   // "bitstream.edit.form.description.label": "Description",
   "bitstream.edit.form.description.label": "Descrizione",
@@ -1082,13 +1058,13 @@
   "bitstream.edit.form.newFormat.label": "Descrivi il nuovo formato",
 
   // "bitstream.edit.form.newFormat.hint": "The application you used to create the file, and the version number (for example, \"<i>ACMESoft SuperApp version 1.5</i>\").",
-  "bitstream.edit.form.newFormat.hint": "L'applicazione utilizzata per creare il file e il numero di versione (ad esempio \"<i>ACMESoft SuperApp versione 1.5</i>\").",
+  "bitstream.edit.form.newFormat.hint": 'L\'applicazione utilizzata per creare il file e il numero di versione (ad esempio "<i>ACMESoft SuperApp versione 1.5</i>").',
 
   // "bitstream.edit.form.primaryBitstream.label": "Primary bitstream",
   "bitstream.edit.form.primaryBitstream.label": "Primary bitstream",
 
   // "bitstream.edit.form.selectedFormat.hint": "If the format is not in the above list, <b>select \"format not in list\" above</b> and describe it under \"Describe new format\".",
-  "bitstream.edit.form.selectedFormat.hint": "Se il formato non è presente nell'elenco precedente, <b>selezionare \"formato  non presente in elenco\"  sopra</b> e descriverlo in \"Descrivi nuovo formato.",
+  "bitstream.edit.form.selectedFormat.hint": 'Se il formato non è presente nell\'elenco precedente, <b>selezionare "formato  non presente in elenco"  sopra</b> e descriverlo in "Descrivi nuovo formato.',
 
   // "bitstream.edit.form.selectedFormat.label": "Selected Format",
   "bitstream.edit.form.selectedFormat.label": "Formato selezionato",
@@ -1122,7 +1098,6 @@
 
   // "bitstream.edit.form.iiifHeight.hint": "The canvas height should usually match the image height.",
   "bitstream.edit.form.iiifHeight.hint": "L'altezza dell'area di lavoro deve in genere corrispondere all'altezza dell'immagine.",
-
 
   // "bitstream.edit.notifications.saved.content": "Your changes to this bitstream were saved.",
   "bitstream.edit.notifications.saved.content": "Le modifiche apportate a questo bitstream sono state salvate.",
@@ -1188,8 +1163,6 @@
 
   // "bitstream-request-a-copy.submit.error": "Something went wrong with submitting the item request.",
   "bitstream-request-a-copy.submit.error": "Qualcosa è andato storto con l'invio della richiesta dell'item.",
-
-
 
   // "browse.back.all-results": "All browse results",
   "browse.back.all-results": "Tutti i risultati",
@@ -1321,15 +1294,12 @@
   // "browse.title.page": "Browsing {{ collection }} by {{ field }} {{ value }}",
   "browse.title.page": "Mostra il contenuto di {{ collection }} per {{ field }} {{ value }}",
 
-
   // "search.browse.item-back": "Back to Results",
   // TODO New key - Add a translation
   "search.browse.item-back": "Back to Results",
 
-
   // "chips.remove": "Remove chip",
   "chips.remove": "Rimuovere il chip",
-
 
   // "claimed-approved-search-result-list-element.title": "Approved",
   // TODO New key - Add a translation
@@ -1342,7 +1312,6 @@
   // "claimed-declined-task-search-result-list-element.title": "Declined, sent back to Review Manager's workflow",
   // TODO New key - Add a translation
   "claimed-declined-task-search-result-list-element.title": "Declined, sent back to Review Manager's workflow",
-
 
   // "collection.create.head": "Create a Collection",
   "collection.create.head": "Creare una collection",
@@ -1375,9 +1344,7 @@
   "collection.delete.notification.success": "collection eliminata correttamente",
 
   // "collection.delete.text": "Are you sure you want to delete collection \"{{ dso }}\"",
-  "collection.delete.text": "Sei sicuro di voler eliminare la collection \"{{ dso }}\"",
-
-
+  "collection.delete.text": 'Sei sicuro di voler eliminare la collection "{{ dso }}"',
 
   // "collection.edit.delete": "Delete this collection",
   "collection.edit.delete": "Elimina questa collection",
@@ -1387,8 +1354,6 @@
 
   // "collection.edit.breadcrumbs": "Edit Collection",
   "collection.edit.breadcrumbs": "Modifica collection",
-
-
 
   // "collection.edit.tabs.mapper.head": "Item Mapper",
   "collection.edit.tabs.mapper.head": "Mapper dell' Item",
@@ -1400,7 +1365,7 @@
   "collection.edit.item-mapper.cancel": "Annulla",
 
   // "collection.edit.item-mapper.collection": "Collection: \"<b>{{name}}</b>\"",
-  "collection.edit.item-mapper.collection": "Collezione: \"<b>{{name}}</b>\"",
+  "collection.edit.item-mapper.collection": 'Collezione: "<b>{{name}}</b>"',
 
   // "collection.edit.item-mapper.confirm": "Map selected items",
   "collection.edit.item-mapper.confirm": "Mappare gli item selezionati",
@@ -1450,7 +1415,6 @@
   // "collection.edit.item-mapper.tabs.map": "Map new items",
   "collection.edit.item-mapper.tabs.map": "Mappare nuovi item",
 
-
   // "collection.edit.logo.delete.title": "Delete logo",
   "collection.edit.logo.delete.title": "Annulla eliminazione",
 
@@ -1478,15 +1442,11 @@
   // "collection.edit.logo.upload": "Drop a Collection Logo to upload",
   "collection.edit.logo.upload": "Rilascia un logo della collection da caricare",
 
-
-
   // "collection.edit.notifications.success": "Successfully edited the Collection",
   "collection.edit.notifications.success": "Modificata correttamente la collection",
 
   // "collection.edit.return": "Back",
   "collection.edit.return": "Indietro",
-
-
 
   // "collection.edit.tabs.curate.head": "Curate",
   "collection.edit.tabs.curate.head": "Curate",
@@ -1556,7 +1516,7 @@
   "collection.edit.tabs.source.head": "Origine del contenuto",
 
   // "collection.edit.tabs.source.notifications.discarded.content": "Your changes were discarded. To reinstate your changes click the 'Undo' button",
-  "collection.edit.tabs.source.notifications.discarded.content": "Le modifiche sono state annullate. Per ripristinarle, fai clic sul pulsante \"Annulla\"",
+  "collection.edit.tabs.source.notifications.discarded.content": 'Le modifiche sono state annullate. Per ripristinarle, fai clic sul pulsante "Annulla"',
 
   // "collection.edit.tabs.source.notifications.discarded.title": "Changes discarded",
   // TODO Source message changed - Revise the translation
@@ -1577,8 +1537,6 @@
   // "collection.edit.tabs.source.title": "Collection Edit - Content Source",
   "collection.edit.tabs.source.title": "Modifica collection - Origine contenuto",
 
-
-
   // "collection.edit.template.add-button": "Add",
   "collection.edit.template.add-button": "Aggiungere",
 
@@ -1598,7 +1556,7 @@
   "collection.edit.template.error": "Si è verificato un errore durante il recupero del modello dell' Item",
 
   // "collection.edit.template.head": "Edit Template Item for Collection \"{{ collection }}\"",
-  "collection.edit.template.head": "Modifica item modello per la collection \"{{ collection }}\"",
+  "collection.edit.template.head": 'Modifica item modello per la collection "{{ collection }}"',
 
   // "collection.edit.template.label": "Template item",
   "collection.edit.template.label": "Template per Item",
@@ -1614,8 +1572,6 @@
 
   // "collection.edit.template.title": "Edit Template Item",
   "collection.edit.template.title": "Modifica Template dell' Item",
-
-
 
   // "collection.form.abstract": "Short Description",
   "collection.form.abstract": "Breve descrizione",
@@ -1644,12 +1600,8 @@
   // "collection.form.entityType": "Entity Type",
   "collection.form.entityType": "Tipo di entità",
 
-
-
   // "collection.listelement.badge": "Collection",
   "collection.listelement.badge": "collection",
-
-
 
   // "collection.page.browse.recent.head": "Recent Submissions",
   "collection.page.browse.recent.head": "submissions recenti",
@@ -1669,8 +1621,6 @@
   // "collection.page.news": "News",
   "collection.page.news": "News",
 
-
-
   // "collection.select.confirm": "Confirm selected",
   "collection.select.confirm": "Conferma selezionato",
 
@@ -1679,7 +1629,6 @@
 
   // "collection.select.table.title": "Title",
   "collection.select.table.title": "Titolo",
-
 
   // "collection.source.controls.head": "Harvest Controls",
   "collection.source.controls.head": "Controlli del Harvester",
@@ -1732,14 +1681,11 @@
   // "collection.source.controls.harvest.no-information": "N/A",
   "collection.source.controls.harvest.no-information": "N/D",
 
-
   // "collection.source.update.notifications.error.content": "The provided settings have been tested and didn't work.",
   "collection.source.update.notifications.error.content": "Le impostazioni fornite sono state testate e non hanno funzionato.",
 
   // "collection.source.update.notifications.error.title": "Server Error",
   "collection.source.update.notifications.error.title": "Errore del server",
-
-
 
   // "communityList.breadcrumbs": "Community List",
   "communityList.breadcrumbs": "Elenco della Community",
@@ -1752,8 +1698,6 @@
 
   // "communityList.showMore": "Show More",
   "communityList.showMore": "Mostra di più",
-
-
 
   // "community.create.head": "Create a Community",
   "community.create.head": "Crea una Community",
@@ -1786,7 +1730,7 @@
   "community.delete.notification.success": "Community eliminata con successo",
 
   // "community.delete.text": "Are you sure you want to delete community \"{{ dso }}\"",
-  "community.delete.text": "Sei sicuro di voler eliminare la community \"{{ dso }}\"",
+  "community.delete.text": 'Sei sicuro di voler eliminare la community "{{ dso }}"',
 
   // "community.edit.delete": "Delete this community",
   "community.edit.delete": "Elimina questa community",
@@ -1796,7 +1740,6 @@
 
   // "community.edit.breadcrumbs": "Edit Community",
   "community.edit.breadcrumbs": "Modifica la community",
-
 
   // "community.edit.logo.delete.title": "Delete logo",
   "community.edit.logo.delete.title": "Elimina logo",
@@ -1825,8 +1768,6 @@
   // "community.edit.logo.upload": "Drop a Community Logo to upload",
   "community.edit.logo.upload": "Rilascia un logo della community da caricare",
 
-
-
   // "community.edit.notifications.success": "Successfully edited the Community",
   "community.edit.notifications.success": "La community è stata modificata con successo",
 
@@ -1838,8 +1779,6 @@
 
   // "community.edit.return": "Back",
   "community.edit.return": "Indietro",
-
-
 
   // "community.edit.tabs.curate.head": "Curate",
   "community.edit.tabs.curate.head": "Curate",
@@ -1865,12 +1804,8 @@
   // "community.edit.tabs.authorizations.title": "Community Edit - Authorizations",
   "community.edit.tabs.authorizations.title": "Modifica community - Autorizzazioni",
 
-
-
   // "community.listelement.badge": "Community",
   "community.listelement.badge": "Community",
-
-
 
   // "comcol-role.edit.no-group": "None",
   "comcol-role.edit.no-group": "Nessuno",
@@ -1890,13 +1825,11 @@
   // "comcol-role.edit.delete.error.title": "Failed to delete the '{{ role }}' role's group",
   "comcol-role.edit.delete.error.title": "Non è stato possibile cancellare il ruolo '{{ role }}' del gruppo",
 
-
   // "comcol-role.edit.community-admin.name": "Administrators",
   "comcol-role.edit.community-admin.name": "Amministratori",
 
   // "comcol-role.edit.collection-admin.name": "Administrators",
   "comcol-role.edit.collection-admin.name": "Amministratori",
-
 
   // "comcol-role.edit.community-admin.description": "Community administrators can create sub-communities or collections, and manage or assign management for those sub-communities or collections. In addition, they decide who can submit items to any sub-collections, edit item metadata (after submission), and add (map) existing items from other collections (subject to authorization).",
   "comcol-role.edit.community-admin.description": "Gli amministratori della community possono creare sotto-community o collections e gestire o assegnare la loro gestione. Inoltre, decidono chi può depositare item in qualsiasi sotto-collections, modificare i metadati degli item (dopo l'invio) e aggiungere (mappare) item esistenti da altre collections (previa autorizzazione).",
@@ -1904,13 +1837,11 @@
   // "comcol-role.edit.collection-admin.description": "Collection administrators decide who can submit items to the collection, edit item metadata (after submission), and add (map) existing items from other collections to this collection (subject to authorization for that collection).",
   "comcol-role.edit.collection-admin.description": "Gli amministratori della collection decidono chi può depositare item nella collection, modificare i metadati dell'item (dopo l'invio) e aggiungere (mappare) item da altre collections a questa collection (soggetto all'autorizzazione per tale collection).",
 
-
   // "comcol-role.edit.submitters.name": "Submitters",
   "comcol-role.edit.submitters.name": "Submitters",
 
   // "comcol-role.edit.submitters.description": "The E-People and Groups that have permission to submit new items to this collection.",
   "comcol-role.edit.submitters.description": "E-People e Gruppi che dispongono dell'autorizzazione per depositare nuovi item in questa collection.",
-
 
   // "comcol-role.edit.item_read.name": "Default item read access",
   "comcol-role.edit.item_read.name": "Accesso di sola lettura per gli item",
@@ -1921,7 +1852,6 @@
   // "comcol-role.edit.item_read.anonymous-group": "Default read for incoming items is currently set to Anonymous.",
   "comcol-role.edit.item_read.anonymous-group": "L'accesso di sola lettura per gli item depositati è attualmente impostata su Anonimo.",
 
-
   // "comcol-role.edit.bitstream_read.name": "Default bitstream read access",
   "comcol-role.edit.bitstream_read.name": "Accesso di sola lettura per il bitstream",
 
@@ -1931,13 +1861,11 @@
   // "comcol-role.edit.bitstream_read.anonymous-group": "Default read for incoming bitstreams is currently set to Anonymous.",
   "comcol-role.edit.bitstream_read.anonymous-group": "L'accesso di sola lettura per i bitstreams depositati è attualmente impostata su Anonimo.",
 
-
   // "comcol-role.edit.editor.name": "Editors",
   "comcol-role.edit.editor.name": "Editor",
 
   // "comcol-role.edit.editor.description": "Editors are able to edit the metadata of incoming submissions, and then accept or reject them.",
   "comcol-role.edit.editor.description": "Gli editor possono modificare i metadati delle submissions depositate e quindi accettarli o rifiutarli.",
-
 
   // "comcol-role.edit.finaleditor.name": "Final editors",
   "comcol-role.edit.finaleditor.name": "Editor finali",
@@ -1945,13 +1873,11 @@
   // "comcol-role.edit.finaleditor.description": "Final editors are able to edit the metadata of incoming submissions, but will not be able to reject them.",
   "comcol-role.edit.finaleditor.description": "Gli editor finali sono in grado di modificare i metadati delle submissions depositate, ma non saranno in grado di rifiutarli.",
 
-
   // "comcol-role.edit.reviewer.name": "Reviewers",
   "comcol-role.edit.reviewer.name": "Revisori",
 
   // "comcol-role.edit.reviewer.description": "Reviewers are able to accept or reject incoming submissions. However, they are not able to edit the submission's metadata.",
   "comcol-role.edit.reviewer.description": "I revisori sono in grado di accettare o rifiutare le submissions depositate. Tuttavia, non sono in grado di modificare i metadati della submission.",
-
 
   // "comcol-role.edit.scorereviewers.name": "Score Reviewers",
   // TODO New key - Add a translation
@@ -1960,8 +1886,6 @@
   // "comcol-role.edit.scorereviewers.description": "Reviewers are able to give a score to incoming submissions, this will define whether the submission will be rejected or not.",
   // TODO New key - Add a translation
   "comcol-role.edit.scorereviewers.description": "Reviewers are able to give a score to incoming submissions, this will define whether the submission will be rejected or not.",
-
-
 
   // "community.form.abstract": "Short Description",
   "community.form.abstract": "Breve descrizione",
@@ -2001,8 +1925,6 @@
 
   // "community.sub-community-list.head": "Communities of this Community",
   "community.sub-community-list.head": "Communities di questa Community",
-
-
 
   // "cookies.consent.accept-all": "Accept all",
   "cookies.consent.accept-all": "Accetta tutto",
@@ -2090,14 +2012,11 @@
   // "cookies.consent.app.description.authentication": "Required for signing you in",
   "cookies.consent.app.description.authentication": "Necessario per l'accesso",
 
-
   // "cookies.consent.app.title.preferences": "Preferences",
   "cookies.consent.app.title.preferences": "Preferenze",
 
   // "cookies.consent.app.description.preferences": "Required for saving your preferences",
   "cookies.consent.app.description.preferences": "Necessario per salvare le tue preferenze",
-
-
 
   // "cookies.consent.app.title.acknowledgement": "Acknowledgement",
   "cookies.consent.app.title.acknowledgement": "Riconoscimento",
@@ -2105,15 +2024,11 @@
   // "cookies.consent.app.description.acknowledgement": "Required for saving your acknowledgements and consents",
   "cookies.consent.app.description.acknowledgement": "Necessario per salvare i riconoscimenti e i consensi",
 
-
-
   // "cookies.consent.app.title.google-analytics": "Google Analytics",
   "cookies.consent.app.title.google-analytics": "Google Analitica",
 
   // "cookies.consent.app.description.google-analytics": "Allows us to track statistical data",
   "cookies.consent.app.description.google-analytics": "Ci permette di tracciare i dati statistici",
-
-
 
   // "cookies.consent.app.title.google-recaptcha": "Google reCaptcha",
   // TODO New key - Add a translation
@@ -2122,7 +2037,6 @@
   // "cookies.consent.app.description.google-recaptcha": "We use google reCAPTCHA service during registration and password recovery",
   // TODO New key - Add a translation
   "cookies.consent.app.description.google-recaptcha": "We use google reCAPTCHA service during registration and password recovery",
-
 
   // "cookies.consent.purpose.functional": "Functional",
   "cookies.consent.purpose.functional": "Funzionale",
@@ -2164,8 +2078,6 @@
   // TODO New key - Add a translation
   "curation-task.task.register-doi.label": "Register DOI",
 
-
-
   // "curation.form.task-select.label": "Task:",
   "curation.form.task-select.label": "Task:",
 
@@ -2193,10 +2105,8 @@
   // "curation.form.handle.hint": "Hint: Enter [your-handle-prefix]/0 to run a task across entire site (not all tasks may support this capability)",
   "curation.form.handle.hint": "Suggerimento: Inserisci [your-handle-prefix]/0 per eseguire il task in tutto il sito (non tutti i task supportano questa funzionalità)",
 
-
-
   // "deny-request-copy.email.message": "Dear {{ recipientName }},\nIn response to your request I regret to inform you that it's not possible to send you a copy of the file(s) you have requested, concerning the document: \"{{ itemUrl }}\" ({{ itemName }}), of which I am an author.\n\nBest regards,\n{{ authorName }} <{{ authorEmail }}>",
-  "deny-request-copy.email.message": "Gentile {{ recipientName }},\nIn risposta alla tua richiesta, mi dispiace informarti che non è possibile inviarti una copia del file(s) richiesto, riguardante il documento: \"{{ itemUrl }}\" ({{ itemName }}), di cui sono uno degli autori. \n\nCordiali saluti,\n{{ authorName }} <{{ authorEmail }}>",
+  "deny-request-copy.email.message": 'Gentile {{ recipientName }},\nIn risposta alla tua richiesta, mi dispiace informarti che non è possibile inviarti una copia del file(s) richiesto, riguardante il documento: "{{ itemUrl }}" ({{ itemName }}), di cui sono uno degli autori. \n\nCordiali saluti,\n{{ authorName }} <{{ authorEmail }}>',
 
   // "deny-request-copy.email.subject": "Request copy of document",
   "deny-request-copy.email.subject": "Richiedi copia del documento",
@@ -2213,12 +2123,8 @@
   // "deny-request-copy.success": "Successfully denied item request",
   "deny-request-copy.success": "Richiesta di item rifiutata con successo",
 
-
-
   // "dso.name.untitled": "Untitled",
   "dso.name.untitled": "Untitled",
-
-
 
   // "dso-selector.create.collection.head": "New collection",
   "dso-selector.create.collection.head": "Nuova collection",
@@ -2390,10 +2296,10 @@
   "confirmation-modal.export-batch.confirm": "Export",
 
   // "confirmation-modal.delete-eperson.header": "Delete EPerson \"{{ dsoName }}\"",
-  "confirmation-modal.delete-eperson.header": "Elimina EPerson \"{{ dsoName }}\"",
+  "confirmation-modal.delete-eperson.header": 'Elimina EPerson "{{ dsoName }}"',
 
   // "confirmation-modal.delete-eperson.info": "Are you sure you want to delete EPerson \"{{ dsoName }}\"",
-  "confirmation-modal.delete-eperson.info": "Sei sicuro di voler eliminare l'EPerson \"{{ dsoName }}\"",
+  "confirmation-modal.delete-eperson.info": 'Sei sicuro di voler eliminare l\'EPerson "{{ dsoName }}"',
 
   // "confirmation-modal.delete-eperson.cancel": "Cancel",
   "confirmation-modal.delete-eperson.cancel": "Annulla",
@@ -2415,10 +2321,10 @@
 
   // "confirmation-modal.delete-subscription.header": "Delete Subscription",
   // TODO Source message changed - Revise the translation
-  "confirmation-modal.delete-subscription.header": "Elimina iscrizione per \"{{ dsoName }}\"",
+  "confirmation-modal.delete-subscription.header": 'Elimina iscrizione per "{{ dsoName }}"',
 
   // "confirmation-modal.delete-subscription.info": "Are you sure you want to delete subscription for \"{{ dsoName }}\"",
-  "confirmation-modal.delete-subscription.info": "Sei sicuro di voler eliminare l'iscrizione per \"{{ dsoName }}\"",
+  "confirmation-modal.delete-subscription.info": 'Sei sicuro di voler eliminare l\'iscrizione per "{{ dsoName }}"',
 
   // "confirmation-modal.delete-subscription.cancel": "Cancel",
   "confirmation-modal.delete-subscription.cancel": "Annulla",
@@ -2463,7 +2369,7 @@
   "error.search-results": "Errore durante il recupero dei risultati della ricerca",
 
   // "error.invalid-search-query": "Search query is not valid. Please check <a href=\"https://solr.apache.org/guide/query-syntax-and-parsing.html\" target=\"_blank\">Solr query syntax</a> best practices for further information about this error.",
-  "error.invalid-search-query": "La query di ricerca non è valida. Controllare <a href=\"https://solr.apache.org/guide/query-syntax-and-parsing.html\" target=\"_blank\">Solr query syntax</a> per ulteriori informazioni riguardo questo errore.",
+  "error.invalid-search-query": 'La query di ricerca non è valida. Controllare <a href="https://solr.apache.org/guide/query-syntax-and-parsing.html" target="_blank">Solr query syntax</a> per ulteriori informazioni riguardo questo errore.',
 
   // "error.sub-collections": "Error fetching sub-collections",
   "error.sub-collections": "Errore durante il recupero delle sottoreti",
@@ -2499,16 +2405,12 @@
   // "error.validation.groupExists": "This group already exists",
   "error.validation.groupExists": "Gruppo già esistente",
 
-
   // "feed.description": "Syndication feed",
   // TODO New key - Add a translation
   "feed.description": "Syndication feed",
 
-
   // "file-section.error.header": "Error obtaining files for this item",
   "file-section.error.header": "Errore durante il recupero dei file per questo item",
-
-
 
   // "footer.copyright": "copyright © 2002-{{ year }}",
   "footer.copyright": "copyright © 2002-{{ year }}",
@@ -2532,8 +2434,6 @@
   // "footer.link.feedback": "Send Feedback",
   // TODO Source message changed - Revise the translation
   "footer.link.feedback": "Invia Feedback",
-
-
 
   // "forgot-email.form.header": "Forgot Password",
   "forgot-email.form.header": "Password dimenticata",
@@ -2574,8 +2474,6 @@
   // "forgot-email.form.error.content": "An error occured when attempting to reset the password for the account associated with the following email address: {{ email }}",
   // TODO New key - Add a translation
   "forgot-email.form.error.content": "An error occured when attempting to reset the password for the account associated with the following email address: {{ email }}",
-
-
 
   // "forgot-password.title": "Forgot Password",
   "forgot-password.title": "Password dimenticata",
@@ -2619,7 +2517,6 @@
 
   // "forgot-password.form.submit": "Submit password",
   "forgot-password.form.submit": "Invia password",
-
 
   // "form.add": "Add more",
   "form.add": "Aggiungi altro",
@@ -2714,8 +2611,6 @@
   // "form.repeatable.sort.tip": "Drop the item in the new position",
   "form.repeatable.sort.tip": "Rilascia l'item nella nuova posizione",
 
-
-
   // "grant-deny-request-copy.deny": "Don't send copy",
   "grant-deny-request-copy.deny": "Non inviare una copia",
 
@@ -2761,10 +2656,8 @@
   // "grant-deny-request-copy.processed": "This request has already been processed. You can use the button below to get back to the home page.",
   "grant-deny-request-copy.processed": "Questa richiesta è già stata elaborata. Puoi cliccare il pulsante qui sotto per tornare alla home page.",
 
-
-
   // "grant-request-copy.email.message": "Dear {{ recipientName }},\nIn response to your request I have the pleasure to send you in attachment a copy of the file(s) concerning the document: \"{{ itemUrl }}\" ({{ itemName }}), of which I am an author.\n\nBest regards,\n{{ authorName }} <{{ authorEmail }}>",
-  "grant-request-copy.email.message": "Gentile {{ recipientName }},\nin tisposta alla tua richiesta, ho il piacere di inviarti come allegato una copia del file riferito al documento: \"{{ itemUrl }}\" ({{ itemName }}), di cui sono l'autore.\n\nUn cordiale saluto,\n{{ authorName }} <{{ authorEmail }}>",
+  "grant-request-copy.email.message": 'Gentile {{ recipientName }},\nin tisposta alla tua richiesta, ho il piacere di inviarti come allegato una copia del file riferito al documento: "{{ itemUrl }}" ({{ itemName }}), di cui sono l\'autore.\n\nUn cordiale saluto,\n{{ authorName }} <{{ authorEmail }}>',
 
   // "grant-request-copy.email.subject": "Request copy of document",
   "grant-request-copy.email.subject": "Richiedi una copia del documento",
@@ -2780,7 +2673,6 @@
 
   // "grant-request-copy.success": "Successfully granted item request",
   "grant-request-copy.success": "Richiesta dell'item concessa con successo",
-
 
   // "health.breadcrumbs": "Health",
   // TODO New key - Add a translation
@@ -2855,7 +2747,6 @@
   // "health-page.section.no-issues": "No issues detected",
   "health-page.section.no-issues": "Nessun problema rilevato",
 
-
   // "home.description": "",
   "home.description": "",
 
@@ -2874,8 +2765,6 @@
   // "home.top-level-communities.help": "Select a community to browse its collections.",
   // TODO Source message changed - Revise the translation
   "home.top-level-communities.help": "Cerca una collection",
-
-
 
   // "info.end-user-agreement.accept": "I have read and I agree to the End User Agreement",
   "info.end-user-agreement.accept": "Ho letto e accetto l'Accordo con l'utente finale",
@@ -2954,15 +2843,11 @@
   // TODO Source message changed - Revise the translation
   "info.feedback.page_help": "In questa pagina trovi i tuoi feedback",
 
-
-
   // "item.alerts.private": "This item is non-discoverable",
   "item.alerts.private": "Questo item è privato",
 
   // "item.alerts.withdrawn": "This item has been withdrawn",
   "item.alerts.withdrawn": "Questo item è stato rimosso",
-
-
 
   // "item.edit.authorizations.heading": "With this editor you can view and alter the policies of an item, plus alter policies of individual item components: bundles and bitstreams. Briefly, an item is a container of bundles, and bundles are containers of bitstreams. Containers usually have ADD/REMOVE/READ/WRITE policies, while bitstreams only have READ/WRITE policies.",
   "item.edit.authorizations.heading": "Con questo editor puoi vedere e modificare le policies di un item, e anche modificare le policies dei singoli componenti dell'item: bundles e bitstreams. Un item è il contenitore di bundles, e i bundles sono contenitori di bitstreams. I contenitori riportano solitamente le policies di ADD/REMOVE/READ/WRITE, mentre i bitstreams hanno solamente policies di READ/WRITE.",
@@ -2970,16 +2855,12 @@
   // "item.edit.authorizations.title": "Edit item's Policies",
   "item.edit.authorizations.title": "Modificare le policies dell'item",
 
-
-
   // "item.badge.private": "Non-discoverable",
   // TODO Source message changed - Revise the translation
   "item.badge.private": "Privato",
 
   // "item.badge.withdrawn": "Withdrawn",
   "item.badge.withdrawn": "Rimosso",
-
-
 
   // "item.bitstreams.upload.bundle": "Bundle",
   "item.bitstreams.upload.bundle": "Bundle",
@@ -3015,8 +2896,6 @@
 
   // "item.bitstreams.upload.title": "Upload bitstream",
   "item.bitstreams.upload.title": "Carica bitstream",
-
-
 
   // "item.edit.bitstreams.bundle.edit.buttons.upload": "Upload",
   "item.edit.bitstreams.bundle.edit.buttons.upload": "Carica",
@@ -3070,7 +2949,7 @@
   "item.edit.bitstreams.headers.name": "Nome",
 
   // "item.edit.bitstreams.notifications.discarded.content": "Your changes were discarded. To reinstate your changes click the 'Undo' button",
-  "item.edit.bitstreams.notifications.discarded.content": "Le modifiche sono state annullate. Per ripristinarle, fai clic sul pulsante \"Annulla\"",
+  "item.edit.bitstreams.notifications.discarded.content": 'Le modifiche sono state annullate. Per ripristinarle, fai clic sul pulsante "Annulla"',
 
   // "item.edit.bitstreams.notifications.discarded.title": "Changes discarded",
   "item.edit.bitstreams.notifications.discarded.title": "Modifiche annullate",
@@ -3108,8 +2987,6 @@
   // "item.edit.bitstreams.upload-button": "Upload",
   "item.edit.bitstreams.upload-button": "Carica",
 
-
-
   // "item.edit.delete.cancel": "Cancel",
   "item.edit.delete.cancel": "Annulla",
 
@@ -3136,7 +3013,6 @@
 
   // "item.edit.tabs.disabled.tooltip": "You're not authorized to access this tab",
   "item.edit.tabs.disabled.tooltip": "Non sei autorizzato ad accedere a questa tab",
-
 
   // "item.edit.tabs.mapper.head": "Collection Mapper",
   "item.edit.tabs.mapper.head": "collection Mapper",
@@ -3244,7 +3120,7 @@
   "item.edit.item-mapper.head": "Item Mapper - Mappa l'item nelle collections",
 
   // "item.edit.item-mapper.item": "Item: \"<b>{{name}}</b>\"",
-  "item.edit.item-mapper.item": "Item: \"<b>{{name}}</b>\"",
+  "item.edit.item-mapper.item": 'Item: "<b>{{name}}</b>"',
 
   // "item.edit.item-mapper.no-search": "Please enter a query to search",
   "item.edit.item-mapper.no-search": "Inserisci una query per avviare la ricerca",
@@ -3282,8 +3158,6 @@
   // "item.edit.item-mapper.tabs.map": "Map new collections",
   "item.edit.item-mapper.tabs.map": "Mappa le nuove collections",
 
-
-
   // "item.edit.metadata.add-button": "Add",
   "item.edit.metadata.add-button": "Aggiungi",
 
@@ -3312,7 +3186,7 @@
 
   // "item.edit.metadata.edit.buttons.virtual": "This is a virtual metadata value, i.e. a value inherited from a related entity. It can’t be modified directly. Add or remove the corresponding relationship in the \"Relationships\" tab",
   // TODO New key - Add a translation
-  "item.edit.metadata.edit.buttons.virtual": "This is a virtual metadata value, i.e. a value inherited from a related entity. It can’t be modified directly. Add or remove the corresponding relationship in the \"Relationships\" tab",
+  "item.edit.metadata.edit.buttons.virtual": 'This is a virtual metadata value, i.e. a value inherited from a related entity. It can’t be modified directly. Add or remove the corresponding relationship in the "Relationships" tab',
 
   // "item.edit.metadata.empty": "The item currently doesn't contain any metadata. Click Add to start adding a metadata value.",
   "item.edit.metadata.empty": "Attualmente l'item non contiene metadati. Fai clic su Aggiungi per iniziare ad aggiungere il valore di un metadata.",
@@ -3337,7 +3211,7 @@
   "item.edit.metadata.metadatafield.invalid": "Scegli un campo di metadati valido",
 
   // "item.edit.metadata.notifications.discarded.content": "Your changes were discarded. To reinstate your changes click the 'Undo' button",
-  "item.edit.metadata.notifications.discarded.content": "Le modifiche sono state annullate. Per ripristinarle, fai clic sul pulsante \"Annulla\"",
+  "item.edit.metadata.notifications.discarded.content": 'Le modifiche sono state annullate. Per ripristinarle, fai clic sul pulsante "Annulla"',
 
   // "item.edit.metadata.notifications.discarded.title": "Changes discarded",
   // TODO Source message changed - Revise the translation
@@ -3375,8 +3249,6 @@
   // "item.edit.metadata.save-button": "Save",
   "item.edit.metadata.save-button": "Salva",
 
-
-
   // "item.edit.modify.overview.field": "Field",
   "item.edit.modify.overview.field": "Campo",
 
@@ -3385,8 +3257,6 @@
 
   // "item.edit.modify.overview.value": "Value",
   "item.edit.modify.overview.value": "Valore",
-
-
 
   // "item.edit.move.cancel": "Back",
   "item.edit.move.cancel": "Indietro",
@@ -3427,8 +3297,6 @@
   // "item.edit.move.title": "Move item",
   "item.edit.move.title": "Sposta item",
 
-
-
   // "item.edit.private.cancel": "Cancel",
   "item.edit.private.cancel": "Annulla",
 
@@ -3449,8 +3317,6 @@
 
   // "item.edit.private.success": "The item is now non-discoverable",
   "item.edit.private.success": "L'item è ora privato",
-
-
 
   // "item.edit.public.cancel": "Cancel",
   "item.edit.public.cancel": "Annulla",
@@ -3474,8 +3340,6 @@
   // TODO Source message changed - Revise the translation
   "item.edit.public.success": "L'item è ora pubblico",
 
-
-
   // "item.edit.reinstate.cancel": "Cancel",
   "item.edit.reinstate.cancel": "Annulla",
 
@@ -3494,8 +3358,6 @@
   // "item.edit.reinstate.success": "The item was reinstated successfully",
   "item.edit.reinstate.success": "L'item è stato ripristinato correttamente",
 
-
-
   // "item.edit.relationships.discard-button": "Discard",
   "item.edit.relationships.discard-button": "Annulla",
 
@@ -3512,7 +3374,7 @@
   "item.edit.relationships.no-relationships": "Nessuna relazione",
 
   // "item.edit.relationships.notifications.discarded.content": "Your changes were discarded. To reinstate your changes click the 'Undo' button",
-  "item.edit.relationships.notifications.discarded.content": "Le modifiche sono state annullate. Per ripristinarle, fai clic sul pulsante \"Annulla\"",
+  "item.edit.relationships.notifications.discarded.content": 'Le modifiche sono state annullate. Per ripristinarle, fai clic sul pulsante "Annulla"',
 
   // "item.edit.relationships.notifications.discarded.title": "Changes discarded",
   "item.edit.relationships.notifications.discarded.title": "Modifiche annullate",
@@ -3541,10 +3403,8 @@
   // "item.edit.relationships.no-entity-type": "Add 'dspace.entity.type' metadata to enable relationships for this item",
   "item.edit.relationships.no-entity-type": "Aggiungi i metadati 'dspace.entity.type' per abilitare le relazioni per questo item",
 
-
   // "item.edit.return": "Back",
   "item.edit.return": "Indietro",
-
 
   // "item.edit.tabs.bitstreams.head": "Bitstreams",
   "item.edit.tabs.bitstreams.head": "Bitstreams",
@@ -3666,8 +3526,6 @@
   // "item.edit.tabs.view.title": "Item Edit -  View",
   "item.edit.tabs.view.title": "Modifica item - Visualizza",
 
-
-
   // "item.edit.withdraw.cancel": "Cancel",
   "item.edit.withdraw.cancel": "Annulla",
 
@@ -3688,7 +3546,6 @@
 
   // "item.orcid.return": "Back",
   "item.orcid.return": "Indietro",
-
 
   // "item.listelement.badge": "Item",
   "item.listelement.badge": "Item",
@@ -3741,11 +3598,11 @@
 
   // "workflow-item.search.result.notification.deleted.success": "Successfully deleted supervision order \"{{name}}\"",
   // TODO New key - Add a translation
-  "workflow-item.search.result.notification.deleted.success": "Successfully deleted supervision order \"{{name}}\"",
+  "workflow-item.search.result.notification.deleted.success": 'Successfully deleted supervision order "{{name}}"',
 
   // "workflow-item.search.result.notification.deleted.failure": "Failed to delete supervision order \"{{name}}\"",
   // TODO New key - Add a translation
-  "workflow-item.search.result.notification.deleted.failure": "Failed to delete supervision order \"{{name}}\"",
+  "workflow-item.search.result.notification.deleted.failure": 'Failed to delete supervision order "{{name}}"',
 
   // "workflow-item.search.result.list.element.supervised-by": "Supervised by:",
   // TODO New key - Add a translation
@@ -3754,8 +3611,6 @@
   // "workflow-item.search.result.list.element.supervised.remove-tooltip": "Remove supervision group",
   // TODO New key - Add a translation
   "workflow-item.search.result.list.element.supervised.remove-tooltip": "Remove supervision group",
-
-
 
   // "item.page.abstract": "Abstract",
   "item.page.abstract": "Abstract",
@@ -3953,8 +3808,6 @@
   // "item.preview.oaire.fundingStream": "Funding Stream:",
   "item.preview.oaire.fundingStream": "Flusso di finanziamento:",
 
-
-
   // "item.select.confirm": "Confirm selected",
   "item.select.confirm": "Conferma la selezione",
 
@@ -3969,7 +3822,6 @@
 
   // "item.select.table.title": "Title",
   "item.select.table.title": "Titolo",
-
 
   // "item.version.history.empty": "There are no other versions for this item yet.",
   "item.version.history.empty": "Non ci sono ancora altre versioni per questo item.",
@@ -4031,10 +3883,8 @@
   // "item.version.history.table.action.hasDraft": "A new version cannot be created because there is an inprogress submission in the version history",
   "item.version.history.table.action.hasDraft": "Non è possibile creare una nuova versione perchè c'è già una submission in progress nella cronologia delle versioni",
 
-
   // "item.version.notice": "This is not the latest version of this item. The latest version can be found <a href='{{destination}}'>here</a>.",
   "item.version.notice": "Questa non è la versione più recente di questo item. Puoi trovare l'ultima versione <a href='{{destination}}'>qui</a>.",
-
 
   // "item.version.create.modal.header": "New version",
   "item.version.create.modal.header": "Nuova versione",
@@ -4081,7 +3931,6 @@
   // TODO Source message changed - Revise the translation
   "item.version.create.notification.inProgress": "Non è possibile creare una nuova versione perchè c'è già una submission in progress nella cronologia delle versioni",
 
-
   // "item.version.delete.modal.header": "Delete version",
   "item.version.delete.modal.header": "Elimina versione",
 
@@ -4108,7 +3957,6 @@
   // TODO Source message changed - Revise the translation
   "item.version.delete.notification.failure": "La versione numero {{version}} non è stata eliminata",
 
-
   // "item.version.edit.notification.success": "The summary of version number {{version}} has been changed",
   // TODO Source message changed - Revise the translation
   "item.version.edit.notification.success": "Il riepilogo della versione numero {{version}} è stato modificato",
@@ -4116,8 +3964,6 @@
   // "item.version.edit.notification.failure": "The summary of version number {{version}} has not been changed",
   // TODO Source message changed - Revise the translation
   "item.version.edit.notification.failure": "Il riepilogo della versione numero {{version}} non è stato modificato",
-
-
 
   // "itemtemplate.edit.metadata.add-button": "Add",
   // TODO New key - Add a translation
@@ -4227,8 +4073,6 @@
   // TODO New key - Add a translation
   "itemtemplate.edit.metadata.save-button": "Save",
 
-
-
   // "journal.listelement.badge": "Journal",
   "journal.listelement.badge": "Periodico",
 
@@ -4259,8 +4103,6 @@
   // "journal.search.title": "Journal Search",
   "journal.search.title": "Ricerca Periodici",
 
-
-
   // "journalissue.listelement.badge": "Journal Issue",
   "journalissue.listelement.badge": "Fascicolo del periodico",
 
@@ -4288,8 +4130,6 @@
   // "journalissue.page.titleprefix": "Journal Issue: ",
   "journalissue.page.titleprefix": "Fascicolo del periodico: ",
 
-
-
   // "journalvolume.listelement.badge": "Journal Volume",
   "journalvolume.listelement.badge": "Volume del periodico",
 
@@ -4307,7 +4147,6 @@
 
   // "journalvolume.page.volume": "Volume",
   "journalvolume.page.volume": "Volume",
-
 
   // "iiifsearchable.listelement.badge": "Document Media",
   "iiifsearchable.listelement.badge": "Allegati",
@@ -4341,7 +4180,6 @@
 
   // "iiif.page.description": "Description: ",
   "iiif.page.description": "Descrizione: ",
-
 
   // "loading.bitstream": "Loading bitstream...",
   "loading.bitstream": "Caricamento bitstream...",
@@ -4397,8 +4235,6 @@
   // "loading.top-level-communities": "Loading top-level communities...",
   "loading.top-level-communities": "Caricamento di community di primo livello...",
 
-
-
   // "login.form.email": "Email address",
   "login.form.email": "Indirizzo email",
 
@@ -4435,8 +4271,6 @@
   // "login.breadcrumbs": "Login",
   "login.breadcrumbs": "Accesso",
 
-
-
   // "logout.form.header": "Log out from DSpace",
   "logout.form.header": "Disconnettersi da DSpace",
 
@@ -4446,8 +4280,6 @@
   // "logout.title": "Logout",
   "logout.title": "Logout",
 
-
-
   // "menu.header.admin": "Management",
   "menu.header.admin": "Gestione",
 
@@ -4456,8 +4288,6 @@
 
   // "menu.header.admin.description": "Management menu",
   "menu.header.admin.description": "Menu di gestione",
-
-
 
   // "menu.section.access_control": "Access Control",
   "menu.section.access_control": "Controllo di accesso",
@@ -4471,12 +4301,8 @@
   // "menu.section.access_control_people": "People",
   "menu.section.access_control_people": "Persone",
 
-
-
   // "menu.section.admin_search": "Admin Search",
   "menu.section.admin_search": "Ricerca admin",
-
-
 
   // "menu.section.browse_community": "This Community",
   "menu.section.browse_community": "Questa Community",
@@ -4514,15 +4340,11 @@
   // TODO New key - Add a translation
   "menu.section.browse_global_communities_and_collections": "Communities & Collections",
 
-
-
   // "menu.section.control_panel": "Control Panel",
   "menu.section.control_panel": "Pannello di controllo",
 
   // "menu.section.curation_task": "Curation Task",
   "menu.section.curation_task": "Curation Task",
-
-
 
   // "menu.section.edit": "Edit",
   "menu.section.edit": "Modificare",
@@ -4535,8 +4357,6 @@
 
   // "menu.section.edit_item": "Item",
   "menu.section.edit_item": "Articolo",
-
-
 
   // "menu.section.export": "Export",
   "menu.section.export": "Esporta",
@@ -4556,7 +4376,6 @@
   // "menu.section.export_batch": "Batch Export (ZIP)",
   // TODO New key - Add a translation
   "menu.section.export_batch": "Batch Export (ZIP)",
-
 
   // "menu.section.icon.access_control": "Access Control menu section",
   "menu.section.icon.access_control": "Sezione del menu Controllo di accesso",
@@ -4608,8 +4427,6 @@
   // "menu.section.icon.unpin": "Unpin sidebar",
   "menu.section.icon.unpin": "Rimuovi la barra laterale",
 
-
-
   // "menu.section.import": "Import",
   "menu.section.import": "Importazione",
 
@@ -4618,8 +4435,6 @@
 
   // "menu.section.import_metadata": "Metadata",
   "menu.section.import_metadata": "Metadata",
-
-
 
   // "menu.section.new": "New",
   "menu.section.new": "Nuovo",
@@ -4639,23 +4454,17 @@
   // "menu.section.new_process": "Process",
   "menu.section.new_process": "Processo",
 
-
-
   // "menu.section.pin": "Pin sidebar",
   "menu.section.pin": "Pin barra laterale",
 
   // "menu.section.unpin": "Unpin sidebar",
   "menu.section.unpin": "Rimuovere la barra laterale",
 
-
-
   // "menu.section.processes": "Processes",
   "menu.section.processes": "Processi",
 
   // "menu.section.health": "Health",
   "menu.section.health": "Salute",
-
-
 
   // "menu.section.registries": "Registries",
   "menu.section.registries": "Registri",
@@ -4666,15 +4475,11 @@
   // "menu.section.registries_metadata": "Metadata",
   "menu.section.registries_metadata": "Metadati",
 
-
-
   // "menu.section.statistics": "Statistics",
   "menu.section.statistics": "Statistica",
 
   // "menu.section.statistics_task": "Statistics Task",
   "menu.section.statistics_task": "Statistiche",
-
-
 
   // "menu.section.toggle.access_control": "Toggle Access Control section",
   "menu.section.toggle.access_control": "Attiva/disattiva la sezione Controllo accessi",
@@ -4706,10 +4511,8 @@
   // "menu.section.toggle.statistics_task": "Toggle Statistics Task section",
   "menu.section.toggle.statistics_task": "Attiva/disattiva la sezione Task statistiche",
 
-
   // "menu.section.workflow": "Administer Workflow",
   "menu.section.workflow": "Amministrare il flusso di lavoro",
-
 
   // "metadata-export-search.tooltip": "Export search results as CSV",
   "metadata-export-search.tooltip": "Esporta i risultati in CSV",
@@ -4717,7 +4520,6 @@
   "metadata-export-search.submit.success": "L'export è iniziato con successo",
   // "metadata-export-search.submit.error": "Starting the export has failed",
   "metadata-export-search.submit.error": "L'export è fallito",
-
 
   // "mydspace.breadcrumbs": "MyDSpace",
   "mydspace.breadcrumbs": "MyDSpace",
@@ -4846,8 +4648,6 @@
   // "mydspace.view-btn": "View",
   "mydspace.view-btn": "Vista",
 
-
-
   // "nav.browse.header": "All of DSpace",
   "nav.browse.header": "Tutto DSpace",
 
@@ -4888,7 +4688,6 @@
   // TODO New key - Add a translation
   "nav.search.button": "Submit search",
 
-
   // "nav.statistics.header": "Statistics",
   "nav.statistics.header": "Statistica",
 
@@ -4909,7 +4708,6 @@
 
   // "none.listelement.badge": "Item",
   "none.listelement.badge": "Articolo",
-
 
   // "orgunit.listelement.badge": "Organizational Unit",
   "orgunit.listelement.badge": "Unità organizzativa",
@@ -4940,8 +4738,6 @@
   // TODO New key - Add a translation
   "orgunit.page.titleprefix": "Organizational Unit: ",
 
-
-
   // "pagination.options.description": "Pagination options",
   "pagination.options.description": "Opzioni di impaginazione",
 
@@ -4956,8 +4752,6 @@
 
   // "pagination.sort-direction": "Sort Options",
   "pagination.sort-direction": "Opzioni di ordinamento",
-
-
 
   // "person.listelement.badge": "Person",
   "person.listelement.badge": "Persona",
@@ -5008,8 +4802,6 @@
 
   // "person.search.title": "Person Search",
   "person.search.title": "Cerca i Ricercatori",
-
-
 
   // "process.new.select-parameters": "Parameters",
   "process.new.select-parameters": "Parametri",
@@ -5072,8 +4864,6 @@
 
   // "process.new.breadcrumbs": "Create a new process",
   "process.new.breadcrumbs": "Creare un nuovo processo",
-
-
 
   // "process.detail.arguments": "Arguments",
   // TODO New key - Add a translation
@@ -5164,8 +4954,6 @@
   // TODO New key - Add a translation
   "process.detail.delete.error": "Something went wrong when deleting the process",
 
-
-
   // "process.overview.table.finish": "Finish time (UTC)",
   // TODO New key - Add a translation
   "process.overview.table.finish": "Finish time (UTC)",
@@ -5234,8 +5022,6 @@
   // "process.bulk.delete.success": "{{count}} process(es) have been succesfully deleted",
   // TODO New key - Add a translation
   "process.bulk.delete.success": "{{count}} process(es) have been succesfully deleted",
-
-
 
   // "profile.breadcrumbs": "Update Profile",
   "profile.breadcrumbs": "Aggiorna profilo",
@@ -5374,8 +5160,6 @@
   // TODO New key - Add a translation
   "project-relationships.search.results.head": "Project Search Results",
 
-
-
   // "publication.listelement.badge": "Publication",
   "publication.listelement.badge": "Pubblicazione",
 
@@ -5411,7 +5195,6 @@
   // "publication.search.title": "Publication Search",
   "publication.search.title": "Ricerca pubblicazione",
 
-
   // "media-viewer.next": "Next",
   "media-viewer.next": "Avanti",
 
@@ -5420,7 +5203,6 @@
 
   // "media-viewer.playlist": "Playlist",
   "media-viewer.playlist": "Playlist",
-
 
   // "register-email.title": "New user registration",
   "register-email.title": "Registrazione nuovo utente",
@@ -5486,7 +5268,6 @@
   // "register-page.create-profile.submit.success.head": "Registration completed",
   "register-page.create-profile.submit.success.head": "Registrazione completata",
 
-
   // "register-page.registration.header": "New user registration",
   "register-page.registration.header": "Registrazione nuovo utente",
 
@@ -5536,7 +5317,6 @@
   // "register-page.registration.error.maildomain": "This email address is not on the list of domains who can register. Allowed domains are {{ domains }}",
   // TODO New key - Add a translation
   "register-page.registration.error.maildomain": "This email address is not on the list of domains who can register. Allowed domains are {{ domains }}",
-
 
   // "register-page.registration.google-recaptcha.open-cookie-settings": "Open cookie settings",
   // TODO New key - Add a translation
@@ -5620,7 +5400,6 @@
   // "relationships.isFundingAgencyOf.OrgUnit": "Funder",
   "relationships.isFundingAgencyOf.OrgUnit": "Finanziatore",
 
-
   // "repository.image.logo": "Repository logo",
   "repository.image.logo": "Logo del repository",
 
@@ -5630,7 +5409,6 @@
 
   // "repository.title.prefixDSpace": "DSpace Angular ::",
   "repository.title.prefixDSpace": "DSpace Angular ::",
-
 
   // "resource-policies.add.button": "Add",
   "resource-policies.add.button": "Aggiungi",
@@ -5809,8 +5587,6 @@
   // "resource-policies.table.headers.title.for.collection": "Policies for Collection",
   "resource-policies.table.headers.title.for.collection": "Criteri per la collezione",
 
-
-
   // "search.description": "",
   "search.description": "",
 
@@ -5825,7 +5601,6 @@
 
   // "search.search-form.placeholder": "Search the repository ...",
   "search.search-form.placeholder": "Cerca nel repository ...",
-
 
   // "search.filters.applied.f.author": "Author",
   "search.filters.applied.f.author": "Autore",
@@ -5876,8 +5651,6 @@
 
   // "search.filters.applied.f.withdrawn": "Withdrawn",
   "search.filters.applied.f.withdrawn": "Ritirato",
-
-
 
   // "search.filters.filter.author.head": "Author",
   "search.filters.filter.author.head": "Autore",
@@ -6103,8 +5876,6 @@
   // TODO New key - Add a translation
   "search.filters.filter.supervisedBy.label": "Search Supervised By",
 
-
-
   // "search.filters.entityType.JournalIssue": "Journal Issue",
   "search.filters.entityType.JournalIssue": "Fascicolo Periodico",
 
@@ -6132,7 +5903,6 @@
   // "search.filters.withdrawn.false": "No",
   "search.filters.withdrawn.false": "No",
 
-
   // "search.filters.head": "Filters",
   "search.filters.head": "Filtri",
 
@@ -6142,8 +5912,6 @@
   // "search.filters.search.submit": "Submit",
   "search.filters.search.submit": "Invia",
 
-
-
   // "search.form.search": "Search",
   "search.form.search": "Cerca",
 
@@ -6152,8 +5920,6 @@
 
   // "search.form.scope.all": "All of DSpace",
   "search.form.scope.all": "Tutto DSpace",
-
-
 
   // "search.results.head": "Search Results",
   "search.results.head": "Risultati della ricerca",
@@ -6182,7 +5948,6 @@
   // TODO New key - Add a translation
   "default-relationships.search.results.head": "Search Results",
 
-
   // "search.sidebar.close": "Back to results",
   "search.sidebar.close": "Ritorna ai risultati",
 
@@ -6204,8 +5969,6 @@
   // "search.sidebar.settings.title": "Settings",
   "search.sidebar.settings.title": "Impostazioni",
 
-
-
   // "search.view-switch.show-detail": "Show detail",
   "search.view-switch.show-detail": "Mostra dettagli",
 
@@ -6214,8 +5977,6 @@
 
   // "search.view-switch.show-list": "Show as list",
   "search.view-switch.show-list": "Visualizzazione a lista",
-
-
 
   // "sorting.ASC": "Ascending",
   "sorting.ASC": "Ascendente",
@@ -6252,7 +6013,6 @@
 
   // "sorting.lastModified.DESC": "Last modified Descending",
   "sorting.lastModified.DESC": "Ultima modifica Discendente",
-
 
   // "statistics.title": "Statistics",
   "statistics.title": "Statistiche",
@@ -6297,8 +6057,6 @@
   // TODO New key - Add a translation
   "statistics.table.no-name": "(object name could not be loaded)",
 
-
-
   // "submission.edit.breadcrumbs": "Edit Submission",
   "submission.edit.breadcrumbs": "Modifica immissione",
 
@@ -6340,7 +6098,6 @@
 
   // "submission.general.save-later": "Save for later",
   "submission.general.save-later": "Salva per dopo",
-
 
   // "submission.import-external.page.title": "Import metadata from an external source",
   "submission.import-external.page.title": "Importare metadati da un'origine esterna",
@@ -6743,9 +6500,6 @@
   // "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfProject": "Funder of the Project",
   "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfProject": "Finanziatore del Progetto",
 
-
-
-
   // "submission.sections.describe.relationship-lookup.selection-tab.search-form.placeholder": "Search...",
   "submission.sections.describe.relationship-lookup.selection-tab.search-form.placeholder": "Cerca...",
 
@@ -6896,7 +6650,7 @@
 
   // "submission.sections.describe.relationship-lookup.name-variant.notification.content": "Would you like to save \"{{ value }}\" as a name variant for this person so you and others can reuse it for future submissions? If you don't you can still use it for this submission.",
   // TODO Source message changed - Revise the translation
-  "submission.sections.describe.relationship-lookup.name-variant.notification.content": "Desideri salvare \"{{ value }}\" come variante del nome per questa persona in modo che tu e altri possiate riutilizzarlo per immissioni future? Se non lo fai, puoi comunque usarlo per questa immissione.",
+  "submission.sections.describe.relationship-lookup.name-variant.notification.content": 'Desideri salvare "{{ value }}" come variante del nome per questa persona in modo che tu e altri possiate riutilizzarlo per immissioni future? Se non lo fai, puoi comunque usarlo per questa immissione.',
 
   // "submission.sections.describe.relationship-lookup.name-variant.notification.confirm": "Save a new name variant",
   "submission.sections.describe.relationship-lookup.name-variant.notification.confirm": "Salva una nuova variante del nome",
@@ -7035,7 +6789,6 @@
   // "submission.sections.submit.progressbar.sherpaPolicies": "Publisher open access policy information",
   // TODO New key - Add a translation
   "submission.sections.submit.progressbar.sherpaPolicies": "Publisher open access policy information",
-
 
   // "submission.sections.sherpa-policy.title-empty": "No publisher policy information available. If your work has an associated ISSN, please enter it above to see any related publisher open access policies.",
   // TODO New key - Add a translation
@@ -7229,7 +6982,6 @@
   // TODO New key - Add a translation
   "submission.sections.license.notgranted": "You must accept the license",
 
-
   // "submission.sections.sherpa.publication.information": "Publication information",
   // TODO New key - Add a translation
   "submission.sections.sherpa.publication.information": "Publication information",
@@ -7334,22 +7086,18 @@
   // TODO New key - Add a translation
   "submission.sections.sherpa.error.message": "There was an error retrieving sherpa informations",
 
-
-
   // "submission.submit.breadcrumbs": "New submission",
   "submission.submit.breadcrumbs": "Nuova immissione",
 
   // "submission.submit.title": "New submission",
   "submission.submit.title": "Nuova immissione",
 
-
-
   // "submission.workflow.generic.delete": "Delete",
   "submission.workflow.generic.delete": "Elimina",
 
   // "submission.workflow.generic.delete-help": "Select this option to discard this item. You will then be asked to confirm it.",
   // TODO Source message changed - Revise the translation
-  "submission.workflow.generic.delete-help": "Se si desidera eliminare questo item, selezionare \"Elimina\".  Ti verrà quindi chiesto di confermarlo.",
+  "submission.workflow.generic.delete-help": 'Se si desidera eliminare questo item, selezionare "Elimina".  Ti verrà quindi chiesto di confermarlo.',
 
   // "submission.workflow.generic.edit": "Edit",
   "submission.workflow.generic.edit": "Modifica",
@@ -7363,7 +7111,6 @@
   // "submission.workflow.generic.view-help": "Select this option to view the item's metadata.",
   "submission.workflow.generic.view-help": "Selezionare questa opzione per visualizzare i metadati dell'item.",
 
-
   // "submission.workflow.generic.submit_select_reviewer": "Select Reviewer",
   // TODO New key - Add a translation
   "submission.workflow.generic.submit_select_reviewer": "Select Reviewer",
@@ -7372,7 +7119,6 @@
   // TODO New key - Add a translation
   "submission.workflow.generic.submit_select_reviewer-help": "",
 
-
   // "submission.workflow.generic.submit_score": "Rate",
   // TODO New key - Add a translation
   "submission.workflow.generic.submit_score": "Rate",
@@ -7380,7 +7126,6 @@
   // "submission.workflow.generic.submit_score-help": "",
   // TODO New key - Add a translation
   "submission.workflow.generic.submit_score-help": "",
-
 
   // "submission.workflow.tasks.claimed.approve": "Approve",
   "submission.workflow.tasks.claimed.approve": "Approva",
@@ -7426,8 +7171,6 @@
   // "submission.workflow.tasks.claimed.return_help": "Return the task to the pool so that another user may perform the task.",
   "submission.workflow.tasks.claimed.return_help": "Restituire il task al pool in modo che un altro utente possa prenderlo in carico.",
 
-
-
   // "submission.workflow.tasks.generic.error": "Error occurred during operation...",
   "submission.workflow.tasks.generic.error": "Si è verificato un errore durante l'operazione...",
 
@@ -7439,8 +7182,6 @@
 
   // "submission.workflow.tasks.generic.success": "Operation successful",
   "submission.workflow.tasks.generic.success": "Operazione riuscita",
-
-
 
   // "submission.workflow.tasks.pool.claim": "Claim",
   "submission.workflow.tasks.pool.claim": "Associa",
@@ -7454,13 +7195,11 @@
   // "submission.workflow.tasks.pool.show-detail": "Show detail",
   "submission.workflow.tasks.pool.show-detail": "Mostra dettagli",
 
-
   // "submission.workspace.generic.view": "View",
   "submission.workspace.generic.view": "Elenco",
 
   // "submission.workspace.generic.view-help": "Select this option to view the item's metadata.",
   "submission.workspace.generic.view-help": "Seleziona questa opzione per vedere i metadata dell'item.",
-
 
   // "subscriptions.title": "Subscriptions",
   "subscriptions.title": "Sottoscrizioni",
@@ -7507,7 +7246,7 @@
 
   // "subscriptions.modal.delete-info": "To remove this subscription, please visit the \"Subscriptions\" page under your user profile",
   // TODO New key - Add a translation
-  "subscriptions.modal.delete-info": "To remove this subscription, please visit the \"Subscriptions\" page under your user profile",
+  "subscriptions.modal.delete-info": 'To remove this subscription, please visit the "Subscriptions" page under your user profile',
 
   // "subscriptions.modal.new-subscription-form.type.content": "Content",
   // TODO New key - Add a translation
@@ -7589,7 +7328,6 @@
   // TODO Source message changed - Revise the translation
   "subscriptions.table.empty.message": "Non hai ancora sottoscritto alcuna notifica. Per sottoscrivere la notifica relativa a un oggetto, usa il menu contestuale nella pagina di dettaglio dell'oggetto",
 
-
   // "thumbnail.default.alt": "Thumbnail Image",
   "thumbnail.default.alt": "Immagine di anteprima",
 
@@ -7614,12 +7352,8 @@
   // "thumbnail.person.placeholder": "No Profile Picture Available",
   "thumbnail.person.placeholder": "Nessuna immagine del profilo disponibile",
 
-
-
   // "title": "DSpace",
-  "title": "DSpace",
-
-
+  title: "DSpace",
 
   // "vocabulary-treeview.header": "Hierarchical tree view",
   "vocabulary-treeview.header": "Visualizzazione gerarchica ad albero",
@@ -7674,8 +7408,6 @@
   // "virtual-metadata.delete-relationship.modal-head": "Select the items for which you want to save the virtual metadata as real metadata",
   "virtual-metadata.delete-relationship.modal-head": "Selezionare gli item per i quali si desidera salvare i metadati virtuali come metadati reali",
 
-
-
   // "supervisedWorkspace.search.results.head": "Supervised Items",
   // TODO New key - Add a translation
   "supervisedWorkspace.search.results.head": "Supervised Items",
@@ -7692,8 +7424,6 @@
   // "supervision.search.results.head": "Workflow and Workspace tasks",
   // TODO New key - Add a translation
   "supervision.search.results.head": "Workflow and Workspace tasks",
-
-
 
   // "workflow-item.edit.breadcrumbs": "Edit workflowitem",
   "workflow-item.edit.breadcrumbs": "Modifica l'item del workflow",
@@ -7724,7 +7454,6 @@
 
   // "workflow-item.delete.button.confirm": "Delete",
   "workflow-item.delete.button.confirm": "Elimina",
-
 
   // "workflow-item.send-back.notification.success.title": "Sent back to submitter",
   "workflow-item.send-back.notification.success.title": "Inviato all'operatore",
@@ -7759,11 +7488,9 @@
   // "workspace-item.view.title": "Workspace View",
   "workspace-item.view.title": "Vista Workspace",
 
-
   // "workflow-item.advanced.title": "Advanced workflow",
   // TODO New key - Add a translation
   "workflow-item.advanced.title": "Advanced workflow",
-
 
   // "workflow-item.selectrevieweraction.notification.success.title": "Selected reviewer",
   // TODO New key - Add a translation
@@ -7796,7 +7523,6 @@
   // "workflow-item.selectrevieweraction.button.confirm": "Confirm",
   // TODO New key - Add a translation
   "workflow-item.selectrevieweraction.button.confirm": "Confirm",
-
 
   // "workflow-item.scorereviewaction.notification.success.title": "Rating review",
   // TODO New key - Add a translation
@@ -8190,7 +7916,7 @@
 
   // "person.page.orcid.synchronization-mode-message": "Please select how you would like synchronization to ORCID to occur. The options include \"Manual\" (you must send your data to ORCID manually), or \"Batch\" (the system will send your data to ORCID via a scheduled script).",
   // TODO Source message changed - Revise the translation
-  "person.page.orcid.synchronization-mode-message": "Abilitare la modalità di sincronizzazione \"manuale\" per disabilitare la sincronizzazione batch in modo da dover inviare manualmente i dati al Registro ORCID",
+  "person.page.orcid.synchronization-mode-message": 'Abilitare la modalità di sincronizzazione "manuale" per disabilitare la sincronizzazione batch in modo da dover inviare manualmente i dati al Registro ORCID',
 
   // "person.page.orcid.synchronization-mode-funding-message": "Select whether to send your linked Project entities to your ORCID record's list of funding information.",
   "person.page.orcid.synchronization-mode-funding-message": "Scegli se sincronizzare i tuoi Progetti con la lista delle informazioni dei progetti sul profilo ORCID.",
@@ -8244,7 +7970,6 @@
   // TODO New key - Add a translation
   "listable-notification-object.default-message": "This object couldn't be retrieved",
 
-
   // "system-wide-alert-banner.retrieval.error": "Something went wrong retrieving the system-wide alert banner",
   // TODO New key - Add a translation
   "system-wide-alert-banner.retrieval.error": "Something went wrong retrieving the system-wide alert banner",
@@ -8264,8 +7989,6 @@
   // "system-wide-alert-banner.countdown.minutes": "{{minutes}} minute(s):",
   // TODO New key - Add a translation
   "system-wide-alert-banner.countdown.minutes": "{{minutes}} minute(s):",
-
-
 
   // "menu.section.system-wide-alert": "System-wide Alert",
   // TODO New key - Add a translation
@@ -8339,5 +8062,9 @@
   // TODO New key - Add a translation
   "admin.system-wide-alert.title": "System-wide Alerts",
 
+  "qulto.home.welcome.title": "Welcome at the Qulto Repozitórium page!",
 
+  "qulto.home.welcome.description": "The repozitory is a digital storage for electronic documents, is used for archiving and making documents accessible.",
+
+  "qulto.home.welcome.functions": "You can search and browse collections within the categories.",
 }
