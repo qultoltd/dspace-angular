@@ -1009,6 +1009,7 @@
   // TODO New key - Add a translation
   "admin.reports.items.title": "Title",
 
+
   // "admin.reports.commons.filters": "Filters",
   // TODO New key - Add a translation
   "admin.reports.commons.filters": "Filters",
@@ -1048,6 +1049,7 @@
   // "admin.reports.commons.filters.matches_all": "Matches all specified filters",
   // TODO New key - Add a translation
   "admin.reports.commons.filters.matches_all": "Matches all specified filters",
+
 
   // "admin.reports.commons.filters.property": "Item Property Filters",
   // TODO New key - Add a translation
@@ -1647,8 +1649,16 @@
   // "browse.metadata.srsc.breadcrumbs": "Browse by Subject Category",
   "browse.metadata.srsc.breadcrumbs": "استعراض حسب فئة الموضوع",
 
+  // "browse.metadata.srsc.tree.descrption": "Select a subject to add as search filter",
+  // TODO New key - Add a translation
+  "browse.metadata.srsc.tree.descrption": "Select a subject to add as search filter",
+
   // "browse.metadata.nsi.breadcrumbs": "Browse by Norwegian Science Index",
   "browse.metadata.nsi.breadcrumbs": "استعراض حسب فهرس العلوم النرويجي",
+
+  // "browse.metadata.nsi.tree.descrption": "Select an index to add as search filter",
+  // TODO New key - Add a translation
+  "browse.metadata.nsi.tree.descrption": "Select an index to add as search filter",
 
   // "browse.metadata.title.breadcrumbs": "Browse by Title",
   "browse.metadata.title.breadcrumbs": "استعراض حسب العنوان",
@@ -1757,6 +1767,10 @@
 
   // "claimed-declined-task-search-result-list-element.title": "Declined, sent back to Review Manager's workflow",
   "claimed-declined-task-search-result-list-element.title": "تم الرفض، وتمت الإعادة إلى سير عمل مدير المراجعة",
+
+  // "collection.create.breadcrumbs": "Create collection",
+  // TODO New key - Add a translation
+  "collection.create.breadcrumbs": "Create collection",
 
   // "collection.browse.logo": "Browse for a collection logo",
   "collection.browse.logo": "استعراض للحصول على شعار للحاوية",
@@ -2196,6 +2210,10 @@
   // TODO New key - Add a translation
   "community.subcoms-cols.breadcrumbs": "Subcommunities and Collections",
 
+  // "community.create.breadcrumbs": "Create Community",
+  // TODO New key - Add a translation
+  "community.create.breadcrumbs": "Create Community",
+
   // "community.create.head": "Create a Community",
   "community.create.head": "إنشاء مجتمع",
 
@@ -2241,8 +2259,16 @@
   // "community.edit.logo.delete.title": "Delete logo",
   "community.edit.logo.delete.title": "حذف الشعار",
 
+  // "community-collection.edit.logo.delete.title": "Confirm deletion",
+  // TODO New key - Add a translation
+  "community-collection.edit.logo.delete.title": "Confirm deletion",
+
   // "community.edit.logo.delete-undo.title": "Undo delete",
   "community.edit.logo.delete-undo.title": "التراجع عن الحذف",
+
+  // "community-collection.edit.logo.delete-undo.title": "Undo delete",
+  // TODO New key - Add a translation
+  "community-collection.edit.logo.delete-undo.title": "Undo delete",
 
   // "community.edit.logo.label": "Community logo",
   "community.edit.logo.label": "شعار المجتمع",
@@ -2618,6 +2644,14 @@
   // "deny-request-copy.success": "Successfully denied item request",
   "deny-request-copy.success": "تم رفض طلب المادة بنجاح",
 
+  // "dropdown.clear": "Clear selection",
+  // TODO New key - Add a translation
+  "dropdown.clear": "Clear selection",
+
+  // "dropdown.clear.tooltip": "Clear the selected option",
+  // TODO New key - Add a translation
+  "dropdown.clear.tooltip": "Clear the selected option",
+
   // "dso.name.untitled": "Untitled",
   "dso.name.untitled": "بدون عنوان",
 
@@ -2677,6 +2711,18 @@
 
   // "dso-selector.placeholder": "Search for a {{ type }}",
   "dso-selector.placeholder": "بحث عن {{ type }}",
+
+  // "dso-selector.placeholder.type.community": "community",
+  // TODO New key - Add a translation
+  "dso-selector.placeholder.type.community": "community",
+
+  // "dso-selector.placeholder.type.collection": "collection",
+  // TODO New key - Add a translation
+  "dso-selector.placeholder.type.collection": "collection",
+
+  // "dso-selector.placeholder.type.item": "item",
+  // TODO New key - Add a translation
+  "dso-selector.placeholder.type.item": "item",
 
   // "dso-selector.select.collection.head": "Select a collection",
   "dso-selector.select.collection.head": "تحديد حاوية",
@@ -2782,6 +2828,10 @@
 
   // "confirmation-modal.delete-eperson.confirm": "Delete",
   "confirmation-modal.delete-eperson.confirm": "حذف",
+
+  // "confirmation-modal.delete-community-collection-logo.info": "Are you sure you want to delete the logo?",
+  // TODO New key - Add a translation
+  "confirmation-modal.delete-community-collection-logo.info": "Are you sure you want to delete the logo?",
 
   // "confirmation-modal.delete-profile.header": "Delete Profile",
   "confirmation-modal.delete-profile.header": "حذف الملف الشخصي",
@@ -5920,6 +5970,10 @@
   // "process.overview.delete.header": "Delete processes",
   "process.overview.delete.header": "حذف العمليات",
 
+  // "process.overview.unknown.user": "Unknown",
+  // TODO New key - Add a translation
+  "process.overview.unknown.user": "Unknown",
+
   // "process.bulk.delete.error.head": "Error on deleteing process",
   "process.bulk.delete.error.head": "خطأ في عملية الحذف",
 
@@ -6550,7 +6604,7 @@
   // "resource-policies.form.name.label": "Name",
   "resource-policies.form.name.label": "الاسم",
 
-  //"resource-policies.form.name.hint": "Max 30 characters",
+  // "resource-policies.form.name.hint": "Max 30 characters",
   // TODO New key - Add a translation
   "resource-policies.form.name.hint": "Max 30 characters",
 
@@ -6641,6 +6695,10 @@
   // "search.filters.remove": "Remove filter of type {{ type }} with value {{ value }}",
   "search.filters.remove": "إزالة المنقح من النوع {{ type }} بقيمة {{ value }}",
 
+  // "search.filters.applied.f.title": "Title",
+  // TODO New key - Add a translation
+  "search.filters.applied.f.title": "Title",
+
   // "search.filters.applied.f.author": "Author",
   "search.filters.applied.f.author": "المؤلف",
 
@@ -6661,6 +6719,14 @@
 
   // "search.filters.applied.f.has_content_in_original_bundle": "Has files",
   "search.filters.applied.f.has_content_in_original_bundle": "بها ملفات",
+
+  // "search.filters.applied.f.original_bundle_filenames": "File name",
+  // TODO New key - Add a translation
+  "search.filters.applied.f.original_bundle_filenames": "File name",
+
+  // "search.filters.applied.f.original_bundle_descriptions": "File description",
+  // TODO New key - Add a translation
+  "search.filters.applied.f.original_bundle_descriptions": "File description",
 
   // "search.filters.applied.f.itemtype": "Type",
   "search.filters.applied.f.itemtype": "النوع",
@@ -6688,6 +6754,46 @@
 
   // "search.filters.applied.f.withdrawn": "Withdrawn",
   "search.filters.applied.f.withdrawn": "مسحوب",
+
+  // "search.filters.applied.operator.equals": "",
+  // TODO New key - Add a translation
+  "search.filters.applied.operator.equals": "",
+
+  // "search.filters.applied.operator.notequals": " not equals",
+  // TODO New key - Add a translation
+  "search.filters.applied.operator.notequals": " not equals",
+
+  // "search.filters.applied.operator.authority": "",
+  // TODO New key - Add a translation
+  "search.filters.applied.operator.authority": "",
+
+  // "search.filters.applied.operator.notauthority": " not authority",
+  // TODO New key - Add a translation
+  "search.filters.applied.operator.notauthority": " not authority",
+
+  // "search.filters.applied.operator.contains": " contains",
+  // TODO New key - Add a translation
+  "search.filters.applied.operator.contains": " contains",
+
+  // "search.filters.applied.operator.notcontains": " not contains",
+  // TODO New key - Add a translation
+  "search.filters.applied.operator.notcontains": " not contains",
+
+  // "search.filters.applied.operator.query": "",
+  // TODO New key - Add a translation
+  "search.filters.applied.operator.query": "",
+
+  // "search.filters.filter.title.head": "Title",
+  // TODO New key - Add a translation
+  "search.filters.filter.title.head": "Title",
+
+  // "search.filters.filter.title.placeholder": "Title",
+  // TODO New key - Add a translation
+  "search.filters.filter.title.placeholder": "Title",
+
+  // "search.filters.filter.title.label": "Search Title",
+  // TODO New key - Add a translation
+  "search.filters.filter.title.label": "Search Title",
 
   // "search.filters.filter.author.head": "Author",
   "search.filters.filter.author.head": "المؤلف",
@@ -6790,6 +6896,30 @@
 
   // "search.filters.filter.has_content_in_original_bundle.head": "Has files",
   "search.filters.filter.has_content_in_original_bundle.head": "بها ملفات",
+
+  // "search.filters.filter.original_bundle_filenames.head": "File name",
+  // TODO New key - Add a translation
+  "search.filters.filter.original_bundle_filenames.head": "File name",
+
+  // "search.filters.filter.original_bundle_filenames.placeholder": "File name",
+  // TODO New key - Add a translation
+  "search.filters.filter.original_bundle_filenames.placeholder": "File name",
+
+  // "search.filters.filter.original_bundle_filenames.label": "Search File name",
+  // TODO New key - Add a translation
+  "search.filters.filter.original_bundle_filenames.label": "Search File name",
+
+  // "search.filters.filter.original_bundle_descriptions.head": "File description",
+  // TODO New key - Add a translation
+  "search.filters.filter.original_bundle_descriptions.head": "File description",
+
+  // "search.filters.filter.original_bundle_descriptions.placeholder": "File description",
+  // TODO New key - Add a translation
+  "search.filters.filter.original_bundle_descriptions.placeholder": "File description",
+
+  // "search.filters.filter.original_bundle_descriptions.label": "Search File description",
+  // TODO New key - Add a translation
+  "search.filters.filter.original_bundle_descriptions.label": "Search File description",
 
   // "search.filters.filter.itemtype.head": "Type",
   "search.filters.filter.itemtype.head": "النوع",
@@ -6977,6 +7107,34 @@
   // "search.filters.search.submit": "Submit",
   "search.filters.search.submit": "تقديم",
 
+  // "search.filters.operator.equals.text": "Equals",
+  // TODO New key - Add a translation
+  "search.filters.operator.equals.text": "Equals",
+
+  // "search.filters.operator.notequals.text": "Not Equals",
+  // TODO New key - Add a translation
+  "search.filters.operator.notequals.text": "Not Equals",
+
+  // "search.filters.operator.authority.text": "Authority",
+  // TODO New key - Add a translation
+  "search.filters.operator.authority.text": "Authority",
+
+  // "search.filters.operator.notauthority.text": "Not Authority",
+  // TODO New key - Add a translation
+  "search.filters.operator.notauthority.text": "Not Authority",
+
+  // "search.filters.operator.contains.text": "Contains",
+  // TODO New key - Add a translation
+  "search.filters.operator.contains.text": "Contains",
+
+  // "search.filters.operator.notcontains.text": "Not Contains",
+  // TODO New key - Add a translation
+  "search.filters.operator.notcontains.text": "Not Contains",
+
+  // "search.filters.operator.query.text": "Query",
+  // TODO New key - Add a translation
+  "search.filters.operator.query.text": "Query",
+
   // "search.form.search": "Search",
   "search.form.search": "بحث",
 
@@ -7028,6 +7186,26 @@
 
   // "search.sidebar.settings.sort-by": "Sort By",
   "search.sidebar.settings.sort-by": "فرز حسب",
+
+  // "search.sidebar.advanced-search.title": "Advanced Search",
+  // TODO New key - Add a translation
+  "search.sidebar.advanced-search.title": "Advanced Search",
+
+  // "search.sidebar.advanced-search.filter-by": "Filter by",
+  // TODO New key - Add a translation
+  "search.sidebar.advanced-search.filter-by": "Filter by",
+
+  // "search.sidebar.advanced-search.filters": "Filters",
+  // TODO New key - Add a translation
+  "search.sidebar.advanced-search.filters": "Filters",
+
+  // "search.sidebar.advanced-search.operators": "Operators",
+  // TODO New key - Add a translation
+  "search.sidebar.advanced-search.operators": "Operators",
+
+  // "search.sidebar.advanced-search.add": "Add",
+  // TODO New key - Add a translation
+  "search.sidebar.advanced-search.add": "Add",
 
   // "search.sidebar.settings.title": "Settings",
   "search.sidebar.settings.title": "الإعدادات",
@@ -7286,8 +7464,17 @@
   // "submission.import-external.source.sherpaPublisher": "SHERPA Publishers",
   "submission.import-external.source.sherpaPublisher": "ناشري شيربا",
 
-  // "submission.import-external.source.openAIREFunding": "Funding OpenAIRE API",
-  "submission.import-external.source.openAIREFunding": "تمويل واجهة برمجة تطبيقات OpenAIRE",
+  // "submission.import-external.source.openaire": "OpenAIRE Authors",
+  // TODO New key - Add a translation
+  "submission.import-external.source.openaire": "OpenAIRE Authors",
+
+  // "submission.import-external.source.openaireTitle": "OpenAIRE Titles",
+  // TODO New key - Add a translation
+  "submission.import-external.source.openaireTitle": "OpenAIRE Titles",
+
+  // "submission.import-external.source.openaireFunding": "OpenAIRE Funding",
+  // TODO New key - Add a translation
+  "submission.import-external.source.openaireFunding": "OpenAIRE Funding",
 
   // "submission.import-external.source.orcid": "ORCID",
   "submission.import-external.source.orcid": "أوركيد",
@@ -7394,9 +7581,6 @@
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isProjectOfPublication.title": "Project",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.isProjectOfPublication.title": "مشروع",
 
-  // "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openAIREFunding": "Funding OpenAIRE API",
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openAIREFunding": "تمويل واجهة برمجة تطبيقات OpenAIRE",
-
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.title": "Import Remote Author",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.title": "استيراد مؤلف بعيد",
 
@@ -7429,6 +7613,18 @@
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.head.orcid": "Importing from ORCID",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.head.orcid": "استيراد من أوركيد",
+
+  // "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaire": "Importing from OpenAIRE Authors",
+  // TODO New key - Add a translation
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaire": "Importing from OpenAIRE Authors",
+
+  // "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaireTitle": "Importing from OpenAIRE Titles",
+  // TODO New key - Add a translation
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaireTitle": "Importing from OpenAIRE Titles",
+
+  // "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaireFunding": "Importing from OpenAIRE Funding",
+  // TODO New key - Add a translation
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaireFunding": "Importing from OpenAIRE Funding",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.head.sherpaJournal": "Importing from Sherpa Journal",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.head.sherpaJournal": "استيراد من دورية شيربا",
@@ -7583,7 +7779,16 @@
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.scopus": "Scopus ({{ count }})",
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.scopus": "Scopus ({{ count }})",
 
-  // "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaireFunding": "Funding OpenAIRE ({{ count }})",
+  // "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaire": "OpenAIRE Authors ({{ count }})",
+  // TODO New key - Add a translation
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaire": "OpenAIRE Authors ({{ count }})",
+
+  // "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaireTitle": "OpenAIRE Titles ({{ count }})",
+  // TODO New key - Add a translation
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaireTitle": "OpenAIRE Titles ({{ count }})",
+
+  // "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaireFunding": "OpenAIRE Funding ({{ count }})",
+  // TODO Source message changed - Revise the translation
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaireFunding": "تمويل OpenAIRE ({{ count }})",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.sherpaJournalIssn": "Sherpa Journals by ISSN ({{ count }})",
@@ -7598,9 +7803,6 @@
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.isChildOrgUnitOf": "Search for Organizational Units",
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isChildOrgUnitOf": "البحث عن الوحدات المؤسسية",
 
-  // "submission.sections.describe.relationship-lookup.search-tab.tab-title.openAIREFunding": "Funding OpenAIRE API",
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.openAIREFunding": "تمويل واجهة برمجة تطبيقات OpenAIRE",
-
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.isProjectOfPublication": "Projects",
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isProjectOfPublication": "المشاريع",
 
@@ -7612,9 +7814,6 @@
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfProject": "OrgUnit of the Project",
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfProject": "الوحدة المؤسسية للمشروع",
-
-  // "submission.sections.describe.relationship-lookup.selection-tab.title.openAIREFunding": "Funding OpenAIRE API",
-  "submission.sections.describe.relationship-lookup.selection-tab.title.openAIREFunding": "تمويل واجهة برمجة تطبيقات OpenAIRE",
 
   // "submission.sections.describe.relationship-lookup.selection-tab.title.isProjectOfPublication": "Project",
   "submission.sections.describe.relationship-lookup.selection-tab.title.isProjectOfPublication": "المشروع",
@@ -7756,6 +7955,18 @@
 
   // "submission.sections.describe.relationship-lookup.selection-tab.title.orcidv2": "Search Results",
   "submission.sections.describe.relationship-lookup.selection-tab.title.orcidv2": "نتائج البحث",
+
+  // "submission.sections.describe.relationship-lookup.selection-tab.title.openaire": "Search Results",
+  // TODO New key - Add a translation
+  "submission.sections.describe.relationship-lookup.selection-tab.title.openaire": "Search Results",
+
+  // "submission.sections.describe.relationship-lookup.selection-tab.title.openaireTitle": "Search Results",
+  // TODO New key - Add a translation
+  "submission.sections.describe.relationship-lookup.selection-tab.title.openaireTitle": "Search Results",
+
+  // "submission.sections.describe.relationship-lookup.selection-tab.title.openaireFundin": "Search Results",
+  // TODO New key - Add a translation
+  "submission.sections.describe.relationship-lookup.selection-tab.title.openaireFundin": "Search Results",
 
   // "submission.sections.describe.relationship-lookup.selection-tab.title.lcname": "Search Results",
   "submission.sections.describe.relationship-lookup.selection-tab.title.lcname": "نتائج البحث",
@@ -9226,57 +9437,21 @@
   // TODO New key - Add a translation
   "admin.notifications.publicationclaim.page.title": "Publication Claim",
 
-  // "filter.search.operator.placeholder": "Operator",
-  // TODO New key - Add a translation
-  "filter.search.operator.placeholder": "Operator",
-
-  // "search.filters.filter.entityType.text": "Item Type",
-  // TODO New key - Add a translation
-  "search.filters.filter.entityType.text": "Item Type",
-
-  // "search.filters.operator.equals.text": "Equals",
-  // TODO New key - Add a translation
-  "search.filters.operator.equals.text": "Equals",
-
-  // "search.filters.operator.notequals.text": "Not Equals",
-  // TODO New key - Add a translation
-  "search.filters.operator.notequals.text": "Not Equals",
-
-  // "search.filters.operator.notcontains.text": "Not Contains",
-  // TODO New key - Add a translation
-  "search.filters.operator.notcontains.text": "Not Contains",
-
-  // "search.filters.operator.contains.text": "Contains",
-  // TODO New key - Add a translation
-  "search.filters.operator.contains.text": "Contains",
-
-  // "search.filters.filter.title.text": "Title",
-  // TODO New key - Add a translation
-  "search.filters.filter.title.text": "Title",
-
-  // "search.filters.applied.f.title": "Title",
-  // TODO New key - Add a translation
-  "search.filters.applied.f.title": "Title",
-
-  // "search.filters.filter.author.text": "Author",
-  // TODO New key - Add a translation
-  "search.filters.filter.author.text": "Author",
-
   // "coar-notify-support.title": "COAR Notify Protocol",
   // TODO New key - Add a translation
   "coar-notify-support.title": "COAR Notify Protocol",
 
-  // "coar-notify-support-title.content": "Here, we fully support the COAR Notify protocol, which is designed to enhance the communication between repositories. To learn more about the COAR Notify protocol, visit the <a href=\\\"https://notify.coar-repositories.org/\\\">COAR Notify website</a>.",
+  // "coar-notify-support-title.content": "Here, we fully support the COAR Notify protocol, which is designed to enhance the communication between repositories. To learn more about the COAR Notify protocol, visit the <a href=\"https://notify.coar-repositories.org/\" rel=\"noopener noreferrer\">COAR Notify website</a>.",
   // TODO New key - Add a translation
-  "coar-notify-support-title.content": "Here, we fully support the COAR Notify protocol, which is designed to enhance the communication between repositories. To learn more about the COAR Notify protocol, visit the <a href=\\\"https://notify.coar-repositories.org/\\\">COAR Notify website</a>.",
+  "coar-notify-support-title.content": "Here, we fully support the COAR Notify protocol, which is designed to enhance the communication between repositories. To learn more about the COAR Notify protocol, visit the <a href=\"https://notify.coar-repositories.org/\" rel=\"noopener noreferrer\">COAR Notify website</a>.",
 
   // "coar-notify-support.ldn-inbox.title": "LDN InBox",
   // TODO New key - Add a translation
   "coar-notify-support.ldn-inbox.title": "LDN InBox",
 
-  // "coar-notify-support.ldn-inbox.content": "For your convenience, our LDN (Linked Data Notifications) InBox is easily accessible at {ldnInboxUrl}. The LDN InBox enables seamless communication and data exchange, ensuring efficient and effective collaboration.",
+  // "coar-notify-support.ldn-inbox.content": "For your convenience, our LDN (Linked Data Notifications) InBox is easily accessible at {{ ldnInboxUrl }}. The LDN InBox enables seamless communication and data exchange, ensuring efficient and effective collaboration.",
   // TODO New key - Add a translation
-  "coar-notify-support.ldn-inbox.content": "For your convenience, our LDN (Linked Data Notifications) InBox is easily accessible at {ldnInboxUrl}. The LDN InBox enables seamless communication and data exchange, ensuring efficient and effective collaboration.",
+  "coar-notify-support.ldn-inbox.content": "For your convenience, our LDN (Linked Data Notifications) InBox is easily accessible at {{ ldnInboxUrl }}. The LDN InBox enables seamless communication and data exchange, ensuring efficient and effective collaboration.",
 
   // "coar-notify-support.message-moderation.title": "Message Moderation",
   // TODO New key - Add a translation
@@ -9963,22 +10138,6 @@
   // TODO New key - Add a translation
   "type-equals-journal-article_condition.label": "Type equals Journal Article",
 
-  // "search.filters.filter.subject.text": "Subject",
-  // TODO New key - Add a translation
-  "search.filters.filter.subject.text": "Subject",
-
-  // "search.advanced.filters.head": "Advanced Search",
-  // TODO New key - Add a translation
-  "search.advanced.filters.head": "Advanced Search",
-
-  // "filter.search.text.placeholder": "Search text",
-  // TODO New key - Add a translation
-  "filter.search.text.placeholder": "Search text",
-
-  // "advancesearch.form.submit": "Add",
-  // TODO New key - Add a translation
-  "advancesearch.form.submit": "Add",
-
   // "ldn.no-filter.label": "None",
   // TODO New key - Add a translation
   "ldn.no-filter.label": "None",
@@ -10646,5 +10805,14 @@
   // "search.filters.filter.notifyEndorsement.label": "Search Notify Endorsement",
   // TODO New key - Add a translation
   "search.filters.filter.notifyEndorsement.label": "Search Notify Endorsement",
+
+  // "item.page.cc.license.title": "Creative Commons license",
+  // TODO New key - Add a translation
+  "item.page.cc.license.title": "Creative Commons license",
+
+  // "item.page.cc.license.disclaimer": "Except where otherwised noted, this item's license is described as",
+  // TODO New key - Add a translation
+  "item.page.cc.license.disclaimer": "Except where otherwised noted, this item's license is described as",
+
 
 }
