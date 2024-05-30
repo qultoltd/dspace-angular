@@ -7,7 +7,6 @@
   "401.link.home-page": "Vissza a főoldalra",
 
   // "401.unauthorized": "Unauthorized",
-  // TODO Source message changed - Revise the translation
   "401.unauthorized": "jogosulatlan",
 
   // "403.help": "You don't have permission to access this page. You can use the button below to get back to the home page.",
@@ -38,24 +37,20 @@
   "404.link.home-page": "Vissza a főoldalra",
 
   // "404.page-not-found": "Page not found",
-  // TODO Source message changed - Revise the translation
-  "404.page-not-found": "oldal nem található",
+  "404.page-not-found": "Az oldal nem található",
 
   // "error-page.description.401": "Unauthorized",
-  // TODO Source message changed - Revise the translation
-  "error-page.description.401": "unauthorized",
+  "error-page.description.401": "jogosulatlan",
 
   // "error-page.description.403": "Forbidden",
-  // TODO Source message changed - Revise the translation
-  "error-page.description.403": "forbidden",
+  "error-page.description.403": "elérhetetlen",
 
   // "error-page.description.500": "Service unavailable",
   // TODO Source message changed - Revise the translation
   "error-page.description.500": "Service Unavailable",
 
   // "error-page.description.404": "Page not found",
-  // TODO Source message changed - Revise the translation
-  "error-page.description.404": "page not found",
+  "error-page.description.404": "Az oldal nem található",
 
   // "error-page.orcid.generic-error": "An error occurred during login via ORCID. Make sure you have shared your ORCID account email address with DSpace. If the error persists, contact the administrator",
   "error-page.orcid.generic-error": "An error occurred during login via ORCID. Make sure you have shared your ORCID account email address with DSpace. If the error persists, contact the administrator",
@@ -97,7 +92,6 @@
   "admin.registries.bitstream-formats.create.failure.head": "Nem sikerült",
 
   // "admin.registries.bitstream-formats.create.head": "Create bitstream format",
-  // TODO Source message changed - Revise the translation
   "admin.registries.bitstream-formats.create.head": "Bitfolyam formátum létrehozása",
 
   // "admin.registries.bitstream-formats.create.new": "Add a new bitstream format",
@@ -203,8 +197,7 @@
   "admin.registries.bitstream-formats.table.name": "Név",
 
   // "admin.registries.bitstream-formats.table.selected": "Selected bitstream formats",
-  // TODO New key - Add a translation
-  "admin.registries.bitstream-formats.table.selected": "Selected bitstream formats",
+  "admin.registries.bitstream-formats.table.selected": "Kiválasztott bitfolyam formátumok",
 
   // "admin.registries.bitstream-formats.table.id": "ID",
   // TODO Source message changed - Revise the translation
@@ -229,12 +222,10 @@
   "admin.registries.bitstream-formats.title": "Bitfolyam formátum leíró adatbázis",
 
   // "admin.registries.bitstream-formats.select": "Select",
-  // TODO New key - Add a translation
-  "admin.registries.bitstream-formats.select": "Select",
+  "admin.registries.bitstream-formats.select": "Kijelölés",
 
   // "admin.registries.bitstream-formats.deselect": "Deselect",
-  // TODO New key - Add a translation
-  "admin.registries.bitstream-formats.deselect": "Deselect",
+  "admin.registries.bitstream-formats.deselect": "Kijelölés törlése",
 
   // "admin.registries.metadata.breadcrumbs": "Metadata registry",
   "admin.registries.metadata.breadcrumbs": "Metaadat leíró adatbázis",
@@ -261,19 +252,17 @@
   "admin.registries.metadata.schemas.no-items": "Nincs elérhető metaadat séma.",
 
   // "admin.registries.metadata.schemas.select": "Select",
-  // TODO New key - Add a translation
-  "admin.registries.metadata.schemas.select": "Select",
+  "admin.registries.metadata.schemas.select": "Kijelölés",
 
   // "admin.registries.metadata.schemas.deselect": "Deselect",
-  // TODO New key - Add a translation
-  "admin.registries.metadata.schemas.deselect": "Deselect",
+  "admin.registries.metadata.schemas.deselect": "Kijelölés törlése",
 
   // "admin.registries.metadata.schemas.table.delete": "Delete selected",
   "admin.registries.metadata.schemas.table.delete": "Kiválasztottak törlése",
 
   // "admin.registries.metadata.schemas.table.selected": "Selected schemas",
   // TODO New key - Add a translation
-  "admin.registries.metadata.schemas.table.selected": "Selected schemas",
+  "admin.registries.metadata.schemas.table.selected": "Kijelölt sémák",
 
   // "admin.registries.metadata.schemas.table.id": "ID",
   "admin.registries.metadata.schemas.table.id": "Azonosító",
@@ -294,12 +283,10 @@
   "admin.registries.schema.description": "Ez a metaadat séma a következőhöz \"{{namespace}}\".",
 
   // "admin.registries.schema.fields.select": "Select",
-  // TODO New key - Add a translation
-  "admin.registries.schema.fields.select": "Select",
+  "admin.registries.schema.fields.select": "Kijelölés",
 
   // "admin.registries.schema.fields.deselect": "Deselect",
-  // TODO New key - Add a translation
-  "admin.registries.schema.fields.deselect": "Deselect",
+  "admin.registries.schema.fields.deselect": "Kijelölés törlése",
 
   // "admin.registries.schema.fields.head": "Schema metadata fields",
   "admin.registries.schema.fields.head": "Séma metaadat mezők",
@@ -314,8 +301,7 @@
   "admin.registries.schema.fields.table.field": "Mező",
 
   // "admin.registries.schema.fields.table.selected": "Selected metadata fields",
-  // TODO New key - Add a translation
-  "admin.registries.schema.fields.table.selected": "Selected metadata fields",
+  "admin.registries.schema.fields.table.selected": "Kiválasztott metaadat mezők",
 
   // "admin.registries.schema.fields.table.id": "ID",
   // TODO Source message changed - Revise the translation
@@ -379,28 +365,23 @@
   "admin.registries.schema.title": "Metaadat Séma leíró adatbázis",
 
   // "admin.access-control.bulk-access.breadcrumbs": "Bulk Access Management",
-  // TODO New key - Add a translation
-  "admin.access-control.bulk-access.breadcrumbs": "Bulk Access Management",
+  "admin.access-control.bulk-access.breadcrumbs": "Tömeges hozzáférés kezelés",
 
   // "administrativeBulkAccess.search.results.head": "Search Results",
-  // TODO New key - Add a translation
-  "administrativeBulkAccess.search.results.head": "Search Results",
+  "administrativeBulkAccess.search.results.head": "Keresési eredmények",
 
   // "admin.access-control.bulk-access": "Bulk Access Management",
-  // TODO New key - Add a translation
-  "admin.access-control.bulk-access": "Bulk Access Management",
+  "admin.access-control.bulk-access": "Tömeges hozzáférés kezelés",
 
   // "admin.access-control.bulk-access.title": "Bulk Access Management",
-  // TODO New key - Add a translation
-  "admin.access-control.bulk-access.title": "Bulk Access Management",
+  "admin.access-control.bulk-access.title": "Tömeges hozzáférés kezelés",
 
   // "admin.access-control.bulk-access-browse.header": "Step 1: Select Objects",
   // TODO New key - Add a translation
   "admin.access-control.bulk-access-browse.header": "Step 1: Select Objects",
 
   // "admin.access-control.bulk-access-browse.search.header": "Search",
-  // TODO New key - Add a translation
-  "admin.access-control.bulk-access-browse.search.header": "Search",
+  "admin.access-control.bulk-access-browse.search.header": "Keresés",
 
   // "admin.access-control.bulk-access-browse.selected.header": "Current selection({{number}})",
   // TODO New key - Add a translation
@@ -429,20 +410,16 @@
   "admin.access-control.epeople.title": "ESzemély",
 
   // "admin.access-control.epeople.edit.breadcrumbs": "New EPerson",
-  // TODO New key - Add a translation
-  "admin.access-control.epeople.edit.breadcrumbs": "New EPerson",
+  "admin.access-control.epeople.edit.breadcrumbs": "Új EPerson",
 
   // "admin.access-control.epeople.edit.title": "New EPerson",
-  // TODO New key - Add a translation
-  "admin.access-control.epeople.edit.title": "New EPerson",
+  "admin.access-control.epeople.edit.title": "Új EPerson",
 
   // "admin.access-control.epeople.add.breadcrumbs": "Add EPerson",
-  // TODO New key - Add a translation
-  "admin.access-control.epeople.add.breadcrumbs": "Add EPerson",
+  "admin.access-control.epeople.add.breadcrumbs": "EPerson hozzáadása",
 
   // "admin.access-control.epeople.add.title": "Add EPerson",
-  // TODO New key - Add a translation
-  "admin.access-control.epeople.add.title": "Add EPerson",
+  "admin.access-control.epeople.add.title": "EPerson hozzáadása",
 
   // "admin.access-control.epeople.head": "EPeople",
   "admin.access-control.epeople.head": "ESzemély",
@@ -476,7 +453,6 @@
   "admin.access-control.epeople.table.name": "Név",
 
   // "admin.access-control.epeople.table.email": "Email (exact)",
-  // TODO Source message changed - Revise the translation
   "admin.access-control.epeople.table.email": "E-mail (pontosan)",
 
   // "admin.access-control.epeople.table.edit": "Edit",
@@ -705,7 +681,7 @@
   "admin.access-control.groups.form.notification.deleted.failure.content": "Ok: \"{{ cause }}\"",
 
   // "admin.access-control.groups.form.members-list.head": "EPeople",
-  "admin.access-control.groups.form.members-list.head": "EPeople",
+  "admin.access-control.groups.form.members-list.head": "ESzemély",
 
   // "admin.access-control.groups.form.members-list.search.head": "Add EPeople",
   "admin.access-control.groups.form.members-list.search.head": "EPeople hozzáadása",
@@ -1265,8 +1241,7 @@
   "admin.workflow.item.workflow": "Munkafolyamat",
 
   // "admin.workflow.item.workspace": "Workspace",
-  // TODO New key - Add a translation
-  "admin.workflow.item.workspace": "Workspace",
+  "admin.workflow.item.workspace": "Munkaterület",
 
   // "admin.workflow.item.delete": "Delete",
   "admin.workflow.item.delete": "Törlés",
@@ -1279,8 +1254,7 @@
   "admin.workflow.item.policies": "Policies",
 
   // "admin.workflow.item.supervision": "Supervision",
-  // TODO New key - Add a translation
-  "admin.workflow.item.supervision": "Supervision",
+  "admin.workflow.item.supervision": "Felügyelet",
 
   // "admin.metadata-import.breadcrumbs": "Import Metadata",
   "admin.metadata-import.breadcrumbs": "Metaadat importálása",
@@ -1349,8 +1323,7 @@
   "admin.batch-import.page.error.addFile": "Select ZIP file first!",
 
   // "admin.metadata-import.page.toggle.upload": "Upload",
-  // TODO New key - Add a translation
-  "admin.metadata-import.page.toggle.upload": "Upload",
+  "admin.metadata-import.page.toggle.upload": "Feltöltés",
 
   // "admin.metadata-import.page.toggle.url": "URL",
   // TODO New key - Add a translation
@@ -1401,36 +1374,29 @@
   "advanced-workflow-action.select-reviewer.description-multiple": "Please select one or more reviewers below before submitting",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.head": "EPeople",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.head": "EPeople",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.head": "ESzemély",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.search.head": "Add EPeople",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.search.head": "Add EPeople",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.search.head": "ESzemély hozzáadása",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.button.see-all": "Browse All",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.button.see-all": "Browse All",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.button.see-all": "Összes böngészése",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.headMembers": "Current Members",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.headMembers": "Current Members",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.headMembers": "Jelenlegi tagok",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.search.button": "Search",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.search.button": "Search",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.search.button": "Keresés",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.id": "ID",
   // TODO New key - Add a translation
   "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.id": "ID",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.name": "Name",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.name": "Name",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.name": "Név",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.identity": "Identity",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.identity": "Identity",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.identity": "Identitás",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.email": "Email",
   // TODO New key - Add a translation
@@ -1507,20 +1473,16 @@
   "bitstream.download.page": "Now downloading {{bitstream}}...",
 
   // "bitstream.download.page.back": "Back",
-  // TODO New key - Add a translation
-  "bitstream.download.page.back": "Back",
+  "bitstream.download.page.back": "Vissza",
 
   // "bitstream.edit.authorizations.link": "Edit bitstream's Policies",
-  // TODO New key - Add a translation
-  "bitstream.edit.authorizations.link": "Edit bitstream's Policies",
+  "bitstream.edit.authorizations.link": "Bitfolyam jogosultságok szerkesztése",
 
   // "bitstream.edit.authorizations.title": "Edit bitstream's Policies",
-  // TODO New key - Add a translation
-  "bitstream.edit.authorizations.title": "Edit bitstream's Policies",
+  "bitstream.edit.authorizations.title": "Bitfolyam jogosultságok szerkesztése",
 
   // "bitstream.edit.return": "Back",
-  // TODO New key - Add a translation
-  "bitstream.edit.return": "Back",
+  "bitstream.edit.return": "Vissza",
 
   // "bitstream.edit.bitstream": "Bitstream: ",
   "bitstream.edit.bitstream": "Bitfolyam: ",
@@ -1550,8 +1512,7 @@
   "bitstream.edit.form.newFormat.hint": "A program, amellyel az állományt létrehozta és a verzió száma (például, \"<i>ACMESoft SuperApp version 1.5</i>\").",
 
   // "bitstream.edit.form.primaryBitstream.label": "Primary File",
-  // TODO Source message changed - Revise the translation
-  "bitstream.edit.form.primaryBitstream.label": "Elsődleges bitfolyam",
+  "bitstream.edit.form.primaryBitstream.label": "Elsődleges fájl",
 
   // "bitstream.edit.form.selectedFormat.hint": "If the format is not in the above list, <b>select \"format not in list\" above</b> and describe it under \"Describe new format\".",
   "bitstream.edit.form.selectedFormat.hint": "Amennyiben a formátum nem található a fentebbi listán, <b>válassza \"formátum nincs a listán\" feljebb</b> majd írja le \"Új formátum leírása\".",
@@ -1566,8 +1527,7 @@
   "bitstream.edit.notifications.error.format.title": "Bitfolyam formátum mentése közben hiba történt",
 
   // "bitstream.edit.notifications.error.primaryBitstream.title": "An error occurred saving the primary bitstream",
-  // TODO New key - Add a translation
-  "bitstream.edit.notifications.error.primaryBitstream.title": "An error occurred saving the primary bitstream",
+  "bitstream.edit.notifications.error.primaryBitstream.title": "Hiba történt az elsődleges bitfolyam mentése során",
 
   // "bitstream.edit.form.iiifLabel.label": "IIIF Label",
   // TODO New key - Add a translation
@@ -5282,8 +5242,7 @@
   "journalissue.page.titleprefix": "Folyóirat száma: ",
 
   // "journalissue.search.results.head": "Journal Issue Search Results",
-  // TODO New key - Add a translation
-  "journalissue.search.results.head": "Journal Issue Search Results",
+  "journalissue.search.results.head": "Folyóiratszám keresési eredménye",
 
   // "journalvolume.listelement.badge": "Journal Volume",
   "journalvolume.listelement.badge": "Folyóirat kötet",
