@@ -16,8 +16,7 @@
   "403.link.home-page": "Vissza a főoldalra",
 
   // "403.forbidden": "Forbidden",
-  // TODO Source message changed - Revise the translation
-  "403.forbidden": "elérhetetlen",
+  "403.forbidden": "Elérhetetlen",
 
   // "500.page-internal-server-error": "Service unavailable",
   // TODO Source message changed - Revise the translation
@@ -46,8 +45,7 @@
   "error-page.description.403": "elérhetetlen",
 
   // "error-page.description.500": "Service unavailable",
-  // TODO Source message changed - Revise the translation
-  "error-page.description.500": "Service Unavailable",
+  "error-page.description.500": "A szolgáltatás nem elérhető",
 
   // "error-page.description.404": "Page not found",
   "error-page.description.404": "Az oldal nem található",
@@ -200,7 +198,6 @@
   "admin.registries.bitstream-formats.table.selected": "Kiválasztott bitfolyam formátumok",
 
   // "admin.registries.bitstream-formats.table.id": "ID",
-  // TODO Source message changed - Revise the translation
   "admin.registries.bitstream-formats.table.id": "Azonosító",
 
   // "admin.registries.bitstream-formats.table.return": "Back",
@@ -261,7 +258,6 @@
   "admin.registries.metadata.schemas.table.delete": "Kiválasztottak törlése",
 
   // "admin.registries.metadata.schemas.table.selected": "Selected schemas",
-  // TODO New key - Add a translation
   "admin.registries.metadata.schemas.table.selected": "Kijelölt sémák",
 
   // "admin.registries.metadata.schemas.table.id": "ID",
@@ -304,8 +300,7 @@
   "admin.registries.schema.fields.table.selected": "Kiválasztott metaadat mezők",
 
   // "admin.registries.schema.fields.table.id": "ID",
-  // TODO Source message changed - Revise the translation
-  "admin.registries.schema.fields.table.id": "ID",
+  "admin.registries.schema.fields.table.id": "Azonosító",
 
   // "admin.registries.schema.fields.table.scopenote": "Scope Note",
   "admin.registries.schema.fields.table.scopenote": "Cél megjegyzés",
@@ -377,19 +372,16 @@
   "admin.access-control.bulk-access.title": "Tömeges hozzáférés kezelés",
 
   // "admin.access-control.bulk-access-browse.header": "Step 1: Select Objects",
-  // TODO New key - Add a translation
-  "admin.access-control.bulk-access-browse.header": "Step 1: Select Objects",
+  "admin.access-control.bulk-access-browse.header": "1. lépés: Tárgyak kiválasztása",
 
   // "admin.access-control.bulk-access-browse.search.header": "Search",
   "admin.access-control.bulk-access-browse.search.header": "Keresés",
 
   // "admin.access-control.bulk-access-browse.selected.header": "Current selection({{number}})",
-  // TODO New key - Add a translation
-  "admin.access-control.bulk-access-browse.selected.header": "Current selection({{number}})",
+  "admin.access-control.bulk-access-browse.selected.header": "Jelenlegi kijelölés({{number}})",
 
   // "admin.access-control.bulk-access-settings.header": "Step 2: Operation to Perform",
-  // TODO New key - Add a translation
-  "admin.access-control.bulk-access-settings.header": "Step 2: Operation to Perform",
+  "admin.access-control.bulk-access-settings.header": "2. lépés: Elvégzendő művelet",
 
   // "admin.access-control.epeople.actions.delete": "Delete EPerson",
   "admin.access-control.epeople.actions.delete": "EPerson törlése",
@@ -434,8 +426,7 @@
   "admin.access-control.epeople.search.scope.metadata": "Metaadat",
 
   // "admin.access-control.epeople.search.scope.email": "Email (exact)",
-  // TODO Source message changed - Revise the translation
-  "admin.access-control.epeople.search.scope.email": "E-mail (pontosan)",
+  "admin.access-control.epeople.search.scope.email": "Email (pontosan)",
 
   // "admin.access-control.epeople.search.button": "Search",
   "admin.access-control.epeople.search.button": "Keresés",
@@ -483,12 +474,10 @@
   "admin.access-control.epeople.form.lastName": "Családnév",
 
   // "admin.access-control.epeople.form.email": "Email",
-  // TODO Source message changed - Revise the translation
-  "admin.access-control.epeople.form.email": "E-mail",
+  "admin.access-control.epeople.form.email": "Email",
 
   // "admin.access-control.epeople.form.emailHint": "Must be a valid email address",
-  // TODO Source message changed - Revise the translation
-  "admin.access-control.epeople.form.emailHint": "Érvényes e-mail cím kell, hogy legyen",
+  "admin.access-control.epeople.form.emailHint": "Érvényes email cím kell, hogy legyen",
 
   // "admin.access-control.epeople.form.canLogIn": "Can log in",
   "admin.access-control.epeople.form.canLogIn": "Bejelentkezhet",
@@ -542,8 +531,7 @@
   "admin.access-control.epeople.form.goToGroups": "Hozzáadás csoportokhoz",
 
   // "admin.access-control.epeople.notification.deleted.failure": "Error occurred when trying to delete EPerson with id \"{{id}}\" with code: \"{{statusCode}}\" and message: \"{{restResponse.errorMessage}}\"",
-  // TODO New key - Add a translation
-  "admin.access-control.epeople.notification.deleted.failure": "Error occurred when trying to delete EPerson with id \"{{id}}\" with code: \"{{statusCode}}\" and message: \"{{restResponse.errorMessage}}\"",
+  "admin.access-control.epeople.notification.deleted.failure": "Hiba lépett fel, amikor törölni próbálta a \"{{id}}\" azonosítóval rendelkező ESzemélyt a következő kóddal: \"{{statusCode}}\" és üzenettel: \"{{restResponse.errorMessage}}\"",
 
   // "admin.access-control.epeople.notification.deleted.success": "Successfully deleted EPerson: \"{{name}}\"",
   "admin.access-control.epeople.notification.deleted.success": "ESzemély: \"{{name}}\" törlése sikerült",
@@ -853,8 +841,7 @@
   "admin.reports.collections.collection": "Gyűjtemény",
 
   // "admin.reports.collections.nb_items": "Nb. Items",
-  // TODO New key - Add a translation
-  "admin.reports.collections.nb_items": "Nb. Items",
+  "admin.reports.collections.nb_items": "Nb. Tárgyak",
 
   // "admin.reports.collections.match_all_selected_filters": "Matching all selected filters",
   "admin.reports.collections.match_all_selected_filters": "Megfelel az összes kiválasztott szűrőnek",
@@ -941,8 +928,7 @@
   "admin.reports.items.preset.hasNoTitle": "Nincs cím",
 
   // "admin.reports.items.preset.hasNoIdentifierUri": "Has No dc.identifier.uri",
-  // TODO New key - Add a translation
-  "admin.reports.items.preset.hasNoIdentifierUri": "Has No dc.identifier.uri",
+  "admin.reports.items.preset.hasNoIdentifierUri": "Nincs dc.identifier.uri",
 
   // "admin.reports.items.preset.hasCompoundSubject": "Has compound subject",
   // TODO New key - Add a translation
@@ -985,18 +971,15 @@
   "admin.reports.items.preset.hasNonAsciiCharInMetadata": "Has non-ascii character in metadata",
 
   // "admin.reports.items.number": "No.",
-  // TODO New key - Add a translation
   "admin.reports.items.number": "No.",
 
   // "admin.reports.items.id": "UUID",
-  // TODO New key - Add a translation
   "admin.reports.items.id": "UUID",
 
   // "admin.reports.items.collection": "Collection",
   "admin.reports.items.collection": "Gyűjtemény",
 
   // "admin.reports.items.handle": "URI",
-  // TODO New key - Add a translation
   "admin.reports.items.handle": "URI",
 
   // "admin.reports.items.title": "Title",
@@ -1116,8 +1099,7 @@
   "admin.reports.commons.filters.bitstream_mime.has_doc_without_text": "Has document bitstream without TEXT item",
 
   // "admin.reports.commons.filters.mime": "Supported MIME Type Filters",
-  // TODO New key - Add a translation
-  "admin.reports.commons.filters.mime": "Supported MIME Type Filters",
+  "admin.reports.commons.filters.mime": "Támogatott MIME típus szűrők",
 
   // "admin.reports.commons.filters.mime.has_only_supp_image_type": "Item Image Bitstreams are Supported",
   // TODO New key - Add a translation
@@ -1168,8 +1150,7 @@
   "admin.reports.commons.filters.bundle.has_license_documentation": "Has documentation in the license bundle",
 
   // "admin.reports.commons.filters.permission": "Permission Filters",
-  // TODO New key - Add a translation
-  "admin.reports.commons.filters.permission": "Permission Filters",
+  "admin.reports.commons.filters.permission": "Jogosultság szűrők",
 
   // "admin.reports.commons.filters.permission.has_restricted_original": "Item has Restricted Original Bitstream",
   // TODO New key - Add a translation
@@ -1250,8 +1231,7 @@
   "admin.workflow.item.send-back": "Visszaküldés",
 
   // "admin.workflow.item.policies": "Policies",
-  // TODO New key - Add a translation
-  "admin.workflow.item.policies": "Policies",
+  "admin.workflow.item.policies": "Jogosultságok",
 
   // "admin.workflow.item.supervision": "Supervision",
   "admin.workflow.item.supervision": "Felügyelet",
@@ -1260,22 +1240,19 @@
   "admin.metadata-import.breadcrumbs": "Metaadat importálása",
 
   // "admin.batch-import.breadcrumbs": "Import Batch",
-  // TODO New key - Add a translation
-  "admin.batch-import.breadcrumbs": "Import Batch",
+  "admin.batch-import.breadcrumbs": "Csoportos importálás",
 
   // "admin.metadata-import.title": "Import Metadata",
   "admin.metadata-import.title": "Metaadat importálása",
 
   // "admin.batch-import.title": "Import Batch",
-  // TODO New key - Add a translation
-  "admin.batch-import.title": "Import Batch",
+  "admin.batch-import.title": "Csoportos importálás",
 
   // "admin.metadata-import.page.header": "Import Metadata",
   "admin.metadata-import.page.header": "Metaadat importálása",
 
   // "admin.batch-import.page.header": "Import Batch",
-  // TODO New key - Add a translation
-  "admin.batch-import.page.header": "Import Batch",
+  "admin.batch-import.page.header": "Csoportos importálás",
 
   // "admin.metadata-import.page.help": "You can drop or browse CSV files that contain batch metadata operations on files here",
   "admin.metadata-import.page.help": "Becsatolhat vagy kikereshet CSV fájlokat, amelyek az itt tárolt fájlokra vonatkozó műveleteket tárolnak",
@@ -1315,18 +1292,15 @@
   "admin.metadata-import.page.error.addFile": "Előbb válassza ki a fájlt!",
 
   // "admin.metadata-import.page.error.addFileUrl": "Insert file URL first!",
-  // TODO New key - Add a translation
-  "admin.metadata-import.page.error.addFileUrl": "Insert file URL first!",
+  "admin.metadata-import.page.error.addFileUrl": "Először illessze be a fájl URL címét!",
 
   // "admin.batch-import.page.error.addFile": "Select ZIP file first!",
-  // TODO New key - Add a translation
-  "admin.batch-import.page.error.addFile": "Select ZIP file first!",
+  "admin.batch-import.page.error.addFile": "Először válassza ki a ZIP fájlt!",
 
   // "admin.metadata-import.page.toggle.upload": "Upload",
   "admin.metadata-import.page.toggle.upload": "Feltöltés",
 
   // "admin.metadata-import.page.toggle.url": "URL",
-  // TODO New key - Add a translation
   "admin.metadata-import.page.toggle.url": "URL",
 
   // "admin.metadata-import.page.urlMsg": "Insert the batch ZIP url to import",
@@ -1342,12 +1316,10 @@
   "admin.metadata-import.page.validateOnly.hint": "When selected, the uploaded CSV will be validated. You will receive a report of detected changes, but no changes will be saved.",
 
   // "advanced-workflow-action.rating.form.rating.label": "Rating",
-  // TODO New key - Add a translation
-  "advanced-workflow-action.rating.form.rating.label": "Rating",
+  "advanced-workflow-action.rating.form.rating.label": "Értékelés",
 
   // "advanced-workflow-action.rating.form.rating.error": "You must rate the item",
-  // TODO New key - Add a translation
-  "advanced-workflow-action.rating.form.rating.error": "You must rate the item",
+  "advanced-workflow-action.rating.form.rating.error": "Értékelnie kell a tárgyat",
 
   // "advanced-workflow-action.rating.form.review.label": "Review",
   // TODO New key - Add a translation
@@ -1389,8 +1361,7 @@
   "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.search.button": "Keresés",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.id": "ID",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.id": "ID",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.id": "Azonosító",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.name": "Name",
   "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.name": "Név",
@@ -1399,7 +1370,6 @@
   "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.identity": "Identitás",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.email": "Email",
-  // TODO New key - Add a translation
   "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.email": "Email",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.netid": "NetID",
@@ -1407,44 +1377,34 @@
   "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.netid": "NetID",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit": "Remove / Add",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit": "Remove / Add",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit": "Törlés / Hozzáadás",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit.buttons.remove": "Remove member with name \"{{name}}\"",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit.buttons.remove": "Remove member with name \"{{name}}\"",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit.buttons.remove": "\"{{name}}\" nevű tag eltávolítása",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.success.addMember": "Successfully added member: \"{{name}}\"",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.success.addMember": "Successfully added member: \"{{name}}\"",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.success.addMember": "Sikeresen hozzáadott tag: \"{{name}}\"",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.addMember": "Failed to add member: \"{{name}}\"",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.addMember": "Failed to add member: \"{{name}}\"",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.addMember": "Sikertelen tag hozzáadás: \"{{name}}\"",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.success.deleteMember": "Successfully deleted member: \"{{name}}\"",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.success.deleteMember": "Successfully deleted member: \"{{name}}\"",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.success.deleteMember": "Sikeresen törölt tag: \"{{name}}\"",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.deleteMember": "Failed to delete member: \"{{name}}\"",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.deleteMember": "Failed to delete member: \"{{name}}\"",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.deleteMember": "Sikertelen tag törlés: \"{{name}}\"",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit.buttons.add": "Add member with name \"{{name}}\"",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit.buttons.add": "Add member with name \"{{name}}\"",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.table.edit.buttons.add": "Tag hozzáadása \"{{name}}\" névvel",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.noActiveGroup": "No current active group, submit a name first.",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.noActiveGroup": "No current active group, submit a name first.",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.notification.failure.noActiveGroup": "Jelenleg nincs aktív csoport, először írjon be egy nevet.",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.no-members-yet": "No members in group yet, search and add.",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.no-members-yet": "No members in group yet, search and add.",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.no-members-yet": "Még nincsenek tagok a csoportban, keressen és adjon hozzá tagokat.",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.no-items": "No EPeople found in that search",
-  // TODO New key - Add a translation
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.no-items": "No EPeople found in that search",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.no-items": "A keresés során nem találtunk ESzemélyeket",
 
   // "advanced-workflow-action.select-reviewer.no-reviewer-selected.error": "No reviewer selected.",
   // TODO New key - Add a translation
@@ -1530,8 +1490,7 @@
   "bitstream.edit.notifications.error.primaryBitstream.title": "Hiba történt az elsődleges bitfolyam mentése során",
 
   // "bitstream.edit.form.iiifLabel.label": "IIIF Label",
-  // TODO New key - Add a translation
-  "bitstream.edit.form.iiifLabel.label": "IIIF Label",
+  "bitstream.edit.form.iiifLabel.label": "IIIF Címke",
 
   // "bitstream.edit.form.iiifLabel.hint": "Canvas label for this image. If not provided default label will be used.",
   // TODO New key - Add a translation
@@ -1579,8 +1538,7 @@
   "bitstream-request-a-copy.alert.canDownload2": "here",
 
   // "bitstream-request-a-copy.header": "Request a copy of the file",
-  // TODO New key - Add a translation
-  "bitstream-request-a-copy.header": "Request a copy of the file",
+  "bitstream-request-a-copy.header": "Kérjen másolatot az fájlról",
 
   // "bitstream-request-a-copy.intro": "Enter the following information to request a copy for the following item: ",
   // TODO New key - Add a translation
@@ -1827,8 +1785,7 @@
   "chips.remove": "Chip eltávolítása",
 
   // "claimed-approved-search-result-list-element.title": "Approved",
-  // TODO New key - Add a translation
-  "claimed-approved-search-result-list-element.title": "Approved",
+  "claimed-approved-search-result-list-element.title": "Jóváhagyva",
 
   // "claimed-declined-search-result-list-element.title": "Rejected, sent back to submitter",
   // TODO New key - Add a translation
@@ -1839,8 +1796,7 @@
   "claimed-declined-task-search-result-list-element.title": "Declined, sent back to Review Manager's workflow",
 
   // "collection.create.breadcrumbs": "Create collection",
-  // TODO New key - Add a translation
-  "collection.create.breadcrumbs": "Create collection",
+  "collection.create.breadcrumbs": "Gyűjtemény létrehozása",
 
   // "collection.browse.logo": "Browse for a collection logo",
   // TODO New key - Add a translation
@@ -1865,8 +1821,7 @@
   "collection.delete.confirm": "Mehet",
 
   // "collection.delete.processing": "Deleting",
-  // TODO New key - Add a translation
-  "collection.delete.processing": "Deleting",
+  "collection.delete.processing": "Törlés",
 
   // "collection.delete.head": "Delete Collection",
   "collection.delete.head": "Gyűjtemény törlése",
@@ -1943,8 +1898,7 @@
   "collection.edit.item-mapper.remove": "Kiválasztott térgyak térképezésének törlése",
 
   // "collection.edit.item-mapper.search-form.placeholder": "Search items...",
-  // TODO New key - Add a translation
-  "collection.edit.item-mapper.search-form.placeholder": "Search items...",
+  "collection.edit.item-mapper.search-form.placeholder": "Tárgyak keresése...",
 
   // "collection.edit.item-mapper.tabs.browse": "Browse mapped items",
   "collection.edit.item-mapper.tabs.browse": "Térképezett tárgyak böngészése",
@@ -1953,12 +1907,10 @@
   "collection.edit.item-mapper.tabs.map": "Új tárgyak térképezése",
 
   // "collection.edit.logo.delete.title": "Delete logo",
-  // TODO New key - Add a translation
-  "collection.edit.logo.delete.title": "Delete logo",
+  "collection.edit.logo.delete.title": "Logó törlése",
 
   // "collection.edit.logo.delete-undo.title": "Undo delete",
-  // TODO New key - Add a translation
-  "collection.edit.logo.delete-undo.title": "Undo delete",
+  "collection.edit.logo.delete-undo.title": "Törlés visszavonása",
 
   // "collection.edit.logo.label": "Collection logo",
   "collection.edit.logo.label": "Gyűjtemény logo",
@@ -2002,12 +1954,10 @@
   "collection.edit.tabs.curate.title": "Gyűjtemény szerkesztés - gondozás",
 
   // "collection.edit.tabs.authorizations.head": "Authorizations",
-  // TODO New key - Add a translation
-  "collection.edit.tabs.authorizations.head": "Authorizations",
+  "collection.edit.tabs.authorizations.head": "Engedélyezések",
 
   // "collection.edit.tabs.authorizations.title": "Collection Edit - Authorizations",
-  // TODO New key - Add a translation
-  "collection.edit.tabs.authorizations.title": "Collection Edit - Authorizations",
+  "collection.edit.tabs.authorizations.title": "Gyűjtemény szerkesztés - Engedélyezések",
 
   // "collection.edit.item.authorizations.load-bundle-button": "Load more bundles",
   "collection.edit.item.authorizations.load-bundle-button": "További csomagok betöltése",
@@ -2159,8 +2109,7 @@
   "collection.logo": "Collection logo",
 
   // "collection.page.browse.search.head": "Search",
-  // TODO New key - Add a translation
-  "collection.page.browse.search.head": "Search",
+  "collection.page.browse.search.head": "Keresés",
 
   // "collection.page.edit": "Edit this collection",
   "collection.page.edit": "Gyűjtemény szerkesztése",
@@ -2175,8 +2124,7 @@
   "collection.page.news": "Hírek",
 
   // "collection.search.results.head": "Search Results",
-  // TODO New key - Add a translation
-  "collection.search.results.head": "Search Results",
+  "collection.search.results.head": "Keresés eredménye",
 
   // "collection.select.confirm": "Confirm selected",
   "collection.select.confirm": "Kiválasztás igazolása",
@@ -2236,16 +2184,13 @@
   "collection.source.controls.import.submit": "Import now",
 
   // "collection.source.controls.import.running": "Importing...",
-  // TODO New key - Add a translation
-  "collection.source.controls.import.running": "Importing...",
+  "collection.source.controls.import.running": "Importálás...",
 
   // "collection.source.controls.import.failed": "An error occurred during the import",
-  // TODO New key - Add a translation
-  "collection.source.controls.import.failed": "An error occurred during the import",
+  "collection.source.controls.import.failed": "Hiba történt az importálás során",
 
   // "collection.source.controls.import.completed": "The import completed",
-  // TODO New key - Add a translation
-  "collection.source.controls.import.completed": "The import completed",
+  "collection.source.controls.import.completed": "Importálás befejezve",
 
   // "collection.source.controls.reset.submit.success": "The reset and reimport has been successfully initiated",
   // TODO New key - Add a translation
