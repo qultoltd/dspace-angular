@@ -19,8 +19,7 @@
   "403.forbidden": "Elérhetetlen",
 
   // "500.page-internal-server-error": "Service unavailable",
-  // TODO Source message changed - Revise the translation
-  "404.help": "A keresett oldal nem található. Az oldalt elköltöztették, vagy letörölték. Az alsó gombbal visszakerülhet a honlapra ",
+  "404.help": "A szolgáltatás nem érhető el",
 
   // "500.help": "The server is temporarily unable to service your request due to maintenance downtime or capacity problems. Please try again later.",
   "404.help": "A szerver ideiglenesen nem tudja kiszolgálni a kérését, karbantartás vagy más technikai okok miatt. Próbálja meg később.",
@@ -1806,7 +1805,7 @@
   "collection.create.head": "Hozzon létre egy gyűjteményt",
 
   // "collection.create.notifications.success": "Successfully created the Collection",
-  "collection.create.notifications.success": "Guűjtemény sikeresen létrehozva",
+  "collection.create.notifications.success": "Gyűjtemény sikeresen létrehozva",
 
   // "collection.create.sub-head": "Create a Collection for Community {{ parent }}",
   "collection.create.sub-head": "Hozzon létre gyűjteményt a közösség számára {{ parent }}",
@@ -7761,24 +7760,19 @@
   "search.sidebar.settings.sort-by": "Rendszerezés eszerint",
 
   // "search.sidebar.advanced-search.title": "Advanced Search",
-  // TODO New key - Add a translation
-  "search.sidebar.advanced-search.title": "Advanced Search",
+  "search.sidebar.advanced-search.title": "Összetett keresés",
 
   // "search.sidebar.advanced-search.filter-by": "Filter by",
-  // TODO New key - Add a translation
-  "search.sidebar.advanced-search.filter-by": "Filter by",
+  "search.sidebar.advanced-search.filter-by": "Szűrőfeltétel",
 
   // "search.sidebar.advanced-search.filters": "Filters",
-  // TODO New key - Add a translation
-  "search.sidebar.advanced-search.filters": "Filters",
+  "search.sidebar.advanced-search.filters": "Szűrőfeltételek",
 
   // "search.sidebar.advanced-search.operators": "Operators",
-  // TODO New key - Add a translation
-  "search.sidebar.advanced-search.operators": "Operators",
+  "search.sidebar.advanced-search.operators": "Logikai feltételek",
 
   // "search.sidebar.advanced-search.add": "Add",
-  // TODO New key - Add a translation
-  "search.sidebar.advanced-search.add": "Add",
+  "search.sidebar.advanced-search.add": "Hozzáadás",
 
   // "search.sidebar.settings.title": "Settings",
   "search.sidebar.settings.title": "Beállítások",
@@ -7793,12 +7787,10 @@
   "search.view-switch.show-list": "Megjelenítés listaként",
 
   // "selectable-list-item-control.deselect": "Deselect item",
-  // TODO New key - Add a translation
-  "selectable-list-item-control.deselect": "Deselect item",
+  "selectable-list-item-control.deselect": "Elem kijelölésének megszüntetése",
 
   // "selectable-list-item-control.select": "Select item",
-  // TODO New key - Add a translation
-  "selectable-list-item-control.select": "Select item",
+  "selectable-list-item-control.select": "Elem kijelölése",
 
   // "sorting.ASC": "Ascending",
   "sorting.ASC": "Növekvő",
@@ -7831,34 +7823,28 @@
   "sorting.dc.date.accessioned.DESC": "Hozzáférés dátuma szerint csökkenő",
 
   // "sorting.lastModified.ASC": "Last modified Ascending",
-  "sorting.lastModified.ASC": "Utoljára módosított növekvő",
+  "sorting.lastModified.ASC": "Utolsó módosítás dátuma szerint növekvő",
 
   // "sorting.lastModified.DESC": "Last modified Descending",
   "sorting.lastModified.DESC": "Utoljára módosított növekvő csökkenő",
 
   // "sorting.person.familyName.ASC": "Surname Ascending",
-  // TODO New key - Add a translation
-  "sorting.person.familyName.ASC": "Surname Ascending",
+  "sorting.person.familyName.ASC": "Vezetéknév szerint növekvő",
 
   // "sorting.person.familyName.DESC": "Surname Descending",
-  // TODO New key - Add a translation
-  "sorting.person.familyName.DESC": "Surname Descending",
+  "sorting.person.familyName.DESC": "Vezetéknév szerint csökkenő",
 
   // "sorting.person.givenName.ASC": "Name Ascending",
-  // TODO New key - Add a translation
-  "sorting.person.givenName.ASC": "Name Ascending",
+  "sorting.person.givenName.ASC": "Név szerint növekvő",
 
   // "sorting.person.givenName.DESC": "Name Descending",
-  // TODO New key - Add a translation
-  "sorting.person.givenName.DESC": "Name Descending",
+  "sorting.person.givenName.DESC": "Név szerint csökkenő",
 
   // "sorting.person.birthDate.ASC": "Birth Date Ascending",
-  // TODO New key - Add a translation
-  "sorting.person.birthDate.ASC": "Birth Date Ascending",
+  "sorting.person.birthDate.ASC": "Születési dátum szerint növekvő",
 
   // "sorting.person.birthDate.DESC": "Birth Date Descending",
-  // TODO New key - Add a translation
-  "sorting.person.birthDate.DESC": "Birth Date Descending",
+  "sorting.person.birthDate.DESC": "Születési dátum szerint csökkenő",
 
   // "statistics.title": "Statistics",
   "statistics.title": "Statisztikák",
@@ -7907,8 +7893,7 @@
   "submission.general.cancel": "Mégse",
 
   // "submission.general.cannot_submit": "You don't have permission to make a new submission.",
-  // TODO Source message changed - Revise the translation
-  "submission.general.cannot_submit": "Önnek nincs új feltöltéshez szükséges engedélye.",
+  "submission.general.cannot_submit": "Önnek nincs meg a szükséges engedélye egy új feltöltéshez.",
 
   // "submission.general.deposit": "Deposit",
   "submission.general.deposit": "Adattár",
@@ -7995,73 +7980,58 @@
   "submission.import-external.source.arxiv": "arXiv",
 
   // "submission.import-external.source.ads": "NASA/ADS",
-  // TODO New key - Add a translation
   "submission.import-external.source.ads": "NASA/ADS",
 
   // "submission.import-external.source.cinii": "CiNii",
-  // TODO New key - Add a translation
   "submission.import-external.source.cinii": "CiNii",
 
   // "submission.import-external.source.crossref": "CrossRef",
-  // TODO New key - Add a translation
   "submission.import-external.source.crossref": "CrossRef",
 
   // "submission.import-external.source.datacite": "DataCite",
-  // TODO New key - Add a translation
   "submission.import-external.source.datacite": "DataCite",
 
   // "submission.import-external.source.doi": "DOI",
-  // TODO New key - Add a translation
   "submission.import-external.source.doi": "DOI",
 
   // "submission.import-external.source.scielo": "SciELO",
-  // TODO New key - Add a translation
   "submission.import-external.source.scielo": "SciELO",
 
   // "submission.import-external.source.scopus": "Scopus",
-  // TODO New key - Add a translation
   "submission.import-external.source.scopus": "Scopus",
 
   // "submission.import-external.source.vufind": "VuFind",
-  // TODO New key - Add a translation
   "submission.import-external.source.vufind": "VuFind",
 
   // "submission.import-external.source.wos": "Web Of Science",
-  // TODO New key - Add a translation
   "submission.import-external.source.wos": "Web Of Science",
 
   // "submission.import-external.source.orcidWorks": "ORCID",
-  // TODO New key - Add a translation
   "submission.import-external.source.orcidWorks": "ORCID",
 
   // "submission.import-external.source.epo": "European Patent Office (EPO)",
-  // TODO New key - Add a translation
   "submission.import-external.source.epo": "European Patent Office (EPO)",
 
   // "submission.import-external.source.loading": "Loading ...",
   "submission.import-external.source.loading": "Betöltés ...",
 
   // "submission.import-external.source.sherpaJournal": "SHERPA Journals",
-  "submission.import-external.source.sherpaJournal": "SHERPA Journals",
+  "submission.import-external.source.sherpaJournal": "SHERPA folyóiratok",
 
   // "submission.import-external.source.sherpaJournalIssn": "SHERPA Journals by ISSN",
-  // TODO New key - Add a translation
-  "submission.import-external.source.sherpaJournalIssn": "SHERPA Journals by ISSN",
+  "submission.import-external.source.sherpaJournalIssn": "SHERPA folyóirat ISSN megadásával",
 
   // "submission.import-external.source.sherpaPublisher": "SHERPA Publishers",
-  "submission.import-external.source.sherpaPublisher": "SHERPA Publishers",
+  "submission.import-external.source.sherpaPublisher": "SHERPA kiadók",
 
   // "submission.import-external.source.openaire": "OpenAIRE Authors",
-  // TODO New key - Add a translation
-  "submission.import-external.source.openaire": "OpenAIRE Authors",
+  "submission.import-external.source.openaire": "OpenAIRE szerzők",
 
   // "submission.import-external.source.openaireTitle": "OpenAIRE Titles",
-  // TODO New key - Add a translation
-  "submission.import-external.source.openaireTitle": "OpenAIRE Titles",
+  "submission.import-external.source.openaireTitle": "OpenAIRE címek",
 
   // "submission.import-external.source.openaireFunding": "OpenAIRE Funding",
-  // TODO New key - Add a translation
-  "submission.import-external.source.openaireFunding": "OpenAIRE Funding",
+  "submission.import-external.source.openaireFunding": "OpenAIRE támogatás",
 
   // "submission.import-external.source.orcid": "ORCID",
   "submission.import-external.source.orcid": "ORCID",
@@ -8070,14 +8040,12 @@
   "submission.import-external.source.pubmed": "Pubmed",
 
   // "submission.import-external.source.pubmedeu": "Pubmed Europe",
-  // TODO New key - Add a translation
   "submission.import-external.source.pubmedeu": "Pubmed Europe",
 
   // "submission.import-external.source.lcname": "Library of Congress Names",
   "submission.import-external.source.lcname": "Library of Congress Names",
 
   // "submission.import-external.source.ror": "Research Organization Registry (ROR)",
-  // TODO New key - Add a translation
   "submission.import-external.source.ror": "Research Organization Registry (ROR)",
 
   // "submission.import-external.preview.title": "Item Preview",
@@ -8120,79 +8088,65 @@
   "submission.sections.describe.relationship-lookup.external-source.added": "Helyi bevitel sikeresen hozzáadva a kiválasztotthoz",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.isAuthorOfPublication": "Import remote author",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.isAuthorOfPublication": "Import remote author",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.isAuthorOfPublication": "Szerző importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal": "Import remote journal",
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal": "Távoli folyóirat importálása",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal": "Folyóirat importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal Issue": "Import remote journal issue",
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal Issue": "Távoli folyóiratszám importálása",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal Issue": "Folyóiratszám importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal Volume": "Import remote journal volume",
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal Volume": "Távoli folyóiratkötet importálása",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal Volume": "Folyóiratkötet importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.isProjectOfPublication": "Project",
   "submission.sections.describe.relationship-lookup.external-source.import-button-title.isProjectOfPublication": "Projekt",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.none": "Import remote item",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.none": "Import remote item",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.none": "Elem importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.Event": "Import remote event",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Event": "Import remote event",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Event": "Esemény importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.Product": "Import remote product",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Product": "Import remote product",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Product": "Termék importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.Equipment": "Import remote equipment",
   // TODO New key - Add a translation
   "submission.sections.describe.relationship-lookup.external-source.import-button-title.Equipment": "Import remote equipment",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.OrgUnit": "Import remote organizational unit",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.OrgUnit": "Import remote organizational unit",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.OrgUnit": "Szervezeti egység importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.Funding": "Import remote fund",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Funding": "Import remote fund",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Funding": "Támogató importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.Person": "Import remote person",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Person": "Import remote person",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Person": "Személy importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.Patent": "Import remote patent",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Patent": "Import remote patent",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Patent": "Szabadalom importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.Project": "Import remote project",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Project": "Import remote project",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Project": "Project importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-button-title.Publication": "Import remote publication",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Publication": "Import remote publication",
+  "submission.sections.describe.relationship-lookup.external-source.import-button-title.Publication": "Publikáció importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isProjectOfPublication.added.new-entity": "New Entity Added!",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.isProjectOfPublication.added.new-entity": "New Entity Added!",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isProjectOfPublication.added.new-entity": "Új entitás hozzáadva!",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isProjectOfPublication.title": "Project",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.isProjectOfPublication.title": "Projekt",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.title": "Import Remote Author",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.title": "Import Remote Author",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.title": "Szerző importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.local-entity": "Successfully added local author to the selection",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.local-entity": "Successfully added local author to the selection",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.local-entity": "Sikeresen hozzáadta a helyi szerzőt a kiválasztáshoz",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.new-entity": "Successfully imported and added external author to the selection",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.new-entity": "Successfully imported and added external author to the selection",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.new-entity": "Sikeresen importált és hozzáadott külső rendszerből származó szerzőt a kiválasztáshoz",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.authority": "Authority",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.authority": "Autoritás",
@@ -8219,16 +8173,13 @@
   "submission.sections.describe.relationship-lookup.external-source.import-modal.head.orcid": "ORCID-ról importál",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaire": "Importing from OpenAIRE Authors",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaire": "Importing from OpenAIRE Authors",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaire": "Importálás az OpenAIRE szerzői közül",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaireTitle": "Importing from OpenAIRE Titles",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaireTitle": "Importing from OpenAIRE Titles",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaireTitle": "Importálás az OpenAIRE címei közül",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaireFunding": "Importing from OpenAIRE Funding",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaireFunding": "Importing from OpenAIRE Funding",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.head.openaireFunding": "Importálás az OpenAIRE támogatói közül",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.head.sherpaJournal": "Importing from Sherpa Journal",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.head.sherpaJournal": "Sherpa Journal-ról importál",
@@ -8243,8 +8194,7 @@
   "submission.sections.describe.relationship-lookup.external-source.import-modal.head.arxiv": "arXiv-ről importál",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.head.ror": "Import from ROR",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.head.ror": "Import from ROR",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.head.ror": "Importálás a ROR rendszeréből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.import": "Import",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.import": "Importál",
@@ -8280,16 +8230,13 @@
   "submission.sections.describe.relationship-lookup.external-source.import-modal.select": "Válasszon ki helyi megfelelést:",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isOrgUnitOfProject.title": "Import Remote Organization",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.isOrgUnitOfProject.title": "Import Remote Organization",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isOrgUnitOfProject.title": "Szervezet importálása külső rendszerből",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isOrgUnitOfProject.added.local-entity": "Successfully added local organization to the selection",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.isOrgUnitOfProject.added.local-entity": "Successfully added local organization to the selection",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isOrgUnitOfProject.added.local-entity": "Sikeresen hozzáadta a helyi szervezetet a kiválasztáshoz",
 
   // "submission.sections.describe.relationship-lookup.external-source.import-modal.isOrgUnitOfProject.added.new-entity": "Successfully imported and added external organization to the selection",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.isOrgUnitOfProject.added.new-entity": "Successfully imported and added external organization to the selection",
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isOrgUnitOfProject.added.new-entity": "Sikeresen importálta és hozzáadta a külső rendszerből származó szervezetet a kiválasztáshoz",
 
   // "submission.sections.describe.relationship-lookup.search-tab.deselect-all": "Deselect all",
   "submission.sections.describe.relationship-lookup.search-tab.deselect-all": "Valamennyi kiválasztás megszüntetése",
@@ -8376,36 +8323,28 @@
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.arxiv": "arXiv ({{ count }})",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.ror": "ROR ({{ count }})",
-  // TODO New key - Add a translation
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.ror": "ROR ({{ count }})",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.orcidWorks": "ORCID ({{ count }})",
-  // TODO New key - Add a translation
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.orcidWorks": "ORCID ({{ count }})",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.crossref": "CrossRef ({{ count }})",
-  // TODO New key - Add a translation
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.crossref": "CrossRef ({{ count }})",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.scopus": "Scopus ({{ count }})",
-  // TODO New key - Add a translation
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.scopus": "Scopus ({{ count }})",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaire": "OpenAIRE Authors ({{ count }})",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaire": "OpenAIRE Authors ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaire": "OpenAIRE szerzők ({{ count }})",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaireTitle": "OpenAIRE Titles ({{ count }})",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaireTitle": "OpenAIRE Titles ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaireTitle": "OpenAIRE címek ({{ count }})",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaireFunding": "OpenAIRE Funding ({{ count }})",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaireFunding": "OpenAIRE Funding ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.openaireFunding": "OpenAIRE támogatók ({{ count }})",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.sherpaJournalIssn": "Sherpa Journals by ISSN ({{ count }})",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.sherpaJournalIssn": "Sherpa Journals by ISSN ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.sherpaJournalIssn": "Sherpa folyóiratok ISSN megadásával ({{ count }})",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFundingAgencyOfPublication": "Search for Funding Agencies",
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFundingAgencyOfPublication": "Támogató szervezetek keresése",
@@ -8420,32 +8359,25 @@
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isProjectOfPublication": "Projektek",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFundingAgencyOfProject": "Funder of the Project",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFundingAgencyOfProject": "Funder of the Project",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFundingAgencyOfProject": "A projekt támogatója",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublicationOfAuthor": "Publication of the Author",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublicationOfAuthor": "Publication of the Author",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublicationOfAuthor": "A publikáció szerzője",
 
   // "submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfProject": "OrgUnit of the Project",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfProject": "OrgUnit of the Project",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfProject": "A projekthez kapcsolódó szervezeti egység",
 
   // "submission.sections.describe.relationship-lookup.selection-tab.title.isProjectOfPublication": "Project",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.selection-tab.title.isProjectOfPublication": "Project",
+  "submission.sections.describe.relationship-lookup.selection-tab.title.isProjectOfPublication": "Projekt",
 
   // "submission.sections.describe.relationship-lookup.title.isProjectOfPublication": "Projects",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.title.isProjectOfPublication": "Projects",
+  "submission.sections.describe.relationship-lookup.title.isProjectOfPublication": "Projektek",
 
   // "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfProject": "Funder of the Project",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfProject": "Funder of the Project",
+  "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfProject": "A projekt támogatója",
 
   // "submission.sections.describe.relationship-lookup.selection-tab.search-form.placeholder": "Search...",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.selection-tab.search-form.placeholder": "Search...",
+  "submission.sections.describe.relationship-lookup.selection-tab.search-form.placeholder": "Keresés...",
 
   // "submission.sections.describe.relationship-lookup.selection-tab.tab-title": "Current Selection ({{ count }})",
   "submission.sections.describe.relationship-lookup.selection-tab.tab-title": "Jelenleg kiválasztott ({{ count }})",
@@ -8505,8 +8437,7 @@
   "submission.sections.describe.relationship-lookup.title.isPublicationOfAuthor": "Kiadvány",
 
   // "submission.sections.describe.relationship-lookup.title.isOrgUnitOfProject": "OrgUnit",
-  // TODO New key - Add a translation
-  "submission.sections.describe.relationship-lookup.title.isOrgUnitOfProject": "OrgUnit",
+  "submission.sections.describe.relationship-lookup.title.isOrgUnitOfProject": "Szervezeti egység",
 
   // "submission.sections.describe.relationship-lookup.search-tab.toggle-dropdown": "Toggle dropdown",
   "submission.sections.describe.relationship-lookup.search-tab.toggle-dropdown": "Lenyíló menü váltás",
@@ -8617,7 +8548,6 @@
   "submission.sections.describe.relationship-lookup.selection-tab.title": "Keresés eredménye",
 
   // "submission.sections.describe.relationship-lookup.name-variant.notification.content": "Would you like to save \"{{ value }}\" as a name variant for this person so you and others can reuse it for future submissions? If you don't you can still use it for this submission.",
-  // TODO Source message changed - Revise the translation
   "submission.sections.describe.relationship-lookup.name-variant.notification.content": "Óhajtja-e elmenteni \"{{ value }}\" névváltozatként ennek a személynek, hogy később ön is és mások is újrahasználhassák feltöltéshez? Amennyiben nem, még mindig használhatja ehhez a feltöltéshez.",
 
   // "submission.sections.describe.relationship-lookup.name-variant.notification.confirm": "Save a new name variant",
@@ -8651,8 +8581,7 @@
   "submission.sections.general.add-more": "Több hozzáadása",
 
   // "submission.sections.general.cannot_deposit": "Deposit cannot be completed due to errors in the form.<br>Please fill out all required fields to complete the deposit.",
-  // TODO New key - Add a translation
-  "submission.sections.general.cannot_deposit": "Deposit cannot be completed due to errors in the form.<br>Please fill out all required fields to complete the deposit.",
+  "submission.sections.general.cannot_deposit": "Az űrlapon található hibák miatt az elem beküldése nem teljesíthető.<br>Kérjük töltse ki az összes kötelező mezőt a beküldéshez.",
 
   // "submission.sections.general.collection": "Collection",
   "submission.sections.general.collection": "Gyűjtemény",
@@ -8679,8 +8608,7 @@
   "submission.sections.general.no-collection": "Nem található gyűjtemény",
 
   // "submission.sections.general.no-entity": "No entity types found",
-  // TODO New key - Add a translation
-  "submission.sections.general.no-entity": "No entity types found",
+  "submission.sections.general.no-entity": "Nem találhatóak entitástípusok",
 
   // "submission.sections.general.no-sections": "No options available",
   "submission.sections.general.no-sections": "Nincs elérhető opció",
@@ -8698,74 +8626,61 @@
   "submission.sections.general.sections_not_valid": "Egyes szakaszok nem teljesek.",
 
   // "submission.sections.identifiers.info": "The following identifiers will be created for your item:",
-  // TODO New key - Add a translation
-  "submission.sections.identifiers.info": "The following identifiers will be created for your item:",
+  "submission.sections.identifiers.info": "A következő azonosítók jönnek létre az elemhez:",
 
   // "submission.sections.identifiers.no_handle": "No handles have been minted for this item.",
-  // TODO New key - Add a translation
-  "submission.sections.identifiers.no_handle": "No handles have been minted for this item.",
+  "submission.sections.identifiers.no_handle": "Az elemhez nem készült handle azonosító.",
 
   // "submission.sections.identifiers.no_doi": "No DOIs have been minted for this item.",
-  // TODO New key - Add a translation
-  "submission.sections.identifiers.no_doi": "No DOIs have been minted for this item.",
+  "submission.sections.identifiers.no_doi": "Az elemhez nem készült DOI.",
 
   // "submission.sections.identifiers.handle_label": "Handle: ",
-  // TODO New key - Add a translation
   "submission.sections.identifiers.handle_label": "Handle: ",
 
   // "submission.sections.identifiers.doi_label": "DOI: ",
-  // TODO New key - Add a translation
   "submission.sections.identifiers.doi_label": "DOI: ",
 
   // "submission.sections.identifiers.otherIdentifiers_label": "Other identifiers: ",
-  // TODO New key - Add a translation
-  "submission.sections.identifiers.otherIdentifiers_label": "Other identifiers: ",
+  "submission.sections.identifiers.otherIdentifiers_label": "Egyéb azonosítók: ",
 
   // "submission.sections.submit.progressbar.accessCondition": "Item access conditions",
-  // TODO New key - Add a translation
-  "submission.sections.submit.progressbar.accessCondition": "Item access conditions",
+  "submission.sections.submit.progressbar.accessCondition": "Az elem hozzáférési feltételei",
 
   // "submission.sections.submit.progressbar.CClicense": "Creative commons license",
-  // TODO New key - Add a translation
   "submission.sections.submit.progressbar.CClicense": "Creative commons license",
 
   // "submission.sections.submit.progressbar.describe.recycle": "Recycle",
-  "submission.sections.submit.progressbar.describe.recycle": "Reciklál",
+  "submission.sections.submit.progressbar.describe.recycle": "Újrafelhasznál",
 
   // "submission.sections.submit.progressbar.describe.stepcustom": "Describe",
-  "submission.sections.submit.progressbar.describe.stepcustom": "Leír",
+  "submission.sections.submit.progressbar.describe.stepcustom": "Leíró adatok megadása",
 
   // "submission.sections.submit.progressbar.describe.stepone": "Describe",
-  "submission.sections.submit.progressbar.describe.stepone": "Leír",
+  "submission.sections.submit.progressbar.describe.stepone": "Leíró adatok megadása",
 
   // "submission.sections.submit.progressbar.describe.steptwo": "Describe",
-  "submission.sections.submit.progressbar.describe.steptwo": "Leír",
+  "submission.sections.submit.progressbar.describe.steptwo": "Leíró adatok megadása",
 
   // "submission.sections.submit.progressbar.duplicates": "Potential duplicates",
-  // TODO New key - Add a translation
-  "submission.sections.submit.progressbar.duplicates": "Potential duplicates",
+  "submission.sections.submit.progressbar.duplicates": "Lehetséges duplikációk",
 
   // "submission.sections.submit.progressbar.identifiers": "Identifiers",
-  // TODO New key - Add a translation
-  "submission.sections.submit.progressbar.identifiers": "Identifiers",
+  "submission.sections.submit.progressbar.identifiers": "Azonosítók",
 
   // "submission.sections.submit.progressbar.license": "Deposit license",
-  "submission.sections.submit.progressbar.license": "Engedély raktározása",
+  "submission.sections.submit.progressbar.license": "Beküldési engedély",
 
   // "submission.sections.submit.progressbar.sherpapolicy": "Sherpa policies",
-  // TODO New key - Add a translation
-  "submission.sections.submit.progressbar.sherpapolicy": "Sherpa policies",
+  "submission.sections.submit.progressbar.sherpapolicy": "Sherpa irányelvek",
 
   // "submission.sections.submit.progressbar.upload": "Upload files",
   "submission.sections.submit.progressbar.upload": "Állományok feltöltése",
 
   // "submission.sections.submit.progressbar.sherpaPolicies": "Publisher open access policy information",
-  // TODO New key - Add a translation
-  "submission.sections.submit.progressbar.sherpaPolicies": "Publisher open access policy information",
+  "submission.sections.submit.progressbar.sherpaPolicies": "A kiadó nyílt hozzáférésről szóló információja",
 
   // "submission.sections.sherpa-policy.title-empty": "No publisher policy information available. If your work has an associated ISSN, please enter it above to see any related publisher open access policies.",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa-policy.title-empty": "No publisher policy information available. If your work has an associated ISSN, please enter it above to see any related publisher open access policies.",
+  "submission.sections.sherpa-policy.title-empty": "Nem áll rendelkezésre kiadó nyílt hozzáférésről szóló információja. Ha a művéhez tartozik ISSN, kérjük, adja meg fentebb, hogy láthassa a kapcsolódó kiadók nyílt hozzáférésről szóló irányelveit.",
 
   // "submission.sections.status.errors.title": "Errors",
   "submission.sections.status.errors.title": "Hibák",
@@ -8777,16 +8692,13 @@
   "submission.sections.status.warnings.title": "Figyelmeztetések",
 
   // "submission.sections.status.errors.aria": "has errors",
-  // TODO New key - Add a translation
-  "submission.sections.status.errors.aria": "has errors",
+  "submission.sections.status.errors.aria": "hibákat tartalmaz",
 
   // "submission.sections.status.valid.aria": "is valid",
-  // TODO New key - Add a translation
-  "submission.sections.status.valid.aria": "is valid",
+  "submission.sections.status.valid.aria": "érvényes",
 
   // "submission.sections.status.warnings.aria": "has warnings",
-  // TODO New key - Add a translation
-  "submission.sections.status.warnings.aria": "has warnings",
+  "submission.sections.status.warnings.aria": "figyelmeztetéseket tartalmaz",
 
   // "submission.sections.status.info.title": "Additional Information",
   "submission.sections.status.info.title": "További információk",
@@ -8795,28 +8707,22 @@
   "submission.sections.status.info.aria": "További információk",
 
   // "submission.sections.toggle.open": "Open section",
-  // TODO New key - Add a translation
-  "submission.sections.toggle.open": "Open section",
+  "submission.sections.toggle.open": "Szekció megnyitása",
 
   // "submission.sections.toggle.close": "Close section",
-  // TODO New key - Add a translation
-  "submission.sections.toggle.close": "Close section",
+  "submission.sections.toggle.close": "Szekció bezárása",
 
   // "submission.sections.toggle.aria.open": "Expand {{sectionHeader}} section",
-  // TODO New key - Add a translation
-  "submission.sections.toggle.aria.open": "Expand {{sectionHeader}} section",
+  "submission.sections.toggle.aria.open": "A(z) {{sectionHeader}} szekció megnyitása",
 
   // "submission.sections.toggle.aria.close": "Collapse {{sectionHeader}} section",
-  // TODO New key - Add a translation
-  "submission.sections.toggle.aria.close": "Collapse {{sectionHeader}} section",
+  "submission.sections.toggle.aria.close": "A(z) {{sectionHeader}} szekció becsukása",
 
   // "submission.sections.upload.primary.make": "Make {{fileName}} the primary bitstream",
-  // TODO New key - Add a translation
-  "submission.sections.upload.primary.make": "Make {{fileName}} the primary bitstream",
+  "submission.sections.upload.primary.make": "Legyen a(z) {{fileName}} elsődleges bitfolyam",
 
   // "submission.sections.upload.primary.remove": "Remove {{fileName}} as the primary bitstream",
-  // TODO New key - Add a translation
-  "submission.sections.upload.primary.remove": "Remove {{fileName}} as the primary bitstream",
+  "submission.sections.upload.primary.remove": "Az elsődleges bitfolyam tulajdonság eltávolítása a(z) {{fileName}} fájlról",
 
   // "submission.sections.upload.delete.confirm.cancel": "Cancel",
   "submission.sections.upload.delete.confirm.cancel": "Mégse",
@@ -8846,29 +8752,25 @@
   "submission.sections.upload.form.access-condition-label": "Elérhetőségi feltétel típusa",
 
   // "submission.sections.upload.form.access-condition-hint": "Select an access condition to apply on the bitstream once the item is deposited",
-  // TODO New key - Add a translation
-  "submission.sections.upload.form.access-condition-hint": "Select an access condition to apply on the bitstream once the item is deposited",
+  "submission.sections.upload.form.access-condition-hint": "A kiválasztott hozzáférési szabály az elem beküldését követően rögtön beállításra kerül a bitfolyamon",
 
   // "submission.sections.upload.form.date-required": "Date is required.",
   "submission.sections.upload.form.date-required": "Dátum kötelező.",
 
   // "submission.sections.upload.form.date-required-from": "Grant access from date is required.",
-  // TODO New key - Add a translation
-  "submission.sections.upload.form.date-required-from": "Grant access from date is required.",
+  "submission.sections.upload.form.date-required-from": "A hozzáférés kezdő dátumának megadása kötelező.",
 
   // "submission.sections.upload.form.date-required-until": "Grant access until date is required.",
-  // TODO New key - Add a translation
-  "submission.sections.upload.form.date-required-until": "Grant access until date is required.",
+  "submission.sections.upload.form.date-required-until": "A hozzáférés visszavonási dátumának megadása kötelező.",
 
   // "submission.sections.upload.form.from-label": "Grant access from",
   "submission.sections.upload.form.from-label": "Elérhetőség megadása innen",
 
   // "submission.sections.upload.form.from-hint": "Select the date from which the related access condition is applied",
-  // TODO New key - Add a translation
-  "submission.sections.upload.form.from-hint": "Select the date from which the related access condition is applied",
+  "submission.sections.upload.form.from-hint": "A kezdő dátum kiválasztása, amelyet követően a kiválasztott hozzáférési szabály alkalmazásra kerül",
 
   // "submission.sections.upload.form.from-placeholder": "From",
-  "submission.sections.upload.form.from-placeholder": "Innen",
+  "submission.sections.upload.form.from-placeholder": "Kezdő dátum",
 
   // "submission.sections.upload.form.group-label": "Group",
   "submission.sections.upload.form.group-label": "Csoport",
@@ -8877,14 +8779,13 @@
   "submission.sections.upload.form.group-required": "Csoport kötelező.",
 
   // "submission.sections.upload.form.until-label": "Grant access until",
-  "submission.sections.upload.form.until-label": "Elérhetőséget engedélyez eddig",
+  "submission.sections.upload.form.until-label": "A hozzáférés engedély végső dátuma",
 
   // "submission.sections.upload.form.until-hint": "Select the date until which the related access condition is applied",
-  // TODO New key - Add a translation
-  "submission.sections.upload.form.until-hint": "Select the date until which the related access condition is applied",
+  "submission.sections.upload.form.until-hint": "A végső dátum kiválasztása, amely dátumig a kiválasztott hozzáférési szabály érvényben marad",
 
   // "submission.sections.upload.form.until-placeholder": "Until",
-  "submission.sections.upload.form.until-placeholder": "Eddig",
+  "submission.sections.upload.form.until-placeholder": "Végső dátum",
 
   // "submission.sections.upload.header.policy.default.nolist": "Uploaded files in the {{collectionName}} collection will be accessible according to the following group(s):",
   "submission.sections.upload.header.policy.default.nolist": "A {{collectionName}} feltöltött állományok elérhetők lesznek a következő csoport(ok) szerint:",
@@ -8911,127 +8812,98 @@
   "submission.sections.upload.upload-failed": "Feltöltés nem sikerült",
 
   // "submission.sections.upload.upload-successful": "Upload successful",
-  "submission.sections.upload.upload-successful": "Feltöltés sikerült",
+  "submission.sections.upload.upload-successful": "Sikeres feltöltés",
 
   // "submission.sections.accesses.form.discoverable-description": "When checked, this item will be discoverable in search/browse. When unchecked, the item will only be available via a direct link and will never appear in search/browse.",
   // TODO New key - Add a translation
   "submission.sections.accesses.form.discoverable-description": "When checked, this item will be discoverable in search/browse. When unchecked, the item will only be available via a direct link and will never appear in search/browse.",
 
   // "submission.sections.accesses.form.discoverable-label": "Discoverable",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.discoverable-label": "Discoverable",
+  "submission.sections.accesses.form.discoverable-label": "Böngészhető",
 
   // "submission.sections.accesses.form.access-condition-label": "Access condition type",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.access-condition-label": "Access condition type",
+  "submission.sections.accesses.form.access-condition-label": "Hozzáférési szabály típusa",
 
   // "submission.sections.accesses.form.access-condition-hint": "Select an access condition to apply on the item once it is deposited",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.access-condition-hint": "Select an access condition to apply on the item once it is deposited",
+  "submission.sections.accesses.form.access-condition-hint": "A kiválasztott hozzáférési szabály az elem beküldését követően rögtön beállításra kerül",
 
   // "submission.sections.accesses.form.date-required": "Date is required.",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.date-required": "Date is required.",
+  "submission.sections.accesses.form.date-required": "Dátum megadása kötelező.",
 
   // "submission.sections.accesses.form.date-required-from": "Grant access from date is required.",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.date-required-from": "Grant access from date is required.",
+  "submission.sections.accesses.form.date-required-from": "A hozzáférés kezdő dátumának megadása kötelező.",
 
   // "submission.sections.accesses.form.date-required-until": "Grant access until date is required.",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.date-required-until": "Grant access until date is required.",
+  "submission.sections.accesses.form.date-required-until": "A hozzférés végső dátumának megadása kötelező.",
 
   // "submission.sections.accesses.form.from-label": "Grant access from",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.from-label": "Grant access from",
+  "submission.sections.accesses.form.from-label": "A hozzáférés kezdő dátuma",
 
   // "submission.sections.accesses.form.from-hint": "Select the date from which the related access condition is applied",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.from-hint": "Select the date from which the related access condition is applied",
+  "submission.sections.accesses.form.from-hint": "A kezdő dátum kiválasztása, amelyet követően a kiválasztott hozzáférési szabály alkalmazásra kerül",
 
   // "submission.sections.accesses.form.from-placeholder": "From",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.from-placeholder": "From",
+  "submission.sections.accesses.form.from-placeholder": "Kezdő dátum",
 
   // "submission.sections.accesses.form.group-label": "Group",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.group-label": "Group",
+  "submission.sections.accesses.form.group-label": "Csoport",
 
   // "submission.sections.accesses.form.group-required": "Group is required.",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.group-required": "Group is required.",
+  "submission.sections.accesses.form.group-required": "Csoport megadása kötelező.",
 
   // "submission.sections.accesses.form.until-label": "Grant access until",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.until-label": "Grant access until",
+  "submission.sections.accesses.form.until-label": "A hozzáférés végső dátuma",
 
   // "submission.sections.accesses.form.until-hint": "Select the date until which the related access condition is applied",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.until-hint": "Select the date until which the related access condition is applied",
+  "submission.sections.accesses.form.until-hint": "A végső dátum kiválasztása, amely dátumig a kiválasztott hozzáférési szabály érvényben marad",
 
   // "submission.sections.accesses.form.until-placeholder": "Until",
-  // TODO New key - Add a translation
-  "submission.sections.accesses.form.until-placeholder": "Until",
+  "submission.sections.accesses.form.until-placeholder": "Végső dátum",
 
   // "submission.sections.duplicates.none": "No duplicates were detected.",
-  // TODO New key - Add a translation
-  "submission.sections.duplicates.none": "No duplicates were detected.",
+  "submission.sections.duplicates.none": "Nem találhatóak duplikációk.",
 
   // "submission.sections.duplicates.detected": "Potential duplicates were detected. Please review the list below.",
-  // TODO New key - Add a translation
-  "submission.sections.duplicates.detected": "Potential duplicates were detected. Please review the list below.",
+  "submission.sections.duplicates.detected": "Lehetséges duplikációkatat észleltünk. Kérjük vizsgálja meg az alábbi listát.",
 
   // "submission.sections.duplicates.in-workspace": "This item is in workspace",
-  // TODO New key - Add a translation
-  "submission.sections.duplicates.in-workspace": "This item is in workspace",
+  "submission.sections.duplicates.in-workspace": "Ez az elem munkaterület állapotú",
 
   // "submission.sections.duplicates.in-workflow": "This item is in workflow",
-  // TODO New key - Add a translation
-  "submission.sections.duplicates.in-workflow": "This item is in workflow",
+  "submission.sections.duplicates.in-workflow": "Ez az elem munkafolyamat állapotú",
 
   // "submission.sections.license.granted-label": "I confirm the license above",
-  // TODO New key - Add a translation
-  "submission.sections.license.granted-label": "I confirm the license above",
+  "submission.sections.license.granted-label": "Elfogadom a fenti licenszt",
 
   // "submission.sections.license.required": "You must accept the license",
-  // TODO New key - Add a translation
-  "submission.sections.license.required": "You must accept the license",
+  "submission.sections.license.required": "A licensz elfogadása kötelező",
 
   // "submission.sections.license.notgranted": "You must accept the license",
-  // TODO New key - Add a translation
-  "submission.sections.license.notgranted": "You must accept the license",
+  "submission.sections.license.notgranted": "A licensz elfogadása kötelező",
 
   // "submission.sections.sherpa.publication.information": "Publication information",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publication.information": "Publication information",
+  "submission.sections.sherpa.publication.information": "Publikáció információ",
 
   // "submission.sections.sherpa.publication.information.title": "Title",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publication.information.title": "Title",
+  "submission.sections.sherpa.publication.information.title": "Cím",
 
   // "submission.sections.sherpa.publication.information.issns": "ISSNs",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publication.information.issns": "ISSNs",
+  "submission.sections.sherpa.publication.information.issns": "ISSN-ek",
 
   // "submission.sections.sherpa.publication.information.url": "URL",
-  // TODO New key - Add a translation
   "submission.sections.sherpa.publication.information.url": "URL",
 
   // "submission.sections.sherpa.publication.information.publishers": "Publisher",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publication.information.publishers": "Publisher",
+  "submission.sections.sherpa.publication.information.publishers": "Kiadó",
 
   // "submission.sections.sherpa.publication.information.romeoPub": "Romeo Pub",
-  // TODO New key - Add a translation
   "submission.sections.sherpa.publication.information.romeoPub": "Romeo Pub",
 
   // "submission.sections.sherpa.publication.information.zetoPub": "Zeto Pub",
-  // TODO New key - Add a translation
   "submission.sections.sherpa.publication.information.zetoPub": "Zeto Pub",
 
   // "submission.sections.sherpa.publisher.policy": "Publisher Policy",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publisher.policy": "Publisher Policy",
+  "submission.sections.sherpa.publisher.policy": "Kiadó jogi szabályozása",
 
   // "submission.sections.sherpa.publisher.policy.description": "The below information was found via Sherpa Romeo. Based on the policies of your publisher, it provides advice regarding whether an embargo may be necessary and/or which files you are allowed to upload. If you have questions, please contact your site administrator via the feedback form in the footer.",
   // TODO New key - Add a translation
@@ -9042,83 +8914,65 @@
   "submission.sections.sherpa.publisher.policy.openaccess": "Open Access pathways permitted by this journal's policy are listed below by article version. Click on a pathway for a more detailed view",
 
   // "submission.sections.sherpa.publisher.policy.more.information": "For more information, please see the following links:",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publisher.policy.more.information": "For more information, please see the following links:",
+  "submission.sections.sherpa.publisher.policy.more.information": "További információ a következő linkeken érhető el:",
 
   // "submission.sections.sherpa.publisher.policy.version": "Version",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publisher.policy.version": "Version",
+  "submission.sections.sherpa.publisher.policy.version": "Verzió",
 
   // "submission.sections.sherpa.publisher.policy.embargo": "Embargo",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publisher.policy.embargo": "Embargo",
+  "submission.sections.sherpa.publisher.policy.embargo": "Embargó",
 
   // "submission.sections.sherpa.publisher.policy.noembargo": "No Embargo",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publisher.policy.noembargo": "No Embargo",
+  "submission.sections.sherpa.publisher.policy.noembargo": "Nincs beállított embargó",
 
   // "submission.sections.sherpa.publisher.policy.nolocation": "None",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publisher.policy.nolocation": "None",
+  "submission.sections.sherpa.publisher.policy.nolocation": "Nincs",
 
   // "submission.sections.sherpa.publisher.policy.license": "License",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publisher.policy.license": "License",
+  "submission.sections.sherpa.publisher.policy.license": "Licensz",
 
   // "submission.sections.sherpa.publisher.policy.prerequisites": "Prerequisites",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publisher.policy.prerequisites": "Prerequisites",
+  "submission.sections.sherpa.publisher.policy.prerequisites": "Előfeltételek",
 
   // "submission.sections.sherpa.publisher.policy.location": "Location",
   // TODO New key - Add a translation
-  "submission.sections.sherpa.publisher.policy.location": "Location",
+  "submission.sections.sherpa.publisher.policy.location": "Hely",
 
   // "submission.sections.sherpa.publisher.policy.conditions": "Conditions",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publisher.policy.conditions": "Conditions",
+  "submission.sections.sherpa.publisher.policy.conditions": "Hozzáférési feltételek",
 
   // "submission.sections.sherpa.publisher.policy.refresh": "Refresh",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.publisher.policy.refresh": "Refresh",
+  "submission.sections.sherpa.publisher.policy.refresh": "Frissítés",
 
   // "submission.sections.sherpa.record.information": "Record Information",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.record.information": "Record Information",
+  "submission.sections.sherpa.record.information": "Rekord információ",
 
   // "submission.sections.sherpa.record.information.id": "ID",
-  // TODO New key - Add a translation
   "submission.sections.sherpa.record.information.id": "ID",
 
   // "submission.sections.sherpa.record.information.date.created": "Date Created",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.record.information.date.created": "Date Created",
+  "submission.sections.sherpa.record.information.date.created": "Létrehozás dátuma",
 
   // "submission.sections.sherpa.record.information.date.modified": "Last Modified",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.record.information.date.modified": "Last Modified",
+  "submission.sections.sherpa.record.information.date.modified": "Utolsó módosítás dátuma",
 
   // "submission.sections.sherpa.record.information.uri": "URI",
-  // TODO New key - Add a translation
   "submission.sections.sherpa.record.information.uri": "URI",
 
   // "submission.sections.sherpa.error.message": "There was an error retrieving sherpa informations",
-  // TODO New key - Add a translation
-  "submission.sections.sherpa.error.message": "There was an error retrieving sherpa informations",
+  "submission.sections.sherpa.error.message": "Hiba történt a sherpa információ lekérdezése közben",
 
   // "submission.submit.breadcrumbs": "New submission",
-  // TODO New key - Add a translation
-  "submission.submit.breadcrumbs": "New submission",
+  "submission.submit.breadcrumbs": "Új feltöltés",
 
   // "submission.submit.title": "New submission",
-  // TODO Source message changed - Revise the translation
-  "submission.submit.title": "Beküldés",
+  "submission.submit.title": "Új feltöltés",
 
   // "submission.workflow.generic.delete": "Delete",
   "submission.workflow.generic.delete": "Töröl",
 
   // "submission.workflow.generic.delete-help": "Select this option to discard this item. You will then be asked to confirm it.",
-  // TODO Source message changed - Revise the translation
-  "submission.workflow.generic.delete-help": "Ha el óhajtja vetni a tárgyat, válassz a  \"Töröl\" gombot.  Majd döntését igazolja.",
+  "submission.workflow.generic.delete-help": "Válassza ezt az opciót amennyiben törölni szeretné az elemet. Kérjük döntését ezt követően erősítse meg.",
 
   // "submission.workflow.generic.edit": "Edit",
   "submission.workflow.generic.edit": "Szerkesztés",
@@ -9133,19 +8987,15 @@
   "submission.workflow.generic.view-help": "Válassza ezt, hogy megtekintse a tárgy metaadatait.",
 
   // "submission.workflow.generic.submit_select_reviewer": "Select Reviewer",
-  // TODO New key - Add a translation
-  "submission.workflow.generic.submit_select_reviewer": "Select Reviewer",
+  "submission.workflow.generic.submit_select_reviewer": "Reviewer kiválasztása",
 
   // "submission.workflow.generic.submit_select_reviewer-help": "",
-  // TODO New key - Add a translation
   "submission.workflow.generic.submit_select_reviewer-help": "",
 
   // "submission.workflow.generic.submit_score": "Rate",
-  // TODO New key - Add a translation
-  "submission.workflow.generic.submit_score": "Rate",
+  "submission.workflow.generic.submit_score": "Értékelés",
 
   // "submission.workflow.generic.submit_score-help": "",
-  // TODO New key - Add a translation
   "submission.workflow.generic.submit_score-help": "",
 
   // "submission.workflow.tasks.claimed.approve": "Approve",
@@ -9161,11 +9011,9 @@
   "submission.workflow.tasks.claimed.edit_help": "Válassza ezt, hogy módosítsa a tárgy metaadatait.",
 
   // "submission.workflow.tasks.claimed.decline": "Decline",
-  // TODO New key - Add a translation
-  "submission.workflow.tasks.claimed.decline": "Decline",
+  "submission.workflow.tasks.claimed.decline": "visszautasít",
 
   // "submission.workflow.tasks.claimed.decline_help": "",
-  // TODO New key - Add a translation
   "submission.workflow.tasks.claimed.decline_help": "",
 
   // "submission.workflow.tasks.claimed.reject.reason.info": "Please enter your reason for rejecting the submission into the box below, indicating whether the submitter may fix a problem and resubmit.",
@@ -9217,20 +9065,16 @@
   "submission.workflow.tasks.pool.show-detail": "Részletek felfedése",
 
   // "submission.workflow.tasks.duplicates": "potential duplicates were detected for this item. Claim and edit this item to see details.",
-  // TODO New key - Add a translation
-  "submission.workflow.tasks.duplicates": "potential duplicates were detected for this item. Claim and edit this item to see details.",
+  "submission.workflow.tasks.duplicates": "lehetséges duplikációkat észleltünk az elem kapcsán. Igényelje és szerkessze a részletek megtekintéséhez.",
 
   // "submission.workspace.generic.view": "View",
-  // TODO New key - Add a translation
-  "submission.workspace.generic.view": "View",
+  "submission.workspace.generic.view": "Megtekint",
 
   // "submission.workspace.generic.view-help": "Select this option to view the item's metadata.",
-  // TODO New key - Add a translation
-  "submission.workspace.generic.view-help": "Select this option to view the item's metadata.",
+  "submission.workspace.generic.view-help": "Válassza ezt az opciót az elem leíró adatainak megtekintéséhez.",
 
   // "submitter.empty": "N/A",
-  // TODO New key - Add a translation
-  "submitter.empty": "N/A",
+  "submitter.empty": "Nem alkalmazható",
 
   // "subscriptions.title": "Subscriptions",
   "subscriptions.title": "Feliratkozások",
@@ -9245,128 +9089,97 @@
   "subscriptions.community": "Közösség feliratkozások",
 
   // "subscriptions.subscription_type": "Subscription type",
-  // TODO New key - Add a translation
-  "subscriptions.subscription_type": "Subscription type",
+  "subscriptions.subscription_type": "Feliratkozás típusa",
 
   // "subscriptions.frequency": "Subscription frequency",
-  // TODO New key - Add a translation
-  "subscriptions.frequency": "Subscription frequency",
+  "subscriptions.frequency": "Feliratkozás gyakorisága",
 
   // "subscriptions.frequency.D": "Daily",
-  // TODO New key - Add a translation
-  "subscriptions.frequency.D": "Daily",
+  "subscriptions.frequency.D": "Napi",
 
   // "subscriptions.frequency.M": "Monthly",
-  // TODO New key - Add a translation
-  "subscriptions.frequency.M": "Monthly",
+  "subscriptions.frequency.M": "Havi",
 
   // "subscriptions.frequency.W": "Weekly",
-  // TODO New key - Add a translation
-  "subscriptions.frequency.W": "Weekly",
+  "subscriptions.frequency.W": "Heti",
 
   // "subscriptions.tooltip": "Subscribe",
-  // TODO New key - Add a translation
-  "subscriptions.tooltip": "Subscribe",
+  "subscriptions.tooltip": "Feliratkozás",
 
   // "subscriptions.modal.title": "Subscriptions",
-  // TODO New key - Add a translation
-  "subscriptions.modal.title": "Subscriptions",
+  "subscriptions.modal.title": "Feliratkozások",
 
   // "subscriptions.modal.type-frequency": "Type and frequency",
-  // TODO New key - Add a translation
-  "subscriptions.modal.type-frequency": "Type and frequency",
+  "subscriptions.modal.type-frequency": "Típus és gyakoriság",
 
   // "subscriptions.modal.close": "Close",
-  // TODO New key - Add a translation
-  "subscriptions.modal.close": "Close",
+  "subscriptions.modal.close": "Bezárás",
 
   // "subscriptions.modal.delete-info": "To remove this subscription, please visit the \"Subscriptions\" page under your user profile",
-  // TODO New key - Add a translation
-  "subscriptions.modal.delete-info": "To remove this subscription, please visit the \"Subscriptions\" page under your user profile",
+  "subscriptions.modal.delete-info": "A feliratkozás törléséhez kérjük látogasson a felhasználói profilja alatt található \"Feliratkozások\" oldalra",
 
   // "subscriptions.modal.new-subscription-form.type.content": "Content",
-  // TODO New key - Add a translation
-  "subscriptions.modal.new-subscription-form.type.content": "Content",
+  "subscriptions.modal.new-subscription-form.type.content": "Tartalom",
 
   // "subscriptions.modal.new-subscription-form.frequency.D": "Daily",
-  // TODO New key - Add a translation
-  "subscriptions.modal.new-subscription-form.frequency.D": "Daily",
+  "subscriptions.modal.new-subscription-form.frequency.D": "Napi",
 
   // "subscriptions.modal.new-subscription-form.frequency.W": "Weekly",
-  // TODO New key - Add a translation
-  "subscriptions.modal.new-subscription-form.frequency.W": "Weekly",
+  "subscriptions.modal.new-subscription-form.frequency.W": "Heti",
 
   // "subscriptions.modal.new-subscription-form.frequency.M": "Monthly",
-  // TODO New key - Add a translation
-  "subscriptions.modal.new-subscription-form.frequency.M": "Monthly",
+  "subscriptions.modal.new-subscription-form.frequency.M": "Havi",
 
   // "subscriptions.modal.new-subscription-form.submit": "Submit",
-  // TODO New key - Add a translation
-  "subscriptions.modal.new-subscription-form.submit": "Submit",
+  "subscriptions.modal.new-subscription-form.submit": "Küldés",
 
   // "subscriptions.modal.new-subscription-form.processing": "Processing...",
-  // TODO New key - Add a translation
-  "subscriptions.modal.new-subscription-form.processing": "Processing...",
+  "subscriptions.modal.new-subscription-form.processing": "Feldolgozás...",
 
   // "subscriptions.modal.create.success": "Subscribed to {{ type }} successfully.",
-  // TODO New key - Add a translation
-  "subscriptions.modal.create.success": "Subscribed to {{ type }} successfully.",
+  "subscriptions.modal.create.success": "Sikeres feliratkozás a következőre {{ type }}.",
 
   // "subscriptions.modal.delete.success": "Subscription deleted successfully",
-  // TODO New key - Add a translation
-  "subscriptions.modal.delete.success": "Subscription deleted successfully",
+  "subscriptions.modal.delete.success": "A feliratkozás sikeresen törölve",
 
   // "subscriptions.modal.update.success": "Subscription to {{ type }} updated successfully",
-  // TODO New key - Add a translation
-  "subscriptions.modal.update.success": "Subscription to {{ type }} updated successfully",
+  "subscriptions.modal.update.success": "A feliratkozás sikeresen frissítve a következőre {{ type }}.",
 
   // "subscriptions.modal.create.error": "An error occurs during the subscription creation",
-  // TODO New key - Add a translation
-  "subscriptions.modal.create.error": "An error occurs during the subscription creation",
+  "subscriptions.modal.create.error": "Hiba történt a feliratkozás közben",
 
   // "subscriptions.modal.delete.error": "An error occurs during the subscription delete",
-  // TODO New key - Add a translation
-  "subscriptions.modal.delete.error": "An error occurs during the subscription delete",
+  "subscriptions.modal.delete.error": "Hiba történt a feliratkozás törlése közben",
 
   // "subscriptions.modal.update.error": "An error occurs during the subscription update",
-  // TODO New key - Add a translation
-  "subscriptions.modal.update.error": "An error occurs during the subscription update",
+  "subscriptions.modal.update.error": "Hiba történt a feliratkozás frissítése közben",
 
   // "subscriptions.table.dso": "Subject",
-  // TODO New key - Add a translation
-  "subscriptions.table.dso": "Subject",
+  "subscriptions.table.dso": "Tárgyszó",
 
   // "subscriptions.table.subscription_type": "Subscription Type",
-  // TODO New key - Add a translation
-  "subscriptions.table.subscription_type": "Subscription Type",
+  "subscriptions.table.subscription_type": "Feliratkozás típusa",
 
   // "subscriptions.table.subscription_frequency": "Subscription Frequency",
-  // TODO New key - Add a translation
-  "subscriptions.table.subscription_frequency": "Subscription Frequency",
+  "subscriptions.table.subscription_frequency": "Feliratkozás gyakorisága",
 
   // "subscriptions.table.action": "Action",
-  // TODO New key - Add a translation
-  "subscriptions.table.action": "Action",
+  "subscriptions.table.action": "Művelet",
 
   // "subscriptions.table.edit": "Edit",
-  // TODO New key - Add a translation
-  "subscriptions.table.edit": "Edit",
+  "subscriptions.table.edit": "Szerkesztés",
 
   // "subscriptions.table.delete": "Delete",
-  // TODO New key - Add a translation
-  "subscriptions.table.delete": "Delete",
+  "subscriptions.table.delete": "Törlés",
 
   // "subscriptions.table.not-available": "Not available",
-  // TODO New key - Add a translation
-  "subscriptions.table.not-available": "Not available",
+  "subscriptions.table.not-available": "Nem elérhető",
 
   // "subscriptions.table.not-available-message": "The subscribed item has been deleted, or you don't currently have the permission to view it",
-  // TODO New key - Add a translation
-  "subscriptions.table.not-available-message": "The subscribed item has been deleted, or you don't currently have the permission to view it",
+  "subscriptions.table.not-available-message": "A felirakozott elem törlésre került vagy nincs meg a szükséges jogosultsága a megtekintéshez",
 
   // "subscriptions.table.empty.message": "You do not have any subscriptions at this time. To subscribe to email updates for a Community or Collection, use the subscription button on the object's page.",
-  // TODO New key - Add a translation
-  "subscriptions.table.empty.message": "You do not have any subscriptions at this time. To subscribe to email updates for a Community or Collection, use the subscription button on the object's page.",
+  "subscriptions.table.empty.message": "Jelenleg nincs egyetlen feliratkozása sem. A kategórák és gyűjtemények kapcsán email értesítőre való feliratkozáshoz használja a feliratkozás gombot az adott elem oldalán.",
 
   // "thumbnail.default.alt": "Thumbnail Image",
   "thumbnail.default.alt": "Thumbnail kép",
@@ -9378,22 +9191,19 @@
   "thumbnail.project.alt": "Projekt Logo",
 
   // "thumbnail.project.placeholder": "Project Placeholder Image",
-  // TODO New key - Add a translation
-  "thumbnail.project.placeholder": "Project Placeholder Image",
+  "thumbnail.project.placeholder": "Projekt Placeholder képe",
 
   // "thumbnail.orgunit.alt": "OrgUnit Logo",
-  "thumbnail.orgunit.alt": "OrgUnit Logo",
+  "thumbnail.orgunit.alt": "Szervezeti egység Logo",
 
   // "thumbnail.orgunit.placeholder": "OrgUnit Placeholder Image",
-  // TODO New key - Add a translation
-  "thumbnail.orgunit.placeholder": "OrgUnit Placeholder Image",
+  "thumbnail.orgunit.placeholder": "Szervezeti egység Placeholder képe",
 
   // "thumbnail.person.alt": "Profile Picture",
   "thumbnail.person.alt": "Profilkép",
 
   // "thumbnail.person.placeholder": "No Profile Picture Available",
-  // TODO New key - Add a translation
-  "thumbnail.person.placeholder": "No Profile Picture Available",
+  "thumbnail.person.placeholder": "Profilkép nem elérhető",
 
   // "title": "DSpace",
   "title": "DSpace",
@@ -9411,8 +9221,7 @@
   "vocabulary-treeview.search.form.search": "Keresés",
 
   // "vocabulary-treeview.search.form.search-placeholder": "Filter results by typing the first few letters",
-  // TODO New key - Add a translation
-  "vocabulary-treeview.search.form.search-placeholder": "Filter results by typing the first few letters",
+  "vocabulary-treeview.search.form.search-placeholder": "Találatok szűrése a szűrőfeltétel első néhány karakterének begépelésével",
 
   // "vocabulary-treeview.search.no-result": "There were no items to show",
   "vocabulary-treeview.search.no-result": "Nincsenek megjelenítendő elemek",
@@ -9424,8 +9233,7 @@
   "vocabulary-treeview.tree.description.srsc": "Kutatási tárgy kategóriák",
 
   // "vocabulary-treeview.info": "Select a subject to add as search filter",
-  // TODO New key - Add a translation
-  "vocabulary-treeview.info": "Select a subject to add as search filter",
+  "vocabulary-treeview.info": "Tárgyszó kiválasztása szűrőfeltételként",
 
   // "uploader.browse": "browse",
   "uploader.browse": "böngészés",
@@ -9440,8 +9248,7 @@
   "uploader.or": ", vagy",
 
   // "uploader.processing": "Processing uploaded file(s)... (it's now safe to close this page)",
-  // TODO Source message changed - Revise the translation
-  "uploader.processing": "Feldolgozás",
+  "uploader.processing": "Fájlok feldolgozása...(most már biztonságosan bezárható az oldal)",
 
   // "uploader.queue-length": "Queue length",
   "uploader.queue-length": "Sor hossza",
@@ -9456,35 +9263,28 @@
   "virtual-metadata.delete-relationship.modal-head": "Válassza ki azokat a tárgyakat, amelyekhez óhajtja a virtuális metaadatok elmentését valódi metaadatokként",
 
   // "supervisedWorkspace.search.results.head": "Supervised Items",
-  // TODO New key - Add a translation
-  "supervisedWorkspace.search.results.head": "Supervised Items",
+  "supervisedWorkspace.search.results.head": "Ellenőrzés alatt álló tárgyak",
 
   // "workspace.search.results.head": "Your submissions",
-  // TODO New key - Add a translation
-  "workspace.search.results.head": "Your submissions",
+  "workspace.search.results.head": "Feltöltéseim",
 
   // "workflowAdmin.search.results.head": "Administer Workflow",
   "workflowAdmin.search.results.head": "Munkafolyamat szervezése",
 
   // "workflow.search.results.head": "Workflow tasks",
-  // TODO New key - Add a translation
-  "workflow.search.results.head": "Workflow tasks",
+  "workflow.search.results.head": "Munkafolyamat feladatok",
 
   // "supervision.search.results.head": "Workflow and Workspace tasks",
-  // TODO New key - Add a translation
-  "supervision.search.results.head": "Workflow and Workspace tasks",
+  "supervision.search.results.head": "Munkafolyamat és munkaterület feladatok",
 
   // "orgunit.search.results.head": "Organizational Unit Search Results",
-  // TODO New key - Add a translation
-  "orgunit.search.results.head": "Organizational Unit Search Results",
+  "orgunit.search.results.head": "Szervezeti egység találati lista",
 
   // "workflow-item.edit.breadcrumbs": "Edit workflowitem",
-  // TODO New key - Add a translation
-  "workflow-item.edit.breadcrumbs": "Edit workflowitem",
+  "workflow-item.edit.breadcrumbs": "Munkafolyamat elem szerkesztése",
 
   // "workflow-item.edit.title": "Edit workflowitem",
-  // TODO New key - Add a translation
-  "workflow-item.edit.title": "Edit workflowitem",
+  "workflow-item.edit.title": "Munkafolyamat elem szerkesztése",
 
   // "workflow-item.delete.notification.success.title": "Deleted",
   "workflow-item.delete.notification.success.title": "Törölve",
@@ -9532,52 +9332,40 @@
   "workflow-item.send-back.button.cancel": "Mégse",
 
   // "workflow-item.send-back.button.confirm": "Send back",
-  // TODO Source message changed - Revise the translation
   "workflow-item.send-back.button.confirm": "Visszaküld",
 
   // "workflow-item.view.breadcrumbs": "Workflow View",
-  // TODO New key - Add a translation
-  "workflow-item.view.breadcrumbs": "Workflow View",
+  "workflow-item.view.breadcrumbs": "Munkafolyamat nézet",
 
   // "workspace-item.view.breadcrumbs": "Workspace View",
-  // TODO New key - Add a translation
-  "workspace-item.view.breadcrumbs": "Workspace View",
+  "workspace-item.view.breadcrumbs": "Munkaterület nézet",
 
   // "workspace-item.view.title": "Workspace View",
-  // TODO New key - Add a translation
-  "workspace-item.view.title": "Workspace View",
+  "workspace-item.view.title": "Munkaterület nézet",
 
   // "workspace-item.delete.breadcrumbs": "Workspace Delete",
-  // TODO New key - Add a translation
-  "workspace-item.delete.breadcrumbs": "Workspace Delete",
+  "workspace-item.delete.breadcrumbs": "Munkaterület törlése",
 
   // "workspace-item.delete.header": "Delete workspace item",
-  // TODO New key - Add a translation
-  "workspace-item.delete.header": "Delete workspace item",
+  "workspace-item.delete.header": "Munkaterületi elem törlése",
 
   // "workspace-item.delete.button.confirm": "Delete",
-  // TODO New key - Add a translation
-  "workspace-item.delete.button.confirm": "Delete",
+  "workspace-item.delete.button.confirm": "Törlés",
 
   // "workspace-item.delete.button.cancel": "Cancel",
-  // TODO New key - Add a translation
-  "workspace-item.delete.button.cancel": "Cancel",
+  "workspace-item.delete.button.cancel": "Mégse",
 
   // "workspace-item.delete.notification.success.title": "Deleted",
-  // TODO New key - Add a translation
-  "workspace-item.delete.notification.success.title": "Deleted",
+  "workspace-item.delete.notification.success.title": "Törölve",
 
   // "workspace-item.delete.title": "This workspace item was successfully deleted",
-  // TODO New key - Add a translation
-  "workspace-item.delete.title": "This workspace item was successfully deleted",
+  "workspace-item.delete.title": "A munkaterületi tárgy sikeresen törölve lett"
 
   // "workspace-item.delete.notification.error.title": "Something went wrong",
-  // TODO New key - Add a translation
-  "workspace-item.delete.notification.error.title": "Something went wrong",
+  "workspace-item.delete.notification.error.title": "Hiba történt",
 
   // "workspace-item.delete.notification.error.content": "The workspace item could not be deleted",
-  // TODO New key - Add a translation
-  "workspace-item.delete.notification.error.content": "The workspace item could not be deleted",
+  "workspace-item.delete.notification.error.content": "A munkaterület elem nem törölhető",
 
   // "workflow-item.advanced.title": "Advanced workflow",
   // TODO New key - Add a translation
