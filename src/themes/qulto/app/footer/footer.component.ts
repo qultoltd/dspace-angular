@@ -7,4 +7,6 @@ import { FooterComponent as BaseComponent } from '../../../../app/footer/footer.
   templateUrl: 'footer.component.html',
   standalone: true
 })
-export class FooterComponent extends BaseComponent {}
+export class FooterComponent extends BaseComponent {
+  currentYear: number = new Date().getFullYear();
+}

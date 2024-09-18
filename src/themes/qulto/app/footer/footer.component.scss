@@ -1,6 +1,6 @@
 .qulto-footer {
   background-color: #ffffff;
-  border-top: 1px solid $blue;
+  border-top: 1px solid $primary;
   height: 3rem;
   width: 100%;
 
@@ -17,8 +17,7 @@
     }
 
     .middle-text {
-      color: $blue;
-      font-family: "Rubik", sans-serif;
+      color: $primary;
     }
   }
 }
