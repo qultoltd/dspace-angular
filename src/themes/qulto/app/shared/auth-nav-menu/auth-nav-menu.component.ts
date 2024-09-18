@@ -23,9 +23,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'ds-auth-nav-menu',
   templateUrl: 'auth-nav-menu.component.html',
-  styleUrls: [
-    '../../../../../app/shared/auth-nav-menu/auth-nav-menu.component.scss',
-  ],
+  styleUrls: ['auth-nav-menu.component.scss'],
   animations: [fadeInOut, fadeOut],
   standalone: true,
   imports: [NgClass, NgIf, NgbDropdownModule, ThemedLogInComponent, RouterLink, RouterLinkActive, ThemedUserMenuComponent, AsyncPipe, TranslateModule, BrowserOnlyPipe],

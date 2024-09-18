@@ -9,8 +9,14 @@
     height: var(--ds-header-logo-height-xs);
   }
 }
-.navbar-toggler .navbar-toggler-icon {
-  background-image: none !important;
-  line-height: 1.5;
-  color: var(--bs-link-color);
+
+nav {
+  ::ng-deep {
+    ::ng-deep {
+      .dropdown-toggle {
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+      }
+    }
+  }
 }
