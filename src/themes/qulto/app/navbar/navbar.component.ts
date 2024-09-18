@@ -13,13 +13,13 @@ import {
   import { TranslateModule } from '@ngx-translate/core';
   import { ThemedSearchNavbarComponent } from 'src/app/search-navbar/themed-search-navbar.component';
   import { ThemedLangSwitchComponent } from 'src/app/shared/lang-switch/themed-lang-switch.component';
-  import { NavbarSectionComponent } from 'src/app/navbar/navbar-section/navbar-section.component';
 
   import { slideMobileNav } from '../../../../app/shared/animations/slide';
   import { ContextHelpToggleComponent } from '../../../../app/header/context-help-toggle/context-help-toggle.component';
-  import { ThemedAuthNavMenuComponent } from '../../../../app/shared/auth-nav-menu/themed-auth-nav-menu.component';
-  import { ThemedUserMenuComponent } from '../../../../app/shared/auth-nav-menu/user-menu/themed-user-menu.component';
   import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-navbar/impersonate-navbar.component';
+
+  import { AuthNavMenuComponent } from '../shared/auth-nav-menu/auth-nav-menu.component';
+  import { UserMenuComponent } from '../shared/auth-nav-menu/user-menu/user-menu.component';
 
 
 /**
@@ -27,8 +27,8 @@ import {
  */
 @Component({
   selector: 'ds-themed-navbar',
-  styleUrls: ['./navbar.component.scss'],
-  templateUrl: './navbar.component.html',
+  styleUrls: ['navbar.component.scss'],
+  templateUrl: 'navbar.component.html',
   animations: [slideMobileNav],
   standalone: true,
   imports: [
@@ -41,12 +41,11 @@ import {
     NgFor, 
     NgComponentOutlet, 
     ContextHelpToggleComponent, 
-    ThemedAuthNavMenuComponent, 
+    AuthNavMenuComponent, 
     ImpersonateNavbarComponent, 
     AsyncPipe, 
     TranslateModule, 
-    ThemedUserMenuComponent, 
-    NavbarSectionComponent
+    UserMenuComponent
   ],
 
 })

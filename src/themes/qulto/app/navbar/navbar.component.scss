@@ -1,6 +1,46 @@
 nav.navbar {
   border-bottom: 0;
   align-items: baseline;
+
+  ::ng-deep {
+    .ds-menu-item-wrapper {
+      .ds-menu-item {
+        color: var(--ds-navbar-link-color);
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+
+        &:hover {
+          text-decoration: none;
+          color: var(--ds-navbar-link-color-hover);
+        }
+      }
+    }
+
+    #expandable-navbar-section-browse_global {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+
+      .ds-menu-item {
+        padding: 0;
+      }
+
+      a {
+        color: var(--ds-navbar-link-color);
+      }
+
+      #browseDropdown {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .dropdown-menu {
+        div {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
 }
 
 /** Mobile menu styling **/
@@ -32,19 +72,4 @@ nav.navbar {
     }
     padding: 0;
   }
-}
-
-.navbar-nav {
-  .ds-menu-item {
-    color: var(--ds-navbar-link-color);
-  }
-  .ds-menu-item:hover {
-    color: var(--ds-navbar-link-color-hover);
-  }
-}
-
-a {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  text-decoration: none;
 }

@@ -7,11 +7,11 @@ import { ThemedHeaderComponent } from './app/header/header.component';
 import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-navbar-wrapper.component';
 import { RootModule } from '../../app/root.module';
 import { FooterComponent } from './app/footer/footer.component';
-import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component'
-import { UserMenuComponent } from './app/shared/auth-nav-menu/user-menu/user-menu.component'
-import { LoginPageComponent } from './app/login-page/login-page.component'
-import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component'
-import { ThemedNavbarComponent } from './app/navbar/navbar.component'
+import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
+import { UserMenuComponent } from './app/shared/auth-nav-menu/user-menu/user-menu.component';
+import { LoginPageComponent } from './app/login-page/login-page.component';
+import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
+import { ThemedNavbarComponent } from './app/navbar/navbar.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
