@@ -1,0 +1,24 @@
+.qulto-footer {
+  background-color: #ffffff;
+  border-top: 1px solid $blue;
+  height: 3rem;
+  width: 100%;
+
+  .footer-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .side-element {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+    }
+
+    .middle-text {
+      color: $blue;
+      font-family: "Rubik", sans-serif;
+    }
+  }
+}
