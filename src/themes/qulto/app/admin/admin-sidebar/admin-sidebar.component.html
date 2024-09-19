@@ -1,5 +1,7 @@
 <nav
   class="navbar navbar-dark p-0 vh-100"
+  id="admin-sidebar"
+  [attr.aria-label]="'menu.header.admin.description' | translate"
   [ngClass]="{
     expanded: sidebarOpen,
     collapsed: sidebarClosed,
@@ -18,7 +20,6 @@
   (mouseenter)="handleMouseEnter($event)"
   (mouseleave)="handleMouseLeave($event)"
   role="navigation"
-  [attr.aria-label]="'menu.header.admin.description' | translate"
 >
   <div class="sidebar-top-level-items">
     <ul class="navbar-nav">

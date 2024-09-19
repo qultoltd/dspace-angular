@@ -10,8 +10,9 @@ import { FooterComponent } from './app/footer/footer.component';
 import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
 import { UserMenuComponent } from './app/shared/auth-nav-menu/user-menu/user-menu.component';
 import { LoginPageComponent } from './app/login-page/login-page.component';
-import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
+import { ThemedAdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
 import { ThemedNavbarComponent } from './app/navbar/navbar.component';
+import { RootComponent } from './app/root/root.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -28,8 +29,9 @@ const DECLARATIONS = [
   AuthNavMenuComponent,
   UserMenuComponent,
   LoginPageComponent,
-  AdminSidebarComponent,
-  ThemedNavbarComponent
+  ThemedAdminSidebarComponent,
+  ThemedNavbarComponent,
+  RootComponent
 ];
 
 @NgModule({
