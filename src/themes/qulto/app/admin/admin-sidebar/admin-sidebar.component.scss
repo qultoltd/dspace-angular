@@ -1,146 +1,136 @@
 :host {
-  --ds-icon-z-index: 10;
-  z-index: var(--ds-sidebar-z-index);
+  /* SIDEBAR SIZE AND POSITION */
 
+  /* Sidebar hierarchy:
+   § nav
+     § .sidebar-full-width-container (any OPTIONAL full width element with no horizontal margin or padding - it can be nested)
+       § .sidebar-section-wrapper
+         § .sidebar-fixed-element-wrapper
+         § .sidebar-collapsible-element-outer-wrapper
+           § .sidebar-collapsible-element-inner-wrapper
+             § .sidebar-item
+   */
+
+  // Sidebar position
   position: fixed;
   left: 0;
   top: 0;
-  height: 100vh;
-  flex: 1 1 auto;
+  z-index: var(--ds-sidebar-z-index);
 
-  nav {
-    background-color: $primary;
-    height: 100%;
-    flex-direction: column;
+  // Sidebar size and content position
+  nav#admin-sidebar {
+    max-width: var(
+      --ds-admin-sidebar-fixed-element-width
+    ); // Sidebar collapsed width
 
-    > div {
-      width: 100%;
-
-      &.sidebar-top-level-items {
-        flex: 1;
-        overflow: auto;
-        overflow-x: hidden;
-        @include dark-scrollbar;
-      }
-    }
-
-    &.collapsed {
-      .sidebar-collapsible {
-        margin-left: calc(-1 * 15rem);
-      }
-    }
-
-    .navbar-nav {
-      .admin-menu-header {
-        background-color: $dark;
-
-        .sidebar-section {
-          background-color: inherit;
-        }
-
-        .logo-wrapper {
-          img {
-            height: 20px;
-          }
-        }
-        .section-header-text {
-          line-height: 1.5;
-        }
-
-        .navbar-brand {
-          margin-right: 0;
-        }
-      }
-
-      ::ng-deep {
-        .sidebar-section-wrapper,
-        .sidebar-section {
-          display: flex;
-          align-content: stretch;
-          overflow-x: visible;
-          padding-top: var(--bs-spacer);
-          padding-bottom: var(--bs-spacer);
-          color: #ffffff80;
-          text-decoration: none;
-
-          &:focus-visible {
-            // since links fill the whole sidebar, we _inset_ the outline
-            outline-offset: -4px;
-
-            // replace padding with margins so it doesn't extend over the :focus-visible outline
-            //  → can't remove the padding altogether; the icon needs to fill out
-            //    the collapsed width of the sidebar for the slide animation to look decent.
-            .sidebar-fixed-element-wrapper,
-            .shortcut-icon {
-              padding-left: 0;
-              padding-right: 0;
-              margin-left: 1rem;
-              margin-right: 1rem;
-            }
-
-            .logo-wrapper {
-              margin-right: var(--bs-navbar-padding-x) !important;
-            }
-
-            .navbar-brand {
-              padding-top: 0;
-              padding-bottom: 0;
-              margin-top: var(--bs-navbar-brand-padding-y);
-              margin-bottom: var(--bs-navbar-brand-padding-y);
-            }
-          }
-
-          &:hover {
-            color: #fff;
-          }
-
-          .sidebar-fixed-element-wrapper,
-          .shortcut-icon {
-            background-color: inherit;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            z-index: var(--ds-icon-z-index);
-            align-self: baseline;
-          }
-
-          .sidebar-collapsible-element-outer-wrapper,
-          .sidebar-collapsible {
-            padding-left: 0;
-            padding-right: var(--bs-spacer);
-            width: 15rem;
-            position: relative;
-
-            .sidebar-collapsible-element-inner-wrapper,
-            .toggler-wrapper {
-              width: 15rem;
-              padding-right: var(--bs-spacer);
-            }
-
-            ul {
-              padding-top: var(--bs-spacer);
-
-              li a {
-                padding-left: var(--bs-spacer);
-              }
-            }
-          }
-
-          &.active > .sidebar-collapsible-element-outer-wrapper > .nav-link {
-            color: white;
-          }
-        }
-      }
-    }
-  }
-
-  .admin-section {
     display: flex;
-    align-content: stretch;
-    background-color: $dark;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    div#sidebar-top-level-items-container {
+      flex: 1 1 auto; // Fill available vertical space
+      overflow-x: hidden;
+      overflow-y: auto;
+      @include dark-scrollbar;
+    }
+
+    img#admin-sidebar-logo {
+      height: var(--ds-admin-sidebar-logo-height);
+    }
+
+    ::ng-deep {
+      // This class must be applied to any nested wrapper containing a sidebar section
+      .sidebar-full-width-container {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      // This class must be applied to the innermost block element containing a section or subsection link
+      // (it can be applied together with `sidebar-collapsible-element-inner-wrapper`)
+      .sidebar-item {
+        padding-top: var(--ds-admin-sidebar-item-padding);
+        padding-bottom: var(--ds-admin-sidebar-item-padding);
+      }
+
+      // These classes handle the collapsing behavior
+      .sidebar-section-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+
+        // These elements have fixed width and determine the width of the collapsed sidebar
+        & > .sidebar-fixed-element-wrapper {
+          min-width: var(--ds-admin-sidebar-fixed-element-width);
+          flex: 1 1 auto; // Fill available space
+
+          // Align the icons
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+
+        & > .sidebar-collapsible-element-outer-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-end; // make inner wrapper slide on the left when collapsing
+          max-width: calc(
+            100% - var(--ds-admin-sidebar-fixed-element-width)
+          ); // fill available space
+          padding-left: var(
+            --ds-dark-scrollbar-width
+          ); // leave room for scrollbar
+          overflow-x: hidden; // hide inner wrapper when sidebar is collapsed
+
+          // These elements have fixed width and slide on the left when the sidebar is collapsed
+          // Their content should fill all available space
+          & > .sidebar-collapsible-element-inner-wrapper {
+            min-width: calc(
+              var(--ds-admin-sidebar-collapsible-element-width) -
+                var(--ds-dark-scrollbar-width)
+            );
+            height: 100%;
+            padding-right: var(--ds-admin-sidebar-item-padding);
+          }
+        }
+      }
+    }
   }
 
-  .admin-logo {
-    margin-left: 1rem;
-    margin-right: 1rem;
+  /* SIDEBAR STYLE */
+
+  nav#admin-sidebar {
+    background-color: var(--ds-admin-sidebar-bg);
+
+    ::ng-deep {
+      color: white;
+
+      a {
+        color: var(--ds-admin-sidebar-link-color);
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          color: var(--ds-admin-sidebar-link-hover-color);
+        }
+      }
+    }
+
+    div#sidebar-header-container {
+      background-color: #092e56;
+      .sidebar-fixed-element-wrapper {
+        background-color: #092e56;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .browser-firefox-windows {
+    --ds-dark-scrollbar-width: 20px;
   }
 }
