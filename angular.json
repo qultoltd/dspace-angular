@@ -64,6 +64,11 @@
                 "input": "src/themes/qulto/styles/theme.scss",
                 "inject": false,
                 "bundleName": "qulto-theme"
+              },
+              {
+                "input": "src/themes/monguz/styles/theme.scss",
+                "inject": false,
+                "bundleName": "monguz-theme"
               }
             ],
             "scripts": [],

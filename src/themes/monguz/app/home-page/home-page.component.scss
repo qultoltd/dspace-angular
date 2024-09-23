@@ -1,0 +1,53 @@
+@include media-breakpoint-down(md) {
+  ds-themed-configuration-search-page + .container {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.community-list-wrapper {
+  background: #f6f7f9;
+}
+
+.recent-item-list {
+  margin-top: 1.5rem;
+}
+
+::ng-deep {
+  h2 {
+    font-family: "Varela", system-ui;
+    font-weight: 400;
+    color: var(--blue);
+  }
+
+  .lead {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #7e7d7d;
+  }
+
+  div {
+    &.mt-4 {
+      margin-top: 0 !important;
+
+      div {
+        &.border-bottom {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  ::ng-deep {
+    ::ng-deep {
+      ::ng-deep {
+        .pagination-info {
+          font-size: 1rem;
+          font-weight: 400;
+          color: #7e7d7d;
+        }
+      }
+    }
+  }
+}

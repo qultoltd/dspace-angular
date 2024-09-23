@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  margin-top: calc(-1 * var(--ds-content-spacing));
+  margin-bottom: calc(-1 * var(--ds-content-spacing));
+}
+
+.display-3 {
+  word-break: break-word;
+  font-size: 2rem;
+  color: var(--blue);
+  font-family: "Varela", system-ui;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.jumbotron {
+  height: 25rem;
+  display: grid;
+  align-items: center;
+  box-shadow: inset 0px 11px 8px -10px #ccc;
+  background-image: url("/assets/monguz/images/library.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .wrapper {
+    width: 100%;
+    background-color: rgba(#fff, 0.8);
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+a {
+  color: var(--ds-home-news-link-color);
+
+  @include hover {
+    color: var(--ds-home-news-link-hover-color);
+  }
+}

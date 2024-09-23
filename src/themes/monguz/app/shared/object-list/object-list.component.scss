@@ -1,0 +1,44 @@
+ds-selectable-list-item-control {
+  z-index: 1;
+}
+
+::ng-deep {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem 4rem;
+
+    li {
+      &.mb-4 {
+        margin-bottom: 0.5rem !important;
+        margin-top: 0.5rem !important;
+      }
+    }
+  }
+
+  ngb-pagination {
+    .pagination {
+      .page-item {
+        margin: 0 0.25rem;
+
+        .page-link {
+          border: none;
+          border-radius: 50%;
+          background-color: transparent;
+          color: #4b4b4b;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        &.active {
+          .page-link {
+            background-color: var(--blue);
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
