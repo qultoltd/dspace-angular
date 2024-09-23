@@ -8,6 +8,7 @@ import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-na
 import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
 import { NavbarComponent } from './app/navbar/navbar.component';
 import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
+import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -24,6 +25,7 @@ const DECLARATIONS = [
   HeaderNavbarWrapperComponent,
   NavbarComponent,
   FooterComponent,
+  LangSwitchComponent
 ];
 
 @NgModule({

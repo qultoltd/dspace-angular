@@ -3,39 +3,45 @@ ds-selectable-list-item-control {
 }
 
 ::ng-deep {
-  ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 2rem 4rem;
+  ::ng-deep {
+    #p-tl {
+      ul {
+        &.list-unstyled {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          padding: 2rem 4rem;
 
-    li {
-      &.mb-4 {
-        margin-bottom: 0.5rem !important;
-        margin-top: 0.5rem !important;
-      }
-    }
-  }
-
-  ngb-pagination {
-    .pagination {
-      .page-item {
-        margin: 0 0.25rem;
-
-        .page-link {
-          border: none;
-          border-radius: 50%;
-          background-color: transparent;
-          color: #4b4b4b;
-
-          &:focus {
-            outline: none;
+          li {
+            &.mb-4 {
+              margin-bottom: 0.5rem !important;
+              margin-top: 0.5rem !important;
+            }
           }
         }
+      }
+    }
 
-        &.active {
+    ngb-pagination {
+      .pagination {
+        .page-item {
+          margin: 0 0.25rem;
+
           .page-link {
-            background-color: var(--blue);
-            color: #fff;
+            border: none;
+            border-radius: 50%;
+            background-color: transparent;
+            color: #4b4b4b;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          &.active {
+            .page-link {
+              background-color: var(--blue);
+              color: #fff;
+            }
           }
         }
       }
