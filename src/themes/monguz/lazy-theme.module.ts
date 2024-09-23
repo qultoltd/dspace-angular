@@ -17,13 +17,15 @@ import { HomePageComponent } from './app/home-page/home-page.component';
 import { LoginPageComponent } from './app/login-page/login-page.component';
 import { ObjectListComponent } from './app/shared/object-list/object-list.component';
 import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
+import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
 
 const DECLARATIONS = [
   HomePageComponent,
   LoginPageComponent,
   AdminSidebarComponent,
   ObjectListComponent,
-  AuthNavMenuComponent
+  AuthNavMenuComponent,
+  FullItemPageComponent
 ];
 
 @NgModule({
