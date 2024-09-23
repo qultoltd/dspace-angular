@@ -13,12 +13,13 @@ import { LoginPageComponent } from './app/login-page/login-page.component';
 import { ThemedAdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
 import { ThemedNavbarComponent } from './app/navbar/navbar.component';
 import { RootComponent } from './app/root/root.component';
+import { TopLevelCommunityListComponent } from "./app/home-page/top-level-community-list/top-level-community-list.component"
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
  */
-const ENTRY_COMPONENTS = [];
+const ENTRY_COMPONENTS = [TopLevelCommunityListComponent];
 
 const DECLARATIONS = [
   ...ENTRY_COMPONENTS,
