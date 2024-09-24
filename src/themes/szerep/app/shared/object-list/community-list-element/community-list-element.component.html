@@ -1,0 +1,22 @@
+<div class="d-flex flex-row community-list">
+  <a
+    *ngIf="linkType !== linkTypes.None"
+    [target]="linkType === linkTypes.ExternalLink ? '_blank' : '_self'"
+    [attr.rel]="
+      linkType === linkTypes.ExternalLink ? 'noopener noreferrer' : null
+    "
+    [routerLink]="['/communities/' + object.id]"
+    class="lead"
+  >
+    <img class="mx-2" src="/assets/szerep/images/communityIcon.svg" />
+    {{ dsoNameService.getName(object) }}
+  </a>
+  <span *ngIf="linkType === linkTypes.None" class="lead">
+    {{ dsoNameService.getName(object) }}
+  </span>
+  <span
+    *ngIf="object.archivedItemsCount >= 0"
+    class="badge badge-pill badge-secondary align-self-center archived-items-lead"
+    >{{ object.archivedItemsCount }}</span
+  >
+</div>

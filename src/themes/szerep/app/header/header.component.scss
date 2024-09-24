@@ -1,0 +1,16 @@
+header {
+  background-color: #1d2441;
+
+  .logo {
+    height: 3rem;
+  }
+
+  nav {
+    gap: 0.25rem;
+
+    .navbar-toggler {
+      border: none;
+      color: var(--ds-header-icon-color);
+    }
+  }
+}
