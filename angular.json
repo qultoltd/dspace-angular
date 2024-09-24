@@ -61,9 +61,9 @@
                 "bundleName": "dspace-theme"
               },
               {
-                "input": "src/themes/monguz/styles/theme.scss",
+                "input": "src/themes/qulto/styles/theme.scss",
                 "inject": false,
-                "bundleName": "monguz-theme"
+                "bundleName": "qulto-theme"
               }
             ],
             "scripts": [],

@@ -4,12 +4,12 @@ rest:
   port: 443
   nameSpace: /server
 themes:
-  - name: monguz
+  - name: qulto
     headTags:
       - tagName: link
         attributes:
           rel: icon
-          href: /assets/monguz/images/qultoIcon.svg
+          href: /assets/qulto/images/qultoIcon.svg
           sizes: image/svg+xml
 homePage:
   topLevelCommunityList:

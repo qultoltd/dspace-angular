@@ -17,7 +17,11 @@
     ngbDropdownToggle
     tabindex="0"
   >
-    <img src="/assets/monguz/images/langIcon.svg" />
+    <div [ngSwitch]="currentLang">
+      <img *ngSwitchCase="'hu'" src="/assets/qulto/images/huFlagIcon.svg" />
+      <img *ngSwitchCase="'en'" src="/assets/qulto/images/enFlagIcon.svg" />
+      <i *ngSwitchDefault class="fas fa-globe-asia fa-lg fa-fw"></i>
+    </div>
   </a>
   <ul
     ngbDropdownMenu

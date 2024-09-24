@@ -48,3 +48,27 @@ ds-selectable-list-item-control {
     }
   }
 }
+
+/** Mobile menu styling **/
+@media screen and (max-width: (map-get($grid-breakpoints, md)-0.02)) {
+  ::ng-deep {
+    ::ng-deep {
+      #p-tl {
+        ul {
+          &.list-unstyled {
+            display: grid;
+            grid-template-columns: none;
+            justify-content: center;
+
+            li {
+              &.mb-4 {
+                margin-bottom: 0.5rem !important;
+                margin-top: 0.5rem !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
