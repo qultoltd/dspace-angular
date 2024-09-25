@@ -7,6 +7,23 @@
   outline: none;
 }
 
-.btn.btn-primary:focus {
-  outline: none;
+.btn.btn-secondary:focus,
+.btn.btn-primary:focus,
+.btn:focus,
+*:focus-visible,
+*:focus {
+  outline: none !important;
+}
+
+.lead {
+  font-weight: 400;
+}
+
+.badge {
+  font-weight: 500;
+}
+
+a,
+.btn-link {
+  color: var(--primary);
 }
