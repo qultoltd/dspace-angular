@@ -21,7 +21,6 @@ import { FullItemPageComponent } from './app/item-page/full/full-item-page.compo
 import { RegisterEmailFormComponent } from './app/register-email-form/register-email-form.component';
 import { AccessStatusBadgeComponent } from './app/shared/object-collection/shared/badges/access-status-badge/access-status-badge.component';
 
-
 const DECLARATIONS = [
   HomePageComponent,
   LoginPageComponent,

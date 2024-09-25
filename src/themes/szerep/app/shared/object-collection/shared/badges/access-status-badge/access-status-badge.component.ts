@@ -24,15 +24,13 @@ export class AccessStatusBadgeComponent extends BaseComponent {
 
   ngOnInit(): void {
     super.ngOnInit();
-    const accessMetadata = this.object.metadata?.["dc.contributor.author"]?.[0]?.value;
+    const accessMetadata = this.object.metadata?.["dc.rights.access"]?.[0]?.value;
     switch(accessMetadata){
-      // case "SZE-EK meghatározott területén elérhető": {
-        case "Raine, Rosalind": {
+        case "SZE-EK meghatározott területén elérhető": {
         this.accessStatus = "limited";
         break;
       }
-      // case "Nyilvánosan hozzáférhető":{
-        case "Wioland, Hugo":{
+        case "Nyilvánosan hozzáférhető": {
         this.accessStatus = "public";
         break;
       }
