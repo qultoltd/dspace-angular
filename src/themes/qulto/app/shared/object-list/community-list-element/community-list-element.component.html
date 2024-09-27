@@ -1,11 +1,18 @@
 <div>
   <div *ngIf="layout === 'cards'" class="d-flex flex-row community-card">
-    <div class="image-container">
-      <img
-        [src]="logoUrl"
-        alt="Logo"
-        *ngIf="logoUrl$ | async as logoUrl; else defaultLogo"
-      />
+    <div class="image-container" *ngVar="isLoading$ | async as isLoading">
+      <div *ngIf="isLoading" class="thumbnail-loading">
+        <ds-loading [spinner]="true"></ds-loading>
+      </div>
+      <ng-container *ngVar="src$ | async as src">
+        <img
+          *ngIf="src !== null"
+          class="thumbnail-content img-fluid"
+          [ngClass]="{ 'd-none': isLoading }"
+          [src]="src | dsSafeUrl"
+          alt="Logo"
+        />
+      </ng-container>
     </div>
     <div class="name">{{ dsoNameService.getName(object) }}</div>
     <div class="description">{{ description }}</div>
@@ -43,7 +50,3 @@
     >{{ object.archivedItemsCount }}</span
   >
 </div>
-
-<ng-template #defaultLogo>
-  <img src="/assets/qulto/images/default.svg" alt="Logo" />
-</ng-template>

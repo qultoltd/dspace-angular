@@ -1,10 +1,13 @@
-import { NgIf, AsyncPipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { BehaviorSubject, map } from 'rxjs';
+import { BehaviorSubject, firstValueFrom } from 'rxjs';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
+import { ThemedLoadingComponent } from 'src/app/shared/loading/themed-loading.component';
+import { SafeUrlPipe } from 'src/app/shared/utils/safe-url-pipe';
+import { VarDirective } from 'src/app/shared/utils/var.directive';
 
 import { Community } from '../../../../../../app/core/shared/community.model';
 import { Context } from '../../../../../../app/core/shared/context.model';
@@ -21,7 +24,7 @@ import { CommunityListElementComponent as BaseComponent } from '../../../../../.
   templateUrl: './community-list-element.component.html',
   // templateUrl: '../../../../../../app/shared/object-list/community-list-element/community-list-element.component.html',
   standalone: true,
-  imports: [NgIf, AsyncPipe, RouterLink, HttpClientModule],
+  imports: [ CommonModule, RouterLink, HttpClientModule, ThemedLoadingComponent, SafeUrlPipe, VarDirective],
 })
 /**
  * Component representing a list element for a community
@@ -29,28 +32,34 @@ import { CommunityListElementComponent as BaseComponent } from '../../../../../.
 @listableObjectComponent(Community, ViewMode.ListElement)
 export class CommunityListElementComponent extends BaseComponent {
 
-  logoUrl$ = new BehaviorSubject<string>('');
-  description: string;
+  src$ = new BehaviorSubject<string>(undefined);
+  isLoading$ = new BehaviorSubject(true);
   layout = environment.homePage.topLevelCommunityList.layout;
+  description: string;
 
-  constructor(private http: HttpClient, dsoNameService: DSONameService) {super(dsoNameService)}
-
-  ngOnInit(): void {
-    this.getDataFromBackend()
-    this.description = this.object.metadata?.["dc.description.abstract"]?.[0]?.value
+  constructor(private http: HttpClient, dsoNameService: DSONameService) {
+    super(dsoNameService)
   }
 
-  getDataFromBackend(): void {
-    this.http.get<any>(this.object._links.logo.href)
-      .pipe(
-        map(response => response?._links.content.href) 
-      )
-      .subscribe(
-        {
-          next: (logoUrl: string) => {
-            this.logoUrl$.next(logoUrl);
-          }
-        }
-      );
+  ngOnChanges(): void {
+    this.description = this.object.metadata?.["dc.description.abstract"]?.[0]?.value;
+    this.getLogoUrl().then(logoUrl => {
+      if (logoUrl) {
+        this.src$.next(logoUrl);
+      } else{
+        this.src$.next("/assets/qulto/images/default.svg");
+      }
+
+      this.isLoading$.next(false);
+    });
+  }
+
+  async getLogoUrl(): Promise<string | undefined> {
+    try {
+      const response = await firstValueFrom(this.http.get<any>(this.object._links.logo.href));
+      return response?._links.content.href;
+    } catch (error) {
+      return undefined;
+    }
   }
 }
