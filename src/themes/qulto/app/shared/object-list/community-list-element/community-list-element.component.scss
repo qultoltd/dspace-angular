@@ -1,9 +1,55 @@
-.community-list {
+.community-list-element {
   a {
     margin-bottom: 0;
     margin-right: 0.5rem;
     color: #4b4b4b;
     font-size: 1.25rem;
     font-weight: 400;
+  }
+}
+
+.community-card {
+  display: grid !important;
+  grid-template-rows: 15rem auto 1fr auto;
+  height: 35rem;
+  width: 16rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  gap: 1rem;
+
+  .image-container {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: "Varela", system-ui;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary);
+  }
+
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: justify;
+    color: #4b4b4b;
+  }
+
+  a {
+    button {
+      width: 100%;
+    }
   }
 }

@@ -1,4 +1,27 @@
-<div class="d-flex flex-row community-list">
+<div>
+  <div *ngIf="layout === 'cards'" class="d-flex flex-row community-card">
+    <div class="image-container">
+      <img
+        [src]="logoUrl"
+        alt="Logo"
+        *ngIf="logoUrl$ | async as logoUrl; else defaultLogo"
+      />
+    </div>
+    <div class="name">{{ dsoNameService.getName(object) }}</div>
+    <div class="description">{{ description }}</div>
+    <a
+      *ngIf="linkType !== linkTypes.None"
+      [target]="linkType === linkTypes.ExternalLink ? '_blank' : '_self'"
+      [attr.rel]="
+        linkType === linkTypes.ExternalLink ? 'noopener noreferrer' : null
+      "
+      [routerLink]="['/communities/' + object.id]"
+    >
+      <button class="btn btn-primary">Megtekintés</button>
+    </a>
+  </div>
+</div>
+<div *ngIf="layout === 'list'" class="d-flex flex-row community-list-element">
   <a
     *ngIf="linkType !== linkTypes.None"
     [target]="linkType === linkTypes.ExternalLink ? '_blank' : '_self'"
@@ -20,3 +43,7 @@
     >{{ object.archivedItemsCount }}</span
   >
 </div>
+
+<ng-template #defaultLogo>
+  <img src="/assets/qulto/images/default.svg" alt="Logo" />
+</ng-template>

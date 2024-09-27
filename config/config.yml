@@ -15,4 +15,6 @@ homePage:
   topLevelCommunityList:
     # No. of communities to list per page on the home page
     # This will always round to the nearest number from the list of page sizes. e.g. if you set it to 7 it'll use 10
-    pageSize: 8
+    pageSize: 4
+    # layout can be "cards" or "list"
+    layout: "cards"

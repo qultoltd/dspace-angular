@@ -4,6 +4,7 @@ import {
   NgIf,
 } from '@angular/common';
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 import { ImportableListItemControlComponent } from '../../../../../app/shared/object-collection/shared/importable-list-item-control/importable-list-item-control.component';
 import { ListableObjectComponentLoaderComponent } from '../../../../../app/shared/object-collection/shared/listable-object/listable-object-component-loader.component';
@@ -20,10 +21,13 @@ import { BrowserOnlyPipe } from '../../../../../app/shared/utils/browser-only.pi
   selector: 'ds-themed-object-list',
   styleUrls: ['./object-list.component.scss'],
   // styleUrls: ['../../../../../app/shared/object-list/object-list.component.scss'],
-  // templateUrl: './object-list.component.html'
-  templateUrl: '../../../../../app/shared/object-list/object-list.component.html',
+  templateUrl: './object-list.component.html',
+  // templateUrl: '../../../../../app/shared/object-list/object-list.component.html',
   imports: [PaginationComponent, NgIf, NgClass, NgFor, SelectableListItemControlComponent, ImportableListItemControlComponent, ListableObjectComponentLoaderComponent, BrowserOnlyPipe],
   standalone: true,
 })
 
-export class ObjectListComponent extends BaseComponent {}
+export class ObjectListComponent extends BaseComponent {
+  layout = environment.homePage.topLevelCommunityList.layout;
+
+}

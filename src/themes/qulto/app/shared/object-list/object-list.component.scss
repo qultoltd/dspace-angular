@@ -6,7 +6,20 @@ ds-selectable-list-item-control {
   ::ng-deep {
     #p-tl {
       ul {
-        &.list-unstyled {
+        &.cards {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          li {
+            &.mb-4 {
+              margin-bottom: 0.5rem !important;
+              margin-top: 0.5rem !important;
+            }
+          }
+        }
+
+        &.list {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           padding: 2rem 4rem;
