@@ -11,6 +11,7 @@
           [ngClass]="{ 'd-none': isLoading }"
           [src]="src | dsSafeUrl"
           alt="Logo"
+          (load)="successHandler()"
         />
       </ng-container>
     </div>

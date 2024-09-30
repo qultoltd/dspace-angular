@@ -49,8 +49,6 @@ export class CommunityListElementComponent extends BaseComponent {
       } else{
         this.src$.next("/assets/qulto/images/default.svg");
       }
-
-      this.isLoading$.next(false);
     });
   }
 
@@ -61,5 +59,13 @@ export class CommunityListElementComponent extends BaseComponent {
     } catch (error) {
       return undefined;
     }
+  }
+
+  /**
+   * Stop the loading animation once the thumbnail is successfully loaded
+   */
+  successHandler() {
+    console.log("success")
+    this.isLoading$.next(false);
   }
 }

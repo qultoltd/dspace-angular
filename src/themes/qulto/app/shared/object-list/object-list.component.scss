@@ -9,7 +9,7 @@ ds-selectable-list-item-control {
         &.cards {
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-between;
+          gap: 1.75rem;
 
           li {
             &.mb-4 {
