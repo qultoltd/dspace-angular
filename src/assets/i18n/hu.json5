@@ -1,5 +1,4 @@
 {
-
   "401.help": "Nincs jogosultsága az oldal eléréséhez. Az alábbi gombbal vissza tud lépni a főoldalra.",
 
   "401.link.home-page": "Vissza a főoldalra",
@@ -4836,7 +4835,7 @@
 
   "thumbnail.person.placeholder": "No Profile Picture Available",
 
-  title: "DSpace",
+  "title": "DSpace",
 
   "vocabulary-treeview.header": "Hierarchikus fa nézet",
 

@@ -7,15 +7,15 @@ import { HeaderComponent } from './app/header/header.component';
 import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-navbar-wrapper.component';
 import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
 import { NavbarComponent } from './app/navbar/navbar.component';
-import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
+import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
  */
 const ENTRY_COMPONENTS = [
-  CommunityListElementComponent
+  CommunityListElementComponent,
 ];
 
 const DECLARATIONS = [
@@ -25,7 +25,7 @@ const DECLARATIONS = [
   HeaderNavbarWrapperComponent,
   NavbarComponent,
   FooterComponent,
-  LangSwitchComponent
+  LangSwitchComponent,
 ];
 
 @NgModule({

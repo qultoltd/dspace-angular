@@ -14,10 +14,10 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { RootModule } from '../../app/root.module';
 import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
-import { LoginPageComponent } from './app/login-page/login-page.component';
-import { ObjectListComponent } from './app/shared/object-list/object-list.component';
-import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
+import { LoginPageComponent } from './app/login-page/login-page.component';
+import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
+import { ObjectListComponent } from './app/shared/object-list/object-list.component';
 
 const DECLARATIONS = [
   HomePageComponent,
@@ -25,7 +25,7 @@ const DECLARATIONS = [
   AdminSidebarComponent,
   ObjectListComponent,
   AuthNavMenuComponent,
-  FullItemPageComponent
+  FullItemPageComponent,
 ];
 
 @NgModule({

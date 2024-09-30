@@ -1,13 +1,19 @@
 import { CommonModule } from '@angular/common';
+import {
+  HttpClient,
+  HttpClientModule,
+} from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { BehaviorSubject, firstValueFrom } from 'rxjs';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import {
+  BehaviorSubject,
+  firstValueFrom,
+} from 'rxjs';
 import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
 import { ThemedLoadingComponent } from 'src/app/shared/loading/themed-loading.component';
 import { SafeUrlPipe } from 'src/app/shared/utils/safe-url-pipe';
 import { VarDirective } from 'src/app/shared/utils/var.directive';
+import { environment } from 'src/environments/environment';
 
 import { Community } from '../../../../../../app/core/shared/community.model';
 import { Context } from '../../../../../../app/core/shared/context.model';
@@ -24,7 +30,14 @@ import { CommunityListElementComponent as BaseComponent } from '../../../../../.
   templateUrl: './community-list-element.component.html',
   // templateUrl: '../../../../../../app/shared/object-list/community-list-element/community-list-element.component.html',
   standalone: true,
-  imports: [ CommonModule, RouterLink, HttpClientModule, ThemedLoadingComponent, SafeUrlPipe, VarDirective],
+  imports: [
+    CommonModule,
+    RouterLink,
+    HttpClientModule,
+    ThemedLoadingComponent,
+    SafeUrlPipe,
+    VarDirective,
+  ],
 })
 /**
  * Component representing a list element for a community
@@ -38,16 +51,16 @@ export class CommunityListElementComponent extends BaseComponent {
   description: string;
 
   constructor(private http: HttpClient, dsoNameService: DSONameService) {
-    super(dsoNameService)
+    super(dsoNameService);
   }
 
   ngOnChanges(): void {
-    this.description = this.object.metadata?.["dc.description.abstract"]?.[0]?.value;
+    this.description = this.object.metadata?.['dc.description.abstract']?.[0]?.value;
     this.getLogoUrl().then(logoUrl => {
       if (logoUrl) {
         this.src$.next(logoUrl);
-      } else{
-        this.src$.next("/assets/qulto/images/default.svg");
+      } else {
+        this.src$.next('/assets/qulto/images/default.svg');
       }
     });
   }
@@ -65,7 +78,6 @@ export class CommunityListElementComponent extends BaseComponent {
    * Stop the loading animation once the thumbnail is successfully loaded
    */
   successHandler() {
-    console.log("success")
     this.isLoading$.next(false);
   }
 }
