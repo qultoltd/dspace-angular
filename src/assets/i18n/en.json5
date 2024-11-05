@@ -1,4 +1,5 @@
 {
+
   "401.help": "You're not authorized to access this page. You can use the button below to get back to the home page.",
 
   "401.link.home-page": "Take me to the home page",
@@ -5583,7 +5584,7 @@
 
   "thumbnail.person.placeholder": "No Profile Picture Available",
 
-  "title": "DSpace",
+  title: "DSpace",
 
   "vocabulary-treeview.header": "Hierarchical tree view",
 
