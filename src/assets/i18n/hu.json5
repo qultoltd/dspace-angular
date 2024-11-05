@@ -9359,7 +9359,7 @@
   "workspace-item.delete.notification.success.title": "Törölve",
 
   // "workspace-item.delete.title": "This workspace item was successfully deleted",
-  "workspace-item.delete.title": "A munkaterületi tárgy sikeresen törölve lett"
+  "workspace-item.delete.title": "A munkaterületi tárgy sikeresen törölve lett",
 
   // "workspace-item.delete.notification.error.title": "Something went wrong",
   "workspace-item.delete.notification.error.title": "Hiba történt",
