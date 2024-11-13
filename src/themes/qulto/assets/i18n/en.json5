@@ -1,7 +1,7 @@
 {
-  "qulto.home.welcome.title": "Welcome at the Qulto Repozitórium page!",
+  "qulto.home.welcome.title": "Welcome at the {{ dspaceName }} page!",
 
-  "qulto.home.welcome.description": "The repozitory is a digital storage for electronic documents, is used for archiving and making documents accessible.",
+  "qulto.home.welcome.description": "{{ dspaceName }} is a digital storage for electronic documents, designed for archiving and making documents accessible.",
 
-  "qulto.home.welcome.functions": "You can search and browse collections within the categories.",
+  "qulto.home.welcome.functions": "Its purpose is to provide researchers, educators, and interested parties with easy access to scientific and professional materials, promoting the free flow of knowledge and the wider dissemination of the work of the academic community.",
 }

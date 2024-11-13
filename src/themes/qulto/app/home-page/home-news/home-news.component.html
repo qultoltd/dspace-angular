@@ -4,11 +4,11 @@
       <div class="d-flex flex-wrap">
         <div>
           <h5 class="display-3">
-            {{ "qulto.home.welcome.title" | translate }}
+            {{ "qulto.home.welcome.title" | translate :  { dspaceName : dspaceName } }}
           </h5>
         </div>
       </div>
-      <p>{{ "qulto.home.welcome.description" | translate }}</p>
+      <p>{{ "qulto.home.welcome.description" | translate :  { dspaceName : dspaceName } }}</p>
       <p>{{ "qulto.home.welcome.functions" | translate }}</p>
     </div>
   </div>
