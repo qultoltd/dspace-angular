@@ -1,0 +1,86 @@
+nav.navbar {
+  align-items: baseline;
+  border-bottom: 0;
+  padding-bottom: 0;
+
+  ::ng-deep {
+    .ds-menu-item-wrapper {
+      .ds-menu-item {
+        color: var(--ds-navbar-link-color);
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+
+        &:hover {
+          text-decoration: none;
+          color: var(--ds-navbar-link-color-hover);
+        }
+      }
+    }
+
+    #expandable-navbar-section-browse_global {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+
+      .ds-menu-item {
+        padding: 0;
+      }
+
+      a {
+        color: var(--ds-navbar-link-color);
+      }
+
+      #browseDropdown {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .dropdown-menu {
+        background-color: #1d2441;
+        div {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+/** Mobile menu styling **/
+@media screen and (max-width: (map-get($grid-breakpoints, md)-0.02)) {
+  .navbar {
+    width: 100%;
+    background-color: #1d2441;
+    color: var(--ds-navbar-link-color);
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+
+    &.open {
+      top: 4rem;
+      right: 0;
+      height: auto;
+      min-height: 100vh; //doesn't matter because wrapper is sticky
+      z-index: 999;
+
+      .navbar-nav {
+        row-gap: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, md)) {
+  .reset-padding-md {
+    margin-left: calc(var(--bs-spacer) / -2);
+    margin-right: calc(var(--bs-spacer) / -2);
+  }
+}
+
+.navbar-expand-md.navbar-container {
+  @media screen and (max-width: (map-get($grid-breakpoints, md)-0.02)) {
+    > .navbar-inner-container {
+      padding: 0 var(--bs-spacer);
+    }
+    padding: 0;
+  }
+}

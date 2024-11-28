@@ -1048,7 +1048,7 @@
 
   "browse.startsWith.choose_year.label": "Choose the issue year",
 
-  "browse.startsWith.jump": "Eremények szűrése év vagy hónap szerint",
+  "browse.startsWith.jump": "Ugrás a tartalom egy pontjához",
 
   "browse.startsWith.months.april": "Április",
 
@@ -1906,7 +1906,7 @@
 
   "forgot-email.form.header": "Elfelejtettem a jelszót",
 
-  "forgot-email.form.info": "Írja be a fiókhoz rendelt e-mail címet.",
+  "forgot-email.form.info": "Amennyiben Ön már regisztrált, de elfelejtette a jelszavát, kérjük adja meg a belépéshez használt e-mail címet.",
 
   "forgot-email.form.email": "E-mail cím *",
 
@@ -2110,11 +2110,11 @@
 
   "home.breadcrumbs": "Főoldal",
 
-  "home.search-form.placeholder": "Keresés az adattárban ...",
+  "home.search-form.placeholder": "Keresés a repozitóriumban ...",
 
   "home.title": "Főoldal",
 
-  "home.top-level-communities.head": "Kategóriák",
+  "home.top-level-communities.head": "Kategóriák a SZERep-ben",
 
   "home.top-level-communities.help": "Válasszon ki egy kategóriát, hogy böngéssze a gyűjteményeit.",
 
@@ -2654,9 +2654,17 @@
 
   "item.search.title": "DSpace Angular :: Elem Keresése",
 
-  "item.truncatable-part.show-more": "Show more",
+  "item.truncatable-part.show-more": "Részletek",
 
-  "item.truncatable-part.show-less": "Collapse",
+  "item.truncatable-part.show-less": "Kevesebb",
+
+  "item.qa-event-notification.check.notification-info": "There are {{num}} pending suggestions related to your account",
+
+  "item.qa-event-notification-info.check.button": "View",
+
+  "mydspace.qa-event-notification.check.notification-info": "There are {{num}} pending suggestions related to your account",
+
+  "mydspace.qa-event-notification-info.check.button": "View",
 
   "item.qa-event-notification.check.notification-info": "There are {{num}} pending suggestions related to your account",
 
@@ -5580,7 +5588,7 @@
 
   "vocabulary-treeview.header": "Hierarchikus fa nézet",
 
-  "vocabulary-treeview.load-more": "Továbbiak betöltése",
+  "vocabulary-treeview.load-more": "Továbbiak",
 
   "vocabulary-treeview.search.form.reset": "Reset",
 
@@ -6838,9 +6846,67 @@
 
   "item.page.cc.license.disclaimer": "Except where otherwised noted, this item's license is described as",
 
-  "qulto.home.welcome.title": "Üdvözöljük a {{ dspaceName }} oldalán!",
+  "qulto.home.welcome.title": "Köszöntjük a SZERep - Széchenyi István Egyetem Repozitórium oldalán!",
 
-  "qulto.home.welcome.description": "A {{ dspaceName }} elektronikus dokumentumok digitális tárhelye, archiválásra és a dokumentumok hozzáférhetővé tételére szolgál.",
+  "qulto.home.welcome.description": "A Széchenyi István Egyetem Repozitórium (továbbiakban: SZERep) a Széchenyi István Egyetem tudományos tevékenységének digitális archívuma.",
 
-  "qulto.home.welcome.functions": "Célja, hogy biztosítsa a kutatók, oktatók és érdeklődők számára a tudományos és szakmai anyagok könnyű elérhetőségét, elősegítve a tudás szabad áramlását és a tudományos közösség munkájának szélesebb körű terjesztését.",
+  "qulto.home.welcome.functions": "Célja az intézményben zajló tudományos tevékenység eredményeként született dokumentumok tárolása, hosszútávú megőrzése, valamint a minél szélesebb körű hozzáférhetőség biztosítása a szerzői jogok, valamint a kiadói szerződésekben foglalt szabályok figyelembevételével.",
+
+  "browse.search-form.placeholder": "Adja meg az első pár karaktert",
+
+  "dc.title.subtitle": "Alcím",
+
+  "dc.title.other": "Egyéb cím",
+
+  "dc.title": "Cím",
+
+  "dc.contributor.author": "Szerző",
+
+  "dc.contributor.advisor": "Konzulens/Témavezető",
+
+  "dc.contributor.description": "Leírás",
+
+  "dc.contributor.extadvisor": "Külső konzulens",
+
+  "dc.contributor.faculty": "Kar",
+
+  "dc.contributor.inst": "Tanszék",
+
+  "dc.contributor.org": "Intézmény",
+
+  "dc.contributor.workplace": "Külső konzules munkahelye",
+
+  "dc.date.accessioned": "Utolsó hozzáférés ideje",
+
+  "dc.date.available": "Elérhetőség dátuma",
+
+  "dc.date.catalog": "Állományba vétel",
+
+  "dc.date.issued": "Megjelenés éve",
+
+  "dc.date.recordid": "Főnaplószám",
+
+  "dc.description.type": "Képzési szint",
+
+  "dc.identifier.uri": "URI",
+
+  "dc.language.iso": "Nyelv",
+
+  "dc.rights.access": "Hozzáférés",
+
+  "dc.subject": "Tárgyszó",
+
+  "dc.type": "Dokumentumtípus",
+
+  "dc.format.extent": "Terjedelem",
+
+  "dc.identifier.doi": "DOI",
+
+  "dc.contributor.doctschool": "Doktori iskola",
+
+  "dc.description.appendix": "Melléklet",
+
+  "status.badge.limited": "Korlátozottan hozzáférhető",
+
+  "status.badge.public": "Szabadon hozzáférhető",
 }

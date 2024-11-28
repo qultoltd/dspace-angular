@@ -3,14 +3,16 @@ rest:
   host: sandbox.dspace.org
   port: 443
   nameSpace: /server
+
 themes:
-  - name: qulto
+  - name: szerep
     headTags:
       - tagName: link
         attributes:
           rel: icon
-          href: /assets/qulto/images/qultoIcon.svg
+          href: /assets/szerep/images/qultoIcon.svg
           sizes: image/svg+xml
+
 homePage:
   topLevelCommunityList:
     # No. of communities to list per page on the home page
@@ -18,6 +20,10 @@ homePage:
     pageSize: 4
     # layout can be "cards" or "list"
     layout: "list"
+
+item:
+  showAccessStatuses: true
+
 
 #  Default Language in which the UI will be rendered if the user's browser language is not an active language
 defaultLanguage: hu
@@ -31,4 +37,3 @@ languages:
   - code: en
     label: English
     active: true
-    

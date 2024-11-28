@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { EagerThemeModule as QultoEagerThemeModule } from './qulto/eager-theme.module';
+import { EagerThemeModule as SzerepEagerThemeModule } from './szerep/eager-theme.module';
 
 
 /**
@@ -11,7 +11,7 @@ import { EagerThemeModule as QultoEagerThemeModule } from './qulto/eager-theme.m
  * Themes that aren't in use should not be imported here so they don't take up unnecessary space in the main bundle.
  */
 @NgModule({
-  imports: [QultoEagerThemeModule],
+  imports: [SzerepEagerThemeModule],
 })
 export class EagerThemesModule {
 }
