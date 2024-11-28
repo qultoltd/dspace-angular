@@ -6860,6 +6860,8 @@
 
   "dc.title": "Title",
 
+  "dc.contributor.author": "Author",
+
   "dc.contributor.advisor": "Advisor",
 
   "dc.contributor.description": "Description",
@@ -6903,8 +6905,6 @@
   "dc.contributor.doctschool": "Doctoral school",
 
   "dc.description.appendix": "Appendix",
-
-  "dc.contributor.author": "Author",
 
   "status.badge.limited": "Limited access",
 

@@ -1,4 +1,12 @@
 {
+  "browse.startsWith.jump": "Jump to a point in the content",
+
+  "forgot-email.form.info": "If you have already registered but have forgotten your password, please enter the e-mail address used to log in.",
+
+  "home.top-level-communities.head": "Communities in SZERep",
+
+  "browse.search-form.placeholder": "Enter the first few characters",  
+
   "qulto.home.welcome.title": "Welcome to the SZERep - Széchenyi István University Repository page!",
 
   "qulto.home.welcome.description": "The Széchenyi István University Repository (hereinafter: SZERep) is a digital archive of the scientific activities of Széchenyi István University.",
