@@ -6024,13 +6024,13 @@
   "publication.search.title": "DSpace Angular :: Publikáció keresése",
 
   // "media-viewer.next": "Next",
-  "media-viewer.next": "Next",
+  "media-viewer.next": "Következő",
 
   // "media-viewer.previous": "Previous",
   "media-viewer.previous": "Previous",
 
   // "media-viewer.playlist": "Playlist",
-  "media-viewer.playlist": "Playlist",
+  "media-viewer.playlist": "Lejászólista",
 
   // "suggestion.loading": "Loading ...",
   "suggestion.loading": "Loading ...",
