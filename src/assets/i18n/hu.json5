@@ -88,7 +88,7 @@
   "admin.registries.bitstream-formats.create.failure.content": "Bitfolyam létrehozása közben hiba történt",
 
   // "admin.registries.bitstream-formats.create.failure.head": "Failure",
-  "admin.registries.bitstream-formats.create.failure.head": "Nem sikerült",
+  "admin.registries.bitstream-formats.create.failure.head": "Hiba történt",
 
   // "admin.registries.bitstream-formats.create.head": "Create bitstream format",
   "admin.registries.bitstream-formats.create.head": "Bitfolyam formátum létrehozása",
@@ -103,10 +103,10 @@
   "admin.registries.bitstream-formats.create.success.head": "Sikerült",
 
   // "admin.registries.bitstream-formats.delete.failure.amount": "Failed to remove {{ amount }} format(s)",
-  "admin.registries.bitstream-formats.delete.failure.amount": "A {{ amount }} formátum(ok) törlése nem sikerült",
+  "admin.registries.bitstream-formats.delete.failure.amount": "A {{ amount }} formátum(ok) törlése sikertelen",
 
   // "admin.registries.bitstream-formats.delete.failure.head": "Failure",
-  "admin.registries.bitstream-formats.delete.failure.head": "Nem sikerült",
+  "admin.registries.bitstream-formats.delete.failure.head": "Hiba történt",
 
   // "admin.registries.bitstream-formats.delete.success.amount": "Successfully removed {{ amount }} format(s)",
   "admin.registries.bitstream-formats.delete.success.amount": "A {{ amount }} formátum(ok) sikeresen törölve",
@@ -139,7 +139,7 @@
   "admin.registries.bitstream-formats.edit.failure.content": "Bitfolyam szerkesztése közben hiba történt.",
 
   // "admin.registries.bitstream-formats.edit.failure.head": "Failure",
-  "admin.registries.bitstream-formats.edit.failure.head": "Nem sikerült",
+  "admin.registries.bitstream-formats.edit.failure.head": "Hiba történt",
 
   // "admin.registries.bitstream-formats.edit.head": "Bitstream format: {{ format }}",
   // TODO New key - Add a translation
@@ -164,7 +164,7 @@
   "admin.registries.bitstream-formats.edit.shortDescription.label": "Név",
 
   // "admin.registries.bitstream-formats.edit.success.content": "The bitstream format was successfully edited.",
-  "admin.registries.bitstream-formats.edit.success.content": "Bitfolyam formátum szerkesztése sikerült.",
+  "admin.registries.bitstream-formats.edit.success.content": "Bitfolyam formátum szerkesztése sikeres.",
 
   // "admin.registries.bitstream-formats.edit.success.head": "Success",
   "admin.registries.bitstream-formats.edit.success.head": "Sikerült",
@@ -329,13 +329,13 @@
   "admin.registries.schema.notification.created": "Metaadat séma létrehozása sikerült \"{{prefix}}\"",
 
   // "admin.registries.schema.notification.deleted.failure": "Failed to delete {{amount}} metadata schemas",
-  "admin.registries.schema.notification.deleted.failure": "A {{amount}} metaadat sémák törlése nem sikerült",
+  "admin.registries.schema.notification.deleted.failure": "A {{amount}} metaadat sémák törlése sikertelen",
 
   // "admin.registries.schema.notification.deleted.success": "Successfully deleted {{amount}} metadata schemas",
-  "admin.registries.schema.notification.deleted.success": "A {{amount}} metaadat sémák törlése sikerült",
+  "admin.registries.schema.notification.deleted.success": "A {{amount}} metaadat sémák törlése sikeres",
 
   // "admin.registries.schema.notification.edited": "Successfully edited metadata schema \"{{prefix}}\"",
-  "admin.registries.schema.notification.edited": "Metaadat séma szerkesztése sikerült \"{{prefix}}\"",
+  "admin.registries.schema.notification.edited": "Metaadat séma szerkesztése sikeres \"{{prefix}}\"",
 
   // "admin.registries.schema.notification.failure": "Error",
   "admin.registries.schema.notification.failure": "Hiba",
@@ -344,13 +344,13 @@
   "admin.registries.schema.notification.field.created": "Metaadat mező létrehozva\"{{field}}\"",
 
   // "admin.registries.schema.notification.field.deleted.failure": "Failed to delete {{amount}} metadata fields",
-  "admin.registries.schema.notification.field.deleted.failure": "A{{amount}} metaadat mezők törlése nem sikerült",
+  "admin.registries.schema.notification.field.deleted.failure": "A{{amount}} metaadat mezők törlése sikertelen",
 
   // "admin.registries.schema.notification.field.deleted.success": "Successfully deleted {{amount}} metadata fields",
-  "admin.registries.schema.notification.field.deleted.success": "A{{amount}} metaadat mezők törlése sikerült",
+  "admin.registries.schema.notification.field.deleted.success": "A{{amount}} metaadat mezők törlése sikeres",
 
   // "admin.registries.schema.notification.field.edited": "Successfully edited metadata field \"{{field}}\"",
-  "admin.registries.schema.notification.field.edited": "metaadat mező szerkesztése sikerült\"{{field}}\"",
+  "admin.registries.schema.notification.field.edited": "metaadat mező szerkesztése sikeres\"{{field}}\"",
 
   // "admin.registries.schema.notification.success": "Success",
   "admin.registries.schema.notification.success": "Sikerült",
@@ -388,22 +388,22 @@
   "admin.access-control.bulk-access-settings.header": "2.lépés: Művelet végrehajtása",
 
   // "admin.access-control.epeople.actions.delete": "Delete EPerson",
-  "admin.access-control.epeople.actions.delete": "EPerson törlése",
+  "admin.access-control.epeople.actions.delete": "Felhasználó törlése",
 
   // "admin.access-control.epeople.actions.impersonate": "Impersonate EPerson",
-  "admin.access-control.epeople.actions.impersonate": "EPerson megszemélyesítése",
+  "admin.access-control.epeople.actions.impersonate": "Felhasználó megszemélyesítése",
 
   // "admin.access-control.epeople.actions.reset": "Reset password",
   "admin.access-control.epeople.actions.reset": "Jelszó visszaállítása",
 
   // "admin.access-control.epeople.actions.stop-impersonating": "Stop impersonating EPerson",
-  "admin.access-control.epeople.actions.stop-impersonating": "EPerson megszemélyesítésének befejezése",
+  "admin.access-control.epeople.actions.stop-impersonating": "Felhasználó megszemélyesítésének befejezése",
 
   // "admin.access-control.epeople.breadcrumbs": "EPeople",
-  "admin.access-control.epeople.breadcrumbs": "ESzemély",
+  "admin.access-control.epeople.breadcrumbs": "Felhasználó",
 
   // "admin.access-control.epeople.title": "EPeople",
-  "admin.access-control.epeople.title": "ESzemély",
+  "admin.access-control.epeople.title": "Felhasználó",
 
   // "admin.access-control.epeople.edit.breadcrumbs": "New EPerson",
   "admin.access-control.epeople.edit.breadcrumbs": "Új EPerson",
@@ -412,13 +412,13 @@
   "admin.access-control.epeople.edit.title": "Új EPerson",
 
   // "admin.access-control.epeople.add.breadcrumbs": "Add EPerson",
-  "admin.access-control.epeople.add.breadcrumbs": "EPerson hozzáadása",
+  "admin.access-control.epeople.add.breadcrumbs": "Felhasználó hozzáadása",
 
   // "admin.access-control.epeople.add.title": "Add EPerson",
-  "admin.access-control.epeople.add.title": "EPerson hozzáadása",
+  "admin.access-control.epeople.add.title": "Felhasználó hozzáadása",
 
   // "admin.access-control.epeople.head": "EPeople",
-  "admin.access-control.epeople.head": "ESzemély",
+  "admin.access-control.epeople.head": "Felhasználó",
 
   // "admin.access-control.epeople.search.head": "Search",
   "admin.access-control.epeople.search.head": "Keresés",
@@ -439,7 +439,7 @@
   "admin.access-control.epeople.search.placeholder": "Személy keresése...",
 
   // "admin.access-control.epeople.button.add": "Add EPerson",
-  "admin.access-control.epeople.button.add": "EPerson hozzáadása",
+  "admin.access-control.epeople.button.add": "Felhasználó hozzáadása",
 
   // "admin.access-control.epeople.table.id": "ID",
   "admin.access-control.epeople.table.id": "Azonosító",
@@ -466,10 +466,10 @@
   "admin.access-control.epeople.no-items": "Nincs elérhető ESzemély.",
 
   // "admin.access-control.epeople.form.create": "Create EPerson",
-  "admin.access-control.epeople.form.create": "ESzemély létrehozása",
+  "admin.access-control.epeople.form.create": "Felhasználó létrehozása",
 
   // "admin.access-control.epeople.form.edit": "Edit EPerson",
-  "admin.access-control.epeople.form.edit": "ESzemély szerkesztése",
+  "admin.access-control.epeople.form.edit": "Felhasználó szerkesztése",
 
   // "admin.access-control.epeople.form.firstName": "First name",
   "admin.access-control.epeople.form.firstName": "Keresztnév",
@@ -493,28 +493,28 @@
   "admin.access-control.epeople.form.return": "Vissza",
 
   // "admin.access-control.epeople.form.notification.created.success": "Successfully created EPerson \"{{name}}\"",
-  "admin.access-control.epeople.form.notification.created.success": "EPerson \"{{name}} sikeresen létrehozva\"",
+  "admin.access-control.epeople.form.notification.created.success": "Felhasználó \"{{name}} sikeresen létrehozva\"",
 
   // "admin.access-control.epeople.form.notification.created.failure": "Failed to create EPerson \"{{name}}\"",
-  "admin.access-control.epeople.form.notification.created.failure": "EPerson \"{{name}}létrehozása nem sikerült\"",
+  "admin.access-control.epeople.form.notification.created.failure": "Felhasználó \"{{name}}létrehozása sikertelen\"",
 
   // "admin.access-control.epeople.form.notification.created.failure.emailInUse": "Failed to create EPerson \"{{name}}\", email \"{{email}}\" already in use.",
-  "admin.access-control.epeople.form.notification.created.failure.emailInUse": "EPerson \"{{name}}\" létrehozása nem sikerült, email \"{{email}}\" már használatban van.",
+  "admin.access-control.epeople.form.notification.created.failure.emailInUse": "Felhasználó \"{{name}}\" létrehozása sikertelen, email \"{{email}}\" már használatban van.",
 
   // "admin.access-control.epeople.form.notification.edited.failure.emailInUse": "Failed to edit EPerson \"{{name}}\", email \"{{email}}\" already in use.",
-  "admin.access-control.epeople.form.notification.edited.failure.emailInUse": "EPerson \"{{name}}\" szerkesztése nem sikerült, email \"{{email}}\" már használatban van.",
+  "admin.access-control.epeople.form.notification.edited.failure.emailInUse": "Felhasználó \"{{name}}\" szerkesztése sikertelen, email \"{{email}}\" már használatban van.",
 
   // "admin.access-control.epeople.form.notification.edited.success": "Successfully edited EPerson \"{{name}}\"",
-  "admin.access-control.epeople.form.notification.edited.success": "EPerson \"{{name}}\" szerkesztése sikerült",
+  "admin.access-control.epeople.form.notification.edited.success": "Felhasználó \"{{name}}\" szerkesztése sikeres",
 
   // "admin.access-control.epeople.form.notification.edited.failure": "Failed to edit EPerson \"{{name}}\"",
-  "admin.access-control.epeople.form.notification.edited.failure": "EPerson \"{{name}}\" szerkesztése nem sikerült",
+  "admin.access-control.epeople.form.notification.edited.failure": "Felhasználó \"{{name}}\" szerkesztése sikertelen",
 
   // "admin.access-control.epeople.form.notification.deleted.success": "Successfully deleted EPerson \"{{name}}\"",
   "admin.access-control.epeople.form.notification.deleted.success": "Sikeresen törölve: EPerson \"{{name}}\"",
 
   // "admin.access-control.epeople.form.notification.deleted.failure": "Failed to delete EPerson \"{{name}}\"",
-  "admin.access-control.epeople.form.notification.deleted.failure": "Nem sikerült törülni: EPerson \"{{name}}\"",
+  "admin.access-control.epeople.form.notification.deleted.failure": "Sikertelen törlés: Felhasználó \"{{name}}\"",
 
   // "admin.access-control.epeople.form.groupsEPersonIsMemberOf": "Member of these groups:",
   // TODO New key - Add a translation
@@ -601,13 +601,13 @@
   "admin.access-control.groups.table.edit.buttons.remove": "Törlés \"{{name}}\"",
 
   // "admin.access-control.groups.no-items": "No groups found with this in their name or this as UUID",
-  "admin.access-control.groups.no-items": "Egyetlen csoport sem tartalmazza nevében, vagy UUID-ként ezt",
+  "admin.access-control.groups.no-items": "Egyetlen csoport sem tartalmazza nevében vagy azonosítóként (UUID) a megadott keresőkifejezést",
 
   // "admin.access-control.groups.notification.deleted.success": "Successfully deleted group \"{{name}}\"",
-  "admin.access-control.groups.notification.deleted.success": "\"{{name}}\" csoport törlése sikerült",
+  "admin.access-control.groups.notification.deleted.success": "\"{{name}}\" csoport törlése sikeres",
 
   // "admin.access-control.groups.notification.deleted.failure.title": "Failed to delete group \"{{name}}\"",
-  "admin.access-control.groups.notification.deleted.failure.title": "\"{{name}}\" csoport törlése nem sikerült",
+  "admin.access-control.groups.notification.deleted.failure.title": "\"{{name}}\" csoport törlése sikertelen",
 
   // "admin.access-control.groups.notification.deleted.failure.content": "Cause: \"{{cause}}\"",
   // TODO New key - Add a translation
@@ -638,14 +638,14 @@
   "admin.access-control.groups.form.notification.created.success": "\"{{name}}\" csoport létrehozása sikerült",
 
   // "admin.access-control.groups.form.notification.created.failure": "Failed to create Group \"{{name}}\"",
-  "admin.access-control.groups.form.notification.created.failure": "\"{{name}}\" csoport létrehozása nem sikerült",
+  "admin.access-control.groups.form.notification.created.failure": "\"{{name}}\" csoport létrehozása sikertelen",
 
   // "admin.access-control.groups.form.notification.created.failure.groupNameInUse": "Failed to create Group with name: \"{{name}}\", make sure the name is not already in use.",
   // TODO New key - Add a translation
   "admin.access-control.groups.form.notification.created.failure.groupNameInUse": "Failed to create Group with name: \"{{name}}\", make sure the name is not already in use.",
 
   // "admin.access-control.groups.form.notification.edited.failure": "Failed to edit Group \"{{name}}\"",
-  "admin.access-control.groups.form.notification.edited.failure": "Nem sikerült szerkeszteni a csoportot \"{{name}}\"",
+  "admin.access-control.groups.form.notification.edited.failure": "Csoport szerkesztése sikertelen \"{{name}}\"",
 
   // "admin.access-control.groups.form.notification.edited.failure.groupNameInUse": "Name \"{{name}}\" already in use!",
   "admin.access-control.groups.form.notification.edited.failure.groupNameInUse": "A(z) \"{{name}}\" név már foglalt!",
@@ -672,14 +672,14 @@
   "admin.access-control.groups.form.notification.deleted.success": "Csoport sikeresen törölve: \"{{ name }}\"",
 
   // "admin.access-control.groups.form.notification.deleted.failure.title": "Failed to delete group \"{{ name }}\"",
-  "admin.access-control.groups.form.notification.deleted.failure.title": "Nem sikerült törölni a csoportot: \"{{ name }}\"",
+  "admin.access-control.groups.form.notification.deleted.failure.title": "Csoport törlése sikertelen \"{{ name }}\"",
 
   // "admin.access-control.groups.form.notification.deleted.failure.content": "Cause: \"{{ cause }}\"",
   // TODO New key - Add a translation
   "admin.access-control.groups.form.notification.deleted.failure.content": "Cause: \"{{ cause }}\"",
 
   // "admin.access-control.groups.form.members-list.head": "EPeople",
-  "admin.access-control.groups.form.members-list.head": "ESzemély",
+  "admin.access-control.groups.form.members-list.head": "Felhasználó",
 
   // "admin.access-control.groups.form.members-list.search.head": "Add EPeople",
   "admin.access-control.groups.form.members-list.search.head": "EPeople hozzáadása",
@@ -756,7 +756,7 @@
   "admin.access-control.groups.form.subgroups-list.button.see-all": "Összes böngészése",
 
   // "admin.access-control.groups.form.subgroups-list.headSubgroups": "Current Subgroups",
-  "admin.access-control.groups.form.subgroups-list.headSubgroups": "jelenlegi alcsoportok",
+  "admin.access-control.groups.form.subgroups-list.headSubgroups": "Jelenlegi alcsoportok",
 
   // "admin.access-control.groups.form.subgroups-list.search.button": "Search",
   "admin.access-control.groups.form.subgroups-list.search.button": "keresés",
@@ -1290,10 +1290,10 @@
   "advanced-workflow-action.select-reviewer.description-multiple": "Please select one or more reviewers below before submitting",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.head": "EPeople",
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.head": "ESzemély",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.head": "Felhasználó",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.search.head": "Add EPeople",
-  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.search.head": "ESzemély hozzáadása",
+  "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.search.head": "Felhasználó hozzáadása",
 
   // "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.button.see-all": "Browse All",
   "advanced-workflow-action-select-reviewer.groups.form.reviewers-list.button.see-all": "Összes böngészése",
@@ -1725,7 +1725,7 @@
   "collection.delete.head": "Gyűjtemény törlése",
 
   // "collection.delete.notification.fail": "Collection could not be deleted",
-  "collection.delete.notification.fail": "Gyűjteményt nem sikerült törölni",
+  "collection.delete.notification.fail": "Gyűjtemény törlése sikertelen",
 
   // "collection.delete.notification.success": "Successfully deleted collection",
   "collection.delete.notification.success": "Gyűjtemény törölve",
@@ -1813,7 +1813,7 @@
   "collection.edit.logo.label": "Gyűjtemény logó",
 
   // "collection.edit.logo.notifications.add.error": "Uploading Collection logo failed. Please verify the content before retrying.",
-  "collection.edit.logo.notifications.add.error": "Gyűjtemény logó feltöltése nem sikerült. Kérjük, ellenőrizze a tartalmat, mielőtt újra próbálkozna.",
+  "collection.edit.logo.notifications.add.error": "Gyűjtemény logó feltöltése sikertelen. Kérjük, ellenőrizze a tartalmat, mielőtt újra próbálkozna.",
 
   // "collection.edit.logo.notifications.add.success": "Upload Collection logo successful.",
   "collection.edit.logo.notifications.add.success": "Gyűjtemény logó feltöltése sikerült.",
@@ -1831,7 +1831,7 @@
   "collection.edit.logo.upload": "Feltöltéshez húzza ide a gyűjtemény Logót",
 
   // "collection.edit.notifications.success": "Successfully edited the Collection",
-  "collection.edit.notifications.success": "Gyűjtemény szerkesztése sikerült",
+  "collection.edit.notifications.success": "Gyűjtemény szerkesztése sikeres",
 
   // "collection.edit.return": "Back",
   "collection.edit.return": "Vissza",
@@ -1957,10 +1957,10 @@
   "collection.edit.template.loading": "Loading template item...",
 
   // "collection.edit.template.notifications.delete.error": "Failed to delete the item template",
-  "collection.edit.template.notifications.delete.error": "Nem sikerült törölni az elemsablont",
+  "collection.edit.template.notifications.delete.error": "Elemsablon törlése sikertelen",
 
   // "collection.edit.template.notifications.delete.success": "Successfully deleted the item template",
-  "collection.edit.template.notifications.delete.success": "Sikeresen töröltük az elemsablont",
+  "collection.edit.template.notifications.delete.success": "Elemsablon törlése sikeres",
 
   // "collection.edit.template.title": "Edit Template Item",
   "collection.edit.template.title": "Elemsablon szerkesztése",
@@ -2162,7 +2162,7 @@
   "community.delete.head": "Közösség törlése",
 
   // "community.delete.notification.fail": "Community could not be deleted",
-  "community.delete.notification.fail": "Közösség törlése nem sikerült",
+  "community.delete.notification.fail": "Közösség törlése sikertelen",
 
   // "community.delete.notification.success": "Successfully deleted community",
   "community.delete.notification.success": "SKözösség sikeresen törölve",
@@ -2195,7 +2195,7 @@
   "community.edit.logo.label": "Közösségi logó",
 
   // "community.edit.logo.notifications.add.error": "Uploading community logo failed. Please verify the content before retrying.",
-  "community.edit.logo.notifications.add.error": "Közösségi logó feltöltése nem sikerült Kérjük, ellenőrizze a tartalmat, mielőtt újra próbálkozna.",
+  "community.edit.logo.notifications.add.error": "Közösségi logó feltöltése sikertelen. Kérjük, ellenőrizze a tartalmat, mielőtt újra próbálkozna.",
 
   // "community.edit.logo.notifications.add.success": "Upload community logo successful.",
   "community.edit.logo.notifications.add.success": "Közösségi logó feltöltve.",
@@ -2213,7 +2213,7 @@
   "community.edit.logo.upload": "Feltöltéshez húzza ide a közösségi logót",
 
   // "community.edit.notifications.success": "Successfully edited the Community",
-  "community.edit.notifications.success": "Közösség szerkesztése sikerült",
+  "community.edit.notifications.success": "Közösség szerkesztése sikeres",
 
   // "community.edit.notifications.unauthorized": "You do not have privileges to make this change",
   "community.edit.notifications.unauthorized": "Nincs meg a szükséges jogosultsága a változtatáshoz",
@@ -2411,7 +2411,7 @@
   "cookies.consent.update": "Változások történtek az utolsó látogatása óta, frissítse a beleegyezését.",
 
   // "cookies.consent.close": "Close",
-  "cookies.consent.close": "Bezár",
+  "cookies.consent.close": "Bezárás",
 
   // "cookies.consent.decline": "Decline",
   "cookies.consent.decline": "Elutasít",
@@ -2734,7 +2734,7 @@
   "confirmation-modal.export-batch.confirm": "Export",
 
   // "confirmation-modal.delete-eperson.header": "Delete EPerson \"{{ dsoName }}\"",
-  "confirmation-modal.delete-eperson.header": "EPerson törlése \"{{ dsoName }}\"",
+  "confirmation-modal.delete-eperson.header": "Felhasználó törlése \"{{ dsoName }}\"",
 
   // "confirmation-modal.delete-eperson.info": "Are you sure you want to delete EPerson \"{{ dsoName }}\"",
   "confirmation-modal.delete-eperson.info": "Biztos benne, hogy törli: EPerson \"{{ dsoName }}\"",
@@ -3357,7 +3357,7 @@
   "item.bitstreams.upload.notifications.bundle.created.title": "Csomag létrehozva",
 
   // "item.bitstreams.upload.notifications.upload.failed": "Upload failed. Please verify the content before retrying.",
-  "item.bitstreams.upload.notifications.upload.failed": "Feltöltés nem sikerült. Kérjük ellenőrizze a tartalmát, mielőtt újra próbálkozna.",
+  "item.bitstreams.upload.notifications.upload.failed": "Feltöltés sikertelen. Kérjük ellenőrizze a tartalmát, mielőtt újra próbálkozna.",
 
   // "item.bitstreams.upload.title": "Upload bitstream",
   "item.bitstreams.upload.title": "Bitfolyam feltöltése",
@@ -4882,7 +4882,7 @@
   "menu.section.access_control_groups": "Csoportok",
 
   // "menu.section.access_control_people": "People",
-  "menu.section.access_control_people": "Emberek",
+  "menu.section.access_control_people": "Felhasználók",
 
   // "menu.section.reports": "Reports",
   "menu.section.reports": "Reports",
@@ -5308,10 +5308,10 @@
   "nav.statistics.header": "Statisztika",
 
   // "nav.stop-impersonating": "Stop impersonating EPerson",
-  "nav.stop-impersonating": "EPerson megszemélyesítésének leállítása",
+  "nav.stop-impersonating": "Felhasználó megszemélyesítésének leállítása",
 
   // "nav.subscriptions": "Subscriptions",
-  "nav.subscriptions": "Subscriptions",
+  "nav.subscriptions": "Feliratkozások",
 
   // "nav.toggle": "Toggle navigation",
   "nav.toggle": "Toggle navigation",
@@ -5866,7 +5866,7 @@
   "profile.breadcrumbs": "Profil frissítése",
 
   // "profile.card.identify": "Identify",
-  "profile.card.identify": "Azonosít",
+  "profile.card.identify": "Azonosítás",
 
   // "profile.card.security": "Security",
   "profile.card.security": "Biztonság",
@@ -5875,10 +5875,10 @@
   "profile.form.submit": "Profil frissítése",
 
   // "profile.groups.head": "Authorization groups you belong to",
-  "profile.groups.head": "Felhatalmazási csoportok amelyekhez ön tartozik",
+  "profile.groups.head": "Tagja a következő csoportoknak",
 
   // "profile.special.groups.head": "Authorization special groups you belong to",
-  "profile.special.groups.head": "Authorization special groups you belong to",
+  "profile.special.groups.head": "Tagja a következő speciális csoportoknak",
 
   // "profile.metadata.form.error.firstname.required": "First Name is required",
   "profile.metadata.form.error.firstname.required": "Keresztnév kötelező",
@@ -5920,13 +5920,13 @@
   "profile.security.form.info": "Opcionálisan beírhatja jelszavát az alsó mezőbe majd igazolhatja azt, beírva a második mezőbe. Legalább hat karakter hosszú kell, hogy legyen.",
 
   // "profile.security.form.label.password": "Password",
-  "profile.security.form.label.password": "Jelszó",
+  "profile.security.form.label.password": "Új jelszó",
 
   // "profile.security.form.label.passwordrepeat": "Retype to confirm",
-  "profile.security.form.label.passwordrepeat": "Írja be újra a jelszót",
+  "profile.security.form.label.passwordrepeat": "Új jelszó megadása ismét",
 
   // "profile.security.form.label.current-password": "Current password",
-  "profile.security.form.label.current-password": "Current password",
+  "profile.security.form.label.current-password": "Jelenlegi jelszó",
 
   // "profile.security.form.notifications.success.content": "Your changes to the password were saved.",
   "profile.security.form.notifications.success.content": "Jelszó módosítása elmentve.",
@@ -5950,7 +5950,7 @@
   "profile.title": "Profil frissítése",
 
   // "profile.card.researcher": "Researcher Profile",
-  "profile.card.researcher": "Researcher Profile",
+  "profile.card.researcher": "Kutatói profil",
 
   // "project.listelement.badge": "Research Project",
   "project.listelement.badge": "Kutatási projekt",
@@ -6027,7 +6027,7 @@
   "media-viewer.next": "Következő",
 
   // "media-viewer.previous": "Previous",
-  "media-viewer.previous": "Previous",
+  "media-viewer.previous": "Előző",
 
   // "media-viewer.playlist": "Playlist",
   "media-viewer.playlist": "Lejászólista",
@@ -6412,7 +6412,7 @@
   "resource-policies.form.eperson-group-list.select.btn": "Kiválaszt",
 
   // "resource-policies.form.eperson-group-list.tab.eperson": "Search for a ePerson",
-  "resource-policies.form.eperson-group-list.tab.eperson": "ePerson keresése",
+  "resource-policies.form.eperson-group-list.tab.eperson": "Felhasználó keresése",
 
   // "resource-policies.form.eperson-group-list.tab.group": "Search for a group",
   "resource-policies.form.eperson-group-list.tab.group": "Csoport keresése",
@@ -6481,7 +6481,7 @@
   "resource-policies.table.headers.edit.policy": "Szabály módosítása",
 
   // "resource-policies.table.headers.eperson": "EPerson",
-  "resource-policies.table.headers.eperson": "EPerson",
+  "resource-policies.table.headers.eperson": "Felhasználó",
 
   // "resource-policies.table.headers.group": "Group",
   "resource-policies.table.headers.group": "Csoport",
@@ -6787,10 +6787,10 @@
   "search.filters.filter.namedresourcetype.label": "Search status",
 
   // "search.filters.filter.objectpeople.head": "People",
-  "search.filters.filter.objectpeople.head": "Emberek",
+  "search.filters.filter.objectpeople.head": "Felhasználók",
 
   // "search.filters.filter.objectpeople.placeholder": "People",
-  "search.filters.filter.objectpeople.placeholder": "Emberek",
+  "search.filters.filter.objectpeople.placeholder": "Felhasználók",
 
   // "search.filters.filter.objectpeople.label": "Search people",
   "search.filters.filter.objectpeople.label": "Search people",
@@ -8059,7 +8059,7 @@
   "submission.sections.upload.undo": "Mégse",
 
   // "submission.sections.upload.upload-failed": "Upload failed",
-  "submission.sections.upload.upload-failed": "Feltöltés nem sikerült",
+  "submission.sections.upload.upload-failed": "Feltöltés sikertelen",
 
   // "submission.sections.upload.upload-successful": "Upload successful",
   "submission.sections.upload.upload-successful": "Sikeres feltöltés",
@@ -8538,7 +8538,7 @@
   "workflow-item.delete.notification.error.title": "Valami hiba keletkezett",
 
   // "workflow-item.delete.notification.error.content": "The workflow item could not be deleted",
-  "workflow-item.delete.notification.error.content": "Munkafolyamat elem törlése nem sikerült",
+  "workflow-item.delete.notification.error.content": "Munkafolyamat elem törlése sikertelen",
 
   // "workflow-item.delete.title": "Delete workflow item",
   "workflow-item.delete.title": "Munkafolyamat elem törlése",
@@ -8562,7 +8562,7 @@
   "workflow-item.send-back.notification.error.title": "Valami hiba keletkezett",
 
   // "workflow-item.send-back.notification.error.content": "The workflow item could not be sent back to the submitter",
-  "workflow-item.send-back.notification.error.content": "Munkafolyamat elem visszaküldése a feladónak nem sikerült",
+  "workflow-item.send-back.notification.error.content": "Munkafolyamat elem visszaküldése a feladónak sikertelen",
 
   // "workflow-item.send-back.title": "Send workflow item back to submitter",
   "workflow-item.send-back.title": "Munkafolyamt elemet visszaküld a feladónak",
@@ -8682,10 +8682,10 @@
   "researcher.profile.change-visibility.fail": "An unexpected error occurs while changing the profile visibility",
 
   // "researcher.profile.create.new": "Create new",
-  "researcher.profile.create.new": "Create new",
+  "researcher.profile.create.new": "Új profil létrehozása",
 
   // "researcher.profile.create.success": "Researcher profile created successfully",
-  "researcher.profile.create.success": "Researcher profile created successfully",
+  "researcher.profile.create.success": "Kutatói profil létrehozása sikeres",
 
   // "researcher.profile.create.fail": "An error occurs during the researcher profile creation",
   "researcher.profile.create.fail": "An error occurs during the researcher profile creation",
@@ -8700,16 +8700,16 @@
   "researcher.profile.hide": "Hide",
 
   // "researcher.profile.not.associated": "Researcher profile not yet associated",
-  "researcher.profile.not.associated": "Researcher profile not yet associated",
+  "researcher.profile.not.associated": "A kutatói profil még nincs társítva",
 
   // "researcher.profile.view": "View",
   "researcher.profile.view": "Megtekint",
 
   // "researcher.profile.private.visibility": "PRIVATE",
-  "researcher.profile.private.visibility": "PRIVATE",
+  "researcher.profile.private.visibility": "PRIVÁT",
 
   // "researcher.profile.public.visibility": "PUBLIC",
-  "researcher.profile.public.visibility": "PUBLIC",
+  "researcher.profile.public.visibility": "PUBLIKUS",
 
   // "researcher.profile.status": "Status:",
   "researcher.profile.status": "Állapot:",
@@ -9120,13 +9120,13 @@
   "discover.filters.head": "Discover",
 
   // "item-access-control-title": "This form allows you to perform changes to the access conditions of the item's metadata or its bitstreams.",
-  "item-access-control-title": "This form allows you to perform changes to the access conditions of the item's metadata or its bitstreams.",
+  "item-access-control-title": "Az alábbi űrlap lehetővé teszi az elem metaadatai illetve bitfolyamai esetében a hozzáférési szabályok módosítását.",
 
   // "collection-access-control-title": "This form allows you to perform changes to the access conditions of all the items owned by this collection. Changes may be performed to either all Item metadata or all content (bitstreams).",
-  "collection-access-control-title": "This form allows you to perform changes to the access conditions of all the items owned by this collection. Changes may be performed to either all Item metadata or all content (bitstreams).",
+  "collection-access-control-title": "Az alábbi űrlap lehetővé teszi a gyűjtemény összes eleme esetén a hozzáférési szabályok módosítását. A változtatások végrehajthatók az összes elem metaadatai illetve összes fájlja (bitfolyama) esetében.",
 
   // "community-access-control-title": "This form allows you to perform changes to the access conditions of all the items owned by any collection under this community. Changes may be performed to either all Item metadata or all content (bitstreams).",
-  "community-access-control-title": "This form allows you to perform changes to the access conditions of all the items owned by any collection under this community. Changes may be performed to either all Item metadata or all content (bitstreams).",
+  "community-access-control-title": "Az alábbi űrlap lehetővé teszi a közösségbe tartozó összes gyűjtemény összes eleme esetén a hozzáférési szabályok módosítását. A változtatások végrehajthatók az összes elem metaadatai illetve összes fájlja (bitfolyama) esetében.",
 
   // "access-control-item-header-toggle": "Item's Metadata",
   "access-control-item-header-toggle": "Elemhez tartozó metaadatok",
@@ -9138,7 +9138,7 @@
   "access-control-item-toggle.disable": "Disable option to perform changes on the item's metadata",
 
   // "access-control-bitstream-header-toggle": "Bitstreams",
-  "access-control-bitstream-header-toggle": "Bitstreams",
+  "access-control-bitstream-header-toggle": "Bitfolyamok",
 
   // "access-control-bitstream-toggle.enable": "Enable option to perform changes on the bitstreams",
   "access-control-bitstream-toggle.enable": "Enable option to perform changes on the bitstreams",
@@ -9153,7 +9153,7 @@
   "access-control-access-conditions": "Hozzáférési szabályok",
 
   // "access-control-no-access-conditions-warning-message": "Currently, no access conditions are specified below. If executed, this will replace the current access conditions with the default access conditions inherited from the owning collection.",
-  "access-control-no-access-conditions-warning-message": "Currently, no access conditions are specified below. If executed, this will replace the current access conditions with the default access conditions inherited from the owning collection.",
+  "access-control-no-access-conditions-warning-message": "Jelenleg egyetlen hozzáférési szabály sem lett kiválasztva az alábbi listából. Ha így hajtja végre a folyamatot, akkor a jelenlegi hozzáférési szabályok a tartalmazó gyűjtemény alapértelmezett hozzáférési szabályaira fognak lecserélődni.",
 
   // "access-control-replace-all": "Replace access conditions",
   "access-control-replace-all": "Jelenlegi hozzáférési szabály cseréje",
@@ -9165,13 +9165,13 @@
   "access-control-limit-to-specific": "Limit the changes to specific bitstreams",
 
   // "access-control-process-all-bitstreams": "Update all the bitstreams in the item",
-  "access-control-process-all-bitstreams": "Update all the bitstreams in the item",
+  "access-control-process-all-bitstreams": "Az elemhez tartozó összes bitfolyam frissítése",
 
   // "access-control-bitstreams-selected": "bitstreams selected",
-  "access-control-bitstreams-selected": "bitstreams selected",
+  "access-control-bitstreams-selected": "bitfolyam kiválasztva",
 
   // "access-control-bitstreams-select": "Select bitstreams",
-  "access-control-bitstreams-select": "Select bitstreams",
+  "access-control-bitstreams-select": "Bitfolyamok kiválasztása",
 
   // "access-control-cancel": "Cancel",
   "access-control-cancel": "Mégse",
@@ -9192,7 +9192,7 @@
   "access-control-select-bitstreams-modal.no-items": "No items to show.",
 
   // "access-control-select-bitstreams-modal.close": "Close",
-  "access-control-select-bitstreams-modal.close": "Close",
+  "access-control-select-bitstreams-modal.close": "Bezárás",
 
   // "access-control-option-label": "Access condition type",
   "access-control-option-label": "Hozzáférés szabályának típusa",
