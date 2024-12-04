@@ -1,4 +1,4 @@
-{
+""{
 
   // "401.help": "You're not authorized to access this page. You can use the button below to get back to the home page.",
   "401.help": "Nincs jogosultsága az oldal eléréséhez. Az alábbi gombbal vissza tud lépni a főoldalra.",
@@ -7,7 +7,7 @@
   "401.link.home-page": "Vissza a főoldalra",
 
   // "401.unauthorized": "Unauthorized",
-  "401.unauthorized": "jogosulatlan",
+  "401.unauthorized": "Nincs jogosultsága",
 
   // "403.help": "You don't have permission to access this page. You can use the button below to get back to the home page.",
   "403.help": "Nincs jogosultsága az oldal eléréséhez. Az alábbi gombbal vissza tud lépni a főoldalra.",
@@ -58,16 +58,16 @@
   "access-status.embargo.listelement.badge": "Embargo",
 
   // "access-status.metadata.only.listelement.badge": "Metadata only",
-  "access-status.metadata.only.listelement.badge": "Metadata only",
+  "access-status.metadata.only.listelement.badge": "Csak metaadattal rendelkező",
 
   // "access-status.open.access.listelement.badge": "Open Access",
   "access-status.open.access.listelement.badge": "Open Access",
 
   // "access-status.restricted.listelement.badge": "Restricted",
-  "access-status.restricted.listelement.badge": "Restricted",
+  "access-status.restricted.listelement.badge": "Védett",
 
   // "access-status.unknown.listelement.badge": "Unknown",
-  "access-status.unknown.listelement.badge": "Unknown",
+  "access-status.unknown.listelement.badge": "Ismeretlen",
 
   // "admin.curation-tasks.breadcrumbs": "System curation tasks",
   "admin.curation-tasks.breadcrumbs": "Karbantartási feladatok",
@@ -375,7 +375,7 @@
 
   // "admin.access-control.bulk-access-browse.header": "Step 1: Select Objects",
   // TODO New key - Add a translation
-  "admin.access-control.bulk-access-browse.header": "Step 1: Select Objects",
+  "admin.access-control.bulk-access-browse.header": "1.lépés: Objektumok kiválasztása",
 
   // "admin.access-control.bulk-access-browse.search.header": "Search",
   "admin.access-control.bulk-access-browse.search.header": "Keresés",
@@ -385,7 +385,7 @@
 
   // "admin.access-control.bulk-access-settings.header": "Step 2: Operation to Perform",
   // TODO New key - Add a translation
-  "admin.access-control.bulk-access-settings.header": "Step 2: Operation to Perform",
+  "admin.access-control.bulk-access-settings.header": "2.lépés: Művelet végrehajtása",
 
   // "admin.access-control.epeople.actions.delete": "Delete EPerson",
   "admin.access-control.epeople.actions.delete": "EPerson törlése",
@@ -448,7 +448,7 @@
   "admin.access-control.epeople.table.name": "Név",
 
   // "admin.access-control.epeople.table.email": "Email (exact)",
-  "admin.access-control.epeople.table.email": "E-mail (pontosan)",
+  "admin.access-control.epeople.table.email": "E-mail",
 
   // "admin.access-control.epeople.table.edit": "Edit",
   "admin.access-control.epeople.table.edit": "Szerkesztés",
@@ -518,7 +518,7 @@
 
   // "admin.access-control.epeople.form.groupsEPersonIsMemberOf": "Member of these groups:",
   // TODO New key - Add a translation
-  "admin.access-control.epeople.form.groupsEPersonIsMemberOf": "Member of these groups:",
+  "admin.access-control.epeople.form.groupsEPersonIsMemberOf": "Tagja a következő csoportoknak:",
 
   // "admin.access-control.epeople.form.table.id": "ID",
   "admin.access-control.epeople.form.table.id": "Azonosító",
@@ -1155,7 +1155,7 @@
   "admin.search.item.make-public": "Legyen nyilvános",
 
   // "admin.search.item.move": "Move",
-  "admin.search.item.move": "Költöztetés",
+  "admin.search.item.move": "Áthelyezés",
 
   // "admin.search.item.reinstate": "Reinstate",
   "admin.search.item.reinstate": "Visszaállítás",
@@ -1697,7 +1697,7 @@
   "collection.create.breadcrumbs": "Gyűjtemény létrehozása",
 
   // "collection.browse.logo": "Browse for a collection logo",
-  "collection.browse.logo": "Browse for a collection logo",
+  "collection.browse.logo": "Gyűjtemény logó böngészése",
 
   // "collection.create.head": "Create a Collection",
   "collection.create.head": "Hozzon létre egy gyűjteményt",
@@ -1810,22 +1810,22 @@
   "collection.edit.logo.delete-undo.title": "Törlés visszavonása",
 
   // "collection.edit.logo.label": "Collection logo",
-  "collection.edit.logo.label": "Gyűjtemény logo",
+  "collection.edit.logo.label": "Gyűjtemény logó",
 
   // "collection.edit.logo.notifications.add.error": "Uploading Collection logo failed. Please verify the content before retrying.",
-  "collection.edit.logo.notifications.add.error": "Gyűjtemény logo feltöltése nem sikerült. Kérjük, ellenőrizze a tartalmat, mielőtt újra próbálkozna.",
+  "collection.edit.logo.notifications.add.error": "Gyűjtemény logó feltöltése nem sikerült. Kérjük, ellenőrizze a tartalmat, mielőtt újra próbálkozna.",
 
   // "collection.edit.logo.notifications.add.success": "Upload Collection logo successful.",
-  "collection.edit.logo.notifications.add.success": "Gyűjtemény logo feltöltése sikerült.",
+  "collection.edit.logo.notifications.add.success": "Gyűjtemény logó feltöltése sikerült.",
 
   // "collection.edit.logo.notifications.delete.success.title": "Logo deleted",
-  "collection.edit.logo.notifications.delete.success.title": "Logo törölve",
+  "collection.edit.logo.notifications.delete.success.title": "Logó törölve",
 
   // "collection.edit.logo.notifications.delete.success.content": "Successfully deleted the collection's logo",
   "collection.edit.logo.notifications.delete.success.content": "Gyűjteménylogo sikeresen törölve",
 
   // "collection.edit.logo.notifications.delete.error.title": "Error deleting logo",
-  "collection.edit.logo.notifications.delete.error.title": "Logo törlése közben hiba történt",
+  "collection.edit.logo.notifications.delete.error.title": "Logótörlése közben hiba történt",
 
   // "collection.edit.logo.upload": "Drop a Collection Logo to upload",
   "collection.edit.logo.upload": "Feltöltéshez húzza ide a gyűjtemény Logót",
@@ -1930,7 +1930,7 @@
   "collection.edit.tabs.source.title": "Gyűjtemény szerkesztés - tartalom forrása",
 
   // "collection.edit.template.add-button": "Add",
-  "collection.edit.template.add-button": "Hozzáad",
+  "collection.edit.template.add-button": "Hozzáadás",
 
   // "collection.edit.template.breadcrumbs": "Item template",
   "collection.edit.template.breadcrumbs": "Elemsablon",
@@ -1996,7 +1996,7 @@
   "collection.listelement.badge": "Gyűjtemény",
 
   // "collection.logo": "Collection logo",
-  "collection.logo": "Collection logo",
+  "collection.logo": "Gyűjtemény logó",
 
   // "collection.page.browse.search.head": "Search",
   "collection.page.browse.search.head": "Keresés",
@@ -2128,13 +2128,13 @@
   "communityList.collapse": "Collapse {{ name }}",
 
   // "community.browse.logo": "Browse for a community logo",
-  "community.browse.logo": "Browse for a community logo",
+  "community.browse.logo": "Közösség logó böngészése",
 
   // "community.subcoms-cols.breadcrumbs": "Subcommunities and Collections",
   "community.subcoms-cols.breadcrumbs": "Subcommunities and Collections",
 
   // "community.create.breadcrumbs": "Create Community",
-  "community.create.breadcrumbs": "Create Community",
+  "community.create.breadcrumbs": "Közzösség létrehozása",
 
   // "community.create.head": "Create a Community",
   "community.create.head": "Hozzon létre egy közösséget",
@@ -2143,7 +2143,7 @@
   "community.create.notifications.success": "Közösség sikeresen létrehozva",
 
   // "community.create.sub-head": "Create a Sub-Community for Community {{ parent }}",
-  "community.create.sub-head": "Hozzon létre egy alközösséget a közösségben {{ parent }}",
+  "community.create.sub-head": "Hozzon létre egy alközösséget az alábbi közösségben {{ parent }}",
 
   // "community.curate.header": "Curate Community: {{community}}",
   // TODO New key - Add a translation
@@ -2153,10 +2153,10 @@
   "community.delete.cancel": "Mégse",
 
   // "community.delete.confirm": "Confirm",
-  "community.delete.confirm": "Igazolja",
+  "community.delete.confirm": "Megerősít",
 
   // "community.delete.processing": "Deleting...",
-  "community.delete.processing": "Deleting...",
+  "community.delete.processing": "Törlés...",
 
   // "community.delete.head": "Delete Community",
   "community.delete.head": "Közösség törlése",
@@ -2180,7 +2180,7 @@
   "community.edit.breadcrumbs": "Közösség szerkesztése",
 
   // "community.edit.logo.delete.title": "Delete logo",
-  "community.edit.logo.delete.title": "Delete logo",
+  "community.edit.logo.delete.title": "Logó törlése",
 
   // "community-collection.edit.logo.delete.title": "Confirm deletion",
   "community-collection.edit.logo.delete.title": "Confirm deletion",
@@ -2192,22 +2192,22 @@
   "community-collection.edit.logo.delete-undo.title": "Undo delete",
 
   // "community.edit.logo.label": "Community logo",
-  "community.edit.logo.label": "Közösségi logo",
+  "community.edit.logo.label": "Közösségi logó",
 
   // "community.edit.logo.notifications.add.error": "Uploading community logo failed. Please verify the content before retrying.",
-  "community.edit.logo.notifications.add.error": "Közösségi logo feltöltése nem sikerült Kérjük, ellenőrizze a tartalmat, mielőtt újra próbálkozna.",
+  "community.edit.logo.notifications.add.error": "Közösségi logó feltöltése nem sikerült Kérjük, ellenőrizze a tartalmat, mielőtt újra próbálkozna.",
 
   // "community.edit.logo.notifications.add.success": "Upload community logo successful.",
-  "community.edit.logo.notifications.add.success": "Közösségi logo feltöltve.",
+  "community.edit.logo.notifications.add.success": "Közösségi logó feltöltve.",
 
   // "community.edit.logo.notifications.delete.success.title": "Logo deleted",
-  "community.edit.logo.notifications.delete.success.title": "Logo törölve",
+  "community.edit.logo.notifications.delete.success.title": "Logó törölve",
 
   // "community.edit.logo.notifications.delete.success.content": "Successfully deleted the community's logo",
   "community.edit.logo.notifications.delete.success.content": "A közösség logóját sikeresen törölte",
 
   // "community.edit.logo.notifications.delete.error.title": "Error deleting logo",
-  "community.edit.logo.notifications.delete.error.title": "Logo törlése közben hiba történt",
+  "community.edit.logo.notifications.delete.error.title": "Logótörlése közben hiba történt",
 
   // "community.edit.logo.upload": "Drop a community logo to upload",
   "community.edit.logo.upload": "Feltöltéshez húzza ide a közösségi logót",
@@ -2249,7 +2249,7 @@
   "community.edit.tabs.roles.title": "Közösség szerkesztése - Feladatok",
 
   // "community.edit.tabs.authorizations.head": "Authorizations",
-  "community.edit.tabs.authorizations.head": "Jogosultásgok",
+  "community.edit.tabs.authorizations.head": "Jogosultságok",
 
   // "community.edit.tabs.authorizations.title": "Community Edit - Authorizations",
   "community.edit.tabs.authorizations.title": "Közösségi szerkesztés - Jogosultásgok",
@@ -2261,7 +2261,7 @@
   "community.logo": "Community logo",
 
   // "comcol-role.edit.no-group": "None",
-  "comcol-role.edit.no-group": "Semmi",
+  "comcol-role.edit.no-group": "Nincs",
 
   // "comcol-role.edit.create": "Create",
   "comcol-role.edit.create": "Létrehoz",
@@ -2644,7 +2644,7 @@
   "dso-selector.select.collection.head": "Gyűjtemény kiválasztása",
 
   // "dso-selector.set-scope.community.head": "Select a search scope",
-  "dso-selector.set-scope.community.head": "Select a search scope",
+  "dso-selector.set-scope.community.head": "A keresés hatókörének kiválasztása",
 
   // "dso-selector.set-scope.community.button": "Search all of DSpace",
   "dso-selector.set-scope.community.button": "Keresés a teljes DSpaceben",
@@ -2653,7 +2653,7 @@
   "dso-selector.set-scope.community.or-divider": "or",
 
   // "dso-selector.set-scope.community.input-header": "Search for a community or collection",
-  "dso-selector.set-scope.community.input-header": "Search for a community or collection",
+  "dso-selector.set-scope.community.input-header": "Kategória, gyűjtemény keresése",
 
   // "dso-selector.claim.item.head": "Profile tips",
   "dso-selector.claim.item.head": "Profile tips",
@@ -3154,7 +3154,7 @@
   "health-page.info-tab": "Info",
 
   // "health-page.status-tab": "Status",
-  "health-page.status-tab": "Status",
+  "health-page.status-tab": "Állapot",
 
   // "health-page.error.msg": "The health check service is temporarily unavailable",
   "health-page.error.msg": "The health check service is temporarily unavailable",
@@ -3187,7 +3187,7 @@
   "health-page.section-info.java.title": "Java",
 
   // "health-page.status": "Status",
-  "health-page.status": "Status",
+  "health-page.status": "Állapot",
 
   // "health-page.status.ok.info": "Operational",
   "health-page.status.ok.info": "Operational",
@@ -3320,7 +3320,7 @@
   "item.edit.authorizations.heading": "With this editor you can view and alter the policies of an item, plus alter policies of individual item components: bundles and bitstreams. Briefly, an item is a container of bundles, and bundles are containers of bitstreams. Containers usually have ADD/REMOVE/READ/WRITE policies, while bitstreams only have READ/WRITE policies.",
 
   // "item.edit.authorizations.title": "Edit item's Policies",
-  "item.edit.authorizations.title": "Jogosultásgok elem szerkesztése",
+  "item.edit.authorizations.title": "Az elem jogosultságainak szerkesztése",
 
   // "item.badge.private": "Non-discoverable",
   "item.badge.private": "Privát",
@@ -3822,7 +3822,7 @@
   "item.edit.relationships.discard-button": "Elvetés",
 
   // "item.edit.relationships.edit.buttons.add": "Add",
-  "item.edit.relationships.edit.buttons.add": "Hozzáad",
+  "item.edit.relationships.edit.buttons.add": "Hozzáadás",
 
   // "item.edit.relationships.edit.buttons.remove": "Remove",
   "item.edit.relationships.edit.buttons.remove": "Eltávolítás",
@@ -3918,7 +3918,7 @@
   "item.edit.tabs.status.buttons.mappedCollections.label": "Térképezett gyűjtemények szervezése",
 
   // "item.edit.tabs.status.buttons.move.button": "Move this Item to a different Collection",
-  "item.edit.tabs.status.buttons.move.button": "Elmozdítás...",
+  "item.edit.tabs.status.buttons.move.button": "Áthelyezés...",
 
   // "item.edit.tabs.status.buttons.move.label": "Move item to another collection",
   "item.edit.tabs.status.buttons.move.label": "Tárgy másik gyűjteménybe költöztetése",
@@ -3927,7 +3927,7 @@
   "item.edit.tabs.status.buttons.private.button": "Legyen privát...",
 
   // "item.edit.tabs.status.buttons.private.label": "Make item non-discoverable",
-  "item.edit.tabs.status.buttons.private.label": "Legyen a tárgy privát",
+  "item.edit.tabs.status.buttons.private.label": "Legyen a tárgy privát (nem nyilvános)",
 
   // "item.edit.tabs.status.buttons.public.button": "Make it discoverable...",
   "item.edit.tabs.status.buttons.public.button": "Legyen nyilvános...",
@@ -3948,7 +3948,7 @@
   "item.edit.tabs.status.buttons.withdraw.button": "Visszavonás...",
 
   // "item.edit.tabs.status.buttons.withdraw.label": "Withdraw item from the repository",
-  "item.edit.tabs.status.buttons.withdraw.label": "Tárgy visszavonása az adattárból",
+  "item.edit.tabs.status.buttons.withdraw.label": "Tárgy visszavonása a repozitóriumból",
 
   // "item.edit.tabs.status.description": "Welcome to the item management page. From here you can withdraw, reinstate, move or delete the item. You may also update or add new metadata / bitstreams on the other tabs.",
   "item.edit.tabs.status.description": "Üdvözöljük a tárgyak szervezése oldalon. Itt visszavonhat, visszaállíthat, költöztethet vagy törölhet tárgyakat. Ugyanitt frissíthet metaadatokat illetve bitfolyamokat a többi fülnél, vagy újakat adhat hozzá",
@@ -3957,7 +3957,7 @@
   "item.edit.tabs.status.head": "Állapot",
 
   // "item.edit.tabs.status.labels.handle": "Handle",
-  "item.edit.tabs.status.labels.handle": "Mutató",
+  "item.edit.tabs.status.labels.handle": "Handle",
 
   // "item.edit.tabs.status.labels.id": "Item Internal ID",
   "item.edit.tabs.status.labels.id": "Tárgy belső azonosító",
@@ -3972,7 +3972,7 @@
   "item.edit.tabs.status.title": "Tárgy szerkesztése -  Állapot",
 
   // "item.edit.tabs.versionhistory.head": "Version History",
-  "item.edit.tabs.versionhistory.head": "Változatok története",
+  "item.edit.tabs.versionhistory.head": "Verziók története",
 
   // "item.edit.tabs.versionhistory.title": "Item Edit - Version History",
   "item.edit.tabs.versionhistory.title": "Tárgy szerkesztése - Változatok története",
@@ -4134,22 +4134,22 @@
 
   // "item.page.filesection.description": "Description:",
   // TODO New key - Add a translation
-  "item.page.filesection.description": "Description:",
+  "item.page.filesection.description": "Leírás:",
 
   // "item.page.filesection.download": "Download",
   "item.page.filesection.download": "Letöltés",
 
   // "item.page.filesection.format": "Format:",
   // TODO New key - Add a translation
-  "item.page.filesection.format": "Format:",
+  "item.page.filesection.format": "Formátum:",
 
   // "item.page.filesection.name": "Name:",
   // TODO New key - Add a translation
-  "item.page.filesection.name": "Name:",
+  "item.page.filesection.name": "Név:",
 
   // "item.page.filesection.size": "Size:",
   // TODO New key - Add a translation
-  "item.page.filesection.size": "Size:",
+  "item.page.filesection.size": "Méret:",
 
   // "item.page.journal.search.title": "Articles in this journal",
   "item.page.journal.search.title": "Cikkek ebben a kiadványban",
@@ -4297,7 +4297,7 @@
 
   // "item.preview.person.givenName": "Name:",
   // TODO New key - Add a translation
-  "item.preview.person.givenName": "Name:",
+  "item.preview.person.givenName": "Név:",
 
   // "item.preview.person.identifier.orcid": "ORCID:",
   "item.preview.person.identifier.orcid": "ORCID:",
@@ -4555,7 +4555,7 @@
   "item.version.edit.notification.failure": "The summary of version number {{version}} has not been changed",
 
   // "itemtemplate.edit.metadata.add-button": "Add",
-  "itemtemplate.edit.metadata.add-button": "Add",
+  "itemtemplate.edit.metadata.add-button": "Hozzáadás",
 
   // "itemtemplate.edit.metadata.discard-button": "Discard",
   "itemtemplate.edit.metadata.discard-button": "Elvetés",
@@ -4864,7 +4864,7 @@
   "menu.header.admin": "Admin",
 
   // "menu.header.image.logo": "Repository logo",
-  "menu.header.image.logo": "Adattár logo",
+  "menu.header.image.logo": "Repozitórium logó",
 
   // "menu.header.admin.description": "Management menu",
   "menu.header.admin.description": "Management menu",
@@ -5125,10 +5125,10 @@
   "metadata-export-search.tooltip": "Keresés eredményének exportálása CSV formátumban",
 
   // "metadata-export-search.submit.success": "The export was started successfully",
-  "metadata-export-search.submit.success": "The export was started successfully",
+  "metadata-export-search.submit.success": "Az export sikeresen elindult",
 
   // "metadata-export-search.submit.error": "Starting the export has failed",
-  "metadata-export-search.submit.error": "Starting the export has failed",
+  "metadata-export-search.submit.error": "Az export elindítása sikertelen",
 
   // "mydspace.breadcrumbs": "MyDSpace",
   "mydspace.breadcrumbs": "MyDSpace",
@@ -5567,7 +5567,7 @@
   "orgunit.search.results.head": "Szervezeti egység találati lista",
 
   // "pagination.options.description": "Pagination options",
-  "pagination.options.description": "Pagination options",
+  "pagination.options.description": "Lapozás beállításai",
 
   // "pagination.results-per-page": "Results Per Page",
   "pagination.results-per-page": "Találatok oldalanként",
@@ -5606,7 +5606,7 @@
   "person.page.lastname": "Családnév",
 
   // "person.page.name": "Name",
-  "person.page.name": "Name",
+  "person.page.name": "Név",
 
   // "person.page.link.full": "Show all metadata",
   "person.page.link.full": "Minden metaadat megjelenítése",
@@ -5776,7 +5776,7 @@
   "process.detail.refreshing": "Auto-refreshing…",
 
   // "process.overview.table.completed.info": "Finish time (UTC)",
-  "process.overview.table.completed.info": "Finish time (UTC)",
+  "process.overview.table.completed.info": "Befejezés dátuma (UTC)",
 
   // "process.overview.table.completed.title": "Succeeded processes",
   "process.overview.table.completed.title": "Sikeresen lefutott processzek",
@@ -5785,13 +5785,13 @@
   "process.overview.table.empty": "No matching processes found.",
 
   // "process.overview.table.failed.info": "Finish time (UTC)",
-  "process.overview.table.failed.info": "Finish time (UTC)",
+  "process.overview.table.failed.info": "Befejezés dátuma (UTC)",
 
   // "process.overview.table.failed.title": "Failed processes",
   "process.overview.table.failed.title": "Sikertelen processzek",
 
   // "process.overview.table.finish": "Finish time (UTC)",
-  "process.overview.table.finish": "Végzési idő",
+  "process.overview.table.finish": "Befejezés dátuma (UTC)",
 
   // "process.overview.table.id": "Process ID",
   "process.overview.table.id": "Folyamat ID",
@@ -5800,19 +5800,19 @@
   "process.overview.table.name": "Név",
 
   // "process.overview.table.running.info": "Start time (UTC)",
-  "process.overview.table.running.info": "Start time (UTC)",
+  "process.overview.table.running.info": "Indítás dátuma (UTC)",
 
   // "process.overview.table.running.title": "Running processes",
   "process.overview.table.running.title": "Futó állapotú processzek",
 
   // "process.overview.table.scheduled.info": "Creation time (UTC)",
-  "process.overview.table.scheduled.info": "Creation time (UTC)",
+  "process.overview.table.scheduled.info": "Processz létrehozásának dátuma (UTC)",
 
   // "process.overview.table.scheduled.title": "Scheduled processes",
   "process.overview.table.scheduled.title": "Időzített processzek",
 
   // "process.overview.table.start": "Start time (UTC)",
-  "process.overview.table.start": "Kezdési idő",
+  "process.overview.table.start": "Indítás dátuma (UTC)",
 
   // "process.overview.table.status": "Status",
   "process.overview.table.status": "Állapot",
@@ -6337,7 +6337,7 @@
   "repository.title.prefix": "DSpace Repository :: ",
 
   // "resource-policies.add.button": "Add",
-  "resource-policies.add.button": "Hozzáad",
+  "resource-policies.add.button": "Hozzáadás",
 
   // "resource-policies.add.for.": "Add a new policy",
   "resource-policies.add.for.": "Új szabály",
@@ -6934,10 +6934,10 @@
   "search.filters.search.submit": "Submit",
 
   // "search.filters.operator.equals.text": "Equals",
-  "search.filters.operator.equals.text": "Equals",
+  "search.filters.operator.equals.text": "Egyenlő",
 
   // "search.filters.operator.notequals.text": "Not Equals",
-  "search.filters.operator.notequals.text": "Not Equals",
+  "search.filters.operator.notequals.text": "Nem egyenlő",
 
   // "search.filters.operator.authority.text": "Authority",
   "search.filters.operator.authority.text": "Authority",
@@ -6946,19 +6946,19 @@
   "search.filters.operator.notauthority.text": "Not Authority",
 
   // "search.filters.operator.contains.text": "Contains",
-  "search.filters.operator.contains.text": "Contains",
+  "search.filters.operator.contains.text": "Tartalmaz",
 
   // "search.filters.operator.notcontains.text": "Not Contains",
-  "search.filters.operator.notcontains.text": "Not Contains",
+  "search.filters.operator.notcontains.text": "Nem tartalmaz",
 
   // "search.filters.operator.query.text": "Query",
-  "search.filters.operator.query.text": "Query",
+  "search.filters.operator.query.text": "Lekérdezés",
 
   // "search.form.search": "Search",
   "search.form.search": "Keresés",
 
   // "search.form.search_dspace": "All repository",
-  "search.form.search_dspace": "Teljes adattár",
+  "search.form.search_dspace": "Teljes repozitórium",
 
   // "search.form.scope.all": "All of DSpace",
   "search.form.scope.all": "A teljes DSpace",
@@ -7003,7 +7003,7 @@
   "search.sidebar.settings.rpp": "Eredmények oldalanként",
 
   // "search.sidebar.settings.sort-by": "Sort By",
-  "search.sidebar.settings.sort-by": "Rendszerezés eszerint",
+  "search.sidebar.settings.sort-by": "Rendszerezési szempont",
 
   // "search.sidebar.advanced-search.title": "Advanced Search",
   "search.sidebar.advanced-search.title": "Összetett keresés",
@@ -7108,7 +7108,7 @@
   "statistics.table.no-data": "Nincsenek adatok",
 
   // "statistics.table.title.TotalVisits": "Total visits",
-  "statistics.table.title.TotalVisits": "Összes látogatás",
+  "statistics.table.title.TotalVisits": "Összes megtekintés",
 
   // "statistics.table.title.TotalVisitsPerMonth": "Total visits per month",
   "statistics.table.title.TotalVisitsPerMonth": "Összes látogató a hónapban",
@@ -7129,7 +7129,7 @@
   "statistics.table.no-name": "(object name could not be loaded)",
 
   // "submission.edit.breadcrumbs": "Edit Submission",
-  "submission.edit.breadcrumbs": "Feltöltés Szerkesztése",
+  "submission.edit.breadcrumbs": "Feltöltés szerkesztése",
 
   // "submission.edit.title": "Edit Submission",
   "submission.edit.title": "Feltöltés szerkesztése",
@@ -7141,7 +7141,7 @@
   "submission.general.cannot_submit": "Önnek nincs meg a szükséges engedélye egy új feltöltéshez.",
 
   // "submission.general.deposit": "Deposit",
-  "submission.general.deposit": "Adattár",
+  "submission.general.deposit": "Beküld",
 
   // "submission.general.discard.confirm.cancel": "Cancel",
   "submission.general.discard.confirm.cancel": "Mégse",
@@ -7824,7 +7824,7 @@
   "submission.sections.ccLicense.confirmation": "Engedélyezem a lentebbi licencet",
 
   // "submission.sections.general.add-more": "Add more",
-  "submission.sections.general.add-more": "Több hozzáadása",
+  "submission.sections.general.add-more": "Továbbiak hozzáadása",
 
   // "submission.sections.general.cannot_deposit": "Deposit cannot be completed due to errors in the form.<br>Please fill out all required fields to complete the deposit.",
   "submission.sections.general.cannot_deposit": "Az űrlapon található hibák miatt az elem beküldése nem teljesíthető.<br>Kérjük töltse ki az összes kötelező mezőt a beküldéshez.",
@@ -7997,7 +7997,7 @@
   "submission.sections.upload.edit.title": "Bitstream szerkesztés",
 
   // "submission.sections.upload.form.access-condition-label": "Access condition type",
-  "submission.sections.upload.form.access-condition-label": "Elérhetőségi feltétel típusa",
+  "submission.sections.upload.form.access-condition-label": "Hozzáférés szabályának típusa",
 
   // "submission.sections.upload.form.access-condition-hint": "Select an access condition to apply on the bitstream once the item is deposited",
   "submission.sections.upload.form.access-condition-hint": "A kiválasztott hozzáférési szabály az elem beküldését követően rögtön beállításra kerül a bitfolyamon",
@@ -8071,7 +8071,7 @@
   "submission.sections.accesses.form.discoverable-label": "Böngészhető",
 
   // "submission.sections.accesses.form.access-condition-label": "Access condition type",
-  "submission.sections.accesses.form.access-condition-label": "Hozzáférési szabály típusa",
+  "submission.sections.accesses.form.access-condition-label": "Hozzáférés szabályának típusa",
 
   // "submission.sections.accesses.form.access-condition-hint": "Select an access condition to apply on the item once it is deposited",
   "submission.sections.accesses.form.access-condition-hint": "A kiválasztott hozzáférési szabály az elem beküldését követően rögtön beállításra kerül",
@@ -8712,7 +8712,7 @@
   "researcher.profile.public.visibility": "PUBLIC",
 
   // "researcher.profile.status": "Status:",
-  "researcher.profile.status": "Status:",
+  "researcher.profile.status": "Állapot:",
 
   // "researcherprofile.claim.not-authorized": "You are not authorized to claim this item. For more details contact the administrator(s).",
   "researcherprofile.claim.not-authorized": "You are not authorized to claim this item. For more details contact the administrator(s).",
@@ -9060,10 +9060,10 @@
   "system-wide-alert-banner.countdown.minutes": "{{minutes}} minute(s):",
 
   // "menu.section.system-wide-alert": "System-wide Alert",
-  "menu.section.system-wide-alert": "Rendszerszintű figyelmeztés",
+  "menu.section.system-wide-alert": "Rendszerszintű figyelmeztetés",
 
   // "system-wide-alert.form.header": "System-wide Alert",
-  "system-wide-alert.form.header": "Rendszerszintű figyelmeztés",
+  "system-wide-alert.form.header": "Rendszerszintű figyelmeztetés",
 
   // "system-wide-alert-form.retrieval.error": "Something went wrong retrieving the system-wide alert",
   "system-wide-alert-form.retrieval.error": "Something went wrong retrieving the system-wide alert",
@@ -9075,46 +9075,46 @@
   "system-wide-alert.form.save": "Mentés",
 
   // "system-wide-alert.form.label.active": "ACTIVE",
-  "system-wide-alert.form.label.active": "ACTIVE",
+  "system-wide-alert.form.label.active": "AKTÍV",
 
   // "system-wide-alert.form.label.inactive": "INACTIVE",
-  "system-wide-alert.form.label.inactive": "INACTIVE",
+  "system-wide-alert.form.label.inactive": "INAKTÍV",
 
   // "system-wide-alert.form.error.message": "The system wide alert must have a message",
   "system-wide-alert.form.error.message": "The system wide alert must have a message",
 
   // "system-wide-alert.form.label.message": "Alert message",
-  "system-wide-alert.form.label.message": "Alert message",
+  "system-wide-alert.form.label.message": "Figyelmeztetés szövege",
 
   // "system-wide-alert.form.label.countdownTo.enable": "Enable a countdown timer",
-  "system-wide-alert.form.label.countdownTo.enable": "Enable a countdown timer",
+  "system-wide-alert.form.label.countdownTo.enable": "Visszaszámlálós időzítő engedélyezése",
 
   // "system-wide-alert.form.label.countdownTo.hint": "Hint: Set a countdown timer. When enabled, a date can be set in the future and the system-wide alert banner will perform a countdown to the set date. When this timer ends, it will disappear from the alert. The server will NOT be automatically stopped.",
-  "system-wide-alert.form.label.countdownTo.hint": "Hint: Set a countdown timer. When enabled, a date can be set in the future and the system-wide alert banner will perform a countdown to the set date. When this timer ends, it will disappear from the alert. The server will NOT be automatically stopped.",
+  "system-wide-alert.form.label.countdownTo.hint": "Tipp: Visszaszámlálós időzítő engedélyezése. Használata révén egy jövőbeli dátum adható meg, amelyhez képest egy visszaszámláló el fog indulni a figyelmeztetés szövegével együtt. A beállított dátumot elérve a rendszerszintű figyelmeztetés automatikusan el fog tűnni.",
 
   // "system-wide-alert-form.select-date-by-calendar": "Select date using calendar",
-  "system-wide-alert-form.select-date-by-calendar": "Select date using calendar",
+  "system-wide-alert-form.select-date-by-calendar": "Dátum kiválasztása dátumválasztó révén",
 
   // "system-wide-alert.form.label.preview": "System-wide alert preview",
-  "system-wide-alert.form.label.preview": "System-wide alert preview",
+  "system-wide-alert.form.label.preview": "A rendszerszintű figyelmeztetés előnézete",
 
   // "system-wide-alert.form.update.success": "The system-wide alert was successfully updated",
-  "system-wide-alert.form.update.success": "The system-wide alert was successfully updated",
+  "system-wide-alert.form.update.success": "A rendszerszintű figyelmeztetés sikeresen módosítva",
 
   // "system-wide-alert.form.update.error": "Something went wrong when updating the system-wide alert",
-  "system-wide-alert.form.update.error": "Something went wrong when updating the system-wide alert",
+  "system-wide-alert.form.update.error": "A rendszerszintű figyelmeztetés módosítása sikertelen",
 
   // "system-wide-alert.form.create.success": "The system-wide alert was successfully created",
-  "system-wide-alert.form.create.success": "The system-wide alert was successfully created",
+  "system-wide-alert.form.create.success": "A rendszerszintű figyelmeztetés létrehozása sikeres",
 
   // "system-wide-alert.form.create.error": "Something went wrong when creating the system-wide alert",
-  "system-wide-alert.form.create.error": "Something went wrong when creating the system-wide alert",
+  "system-wide-alert.form.create.error": "A rendszerszintű figyelmeztetés létrehozása sikertelen",
 
   // "admin.system-wide-alert.breadcrumbs": "System-wide Alerts",
-  "admin.system-wide-alert.breadcrumbs": "System-wide Alerts",
+  "admin.system-wide-alert.breadcrumbs": "Rendszerszintű figyelmeztetések",
 
   // "admin.system-wide-alert.title": "System-wide Alerts",
-  "admin.system-wide-alert.title": "System-wide Alerts",
+  "admin.system-wide-alert.title": "Rendszerszintű figyelmeztetések",
 
   // "discover.filters.head": "Discover",
   "discover.filters.head": "Discover",
@@ -9129,7 +9129,7 @@
   "community-access-control-title": "This form allows you to perform changes to the access conditions of all the items owned by any collection under this community. Changes may be performed to either all Item metadata or all content (bitstreams).",
 
   // "access-control-item-header-toggle": "Item's Metadata",
-  "access-control-item-header-toggle": "Item's Metadata",
+  "access-control-item-header-toggle": "Elemhez tartozó metaadatok",
 
   // "access-control-item-toggle.enable": "Enable option to perform changes on the item's metadata",
   "access-control-item-toggle.enable": "Enable option to perform changes on the item's metadata",
@@ -9147,19 +9147,19 @@
   "access-control-bitstream-toggle.disable": "Disable option to perform changes on the bitstreams",
 
   // "access-control-mode": "Mode",
-  "access-control-mode": "Mode",
+  "access-control-mode": "Mód",
 
   // "access-control-access-conditions": "Access conditions",
-  "access-control-access-conditions": "Access conditions",
+  "access-control-access-conditions": "Hozzáférési szabályok",
 
   // "access-control-no-access-conditions-warning-message": "Currently, no access conditions are specified below. If executed, this will replace the current access conditions with the default access conditions inherited from the owning collection.",
   "access-control-no-access-conditions-warning-message": "Currently, no access conditions are specified below. If executed, this will replace the current access conditions with the default access conditions inherited from the owning collection.",
 
   // "access-control-replace-all": "Replace access conditions",
-  "access-control-replace-all": "Replace access conditions",
+  "access-control-replace-all": "Jelenlegi hozzáférési szabály cseréje",
 
   // "access-control-add-to-existing": "Add to existing ones",
-  "access-control-add-to-existing": "Add to existing ones",
+  "access-control-add-to-existing": "Hozzáadás a jelenlegihez",
 
   // "access-control-limit-to-specific": "Limit the changes to specific bitstreams",
   "access-control-limit-to-specific": "Limit the changes to specific bitstreams",
@@ -9177,10 +9177,10 @@
   "access-control-cancel": "Mégse",
 
   // "access-control-execute": "Execute",
-  "access-control-execute": "Execute",
+  "access-control-execute": "Végrehajt",
 
   // "access-control-add-more": "Add more",
-  "access-control-add-more": "Add more",
+  "access-control-add-more": "Továbbiak hozzáadása",
 
   // "access-control-remove": "Remove access condition",
   "access-control-remove": "Remove access condition",
@@ -9195,10 +9195,10 @@
   "access-control-select-bitstreams-modal.close": "Close",
 
   // "access-control-option-label": "Access condition type",
-  "access-control-option-label": "Access condition type",
+  "access-control-option-label": "Hozzáférés szabályának típusa",
 
   // "access-control-option-note": "Choose an access condition to apply to selected objects.",
-  "access-control-option-note": "Choose an access condition to apply to selected objects.",
+  "access-control-option-note": "Válasszon egy hozzáférési szabályt, amely alkalmazásra kerül a kiválasztott elemeken.",
 
   // "access-control-option-start-date": "Grant access from",
   "access-control-option-start-date": "Grant access from",
@@ -9213,7 +9213,7 @@
   "access-control-option-end-date-note": "Select the date until which the related access condition is applied",
 
   // "vocabulary-treeview.search.form.add": "Add",
-  "vocabulary-treeview.search.form.add": "Add",
+  "vocabulary-treeview.search.form.add": "Hozzáadás",
 
   // "admin.notifications.publicationclaim.breadcrumbs": "Publication Claim",
   "admin.notifications.publicationclaim.breadcrumbs": "Publication Claim",
@@ -9249,13 +9249,13 @@
   "ldn-registered-services.title": "Registered Services",
 
   // "ldn-registered-services.table.name": "Name",
-  "ldn-registered-services.table.name": "Name",
+  "ldn-registered-services.table.name": "Név",
 
   // "ldn-registered-services.table.description": "Description",
   "ldn-registered-services.table.description": "Description",
 
   // "ldn-registered-services.table.status": "Status",
-  "ldn-registered-services.table.status": "Status",
+  "ldn-registered-services.table.status": "Állapot",
 
   // "ldn-registered-services.table.action": "Action",
   "ldn-registered-services.table.action": "Action",
@@ -9291,7 +9291,7 @@
   "service.overview.create.body": "Please confirm the creation of this service.",
 
   // "ldn-service-status": "Status",
-  "ldn-service-status": "Status",
+  "ldn-service-status": "Állapot",
 
   // "service.confirm.create": "Create",
   "service.confirm.create": "Létrehoz",
@@ -9306,7 +9306,7 @@
   "ldn-new-service.form.label.submit": "Mentés",
 
   // "ldn-new-service.form.label.name": "Name",
-  "ldn-new-service.form.label.name": "Name",
+  "ldn-new-service.form.label.name": "Név",
 
   // "ldn-new-service.form.label.description": "Description",
   "ldn-new-service.form.label.description": "Description",
@@ -9585,7 +9585,7 @@
   "ldn-edit-service.title": "Edit service",
 
   // "ldn-edit-service.form.label.name": "Name",
-  "ldn-edit-service.form.label.name": "Name",
+  "ldn-edit-service.form.label.name": "Név",
 
   // "ldn-edit-service.form.label.description": "Description",
   "ldn-edit-service.form.label.description": "Description",
@@ -9701,13 +9701,13 @@
   "service.overview.table.id": "Services ID",
 
   // "service.overview.table.name": "Name",
-  "service.overview.table.name": "Name",
+  "service.overview.table.name": "Név",
 
   // "service.overview.table.start": "Start time (UTC)",
-  "service.overview.table.start": "Start time (UTC)",
+  "service.overview.table.start": "Indítás dátuma (UTC)",
 
   // "service.overview.table.status": "Status",
-  "service.overview.table.status": "Status",
+  "service.overview.table.status": "Állapot",
 
   // "service.overview.table.user": "User",
   "service.overview.table.user": "User",
@@ -10292,7 +10292,7 @@
   "notify-message-result.type": "Type",
 
   // "notify-message-result.status": "Status",
-  "notify-message-result.status": "Status",
+  "notify-message-result.status": "Állapot",
 
   // "notify-message-result.action": "Action",
   "notify-message-result.action": "Action",
