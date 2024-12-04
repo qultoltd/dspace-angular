@@ -1,4 +1,4 @@
-""{
+{
 
   // "401.help": "You're not authorized to access this page. You can use the button below to get back to the home page.",
   "401.help": "Nincs jogosultsága az oldal eléréséhez. Az alábbi gombbal vissza tud lépni a főoldalra.",
@@ -1825,7 +1825,7 @@
   "collection.edit.logo.notifications.delete.success.content": "Gyűjteménylogo sikeresen törölve",
 
   // "collection.edit.logo.notifications.delete.error.title": "Error deleting logo",
-  "collection.edit.logo.notifications.delete.error.title": "Logótörlése közben hiba történt",
+  "collection.edit.logo.notifications.delete.error.title": "Logó törlése közben hiba történt",
 
   // "collection.edit.logo.upload": "Drop a Collection Logo to upload",
   "collection.edit.logo.upload": "Feltöltéshez húzza ide a gyűjtemény Logót",
@@ -5579,7 +5579,7 @@
   "pagination.showing.label": "Jelenleg látható ",
 
   // "pagination.sort-direction": "Sort Options",
-  "pagination.sort-direction": "Rendszerezési lehetőségek",
+  "pagination.sort-direction": "Rendezési lehetőségek",
 
   // "person.listelement.badge": "Person",
   "person.listelement.badge": "Személy",
@@ -7003,7 +7003,7 @@
   "search.sidebar.settings.rpp": "Eredmények oldalanként",
 
   // "search.sidebar.settings.sort-by": "Sort By",
-  "search.sidebar.settings.sort-by": "Rendszerezési szempont",
+  "search.sidebar.settings.sort-by": "Rendezési szempont",
 
   // "search.sidebar.advanced-search.title": "Advanced Search",
   "search.sidebar.advanced-search.title": "Összetett keresés",
