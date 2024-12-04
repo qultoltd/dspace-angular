@@ -1,11 +1,11 @@
 rest:
   ssl: true
-  host: sandbox.dspace.org
+  host: demo.dspace.org
   port: 443
   nameSpace: /server
 
 themes:
-  - name: szerep
+  - name: qulto
     headTags:
       - tagName: link
         attributes:
