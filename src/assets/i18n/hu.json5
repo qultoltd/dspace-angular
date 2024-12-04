@@ -2587,7 +2587,7 @@
   "dso-selector.create.community.head": "Új közösség",
 
   // "dso-selector.create.community.or-divider": "or",
-  "dso-selector.create.community.or-divider": "or",
+  "dso-selector.create.community.or-divider": "vagy",
 
   // "dso-selector.create.community.sub-level": "Create a new community in",
   "dso-selector.create.community.sub-level": "Hozzon létre új közösséget benne",
@@ -7045,10 +7045,10 @@
   "sorting.DESC": "Csökkenő",
 
   // "sorting.dc.title.ASC": "Title Ascending",
-  "sorting.dc.title.ASC": "Cím szerint növekvő sorrendben",
+  "sorting.dc.title.ASC": "Cím szerint növekvő",
 
   // "sorting.dc.title.DESC": "Title Descending",
-  "sorting.dc.title.DESC": "Cím szerint csökkenő sorrendben",
+  "sorting.dc.title.DESC": "Cím szerint csökkenő",
 
   // "sorting.score.ASC": "Least Relevant",
   "sorting.score.ASC": "Legkevésbé releváns",
@@ -7072,7 +7072,7 @@
   "sorting.lastModified.ASC": "Utolsó módosítás dátuma szerint növekvő",
 
   // "sorting.lastModified.DESC": "Last modified Descending",
-  "sorting.lastModified.DESC": "Utoljára módosított növekvő csökkenő",
+  "sorting.lastModified.DESC": "Utolsó módosítás dátuma szerint csökkenő",
 
   // "sorting.person.familyName.ASC": "Surname Ascending",
   "sorting.person.familyName.ASC": "Vezetéknév szerint növekvő",
