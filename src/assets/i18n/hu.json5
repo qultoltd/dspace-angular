@@ -4193,6 +4193,9 @@
   // "item.page.uri": "URI",
   "item.page.uri": "URI",
 
+  //"item.page.doi": "DOI",
+  "item.page.doi": "DOI",
+
   // "item.page.bitstreams.view-more": "Show more",
   "item.page.bitstreams.view-more": "Tovább",
 

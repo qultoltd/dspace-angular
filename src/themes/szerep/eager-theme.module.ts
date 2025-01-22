@@ -10,6 +10,7 @@ import { NavbarComponent } from './app/navbar/navbar.component';
 import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
 import { ItemSearchResultListElementComponent } from './app/shared/object-list/search-result-list-element/item-search-result/item-types/item/item-search-result-list-element.component';
+import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -27,7 +28,8 @@ const DECLARATIONS = [
   HeaderNavbarWrapperComponent,
   NavbarComponent,
   FooterComponent,
-  LangSwitchComponent
+  LangSwitchComponent,
+  UntypedItemComponent
 ];
 
 @NgModule({
