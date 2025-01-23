@@ -1,6 +1,6 @@
-import { 
-  Component, 
-  Input 
+import {
+  Component,
+  Input
 } from '@angular/core';
 import { Item } from '../../../../../core/shared/item.model';
 import { ItemPageFieldComponent } from '../item-page-field.component';
