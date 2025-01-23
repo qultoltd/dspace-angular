@@ -27,14 +27,15 @@ import { GenericItemPageFieldComponent } from '../../../../../../../app/item-pag
 import { ThemedItemPageTitleFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
 import { ItemPageUriFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
 import { ThemedMetadataRepresentationListComponent } from '../../../../../../../app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
-import { ItemComponent } from '../../../../../../../app/item-page/simple/item-types/shared/item.component';
 import { ItemPageDoiFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/doi/item-page-doi-field.component';
+import { UntypedItemComponent as BaseComponent } from 'src/app/item-page/simple/item-types/untyped-item/untyped-item.component';
+import { Context } from 'src/app/core/shared/context.model';
 
 /**
  * Component that represents a publication Item page
  */
 
-@listableObjectComponent(Item, ViewMode.StandalonePage)
+@listableObjectComponent(Item, ViewMode.StandalonePage, Context.Any, 'szerep')
 @Component({
   selector: 'ds-untyped-item',
   styleUrls: ['./untyped-item.component.scss'],
@@ -64,4 +65,4 @@ import { ItemPageDoiFieldComponent } from '../../../../../../../app/item-page/si
     ItemPageDoiFieldComponent
   ],
 })
-export class UntypedItemComponent extends ItemComponent {}
+export class UntypedItemComponent extends BaseComponent {}
