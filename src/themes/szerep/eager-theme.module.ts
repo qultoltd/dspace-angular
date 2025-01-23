@@ -6,9 +6,10 @@ import { FooterComponent } from './app/footer/footer.component';
 import { HeaderComponent } from './app/header/header.component';
 import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-navbar-wrapper.component';
 import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
+import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
 import { NavbarComponent } from './app/navbar/navbar.component';
-import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
+import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
 import { ItemSearchResultListElementComponent } from './app/shared/object-list/search-result-list-element/item-search-result/item-types/item/item-search-result-list-element.component';
 
 /**
@@ -17,7 +18,7 @@ import { ItemSearchResultListElementComponent } from './app/shared/object-list/s
  */
 const ENTRY_COMPONENTS = [
   CommunityListElementComponent,
-  ItemSearchResultListElementComponent
+  ItemSearchResultListElementComponent,
 ];
 
 const DECLARATIONS = [
@@ -27,7 +28,8 @@ const DECLARATIONS = [
   HeaderNavbarWrapperComponent,
   NavbarComponent,
   FooterComponent,
-  LangSwitchComponent
+  LangSwitchComponent,
+  UntypedItemComponent,
 ];
 
 @NgModule({

@@ -1,0 +1,8 @@
+<ds-metadata-field-wrapper [label]="label | translate">
+    <span *ngFor="let mdValue of mdValues; let last = last">
+        <a class="dont-break-out" [href]="formatDoiUrl(mdValue.value)" target="_blank" rel="noopener noreferrer">
+            {{ linkText || mdValue.value }}
+        </a>
+        <span *ngIf="!last" [innerHTML]="separator"></span>
+    </span>
+</ds-metadata-field-wrapper>
