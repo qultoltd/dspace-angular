@@ -1,10 +1,10 @@
 import {
   Component,
-  Input
+  Input,
 } from '@angular/core';
 import {
   NgForOf,
-  NgIf
+  NgIf,
 } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { MetadataValue } from '../../../core/shared/metadata.models';

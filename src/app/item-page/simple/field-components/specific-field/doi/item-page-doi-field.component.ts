@@ -1,6 +1,6 @@
 import {
   Component,
-  Input
+  Input,
 } from '@angular/core';
 import { Item } from '../../../../../core/shared/item.model';
 import { ItemPageFieldComponent } from '../item-page-field.component';
@@ -26,9 +26,8 @@ export class ItemPageDoiFieldComponent extends ItemPageFieldComponent {
 
   /**
    * Separator string between multiple DOIs
-   * @type {string}
    */
-  @Input() separator: string = ', ';
+  @Input() separator = ', ';
 
   /**
    * Metadata fields containing DOIs
@@ -38,7 +37,7 @@ export class ItemPageDoiFieldComponent extends ItemPageFieldComponent {
   /**
    * Label for the DOI field
    */
-  @Input() label: string = 'item.page.doi';
+  @Input() label = 'item.page.doi';
 
   /**
    * Get metadata values for the provided fields
