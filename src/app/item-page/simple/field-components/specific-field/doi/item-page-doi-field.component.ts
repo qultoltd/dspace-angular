@@ -2,9 +2,10 @@ import {
   Component,
   Input,
 } from '@angular/core';
+import { MetadataDoiValuesComponent } from 'src/app/item-page/field-components/metadata-doi-values/metadata-doi-values.component';
+
 import { Item } from '../../../../../core/shared/item.model';
 import { ItemPageFieldComponent } from '../item-page-field.component';
-import { MetadataDoiValuesComponent } from 'src/app/item-page/field-components/metadata-doi-values/metadata-doi-values.component';
 
 /**
  * This component displays DOIs on a simple item page using the MetadataDoiValuesComponent.

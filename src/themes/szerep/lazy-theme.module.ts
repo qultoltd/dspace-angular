@@ -14,12 +14,12 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { RootModule } from '../../app/root.module';
 import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
-import { LoginPageComponent } from './app/login-page/login-page.component';
-import { ObjectListComponent } from './app/shared/object-list/object-list.component';
-import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
+import { LoginPageComponent } from './app/login-page/login-page.component';
 import { RegisterEmailFormComponent } from './app/register-email-form/register-email-form.component';
+import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
 import { AccessStatusBadgeComponent } from './app/shared/object-collection/shared/badges/access-status-badge/access-status-badge.component';
+import { ObjectListComponent } from './app/shared/object-list/object-list.component';
 
 const DECLARATIONS = [
   HomePageComponent,
@@ -29,7 +29,7 @@ const DECLARATIONS = [
   AuthNavMenuComponent,
   FullItemPageComponent,
   RegisterEmailFormComponent,
-  AccessStatusBadgeComponent
+  AccessStatusBadgeComponent,
 ];
 
 @NgModule({
