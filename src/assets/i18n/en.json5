@@ -2790,6 +2790,8 @@
 
   "item.page.uri": "URI",
 
+  "item.page.doi": "DOI",
+
   "item.page.bitstreams.view-more": "Show more",
 
   "item.page.bitstreams.collapse": "Collapse",
@@ -5612,7 +5614,7 @@
 
   "thumbnail.person.placeholder": "No Profile Picture Available",
 
-  title: "DSpace",
+  "title": "DSpace",
 
   "vocabulary-treeview.header": "Hierarchical tree view",
 
