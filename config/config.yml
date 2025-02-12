@@ -1,5 +1,39 @@
 rest:
   ssl: true
-  host: sandbox.dspace.org
+  host: demo.dspace.org
   port: 443
   nameSpace: /server
+
+themes:
+  - name: qulto
+    headTags:
+      - tagName: link
+        attributes:
+          rel: icon
+          href: /assets/szerep/images/qultoIcon.svg
+          sizes: image/svg+xml
+
+homePage:
+  topLevelCommunityList:
+    # No. of communities to list per page on the home page
+    # This will always round to the nearest number from the list of page sizes. e.g. if you set it to 7 it'll use 10
+    pageSize: 4
+    # layout can be "cards" or "list"
+    layout: "list"
+
+item:
+  showAccessStatuses: true
+
+
+#  Default Language in which the UI will be rendered if the user's browser language is not an active language
+defaultLanguage: hu
+
+# Languages. DSpace Angular holds a message catalog for each of the following languages.
+# When set to active, users will be able to switch to the use of this language in the user interface.
+languages:
+  - code: hu
+    label: Magyar
+    active: true
+  - code: en
+    label: English
+    active: true

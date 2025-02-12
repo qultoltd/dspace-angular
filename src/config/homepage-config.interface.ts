@@ -18,6 +18,7 @@ export interface HomeConfig extends Config {
 
   topLevelCommunityList: {
     pageSize: number;
+    layout: string;
   };
   /*
   * Enable or disable the Discover filters on the homepage

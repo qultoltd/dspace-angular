@@ -58,6 +58,16 @@
                 "input": "src/themes/dspace/styles/theme.scss",
                 "inject": false,
                 "bundleName": "dspace-theme"
+              },
+              {
+                "input": "src/themes/qulto/styles/theme.scss",
+                "inject": false,
+                "bundleName": "qulto-theme"
+              },
+              {
+                "input": "src/themes/szerep/styles/theme.scss",
+                "inject": false,
+                "bundleName": "szerep-theme"
               }
             ],
             "scripts": [],

@@ -1,0 +1,10 @@
+header {
+  nav {
+    gap: 0.25rem;
+
+    .navbar-toggler {
+      border: none;
+      color: var(--ds-header-icon-color);
+    }
+  }
+}
