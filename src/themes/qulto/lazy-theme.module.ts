@@ -18,6 +18,7 @@ import { FullItemPageComponent } from './app/item-page/full/full-item-page.compo
 import { LoginPageComponent } from './app/login-page/login-page.component';
 import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
 import { ObjectListComponent } from './app/shared/object-list/object-list.component';
+import { ComcolPageLogoComponent } from './app/shared/comcol/comcol-page-logo/comcol-page-logo.component';
 
 const DECLARATIONS = [
   HomePageComponent,
@@ -26,6 +27,7 @@ const DECLARATIONS = [
   ObjectListComponent,
   AuthNavMenuComponent,
   FullItemPageComponent,
+  ComcolPageLogoComponent,
 ];
 
 @NgModule({
