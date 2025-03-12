@@ -4,4 +4,64 @@
   "qulto.home.welcome.description": "A {{ dspaceName }} elektronikus dokumentumok digitális tárhelye, archiválásra és a dokumentumok hozzáférhetővé tételére szolgál.",
 
   "qulto.home.welcome.functions": "Célja, hogy biztosítsa a kutatók, oktatók és érdeklődők számára a tudományos és szakmai anyagok könnyű elérhetőségét, elősegítve a tudás szabad áramlását és a tudományos közösség munkájának szélesebb körű terjesztését.",
+
+  "dc.title.subtitle": "Alcím",
+
+  "dc.title.other": "Egyéb cím",
+
+  "dc.title": "Cím",
+
+  "dc.contributor.author": "Szerző",
+
+  "dc.contributor.advisor": "Konzulens/Témavezető",
+
+  "dc.contributor.description": "Leírás",
+
+  "dc.contributor.extadvisor": "Külső konzulens",
+
+  "dc.contributor.faculty": "Kar",
+
+  "dc.contributor.inst": "Tanszék",
+
+  "dc.contributor.org": "Intézmény",
+
+  "dc.contributor.workplace": "Külső konzules munkahelye",
+
+  "dc.date.accessioned": "Utolsó hozzáférés ideje",
+
+  "dc.date.available": "Elérhetőség dátuma",
+
+  "dc.date.catalog": "Állományba vétel",
+
+  "dc.date.issued": "Megjelenés éve",
+
+  "dc.date.recordid": "Főnaplószám",
+
+  "dc.description.type": "Képzési szint",
+
+  "dc.identifier.uri": "URI",
+
+  "dc.language.iso": "Nyelv",
+
+  "dc.rights.access": "Hozzáférés",
+
+  "dc.subject": "Tárgyszó",
+
+  "dc.type": "Dokumentumtípus",
+
+  "dc.title": "Cím",
+
+  "dc.title.other": "Egyéb cím",
+
+  "dc.format.extent": "Terjedelem",
+
+  "dc.identifier.doi": "DOI",
+
+  "dc.contributor.doctschool": "Doktori iskola",
+
+  "dc.description.appendix": "Melléklet",
+
+  "status.badge.limited": "Korlátozottan hozzáférhető",
+
+  "status.badge.public": "Szabadon hozzáférhető"
 }

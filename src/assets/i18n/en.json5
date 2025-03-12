@@ -6909,4 +6909,61 @@
   "qulto.home.welcome.description": "{{ dspaceName }} is a digital storage for electronic documents, designed for archiving and making documents accessible.",
 
   "qulto.home.welcome.functions": "Its purpose is to provide researchers, educators, and interested parties with easy access to scientific and professional materials, promoting the free flow of knowledge and the wider dissemination of the work of the academic community.",
+
+
+  "dc.title.subtitle": "Subtitle",
+
+  "dc.title.other": "Other title",
+
+  "dc.title": "Title",
+
+  "dc.contributor.author": "Author",
+
+  "dc.contributor.advisor": "Advisor",
+
+  "dc.contributor.description": "Description",
+
+  "dc.contributor.extadvisor": "Extadvisor",
+
+  "dc.contributor.faculty": "Faculty",
+
+  "dc.contributor.inst": "Department",
+
+  "dc.contributor.org": "Institution",
+
+  "dc.contributor.workplace": "Foreign consular workplace",
+
+  "dc.date.accessioned": "Last access date",
+
+  "dc.date.available": "Availability date",
+
+  "dc.date.catalog": "Catalog date",
+
+  "dc.date.issued": "Date issued",
+
+  "dc.date.recordid": "Record id",
+
+  "dc.description.type": "Level",
+
+  "dc.identifier.uri": "URI",
+
+  "dc.language.iso": "Language",
+
+  "dc.rights.access": "Access",
+
+  "dc.subject": "Subject",
+
+  "dc.type": "Document type",
+
+  "dc.format.extent": "Extent",
+
+  "dc.identifier.doi": "DOI",
+
+  "dc.contributor.doctschool": "Doctoral school",
+
+  "dc.description.appendix": "Appendix",
+
+  "status.badge.limited": "Limited access",
+
+  "status.badge.public": "Free access"
 }
