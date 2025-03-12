@@ -5,7 +5,8 @@ rest:
   nameSpace: /server
 
 themes:
-  - name: qulto
+  - name: pte
+    extends: qulto
     headTags:
       - tagName: link
         attributes:
