@@ -2762,6 +2762,8 @@
 
   "item.page.uri": "URI",
 
+  "item.page.doi": "DOI",
+
   "item.page.bitstreams.view-more": "Tovább",
 
   "item.page.bitstreams.collapse": "Bezár",
