@@ -70,7 +70,7 @@
                 "bundleName": "szerep-theme"
               },
               {
-                "input": "src/themes/qulto/styles/theme.scss",
+                "input": "src/themes/pte/styles/theme.scss",
                 "inject": false,
                 "bundleName": "pte-theme"
               }
