@@ -9,6 +9,8 @@ import { HomeNewsComponent } from './app/home-page/home-news/home-news.component
 import { NavbarComponent } from './app/navbar/navbar.component';
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
 import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
+import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
+
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -26,12 +28,14 @@ const DECLARATIONS = [
   NavbarComponent,
   FooterComponent,
   LangSwitchComponent,
+  PublicationComponent
 ];
 
 @NgModule({
   imports: [
     CommonModule,
     RootModule,
+    PublicationComponent,
     ...DECLARATIONS,
   ],
   providers: [
