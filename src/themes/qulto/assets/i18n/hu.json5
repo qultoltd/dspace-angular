@@ -4,4 +4,8 @@
   "qulto.home.welcome.description": "A {{ dspaceName }} elektronikus dokumentumok digitális tárhelye, archiválásra és a dokumentumok hozzáférhetővé tételére szolgál.",
 
   "qulto.home.welcome.functions": "Célja, hogy biztosítsa a kutatók, oktatók és érdeklődők számára a tudományos és szakmai anyagok könnyű elérhetőségét, elősegítve a tudás szabad áramlását és a tudományos közösség munkájának szélesebb körű terjesztését.",
+
+  "relationships.isPartOf": "Szülő rekord",
+
+  "relationships.hasPart": "Gyerek rekord"
 }
