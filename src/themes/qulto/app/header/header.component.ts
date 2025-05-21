@@ -14,6 +14,9 @@ import { ThemedNavbarComponent } from '../../../../app/navbar/themed-navbar.comp
 import { ThemedSearchNavbarComponent } from '../../../../app/search-navbar/themed-search-navbar.component';
 import { ThemedAuthNavMenuComponent } from '../../../../app/shared/auth-nav-menu/themed-auth-nav-menu.component';
 import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-navbar/impersonate-navbar.component';
+import { ThemeMetaService } from '../shared/theme-support/theme-meta.service';
+import { MenuService } from 'src/app/shared/menu/menu.service';
+import { HostWindowService } from 'src/app/shared/host-window.service';
 
 /**
  * Represents the header with the logo and simple navigation
@@ -28,4 +31,17 @@ import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-n
   imports: [RouterLink, ThemedLangSwitchComponent, NgbDropdownModule, ThemedSearchNavbarComponent, ContextHelpToggleComponent, ThemedAuthNavMenuComponent, ImpersonateNavbarComponent, ThemedNavbarComponent, TranslateModule, AsyncPipe, NgIf],
 })
 export class HeaderComponent extends BaseComponent {
+  themeHeaderLogo = '/assets/qulto/images/logo.svg';
+
+  constructor(
+    protected themeMetaService: ThemeMetaService,
+    protected menuService: MenuService,
+    protected windowService: HostWindowService,
+  ) {
+    super(menuService, windowService);
+    const logo = this.themeMetaService.getMetaContent('headerLogo');
+    if (logo) {
+      this.themeHeaderLogo = logo;
+    }
+  }
 }
