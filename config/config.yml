@@ -12,6 +12,10 @@ themes:
           rel: icon
           href: /assets/szerep/images/qultoIcon.svg
           sizes: image/svg+xml
+      - tagName: meta
+        attributes:
+          name: headerLogo
+          content: /assets/qulto/images/logo.svg
 
 homePage:
   topLevelCommunityList:
