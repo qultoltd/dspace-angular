@@ -1,8 +1,17 @@
+ui:
+  ssl: false
+  host: localhost
+  port: 4000
+
 rest:
   ssl: true
   host: demo.dspace.org
   port: 443
   nameSpace: /server
+
+mediaViewer:
+  image: true
+  video: true
 
 themes:
   - name: qulto
@@ -10,7 +19,7 @@ themes:
       - tagName: link
         attributes:
           rel: icon
-          href: /assets/szerep/images/qultoIcon.svg
+          href: /assets/qulto/images/qultoIcon.svg
           sizes: image/svg+xml
       - tagName: meta
         attributes:

@@ -5,7 +5,7 @@
 
   "qulto.home.welcome.functions": "Its purpose is to provide researchers, educators, and interested parties with easy access to scientific and professional materials, promoting the free flow of knowledge and the wider dissemination of the work of the academic community.",
 
-  "relationships.isPartOf": "Parent record",
+  "relationships.isPartOf": "Is part of",
 
-  "relationships.hasPart": "Child record",
+  "relationships.hasPart": "Has part",
 }
