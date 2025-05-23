@@ -2131,7 +2131,7 @@
   "community.browse.logo": "Közösség logó böngészése",
 
   // "community.subcoms-cols.breadcrumbs": "Subcommunities and Collections",
-  "community.subcoms-cols.breadcrumbs": "Subcommunities and Collections",
+  "community.subcoms-cols.breadcrumbs": "Alközösségek és gyűjtemények",
 
   // "community.create.breadcrumbs": "Create Community",
   "community.create.breadcrumbs": "Közzösség létrehozása",
@@ -2360,7 +2360,7 @@
   "community.page.edit": "Közösség szerkesztése",
 
   // "community.page.handle": "Permanent URI for this community",
-  "community.page.handle": "Állandó link (URI) ehhez a kategóriához",
+  "community.page.handle": "Állandó link (URI) ehhez a közösséghez",
 
   // "community.page.license": "License",
   "community.page.license": "Engedély",
@@ -2378,7 +2378,7 @@
   "community.sub-collection-list.head": "Ennek a közösségnek a gyűjteményei",
 
   // "community.sub-community-list.head": "Communities in this Community",
-  "community.sub-community-list.head": "Ennek a kategóriának az alkategóriái",
+  "community.sub-community-list.head": "Ennek a közösségnek az alközösségei",
 
   // "cookies.consent.accept-all": "Accept all",
   "cookies.consent.accept-all": "Mind elfogad",
@@ -2593,7 +2593,7 @@
   "dso-selector.create.community.sub-level": "Hozzon létre új közösséget benne",
 
   // "dso-selector.create.community.top-level": "Create a new top-level community",
-  "dso-selector.create.community.top-level": "Hozzon létre csúszszintű közösséget",
+  "dso-selector.create.community.top-level": "Hozzon létre legfelső szintű közösséget",
 
   // "dso-selector.create.item.head": "New item",
   "dso-selector.create.item.head": "Új tárgy",
@@ -2632,7 +2632,7 @@
   "dso-selector.placeholder": "{{ type }} keresése",
 
   // "dso-selector.placeholder.type.community": "community",
-  "dso-selector.placeholder.type.community": "Kategória",
+  "dso-selector.placeholder.type.community": "Közösség",
 
   // "dso-selector.placeholder.type.collection": "collection",
   "dso-selector.placeholder.type.collection": "Gyűjtemény",
@@ -2653,7 +2653,7 @@
   "dso-selector.set-scope.community.or-divider": "vagy",
 
   // "dso-selector.set-scope.community.input-header": "Search for a community or collection",
-  "dso-selector.set-scope.community.input-header": "Kategória, gyűjtemény keresése",
+  "dso-selector.set-scope.community.input-header": "Közösség, gyűjtemény keresése",
 
   // "dso-selector.claim.item.head": "Profile tips",
   "dso-selector.claim.item.head": "Profile tips",
@@ -2822,7 +2822,7 @@
   "error.submission.sections.init-form-error": "An error occurred during section initialize, please check your input-form configuration. Details are below : <br> <br>",
 
   // "error.top-level-communities": "Error fetching top-level communities",
-  "error.top-level-communities": "Hiba a csúcsszintű közösségek megjelenítésekor",
+  "error.top-level-communities": "Hiba a legfelső szintű közösségek megjelenítésekor",
 
   // "error.validation.license.notgranted": "You must grant this license to complete your submission. If you are unable to grant this license at this time you may save your work and return later or remove the submission.",
   "error.validation.license.notgranted": "ezt az engedélyt meg kell adnia ahhoz, hogy befejezze a feltöltést. Ha jelenleg ez nem lehetséges, elmentheti az eddigi munkát és később folytathatja, vagy törölheti a feltöltést.",
@@ -3220,7 +3220,7 @@
   "home.top-level-communities.head": "Közösségek",
 
   // "home.top-level-communities.help": "Select a community to browse its collections.",
-  "home.top-level-communities.help": "Válasszon ki egy kategóriát, hogy böngéssze a gyűjteményeit.",
+  "home.top-level-communities.help": "Válasszon ki egy közösséget, hogy böngéssze a gyűjteményeit.",
 
   // "info.end-user-agreement.accept": "I have read and I agree to the End User Agreement",
   "info.end-user-agreement.accept": "Elolvastam és elfogadom a felhasználói feltételeket",
@@ -3861,7 +3861,7 @@
   "item.edit.relationships.save-button": "Mentés",
 
   // "item.edit.relationships.no-entity-type": "Add 'dspace.entity.type' metadata to enable relationships for this item",
-  "item.edit.relationships.no-entity-type": "Adja hozzá a 'dspace.entity.type' metaadatot ezen elem hivatkozásánek engedélyezéséhez",
+  "item.edit.relationships.no-entity-type": "Adja hozzá a 'dspace.entity.type' metaadatot annak érdekében, hogy ez az elem is hivatkozható legyen a rekordkapcsolatok kialakításánál",
 
   // "item.edit.return": "Back",
   "item.edit.return": "Vissza",
@@ -4813,7 +4813,7 @@
   "loading.sub-communities": "Alközösségek betöltése...",
 
   // "loading.top-level-communities": "Loading top-level communities...",
-  "loading.top-level-communities": "Csúcsszintű közösségek betöltése...",
+  "loading.top-level-communities": "Legfelső szintű közösségek betöltése...",
 
   // "login.form.email": "Email address",
   "login.form.email": "E-mail cím",
