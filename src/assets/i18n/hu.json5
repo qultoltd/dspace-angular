@@ -384,7 +384,6 @@
   "admin.access-control.bulk-access-browse.selected.header": "Jelenlegi kijelölés({{number}})",
 
   // "admin.access-control.bulk-access-settings.header": "Step 2: Operation to Perform",
-  // TODO New key - Add a translation
   "admin.access-control.bulk-access-settings.header": "2.lépés: Művelet végrehajtása",
 
   // "admin.access-control.epeople.actions.delete": "Delete EPerson",
@@ -517,7 +516,6 @@
   "admin.access-control.epeople.form.notification.deleted.failure": "Sikertelen törlés: Felhasználó \"{{name}}\"",
 
   // "admin.access-control.epeople.form.groupsEPersonIsMemberOf": "Member of these groups:",
-  // TODO New key - Add a translation
   "admin.access-control.epeople.form.groupsEPersonIsMemberOf": "Tagja a következő csoportoknak:",
 
   // "admin.access-control.epeople.form.table.id": "ID",
@@ -2426,7 +2424,6 @@
   "cookies.consent.content-notice.title": "Süti elfogadása",
 
   // "cookies.consent.content-notice.description": "We collect and process your personal information for the following purposes: <strong>Authentication, Preferences, Acknowledgement and Statistics</strong>. <br/> To learn more, please read our {privacyPolicy}.",
-  // TODO New key - Add a translation
   "cookies.consent.content-notice.description": "Az adatok gyűjtése és feldolgozása a következő célból történik: <strong>Hitelesítés, Beállítások, Elfogadás és Statisztikák</strong>. <br/> A részletek a következő link segítségével érhetők el: {privacyPolicy}.",
 
   // "cookies.consent.content-notice.description.no-privacy": "We collect and process your personal information for the following purposes: <strong>Authentication, Preferences, Acknowledgement and Statistics</strong>.",
@@ -3567,7 +3564,6 @@
   "item.edit.item-mapper.head": "Elem hozzárendelése - A tárgy gyűjteményi hozzárendelése",
 
   // "item.edit.item-mapper.item": "Item: \"<b>{{name}}</b>\"",
-  // TODO New key - Add a translation
   "item.edit.item-mapper.item": "Tárgy: \"<b>{{name}}</b>\"",
 
   // "item.edit.item-mapper.no-search": "Please enter a query to search",
@@ -4133,22 +4129,18 @@
   "item.page.files": "Állományok",
 
   // "item.page.filesection.description": "Description:",
-  // TODO New key - Add a translation
   "item.page.filesection.description": "Leírás:",
 
   // "item.page.filesection.download": "Download",
   "item.page.filesection.download": "Letöltés",
 
   // "item.page.filesection.format": "Format:",
-  // TODO New key - Add a translation
   "item.page.filesection.format": "Formátum:",
 
   // "item.page.filesection.name": "Name:",
-  // TODO New key - Add a translation
   "item.page.filesection.name": "Név:",
 
   // "item.page.filesection.size": "Size:",
-  // TODO New key - Add a translation
   "item.page.filesection.size": "Méret:",
 
   // "item.page.journal.search.title": "Articles in this journal",
@@ -4296,7 +4288,6 @@
   "item.preview.person.familyName": "Surname:",
 
   // "item.preview.person.givenName": "Name:",
-  // TODO New key - Add a translation
   "item.preview.person.givenName": "Név:",
 
   // "item.preview.person.identifier.orcid": "ORCID:",
