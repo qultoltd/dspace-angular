@@ -24,7 +24,7 @@ themes:
       - tagName: meta
         attributes:
           name: headerLogo
-          content: /assets/qulto/images/logo.svg
+          content: /assets/qulto/images/logos/logo.svg
 
 homePage:
   topLevelCommunityList:
