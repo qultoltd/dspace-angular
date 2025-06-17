@@ -17,6 +17,8 @@ import { HomePageComponent } from './app/home-page/home-page.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
 import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
 import { ThemedItemPageTitleFieldComponent } from './app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
+import { MetadataValuesComponent } from './app/item-page/simple/field-components/metadata-values/metadata-values.component';
+import { GenericItemPageFieldComponent } from './app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
 import { LoginPageComponent } from './app/login-page/login-page.component';
 import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
 import { ObjectListComponent } from './app/shared/object-list/object-list.component';
@@ -48,6 +50,8 @@ const DECLARATIONS = [
     NgxGalleryModule,
     PublicationComponent,
     ThemedItemPageTitleFieldComponent,
+    GenericItemPageFieldComponent,
+    MetadataValuesComponent,
     ...DECLARATIONS,
   ],
 })

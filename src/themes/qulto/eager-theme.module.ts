@@ -10,6 +10,7 @@ import { NavbarComponent } from './app/navbar/navbar.component';
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
 import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
 import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
+import { MetadataValuesComponent } from './app/item-page/simple/field-components/metadata-values/metadata-values.component';
 
 
 /**
@@ -28,7 +29,8 @@ const DECLARATIONS = [
   NavbarComponent,
   FooterComponent,
   LangSwitchComponent,
-  PublicationComponent
+  PublicationComponent,
+  MetadataValuesComponent
 ];
 
 @NgModule({
@@ -36,6 +38,7 @@ const DECLARATIONS = [
     CommonModule,
     RootModule,
     PublicationComponent,
+    MetadataValuesComponent,
     ...DECLARATIONS,
   ],
   providers: [
