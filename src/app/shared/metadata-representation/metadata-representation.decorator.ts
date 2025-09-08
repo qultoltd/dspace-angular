@@ -1,4 +1,5 @@
 import { InjectionToken } from '@angular/core';
+import { GenericItemMetadataListElementComponent } from 'src/app/entity-groups/research-entities/metadata-representations/generic-item/generic-item-metadata-list-element.component';
 
 import { Context } from '../../core/shared/context.model';
 import { GenericConstructor } from '../../core/shared/generic-constructor';
@@ -18,7 +19,6 @@ import {
 import { BrowseLinkMetadataListElementComponent } from '../object-list/metadata-representation-list-element/browse-link/browse-link-metadata-list-element.component';
 import { ItemMetadataListElementComponent } from '../object-list/metadata-representation-list-element/item/item-metadata-list-element.component';
 import { PlainTextMetadataListElementComponent } from '../object-list/metadata-representation-list-element/plain-text/plain-text-metadata-list-element.component';
-import { GenericItemMetadataListElementComponent } from 'src/app/entity-groups/research-entities/metadata-representations/generic-item/generic-item-metadata-list-element.component';
 
 export const METADATA_REPRESENTATION_COMPONENT_FACTORY = new InjectionToken<(entityType: string, mdRepresentationType: MetadataRepresentationType, context: Context, theme: string) => GenericConstructor<any>>('getMetadataRepresentationComponent', {
   providedIn: 'root',

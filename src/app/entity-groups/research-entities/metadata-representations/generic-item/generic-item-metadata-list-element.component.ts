@@ -1,23 +1,21 @@
+import { CommonModule } from '@angular/common';
 import {
+  ChangeDetectionStrategy,
   Component,
   Input,
   OnDestroy,
   OnInit,
-  ChangeDetectionStrategy,
 } from '@angular/core';
-
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { TranslateService } from '@ngx-translate/core';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
+import { MetadataRepresentationListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/metadata-representation-list-element.component';
+import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.component';
 
 import { MetadataValue } from '../../../../core/shared/metadata.models';
 import { ItemMetadataRepresentation } from '../../../../core/shared/metadata-representation/item/item-metadata-representation.model';
 import { getItemPageRoute } from '../../../../item-page/item-page-routing-paths';
-
-import { MetadataRepresentationListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/metadata-representation-list-element.component';
-import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.component';
 
 @Component({
   selector: 'ds-item-metadata-representation-list-element',
