@@ -5,6 +5,7 @@ import {
   OnInit,
   ChangeDetectionStrategy,
 } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -49,7 +50,7 @@ export class GenericItemMetadataListElementComponent extends MetadataRepresentat
     this.localizeTexts(this.translate.currentLang);
 
     this.subs.push(
-      this.translate.onLangChange.subscribe(e => this.localizeTexts(e.lang))
+      this.translate.onLangChange.subscribe(e => this.localizeTexts(e.lang)),
     );
   }
 
@@ -64,7 +65,9 @@ export class GenericItemMetadataListElementComponent extends MetadataRepresentat
 
   private pickByLang(keys: string[], uiLanguage: string): string | undefined {
     const metadataValues = this.mdRepresentation.allMetadata(keys) as MetadataValue[] | undefined;
-    if (!metadataValues?.length) return undefined;
+    if (!metadataValues?.length){
+      return undefined;
+    }
 
     const normalizeLanguage = (s?: string) => (s ?? '').toLowerCase();
     const getLanguageBase = (s?: string) => normalizeLanguage(s).split(/[_-]/)[0];
@@ -73,14 +76,17 @@ export class GenericItemMetadataListElementComponent extends MetadataRepresentat
     const currentLangBase = getLanguageBase(uiLanguage);
 
     const exactMatch = metadataValues.find(v => normalizeLanguage(v.language) === currentLocale);
-    if (exactMatch) return exactMatch.value;
-
+    if (exactMatch) {
+      return exactMatch.value;
+    }
     const baseLangMatch = metadataValues.find(v => getLanguageBase(v.language) === currentLangBase);
-    if (baseLangMatch) return baseLangMatch.value;
-
+    if (baseLangMatch) {
+      return baseLangMatch.value;
+    }
     const languageAgnostic = metadataValues.find(v => !v.language);
-    if (languageAgnostic) return languageAgnostic.value;
-
+    if (languageAgnostic) {
+      return languageAgnostic.value;
+    }
     return metadataValues[0]?.value;
   }
 }

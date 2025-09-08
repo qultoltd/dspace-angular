@@ -56,63 +56,63 @@ export const METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP =
     ])],
     ['LearningObject', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['Language', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['EducationLevel', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['Type', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['Format', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['TeachingMethod', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['License', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['FieldOfScience', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['Course', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['DoctoralSchool', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['Faculty', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['Department', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['Institute', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['SchoolSubject', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['AccessLevel', new Map([
       [MetadataRepresentationType.Item, new Map([
-        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])]
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['OrgUnit', new Map([
       [MetadataRepresentationType.Item, new Map([
