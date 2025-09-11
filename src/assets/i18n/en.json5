@@ -4067,6 +4067,52 @@
 
   "publication.search.title": "Publication Search",
 
+  "learningobject.page.titleprefix": "Learning Object: ",
+
+  "learningobject.description": "Description",
+
+  "learningobject.description.requirements": "Requirements",
+
+  "learningobject.rights": "Copyright Notice",
+
+  "learningobject.recommended.collection": "Recommended collection",
+
+  "learningobject.format.isresponsive": "Responsive",
+
+  "learningobject.format.isaccessible": "Accessible",
+
+  "learningobject.education.note": "Note",
+
+  "learningobject.education.classification": "Classification",
+
+  "faculty.page.titleprefix": "Faculty: ",
+
+  "language.page.titleprefix": "Language: ",
+
+  "license.page.titleprefix": "License: ",
+
+  "accesslevel.page.titleprefix": "Access level: ",
+
+  "educationlevel.page.titleprefix": "Education level: ",
+
+  "format.page.titleprefix": "Format: ",
+
+  "teachingmethod.page.titleprefix": "Teaching method: ",
+
+  "type.page.titleprefix": "Type: ",
+
+  "doctoralschool.page.titleprefix": "Doctoral school: ",
+
+  "institute.page.titleprefix": "Institute: ",
+
+  "course.page.titleprefix": "Course: ",
+
+  "department.page.titleprefix": "Department: ",
+
+  "schoolsubject.page.titleprefix": "School subject: ",
+
+  "fieldofscience.page.titleprefix": "Field of science: ",
+
   "media-viewer.next": "Next",
 
   "media-viewer.previous": "Previous",
@@ -4268,6 +4314,50 @@
   "relationships.isContributorOf.Person": "Contributor",
 
   "relationships.isFundingAgencyOf.OrgUnit": "Funder",
+
+  "relationships.isAuthorOfLearningObject": "Authors",
+
+  "relationships.isTranslatorOfLearningObject": "Translators",
+
+  "relationships.isEditorOfLearningObject": "Editors",
+
+  "relationships.isCollectorOfLearningObject": "Collected by",
+
+  "relationships.isSelectorOfLearningObject": "Selected by",
+
+  "relationships.isContributorOfLearningObject": "Other contributors",
+
+  "relationships.isEducationLevelOfLearningObject": "Education levels",
+
+  "relationships.isCourseOfLearningObject": "Courses",
+
+  "relationships.isSchoolSubjectOfLearningObject": "School subjects",
+
+  "relationships.isTypeOfLearningObject": "Type",
+
+  "relationships.isFieldOfScienceOfLearningObject": "Field of science",
+
+  "relationships.isFormatOfLearningObject": "Format",
+
+  "relationships.isTeachingMethodOfLearningObject": "Teaching method",
+
+  "relationships.isLicenseOfLearningObject": "License",
+
+  "relationships.isRecommendedAccessLevelOfLO": "Recommended access level",
+
+  "relationships.isAccessLevelOfLearningObject": "Access level",
+
+  "relationships.isDownloadPermissionOfLO": "Download permission",
+
+  "relationships.isParentOfFieldOfScience": "Parent field of science",
+
+  "relationships.isFacultyOfSchoolSubject": "Faculty",
+
+  "relationships.isDepartmentOfSchoolSubject": "Department",
+
+  "relationships.isInstituteOfSchoolSubject": "Institute",
+
+  "relationships.isDoctoralSchoolOfCourse": "Doctoral School",
 
   "repository.image.logo": "Repository logo",
 

@@ -69,6 +69,8 @@ import { ThemedItemPageTitleFieldComponent } from '../../item-page/simple/field-
 import { ItemPageUriFieldComponent } from '../../item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
 import { PublicationComponent } from '../../item-page/simple/item-types/publication/publication.component';
 import { UntypedItemComponent } from '../../item-page/simple/item-types/untyped-item/untyped-item.component';
+import { LearningObjectComponent } from '../../item-page/simple/item-types/learning-object/learning-object.component';
+import { SimpleItemComponent } from 'src/app/item-page/simple/item-types/simple-item/simple-item.component';
 import { ThemedMetadataRepresentationListComponent } from '../../item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
 import { TabbedRelatedEntitiesSearchComponent } from '../../item-page/simple/related-entities/tabbed-related-entities-search/tabbed-related-entities-search.component';
 import { RelatedItemsComponent } from '../../item-page/simple/related-items/related-items-component';
@@ -207,6 +209,8 @@ const ENTRY_COMPONENTS = [
   ItemSearchResultListElementSubmissionComponent,
   PublicationComponent,
   UntypedItemComponent,
+  LearningObjectComponent,
+  SimpleItemComponent,
 ];
 
 @NgModule({

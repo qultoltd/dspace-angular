@@ -1,0 +1,126 @@
+<ds-results-back-button *ngIf="showBackButton$ | async" [back]="back"></ds-results-back-button>
+<div class="row" *ngIf="iiifEnabled">
+  <div class="col-12">
+    <ds-mirador-viewer id="iiif-viewer" [object]="object" [searchable]="iiifSearchEnabled" [query]="iiifQuery$ | async">
+    </ds-mirador-viewer>
+  </div>
+</div>
+<div class="d-flex flex-row">
+  <ds-item-page-title-field [item]="object" class="mr-auto">
+  </ds-item-page-title-field>
+  <ds-dso-edit-menu></ds-dso-edit-menu>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-md-4">
+    <ng-container *ngIf="!(mediaViewer.image || mediaViewer.video)">
+      <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
+        <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
+      </ds-metadata-field-wrapper>
+    </ng-container>
+    <div *ngIf="mediaViewer.image || mediaViewer.video" class="mb-2">
+      <ds-media-viewer [item]="object"></ds-media-viewer>
+    </div>
+    <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+    <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.author']" [label]="'relationships.isAuthorOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.translator']" [label]="'relationships.isTranslatorOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.editor']" [label]="'relationships.isEditorOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.collector']" [label]="'relationships.isCollectorOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.selector']" [label]="'relationships.isSelectorOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.other']" [label]="'relationships.isContributorOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+  </div>
+  <div class="col-xs-12 col-md-7">
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.description']" [label]="'learningobject.description'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.description.requirements']" [label]="'learningobject.description.requirements'">
+    </ds-generic-item-page-field>
+    <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
+    </ds-item-page-uri-field>
+    <ds-item-page-collections [item]="object"></ds-item-page-collections>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'EducationLevel'"
+      [metadataFields]="['education.educationlevel']" [label]="'relationships.isEducationLevelOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Course'"
+      [metadataFields]="['education.course']" [label]="'relationships.isCourseOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'SchoolSubject'" 
+      [metadataFields]="['education.schoolsubject']" [label]="'relationships.isSchoolSubjectOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Type'"
+      [metadataFields]="['dc.type']" [label]="'relationships.isTypeOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'FieldOfScience'"
+      [metadataFields]="['education.fieldofscience']" [label]="'relationships.isFieldOfScienceOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Format'"
+      [metadataFields]="['dc.format']" [label]="'relationships.isFormatOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'TeachingMethod'" 
+      [metadataFields]="['education.teachingmethod']" [label]="'relationships.isTeachingMethodOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'License'"
+      [metadataFields]="['dc.rights.license']" [label]="'relationships.isLicenseOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.rights']"
+      [label]="'learningobject.rights'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object" [fields]="['education.recommended.collection']" 
+      [label]="'learningobject.recommended.collection'">
+    </ds-generic-item-page-field>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'AccessLevel'" 
+      [metadataFields]="['education.recommended.accesslevel']" [label]="'relationships.isRecommendedAccessLevelOfLO' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'AccessLevel'"
+      [metadataFields]="['education.accesslevel']" [label]="'relationships.isAccessLevelOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Department'" 
+      [metadataFields]="['education.downloadaccess']" [label]="'relationships.isDownloadPermissionOfLO' | translate">
+    </ds-metadata-representation-list>
+    <ds-generic-item-page-field [item]="object" [fields]="['education.note']" [label]="'learningobject.education.note'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.subject']"
+       [separator]="', '" [label]="'item.page.subject'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.format.isresponsive']" [label]="'learningobject.format.isresponsive'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.format.isaccessible']" [label]="'learningobject.format.isaccessible'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object" [fields]="['education.classification']" [label]="'learningobject.education.classification'">
+    </ds-generic-item-page-field>
+    <!--Field of Science record fields-->
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'FieldOfScience'"
+      [metadataFields]="['education.fieldofscience.parent']" [label]="'relationships.isParentOfFieldOfScience' | translate">
+    </ds-metadata-representation-list>
+    <!--School subject record fields-->
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Faculty'"
+      [metadataFields]="['education.faculty']" [label]="'relationships.isFacultyOfSchoolSubject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Department'" 
+      [metadataFields]="['education.department']" [label]="'relationships.isDepartmentOfSchoolSubject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Institute'"
+      [metadataFields]="['education.institute']" [label]="'relationships.isInstituteOfSchoolSubject' | translate">
+    </ds-metadata-representation-list>
+    <!--Course record fields-->
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'DoctoralSchool'"
+      [metadataFields]="['education.doctoralschool']" [label]="'relationships.isDoctoralSchoolOfCourse' | translate">
+    </ds-metadata-representation-list>
+    <div>
+      <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']" tabindex="0">
+        <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
+      </a>
+    </div>
+  </div>
+</div>

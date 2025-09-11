@@ -56,6 +56,58 @@ export const METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP =
       [MetadataRepresentationType.Item, new Map([
         [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
     ])],
+    ['EducationLevel', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['Course', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['SchoolSubject', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['Type', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['FieldOfScience', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['Format', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['TeachingMethod', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['License', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['AccessLevel', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['Department', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['Faculty', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['Institute', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['DoctoralSchool', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
     ['Project', new Map([
       [MetadataRepresentationType.Item, new Map([
         [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, ProjectItemMetadataListElementComponent]])]])],
