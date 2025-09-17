@@ -1,4 +1,5 @@
 import { InjectionToken } from '@angular/core';
+import { GenericItemMetadataListElementComponent } from 'src/app/entity-groups/research-entities/metadata-representations/generic-item/generic-item-metadata-list-element.component';
 
 import { Context } from '../../core/shared/context.model';
 import { GenericConstructor } from '../../core/shared/generic-constructor';
@@ -34,7 +35,8 @@ export type MetadataRepresentationComponent =
   typeof ItemMetadataListElementComponent |
   typeof OrgUnitItemMetadataListElementComponent |
   typeof PersonItemMetadataListElementComponent |
-  typeof ProjectItemMetadataListElementComponent;
+  typeof ProjectItemMetadataListElementComponent |
+  typeof GenericItemMetadataListElementComponent;
 
 export const METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP =
   new Map<string, Map<MetadataRepresentationType, Map<Context, Map<string, MetadataRepresentationComponent>>>>([
@@ -51,6 +53,66 @@ export const METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP =
     ['Person', new Map([
       [MetadataRepresentationType.Item, new Map([
         [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, PersonItemMetadataListElementComponent]])]])],
+    ])],
+    ['LearningObject', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Language', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['EducationLevel', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Type', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Format', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['TeachingMethod', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['License', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['FieldOfScience', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Course', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['DoctoralSchool', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Faculty', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Department', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Institute', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['SchoolSubject', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['AccessLevel', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
     ['OrgUnit', new Map([
       [MetadataRepresentationType.Item, new Map([
