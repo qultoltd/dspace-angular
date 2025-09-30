@@ -410,3 +410,12 @@ ds-dso-edit-metadata ds-base-dso-edit-metadata button {
   background-color: var(--elte-blue);
   border-color: var(--elte-blue);
 }
+
+ds-listable-object-component-loader ds-publication-sidebar-search-list-element ds-truncatable-part .text-secondary {
+  color: var(--elte-tan) !important;
+}
+
+ds-edit-relationship-list .btn.btn-success {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+}
