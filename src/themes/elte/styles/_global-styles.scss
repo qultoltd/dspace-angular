@@ -1,0 +1,412 @@
+// Add any global css for the theme here
+
+// imports the base global style
+@import "../../../styles/_global-styles.scss";
+
+.form-control:focus {
+  outline: none;
+}
+
+.btn.btn-secondary:focus,
+.btn.btn-primary:focus,
+.btn:focus,
+*:focus-visible,
+*:focus {
+  outline: none !important;
+}
+
+.lead {
+  font-weight: 400;
+}
+
+.badge {
+  font-weight: 500;
+}
+
+a,
+.btn-link {
+  color: var(--primary);
+}
+
+.btn-primary {
+  background-color: var(--elte-tan);
+  border-color: var(--elte-tan);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.show>.btn-primary.dropdown-toggle {
+  background-color: darken(#CEAF87, 7%);
+  border-color: darken(#CEAF87, 9%);
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  background-color: var(--elte-tan);
+  border-color: var(--elte-tan);
+}
+
+ds-themed-home-page .community-list-wrapper,
+ds-themed-home-page .community-list-wrapper.bg-light {
+  background-color: var(--elte-blue) !important;
+}
+
+ds-themed-home-page .community-list-wrapper>.container,
+ds-themed-home-page .community-list-wrapper>.container.bg-light {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none;
+}
+
+ds-themed-home-page .community-list-wrapper .form-control {
+  background-color: #fff;
+  color: #212529;
+}
+
+ds-themed-home-page .community-list-wrapper .align-middle.hidden-xs-down {
+  color: #fff !important;
+}
+
+ds-themed-home-page .community-list-wrapper .align-middle {
+  color: #fff !important;
+}
+
+ds-themed-home-page .community-list-wrapper h2 {
+  color: var(--elte-tan);
+}
+
+ds-themed-home-page .community-list-wrapper .community-list-element a.lead {
+  color: #fff;
+  text-decoration: none;
+  transition: color .15s ease-in-out;
+}
+
+ds-themed-home-page .community-list-wrapper .community-list-element a.lead:hover,
+ds-themed-home-page .community-list-wrapper .community-list-element a.lead:focus-visible {
+  color: var(--elte-tan);
+}
+
+ds-themed-home-page .community-list-wrapper .community-list-element .icon-elte .icon-elte-bg {
+  fill: #FFFFFF;
+}
+
+ds-themed-home-page .community-list-wrapper .community-list-element .icon-elte .icon-elte-arrow {
+  fill: var(--elte-blue);
+}
+
+ds-themed-home-page .community-list-wrapper .community-list-element a.lead:hover .icon-elte .icon-elte-bg,
+ds-themed-home-page .community-list-wrapper .community-list-element a.lead:focus-visible .icon-elte .icon-elte-bg {
+  fill: var(--elte-tan);
+}
+
+ds-themed-home-page .community-list-wrapper ds-rss .btn.btn-secondary {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-blue);
+}
+
+ds-themed-home-page .community-list-wrapper ds-rss .btn.btn-secondary:hover,
+ds-themed-home-page .community-list-wrapper ds-rss .btn.btn-secondary:focus,
+ds-themed-home-page .community-list-wrapper ds-rss .btn.btn-secondary:active,
+ds-themed-home-page .community-list-wrapper ds-rss .btn.btn-secondary.active,
+ds-themed-home-page .community-list-wrapper ds-rss .show>.btn.btn-secondary.dropdown-toggle {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+}
+
+ds-base-results-back-button .btn.btn-secondary {
+  background-color: var(--elte-tan);
+  border-color: var(--elte-tan);
+}
+
+ds-base-results-back-button .btn.btn-secondary:hover {
+  background-color: darken($elte-tan, 7%);
+  border-color: darken($elte-tan, 9%);
+}
+
+ds-base-dso-edit-metadata .btn.btn-success {
+  background-color: var(--elte-tan);
+  border-color: var(--elte-tan);
+}
+
+ds-base-dso-edit-metadata .btn.btn-success:hover {
+  background-color: darken($elte-tan, 7%);
+  border-color: darken($elte-tan, 9%);
+}
+
+ds-edit-item-page .btn.btn-outline-secondary {
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-edit-item-page .btn.btn-outline-secondary:hover {
+  border-color: var(--elte-tan) !important;
+  background-color: var(--elte-tan) !important;
+  color: #FFFFFF!important;
+}
+
+.badge-secondary {
+  background-color: var(--elte-tan);
+}
+
+.badge-info {
+  background-color: var(--elte-blue);
+}
+
+.nav-dropdown-menu.dropdown-menu {
+  background-color: var(--elte-blue) !important;
+  border: 0;
+  box-shadow: none;
+}
+
+.nav-dropdown-menu .ds-menu-item,
+.nav-dropdown-menu a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.nav-dropdown-menu .ds-menu-item:hover,
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu .ds-menu-item:focus-visible,
+.nav-dropdown-menu a:focus-visible {
+  color: var(--elte-tan) !important;
+  background: transparent !important;
+  outline: none;
+}
+
+nav.navbar .navbar-nav .dropdownLogin[ngbDropdownToggle] {
+  color: #fff !important;
+  text-decoration: none;
+  transition: color .15s ease-in-out;
+}
+
+nav.navbar .navbar-nav .dropdownLogin[ngbDropdownToggle]:hover,
+nav.navbar .navbar-nav .dropdownLogin[ngbDropdownToggle]:focus-visible {
+  color: var(--elte-tan) !important;
+}
+
+.navbar .loginLink {
+  color: #fff !important;
+  text-decoration: none;
+  transition: color .15s ease-in-out;
+}
+
+.navbar .loginLink:hover,
+.navbar .loginLink:focus-visible {
+  color: var(--elte-tan) !important;
+}
+
+.breadcrumb-item {
+  color: #FFFFFF !important;
+}
+
+ds-community-list-page h1,
+ds-base-community-list-page h1,
+ds-comcol-page-header h1,
+ds-base-comcol-page-browse-by h2 {
+  color: var(--elte-blue);
+}
+
+ds-community-list .btn[data-test="expand-button"] {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: .5rem;
+
+  background-color: var(--elte-blue);
+  border-color: var(--elte-blue);
+  color: #fff;
+  border-radius: .375rem;
+  line-height: 1;
+  box-shadow: none;
+  transition: background-color .15s, border-color .15s, color .15s;
+}
+
+ds-community-list .btn[data-test="expand-button"]:hover,
+ds-community-list .btn[data-test="expand-button"]:focus-visible {
+  background-color: var(--elte-tan);
+  border-color: var(--elte-tan);
+  color: var(--elte-blue);
+}
+
+ds-community-list .btn-group>.btn[data-test="expand-button"] {
+  border-radius: .375rem !important;
+}
+
+ds-community-list .btn-group>.btn[data-test="expand-button"]:first-child {
+  border-top-right-radius: .375rem !important;
+  border-bottom-right-radius: .375rem !important;
+}
+
+ds-themed-home-page .community-list-wrapper ngb-pagination .page-link {
+  color: #fff !important;
+}
+
+ds-themed-home-page .community-list-wrapper ngb-pagination .page-item.active .page-link {
+  background-color: var(--elte-tan);
+  color: var(--elte-blue);
+}
+
+ds-object-list ngb-pagination .page-link,
+ds-themed-object-list ngb-pagination .page-link {
+  color: var(--elte-blue) !important;
+}
+
+ds-object-list ngb-pagination .page-item.active .page-link,
+ds-themed-object-list ngb-pagination .page-item.active .page-link {
+  background-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+}
+
+ds-rss .btn.btn-secondary {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+  box-shadow: none;
+}
+
+ds-rss .btn.btn-secondary:hover,
+ds-rss .btn.btn-secondary:focus-visible,
+ds-rss .btn.btn-secondary:active {
+  background-color: darken(#CEAF87, 7%) !important;
+  border-color: darken(#CEAF87, 9%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-view-mode-switch .btn.btn-secondary {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+  box-shadow: none;
+}
+
+ds-view-mode-switch .btn.btn-secondary:hover,
+ds-view-mode-switch .btn.btn-secondary:focus-visible,
+ds-view-mode-switch .btn.btn-secondary:active,
+ds-view-mode-switch .btn.btn-secondary.active {
+  background-color: darken(#CEAF87, 7%) !important;
+  border-color: darken(#CEAF87, 9%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-dynamic-form-control-container .btn.btn-secondary {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+  box-shadow: none;
+}
+
+ds-dynamic-form-control-container .btn.btn-secondary:hover,
+ds-dynamic-form-control-container .btn.btn-secondary:focus-visible,
+ds-dynamic-form-control-container .btn.btn-secondary:active,
+ds-dynamic-form-control-container .btn.btn-secondary.active {
+  background-color: darken(#CEAF87, 7%) !important;
+  border-color: darken(#CEAF87, 9%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-submission-form-footer #saveForLater {
+  background-color: var(--elte-tan);
+  border-color: var(--elte-tan);
+}
+
+ds-submission-form-footer #saveForLater:hover,
+ds-submission-form-footer #saveForLater:focus-visible,
+ds-submission-form-footer #saveForLater:active {
+  background-color: darken(#CEAF87, 7%) !important;
+  border-color: darken(#CEAF87, 9%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-submission-form-footer #deposit {
+  background-color: #A27842;
+  border-color: #A27842;
+}
+
+ds-submission-form-footer #deposit:hover,
+ds-submission-form-footer #deposit:focus-visible,
+ds-submission-form-footer #deposit:active {
+  background-color: darken(#A27842, 7%) !important;
+  border-color: darken(#A27842, 9%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-submission-form-footer #save {
+  background-color: #D5BEA0;
+  border-color: #D5BEA0;
+}
+
+ds-submission-form-footer #save:hover,
+ds-submission-form-footer #save:focus-visible,
+ds-submission-form-footer #save:active {
+  background-color: darken(#D5BEA0, 7%) !important;
+  border-color: darken(#D5BEA0, 9%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-dynamic-lookup-relation-modal .btn.btn-outline-secondary {
+  color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+}
+
+ds-dynamic-lookup-relation-modal .btn.btn-outline-secondary:hover {
+  color: #FFFFFF !important;
+  border-color: var(--elte-tan) !important;
+  background-color: var(--elte-tan) !important;
+}
+
+.comcol-browse-nav .list-group-item.active,
+.comcol-browse-nav .list-group-item.active:hover,
+.comcol-browse-nav .list-group-item.active:focus {
+  background-color: var(--elte-blue) !important;
+  border-color: var(--elte-blue) !important;
+  color: #fff !important;
+}
+
+ds-item-page .container .row {
+  align-items: flex-start !important;
+}
+
+ds-item-page .container .row>.col-md-4 {
+  background-color: #fff9f2;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+ds-base-item-page-title-field h1 {
+  color: var(--elte-blue);
+}
+
+ds-generic-item-page-field ds-metadata-values ds-metadata-field-wrapper h2,
+ds-item-page-uri-field ds-metadata-uri-values ds-metadata-field-wrapper h2,
+ds-item-page-collections ds-metadata-field-wrapper h2,
+ds-metadata-representation-list ds-base-metadata-representation-list ds-metadata-field-wrapper h2 {
+  color: var(--elte-blue);
+}
+
+.nav-breadcrumb .breadcrumb,
+.nav-breadcrumb .breadcrumb a,
+.nav-breadcrumb .breadcrumb-item,
+.nav-breadcrumb .breadcrumb-item.active {
+  color: #fff !important;
+}
+
+.nav-breadcrumb .breadcrumb a:hover,
+.nav-breadcrumb .breadcrumb a:focus {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+.nav-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+  color: #fff !important;
+}
+
+ds-dso-edit-metadata ds-base-dso-edit-metadata button {
+  background-color: var(--elte-blue);
+  border-color: var(--elte-blue);
+}

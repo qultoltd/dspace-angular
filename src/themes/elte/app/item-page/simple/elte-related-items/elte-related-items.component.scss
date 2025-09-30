@@ -1,0 +1,12 @@
+:host ds-themed-thumbnail,
+:host ds-thumbnail,
+:host .thumbnail,
+:host .img-placeholder {
+    display: none;
+}
+
+:host .list-content,
+:host .content,
+:host .media-body {
+    margin-left: 0;
+}

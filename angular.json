@@ -40,7 +40,17 @@
             "aot": true,
             "assets": [
               "src/assets",
-              "src/robots.txt"
+              "src/robots.txt",
+              {
+                "glob": "**/*",
+                "input": "src/themes",
+                "output": "assets/themes"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/themes/elte/assets",
+                "output": "assets/elte"
+              }
             ],
             "styles": [
               "src/styles/startup.scss",
@@ -58,6 +68,11 @@
                 "input": "src/themes/dspace/styles/theme.scss",
                 "inject": false,
                 "bundleName": "dspace-theme"
+              },
+              {
+                "input": "src/themes/elte/styles/theme.scss",
+                "inject": false,
+                "bundleName": "elte-theme"
               }
             ],
             "scripts": [],

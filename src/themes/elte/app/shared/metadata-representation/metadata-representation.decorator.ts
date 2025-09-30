@@ -1,23 +1,23 @@
 import { InjectionToken } from '@angular/core';
-
-import { Context } from '../../core/shared/context.model';
-import { GenericConstructor } from '../../core/shared/generic-constructor';
-import { MetadataRepresentationType } from '../../core/shared/metadata-representation/metadata-representation.model';
-import { OrgUnitItemMetadataListElementComponent } from '../../entity-groups/research-entities/metadata-representations/org-unit/org-unit-item-metadata-list-element.component';
-import { PersonItemMetadataListElementComponent } from '../../entity-groups/research-entities/metadata-representations/person/person-item-metadata-list-element.component';
-import { ProjectItemMetadataListElementComponent } from '../../entity-groups/research-entities/metadata-representations/project/project-item-metadata-list-element.component';
-import {
-  hasNoValue,
-  hasValue,
-} from '../empty.util';
-import {
-  DEFAULT_CONTEXT,
-  DEFAULT_THEME,
-  resolveTheme,
-} from '../object-collection/shared/listable-object/listable-object.decorator';
-import { BrowseLinkMetadataListElementComponent } from '../object-list/metadata-representation-list-element/browse-link/browse-link-metadata-list-element.component';
-import { ItemMetadataListElementComponent } from '../object-list/metadata-representation-list-element/item/item-metadata-list-element.component';
-import { PlainTextMetadataListElementComponent } from '../object-list/metadata-representation-list-element/plain-text/plain-text-metadata-list-element.component';
+import { GenericItemMetadataListElementComponent } from '../../entity-groups/research-entities/metadata-representations/generic-item/generic-item-metadata-list-element.component';
+import { Context } from 'src/app/core/shared/context.model';
+import { GenericConstructor } from 'src/app/core/shared/generic-constructor';
+import { MetadataRepresentationType } from 'src/app/core/shared/metadata-representation/metadata-representation.model';
+import { OrgUnitItemMetadataListElementComponent } from 'src/app/entity-groups/research-entities/metadata-representations/org-unit/org-unit-item-metadata-list-element.component';
+import { PersonItemMetadataListElementComponent } from 'src/app/entity-groups/research-entities/metadata-representations/person/person-item-metadata-list-element.component';
+import { ProjectItemMetadataListElementComponent } from 'src/app/entity-groups/research-entities/metadata-representations/project/project-item-metadata-list-element.component';
+import { 
+  hasNoValue, 
+  hasValue 
+} from 'src/app/shared/empty.util';
+import { 
+  DEFAULT_CONTEXT, 
+  DEFAULT_THEME, 
+  resolveTheme 
+} from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { BrowseLinkMetadataListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/browse-link/browse-link-metadata-list-element.component';
+import { ItemMetadataListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/item/item-metadata-list-element.component';
+import { PlainTextMetadataListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/plain-text/plain-text-metadata-list-element.component';
 
 export const METADATA_REPRESENTATION_COMPONENT_FACTORY = new InjectionToken<(entityType: string, mdRepresentationType: MetadataRepresentationType, context: Context, theme: string) => GenericConstructor<any>>('getMetadataRepresentationComponent', {
   providedIn: 'root',
@@ -34,7 +34,8 @@ export type MetadataRepresentationComponent =
   typeof ItemMetadataListElementComponent |
   typeof OrgUnitItemMetadataListElementComponent |
   typeof PersonItemMetadataListElementComponent |
-  typeof ProjectItemMetadataListElementComponent;
+  typeof ProjectItemMetadataListElementComponent |
+  typeof GenericItemMetadataListElementComponent;
 
 export const METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP =
   new Map<string, Map<MetadataRepresentationType, Map<Context, Map<string, MetadataRepresentationComponent>>>>([
@@ -52,6 +53,66 @@ export const METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP =
       [MetadataRepresentationType.Item, new Map([
         [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, PersonItemMetadataListElementComponent]])]])],
     ])],
+    ['LearningObject', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Language', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['EducationLevel', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Type', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Format', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['TeachingMethod', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['License', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['FieldOfScience', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Course', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['DoctoralSchool', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Faculty', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Department', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Institute', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['SchoolSubject', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['AccessLevel', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
     ['OrgUnit', new Map([
       [MetadataRepresentationType.Item, new Map([
         [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
@@ -67,7 +128,6 @@ export const METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP =
  * @param mdRepresentationType The metadata representation type the component represents
  * @param context The optional context the component represents
  * @param theme The optional theme for the component
- * @deprecated
  */
 export function metadataRepresentationComponent(entityType: string, mdRepresentationType: MetadataRepresentationType, context: Context = DEFAULT_CONTEXT, theme = DEFAULT_THEME) {
   return function decorator(component: any) {

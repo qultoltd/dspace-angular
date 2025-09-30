@@ -1,0 +1,51 @@
+<div>
+  <div *ngIf="layout === 'cards'" class="d-flex flex-row community-card">
+    <div class="image-container" *ngVar="isLoading$ | async as isLoading">
+      <div *ngIf="isLoading" class="thumbnail-loading">
+        <ds-loading [spinner]="true"></ds-loading>
+      </div>
+      <ng-container *ngVar="src$ | async as src">
+        <img
+          *ngIf="src !== null"
+          class="thumbnail-content img-fluid"
+          [ngClass]="{ 'd-none': isLoading }"
+          [src]="src | dsSafeUrl"
+          alt="Logo"
+          (load)="successHandler()"
+        />
+      </ng-container>
+    </div>
+    <div class="name">{{ dsoNameService.getName(object) }}</div>
+    <div class="description">{{ description }}</div>
+    <a
+      *ngIf="linkType !== linkTypes.None"
+      [target]="linkType === linkTypes.ExternalLink ? '_blank' : '_self'"
+      [attr.rel]="
+        linkType === linkTypes.ExternalLink ? 'noopener noreferrer' : null
+      "
+      [routerLink]="['/communities/' + object.id]"
+    >
+      <button class="btn btn-primary">Megtekintés</button>
+    </a>
+  </div>
+</div>
+<div *ngIf="layout === 'list'" class="d-flex flex-row community-list-element">
+  <a *ngIf="linkType !== linkTypes.None" [target]="linkType === linkTypes.ExternalLink ? '_blank' : '_self'"
+    [attr.rel]="linkType === linkTypes.ExternalLink ? 'noopener noreferrer' : null"
+    [routerLink]="['/communities/' + object.id]" class="lead">
+    <svg class="icon-elte mx-2" width="33" height="33" viewBox="0 0 33 33" aria-hidden="true" focusable="false">
+      <rect class="icon-elte-bg" x="0.489" y="0.0127" width="32" height="32" rx="4" />
+      <path class="icon-elte-arrow"
+        d="M13.1052 8.05769C12.8709 8.2921 12.7393 8.60999 12.7393 8.94144C12.7393 9.2729 12.8709 9.59078 13.1052 9.82519L19.2927 16.0127L13.1052 22.2002C12.8775 22.4359 12.7515 22.7517 12.7544 23.0794C12.7572 23.4072 12.8887 23.7207 13.1205 23.9525C13.3522 24.1842 13.6657 24.3157 13.9935 24.3185C14.3212 24.3214 14.637 24.1954 14.8727 23.9677L21.944 16.8964C22.1783 16.662 22.31 16.3441 22.31 16.0127C22.31 15.6812 22.1783 15.3634 21.944 15.1289L14.8727 8.05769C14.6383 7.82336 14.3204 7.69171 13.989 7.69171C13.6575 7.69171 13.3397 7.82336 13.1052 8.05769Z" />
+    </svg>
+    {{ dsoNameService.getName(object) }}
+  </a>
+  <span *ngIf="linkType === linkTypes.None" class="lead">
+    {{ dsoNameService.getName(object) }}
+  </span>
+  <span
+    *ngIf="object.archivedItemsCount >= 0"
+    class="badge badge-pill badge-secondary align-self-center archived-items-lead"
+    >{{ object.archivedItemsCount }}</span
+  >
+</div>
