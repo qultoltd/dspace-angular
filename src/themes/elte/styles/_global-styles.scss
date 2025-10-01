@@ -147,6 +147,17 @@ ds-edit-item-page .btn.btn-outline-secondary:hover {
   color: #FFFFFF!important;
 }
 
+ds-base-search-form .btn.btn-outline-secondary {
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-base-search-form .btn.btn-outline-secondary:hover {
+  border-color: var(--elte-tan) !important;
+  background-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+}
+
 .badge-secondary {
   background-color: var(--elte-tan);
 }
@@ -195,6 +206,10 @@ nav.navbar .navbar-nav .dropdownLogin[ngbDropdownToggle]:focus-visible {
 
 .navbar .loginLink:hover,
 .navbar .loginLink:focus-visible {
+  color: var(--elte-tan) !important;
+}
+
+ds-search-navbar ds-base-search-navbar button:hover {
   color: var(--elte-tan) !important;
 }
 
@@ -418,4 +433,15 @@ ds-listable-object-component-loader ds-publication-sidebar-search-list-element d
 ds-edit-relationship-list .btn.btn-success {
   background-color: var(--elte-tan) !important;
   border-color: var(--elte-tan) !important;
+}
+
+ds-notification .alert-success {
+  color: darken(#CEAF87, 20%) !important;
+  background-color: lighten(#CEAF87, 20%) !important;
+}
+
+ds-themed-auth-nav-menu .dropdown-toggle::after {
+  margin-left: 2px !important;
+  vertical-align: 0.125em;
+  color: #FFFFFF !important;
 }

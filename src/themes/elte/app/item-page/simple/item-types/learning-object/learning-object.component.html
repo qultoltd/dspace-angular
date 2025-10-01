@@ -22,6 +22,55 @@
     </div>
     <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
     <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'EducationLevel'"
+      [metadataFields]="['education.educationlevel']"
+      [label]="'relationships.isEducationLevelOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Course'" [metadataFields]="['education.course']"
+      [label]="'relationships.isCourseOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'SchoolSubject'"
+      [metadataFields]="['education.schoolsubject']" [label]="'relationships.isSchoolSubjectOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'FieldOfScience'"
+      [metadataFields]="['education.fieldofscience']"
+      [label]="'relationships.isFieldOfScienceOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    
+    <hr class="lo-meta-divider" *ngIf="hasAnyMeta(metaBeforeFirst) && hasAnyMeta(metaBetweenDividers)" role="separator"
+      aria-hidden="true" />
+
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Type'" [metadataFields]="['dc.type']"
+      [label]="'relationships.isTypeOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'TeachingMethod'"
+      [metadataFields]="['education.teachingmethod']"
+      [label]="'relationships.isTeachingMethodOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Format'" [metadataFields]="['dc.format']"
+      [label]="'relationships.isFormatOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.format.isresponsive']"
+      [label]="'learningobject.format.isresponsive'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.format.isaccessible']"
+      [label]="'learningobject.format.isaccessible'">
+    </ds-generic-item-page-field>
+    
+    <hr class="lo-meta-divider" *ngIf="hasAnyMeta(metaBetweenDividers) && hasAnyMeta(metaAfterSecond)" role="separator"
+      aria-hidden="true" />
+
+    <ds-item-page-collections [item]="object"></ds-item-page-collections>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'AccessLevel'"
+      [metadataFields]="['education.accesslevel']" [label]="'relationships.isAccessLevelOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'License'" [metadataFields]="['dc.rights.license']"
+      [label]="'relationships.isLicenseOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.rights']" [label]="'learningobject.rights'">
+    </ds-generic-item-page-field>
+  </div>
+  <div class="col-xs-12 col-md-7">
     <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
       [metadataFields]="['dc.contributor.author']" [label]="'relationships.isAuthorOfLearningObject' | translate">
     </ds-metadata-representation-list>
@@ -40,64 +89,15 @@
     <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
       [metadataFields]="['dc.contributor.other']" [label]="'relationships.isContributorOfLearningObject' | translate">
     </ds-metadata-representation-list>
-  </div>
-  <div class="col-xs-12 col-md-7">
     <ds-generic-item-page-field [item]="object" [fields]="['dc.description']" [label]="'learningobject.description'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.subject']" [separator]="', '" [label]="'item.page.subject'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object" [fields]="['dc.description.requirements']" [label]="'learningobject.description.requirements'">
     </ds-generic-item-page-field>
     <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
     </ds-item-page-uri-field>
-    <ds-item-page-collections [item]="object"></ds-item-page-collections>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'EducationLevel'"
-      [metadataFields]="['education.educationlevel']" [label]="'relationships.isEducationLevelOfLearningObject' | translate">
-    </ds-metadata-representation-list>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Course'"
-      [metadataFields]="['education.course']" [label]="'relationships.isCourseOfLearningObject' | translate">
-    </ds-metadata-representation-list>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'SchoolSubject'"
-      [metadataFields]="['education.schoolsubject']" [label]="'relationships.isSchoolSubjectOfLearningObject' | translate">
-    </ds-metadata-representation-list>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Type'"
-      [metadataFields]="['dc.type']" [label]="'relationships.isTypeOfLearningObject' | translate">
-    </ds-metadata-representation-list>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'FieldOfScience'"
-      [metadataFields]="['education.fieldofscience']" [label]="'relationships.isFieldOfScienceOfLearningObject' | translate">
-    </ds-metadata-representation-list>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Format'"
-      [metadataFields]="['dc.format']" [label]="'relationships.isFormatOfLearningObject' | translate">
-    </ds-metadata-representation-list>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'TeachingMethod'"
-      [metadataFields]="['education.teachingmethod']" [label]="'relationships.isTeachingMethodOfLearningObject' | translate">
-    </ds-metadata-representation-list>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'License'"
-      [metadataFields]="['dc.rights.license']" [label]="'relationships.isLicenseOfLearningObject' | translate">
-    </ds-metadata-representation-list>
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.rights']"
-      [label]="'learningobject.rights'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['education.recommended.collection']"
-      [label]="'learningobject.recommended.collection'">
-    </ds-generic-item-page-field>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'AccessLevel'"
-      [metadataFields]="['education.recommended.accesslevel']" [label]="'relationships.isRecommendedAccessLevelOfLO' | translate">
-    </ds-metadata-representation-list>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'AccessLevel'"
-      [metadataFields]="['education.accesslevel']" [label]="'relationships.isAccessLevelOfLearningObject' | translate">
-    </ds-metadata-representation-list>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Department'"
-      [metadataFields]="['education.downloadaccess']" [label]="'relationships.isDownloadPermissionOfLO' | translate">
-    </ds-metadata-representation-list>
     <ds-generic-item-page-field [item]="object" [fields]="['education.note']" [label]="'learningobject.education.note'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.subject']"
-       [separator]="', '" [label]="'item.page.subject'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.format.isresponsive']" [label]="'learningobject.format.isresponsive'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.format.isaccessible']" [label]="'learningobject.format.isaccessible'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['education.classification']" [label]="'learningobject.education.classification'">
     </ds-generic-item-page-field>
     <!--Field of Science record fields-->
     <ds-metadata-representation-list [parentItem]="object" [itemType]="'FieldOfScience'"

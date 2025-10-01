@@ -187,47 +187,207 @@
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isLanguageOfLearningObject": "Languages ({{ count }})",
 
+  "language.search.results.head": "Language Search Results",
+
   "submission.sections.describe.relationship-lookup.title.isEducationLevelOfLearningObject": "Education levels",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isEducationLevelOfLearningObject": "Education levels ({{ count }})",
+
+  "educationLevel.search.results.head": "Education Level Search Results",
 
   "submission.sections.describe.relationship-lookup.title.isCourseOfLearningObject": "Courses",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCourseOfLearningObject": "Courses ({{ count }})",
 
+  "course.search.results.head": "Course Search Results",
+
   "submission.sections.describe.relationship-lookup.title.isSchoolSubjectOfLearningObject": "School subjects",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isSchoolSubjectOfLearningObject": "School subjects ({{ count }})",
+
+  "schoolSubject.search.results.head": "School Subject Search Results",
 
   "submission.sections.describe.relationship-lookup.title.isTypeOfLearningObject": "Types",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isTypeOfLearningObject": "Types ({{ count }})",
 
+  "type.search.results.head": "Type Search Results",
+
   "submission.sections.describe.relationship-lookup.title.isFieldOfScienceOfLearningObject": "Fields of science",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFieldOfScienceOfLearningObject": "Fields of science ({{ count }})",
+
+  "fieldOfScience.search.results.head": "Field of Science Search Results",
 
   "submission.sections.describe.relationship-lookup.title.isFormatOfLearningObject": "Formats",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFormatOfLearningObject": "Formats ({{ count }})",
 
+  "format.search.results.head": "Format Search Results",
+
   "submission.sections.describe.relationship-lookup.title.isTeachingMethodOfLearningObject": "Teaching methods",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isTeachingMethodOfLearningObject": "Teaching methods ({{ count }})",
+
+  "teachingMethod.search.results.head": "Teaching Method Search Result",
 
   "submission.sections.describe.relationship-lookup.title.isLicenseOfLearningObject": "Licenses",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isLicenseOfLearningObject": "Licenses ({{ count }})",
 
+  "license.search.results.head": "License Search Resulst",
+
   "submission.sections.describe.relationship-lookup.title.isRecommendedAccessLevelOfLO": "Access levels",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isRecommendedAccessLevelOfLO": "Access levels ({{ count }})",
+
+  "accessLevel.search.results.head": "Access Level Search Results",
 
   "submission.sections.describe.relationship-lookup.title.isDownloadPermissionOfLO": "Download permissions",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDownloadPermissionOfLO": "Download permissions ({{ count }})",
 
+  "department.search.results.head": "Department Search Results",
+
   "submission.sections.describe.relationship-lookup.title.isAccessLevelOfLearningObject": "Access levels",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAccessLevelOfLearningObject": "Access levels ({{ count }})"
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAccessLevelOfLearningObject": "Access levels ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfDoctoralSchool": "Faculties",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfDoctoralSchool": "Faculties ({{ count }})",
+
+  "faculty.search.results.head": "Faculty Search Results",
+
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfInstitute": "Faculties",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfInstitute": "Faculties ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isDoctoralSchoolOfCourse": "Doctoral Schools",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDoctoralSchoolOfCourse": "Doctoral Schools ({{ count }})",
+
+  "doctoralSchool.search.results.head": "Doctoral School Search Results",
+
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfCourse": "Faculties",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfCourse": "Faculties ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isEducationLevelOfCourse": "Education levels",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isEducationLevelOfCourse": "Education levels ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isScienceFieldOfPerson": "Fields of Science",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isScienceFieldOfPerson": "Fields of Science ({{ count }})",
+
+  "scienceField.search.results.head": "Field of Science Search Results",
+
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfDepartment": "Faculties",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfDepartment": "Faculties ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isInstituteOfDepartment": "Institutes",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isInstituteOfDepartment": "Institutes ({{ count }})",
+
+  "institute.search.results.head": "Institute Search Results",
+
+  "submission.sections.describe.relationship-lookup.title.isCourseOfSchoolSubject": "Courses",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCourseOfSchoolSubject": "Courses ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfSchoolSubject": "Faculties",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfSchoolSubject": "Faculties ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isDepartmentOfSchoolSubject": "Departments",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDepartmentOfSchoolSubject": "Departments ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isInstituteOfSchoolSubject": "Institutes",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isInstituteOfSchoolSubject": "Institutes ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isParentOfFieldOfScience": "Fields of Science",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isParentOfFieldOfScience": "Fields of Science ({{ count }})",
+
+  "relationships.isTranslatorOf.Person": "Translators (persons)",
+
+  "relationships.isEditorOf.Person": "Editors (persons)",
+
+  "relationships.isCollectorOf.Person": "Collected by",
+
+  "relationships.isSelectorOf.Person": "Selected by",
+
+  "relationships.isTypeOf": "Types",
+
+  "relationships.isLanguageOf": "Languages",
+
+  "relationships.isLicenseOf": "Licenses",
+
+  "relationships.isEducationLevelOf": "Education levels",
+
+  "relationships.isSchoolSubjectOf": "School subjects",
+
+  "relationships.isFieldOf.FieldOfScience": "Fields of Science",
+
+  "relationships.isCourseOf": "Courses",
+
+  "relationships.isFormatOf": "Formats",
+
+  "relationships.isTeachingMethodOf": "Teaching methods",
+
+  "relationships.isAccessLevelOf": "Access levels",
+
+  "relationships.isRecommendedAccessLevelOf.AccessLevel": "Recommended access levels",
+
+  "relationships.isDownloadPermissionOf.Department": "Download permissions",
+
+  "relationships.isFacultyOf": "Faculties",
+
+  "relationships.isLearningObjectOf": "Learning objects",
+
+  "relationships.isDepartmentOf": "Departments",
+
+  "relationships.isInstituteOf": "Institutes",
+
+  "relationships.isChildOf.FieldOfScience": "Children",
+
+  "relationships.isParentOf.FieldOfScience": "Parents",
+
+  "relationships.isDoctoralSchoolOf": "Doctoral schools",
+
+  "relationships.isLOOf.LearningObject": "Access levels",
+
+  "learningobject.page.edit": "Edit this item",
+
+  "doctoralschool.page.edit": "Edit this item",
+
+  "format.page.edit": "Edit this item",
+
+  "accesslevel.page.edit": "Edit this item",
+
+  "institute.page.edit": "Edit this item",
+
+  "faculty.page.edit": "Edit this item",
+
+  "course.page.edit": "Edit this item",
+
+  "license.page.edit": "Edit this item",
+
+  "teachingmethod.page.edit": "Edit this item",
+
+  "language.page.edit": "Edit this item",
+
+  "educationlevel.page.edit": "Edit this item",
+
+  "department.page.edit": "Edit this item",
+
+  "schoolsubject.page.edit": "Edit this item",
+
+  "type.page.edit": "Edit this item",
+
+  "fieldofscience.page.edit": "Edit this item"
 }

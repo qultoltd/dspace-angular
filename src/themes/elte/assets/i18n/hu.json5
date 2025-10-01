@@ -7,7 +7,7 @@
 
   "relationships.isPartOf": "Része a következőnek",
 
-  "relationships.hasPart": "Tartalmazza a következőket"
+  "relationships.hasPart": "Tartalmazza a következőket",
 
   // "learningobject.page.titleprefix": "Learning Object: ",
   "learningobject.page.titleprefix": "Tananyagelem: ",
@@ -174,7 +174,7 @@
 
   "doctoralschool.listelement.badge": "Doktori iskola",
 
-  "search.filters.entityType.DoctoralSchool": "Doktroi iskola",
+  "search.filters.entityType.DoctoralSchool": "Doktori iskola",
 
   "faculty.listelement.badge": "Kar",
 
@@ -182,7 +182,7 @@
 
   "institute.listelement.badge": "Intézet",
 
-  "search.filters.entityType.Institute": "Inzézet",
+  "search.filters.entityType.Institute": "Intézet",
 
   "format.listelement.badge": "Formátum",
 
@@ -232,47 +232,207 @@
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isLanguageOfLearningObject": "Nyelvek ({{ count }})",
 
+  "language.search.results.head": "Nyelv keresési eredmények",
+
   "submission.sections.describe.relationship-lookup.title.isEducationLevelOfLearningObject": "Szintek",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isEducationLevelOfLearningObject": "Szintek ({{ count }})",
+
+  "educationLevel.search.results.head": "Szint keresési eredmények",
 
   "submission.sections.describe.relationship-lookup.title.isCourseOfLearningObject": "Képzések",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCourseOfLearningObject": "Képzések ({{ count }})",
 
+  "course.search.results.head": "Képzés keresési eredmények",
+
   "submission.sections.describe.relationship-lookup.title.isSchoolSubjectOfLearningObject": "Tantárgyak",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isSchoolSubjectOfLearningObject": "Tantárgyak ({{ count }})",
+
+  "schoolSubject.search.results.head": "Tantárgy keresési eredmények",
 
   "submission.sections.describe.relationship-lookup.title.isTypeOfLearningObject": "Típusok",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isTypeOfLearningObject": "Típusok ({{ count }})",
 
+  "type.search.results.head": "Típus keresési eredmények",
+
   "submission.sections.describe.relationship-lookup.title.isFieldOfScienceOfLearningObject": "Tudományterületek",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFieldOfScienceOfLearningObject": "Tudományterületek ({{ count }})",
+
+  "fieldOfScience.search.results.head": "Tudományterület keresési eredmények",
 
   "submission.sections.describe.relationship-lookup.title.isFormatOfLearningObject": "Formátumok",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFormatOfLearningObject": "Formátumok ({{ count }})",
 
+  "format.search.results.head": "Formátum keresési eredmények",
+
   "submission.sections.describe.relationship-lookup.title.isTeachingMethodOfLearningObject": "Módszerek",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isTeachingMethodOfLearningObject": "Módszerek ({{ count }})",
+
+  "teachingMethod.search.results.head": "Módszer keresési eredmények",
 
   "submission.sections.describe.relationship-lookup.title.isLicenseOfLearningObject": "Licenszek",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isLicenseOfLearningObject": "Licenszek ({{ count }})",
 
+  "license.search.results.head": "Licensz keresési eredmények",
+
   "submission.sections.describe.relationship-lookup.title.isRecommendedAccessLevelOfLO": "Hozzáférési szintek",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isRecommendedAccessLevelOfLO": "Hozzáférési szintek ({{ count }})",
+
+  "accessLevel.search.results.head": "Hozzáférési szint keresési eredmények",
 
   "submission.sections.describe.relationship-lookup.title.isDownloadPermissionOfLO": "Letöltési engedélyek",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDownloadPermissionOfLO": "Letöltési engedélyek ({{ count }})",
 
+  "department.search.results.head": "Tanszék keresési eredmények",
+
   "submission.sections.describe.relationship-lookup.title.isAccessLevelOfLearningObject": "Hozzáférési szintek",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAccessLevelOfLearningObject": "Hozzáférési szintek ({{ count }})"
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAccessLevelOfLearningObject": "Hozzáférési szintek ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfDoctoralSchool": "Karok",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfDoctoralSchool": "Karok ({{ count }})",
+
+  "faculty.search.results.head": "Kar keresési eredmények",
+
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfInstitute": "Karok",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfInstitute": "Karok ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isDoctoralSchoolOfCourse": "Doktori iskolák",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDoctoralSchoolOfCourse": "Doktori iskolák ({{ count }})",
+
+  "doctoralSchool.search.results.head": "Doktori iskola keresési eredmények",
+
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfCourse": "Karok",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfCourse": "Karok ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isEducationLevelOfCourse": "Szintek",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isEducationLevelOfCourse": "Szintek ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isScienceFieldOfPerson": "Tudományterületek",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isScienceFieldOfPerson": "Tudományterületek ({{ count }})",
+
+  "scienceField.search.results.head": "Tudományterület keresési eredmények",
+
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfDepartment": "Karok",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfDepartment": "Karok ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isInstituteOfDepartment": "Intézetek",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isInstituteOfDepartment": "Intézetek ({{ count }})",
+
+  "institute.search.results.head": "Intézet keresési eredmények",
+
+  "submission.sections.describe.relationship-lookup.title.isCourseOfSchoolSubject": "Képzések",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCourseOfSchoolSubject": "Képzések ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfSchoolSubject": "Karok",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfSchoolSubject": "Karok ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isDepartmentOfSchoolSubject": "Tanszékek",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDepartmentOfSchoolSubject": "Tanszékek ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isInstituteOfSchoolSubject": "Intézetek",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isInstituteOfSchoolSubject": "Intézetek ({{ count }})",
+
+  "submission.sections.describe.relationship-lookup.title.isParentOfFieldOfScience": "Tudományterületek",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isParentOfFieldOfScience": "Tudományterületek ({{ count }})",
+
+  "relationships.isTranslatorOf.Person": "Fordítók (személye)",
+
+  "relationships.isEditorOf.Person": "Szerkesztők (személye)",
+
+  "relationships.isCollectorOf.Person": "Gyűjtötte",
+
+  "relationships.isSelectorOf.Person": "Válogatta",
+
+  "relationships.isTypeOf": "Típusok",
+
+  "relationships.isLanguageOf": "Nyelvek",
+
+  "relationships.isLicenseOf": "Licenszek",
+
+  "relationships.isEducationLevelOf": "Szintek",
+
+  "relationships.isSchoolSubjectOf": "Tantárgyak",
+
+  "relationships.isFieldOf.FieldOfScience": "Tudományterületek",
+
+  "relationships.isCourseOf": "Képzések",
+
+  "relationships.isFormatOf": "Formátumok",
+
+  "relationships.isTeachingMethodOf": "Módszerek",
+
+  "relationships.isAccessLevelOf": "Hozzáférési szintek",
+
+  "relationships.isRecommendedAccessLevelOf.AccessLevel": "Javasolt hozzáférési szintek",
+
+  "relationships.isDownloadPermissionOf.Department": "Letöltési engedélyek",
+
+  "relationships.isFacultyOf": "Karok",
+
+  "relationships.isLearningObjectOf": "Tananyagelemek",
+
+  "relationships.isDepartmentOf": "Tanszékek",
+
+  "relationships.isInstituteOf": "Intézetek",
+
+  "relationships.isChildOf.FieldOfScience": "Gyermekek",
+
+  "relationships.isParentOf.FieldOfScience": "Szülők",
+
+  "relationships.isDoctoralSchoolOf": "Doktori iskolák",
+
+  "relationships.isLOOf.LearningObject": "Hozzáférési szintek",
+
+  "learningobject.page.edit": "Elem szerkesztése",
+
+  "doctoralschool.page.edit": "Elem szerkesztése",
+
+  "format.page.edit": "Elem szerkesztése",
+
+  "accesslevel.page.edit": "Elem szerkesztése",
+
+  "institute.page.edit": "Elem szerkesztése",
+
+  "faculty.page.edit": "Elem szerkesztése",
+
+  "course.page.edit": "Elem szerkesztése",
+
+  "license.page.edit": "Elem szerkesztése",
+
+  "teachingmethod.page.edit": "Elem szerkesztése",
+
+  "language.page.edit": "Elem szerkesztése",
+
+  "educationlevel.page.edit": "Elem szerkesztése",
+
+  "department.page.edit": "Elem szerkesztése",
+
+  "schoolsubject.page.edit": "Elem szerkesztése",
+
+  "type.page.edit": "Elem szerkesztése",
+
+  "fieldofscience.page.edit": "Elem szerkesztése"
 }

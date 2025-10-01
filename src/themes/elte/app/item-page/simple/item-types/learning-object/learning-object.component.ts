@@ -45,4 +45,30 @@ import { ItemComponent } from 'src/app/item-page/simple/item-types/shared/item.c
 })
 export class LearningObjectComponent extends ItemComponent {
 
+  hasAnyMeta(keys: string[]): boolean {
+    if (!this.object) { return false; }
+    return keys.some(k => !!this.object.firstMetadataValue(k));
+  }
+
+  readonly metaBeforeFirst = [
+    'education.educationlevel',
+    'education.course',
+    'education.schoolsubject',
+    'education.fieldofscience',
+  ];
+
+  readonly metaBetweenDividers = [
+    'dc.type',
+    'education.teachingmethod',
+    'dc.format',
+    'dc.format.isresponsive',
+    'dc.format.isaccessible',
+  ];
+
+  readonly metaAfterSecond = [
+    'education.accesslevel',
+    'dc.rights.license',
+    'dc.rights',
+  ];
+
 }
