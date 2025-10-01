@@ -445,3 +445,20 @@ ds-themed-auth-nav-menu .dropdown-toggle::after {
   vertical-align: 0.125em;
   color: #FFFFFF !important;
 }
+
+ds-pagination button {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+}
+
+ds-browse-by-taxonomy .input-group-append .btn.btn-outline-secondary {
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-browse-by-taxonomy .input-group-append .btn.btn-outline-secondary:hover,
+ds-browse-by-taxonomy .input-group-append .btn.btn-outline-secondary:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+  color: #FFFFFF !important;
+}
