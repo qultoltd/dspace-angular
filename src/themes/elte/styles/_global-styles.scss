@@ -462,3 +462,27 @@ ds-browse-by-taxonomy .input-group-append .btn.btn-outline-secondary:focus {
   border-color: darken($elte-tan, 7%) !important;
   color: #FFFFFF !important;
 }
+
+ds-metadata-schema-form .btn.btn-outline-secondary {
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-metadata-schema-form .btn.btn-outline-secondary:hover,
+ds-metadata-schema-form .btn.btn-outline-secondary:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-metadata-schema .btn.btn-outline-secondary {
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-metadata-schema .btn.btn-outline-secondary:hover,
+ds-metadata-schema .btn.btn-outline-secondary:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+  color: #FFFFFF !important;
+}
