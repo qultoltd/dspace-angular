@@ -15,24 +15,23 @@ import {
 } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
-
-import {
-  APP_CONFIG,
-  AppConfig,
-} from '../../../../../../config/app-config.interface';
-
 import { FindListOptions } from 'src/app/core/data/find-list-options.model';
 import { PaginatedList } from 'src/app/core/data/paginated-list.model';
 import { RelationshipDataService } from 'src/app/core/data/relationship-data.service';
 import { RemoteData } from 'src/app/core/data/remote-data';
 import { Item } from 'src/app/core/shared/item.model';
 import { ViewMode } from 'src/app/core/shared/view-mode.model';
+import { AbstractIncrementalListComponent } from 'src/app/item-page/simple/abstract-incremental-list/abstract-incremental-list.component';
 import { ThemedLoadingComponent } from 'src/app/shared/loading/themed-loading.component';
 import { MetadataFieldWrapperComponent } from 'src/app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
 import { ListableObjectComponentLoaderComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object-component-loader.component';
 import { setPlaceHolderAttributes } from 'src/app/shared/utils/object-list-utils';
 import { VarDirective } from 'src/app/shared/utils/var.directive';
-import { AbstractIncrementalListComponent } from 'src/app/item-page/simple/abstract-incremental-list/abstract-incremental-list.component';
+
+import {
+  APP_CONFIG,
+  AppConfig,
+} from '../../../../../../config/app-config.interface';
 
 @Component({
   selector: 'ds-elte-related-items',

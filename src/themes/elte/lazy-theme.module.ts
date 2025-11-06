@@ -15,11 +15,11 @@ import { RootModule } from '../../app/root.module';
 import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
-import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
 import { ElteRelatedItemsComponent } from './app/item-page/simple/elte-related-items/elte-related-items.component';
-import { LearningObjectComponent } from './app/item-page/simple/item-types/learning-object/learning-object.component';
-import { SimpleItemComponent } from './app/item-page/simple/item-types/simple-item/simple-item.component';
 import { ThemedItemPageTitleFieldComponent } from './app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
+import { LearningObjectComponent } from './app/item-page/simple/item-types/learning-object/learning-object.component';
+import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
+import { SimpleItemComponent } from './app/item-page/simple/item-types/simple-item/simple-item.component';
 import { LoginPageComponent } from './app/login-page/login-page.component';
 import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
 import { ObjectListComponent } from './app/shared/object-list/object-list.component';
@@ -31,7 +31,7 @@ const DECLARATIONS = [
   ObjectListComponent,
   AuthNavMenuComponent,
   FullItemPageComponent,
-  PublicationComponent
+  PublicationComponent,
 ];
 
 @NgModule({

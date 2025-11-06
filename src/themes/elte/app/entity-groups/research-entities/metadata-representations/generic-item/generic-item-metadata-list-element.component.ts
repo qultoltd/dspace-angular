@@ -10,11 +10,11 @@ import { RouterModule } from '@angular/router';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
-import { MetadataRepresentationListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/metadata-representation-list-element.component';
-import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.component';
 import { MetadataValue } from 'src/app/core/shared/metadata.models';
 import { ItemMetadataRepresentation } from 'src/app/core/shared/metadata-representation/item/item-metadata-representation.model';
 import { getItemPageRoute } from 'src/app/item-page/item-page-routing-paths';
+import { MetadataRepresentationListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/metadata-representation-list-element.component';
+import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.component';
 
 @Component({
   selector: 'ds-item-metadata-representation-list-element',

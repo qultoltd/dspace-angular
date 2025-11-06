@@ -22,15 +22,6 @@ import {
   of,
 } from 'rxjs';
 
-/* import {
-  APP_CONFIG,
-  APP_DATA_SERVICES_MAP,
-} from '../../../../../config/app-config.interface'; */
-import {
-  APP_CONFIG,
-  APP_DATA_SERVICES_MAP,
-} from '../../../../../../../config/app-config.interface';
-import { environment } from '../../../../../../../environments/environment.test';
 import { BrowseDefinitionDataService } from '../../../../../../../app/core/browse/browse-definition-data.service';
 import { RemoteDataBuildService } from '../../../../../../../app/core/cache/builders/remote-data-build.service';
 import { ObjectCacheService } from '../../../../../../../app/core/cache/object-cache.service';
@@ -51,6 +42,23 @@ import { MetadataMap } from '../../../../../../../app/core/shared/metadata.model
 import { SearchService } from '../../../../../../../app/core/shared/search/search.service';
 import { UUIDService } from '../../../../../../../app/core/shared/uuid.service';
 import { WorkspaceitemDataService } from '../../../../../../../app/core/submission/workspaceitem-data.service';
+import { CollectionsComponent } from '../../../../../../../app/item-page/field-components/collections/collections.component';
+import { ThemedMediaViewerComponent } from '../../../../../../../app/item-page/media-viewer/themed-media-viewer.component';
+import { MiradorViewerComponent } from '../../../../../../../app/item-page/mirador-viewer/mirador-viewer.component';
+import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/themed-file-section.component';
+import { ItemPageAbstractFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
+import { ItemPageDateFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
+import { GenericItemPageFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
+import { ThemedItemPageTitleFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
+import { ItemPageUriFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
+import {
+  createRelationshipsObservable,
+  getIIIFEnabled,
+  getIIIFSearchEnabled,
+  mockRouteService,
+} from '../../../../../../../app/item-page/simple/item-types/shared/item.component.spec';
+import { ThemedMetadataRepresentationListComponent } from '../../../../../../../app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
+import { RelatedItemsComponent } from '../../../../../../../app/item-page/simple/related-items/related-items-component';
 import { DsoEditMenuComponent } from '../../../../../../../app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
 import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
 import { mockTruncatableService } from '../../../../../../../app/shared/mocks/mock-trucatable.service';
@@ -63,23 +71,15 @@ import { createPaginatedList } from '../../../../../../../app/shared/testing/uti
 import { TruncatableService } from '../../../../../../../app/shared/truncatable/truncatable.service';
 import { TruncatePipe } from '../../../../../../../app/shared/utils/truncate.pipe';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
-import { CollectionsComponent } from '../../../../../../../app/item-page/field-components/collections/collections.component';
-import { ThemedMediaViewerComponent } from '../../../../../../../app/item-page/media-viewer/themed-media-viewer.component';
-import { MiradorViewerComponent } from '../../../../../../../app/item-page/mirador-viewer/mirador-viewer.component';
-import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/themed-file-section.component';
-import { ItemPageAbstractFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
-import { ItemPageDateFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
-import { GenericItemPageFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
-import { ThemedItemPageTitleFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
-import { ItemPageUriFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
-import { ThemedMetadataRepresentationListComponent } from '../../../../../../../app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
-import { RelatedItemsComponent } from '../../../../../../../app/item-page/simple/related-items/related-items-component';
+/* import {
+  APP_CONFIG,
+  APP_DATA_SERVICES_MAP,
+} from '../../../../../config/app-config.interface'; */
 import {
-  createRelationshipsObservable,
-  getIIIFEnabled,
-  getIIIFSearchEnabled,
-  mockRouteService,
-} from '../../../../../../../app/item-page/simple/item-types/shared/item.component.spec';
+  APP_CONFIG,
+  APP_DATA_SERVICES_MAP,
+} from '../../../../../../../config/app-config.interface';
+import { environment } from '../../../../../../../environments/environment.test';
 import { PublicationComponent } from './publication.component';
 
 const noMetadata = new MetadataMap();

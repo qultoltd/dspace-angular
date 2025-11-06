@@ -48,6 +48,18 @@ a,
   border-color: var(--elte-tan);
 }
 
+.btn.btn-outline-secondary {
+  background-color: #FFFFFF;
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+.btn.btn-outline-secondary:hover {
+  border-color: var(--elte-tan) !important;
+  background-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+}
+
 ds-themed-home-page .community-list-wrapper,
 ds-themed-home-page .community-list-wrapper.bg-light {
   background-color: var(--elte-blue) !important;
@@ -509,4 +521,65 @@ ds-create-collection .btn.btn-outline-secondary:focus {
   background-color: darken($elte-tan, 7%) !important;
   border-color: darken($elte-tan, 7%) !important;
   color: #FFFFFF !important;
+}
+
+ds-epeople-registry .btn.btn-success.addEPerson-button {
+  border-color: var(--elte-tan) !important;
+  background-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+}
+
+ds-epeople-registry .btn.btn-success.addEPerson-button:hover,
+ds-epeople-registry .btn.btn-success.addEPerson-button:focus {
+  border-color: darken($elte-tan, 7%) !important;
+  background-color: darken($elte-tan, 7%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-epeople-registry .search-button.btn.btn-secondary {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+}
+
+ds-epeople-registry .search-button.btn.btn-secondary:hover,
+ds-epeople-registry .search-button.btn.btn-secondary:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-form .btn.btn-outline-secondary {
+  background-color: #FFFFFF;
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-form .btn.btn-outline-secondary:hover,
+ds-form .btn.btn-outline-secondary:focus {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+}
+
+ds-collection-metadata .btn.btn-success {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+}
+
+ds-collection-metadata .btn.btn-success:hover,
+ds-collection-metadata .btn.btn-success:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+}
+
+ds-item-bitstreams .btn.btn-success {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+}
+
+ds-item-bitstreams .btn.btn-success:hover,
+ds-item-bitstreams .btn.btn-success:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
 }

@@ -1,27 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { Context } from 'src/app/core/shared/context.model';
+import { MetadataRepresentationType } from 'src/app/core/shared/metadata-representation/metadata-representation.model';
+import {
+  getMetadataRepresentationComponent as defaultGet,
+  METADATA_REPRESENTATION_COMPONENT_FACTORY,
+} from 'src/app/shared/metadata-representation/metadata-representation.decorator';
 
 import { RootModule } from '../../app/root.module';
-
+import { GenericItemMetadataListElementComponent } from './app/entity-groups/research-entities/metadata-representations/generic-item/generic-item-metadata-list-element.component';
 // Your themed components
 import { FooterComponent } from './app/footer/footer.component';
 import { HeaderComponent } from './app/header/header.component';
 import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-navbar-wrapper.component';
 import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
+import { ElteRelatedItemsComponent } from './app/item-page/simple/elte-related-items/elte-related-items.component';
+import { LearningObjectComponent } from './app/item-page/simple/item-types/learning-object/learning-object.component';
+import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
+import { SimpleItemComponent } from './app/item-page/simple/item-types/simple-item/simple-item.component';
 import { NavbarComponent } from './app/navbar/navbar.component';
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
 import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
-
-import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
-import { ElteRelatedItemsComponent } from './app/item-page/simple/elte-related-items/elte-related-items.component';
-import { LearningObjectComponent } from './app/item-page/simple/item-types/learning-object/learning-object.component';
-import { SimpleItemComponent } from './app/item-page/simple/item-types/simple-item/simple-item.component';
-import { GenericItemMetadataListElementComponent } from './app/entity-groups/research-entities/metadata-representations/generic-item/generic-item-metadata-list-element.component';
-
-import { METADATA_REPRESENTATION_COMPONENT_FACTORY, getMetadataRepresentationComponent as defaultGet } from 'src/app/shared/metadata-representation/metadata-representation.decorator';
-
-import { MetadataRepresentationType } from 'src/app/core/shared/metadata-representation/metadata-representation.model';
-import { Context } from 'src/app/core/shared/context.model';
 
 const THEME = 'elte';
 
@@ -29,7 +28,7 @@ function themedGet(
   entityType: string,
   mdType: MetadataRepresentationType,
   context: Context,
-  theme: string
+  theme: string,
 ) {
   if (theme === THEME && mdType === MetadataRepresentationType.Item) {
     return GenericItemMetadataListElementComponent as any;

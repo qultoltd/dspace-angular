@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page/home-news/home-news.component';
 import { RootDataService } from '../../../../../app/core/data/root-data.service';
 import { getFirstSucceededRemoteDataPayload } from '../../../../../app/core/shared/operators';
-import { Root } from 'src/app/core/data/root.model';
+import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page/home-news/home-news.component';
+
 @Component({
   selector: 'ds-themed-home-news',
   styleUrls: ['./home-news.component.scss'],
@@ -20,10 +20,10 @@ import { Root } from 'src/app/core/data/root.model';
  */
 export class HomeNewsComponent extends BaseComponent {
 
-  public dspaceName: String;
+  public dspaceName: string;
 
   constructor(
-    protected rootService: RootDataService
+    protected rootService: RootDataService,
   ) {
     super();
     this.setGenerator();
