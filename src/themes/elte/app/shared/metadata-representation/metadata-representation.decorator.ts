@@ -86,6 +86,10 @@ export const METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP =
       [MetadataRepresentationType.Item, new Map([
         [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
     ])],
+    ['FieldOfStudy', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
     ['Course', new Map([
       [MetadataRepresentationType.Item, new Map([
         [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],

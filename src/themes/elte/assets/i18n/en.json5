@@ -55,6 +55,8 @@
 
   "fieldofscience.page.titleprefix": "Field of science: ",
 
+  "fieldofstudy.page.titleprefix": "Field of study: ",
+
   "relationships.isAuthorOfLearningObject": "Authors",
 
   "relationships.isTranslatorOfLearningObject": "Translators",
@@ -76,6 +78,8 @@
   "relationships.isTypeOfLearningObject": "Type",
 
   "relationships.isFieldOfScienceOfLearningObject": "Field of science",
+
+  "relationships.isFieldOfStudyOfLearningObject": "Field of study",
 
   "relationships.isFormatOfLearningObject": "Format",
 
@@ -110,6 +114,10 @@
   "fieldofscience.listelement.badge": "Field of science",
 
   "search.filters.entityType.FieldOfScience": "Field of science",
+
+  "fieldofstudy.listelement.badge": "Field of study",
+
+  "search.filters.entityType.FieldOfStudy": "Field of study",
 
   "course.listelement.badge": "Course",
 
@@ -218,6 +226,12 @@
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFieldOfScienceOfLearningObject": "Fields of science ({{ count }})",
 
   "fieldOfScience.search.results.head": "Field of Science Search Results",
+
+  "submission.sections.describe.relationship-lookup.title.isFieldOfStudyOfLearningObject": "Fields of study",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFieldOfStudyOfLearningObject": "Fields of study ({{ count }})",
+
+  "fieldOfStudy.search.results.head": "Field of Study Search Results",
 
   "submission.sections.describe.relationship-lookup.title.isFormatOfLearningObject": "Formats",
 
@@ -333,6 +347,8 @@
 
   "relationships.isFieldOf.FieldOfScience": "Fields of Science",
 
+  "relationships.isFieldOf.FieldOfStudy": "Fields of study",
+
   "relationships.isCourseOf": "Courses",
 
   "relationships.isFormatOf": "Formats",
@@ -390,4 +406,6 @@
   "type.page.edit": "Edit this item",
 
   "fieldofscience.page.edit": "Edit this item",
+
+  "fieldofstudy.page.edit": "Edit this item"
 }

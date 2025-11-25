@@ -78,6 +78,9 @@
   // "fieldofscience.page.titleprefix": "Field of science: ",
   "fieldofscience.page.titleprefix": "Tudományterület: " ,
 
+  // "fieldofstudy.page.titleprefix": "Field of study: ",
+  "fieldofstudy.page.titleprefix": "Képzési terület: ",
+
   // "relationships.isAuthorOfLearningObject": "Authors",
   "relationships.isAuthorOfLearningObject": "Szerzők",
 
@@ -110,6 +113,9 @@
 
   // "relationships.isFieldOfScienceOfLearningObject": "Field of Science",
   "relationships.isFieldOfScienceOfLearningObject": "Tudományterület",
+
+  // "relationships.isFieldOfStudyOfLearningObject": "Field of study",
+  "relationships.isFieldOfStudyOfLearningObject": "Képzési terület",
 
   // "relationships.isFormatOfLearningObject": "Format",
   "relationships.isFormatOfLearningObject": "Formátum",
@@ -155,6 +161,10 @@
   "fieldofscience.listelement.badge": "Tudományterület",
 
   "search.filters.entityType.FieldOfScience": "Tudományterület",
+
+  "fieldofstudy.listelement.badge": "Képzési terület",
+
+  "search.filters.entityType.FieldOfStudy": "Képzési terület",
 
   "course.listelement.badge": "Képzés",
 
@@ -263,6 +273,12 @@
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFieldOfScienceOfLearningObject": "Tudományterületek ({{ count }})",
 
   "fieldOfScience.search.results.head": "Tudományterület keresési eredmények",
+
+  "submission.sections.describe.relationship-lookup.title.isFieldOfStudyOfLearningObject": "Képzési területek",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFieldOfStudyOfLearningObject": "Képzési területek ({{ count }})",
+
+  "fieldOfStudy.search.results.head": "Képzési terület keresési eredmények",
 
   "submission.sections.describe.relationship-lookup.title.isFormatOfLearningObject": "Formátumok",
 
@@ -378,6 +394,8 @@
 
   "relationships.isFieldOf.FieldOfScience": "Tudományterületek",
 
+  "relationships.isFieldOf.FieldOfStudy": "Képzési területek",
+
   "relationships.isCourseOf": "Képzések",
 
   "relationships.isFormatOf": "Formátumok",
@@ -435,4 +453,6 @@
   "type.page.edit": "Elem szerkesztése",
 
   "fieldofscience.page.edit": "Elem szerkesztése",
+
+  "fieldofstudy.page.edit": "Elem szerkesztése",
 }

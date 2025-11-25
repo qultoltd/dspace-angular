@@ -30,6 +30,7 @@ import { ThemedItemPageTitleFieldComponent } from '../../field-components/specif
 
 @listableObjectComponent('LearningObject', ViewMode.StandalonePage)
 @listableObjectComponent('FieldOfScience', ViewMode.StandalonePage)
+@listableObjectComponent('FieldOfStudy', ViewMode.StandalonePage)
 @listableObjectComponent('SchoolSubject', ViewMode.StandalonePage)
 @listableObjectComponent('Course', ViewMode.StandalonePage)
 @listableObjectComponent('Department', ViewMode.StandalonePage)
@@ -55,6 +56,7 @@ export class LearningObjectComponent extends ItemComponent {
     'education.course',
     'education.schoolsubject',
     'education.fieldofscience',
+    'education.fieldofstudy'
   ];
 
   readonly metaBetweenDividers = [

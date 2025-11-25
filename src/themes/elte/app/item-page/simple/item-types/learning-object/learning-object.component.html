@@ -32,11 +32,15 @@
     <ds-metadata-representation-list [parentItem]="object" [itemType]="'SchoolSubject'"
       [metadataFields]="['education.schoolsubject']" [label]="'relationships.isSchoolSubjectOfLearningObject' | translate">
     </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'FieldOfStudy'"
+      [metadataFields]="['education.fieldofstudy']"
+      [label]="'relationships.isFieldOfStudyOfLearningObject' | translate">
+    </ds-metadata-representation-list>
     <ds-metadata-representation-list [parentItem]="object" [itemType]="'FieldOfScience'"
       [metadataFields]="['education.fieldofscience']"
       [label]="'relationships.isFieldOfScienceOfLearningObject' | translate">
     </ds-metadata-representation-list>
-    
+
     <hr class="lo-meta-divider" *ngIf="hasAnyMeta(metaBeforeFirst) && hasAnyMeta(metaBetweenDividers)" role="separator"
       aria-hidden="true" />
 
@@ -56,7 +60,7 @@
     <ds-generic-item-page-field [item]="object" [fields]="['dc.format.isaccessible']"
       [label]="'learningobject.format.isaccessible'">
     </ds-generic-item-page-field>
-    
+
     <hr class="lo-meta-divider" *ngIf="hasAnyMeta(metaBetweenDividers) && hasAnyMeta(metaAfterSecond)" role="separator"
       aria-hidden="true" />
 
