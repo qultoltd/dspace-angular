@@ -31,7 +31,7 @@ import { HostWindowService } from 'src/app/shared/host-window.service';
   imports: [RouterLink, ThemedLangSwitchComponent, NgbDropdownModule, ThemedSearchNavbarComponent, ContextHelpToggleComponent, ThemedAuthNavMenuComponent, ImpersonateNavbarComponent, ThemedNavbarComponent, TranslateModule, AsyncPipe, NgIf],
 })
 export class HeaderComponent extends BaseComponent {
-  themeHeaderLogo = '/assets/qulto/images/logo.svg';
+  themeHeaderLogo = '/assets/qulto/images/logos/logo.svg';
 
   constructor(
     protected themeMetaService: ThemeMetaService,
