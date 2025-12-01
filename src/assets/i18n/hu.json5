@@ -4923,7 +4923,7 @@
   "login.form.new-user": "Új felhasználó? Regisztráljon.",
 
   // "login.form.oidc": "Log in with OIDC",
-  "login.form.oidc": "Bejelentkezés ORCID azonosítóval",
+  "login.form.oidc": "Bejelentkezés OIDC azonosítóval",
 
   // "login.form.orcid": "Log in with ORCID",
   "login.form.orcid": "Bejelentkezés ORCID azonosítóval",
