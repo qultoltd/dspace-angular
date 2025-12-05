@@ -6133,6 +6133,75 @@
   // "publication.search.title": "Publication Search",
   "publication.search.title": "DSpace Repozitórium :: Publikáció keresése",
 
+  // "learningobject.page.titleprefix": "Learning Object: ",
+  "learningobject.page.titleprefix": "Tananyagelem: ",
+
+  // "learningobject.description": "Description",
+  "learningobject.description": "Leírás",
+
+  // "learningobject.description.requirements": "Requirements",
+  "learningobject.description.requirements": "Előfeltételek",
+
+  // "learningobject.rights": "Copyright Notice",
+  "learningobject.rights": "Copyright Notice",
+
+  // "learningobject.recommended.collection": "Recommended collection",
+  "learningobject.recommended.collection": "Javasolt gyűjtemény",
+
+  // "learningobject.format.isresponsive": "Responsive",
+  "learningobject.format.isresponsive": "Reszponzív",
+
+  // "learningobject.format.isaccessible": "Accessible",
+  "learningobject.format.isaccessible": "Akadálymentes",
+
+  // "learningobject.education.note": "Note",
+  "learningobject.education.note": "Megjegyzés",
+
+  // "learningobject.education.classification": "Classification",
+  "learningobject.education.classification": "Minősítés",
+
+  // "faculty.page.titleprefix": "Faculty: ",
+  "faculty.page.titleprefix": "Kar: ",
+
+  // "language.page.titleprefix": "Language: ",
+  "language.page.titleprefix": "Nyelv :",
+
+  // "license.page.titleprefix": "License: ",
+  "license.page.titleprefix": "Licensz: ",
+
+  // "accesslevel.page.titleprefix": "Access level: ",
+  "accesslevel.page.titleprefix": "Hozzáférési szint: ",
+
+  // "educationlevel.page.titleprefix": "Education level: ",
+  "educationlevel.page.titleprefix": "Szint: ",
+
+  // "format.page.titleprefix": "Format: ",
+  "format.page.titleprefix": "Formátum: ",
+
+  // "teachingmethod.page.titleprefix": "Teaching method: ",
+  "teachingmethod.page.titleprefix": "Módszer: ",
+
+  // "type.page.titleprefix": "Type: ",
+  "type.page.titleprefix": "Típus: ",
+
+  // "doctoralschool.page.titleprefix": "Doctoral school: ",
+  "doctoralschool.page.titleprefix": "Doktori iskola: ",
+
+  // "institute.page.titleprefix": "Institute: ",
+  "institute.page.titleprefix": "Intézet: ",
+
+  // "course.page.titleprefix": "Course: ",
+  "course.page.titleprefix": "Kurzus: ",
+
+  // "department.page.titleprefix": "Department: ",
+  "department.page.titleprefix": "Tanszék: ",
+
+  // "schoolsubject.page.titleprefix": "School subject: ",
+  "schoolsubject.page.titleprefix": "Tantárgy: ",
+
+  // "fieldofscience.page.titleprefix": "Field of science: ",
+  "fieldofscience.page.titleprefix": "Tudományterület: " ,
+
   // "media-viewer.next": "Next",
   "media-viewer.next": "Következő",
 
@@ -6435,6 +6504,72 @@
 
   // "relationships.isFundingAgencyOf.OrgUnit": "Funder",
   "relationships.isFundingAgencyOf.OrgUnit": "Funder",
+
+  // "relationships.isAuthorOfLearningObject": "Authors",
+  "relationships.isAuthorOfLearningObject": "Szerzők",
+
+  // "relationships.isTranslatorOfLearningObject": "Translators",
+  "relationships.isTranslatorOfLearningObject": "Fordítók",
+
+  // "relationships.isEditorOfLearningObject": "Editors",
+  "relationships.isEditorOfLearningObject": "Szerkesztők",
+
+  // "relationships.isCollectorOfLearningObject": "Collected by",
+  "relationships.isCollectorOfLearningObject": "Gyűjtötte",
+
+  // "relationships.isSelectorOfLearningObject": "Selected by",
+  "relationships.isSelectorOfLearningObject": "Válogatta",
+
+  //"relationships.isContributorOfLearningObject": "Other contributors",
+  "relationships.isContributorOfLearningObject": "Egyéb hozzájárulók",
+
+  // "relationships.isEducationLevelOfLearningObject": "Education levels",
+  "relationships.isEducationLevelOfLearningObject": "Szintek",
+
+  // "relationships.isCourseOfLearningObject": "Courses",
+  "relationships.isCourseOfLearningObject": "Képzések",
+
+  // "relationships.isSchoolSubjectOfLearningObject": "School subjects",
+  "relationships.isSchoolSubjectOfLearningObject": "Tantárgyak",
+
+  // "relationships.isTypeOfLearningObject": "Type",
+  "relationships.isTypeOfLearningObject": "Típus",
+
+  // "relationships.isFieldOfScienceOfLearningObject": "Field of Science",
+  "relationships.isFieldOfScienceOfLearningObject": "Tudományterület",
+
+  // "relationships.isFormatOfLearningObject": "Format",
+  "relationships.isFormatOfLearningObject": "Formátum",
+
+  // "relationships.isTeachingMethodOfLearningObject": "Teaching method",
+  "relationships.isTeachingMethodOfLearningObject": "Módszer",
+
+  // "relationships.isLicenseOfLearningObject": "License",
+  "relationships.isLicenseOfLearningObject": "Licensz",
+
+  // "relationships.isRecommendedAccessLevelOfLO": "Recommended access level",
+  "relationships.isRecommendedAccessLevelOfLO": "Javasolt hozzáférési szint",
+
+  // "relationships.isAccessLevelOfLearningObject": "Access level",
+  "relationships.isAccessLevelOfLearningObject": "Hozzáférési szint",
+
+  // "relationships.isDownloadPermissionOfLO": "Download permission",
+  "relationships.isDownloadPermissionOfLO": "Letöltési engedélyek",
+
+  // "relationships.isParentOfFieldOfScience": "Parent field of science",
+  "relationships.isParentOfFieldOfScience": "Szülő tudományterület",
+
+  // "relationships.isFacultyOfSchoolSubject": "Faculty",
+  "relationships.isFacultyOfSchoolSubject": "Kar",
+
+  // "relationships.isDepartmentOfSchoolSubject": "Department",
+  "relationships.isDepartmentOfSchoolSubject": "Tanszék",
+
+  // "relationships.isInstituteOfSchoolSubject": "Institute",
+  "relationships.isInstituteOfSchoolSubject": "Intézet",
+
+  // "relationships.isDoctoralSchoolOfCourse": "Doctoral School",
+  "relationships.isDoctoralSchoolOfCourse": "Doktori iskola",
 
   // "repository.image.logo": "Repository logo",
   "repository.image.logo": "Adattár logó",

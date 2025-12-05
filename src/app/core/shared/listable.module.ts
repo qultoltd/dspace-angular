@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { SimpleItemComponent } from 'src/app/item-page/simple/item-types/simple-item/simple-item.component';
 
 import { CollectionAdminSearchResultGridElementComponent } from '../../admin/admin-search-page/admin-search-results/admin-search-result-grid-element/collection-search-result/collection-admin-search-result-grid-element.component';
 import { CommunityAdminSearchResultGridElementComponent } from '../../admin/admin-search-page/admin-search-results/admin-search-result-grid-element/community-search-result/community-admin-search-result-grid-element.component';
@@ -67,6 +68,7 @@ import { ItemPageDateFieldComponent } from '../../item-page/simple/field-compone
 import { GenericItemPageFieldComponent } from '../../item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
 import { ThemedItemPageTitleFieldComponent } from '../../item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
 import { ItemPageUriFieldComponent } from '../../item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
+import { LearningObjectComponent } from '../../item-page/simple/item-types/learning-object/learning-object.component';
 import { PublicationComponent } from '../../item-page/simple/item-types/publication/publication.component';
 import { UntypedItemComponent } from '../../item-page/simple/item-types/untyped-item/untyped-item.component';
 import { ThemedMetadataRepresentationListComponent } from '../../item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
@@ -207,6 +209,8 @@ const ENTRY_COMPONENTS = [
   ItemSearchResultListElementSubmissionComponent,
   PublicationComponent,
   UntypedItemComponent,
+  LearningObjectComponent,
+  SimpleItemComponent,
 ];
 
 @NgModule({
