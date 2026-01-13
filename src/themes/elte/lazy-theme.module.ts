@@ -12,6 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { RootModule } from '../../app/root.module';
+import { PersonComponent } from './app/entity-groups/research-entities/item-pages/person/person.component';
 import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
@@ -32,6 +33,7 @@ const DECLARATIONS = [
   AuthNavMenuComponent,
   FullItemPageComponent,
   PublicationComponent,
+  PersonComponent,
 ];
 
 @NgModule({

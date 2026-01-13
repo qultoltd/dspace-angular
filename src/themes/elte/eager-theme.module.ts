@@ -10,6 +10,7 @@ import {
 import { RootModule } from '../../app/root.module';
 import { GenericItemMetadataListElementComponent } from './app/entity-groups/research-entities/metadata-representations/generic-item/generic-item-metadata-list-element.component';
 // Your themed components
+import { PersonComponent } from './app/entity-groups/research-entities/item-pages/person/person.component';
 import { FooterComponent } from './app/footer/footer.component';
 import { HeaderComponent } from './app/header/header.component';
 import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-navbar-wrapper.component';
@@ -55,6 +56,7 @@ const DECLARATIONS = [
     CommunityListElementComponent,
     FooterComponent,
     LangSwitchComponent,
+    PersonComponent,
   ],
   declarations: DECLARATIONS,
   providers: [
