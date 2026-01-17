@@ -27,3 +27,12 @@ a,
 .btn-link {
   color: var(--primary);
 }
+
+.dropdown-toggle::after {
+  margin-left: .25rem !important;
+  vertical-align: middle !important;
+}
+
+ds-listable-object-component-loader .d-flex.flex-row {
+  padding-bottom: 1rem !important;
+}
