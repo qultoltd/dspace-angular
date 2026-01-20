@@ -6,9 +6,8 @@
 # http://www.dspace.org/license/
 #
 
-# Docker Compose for running the DSpace Angular UI for testing/development
-# Requires also running a REST API backend (either locally or remotely),
-# for example via 'docker-compose-rest.yml'
+# Docker Compose for running the DSpace Angular UI dist build
+# for previewing with the DSpace Demo site backend
 networks:
   dspacenet:
 services:
@@ -19,20 +18,22 @@ services:
       DSPACE_UI_HOST: dspace-angular
       DSPACE_UI_PORT: '4000'
       DSPACE_UI_NAMESPACE: /
-      DSPACE_REST_SSL: 'false'
-      DSPACE_REST_HOST: localhost
-      DSPACE_REST_PORT: 8080
+      # NOTE: When running the UI in production mode (which the -dist image does),
+      # these DSPACE_REST_* variables MUST point at a public, HTTPS URL.
+      # This is because Server Side Rendering (SSR) currently requires a public URL,
+      # see this bug: https://github.com/DSpace/dspace-angular/issues/1485
+      DSPACE_REST_SSL: 'true'
+      DSPACE_REST_HOST: sandbox.dspace.org
+      DSPACE_REST_PORT: 443
       DSPACE_REST_NAMESPACE: /server
-    image: "${DOCKER_REGISTRY:-docker.io}/${DOCKER_OWNER:-dspace}/dspace-angular:${DSPACE_VER:-dspace-9_x}"
+    image: "docker.dev.monguz.hu/dspace/dspace-angular:9.2-qulto"
     build:
       context: ..
-      dockerfile: Dockerfile
+      dockerfile: "Dockerfile.dist"
     networks:
       dspacenet:
     ports:
     - published: 4000
       target: 4000
-    - published: 9876
-      target: 9876
     stdin_open: true
     tty: true
