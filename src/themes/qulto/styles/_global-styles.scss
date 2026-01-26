@@ -28,9 +28,15 @@ a,
   color: var(--primary);
 }
 
-.dropdown-toggle::after {
-  margin-left: .25rem !important;
-  vertical-align: middle !important;
+ds-themed-auth-nav-menu .dropdown-toggle::after {
+  display: inline-block !important;
+  margin-left: .255em !important;
+  vertical-align: .255em !important;
+  content: "" !important;
+  border-top: .3em solid !important;
+  border-right: .3em solid rgba(0, 0, 0, 0) !important;
+  border-bottom: 0 !important;
+  border-left: .3em solid rgba(0, 0, 0, 0) !important;
 }
 
 ds-listable-object-component-loader .d-flex.flex-row {
