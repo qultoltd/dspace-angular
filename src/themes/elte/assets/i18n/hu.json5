@@ -471,4 +471,8 @@
   "search.filters.filter.courseFacet.head": "Képzések",
 
   "search.filters.filter.schoolSubjectFacet.head": "Tantárgyak",
+
+  "search.filters.applied.f.courseFacet": "Képzés",
+
+  "search.filters.applied.f.schoolSubjectFacet": "Tantárgy",
 }

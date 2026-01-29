@@ -428,4 +428,8 @@
   "search.filters.filter.courseFacet.head": "Courses",
 
   "search.filters.filter.schoolSubjectFacet.head": "School subjects",
+
+  "search.filters.applied.f.courseFacet": "Course",
+
+  "search.filters.applied.f.schoolSubjectFacet": "School subject",
 }
