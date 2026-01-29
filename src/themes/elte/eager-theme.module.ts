@@ -22,6 +22,7 @@ import { SimpleItemComponent } from './app/item-page/simple/item-types/simple-it
 import { NavbarComponent } from './app/navbar/navbar.component';
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
 import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
+import { MetadataValuesComponent } from './app/item-page/simple/field-components/specific-field/metadata-values/metadata-values.component';
 
 const THEME = 'elte';
 
@@ -57,6 +58,7 @@ const DECLARATIONS = [
     FooterComponent,
     LangSwitchComponent,
     PersonComponent,
+    MetadataValuesComponent,
   ],
   declarations: DECLARATIONS,
   providers: [

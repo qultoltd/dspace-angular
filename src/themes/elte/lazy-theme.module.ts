@@ -18,6 +18,8 @@ import { HomePageComponent } from './app/home-page/home-page.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
 import { ElteRelatedItemsComponent } from './app/item-page/simple/elte-related-items/elte-related-items.component';
 import { ThemedItemPageTitleFieldComponent } from './app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
+import { MetadataValuesComponent } from './app/item-page/simple/field-components/specific-field/metadata-values/metadata-values.component';
+import { GenericItemPageFieldComponent } from './app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
 import { LearningObjectComponent } from './app/item-page/simple/item-types/learning-object/learning-object.component';
 import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
 import { SimpleItemComponent } from './app/item-page/simple/item-types/simple-item/simple-item.component';
@@ -56,6 +58,8 @@ const DECLARATIONS = [
     LearningObjectComponent,
     SimpleItemComponent,
     ThemedItemPageTitleFieldComponent,
+    GenericItemPageFieldComponent,
+    MetadataValuesComponent,
     ...DECLARATIONS,
   ],
 })
