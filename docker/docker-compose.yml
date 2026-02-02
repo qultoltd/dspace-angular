@@ -26,7 +26,7 @@ services:
       DSPACE_REST_HOST: sandbox.dspace.org
       DSPACE_REST_PORT: 443
       DSPACE_REST_NAMESPACE: /server
-    image: "docker.dev.monguz.hu/dspace/dspace-angular:9.2-qulto"
+    image: "docker.dev.monguz.hu/dspace/dspace-angular:9.2-bobcatsss"
     build:
       context: ..
       dockerfile: "Dockerfile.dist"
