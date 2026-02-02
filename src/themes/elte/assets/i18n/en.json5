@@ -91,7 +91,7 @@
 
   "relationships.isAccessLevelOfLearningObject": "Access level",
 
-  "relationships.isDownloadPermissionOfLO": "Download permission",
+  "relationships.isDownloadPermissionOfLO": "Usage permission",
 
   "relationships.isParentOfFieldOfScience": "Parent field of science",
 
@@ -114,6 +114,10 @@
   "fieldofscience.listelement.badge": "Field of science",
 
   "search.filters.entityType.FieldOfScience": "Field of science",
+
+  "fieldofstudy.listelement.badge": "Field of Study",
+
+  "search.filers.entityType.FieldOfStudy": "Field of Study",
 
   "fieldofstudy.listelement.badge": "Field of study",
 
@@ -257,9 +261,9 @@
 
   "accessLevel.search.results.head": "Access Level Search Results",
 
-  "submission.sections.describe.relationship-lookup.title.isDownloadPermissionOfLO": "Download permissions",
+  "submission.sections.describe.relationship-lookup.title.isDownloadPermissionOfLO": "Usage permissions",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDownloadPermissionOfLO": "Download permissions ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDownloadPermissionOfLO": "Usage permissions ({{ count }})",
 
   "department.search.results.head": "Department Search Results",
 
@@ -359,7 +363,7 @@
 
   "relationships.isRecommendedAccessLevelOf.AccessLevel": "Recommended access levels",
 
-  "relationships.isDownloadPermissionOf.Department": "Download permissions",
+  "relationships.isDownloadPermissionOf.Faculty": "Usage permissions",
 
   "relationships.isFacultyOf": "Faculties",
 
@@ -407,5 +411,25 @@
 
   "fieldofscience.page.edit": "Edit this item",
 
-  "fieldofstudy.page.edit": "Edit this item"
+  "fieldofstudy.page.edit": "Edit this item",
+
+  "menu.section.browse_global_by_fieldofstudy": "By Course",
+
+  "menu.section.browse_global_by_schoolsubject": "By School Subject",
+
+  "browse.metadata.course": "Course",
+
+  "browse.metadata.course.breadcrumbs": "Browse by Course",
+
+  "browse.metadata.schoolsubject": "School subject",
+
+  "browse.metadata.schoolsubject.breadcrumbs": "Browse by School subject",
+
+  "search.filters.filter.courseFacet.head": "Courses",
+
+  "search.filters.filter.schoolSubjectFacet.head": "School subjects",
+
+  "search.filters.applied.f.courseFacet": "Course",
+
+  "search.filters.applied.f.schoolSubjectFacet": "School subject",
 }

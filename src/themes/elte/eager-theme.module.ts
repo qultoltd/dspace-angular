@@ -10,6 +10,7 @@ import {
 import { RootModule } from '../../app/root.module';
 import { GenericItemMetadataListElementComponent } from './app/entity-groups/research-entities/metadata-representations/generic-item/generic-item-metadata-list-element.component';
 // Your themed components
+import { PersonComponent } from './app/entity-groups/research-entities/item-pages/person/person.component';
 import { FooterComponent } from './app/footer/footer.component';
 import { HeaderComponent } from './app/header/header.component';
 import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-navbar-wrapper.component';
@@ -21,6 +22,7 @@ import { SimpleItemComponent } from './app/item-page/simple/item-types/simple-it
 import { NavbarComponent } from './app/navbar/navbar.component';
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
 import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
+import { MetadataValuesComponent } from './app/item-page/simple/field-components/specific-field/metadata-values/metadata-values.component';
 
 const THEME = 'elte';
 
@@ -55,6 +57,8 @@ const DECLARATIONS = [
     CommunityListElementComponent,
     FooterComponent,
     LangSwitchComponent,
+    PersonComponent,
+    MetadataValuesComponent,
   ],
   declarations: DECLARATIONS,
   providers: [

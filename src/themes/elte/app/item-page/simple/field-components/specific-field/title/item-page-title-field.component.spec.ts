@@ -12,9 +12,9 @@ import {
   TranslateModule,
 } from '@ngx-translate/core';
 
-import { MetadataValuesComponent } from '../../../../../../../../app/item-page/field-components/metadata-values/metadata-values.component';
-import { mockItemWithMetadataFieldsAndValue } from '../../../../../../../../app/item-page/simple/field-components/specific-field/item-page-field.component.spec';
 import { TranslateLoaderMock } from '../../../../../../../../app/shared/testing/translate-loader.mock';
+import { MetadataValuesComponent } from '../metadata-values/metadata-values.component';
+import { mockItemWithMetadataFieldsAndValue } from '../../../../../../../../app/item-page/simple/field-components/specific-field/item-page-field.component.spec';
 import { ItemPageTitleFieldComponent } from './item-page-title-field.component';
 
 let comp: ItemPageTitleFieldComponent;

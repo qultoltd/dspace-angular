@@ -76,7 +76,7 @@
   "schoolsubject.page.titleprefix": "Tantárgy: ",
 
   // "fieldofscience.page.titleprefix": "Field of science: ",
-  "fieldofscience.page.titleprefix": "Tudományterület: " ,
+  "fieldofscience.page.titleprefix": "Tudományterület: ",
 
   // "fieldofstudy.page.titleprefix": "Field of study: ",
   "fieldofstudy.page.titleprefix": "Képzési terület: ",
@@ -133,7 +133,7 @@
   "relationships.isAccessLevelOfLearningObject": "Hozzáférési szint",
 
   // "relationships.isDownloadPermissionOfLO": "Download permission",
-  "relationships.isDownloadPermissionOfLO": "Letöltési engedélyek",
+  "relationships.isDownloadPermissionOfLO": "Felhasználási engedélyek",
 
   // "relationships.isParentOfFieldOfScience": "Parent field of science",
   "relationships.isParentOfFieldOfScience": "Szülő tudományterület",
@@ -304,9 +304,9 @@
 
   "accessLevel.search.results.head": "Hozzáférési szint keresési eredmények",
 
-  "submission.sections.describe.relationship-lookup.title.isDownloadPermissionOfLO": "Letöltési engedélyek",
+  "submission.sections.describe.relationship-lookup.title.isDownloadPermissionOfLO": "Felhasználási engedélyek",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDownloadPermissionOfLO": "Letöltési engedélyek ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDownloadPermissionOfLO": "Felhasználási engedélyek ({{ count }})",
 
   "department.search.results.head": "Tanszék keresési eredmények",
 
@@ -406,7 +406,7 @@
 
   "relationships.isRecommendedAccessLevelOf.AccessLevel": "Javasolt hozzáférési szintek",
 
-  "relationships.isDownloadPermissionOf.Department": "Letöltési engedélyek",
+  "relationships.isDownloadPermissionOf.Faculty": "Felhasználási engedélyek",
 
   "relationships.isFacultyOf": "Karok",
 
@@ -455,4 +455,24 @@
   "fieldofscience.page.edit": "Elem szerkesztése",
 
   "fieldofstudy.page.edit": "Elem szerkesztése",
+
+  "menu.section.browse_global_by_course": "Képzés szerint",
+
+  "menu.section.browse_global_by_schoolsubject": "Tantárgy szerint",
+
+  "browse.metadata.course": "Képzés",
+
+  "browse.metadata.course.breadcrumbs": "Böngészés képzés szerint",
+
+  "browse.metadata.schoolsubject": "Tantárgy",
+
+  "browse.metadata.schoolsubject.breadcrumbs": "Böngészés tantárgy szerint",
+
+  "search.filters.filter.courseFacet.head": "Képzések",
+
+  "search.filters.filter.schoolSubjectFacet.head": "Tantárgyak",
+
+  "search.filters.applied.f.courseFacet": "Képzés",
+
+  "search.filters.applied.f.schoolSubjectFacet": "Tantárgy",
 }
