@@ -432,4 +432,8 @@
   "search.filters.applied.f.courseFacet": "Course",
 
   "search.filters.applied.f.schoolSubjectFacet": "School subject",
+
+  "browse.comcol.by.course": "By Course",
+
+  "browse.comcol.by.schoolsubject": "By School subject",
 }

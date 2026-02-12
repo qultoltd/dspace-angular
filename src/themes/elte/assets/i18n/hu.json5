@@ -475,4 +475,8 @@
   "search.filters.applied.f.courseFacet": "Képzés",
 
   "search.filters.applied.f.schoolSubjectFacet": "Tantárgy",
+
+  "browse.comcol.by.course": "Képzés szerint",
+
+  "browse.comcol.by.schoolsubject": "Tantárgy szerint",
 }

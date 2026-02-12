@@ -3878,7 +3878,7 @@
   "item.edit.private.error": "A tárgy privát beállí1tása közben hiba történt",
 
   // "item.edit.private.header": "Make item non-discoverable: {{ id }}",
-  "item.edit.private.header": "Make item non-discoverable: {{ id }}",
+  "item.edit.private.header": "Legyen a tárgy privát (nem nyilvános): {{ id }}",
 
   // "item.edit.private.success": "The item is now non-discoverable",
   "item.edit.private.success": "Ezx a tárgy most privát",
