@@ -15,6 +15,7 @@ import { MiradorViewerComponent } from 'src/app/item-page/mirador-viewer/mirador
 import { ThemedFileSectionComponent } from 'src/app/item-page/simple/field-components/file-section/themed-file-section.component';
 import { ItemPageAbstractFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
 import { ItemPageDateFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
+import { TabbedRelatedEntitiesSearchComponent } from 'src/app/item-page/simple/related-entities/tabbed-related-entities-search/tabbed-related-entities-search.component';
 import { GenericItemPageFieldComponent } from '../../field-components/specific-field/generic/generic-item-page-field.component';
 import { ItemPageUriFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
 import { ItemComponent } from 'src/app/item-page/simple/item-types/shared/item.component';
@@ -27,24 +28,18 @@ import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.com
 
 import { ElteRelatedItemsComponent } from '../../elte-related-items/elte-related-items.component';
 import { ThemedItemPageTitleFieldComponent } from '../../field-components/specific-field/title/themed-item-page-field.component';
+import { Context } from 'src/app/core/shared/context.model';
 
-@listableObjectComponent('LearningObject', ViewMode.StandalonePage)
-@listableObjectComponent('FieldOfScience', ViewMode.StandalonePage)
-@listableObjectComponent('FieldOfStudy', ViewMode.StandalonePage)
-@listableObjectComponent('Course', ViewMode.StandalonePage)
-@listableObjectComponent('Program', ViewMode.StandalonePage)
-@listableObjectComponent('Department', ViewMode.StandalonePage)
-@listableObjectComponent('Institute', ViewMode.StandalonePage)
-@listableObjectComponent('DoctoralSchool', ViewMode.StandalonePage)
+@listableObjectComponent('CourseInstance', ViewMode.StandalonePage, Context.Any, 'elte')
 @Component({
-  selector: 'ds-learning-object',
-  styleUrls: ['./learning-object.component.scss'],
-  templateUrl: './learning-object.component.html',
+  selector: 'ds-course-instance',
+  styleUrls: ['./course-instance.component.scss'],
+  templateUrl: './course-instance.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [NgIf, ThemedResultsBackButtonComponent, MiradorViewerComponent, ThemedItemPageTitleFieldComponent, DsoEditMenuComponent, MetadataFieldWrapperComponent, ThemedThumbnailComponent, ThemedMediaViewerComponent, ThemedFileSectionComponent, ItemPageDateFieldComponent, ThemedMetadataRepresentationListComponent, GenericItemPageFieldComponent, ElteRelatedItemsComponent, ItemPageAbstractFieldComponent, ItemPageUriFieldComponent, CollectionsComponent, RouterLink, AsyncPipe, TranslateModule],
+  imports: [NgIf, ThemedResultsBackButtonComponent, MiradorViewerComponent, ThemedItemPageTitleFieldComponent, DsoEditMenuComponent, MetadataFieldWrapperComponent, ThemedThumbnailComponent, ThemedMediaViewerComponent, ThemedFileSectionComponent, ItemPageDateFieldComponent, ThemedMetadataRepresentationListComponent, GenericItemPageFieldComponent, ElteRelatedItemsComponent, ItemPageAbstractFieldComponent, ItemPageUriFieldComponent, CollectionsComponent, RouterLink, AsyncPipe, TranslateModule, TabbedRelatedEntitiesSearchComponent],
 })
-export class LearningObjectComponent extends ItemComponent {
+export class CourseInstanceComponent extends ItemComponent {
 
   hasAnyMeta(keys: string[]): boolean {
     if (!this.object) { return false; }

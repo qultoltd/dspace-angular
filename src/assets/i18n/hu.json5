@@ -5024,11 +5024,11 @@
   // "menu.section.browse_global_by_title": "By Title",
   "menu.section.browse_global_by_title": "Cím szerint",
 
-  // "menu.section.browse_global_by_course": "By Course",
-  "menu.section.browse_global_by_course": "Képzés szerint",
+  // "menu.section.browse_global_by_program": "By Program",
+  "menu.section.browse_global_by_program": "Képzés szerint",
 
-  // "menu.section.browse_global_by_schoolsubject": "By School Subject",
-  "menu.section.browse_global_by_schoolsubject": "Tantárgy szerint",
+  // "menu.section.browse_global_by_course": "By Courses",
+  "menu.section.browse_global_by_course": "Tantárgy szerint",
 
   // "menu.section.browse_global_communities_and_collections": "Communities & Collections",
   "menu.section.browse_global_communities_and_collections": "Közösségek & Gyűjtemények",
@@ -10468,14 +10468,17 @@
   // "institute.page.titleprefix": "Institute: ",
   "institute.page.titleprefix": "Intézet: ",
 
-  // "course.page.titleprefix": "Course: ",
-  "course.page.titleprefix": "Kurzus: ",
+  // "program.page.titleprefix": "Program: ",
+  "program.page.titleprefix": "Képzés: ",
 
   // "department.page.titleprefix": "Department: ",
   "department.page.titleprefix": "Tanszék: ",
 
-  // "schoolsubject.page.titleprefix": "School subject: ",
-  "schoolsubject.page.titleprefix": "Tantárgy: ",
+  // "course.page.titleprefix": "Course: ",
+  "course.page.titleprefix": "Tantárgy: ",
+
+  // "courseinstance.page.titleprefix": "Course Instance",
+  "courseinstance.page.titleprefix": "Kurzus",
 
   // "fieldofscience.page.titleprefix": "Field of science: ",
   "fieldofscience.page.titleprefix": "Tudományterület: ",
@@ -10504,11 +10507,14 @@
   // "relationships.isEducationLevelOfLearningObject": "Education levels",
   "relationships.isEducationLevelOfLearningObject": "Szintek",
 
-  // "relationships.isCourseOfLearningObject": "Courses",
-  "relationships.isCourseOfLearningObject": "Képzések",
+  // "relationships.isProgramOfLearningObject": "Programs",
+  "relationships.isProgramOfLearningObject": "Képzések",
 
-  // "relationships.isSchoolSubjectOfLearningObject": "School subjects",
-  "relationships.isSchoolSubjectOfLearningObject": "Tantárgyak",
+  // "relationships.isCourseOfLearningObject": "School subjects",
+  "relationships.isCourseOfLearningObject": "Tantárgyak",
+
+  // "relationships.isCourseInstanceOfLearningObject": "Course Instances",
+  "relationships.isCourseInstanceOfLearningObject": "Kurzusok",
 
   // "relationships.isTypeOfLearningObject": "Type",
   "relationships.isTypeOfLearningObject": "Típus",
@@ -10537,17 +10543,17 @@
   // "relationships.isParentOfFieldOfScience": "Parent field of science",
   "relationships.isParentOfFieldOfScience": "Szülő tudományterület",
 
-  // "relationships.isFacultyOfSchoolSubject": "Faculty",
-  "relationships.isFacultyOfSchoolSubject": "Kar",
+  // "relationships.isFacultyOfCourse": "Faculty",
+  "relationships.isFacultyOfCourse": "Kar",
 
-  // "relationships.isDepartmentOfSchoolSubject": "Department",
-  "relationships.isDepartmentOfSchoolSubject": "Tanszék",
+  // "relationships.isDepartmentOfCourse": "Department",
+  "relationships.isDepartmentOfCourse": "Tanszék",
 
-  // "relationships.isInstituteOfSchoolSubject": "Institute",
-  "relationships.isInstituteOfSchoolSubject": "Intézet",
+  // "relationships.isInstituteOfCourse": "Institute",
+  "relationships.isInstituteOfCourse": "Intézet",
 
-  // "relationships.isDoctoralSchoolOfCourse": "Doctoral School",
-  "relationships.isDoctoralSchoolOfCourse": "Doktori iskola",
+  // "relationships.isDoctoralSchoolOfProgram": "Doctoral School",
+  "relationships.isDoctoralSchoolOfProgram": "Doktori iskola",
 
   "type.listelement.badge": "Típus",
 
@@ -10565,13 +10571,13 @@
 
   "search.filters.entityType.FieldOfStudy": "Képzési terület",
 
-  "course.listelement.badge": "Képzés",
+  "program.listelement.badge": "Képzés",
 
-  "search.filters.entityType.Course": "Képzés",
+  "search.filters.entityType.program": "Képzés",
 
-  "schoolsubject.listelement.badge": "Tantárgy",
+  "course.listelement.badge": "Tantárgy",
 
-  "search.filters.entityType.SchoolSubject": "Tantárgy",
+  "search.filters.entityType.Course": "Tantárgy",
 
   "language.listelement.badge": "Nyelv",
 
@@ -10649,17 +10655,23 @@
 
   "educationLevel.search.results.head": "Szint keresési eredmények",
 
-  "submission.sections.describe.relationship-lookup.title.isCourseOfLearningObject": "Képzések",
+  "submission.sections.describe.relationship-lookup.title.isProgramOfLearningObject": "Képzések",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCourseOfLearningObject": "Képzések ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isProgramOfLearningObject": "Képzések ({{ count }})",
 
-  "course.search.results.head": "Képzés keresési eredmények",
+  "program.search.results.head": "Képzés keresési eredmények",
 
-  "submission.sections.describe.relationship-lookup.title.isSchoolSubjectOfLearningObject": "Tantárgyak",
+  "submission.sections.describe.relationship-lookup.title.isCourseOfLearningObject": "Tantárgyak",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isSchoolSubjectOfLearningObject": "Tantárgyak ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCourseOfLearningObject": "Tantárgyak ({{ count }})",
 
-  "schoolSubject.search.results.head": "Tantárgy keresési eredmények",
+  "course.search.results.head": "Tantárgy keresési eredmények",
+
+  "submission.sections.describe.relationship-lookup.title.isCourseInstanceOfLO": "Kurzusok",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCourseInstanceOfLO": "Kurzusok ({{ count }})",
+
+  "courseInstance.search.results.head": "Kurzus keresési eredmények",
 
   "submission.sections.describe.relationship-lookup.title.isTypeOfLearningObject": "Típusok",
 
@@ -10717,19 +10729,19 @@
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfInstitute": "Karok ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.title.isDoctoralSchoolOfCourse": "Doktori iskolák",
+  "submission.sections.describe.relationship-lookup.title.isDoctoralSchoolOfProgram": "Doktori iskolák",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDoctoralSchoolOfCourse": "Doktori iskolák ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDoctoralSchoolOfProgram": "Doktori iskolák ({{ count }})",
 
   "doctoralSchool.search.results.head": "Doktori iskola keresési eredmények",
 
-  "submission.sections.describe.relationship-lookup.title.isFacultyOfCourse": "Karok",
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfProgram": "Karok",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfCourse": "Karok ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfProgram": "Karok ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.title.isEducationLevelOfCourse": "Szintek",
+  "submission.sections.describe.relationship-lookup.title.isEducationLevelOfProgram": "Szintek",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isEducationLevelOfCourse": "Szintek ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isEducationLevelOfProgram": "Szintek ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.title.isScienceFieldOfPerson": "Tudományterületek",
 
@@ -10747,21 +10759,21 @@
 
   "institute.search.results.head": "Intézet keresési eredmények",
 
-  "submission.sections.describe.relationship-lookup.title.isCourseOfSchoolSubject": "Képzések",
+  "submission.sections.describe.relationship-lookup.title.isProgramOfCourse": "Képzések",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCourseOfSchoolSubject": "Képzések ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isProgramOfCourse": "Képzések ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.title.isFacultyOfSchoolSubject": "Karok",
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfCourse": "Karok",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfSchoolSubject": "Karok ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfCourse": "Karok ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.title.isDepartmentOfSchoolSubject": "Tanszékek",
+  "submission.sections.describe.relationship-lookup.title.isDepartmentOfCourse": "Tanszékek",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDepartmentOfSchoolSubject": "Tanszékek ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDepartmentOfCourse": "Tanszékek ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.title.isInstituteOfSchoolSubject": "Intézetek",
+  "submission.sections.describe.relationship-lookup.title.isInstituteOfCourse": "Intézetek",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isInstituteOfSchoolSubject": "Intézetek ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isInstituteOfSCourse": "Intézetek ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.title.isParentOfFieldOfScience": "Tudományterületek",
 
@@ -10783,11 +10795,11 @@
 
   "relationships.isEducationLevelOf": "Szintek",
 
-  "relationships.isSchoolSubjectOf": "Tantárgyak",
+  "relationships.isCourseOf": "Tantárgyak",
 
   "relationships.isFieldOf.FieldOfScience": "Tudományterületek",
 
-  "relationships.isCourseOf": "Képzések",
+  "relationships.isProgramOf": "Képzések",
 
   "relationships.isFormatOf": "Formátumok",
 
@@ -10827,7 +10839,7 @@
 
   "faculty.page.edit": "Elem szerkesztése",
 
-  "course.page.edit": "Elem szerkesztése",
+  "program.page.edit": "Elem szerkesztése",
 
   "license.page.edit": "Elem szerkesztése",
 
@@ -10839,25 +10851,25 @@
 
   "department.page.edit": "Elem szerkesztése",
 
-  "schoolsubject.page.edit": "Elem szerkesztése",
+  "course.page.edit": "Elem szerkesztése",
 
   "type.page.edit": "Elem szerkesztése",
 
   "fieldofscience.page.edit": "Elem szerkesztése",
-  
-  "menu.section.browse_global_by_course": "Képzés szerint",
 
-  "menu.section.browse_global_by_schoolsubject": "Tantárgy szerint",
+  "menu.section.browse_global_by_program": "Képzés szerint",
 
-  "browse.metadata.course": "Képzés",
+  "menu.section.browse_global_by_course": "Tantárgy szerint",
 
-  "browse.metadata.course.breadcrumbs": "Böngészés képzés szerint",
+  "browse.metadata.program": "Képzés",
 
-  "browse.metadata.schoolsubject": "Tantárgy",
+  "browse.metadata.program.breadcrumbs": "Böngészés képzés szerint",
 
-  "browse.metadata.schoolsubject.breadcrumbs": "Böngészés tantárgy szerint",
+  "browse.metadata.course": "Tantárgy",
 
-  "search.filters.filter.courseFacet.head": "Képzések",
+  "browse.metadata.course.breadcrumbs": "Böngészés tantárgy szerint",
 
-  "search.filters.filter.schoolSubjectFacet.head": "Tantárgyak",
+  "search.filters.filter.programFacet.head": "Képzések",
+
+  "search.filters.filter.courseFacet.head": "Tantárgyak",
 }

@@ -47,11 +47,13 @@
 
   "institute.page.titleprefix": "Institute: ",
 
-  "course.page.titleprefix": "Course: ",
+  "program.page.titleprefix": "Program: ",
 
   "department.page.titleprefix": "Department: ",
 
-  "schoolsubject.page.titleprefix": "School subject: ",
+  "course.page.titleprefix": "Course: ",
+
+  "courseinstance.page.titleprefix": "Course Instance",
 
   "fieldofscience.page.titleprefix": "Field of science: ",
 
@@ -71,9 +73,11 @@
 
   "relationships.isEducationLevelOfLearningObject": "Education levels",
 
+  "relationships.isProgramOfLearningObject": "Programs",
+
   "relationships.isCourseOfLearningObject": "Courses",
 
-  "relationships.isSchoolSubjectOfLearningObject": "School subjects",
+  "relationships.isCourseInstanceOfLearningObject": "Course Instances",
 
   "relationships.isTypeOfLearningObject": "Type",
 
@@ -95,13 +99,13 @@
 
   "relationships.isParentOfFieldOfScience": "Parent field of science",
 
-  "relationships.isFacultyOfSchoolSubject": "Faculty",
+  "relationships.isFacultyOfCourse": "Faculty",
 
-  "relationships.isDepartmentOfSchoolSubject": "Department",
+  "relationships.isDepartmentOfCourse": "Department",
 
-  "relationships.isInstituteOfSchoolSubject": "Institute",
+  "relationships.isInstituteOfCourse": "Institute",
 
-  "relationships.isDoctoralSchoolOfCourse": "Doctoral School",
+  "relationships.isDoctoralSchoolOfProgram": "Doctoral School",
 
   "type.listelement.badge": "Type",
 
@@ -123,13 +127,13 @@
 
   "search.filters.entityType.FieldOfStudy": "Field of study",
 
+  "program.listelement.badge": "Program",
+
+  "search.filters.entityType.Program": "Program",
+
   "course.listelement.badge": "Course",
 
   "search.filters.entityType.Course": "Course",
-
-  "schoolsubject.listelement.badge": "School subject",
-
-  "search.filters.entityType.SchoolSubject": "School subject",
 
   "language.listelement.badge": "Language",
 
@@ -207,17 +211,23 @@
 
   "educationLevel.search.results.head": "Education Level Search Results",
 
+  "submission.sections.describe.relationship-lookup.title.isProgramOfLearningObject": "Programs",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isProgramOfLearningObject": "Programs ({{ count }})",
+
+  "program.search.results.head": "Program Search Results",
+
   "submission.sections.describe.relationship-lookup.title.isCourseOfLearningObject": "Courses",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCourseOfLearningObject": "Courses ({{ count }})",
 
   "course.search.results.head": "Course Search Results",
 
-  "submission.sections.describe.relationship-lookup.title.isSchoolSubjectOfLearningObject": "School subjects",
+  "submission.sections.describe.relationship-lookup.title.isCourseInstanceOfLO": "Course Instances",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isSchoolSubjectOfLearningObject": "School subjects ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCourseInstanceOfLO": "Course Instances ({{ count }})",
 
-  "schoolSubject.search.results.head": "School Subject Search Results",
+  "courseInstance.search.results.head": "Course Instances Search Results",
 
   "submission.sections.describe.relationship-lookup.title.isTypeOfLearningObject": "Types",
 
@@ -281,19 +291,19 @@
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfInstitute": "Faculties ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.title.isDoctoralSchoolOfCourse": "Doctoral Schools",
+  "submission.sections.describe.relationship-lookup.title.isDoctoralSchoolOfProgram": "Doctoral Schools",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDoctoralSchoolOfCourse": "Doctoral Schools ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDoctoralSchoolOfProgram": "Doctoral Schools ({{ count }})",
 
   "doctoralSchool.search.results.head": "Doctoral School Search Results",
 
-  "submission.sections.describe.relationship-lookup.title.isFacultyOfCourse": "Faculties",
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfProgram": "Faculties",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfCourse": "Faculties ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfProgram": "Faculties ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.title.isEducationLevelOfCourse": "Education levels",
+  "submission.sections.describe.relationship-lookup.title.isEducationLevelOfProgram": "Education levels",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isEducationLevelOfCourse": "Education levels ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isEducationLevelOfProgram": "Education levels ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.title.isScienceFieldOfPerson": "Fields of Science",
 
@@ -311,21 +321,21 @@
 
   "institute.search.results.head": "Institute Search Results",
 
-  "submission.sections.describe.relationship-lookup.title.isCourseOfSchoolSubject": "Courses",
+  "submission.sections.describe.relationship-lookup.title.isProgramOfCourse": "Programs",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCourseOfSchoolSubject": "Courses ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isProgramOfCourse": "Programs ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.title.isFacultyOfSchoolSubject": "Faculties",
+  "submission.sections.describe.relationship-lookup.title.isFacultyOfCourse": "Faculties",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfSchoolSubject": "Faculties ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isFacultyOfCourse": "Faculties ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.title.isDepartmentOfSchoolSubject": "Departments",
+  "submission.sections.describe.relationship-lookup.title.isDepartmentOfCourse": "Departments",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDepartmentOfSchoolSubject": "Departments ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDepartmentOfCourse": "Departments ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.title.isInstituteOfSchoolSubject": "Institutes",
+  "submission.sections.describe.relationship-lookup.title.isInstituteOfCourse": "Institutes",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isInstituteOfSchoolSubject": "Institutes ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isInstituteOfCourse": "Institutes ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.title.isParentOfFieldOfScience": "Fields of Science",
 
@@ -347,13 +357,13 @@
 
   "relationships.isEducationLevelOf": "Education levels",
 
-  "relationships.isSchoolSubjectOf": "School subjects",
+  "relationships.isCourseOf": "School subjects",
 
   "relationships.isFieldOf.FieldOfScience": "Fields of Science",
 
   "relationships.isFieldOf.FieldOfStudy": "Fields of study",
 
-  "relationships.isCourseOf": "Courses",
+  "relationships.isProgramOf": "Programs",
 
   "relationships.isFormatOf": "Formats",
 
@@ -393,7 +403,7 @@
 
   "faculty.page.edit": "Edit this item",
 
-  "course.page.edit": "Edit this item",
+  "program.page.edit": "Edit this item",
 
   "license.page.edit": "Edit this item",
 
@@ -405,7 +415,7 @@
 
   "department.page.edit": "Edit this item",
 
-  "schoolsubject.page.edit": "Edit this item",
+  "course.page.edit": "Edit this item",
 
   "type.page.edit": "Edit this item",
 
@@ -413,27 +423,27 @@
 
   "fieldofstudy.page.edit": "Edit this item",
 
-  "menu.section.browse_global_by_fieldofstudy": "By Course",
+  "menu.section.browse_global_by_fieldofstudy": "By Program",
 
-  "menu.section.browse_global_by_schoolsubject": "By School Subject",
+  "menu.section.browse_global_by_course": "By School Subject",
 
-  "browse.metadata.course": "Course",
+  "browse.metadata.program": "Program",
 
-  "browse.metadata.course.breadcrumbs": "Browse by Course",
+  "browse.metadata.program.breadcrumbs": "Browse by Program",
 
-  "browse.metadata.schoolsubject": "School subject",
+  "browse.metadata.course": "School subject",
 
-  "browse.metadata.schoolsubject.breadcrumbs": "Browse by School subject",
+  "browse.metadata.course.breadcrumbs": "Browse by School subject",
 
-  "search.filters.filter.courseFacet.head": "Courses",
+  "search.filters.filter.programFacet.head": "Programs",
 
-  "search.filters.filter.schoolSubjectFacet.head": "School subjects",
+  "search.filters.filter.courseFacet.head": "School subjects",
 
-  "search.filters.applied.f.courseFacet": "Course",
+  "search.filters.applied.f.programFacet": "Program",
 
-  "search.filters.applied.f.schoolSubjectFacet": "School subject",
+  "search.filters.applied.f.courseFacet": "School subject",
 
-  "browse.comcol.by.course": "By Course",
+  "browse.comcol.by.program": "By Program",
 
-  "browse.comcol.by.schoolsubject": "By School subject",
+  "browse.comcol.by.course": "By School subject",
 }

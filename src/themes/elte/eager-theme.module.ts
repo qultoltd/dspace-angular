@@ -17,6 +17,7 @@ import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-na
 import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
 import { ElteRelatedItemsComponent } from './app/item-page/simple/elte-related-items/elte-related-items.component';
 import { LearningObjectComponent } from './app/item-page/simple/item-types/learning-object/learning-object.component';
+import { CourseInstanceComponent } from './app/item-page/simple/item-types/course-instance/course-instance.component';
 import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
 import { SimpleItemComponent } from './app/item-page/simple/item-types/simple-item/simple-item.component';
 import { NavbarComponent } from './app/navbar/navbar.component';
@@ -48,6 +49,7 @@ const DECLARATIONS = [
     PublicationComponent,
     ElteRelatedItemsComponent,
     LearningObjectComponent,
+    CourseInstanceComponent,
     SimpleItemComponent,
     GenericItemMetadataListElementComponent,
     HeaderComponent,
