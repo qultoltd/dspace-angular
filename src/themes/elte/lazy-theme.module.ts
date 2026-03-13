@@ -21,6 +21,7 @@ import { ThemedItemPageTitleFieldComponent } from './app/item-page/simple/field-
 import { MetadataValuesComponent } from './app/item-page/simple/field-components/specific-field/metadata-values/metadata-values.component';
 import { GenericItemPageFieldComponent } from './app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
 import { LearningObjectComponent } from './app/item-page/simple/item-types/learning-object/learning-object.component';
+import { CourseInstanceComponent } from './app/item-page/simple/item-types/course-instance/course-instance.component';
 import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
 import { SimpleItemComponent } from './app/item-page/simple/item-types/simple-item/simple-item.component';
 import { LoginPageComponent } from './app/login-page/login-page.component';
@@ -56,6 +57,7 @@ const DECLARATIONS = [
     PublicationComponent,
     ElteRelatedItemsComponent,
     LearningObjectComponent,
+    CourseInstanceComponent,
     SimpleItemComponent,
     ThemedItemPageTitleFieldComponent,
     GenericItemPageFieldComponent,

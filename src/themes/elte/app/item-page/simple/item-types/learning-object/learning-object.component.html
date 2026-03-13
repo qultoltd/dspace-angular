@@ -26,11 +26,14 @@
       [metadataFields]="['education.educationlevel']"
       [label]="'relationships.isEducationLevelOfLearningObject' | translate">
     </ds-metadata-representation-list>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Course'" [metadataFields]="['education.course']"
-      [label]="'relationships.isCourseOfLearningObject' | translate">
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Program'" [metadataFields]="['education.program']"
+      [label]="'relationships.isProgramOfLearningObject' | translate">
     </ds-metadata-representation-list>
-    <ds-metadata-representation-list [parentItem]="object" [itemType]="'SchoolSubject'"
-      [metadataFields]="['education.schoolsubject']" [label]="'relationships.isSchoolSubjectOfLearningObject' | translate">
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Course'"
+      [metadataFields]="['education.course']" [label]="'relationships.isCourseOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'CourseInstance'"
+      [metadataFields]="['education.courseinstance']" [label]="'relationships.isCourseInstanceOfLearningObject' | translate">
     </ds-metadata-representation-list>
     <ds-metadata-representation-list [parentItem]="object" [itemType]="'FieldOfStudy'"
       [metadataFields]="['education.fieldofstudy']"
@@ -109,17 +112,17 @@
     </ds-metadata-representation-list>
     <!--School subject record fields-->
     <ds-metadata-representation-list [parentItem]="object" [itemType]="'Faculty'"
-      [metadataFields]="['education.faculty']" [label]="'relationships.isFacultyOfSchoolSubject' | translate">
+      [metadataFields]="['education.faculty']" [label]="'relationships.isFacultyOfCourse' | translate">
     </ds-metadata-representation-list>
     <ds-metadata-representation-list [parentItem]="object" [itemType]="'Department'"
-      [metadataFields]="['education.department']" [label]="'relationships.isDepartmentOfSchoolSubject' | translate">
+      [metadataFields]="['education.department']" [label]="'relationships.isDepartmentOfCourse' | translate">
     </ds-metadata-representation-list>
     <ds-metadata-representation-list [parentItem]="object" [itemType]="'Institute'"
-      [metadataFields]="['education.institute']" [label]="'relationships.isInstituteOfSchoolSubject' | translate">
+      [metadataFields]="['education.institute']" [label]="'relationships.isInstituteOfCourse' | translate">
     </ds-metadata-representation-list>
-    <!--Course record fields-->
+    <!--Program record fields-->
     <ds-metadata-representation-list [parentItem]="object" [itemType]="'DoctoralSchool'"
-      [metadataFields]="['education.doctoralschool']" [label]="'relationships.isDoctoralSchoolOfCourse' | translate">
+      [metadataFields]="['education.doctoralschool']" [label]="'relationships.isDoctoralSchoolOfProgram' | translate">
     </ds-metadata-representation-list>
     <div>
       <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']" tabindex="0">
