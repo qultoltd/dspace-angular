@@ -1,12 +1,12 @@
 :host {
   display: block;
-  // Megakadályozzuk, hogy a komponens saját görgetősávot kapjon
+  // Prevent the component from generating its own scrollbar
   overflow: hidden; 
 }
 
 .graph-viewer-container {
-  /* Kiszámoljuk a maradék helyet: 100vh - (Header + Footer + esetleges margók) */
-  /* A 160px egy biztonságos becslés a fej- és láblécre, finomhangolható */
+  /* Calculate available height: 100vh minus (Header + Footer + potential margins) */
+  /* 160px is a safe estimate for the header and footer; adjust if necessary */
   height: calc(100vh - 160px); 
   width: 100%;
   display: flex;
@@ -20,8 +20,9 @@
   border: none;
 }
 
-/* Ha a DSpace alapértelmezett container-e (paddingje) zavaró, itt kikapcsolhatod */
-:host-context(ds-themed-graph-viewer) .container {
+/* Overwrite DSpace default container padding/max-width to ensure full-width layout */
+:host-context(ds-graph-viewer) .container {
     max-width: 100% !important;
     padding: 0 !important;
+    margin: 0 !important;
 }
