@@ -21,7 +21,7 @@
 }
 
 /* Ha a DSpace alapértelmezett container-e (paddingje) zavaró, itt kikapcsolhatod */
-:host-context(ds-themed-rdf-graph-viewer) .container {
+:host-context(ds-themed-graph-viewer) .container {
     max-width: 100% !important;
     padding: 0 !important;
 }

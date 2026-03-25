@@ -6,6 +6,7 @@ import {
   Component,
   HostListener,
   Inject,
+  NgZone,
   OnDestroy,
   OnInit,
 } from '@angular/core';
@@ -19,14 +20,13 @@ import {
 } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
-// Új importok a frontend konfigurációhoz
 import {
   APP_CONFIG,
   AppConfig,
 } from 'src/config/app-config.interface';
 
 @Component({
-  selector: 'ds-rdf-graph-viewer',
+  selector: 'ds-graph-viewer',
   standalone: true,
   imports: [NgIf, AsyncPipe, TranslateModule],
   template: `
@@ -38,7 +38,6 @@ import {
       </iframe>
     </div>
   `,
-  // Ne felejtsd el hozzáadni a stílusfájlt:
   styleUrls: ['./graph-viewer.component.scss'],
 })
 export class GraphViewerComponent implements OnInit, OnDestroy {
@@ -51,70 +50,101 @@ export class GraphViewerComponent implements OnInit, OnDestroy {
     private sanitizer: DomSanitizer,
     private route: ActivatedRoute,
     private router: Router,
+    private zone: NgZone,
   ) {}
 
   ngOnInit(): void {
-    //console.log('appConfig:', this.appConfig);
     this.baseUrl = (this.appConfig as any)['graph-viewer']?.url;
 
-    //console.log('graph-viewer url:', this.baseUrl);
-
     if (this.baseUrl) {
-      this.buildSafeUrl();
+      // Listen for URL parameter changes to update the iframe source
+      this.subs.push(
+        this.route.queryParams.subscribe(() => {
+          this.buildSafeUrl();
+        }),
+      );
     }
   }
 
+  /**
+   * Builds the sanitized URL for the iframe based on the 'q' query parameter.
+   */
   private buildSafeUrl(): void {
-    if (!this.baseUrl) { return; }
+    if (!this.baseUrl) {
+      return;
+    }
 
     try {
       const url = new URL(this.baseUrl);
-      const rdfQuery = this.route.snapshot.queryParams.rdfq;
+      const queryParam = this.route.snapshot.queryParams.q;
 
-      if (rdfQuery) {
-        url.searchParams.append('q', rdfQuery);
+      if (queryParam) {
+        url.searchParams.append('q', queryParam);
       }
 
       this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url.toString());
     } catch (e) {
-      console.error('Érvénytelen URL formátum a konfigurációban');
+      // console.error('Invalid URL format in configuration');
     }
   }
 
+  /**
+   * Listens for postMessage events from the embedded React application.
+   */
   @HostListener('window:message', ['$event'])
   onMessage(event: MessageEvent) {
-  // DEBUG LOGOK
-    console.log('Üzenet érkezett az iframe-ből!');
-    console.log('Küldő origin:', event.origin);
-    console.log('Konfigurált baseUrl:', this.baseUrl);
-    console.log('Adat (payload):', event.data);
+    // Basic security and type filtering
+    if (!event.data || typeof event.data !== 'object' || !event.data.type) {
+      return;
+    }
 
-    // A leggyakoribb hiba: a baseUrl végén van / perjel, az origin végén pedig nincs (vagy fordítva)
-    // Próbáljuk meg lazább ellenőrzéssel:
-    if (this.baseUrl && !this.baseUrl.includes(event.origin)) {
-      console.warn('Biztonsági hiba: Az origin nem egyezik!');
+    // Origin validation
+    if (this.baseUrl && !this.baseUrl.startsWith(event.origin)) {
       return;
     }
 
     const { type, data } = event.data;
 
+    // Handle search change event
     if (type === 'SEARCH_CHANGE' && data) {
-      console.log('URL frissítése erre:', data);
-      this.updateHostUrl(data);
+      // Extract value: handle both string and { q: [string] } structures
+      let valueToNavigate = '';
+      if (typeof data === 'object' && data.q && Array.isArray(data.q)) {
+        valueToNavigate = data.q[0];
+      } else if (typeof data === 'string') {
+        valueToNavigate = data;
+      }
+
+      if (valueToNavigate) {
+        // console.log('Update URL with q:', valueToNavigate);
+        this.zone.run(() => {
+          this.updateHostUrl(valueToNavigate);
+        });
+      }
+    }
+
+    // Handle open record event
+    if (type === 'OPEN_URL' && data) {
+      // console.log('Opening record in new tab:', data);
+      this.zone.run(() => {
+        window.open(data, '_blank');
+      });
     }
   }
 
-  private updateHostUrl(rdfqValue: string): void {
+  /**
+   * Updates the DSpace URL query parameter without reloading the page.
+   */
+  private updateHostUrl(qValue: string): void {
     this.router.navigate([], {
       relativeTo: this.route,
-      queryParams: { rdfq: rdfqValue },
+      queryParams: { q: qValue },
       queryParamsHandling: 'merge',
-      replaceUrl: true, // Megakadályozza a böngésző előzmények teleszemetelését
+      replaceUrl: true,
     });
   }
 
   ngOnDestroy(): void {
-    // Most már van mit lezárni a subs tömbben
-    this.subs.forEach(s => s.unsubscribe());
+    this.subs.forEach((s) => s.unsubscribe());
   }
 }
