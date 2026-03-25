@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  // Megakadályozzuk, hogy a komponens saját görgetősávot kapjon
+  overflow: hidden; 
+}
+
+.graph-viewer-container {
+  /* Kiszámoljuk a maradék helyet: 100vh - (Header + Footer + esetleges margók) */
+  /* A 160px egy biztonságos becslés a fej- és láblécre, finomhangolható */
+  height: calc(100vh - 160px); 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.graph-iframe {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Ha a DSpace alapértelmezett container-e (paddingje) zavaró, itt kikapcsolhatod */
+:host-context(ds-themed-rdf-graph-viewer) .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+}

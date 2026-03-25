@@ -112,7 +112,7 @@
   "relationships.isCourseOfLearningObject": "Tantárgyak",
 
   // "relationships.isCourseInstanceOfLearningObject": "Course Instances",
-  ""relationships.isCourseInstanceOfLearningObject": "Kurzusok",
+  "relationships.isCourseInstanceOfLearningObject": "Kurzusok",
 
   // "relationships.isTypeOfLearningObject": "Type",
   "relationships.isTypeOfLearningObject": "Típus",
@@ -472,6 +472,8 @@
 
   "menu.section.browse_global_by_course": "Tantárgy szerint",
 
+  "menu.section.graph-viewer": "Gráf megjelenítő",
+
   "browse.metadata.program": "Képzés",
 
   "browse.metadata.program.breadcrumbs": "Böngészés képzés szerint",
@@ -491,4 +493,6 @@
   "browse.comcol.by.program": "Képzés szerint",
 
   "browse.comcol.by.course": "Tantárgy szerint",
+
+  "graph-viewer.title": "Gráf megjelenítő",
 }

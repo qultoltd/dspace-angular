@@ -1,0 +1,4767 @@
+================================================================================
+FILE PATH: src/themes/elte/app/admin/admin-sidebar/admin-sidebar.component.html
+================================================================================
+<nav
+  class="navbar navbar-dark p-0 vh-100"
+  id="admin-sidebar"
+  [attr.aria-label]="'menu.header.nav.description' | translate"
+  [ngClass]="{
+    expanded: sidebarOpen,
+    collapsed: sidebarClosed,
+    transitioning: sidebarTransitioning
+  }"
+  [@slideSidebar]="{
+    value: (sidebarExpanded | async) !== true ? 'collapsed' : 'expanded',
+    params: {
+      collapsedWidth: (collapsedSidebarWidth$ | async),
+      expandedWidth: (expandedSidebarWidth$ | async)
+    }
+  }"
+  (@slideSidebar.done)="finishSlide($event)"
+  (@slideSidebar.start)="startSlide($event)"
+  *ngIf="menuVisible | async"
+  (mouseenter)="handleMouseEnter($event)"
+  (mouseleave)="handleMouseLeave($event)"
+>
+  <!-- HEADER -->
+
+  <div
+    class="sidebar-full-width-container"
+    id="sidebar-header-container"
+    aria-hidden="true"
+  >
+    <div class="sidebar-section-wrapper">
+      <div class="sidebar-fixed-element-wrapper">
+        <img
+          id="admin-sidebar-logo"
+          src="/assets/elte/images/qultoIcon.svg"
+          [alt]="'menu.header.image.logo' | translate"
+          aria-hidden="true"
+        />
+      </div>
+      <div class="sidebar-collapsible-element-outer-wrapper">
+        <div class="sidebar-collapsible-element-inner-wrapper sidebar-item">
+          <h4 class="my-1">{{ "menu.header.admin" | translate }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ITEMS -->
+
+  <div
+    class="sidebar-full-width-container"
+    id="sidebar-top-level-items-container"
+  >
+    <div
+      class="sidebar-full-width-container"
+      id="sidebar-top-level-items"
+      role="menubar"
+      [attr.aria-label]="'menu.header.admin.description' | translate"
+    >
+      <ng-container *ngFor="let section of sections | async">
+        <ng-container
+          *ngComponentOutlet="
+            (sectionMap$ | async).get(section.id).component;
+            injector: (sectionMap$ | async).get(section.id).injector
+          "
+        ></ng-container>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- TOGGLER -->
+
+  <div
+    class="sidebar-full-width-container"
+    id="sidebar-collapse-toggle-container"
+  >
+    <a
+      class="sidebar-section-wrapper sidebar-full-width-container"
+      id="sidebar-collapse-toggle"
+      href="javascript:void(0);"
+      (click)="toggle($event)"
+      (keyup.space)="toggle($event)"
+    >
+      <div class="sidebar-fixed-element-wrapper">
+        <i
+          *ngIf="menuCollapsed | async"
+          class="fas fa-fw fa-angle-double-right"
+          [title]="'menu.section.icon.pin' | translate"
+        ></i>
+        <i
+          *ngIf="(menuCollapsed | async) !== true"
+          class="fas fa-fw fa-angle-double-left"
+          [title]="'menu.section.icon.unpin' | translate"
+        ></i>
+      </div>
+      <div class="sidebar-collapsible-element-outer-wrapper">
+        <div class="sidebar-collapsible-element-inner-wrapper sidebar-item">
+          {{
+            ((menuCollapsed | async)
+              ? "menu.section.pin"
+              : "menu.section.unpin"
+            ) | translate
+          }}
+        </div>
+      </div>
+    </a>
+  </div>
+</nav>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/admin/admin-sidebar/admin-sidebar.component.scss
+================================================================================
+:host {
+  /* SIDEBAR SIZE AND POSITION */
+
+  /* Sidebar hierarchy:
+     § nav
+       § .sidebar-full-width-container (any OPTIONAL full width element with no horizontal margin or padding - it can be nested)
+         § .sidebar-section-wrapper
+           § .sidebar-fixed-element-wrapper
+           § .sidebar-collapsible-element-outer-wrapper
+             § .sidebar-collapsible-element-inner-wrapper
+               § .sidebar-item
+     */
+
+  // Sidebar position
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: var(--ds-sidebar-z-index);
+
+  // Sidebar size and content position
+  nav#admin-sidebar {
+    max-width: var(
+      --ds-admin-sidebar-fixed-element-width
+    ); // Sidebar collapsed width
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    div#sidebar-top-level-items-container {
+      flex: 1 1 auto; // Fill available vertical space
+      overflow-x: hidden;
+      overflow-y: auto;
+      @include dark-scrollbar;
+    }
+
+    img#admin-sidebar-logo {
+      height: var(--ds-admin-sidebar-logo-height);
+    }
+
+    ::ng-deep {
+      // This class must be applied to any nested wrapper containing a sidebar section
+      .sidebar-full-width-container {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      // This class must be applied to the innermost block element containing a section or subsection link
+      // (it can be applied together with `sidebar-collapsible-element-inner-wrapper`)
+      .sidebar-item {
+        padding-top: var(--ds-admin-sidebar-item-padding);
+        padding-bottom: var(--ds-admin-sidebar-item-padding);
+      }
+
+      // These classes handle the collapsing behavior
+      .sidebar-section-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+
+        // These elements have fixed width and determine the width of the collapsed sidebar
+        & > .sidebar-fixed-element-wrapper {
+          min-width: var(--ds-admin-sidebar-fixed-element-width);
+          flex: 1 1 auto; // Fill available space
+
+          // Align the icons
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+
+        & > .sidebar-collapsible-element-outer-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-end; // make inner wrapper slide on the left when collapsing
+          max-width: calc(
+            100% - var(--ds-admin-sidebar-fixed-element-width)
+          ); // fill available space
+          padding-left: var(
+            --ds-dark-scrollbar-width
+          ); // leave room for scrollbar
+          overflow-x: hidden; // hide inner wrapper when sidebar is collapsed
+
+          // These elements have fixed width and slide on the left when the sidebar is collapsed
+          // Their content should fill all available space
+          & > .sidebar-collapsible-element-inner-wrapper {
+            min-width: calc(
+              var(--ds-admin-sidebar-collapsible-element-width) -
+                var(--ds-dark-scrollbar-width)
+            );
+            height: 100%;
+            padding-right: var(--ds-admin-sidebar-item-padding);
+          }
+        }
+      }
+
+      .ng-trigger {
+        &.expanded {
+          background-color: var(--elte-blue) !important;
+        }
+      }
+    }
+  }
+
+  /* SIDEBAR STYLE */
+
+  nav#admin-sidebar {
+    background-color: var(--ds-admin-sidebar-bg);
+
+    ::ng-deep {
+      color: white;
+
+      a {
+        color: var(--ds-admin-sidebar-link-color);
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          color: var(--ds-admin-sidebar-link-hover-color);
+        }
+      }
+    }
+
+    div#sidebar-header-container {
+      background-color: var(--ds-admin-sidebar-header-bg);
+      .sidebar-fixed-element-wrapper {
+        background-color: var(--ds-admin-sidebar-header-bg);
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .browser-firefox-windows {
+    --ds-dark-scrollbar-width: 20px;
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/admin/admin-sidebar/admin-sidebar.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  NgClass,
+  NgComponentOutlet,
+  NgFor,
+  NgIf,
+} from '@angular/common';
+import { Component } from '@angular/core';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { AdminSidebarComponent as BaseComponent } from '../../../../../app/admin/admin-sidebar/admin-sidebar.component';
+
+/**
+ * Component representing the admin sidebar
+ */
+@Component({
+  selector: 'ds-themed-admin-sidebar',
+  templateUrl: './admin-sidebar.component.html',
+  // templateUrl: '../../../../../app/admin/admin-sidebar/admin-sidebar.component.html',
+  styleUrls: ['./admin-sidebar.component.scss'],
+  // styleUrls: ['../../../../../app/admin/admin-sidebar/admin-sidebar.component.scss'],
+  standalone: true,
+  imports: [NgIf, NgbDropdownModule, NgClass, NgFor, NgComponentOutlet, AsyncPipe, TranslateModule],
+})
+export class AdminSidebarComponent extends BaseComponent {
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/entity-groups/research-entities/item-pages/person/person.component.html
+================================================================================
+<ds-results-back-button *ngIf="showBackButton$ | async" [back]="back"></ds-results-back-button>
+<div class="d-flex flex-row">
+  <ds-item-page-title-field class="mr-auto" [item]="object">
+  </ds-item-page-title-field>
+  <ds-dso-edit-menu></ds-dso-edit-menu>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-md-4">
+    <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
+      <ds-thumbnail [thumbnail]="object?.thumbnail | async"
+                    [defaultImage]="'assets/images/person-placeholder.svg'"
+                    [alt]="'thumbnail.person.alt'"
+                    [placeholder]="'thumbnail.person.placeholder'">
+      </ds-thumbnail>
+    </ds-metadata-field-wrapper>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['person.email']"
+      [label]="'person.page.email'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['person.birthDate']"
+      [label]="'person.page.birthdate'">
+    </ds-generic-item-page-field>
+  </div>
+  <div class="col-xs-12 col-md-7">
+    <ds-related-items
+      [parentItem]="object"
+      [relationType]="'isProjectOfPerson'"
+      [label]="'relationships.isProjectOf' | translate">
+    </ds-related-items>
+    <ds-related-items
+      [parentItem]="object"
+      [relationType]="'isOrgUnitOfPerson'"
+      [label]="'relationships.isOrgUnitOf' | translate">
+    </ds-related-items>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['person.jobTitle']"
+      [label]="'person.page.jobtitle'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['person.familyName']"
+      [label]="'person.page.lastname'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['person.givenName']"
+      [label]="'person.page.firstname'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.title']"
+      [label]="'person.page.name'">
+    </ds-generic-item-page-field>
+    <div>
+      <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="link" tabindex="0">
+        {{"item.page.link.full" | translate}}
+      </a>
+    </div>
+  </div>
+  <div class="mt-5 w-100">
+    <ds-tabbed-related-entities-search  [item]="object"
+                                        [relationTypes]="[{
+                                          label: 'IsPersonOfLearningObject',
+                                          filter: 'IsPersonOfLearningObject',
+                                          configuration: 'default-relationships'
+                                        }]">
+    </ds-tabbed-related-entities-search>
+  </div>
+</div>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/entity-groups/research-entities/item-pages/person/person.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  NgIf,
+} from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { Context } from '../../../../../../../app/core/shared/context.model';
+import { ViewMode } from '../../../../../../../app/core/shared/view-mode.model';
+import { GenericItemPageFieldComponent } from 'src/themes/elte/app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
+import { ThemedItemPageTitleFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
+import { ItemComponent } from '../../../../../../../app/item-page/simple/item-types/shared/item.component';
+import { TabbedRelatedEntitiesSearchComponent } from '../../../../../../../app/item-page/simple/related-entities/tabbed-related-entities-search/tabbed-related-entities-search.component';
+import { RelatedItemsComponent } from '../../../../../../../app/item-page/simple/related-items/related-items-component';
+import { DsoEditMenuComponent } from '../../../../../../../app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
+import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
+import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
+import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
+
+@listableObjectComponent('Person', ViewMode.StandalonePage, Context.Any, 'elte')
+@Component({
+  selector: 'ds-person',
+  templateUrl: './person.component.html',
+  standalone: true,
+  imports: [NgIf, ThemedResultsBackButtonComponent, ThemedItemPageTitleFieldComponent, DsoEditMenuComponent, MetadataFieldWrapperComponent, ThemedThumbnailComponent, GenericItemPageFieldComponent, RelatedItemsComponent, RouterLink, TabbedRelatedEntitiesSearchComponent, AsyncPipe, TranslateModule],
+})
+/**
+ * The component for displaying metadata and relations of an item of the type Person
+ */
+export class PersonComponent extends ItemComponent {
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/entity-groups/research-entities/metadata-representations/generic-item/generic-item-metadata-list-element.component.html
+================================================================================
+<ng-template #descTemplate>
+  <span class="text-muted">
+    <span class="item-list-item-title">
+      <span [innerHTML]="titleForUiLang"></span>
+    </span>
+  </span>
+</ng-template>
+
+<ds-truncatable [id]="mdRepresentation?.id">
+  <a [routerLink]="[itemPageRoute]" [innerHTML]="titleForUiLang || mdRepresentation?.getValue()" [ngbTooltip]="descriptionForUiLang || descTemplate">
+  </a>
+</ds-truncatable>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/entity-groups/research-entities/metadata-representations/generic-item/generic-item-metadata-list-element.component.ts
+================================================================================
+import { CommonModule } from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
+import { MetadataValue } from 'src/app/core/shared/metadata.models';
+import { ItemMetadataRepresentation } from 'src/app/core/shared/metadata-representation/item/item-metadata-representation.model';
+import { getItemPageRoute } from 'src/app/item-page/item-page-routing-paths';
+import { MetadataRepresentationListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/metadata-representation-list-element.component';
+import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.component';
+
+@Component({
+  selector: 'ds-item-metadata-representation-list-element',
+  templateUrl: './generic-item-metadata-list-element.component.html',
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    CommonModule,
+    RouterModule,
+    NgbTooltipModule,
+    TruncatableComponent,
+  ],
+})
+export class GenericItemMetadataListElementComponent extends MetadataRepresentationListElementComponent implements OnInit, OnDestroy {
+
+  @Input() mdRepresentation!: ItemMetadataRepresentation;
+
+  itemPageRoute = '';
+  titleForUiLang = '';
+  descriptionForUiLang = '';
+
+  private subs: Subscription[] = [];
+
+  constructor(private translate: TranslateService) {
+    super();
+  }
+
+  ngOnInit(): void {
+    this.itemPageRoute = getItemPageRoute(this.mdRepresentation);
+    this.localizeTexts(this.translate.currentLang);
+
+    this.subs.push(
+      this.translate.onLangChange.subscribe(e => this.localizeTexts(e.lang)),
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.subs.forEach(s => s?.unsubscribe());
+  }
+
+  private localizeTexts(lang: string): void {
+    this.titleForUiLang = this.pickByLang(['dc.title'], lang) ?? '';
+    this.descriptionForUiLang = this.pickByLang(['dc.description'], lang) ?? '';
+  }
+
+  private pickByLang(keys: string[], uiLanguage: string): string | undefined {
+    const metadataValues = this.mdRepresentation.allMetadata(keys) as MetadataValue[] | undefined;
+    if (!metadataValues?.length){
+      return undefined;
+    }
+
+    const normalizeLanguage = (s?: string) => (s ?? '').toLowerCase();
+    const getLanguageBase = (s?: string) => normalizeLanguage(s).split(/[_-]/)[0];
+
+    const currentLocale = normalizeLanguage(uiLanguage);
+    const currentLangBase = getLanguageBase(uiLanguage);
+
+    const exactMatch = metadataValues.find(v => normalizeLanguage(v.language) === currentLocale);
+    if (exactMatch) {
+      return exactMatch.value;
+    }
+    const baseLangMatch = metadataValues.find(v => getLanguageBase(v.language) === currentLangBase);
+    if (baseLangMatch) {
+      return baseLangMatch.value;
+    }
+    const languageAgnostic = metadataValues.find(v => !v.language);
+    if (languageAgnostic) {
+      return languageAgnostic.value;
+    }
+    return metadataValues[0]?.value;
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/footer/footer.component.html
+================================================================================
+<footer class="text-lg-start qulto-footer">
+  <div class="footer-body">
+    <div class="side-element"></div>
+    <div class="middle-text">
+      © <span>{{ currentYear }}</span> Monguz Információtechnológiai Kft.
+    </div>
+    <div class="side-element">
+      <img class="mx-2" src="/assets/elte/images/qultoLogoWhite.svg" />
+    </div>
+  </div>
+</footer>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/footer/footer.component.scss
+================================================================================
+.qulto-footer {
+  background-color: var(--elte-blue);
+  border-top: 1px solid $primary;
+  height: 3rem;
+  width: 100%;
+
+  .footer-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .side-element {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+    }
+
+    .middle-text {
+      color: #ffff;
+    }
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/footer/footer.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  DatePipe,
+  NgIf,
+} from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { FooterComponent as BaseComponent } from '../../../../app/footer/footer.component';
+
+@Component({
+  selector: 'ds-themed-footer',
+  styleUrls: ['./footer.component.scss'],
+  // styleUrls: ['../../../../app/footer/footer.component.scss'],
+  templateUrl: './footer.component.html',
+  // templateUrl: '../../../../app/footer/footer.component.html',
+  standalone: true,
+  imports: [NgIf, RouterLink, AsyncPipe, DatePipe, TranslateModule],
+})
+export class FooterComponent extends BaseComponent {
+  currentYear: number = new Date().getFullYear();
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/header/header.component.html
+================================================================================
+<header>
+  <div class="container">
+    <div class="d-flex flex-row justify-content-between">
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand my-2" routerLink="/home">
+          <img 
+            [src]="themeHeaderLogo" 
+            [attr.alt]="'menu.header.image.logo' | translate"
+          />
+        </a>
+        <ds-navbar></ds-navbar>
+      </div>
+
+      <nav
+        role="navigation"
+        [attr.aria-label]="'nav.user.description' | translate"
+        class="navbar navbar-light navbar-expand-md flex-shrink-0 px-0"
+      >
+        <ds-search-navbar></ds-search-navbar>
+        <ds-lang-switch></ds-lang-switch>
+        <ds-context-help-toggle></ds-context-help-toggle>
+        <ds-auth-nav-menu></ds-auth-nav-menu>
+        <ds-impersonate-navbar></ds-impersonate-navbar>
+        <div *ngIf="isMobile$ | async" class="pl-2">
+          <button
+            class="navbar-toggler px-0"
+            type="button"
+            (click)="toggleNavbar()"
+            aria-controls="collapsingNav"
+            aria-expanded="false"
+            [attr.aria-label]="'nav.toggle' | translate"
+          >
+            <span
+              class="fas fa-bars fa-fw toggler-icon"
+              aria-hidden="true"
+            ></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/header/header.component.scss
+================================================================================
+header {
+  background-color: var(--elte-blue);
+
+  .navbar-brand {
+    padding: 0;
+
+    .logo {
+      height: 3rem;
+    }
+  }
+
+  nav {
+    gap: 0.25rem;
+
+    .navbar-toggler {
+      border: none;
+      color: var(--ds-header-icon-color);
+    }
+  }
+}
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/header/header.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  NgIf,
+} from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule } from '@ngx-translate/core';
+import { HostWindowService } from 'src/app/shared/host-window.service';
+import { ThemedLangSwitchComponent } from 'src/app/shared/lang-switch/themed-lang-switch.component';
+import { MenuService } from 'src/app/shared/menu/menu.service';
+
+import { ContextHelpToggleComponent } from '../../../../app/header/context-help-toggle/context-help-toggle.component';
+import { HeaderComponent as BaseComponent } from '../../../../app/header/header.component';
+import { ThemedNavbarComponent } from '../../../../app/navbar/themed-navbar.component';
+import { ThemedSearchNavbarComponent } from '../../../../app/search-navbar/themed-search-navbar.component';
+import { ThemedAuthNavMenuComponent } from '../../../../app/shared/auth-nav-menu/themed-auth-nav-menu.component';
+import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-navbar/impersonate-navbar.component';
+import { ThemeMetaService } from '../shared/theme-support/theme-meta.service';
+
+/**
+ * Represents the header with the logo and simple navigation
+ */
+@Component({
+  selector: 'ds-themed-header',
+  styleUrls: ['header.component.scss'],
+  // styleUrls: ['../../../../app/header/header.component.scss'],
+  templateUrl: 'header.component.html',
+  // templateUrl: '../../../../app/header/header.component.html',
+  standalone: true,
+  imports: [RouterLink, ThemedLangSwitchComponent, NgbDropdownModule, ThemedSearchNavbarComponent, ContextHelpToggleComponent, ThemedAuthNavMenuComponent, ImpersonateNavbarComponent, ThemedNavbarComponent, TranslateModule, AsyncPipe, NgIf],
+})
+export class HeaderComponent extends BaseComponent {
+  themeHeaderLogo = '/assets/elte/images/logos/elteLogo.svg';
+
+  constructor(
+    protected themeMetaService: ThemeMetaService,
+    protected menuService: MenuService,
+    protected windowService: HostWindowService,
+  ) {
+    super(menuService, windowService);
+    const logo = this.themeMetaService.getMetaContent('headerLogo');
+    if (logo) {
+      this.themeHeaderLogo = logo;
+    }
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/header-nav-wrapper/header-navbar-wrapper.component.html
+================================================================================
+<div [ngClass]="{ open: (isNavBarCollapsed$ | async) !== true }">
+  <ds-header></ds-header>
+</div>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/header-nav-wrapper/header-navbar-wrapper.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  NgClass,
+} from '@angular/common';
+import { Component } from '@angular/core';
+
+import { ThemedHeaderComponent } from '../../../../app/header/themed-header.component';
+import { HeaderNavbarWrapperComponent as BaseComponent } from '../../../../app/header-nav-wrapper/header-navbar-wrapper.component';
+import { ThemedNavbarComponent } from '../../../../app/navbar/themed-navbar.component';
+
+/**
+ * This component represents a wrapper for the horizontal navbar and the header
+ */
+@Component({
+  selector: 'ds-themed-header-navbar-wrapper',
+  // styleUrls: ['./header-navbar-wrapper.component.scss'],
+  styleUrls: ['../../../../app/header-nav-wrapper/header-navbar-wrapper.component.scss'],
+  templateUrl: './header-navbar-wrapper.component.html',
+  // templateUrl: '../../../../app/header-nav-wrapper/header-navbar-wrapper.component.html',
+  standalone: true,
+  imports: [NgClass, ThemedHeaderComponent, ThemedNavbarComponent, AsyncPipe],
+})
+export class HeaderNavbarWrapperComponent extends BaseComponent {
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/home-page/home-news/home-news.component.html
+================================================================================
+<div class="jumbotron jumbotron-fluid">
+  <div class="wrapper">
+    <div class="container">
+      <div class="d-flex flex-wrap">
+        <div>
+          <h5 class="display-3">
+            {{ "qulto.home.welcome.title" | translate :  { dspaceName : dspaceName } }}
+          </h5>
+        </div>
+      </div>
+      <p>{{ "qulto.home.welcome.description" | translate :  { dspaceName : dspaceName } }}</p>
+      <p>{{ "qulto.home.welcome.functions" | translate }}</p>
+    </div>
+  </div>
+</div>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/home-page/home-news/home-news.component.scss
+================================================================================
+:host {
+  display: block;
+  margin-top: calc(-1 * var(--ds-content-spacing));
+  margin-bottom: calc(-1 * var(--ds-content-spacing));
+}
+
+.display-3 {
+  word-break: break-word;
+  font-size: 2rem;
+  color: var(--blue);
+  font-family: "Varela", system-ui;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.jumbotron {
+  height: clamp(18rem, 28vw, 32rem);
+
+  display: grid;
+  align-items: center;
+  box-shadow: inset 0 11px 8px -10px #ccc;
+
+  background-image: url("/assets/elte/images/banners/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 65%;
+
+  .wrapper {
+    width: 100%;
+    background-color: rgba(#fff, 0.8);
+    padding-block: 2.25rem;
+
+    p { margin-bottom: 0; }
+  }
+}
+
+a {
+  color: var(--ds-home-news-link-color);
+
+  @include hover {
+    color: var(--ds-home-news-link-hover-color);
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/home-page/home-news/home-news.component.ts
+================================================================================
+import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { RootDataService } from '../../../../../app/core/data/root-data.service';
+import { getFirstSucceededRemoteDataPayload } from '../../../../../app/core/shared/operators';
+import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page/home-news/home-news.component';
+
+@Component({
+  selector: 'ds-themed-home-news',
+  styleUrls: ['./home-news.component.scss'],
+  // styleUrls: ['../../../../../app/home-page/home-news/home-news.component.scss'],
+  templateUrl: './home-news.component.html',
+  // templateUrl: '../../../../../app/home-page/home-news/home-news.component.html',
+  standalone: true,
+  imports: [TranslateModule],
+})
+
+/**
+ * Component to render the news section on the home page
+ */
+export class HomeNewsComponent extends BaseComponent {
+
+  public dspaceName: string;
+
+  constructor(
+    protected rootService: RootDataService,
+  ) {
+    super();
+    this.setGenerator();
+  }
+
+  protected setGenerator(): void {
+    this.rootService.findRoot().pipe(getFirstSucceededRemoteDataPayload()).subscribe((root) => {
+      //console.log("rootService", root);
+      this.dspaceName = root.dspaceName;
+    });
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/home-page/home-page.component.html
+================================================================================
+<div class="community-list-wrapper">
+  <ds-home-coar></ds-home-coar>
+  <ds-home-news></ds-home-news>
+  <ds-configuration-search-page
+    *ngIf="showDiscoverFilters"
+    [sideBarWidth]="3"
+    [showViewModes]="false"
+    [searchEnabled]="false"
+    [inPlaceSearch]="false"
+    [showScopeSelector]="false"
+  >
+    <ng-container
+      searchContentTop
+      *ngTemplateOutlet="homeContent"
+    ></ng-container>
+  </ds-configuration-search-page>
+  <div *ngIf="!showDiscoverFilters" class="container">
+    <ng-container *ngTemplateOutlet="homeContent"></ng-container>
+  </div>
+</div>
+<div class="container recent-item-list">
+  <ds-recent-item-list
+    *ngIf="recentSubmissionspageSize > 0"
+  ></ds-recent-item-list>
+</div>
+<ds-suggestions-popup></ds-suggestions-popup>
+
+<ng-template #homeContent>
+  <ds-search-form
+    [inPlaceSearch]="false"
+    [searchPlaceholder]="'home.search-form.placeholder' | translate"
+  >
+  </ds-search-form>
+  <ds-top-level-community-list></ds-top-level-community-list>
+</ng-template>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/home-page/home-page.component.scss
+================================================================================
+@include media-breakpoint-down(md) {
+  ds-themed-configuration-search-page + .container {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.community-list-wrapper {
+  background: #f6f7f9;
+}
+
+.recent-item-list {
+  margin-top: 1.5rem;
+}
+
+::ng-deep {
+  h2 {
+    font-family: "Varela", system-ui;
+    font-weight: 400;
+    color: var(--blue);
+  }
+
+  p.lead {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  div {
+    &.mt-4 {
+      margin-top: 0 !important;
+
+      div {
+        &.border-bottom {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  ::ng-deep {
+    ::ng-deep {
+      ::ng-deep {
+        .pagination-info {
+          font-size: 1rem;
+          font-weight: 400;
+          color: #7e7d7d;
+        }
+      }
+    }
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/home-page/home-page.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  NgClass,
+  NgIf,
+  NgTemplateOutlet,
+} from '@angular/common';
+import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { HomeCoarComponent } from '../../../../app/home-page/home-coar/home-coar.component';
+import { ThemedHomeNewsComponent } from '../../../../app/home-page/home-news/themed-home-news.component';
+import { HomePageComponent as BaseComponent } from '../../../../app/home-page/home-page.component';
+import { RecentItemListComponent } from '../../../../app/home-page/recent-item-list/recent-item-list.component';
+import { ThemedTopLevelCommunityListComponent } from '../../../../app/home-page/top-level-community-list/themed-top-level-community-list.component';
+import { SuggestionsPopupComponent } from '../../../../app/notifications/suggestions-popup/suggestions-popup.component';
+import { ThemedConfigurationSearchPageComponent } from '../../../../app/search-page/themed-configuration-search-page.component';
+import { ThemedSearchFormComponent } from '../../../../app/shared/search-form/themed-search-form.component';
+import { PageWithSidebarComponent } from '../../../../app/shared/sidebar/page-with-sidebar.component';
+
+@Component({
+  selector: 'ds-themed-home-page',
+  styleUrls: ['./home-page.component.scss'],
+  // styleUrls: ['../../../../app/home-page/home-page.component.scss'],
+  templateUrl: './home-page.component.html',
+  // templateUrl: '../../../../app/home-page/home-page.component.html',
+  standalone: true,
+  imports: [ThemedHomeNewsComponent, NgTemplateOutlet, NgIf, ThemedSearchFormComponent, ThemedTopLevelCommunityListComponent, RecentItemListComponent, AsyncPipe, TranslateModule, NgClass, SuggestionsPopupComponent, ThemedConfigurationSearchPageComponent, PageWithSidebarComponent, HomeCoarComponent],
+})
+export class HomePageComponent extends BaseComponent {
+
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/full/full-item-page.component.html
+================================================================================
+<div class="container" *ngVar="itemRD$ | async as itemRD">
+  <div class="item-page" *ngIf="itemRD?.hasSucceeded" @fadeInOut>
+    <div *ngIf="itemRD?.payload as item">
+      <ds-item-alerts [item]="item"></ds-item-alerts>
+      <ds-item-versions-notice [item]="item"></ds-item-versions-notice>
+      <div
+        *ngIf="!item.isWithdrawn || (isAdmin$ | async)"
+        class="full-item-info"
+      >
+        <div class="d-flex flex-row">
+          <ds-item-page-title-field
+            class="mr-auto"
+            [item]="item"
+          ></ds-item-page-title-field>
+          <ds-dso-edit-menu></ds-dso-edit-menu>
+        </div>
+        <div class="simple-view-link my-3" *ngIf="!fromSubmissionObject">
+          <a
+            class="btn btn-outline-primary"
+            [routerLink]="[itemPageRoute$ | async]"
+          >
+            {{ "item.page.link.simple" | translate }}
+          </a>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <tbody>
+              <ng-container
+                *ngFor="let mdEntry of metadata$ | async | keyvalue"
+              >
+                <tr *ngFor="let mdValue of mdEntry.value">
+                  <td [title]="mdEntry.key">{{ mdEntry.key | translate }}</td>
+                  <td>{{ mdValue.value }}</td>
+                  <td>{{ mdValue.language }}</td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </table>
+        </div>
+        <ds-item-page-full-file-section
+          [item]="item"
+        ></ds-item-page-full-file-section>
+        <ds-item-page-collections [item]="item"></ds-item-page-collections>
+        <ds-item-versions class="mt-2" [item]="item"></ds-item-versions>
+        <div class="button-row bottom" *ngIf="fromSubmissionObject">
+          <div class="text-right">
+            <button class="btn btn-outline-secondary mr-1" (click)="back()">
+              <i class="fas fa-arrow-left"></i>
+              {{ "item.page.return" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ds-error
+    *ngIf="itemRD?.hasFailed"
+    message="{{ 'error.item' | translate }}"
+  ></ds-error>
+  <ds-loading
+    *ngIf="itemRD?.isLoading"
+    message="{{ 'loading.item' | translate }}"
+  ></ds-loading>
+</div>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/full/full-item-page.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  KeyValuePipe,
+  NgForOf,
+  NgIf,
+} from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+} from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { ThemedItemAlertsComponent } from '../../../../../app/item-page/alerts/themed-item-alerts.component';
+import { CollectionsComponent } from '../../../../../app/item-page/field-components/collections/collections.component';
+import { ThemedFullFileSectionComponent } from '../../../../../app/item-page/full/field-components/file-section/themed-full-file-section.component';
+import { FullItemPageComponent as BaseComponent } from '../../../../../app/item-page/full/full-item-page.component';
+import { ThemedItemPageTitleFieldComponent } from '../../../../../app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
+import { ItemVersionsComponent } from '../../../../../app/item-page/versions/item-versions.component';
+import { ItemVersionsNoticeComponent } from '../../../../../app/item-page/versions/notice/item-versions-notice.component';
+import { fadeInOut } from '../../../../../app/shared/animations/fade';
+import { DsoEditMenuComponent } from '../../../../../app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
+import { ErrorComponent } from '../../../../../app/shared/error/error.component';
+import { ThemedLoadingComponent } from '../../../../../app/shared/loading/themed-loading.component';
+import { VarDirective } from '../../../../../app/shared/utils/var.directive';
+
+/**
+ * This component renders a full item page.
+ * The route parameter 'id' is used to request the item it represents.
+ */
+
+@Component({
+  selector: 'ds-themed-full-item-page',
+  // styleUrls: ['./full-item-page.component.scss'],
+  styleUrls: ['../../../../../app/item-page/full/full-item-page.component.scss'],
+  templateUrl: './full-item-page.component.html',
+  // templateUrl: '../../../../../app/item-page/full/full-item-page.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [fadeInOut],
+  standalone: true,
+  imports: [
+    ErrorComponent,
+    ThemedLoadingComponent,
+    TranslateModule,
+    ThemedFullFileSectionComponent,
+    CollectionsComponent,
+    ItemVersionsComponent,
+    NgIf,
+    NgForOf,
+    AsyncPipe,
+    KeyValuePipe,
+    RouterLink,
+    ThemedItemPageTitleFieldComponent,
+    DsoEditMenuComponent,
+    ItemVersionsNoticeComponent,
+    ThemedItemAlertsComponent,
+    VarDirective,
+  ],
+})
+export class FullItemPageComponent extends BaseComponent {
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/elte-related-items/elte-related-items.component.html
+================================================================================
+<ds-metadata-field-wrapper [label]="label" [ngClass]="placeholderFontClass">
+  <ng-container *ngFor="let objectPage of objects; let i = index">
+    <ng-container *ngVar="(objectPage | async) as itemsRD">
+      <ds-listable-object-component-loader *ngFor="let item of itemsRD?.payload?.page" [object]="item"
+        [viewMode]="viewMode">
+      </ds-listable-object-component-loader>
+
+      <ds-loading
+        *ngIf="(i + 1) === objects.length && (itemsRD || i > 0) && !(itemsRD?.hasSucceeded && itemsRD?.payload && itemsRD?.payload?.page?.length > 0)"
+        message="{{ 'loading.default' | translate }}">
+      </ds-loading>
+
+      <div class="d-inline-block w-100 mt-2" *ngIf="(i + 1) === objects.length && itemsRD?.payload?.page?.length > 0">
+        <div *ngIf="itemsRD?.payload?.totalPages > objects.length" class="float-left" id="view-more">
+          <button class="btn btn-link btn-link-inline text-capitalize" (click)="increase()">
+            {{ 'item.page.related-items.view-more' | translate:{
+            amount: (itemsRD?.payload?.totalElements - (incrementBy * objects.length) < incrementBy) ?
+            itemsRD?.payload?.totalElements - (incrementBy * objects.length) : incrementBy } }} {{label}} </button>
+        </div>
+        <div *ngIf="objects.length > 1" class="float-right" id="view-less">
+          <button class="btn btn-link btn-link-inline text-capitalize" (click)="decrease()">
+            {{ 'item.page.related-items.view-less' | translate:{ amount: itemsRD?.payload?.page?.length } }} {{label}}
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+</ds-metadata-field-wrapper>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/elte-related-items/elte-related-items.component.scss
+================================================================================
+:host ds-themed-thumbnail,
+:host ds-thumbnail,
+:host .thumbnail,
+:host .img-placeholder {
+    display: none;
+}
+
+:host .list-content,
+:host .content,
+:host .media-body {
+    margin-left: 0;
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/elte-related-items/elte-related-items.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  isPlatformBrowser,
+  NgClass,
+  NgFor,
+  NgIf,
+} from '@angular/common';
+import {
+  Component,
+  ElementRef,
+  Inject,
+  Input,
+  OnInit,
+  PLATFORM_ID,
+} from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
+import { FindListOptions } from 'src/app/core/data/find-list-options.model';
+import { PaginatedList } from 'src/app/core/data/paginated-list.model';
+import { RelationshipDataService } from 'src/app/core/data/relationship-data.service';
+import { RemoteData } from 'src/app/core/data/remote-data';
+import { Item } from 'src/app/core/shared/item.model';
+import { ViewMode } from 'src/app/core/shared/view-mode.model';
+import { AbstractIncrementalListComponent } from 'src/app/item-page/simple/abstract-incremental-list/abstract-incremental-list.component';
+import { ThemedLoadingComponent } from 'src/app/shared/loading/themed-loading.component';
+import { MetadataFieldWrapperComponent } from 'src/app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
+import { ListableObjectComponentLoaderComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object-component-loader.component';
+import { setPlaceHolderAttributes } from 'src/app/shared/utils/object-list-utils';
+import { VarDirective } from 'src/app/shared/utils/var.directive';
+
+import {
+  APP_CONFIG,
+  AppConfig,
+} from '../../../../../../config/app-config.interface';
+
+@Component({
+  selector: 'ds-elte-related-items',
+  styleUrls: ['./elte-related-items.component.scss'],
+  templateUrl: './elte-related-items.component.html',
+  standalone: true,
+  imports: [
+    MetadataFieldWrapperComponent,
+    NgClass, NgFor, VarDirective,
+    ListableObjectComponentLoaderComponent,
+    NgIf, ThemedLoadingComponent, AsyncPipe, TranslateModule,
+  ],
+})
+export class ElteRelatedItemsComponent
+  extends AbstractIncrementalListComponent<Observable<RemoteData<PaginatedList<Item>>>>
+  implements OnInit {
+
+  @Input() parentItem!: Item;
+
+  @Input() relationType!: string;
+
+  @Input() incrementBy = 5;
+
+  @Input() options = new FindListOptions();
+
+  @Input() label!: string;
+
+  viewMode = ViewMode.ListElement;
+
+  private readonly fetchThumbnail = false;
+
+  constructor(
+    public relationshipService: RelationshipDataService,
+    protected elementRef: ElementRef,
+    @Inject(APP_CONFIG) protected appConfig: AppConfig,
+    @Inject(PLATFORM_ID) private platformId: any,
+  ) { super(); }
+
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const width = this.elementRef.nativeElement.offsetWidth;
+      this.placeholderFontClass = setPlaceHolderAttributes(width);
+    } else {
+      this.placeholderFontClass = 'hide-placeholder-text';
+    }
+    super.ngOnInit();
+  }
+
+  getPage(page: number): Observable<RemoteData<PaginatedList<Item>>> {
+    return this.relationshipService.getRelatedItemsByLabel(
+      this.parentItem,
+      this.relationType,
+      Object.assign(this.options, {
+        elementsPerPage: this.incrementBy,
+        currentPage: page,
+        fetchThumbnail: this.fetchThumbnail,
+      }),
+    );
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component.ts
+================================================================================
+import { AsyncPipe } from '@angular/common';
+import {
+  Component,
+  Input,
+} from '@angular/core';
+
+import { Item } from 'src/app/core/shared/item.model';
+import { MetadataValuesComponent } from '../metadata-values/metadata-values.component';
+import { ItemPageFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/item-page-field.component';
+
+@Component({
+  selector: 'ds-generic-item-page-field',
+  templateUrl: '../item-page-field.component.html',
+  standalone: true,
+  imports: [MetadataValuesComponent, AsyncPipe],
+})
+/**
+ * This component can be used to represent metadata on a simple item page.
+ * It is the most generic way of displaying metadata values
+ * It expects 4 parameters: The item, a separator, the metadata keys and an i18n key
+ */
+export class GenericItemPageFieldComponent extends ItemPageFieldComponent {
+
+  /**
+   * The item to display metadata for
+   */
+  @Input() item: Item;
+
+  /**
+   * Separator string between multiple values of the metadata fields defined
+   * @type {string}
+   */
+  @Input() separator: string;
+
+  /**
+   * Fields (schema.element.qualifier) used to render their values.
+   */
+  @Input() fields: string[];
+
+  /**
+   * Label i18n key for the rendered metadata
+   */
+  @Input() label: string;
+
+  /**
+   * Whether the {@link MarkdownDirective} should be used to render this metadata.
+   */
+  @Input() enableMarkdown = false;
+
+  /**
+   * Whether any valid HTTP(S) URL should be rendered as a link
+   */
+  @Input() urlRegex?: string;
+
+
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/field-components/specific-field/item-page-field.component.html
+================================================================================
+<div class="item-page-field">
+    <ds-metadata-values 
+        [mdValues]="item?.allMetadata(fields)" 
+        [separator]="separator" 
+        [label]="label"
+        [enableMarkdown]="enableMarkdown" 
+        [urlRegex]="urlRegex" 
+        [browseDefinition]="browseDefinition|async"
+        [img]="img"
+    ></ds-metadata-values>
+</div>
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/field-components/specific-field/metadata-values/metadata-values.component.html
+================================================================================
+<ds-metadata-field-wrapper [label]="label | translate">
+  <ng-container *ngFor="let mdValue of mdValues; let last=last;">
+    <!--
+  Choose a template. Priority: markdown, link, browse link.
+  -->
+    <ng-container *ngTemplateOutlet="(renderMarkdown ? markdown : (hasLink(mdValue) ? (hasValue(img) ? linkImg : link) : (hasBrowseDefinition() ? browselink : simple)));
+        context: {value: mdValue.value, img}">
+    </ng-container>
+    <span class="separator" *ngIf="!last" [innerHTML]="separator"></span>
+  </ng-container>
+</ds-metadata-field-wrapper>
+
+<!-- Render value as markdown -->
+<ng-template #markdown let-value="value">
+    <span class="dont-break-out" [dsMarkdown]="value">
+    </span>
+</ng-template>
+
+<!-- Render value as a link (href and label) -->
+<ng-template #link let-value="value">
+  <a class="dont-break-out ds-simple-metadata-link" [href]="value" [attr.target]="getLinkAttributes(value).target"
+    [attr.rel]="getLinkAttributes(value).rel">
+    {{value}}
+  </a>
+</ng-template>
+
+<!-- Render value as a link with icon -->
+<ng-template #linkImg let-img="img" let-value="value">
+  <a [href]="value" class="link-anchor dont-break-out ds-simple-metadata-link" target="_blank">
+    <img class="link-logo" [alt]="img.alt | translate"
+      [style.height]="'var(' + img.heightVar + ', --ds-item-page-img-field-default-inline-height)'"
+      [src]="img.URI" />
+    {{value}}
+  </a>
+</ng-template>
+
+<!-- Render simple value in a span  -->
+<ng-template #simple let-value="value">
+  <span class="dont-break-out preserve-line-breaks">{{value}}</span>
+</ng-template>
+
+<!-- Render value as a link to browse index -->
+<ng-template #browselink let-value="value">
+  <a class="dont-break-out preserve-line-breaks ds-browse-link"
+    [routerLink]="['/browse', getBrowseRouteSegment()]"
+    [queryParams]="getQueryParams(value)"
+    role="link" tabindex="0">{{value}}</a>
+</ng-template>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/field-components/specific-field/metadata-values/metadata-values.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  NgFor,
+  NgIf,
+  NgTemplateOutlet,
+} from '@angular/common';
+import {
+  Component,
+  Inject,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+
+import {
+  APP_CONFIG,
+  AppConfig,
+} from 'src/config/app-config.interface';
+import { environment } from 'src/environments/environment';
+import { BrowseDefinition } from 'src/app/core/shared/browse-definition.model';
+import { MetadataValue } from 'src/app/core/shared/metadata.models';
+import { hasValue } from 'src/app/shared/empty.util';
+import { MetadataFieldWrapperComponent } from 'src/app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
+import { MarkdownDirective } from 'src/app/shared/utils/markdown.directive';
+import { ImageField } from 'src/app/item-page/simple/field-components/specific-field/image-field';
+import { ResourceType } from 'src/app/core/shared/resource-type';
+import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { ViewMode } from 'src/app/core/shared/view-mode.model';
+import { Context } from 'src/app/core/shared/context.model';
+
+/**
+ * This component renders the configured 'values' into the ds-metadata-field-wrapper component.
+ * It puts the given 'separator' between each two values.
+ */
+@listableObjectComponent('MetadataValuesComponent', ViewMode.ListElement, Context.Any, 'qulto')
+@Component({
+  selector: 'ds-metadata-values',
+  templateUrl: './metadata-values.component.html',
+  standalone: true,
+  imports: [MetadataFieldWrapperComponent, NgFor, NgTemplateOutlet, NgIf, RouterLink, AsyncPipe, TranslateModule, MarkdownDirective],
+})
+export class MetadataValuesComponent implements OnChanges {
+
+  constructor(
+    @Inject(APP_CONFIG) private appConfig: AppConfig,
+  ) {
+  }
+
+  /**
+   * The metadata values to display
+   */
+  @Input() mdValues: MetadataValue[];
+
+  /**
+   * The seperator used to split the metadata values (can contain HTML)
+   */
+  @Input() separator: string;
+
+  /**
+   * The label for this iteration of metadata values
+   */
+  @Input() label: string;
+
+  /**
+   * Whether the {@link MarkdownDirective} should be used to render these metadata values.
+   * This will only have effect if {@link MarkdownConfig#enabled} is true.
+   * Mathjax will only be rendered if {@link MarkdownConfig#mathjax} is true.
+   */
+  @Input() enableMarkdown = false;
+
+  /**
+   * Whether any valid HTTP(S) URL should be rendered as a link
+   */
+  @Input() urlRegex?;
+
+  /**
+   * This variable will be true if both {@link environment.markdown.enabled} and {@link enableMarkdown} are true.
+   */
+  renderMarkdown;
+
+
+  @Input() browseDefinition?: BrowseDefinition;
+
+  /**
+   * Optional {@code ImageField} reference that represents an image to be displayed inline.
+   */
+  @Input() img?: ImageField;
+
+  hasValue = hasValue;
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.renderMarkdown = !!this.appConfig.markdown.enabled && this.enableMarkdown;
+  }
+
+  /**
+   * Does this metadata value have a configured link to a browse definition?
+   */
+  hasBrowseDefinition(): boolean {
+    return hasValue(this.appConfig.vocabularies);
+  }
+
+  /**
+   * Does this metadata value have a valid URL that should be rendered as a link?
+   * @param value A MetadataValue being displayed
+   */
+  hasLink(value: MetadataValue): boolean {
+    if (hasValue(this.urlRegex)) {
+      const pattern = new RegExp(this.urlRegex);
+      return pattern.test(value.value);
+    }
+    return false;
+  }
+
+  /**
+   * Return a queryparams object for use in a link, with the key dependent on whether this browse
+   * definition is metadata browse, or item browse
+   * @param value the specific metadata value being linked
+   */
+  getQueryParams(value) {
+    const queryParams = { value: value };
+    // todo: should compare with type instead?
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
+    if (this.browseDefinition?.getRenderType() === new ResourceType("startsWith").value) {
+      return { startsWith: value };
+    }
+    return queryParams;
+  }
+
+  getBrowseRouteSegment(): string {
+    const vocab = this.appConfig.vocabularies ?? [];
+    const subjectVocab = vocab.find(v => v.filter === 'subject');
+
+    if (subjectVocab.enabled) {
+      return subjectVocab.vocabulary;
+    }
+    return this.browseDefinition?.id;
+  }
+
+
+  /**
+   * Checks if the given link value is an internal link.
+   * @param linkValue - The link value to check.
+   * @returns True if the link value starts with the base URL defined in the environment configuration, false otherwise.
+   */
+  hasInternalLink(linkValue: string): boolean {
+    return linkValue.startsWith(environment.ui.baseUrl);
+  }
+
+  /**
+   * This method performs a validation and determines the target of the url.
+   * @returns - Returns the target url.
+   */
+  getLinkAttributes(urlValue: string): { target: string, rel: string } {
+    if (this.hasInternalLink(urlValue)) {
+      return { target: '_self', rel: '' };
+    } else {
+      return { target: '_blank', rel: 'noopener noreferrer' };
+    }
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/field-components/specific-field/title/item-page-title-field.component.html
+================================================================================
+<h1 class="item-page-title-field">
+  <div *ngIf="showType && item.firstMetadataValue('dspace.entity.type') as type" class="d-inline">
+    {{ type.toLowerCase() + '.page.titleprefix' | translate }}
+  </div>
+  <span class="dont-break-out">{{ dsoNameService.getName(item) }}</span>
+</h1>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/field-components/specific-field/title/item-page-title-field.component.spec.ts
+================================================================================
+import {
+  ChangeDetectionStrategy,
+  NO_ERRORS_SCHEMA,
+} from '@angular/core';
+import {
+  ComponentFixture,
+  TestBed,
+  waitForAsync,
+} from '@angular/core/testing';
+import {
+  TranslateLoader,
+  TranslateModule,
+} from '@ngx-translate/core';
+
+import { TranslateLoaderMock } from '../../../../../../../../app/shared/testing/translate-loader.mock';
+import { MetadataValuesComponent } from '../metadata-values/metadata-values.component';
+import { mockItemWithMetadataFieldsAndValue } from '../../../../../../../../app/item-page/simple/field-components/specific-field/item-page-field.component.spec';
+import { ItemPageTitleFieldComponent } from './item-page-title-field.component';
+
+let comp: ItemPageTitleFieldComponent;
+let fixture: ComponentFixture<ItemPageTitleFieldComponent>;
+
+const mockField = 'dc.title';
+const mockValue = 'test value';
+
+describe('ItemPageTitleFieldComponent', () => {
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useClass: TranslateLoaderMock,
+        },
+      }), ItemPageTitleFieldComponent, MetadataValuesComponent],
+      schemas: [NO_ERRORS_SCHEMA],
+    }).overrideComponent(ItemPageTitleFieldComponent, {
+      set: { changeDetection: ChangeDetectionStrategy.Default },
+    }).compileComponents();
+  }));
+
+  beforeEach(waitForAsync(() => {
+    fixture = TestBed.createComponent(ItemPageTitleFieldComponent);
+    comp = fixture.componentInstance;
+    comp.item = mockItemWithMetadataFieldsAndValue([mockField], mockValue);
+    fixture.detectChanges();
+  }));
+
+  it('should display display the correct metadata value', () => {
+    expect(fixture.nativeElement.innerHTML).toContain(mockValue);
+  });
+});
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/field-components/specific-field/title/item-page-title-field.component.ts
+================================================================================
+import { NgIf } from '@angular/common';
+import {
+  Component,
+  Input,
+} from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { DSONameService } from '../../../../../../../../app/core/breadcrumbs/dso-name.service';
+import { Item } from '../../../../../../../../app/core/shared/item.model';
+
+@Component({
+  selector: 'ds-themed-base-item-page-title-field',
+  templateUrl: './item-page-title-field.component.html',
+  standalone: true,
+  imports: [NgIf, TranslateModule],
+})
+/**
+ * This component is used for displaying the title (defined by the {@link DSONameService}) of an item
+ */
+export class ItemPageTitleFieldComponent {
+
+  /**
+   * The item to display metadata for
+   */
+  @Input() item: Item;
+  @Input() showType: boolean;
+
+  constructor(
+    public dsoNameService: DSONameService,
+  ) {
+  }
+
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component.ts
+================================================================================
+import {
+  Component,
+  Input,
+} from '@angular/core';
+
+import { Item } from '../../../../../../../../app/core/shared/item.model';
+import { ThemedComponent } from '../../../../../../../../app/shared/theme-support/themed.component';
+import { ItemPageTitleFieldComponent } from './item-page-title-field.component';
+
+/**
+ * Themed wrapper for {@link ItemPageTitleFieldComponent}
+ */
+@Component({
+  selector: 'ds-item-page-title-field',
+  styleUrls: [],
+  templateUrl: './themed.component.html',
+  standalone: true,
+  imports: [ItemPageTitleFieldComponent],
+})
+export class ThemedItemPageTitleFieldComponent extends ThemedComponent<ItemPageTitleFieldComponent> {
+
+  protected inAndOutputNames: (keyof ItemPageTitleFieldComponent & keyof this)[] = [
+    'item',
+    'showType',
+  ];
+
+  @Input() item: Item;
+  @Input() showType: boolean;
+
+  protected getComponentName(): string {
+    return 'ItemPageTitleFieldComponent';
+  }
+
+  protected importThemedComponent(themeName: string): Promise<any> {
+    return import(`./item-page-title-field.component`);
+  }
+
+  protected importUnthemedComponent(): Promise<any> {
+    return import('./item-page-title-field.component');
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/field-components/specific-field/title/themed.component.html
+================================================================================
+<ng-template #vcr>
+</ng-template>
+<div #content>
+  <ng-content></ng-content>
+</div>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/course-instance/course-instance.component.html
+================================================================================
+<ds-results-back-button *ngIf="showBackButton$ | async" [back]="back"></ds-results-back-button>
+
+<div class="row" *ngIf="iiifEnabled">
+  <div class="col-12">
+    <ds-mirador-viewer id="iiif-viewer" [object]="object" [searchable]="iiifSearchEnabled" [query]="iiifQuery$ | async">
+    </ds-mirador-viewer>
+  </div>
+</div>
+
+<div class="d-flex flex-row">
+  <ds-item-page-title-field [item]="object" class="mr-auto"></ds-item-page-title-field>
+  <ds-dso-edit-menu></ds-dso-edit-menu>
+</div>
+
+<div class="row">
+
+  <div class="col-xs-12 col-md-4">
+
+    <ng-container *ngIf="!(mediaViewer.image || mediaViewer.video)">
+      <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
+        <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
+      </ds-metadata-field-wrapper>
+    </ng-container>
+
+    <div *ngIf="mediaViewer.image || mediaViewer.video" class="mb-2">
+      <ds-media-viewer [item]="object"></ds-media-viewer>
+    </div>
+
+    <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+
+    <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
+
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Course'" [metadataFields]="['education.course']"
+      [label]="'relationships.isCourseOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'CourseInstance'"
+      [metadataFields]="['education.courseinstance']"
+      [label]="'relationships.isCourseInstanceOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+
+    <hr class="lo-meta-divider" *ngIf="hasAnyMeta(metaBeforeFirst) && hasAnyMeta(metaBetweenDividers)" role="separator"
+      aria-hidden="true" />
+
+    <hr class="lo-meta-divider" *ngIf="hasAnyMeta(metaBetweenDividers) && hasAnyMeta(metaAfterSecond)" role="separator"
+      aria-hidden="true" />
+
+    <ds-item-page-collections [item]="object"></ds-item-page-collections>
+
+  </div>
+
+  <div class="col-xs-12 col-md-7">
+
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.description']" [label]="'learningobject.description'">
+    </ds-generic-item-page-field>
+
+    <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
+    </ds-item-page-uri-field>
+
+    <div>
+      <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']" tabindex="0">
+        <i class="fas fa-info-circle"></i>
+        {{ "item.page.link.full" | translate }}
+      </a>
+    </div>
+
+  </div>
+  <div class="mt-5 w-100">
+    <ds-tabbed-related-entities-search [item]="object" [relationTypes]="[{
+                                            label: 'isCourseInstanceOfLO',
+                                            filter: 'isCourseInstanceOfLO',
+                                            configuration: 'default-relationships'
+                                          }]">
+    </ds-tabbed-related-entities-search>
+  </div>
+</div>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/course-instance/course-instance.component.scss
+================================================================================
+@import '../../../../../../../../src/styles/_variables.scss';
+
+.lo-meta-divider {
+  border: 0;
+  height: 8px;
+  background:
+    linear-gradient(var(--elte-blue, #012850), var(--elte-blue, #012850)) center / 100% 3px no-repeat,
+    linear-gradient(var(--elte-tan, #CEAF87), var(--elte-tan, #CEAF87)) center / 100% 1px no-repeat;
+  background-position: center calc(50% - 2px), center calc(50% + 3px);
+  border-radius: 2px;
+  margin: 1.25rem 0 1.5rem;
+}
+
+:host ::ng-deep ds-metadata-representation-list ds-metadata-field-wrapper .simple-view-element,
+:host ::ng-deep ds-item-page-collections ds-metadata-field-wrapper .simple-view-element,
+:host ::ng-deep ds-metadata-values ds-metadata-field-wrapper .simple-view-element,
+:host ::ng-deep ds-base-item-page-file-section ds-metadata-field-wrapper .simple-view-element,
+:host ::ng-deep ds-metadata-uri-values ds-metadata-field-wrapper .simple-view-element {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  column-gap: .5rem;
+  align-items: start;
+}
+
+:host ::ng-deep ds-metadata-representation-list ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header,
+:host ::ng-deep ds-item-page-collections ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header,
+:host ::ng-deep ds-metadata-values ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header,
+:host ::ng-deep ds-base-item-page-file-section ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header,
+:host ::ng-deep ds-metadata-uri-values ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header {
+  grid-column: 1;
+  margin: 0;
+  font-weight: 500;
+  color: #012850;
+}
+
+:host ::ng-deep ds-metadata-representation-list ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body,
+:host ::ng-deep ds-item-page-collections ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body,
+:host ::ng-deep ds-metadata-values ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body,
+:host ::ng-deep ds-base-item-page-file-section ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body,
+:host ::ng-deep ds-metadata-uri-values ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body {
+  grid-column: 2;
+  min-width: 0;
+  margin-top: 0 !important;
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/course-instance/course-instance.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  NgIf,
+} from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+} from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { ViewMode } from 'src/app/core/shared/view-mode.model';
+import { CollectionsComponent } from 'src/app/item-page/field-components/collections/collections.component';
+import { ThemedMediaViewerComponent } from 'src/app/item-page/media-viewer/themed-media-viewer.component';
+import { MiradorViewerComponent } from 'src/app/item-page/mirador-viewer/mirador-viewer.component';
+import { ThemedFileSectionComponent } from 'src/app/item-page/simple/field-components/file-section/themed-file-section.component';
+import { ItemPageAbstractFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
+import { ItemPageDateFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
+import { TabbedRelatedEntitiesSearchComponent } from 'src/app/item-page/simple/related-entities/tabbed-related-entities-search/tabbed-related-entities-search.component';
+import { GenericItemPageFieldComponent } from '../../field-components/specific-field/generic/generic-item-page-field.component';
+import { ItemPageUriFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
+import { ItemComponent } from 'src/app/item-page/simple/item-types/shared/item.component';
+import { ThemedMetadataRepresentationListComponent } from 'src/app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
+import { DsoEditMenuComponent } from 'src/app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
+import { MetadataFieldWrapperComponent } from 'src/app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
+import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { ThemedResultsBackButtonComponent } from 'src/app/shared/results-back-button/themed-results-back-button.component';
+import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
+
+import { ElteRelatedItemsComponent } from '../../elte-related-items/elte-related-items.component';
+import { ThemedItemPageTitleFieldComponent } from '../../field-components/specific-field/title/themed-item-page-field.component';
+import { Context } from 'src/app/core/shared/context.model';
+
+@listableObjectComponent('CourseInstance', ViewMode.StandalonePage, Context.Any, 'elte')
+@Component({
+  selector: 'ds-course-instance',
+  styleUrls: ['./course-instance.component.scss'],
+  templateUrl: './course-instance.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [NgIf, ThemedResultsBackButtonComponent, MiradorViewerComponent, ThemedItemPageTitleFieldComponent, DsoEditMenuComponent, MetadataFieldWrapperComponent, ThemedThumbnailComponent, ThemedMediaViewerComponent, ThemedFileSectionComponent, ItemPageDateFieldComponent, ThemedMetadataRepresentationListComponent, GenericItemPageFieldComponent, ElteRelatedItemsComponent, ItemPageAbstractFieldComponent, ItemPageUriFieldComponent, CollectionsComponent, RouterLink, AsyncPipe, TranslateModule, TabbedRelatedEntitiesSearchComponent],
+})
+export class CourseInstanceComponent extends ItemComponent {
+
+  hasAnyMeta(keys: string[]): boolean {
+    if (!this.object) { return false; }
+    return keys.some(k => !!this.object.firstMetadataValue(k));
+  }
+
+  readonly metaBeforeFirst = [
+    'education.educationlevel',
+    'education.program',
+    'education.course',
+    'education.courseinstance',
+    'education.fieldofscience',
+    'education.fieldofstudy'
+  ];
+
+  readonly metaBetweenDividers = [
+    'dc.type',
+    'education.teachingmethod',
+    'dc.format',
+    'dc.format.isresponsive',
+    'dc.format.isaccessible',
+  ];
+
+  readonly metaAfterSecond = [
+    'education.accesslevel',
+    'dc.rights.license',
+    'dc.rights',
+  ];
+
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/learning-object/learning-object.component.html
+================================================================================
+<ds-results-back-button *ngIf="showBackButton$ | async" [back]="back"></ds-results-back-button>
+<div class="row" *ngIf="iiifEnabled">
+  <div class="col-12">
+    <ds-mirador-viewer id="iiif-viewer" [object]="object" [searchable]="iiifSearchEnabled" [query]="iiifQuery$ | async">
+    </ds-mirador-viewer>
+  </div>
+</div>
+<div class="d-flex flex-row">
+  <ds-item-page-title-field [item]="object" class="mr-auto">
+  </ds-item-page-title-field>
+  <ds-dso-edit-menu></ds-dso-edit-menu>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-md-4">
+    <ng-container *ngIf="!(mediaViewer.image || mediaViewer.video)">
+      <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
+        <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
+      </ds-metadata-field-wrapper>
+    </ng-container>
+    <div *ngIf="mediaViewer.image || mediaViewer.video" class="mb-2">
+      <ds-media-viewer [item]="object"></ds-media-viewer>
+    </div>
+    <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+    <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'EducationLevel'"
+      [metadataFields]="['education.educationlevel']"
+      [label]="'relationships.isEducationLevelOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Program'" [metadataFields]="['education.program']"
+      [label]="'relationships.isProgramOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Course'"
+      [metadataFields]="['education.course']" [label]="'relationships.isCourseOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'CourseInstance'"
+      [metadataFields]="['education.courseinstance']" [label]="'relationships.isCourseInstanceOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'FieldOfStudy'"
+      [metadataFields]="['education.fieldofstudy']"
+      [label]="'relationships.isFieldOfStudyOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'FieldOfScience'"
+      [metadataFields]="['education.fieldofscience']"
+      [label]="'relationships.isFieldOfScienceOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+
+    <hr class="lo-meta-divider" *ngIf="hasAnyMeta(metaBeforeFirst) && hasAnyMeta(metaBetweenDividers)" role="separator"
+      aria-hidden="true" />
+
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Type'" [metadataFields]="['dc.type']"
+      [label]="'relationships.isTypeOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'TeachingMethod'"
+      [metadataFields]="['education.teachingmethod']"
+      [label]="'relationships.isTeachingMethodOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Format'" [metadataFields]="['dc.format']"
+      [label]="'relationships.isFormatOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.format.isresponsive']"
+      [label]="'learningobject.format.isresponsive'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.format.isaccessible']"
+      [label]="'learningobject.format.isaccessible'">
+    </ds-generic-item-page-field>
+
+    <hr class="lo-meta-divider" *ngIf="hasAnyMeta(metaBetweenDividers) && hasAnyMeta(metaAfterSecond)" role="separator"
+      aria-hidden="true" />
+
+    <ds-item-page-collections [item]="object"></ds-item-page-collections>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'AccessLevel'"
+      [metadataFields]="['education.accesslevel']" [label]="'relationships.isAccessLevelOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'License'" [metadataFields]="['dc.rights.license']"
+      [label]="'relationships.isLicenseOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.rights']" [label]="'learningobject.rights'">
+    </ds-generic-item-page-field>
+  </div>
+  <div class="col-xs-12 col-md-7">
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.author']" [label]="'relationships.isAuthorOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.translator']" [label]="'relationships.isTranslatorOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.editor']" [label]="'relationships.isEditorOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.collector']" [label]="'relationships.isCollectorOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.selector']" [label]="'relationships.isSelectorOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.other']" [label]="'relationships.isContributorOfLearningObject' | translate">
+    </ds-metadata-representation-list>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.description']" [label]="'learningobject.description'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.subject']" [separator]="', '" [label]="'item.page.subject'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.description.requirements']" [label]="'learningobject.description.requirements'">
+    </ds-generic-item-page-field>
+    <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
+    </ds-item-page-uri-field>
+    <ds-generic-item-page-field [item]="object" [fields]="['education.note']" [label]="'learningobject.education.note'">
+    </ds-generic-item-page-field>
+    <!--Field of Science record fields-->
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'FieldOfScience'"
+      [metadataFields]="['education.fieldofscience.parent']" [label]="'relationships.isParentOfFieldOfScience' | translate">
+    </ds-metadata-representation-list>
+    <!--School subject record fields-->
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Faculty'"
+      [metadataFields]="['education.faculty']" [label]="'relationships.isFacultyOfCourse' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Department'"
+      [metadataFields]="['education.department']" [label]="'relationships.isDepartmentOfCourse' | translate">
+    </ds-metadata-representation-list>
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'Institute'"
+      [metadataFields]="['education.institute']" [label]="'relationships.isInstituteOfCourse' | translate">
+    </ds-metadata-representation-list>
+    <!--Program record fields-->
+    <ds-metadata-representation-list [parentItem]="object" [itemType]="'DoctoralSchool'"
+      [metadataFields]="['education.doctoralschool']" [label]="'relationships.isDoctoralSchoolOfProgram' | translate">
+    </ds-metadata-representation-list>
+    <div>
+      <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']" tabindex="0">
+        <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/learning-object/learning-object.component.scss
+================================================================================
+@import '../../../../../../../../src/styles/_variables.scss';
+
+.lo-meta-divider {
+  border: 0;
+  height: 8px;
+  background:
+    linear-gradient(var(--elte-blue, #012850), var(--elte-blue, #012850)) center / 100% 3px no-repeat,
+    linear-gradient(var(--elte-tan, #CEAF87), var(--elte-tan, #CEAF87)) center / 100% 1px no-repeat;
+  background-position: center calc(50% - 2px), center calc(50% + 3px);
+  border-radius: 2px;
+  margin: 1.25rem 0 1.5rem;
+}
+
+:host ::ng-deep ds-metadata-representation-list ds-metadata-field-wrapper .simple-view-element,
+:host ::ng-deep ds-item-page-collections ds-metadata-field-wrapper .simple-view-element,
+:host ::ng-deep ds-metadata-values ds-metadata-field-wrapper .simple-view-element,
+:host ::ng-deep ds-base-item-page-file-section ds-metadata-field-wrapper .simple-view-element,
+:host ::ng-deep ds-metadata-uri-values ds-metadata-field-wrapper .simple-view-element {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  column-gap: .5rem;
+  align-items: start;
+}
+
+:host ::ng-deep ds-metadata-representation-list ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header,
+:host ::ng-deep ds-item-page-collections ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header,
+:host ::ng-deep ds-metadata-values ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header,
+:host ::ng-deep ds-base-item-page-file-section ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header,
+:host ::ng-deep ds-metadata-uri-values ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header {
+  grid-column: 1;
+  margin: 0;
+  font-weight: 500;
+  color: #012850;
+}
+
+:host ::ng-deep ds-metadata-representation-list ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body,
+:host ::ng-deep ds-item-page-collections ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body,
+:host ::ng-deep ds-metadata-values ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body,
+:host ::ng-deep ds-base-item-page-file-section ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body,
+:host ::ng-deep ds-metadata-uri-values ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body {
+  grid-column: 2;
+  min-width: 0;
+  margin-top: 0 !important;
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/learning-object/learning-object.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  NgIf,
+} from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+} from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { ViewMode } from 'src/app/core/shared/view-mode.model';
+import { CollectionsComponent } from 'src/app/item-page/field-components/collections/collections.component';
+import { ThemedMediaViewerComponent } from 'src/app/item-page/media-viewer/themed-media-viewer.component';
+import { MiradorViewerComponent } from 'src/app/item-page/mirador-viewer/mirador-viewer.component';
+import { ThemedFileSectionComponent } from 'src/app/item-page/simple/field-components/file-section/themed-file-section.component';
+import { ItemPageAbstractFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
+import { ItemPageDateFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
+import { GenericItemPageFieldComponent } from '../../field-components/specific-field/generic/generic-item-page-field.component';
+import { ItemPageUriFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
+import { ItemComponent } from 'src/app/item-page/simple/item-types/shared/item.component';
+import { ThemedMetadataRepresentationListComponent } from 'src/app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
+import { DsoEditMenuComponent } from 'src/app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
+import { MetadataFieldWrapperComponent } from 'src/app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
+import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { ThemedResultsBackButtonComponent } from 'src/app/shared/results-back-button/themed-results-back-button.component';
+import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
+
+import { ElteRelatedItemsComponent } from '../../elte-related-items/elte-related-items.component';
+import { ThemedItemPageTitleFieldComponent } from '../../field-components/specific-field/title/themed-item-page-field.component';
+
+@listableObjectComponent('LearningObject', ViewMode.StandalonePage)
+@listableObjectComponent('FieldOfScience', ViewMode.StandalonePage)
+@listableObjectComponent('FieldOfStudy', ViewMode.StandalonePage)
+@listableObjectComponent('Course', ViewMode.StandalonePage)
+@listableObjectComponent('Program', ViewMode.StandalonePage)
+@listableObjectComponent('Department', ViewMode.StandalonePage)
+@listableObjectComponent('Institute', ViewMode.StandalonePage)
+@listableObjectComponent('DoctoralSchool', ViewMode.StandalonePage)
+@Component({
+  selector: 'ds-learning-object',
+  styleUrls: ['./learning-object.component.scss'],
+  templateUrl: './learning-object.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [NgIf, ThemedResultsBackButtonComponent, MiradorViewerComponent, ThemedItemPageTitleFieldComponent, DsoEditMenuComponent, MetadataFieldWrapperComponent, ThemedThumbnailComponent, ThemedMediaViewerComponent, ThemedFileSectionComponent, ItemPageDateFieldComponent, ThemedMetadataRepresentationListComponent, GenericItemPageFieldComponent, ElteRelatedItemsComponent, ItemPageAbstractFieldComponent, ItemPageUriFieldComponent, CollectionsComponent, RouterLink, AsyncPipe, TranslateModule],
+})
+export class LearningObjectComponent extends ItemComponent {
+
+  hasAnyMeta(keys: string[]): boolean {
+    if (!this.object) { return false; }
+    return keys.some(k => !!this.object.firstMetadataValue(k));
+  }
+
+  readonly metaBeforeFirst = [
+    'education.educationlevel',
+    'education.program',
+    'education.course',
+    'education.courseinstance',
+    'education.fieldofscience',
+    'education.fieldofstudy'
+  ];
+
+  readonly metaBetweenDividers = [
+    'dc.type',
+    'education.teachingmethod',
+    'dc.format',
+    'dc.format.isresponsive',
+    'dc.format.isaccessible',
+  ];
+
+  readonly metaAfterSecond = [
+    'education.accesslevel',
+    'dc.rights.license',
+    'dc.rights',
+  ];
+
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/publication/publication.component.html
+================================================================================
+<ds-results-back-button *ngIf="showBackButton$ | async" [back]="back"></ds-results-back-button>
+<div class="row" *ngIf="iiifEnabled">
+  <div class="col-12">
+    <ds-mirador-viewer  id="iiif-viewer"
+                        [object]="object"
+                        [searchable]="iiifSearchEnabled"
+                        [query]="iiifQuery$ | async">
+    </ds-mirador-viewer>
+  </div>
+</div>
+<div class="d-flex flex-row">
+  <ds-item-page-title-field [item]="object" [showType]="false" class="mr-auto">
+  </ds-item-page-title-field>
+  <ds-dso-edit-menu></ds-dso-edit-menu>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-md-4">
+    <ng-container *ngIf="!(mediaViewer.image || mediaViewer.video)">
+      <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
+        <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
+      </ds-metadata-field-wrapper>
+    </ng-container>
+    <div *ngIf="mediaViewer.image || mediaViewer.video" class="mb-2">
+      <ds-media-viewer [item]="object"></ds-media-viewer>
+    </div>
+    <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+    <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
+      [parentItem]="object"
+      [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.author', 'dc.creator']"
+      [label]="'relationships.isAuthorOf' | translate">
+    </ds-metadata-representation-list>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['journal.title']"
+      [label]="'publication.page.journal-title'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['journal.identifier.issn']"
+      [label]="'publication.page.journal-issn'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['journalvolume.identifier.name']"
+      [label]="'publication.page.volume-title'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.publisher']"
+      [label]="'publication.page.publisher'">
+    </ds-generic-item-page-field>
+  </div>
+  <div class="col-xs-12 col-md-7">
+    <ds-related-items
+      [parentItem]="object"
+      [relationType]="'isProjectOfPublication'"
+      [label]="'relationships.isProjectOf' | translate">
+    </ds-related-items>
+    <ds-related-items
+      [parentItem]="object"
+      [relationType]="'isOrgUnitOfPublication'"
+      [label]="'relationships.isOrgUnitOf' | translate">
+    </ds-related-items>
+    <ds-related-items
+      [parentItem]="object"
+      [relationType]="'isJournalIssueOfPublication'"
+      [label]="'relationships.isJournalIssueOf' | translate">
+    </ds-related-items>
+    <ds-related-items
+      [parentItem]="object"
+      [relationType]="'isPartOf'"
+      [label]="'relationships.isPartOf' | translate">
+    </ds-related-items>
+    <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.description']"
+      [label]="'publication.page.description'">
+    </ds-generic-item-page-field>
+
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.subject']"
+      [separator]="', '"
+      [label]="'item.page.subject'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.identifier.citation']"
+      [label]="'item.page.citation'">
+    </ds-generic-item-page-field>
+    <ds-item-page-uri-field [item]="object"
+      [fields]="['dc.identifier.uri']"
+      [label]="'item.page.uri'">
+    </ds-item-page-uri-field>
+    <ds-item-page-collections [item]="object"></ds-item-page-collections>
+    <ds-item-page-uri-field [item]="object"
+      [fields]="['coar.notify.endorsedBy']"
+      [label]="'item.page.endorsement'">
+    </ds-item-page-uri-field>
+    <ds-item-page-uri-field [item]="object"
+      [fields]="['datacite.relation.isReviewedBy']"
+      [label]="'item.page.review'">
+    </ds-item-page-uri-field>
+    <ds-item-page-uri-field [item]="object"
+      [fields]="['datacite.relation.isSupplementedBy']"
+      [label]="'item.page.supplemented'">
+    </ds-item-page-uri-field>
+    <ds-item-page-uri-field [item]="object"
+      [fields]="['datacite.relation.isReferencedBy']"
+      [label]="'item.page.referenced'">
+    </ds-item-page-uri-field>
+    <div>
+      <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']">
+        <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
+      </a>
+    </div>
+  </div>
+  <div class="mt-5 w-100">
+    <ds-tabbed-related-entities-search  [item]="object"
+      [relationTypes]="[{
+                                          label: 'isPartOf',
+                                          filter: 'isPartOf',
+                                          configuration: 'default-relationships'
+                                        }]">
+    </ds-tabbed-related-entities-search>
+  </div>
+</div>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/publication/publication.component.scss
+================================================================================
+@import '../../../../../../../../src/styles/_variables.scss';
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/publication/publication.component.spec.ts
+================================================================================
+import { HttpClient } from '@angular/common/http';
+import {
+  ChangeDetectionStrategy,
+  NO_ERRORS_SCHEMA,
+} from '@angular/core';
+import {
+  ComponentFixture,
+  fakeAsync,
+  TestBed,
+  tick,
+  waitForAsync,
+} from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { RouterTestingModule } from '@angular/router/testing';
+import { Store } from '@ngrx/store';
+import {
+  TranslateLoader,
+  TranslateModule,
+} from '@ngx-translate/core';
+import {
+  Observable,
+  of,
+} from 'rxjs';
+
+import { BrowseDefinitionDataService } from '../../../../../../../app/core/browse/browse-definition-data.service';
+import { RemoteDataBuildService } from '../../../../../../../app/core/cache/builders/remote-data-build.service';
+import { ObjectCacheService } from '../../../../../../../app/core/cache/object-cache.service';
+import { BitstreamDataService } from '../../../../../../../app/core/data/bitstream-data.service';
+import { CommunityDataService } from '../../../../../../../app/core/data/community-data.service';
+import { DefaultChangeAnalyzer } from '../../../../../../../app/core/data/default-change-analyzer.service';
+import { DSOChangeAnalyzer } from '../../../../../../../app/core/data/dso-change-analyzer.service';
+import { ItemDataService } from '../../../../../../../app/core/data/item-data.service';
+import { RelationshipDataService } from '../../../../../../../app/core/data/relationship-data.service';
+import { RemoteData } from '../../../../../../../app/core/data/remote-data';
+import { VersionDataService } from '../../../../../../../app/core/data/version-data.service';
+import { VersionHistoryDataService } from '../../../../../../../app/core/data/version-history-data.service';
+import { RouteService } from '../../../../../../../app/core/services/route.service';
+import { Bitstream } from '../../../../../../../app/core/shared/bitstream.model';
+import { HALEndpointService } from '../../../../../../../app/core/shared/hal-endpoint.service';
+import { Item } from '../../../../../../../app/core/shared/item.model';
+import { MetadataMap } from '../../../../../../../app/core/shared/metadata.models';
+import { SearchService } from '../../../../../../../app/core/shared/search/search.service';
+import { UUIDService } from '../../../../../../../app/core/shared/uuid.service';
+import { WorkspaceitemDataService } from '../../../../../../../app/core/submission/workspaceitem-data.service';
+import { CollectionsComponent } from '../../../../../../../app/item-page/field-components/collections/collections.component';
+import { ThemedMediaViewerComponent } from '../../../../../../../app/item-page/media-viewer/themed-media-viewer.component';
+import { MiradorViewerComponent } from '../../../../../../../app/item-page/mirador-viewer/mirador-viewer.component';
+import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/themed-file-section.component';
+import { ItemPageAbstractFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
+import { ItemPageDateFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
+import { GenericItemPageFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
+import { ThemedItemPageTitleFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
+import { ItemPageUriFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
+import {
+  createRelationshipsObservable,
+  getIIIFEnabled,
+  getIIIFSearchEnabled,
+  mockRouteService,
+} from '../../../../../../../app/item-page/simple/item-types/shared/item.component.spec';
+import { ThemedMetadataRepresentationListComponent } from '../../../../../../../app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
+import { RelatedItemsComponent } from '../../../../../../../app/item-page/simple/related-items/related-items-component';
+import { DsoEditMenuComponent } from '../../../../../../../app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
+import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
+import { mockTruncatableService } from '../../../../../../../app/shared/mocks/mock-trucatable.service';
+import { TranslateLoaderMock } from '../../../../../../../app/shared/mocks/translate-loader.mock';
+import { NotificationsService } from '../../../../../../../app/shared/notifications/notifications.service';
+import { createSuccessfulRemoteDataObject$ } from '../../../../../../../app/shared/remote-data.utils';
+import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
+import { BrowseDefinitionDataServiceStub } from '../../../../../../../app/shared/testing/browse-definition-data-service.stub';
+import { createPaginatedList } from '../../../../../../../app/shared/testing/utils.test';
+import { TruncatableService } from '../../../../../../../app/shared/truncatable/truncatable.service';
+import { TruncatePipe } from '../../../../../../../app/shared/utils/truncate.pipe';
+import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
+/* import {
+  APP_CONFIG,
+  APP_DATA_SERVICES_MAP,
+} from '../../../../../config/app-config.interface'; */
+import {
+  APP_CONFIG,
+  APP_DATA_SERVICES_MAP,
+} from '../../../../../../../config/app-config.interface';
+import { environment } from '../../../../../../../environments/environment.test';
+import { PublicationComponent } from './publication.component';
+
+const noMetadata = new MetadataMap();
+
+function getItem(metadata: MetadataMap) {
+  return Object.assign(new Item(), {
+    bundles: createSuccessfulRemoteDataObject$(createPaginatedList([])),
+    metadata: metadata,
+    relationships: createRelationshipsObservable(),
+  });
+}
+
+describe('PublicationComponent', () => {
+  let comp: PublicationComponent;
+  let fixture: ComponentFixture<PublicationComponent>;
+
+  beforeEach(waitForAsync(() => {
+    const mockBitstreamDataService = {
+      getThumbnailFor(item: Item): Observable<RemoteData<Bitstream>> {
+        return createSuccessfulRemoteDataObject$(new Bitstream());
+      },
+    };
+    TestBed.configureTestingModule({
+      imports: [
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useClass: TranslateLoaderMock,
+          },
+        }),
+        RouterTestingModule,
+        GenericItemPageFieldComponent, TruncatePipe,
+        PublicationComponent,
+      ],
+      providers: [
+        { provide: ItemDataService, useValue: {} },
+        { provide: TruncatableService, useValue: mockTruncatableService },
+        { provide: RelationshipDataService, useValue: {} },
+        { provide: ObjectCacheService, useValue: {} },
+        { provide: UUIDService, useValue: {} },
+        { provide: Store, useValue: {} },
+        { provide: RemoteDataBuildService, useValue: {} },
+        { provide: CommunityDataService, useValue: {} },
+        { provide: HALEndpointService, useValue: {} },
+        { provide: NotificationsService, useValue: {} },
+        { provide: HttpClient, useValue: {} },
+        { provide: DSOChangeAnalyzer, useValue: {} },
+        { provide: DefaultChangeAnalyzer, useValue: {} },
+        { provide: VersionHistoryDataService, useValue: {} },
+        { provide: VersionDataService, useValue: {} },
+        { provide: BitstreamDataService, useValue: mockBitstreamDataService },
+        { provide: WorkspaceitemDataService, useValue: {} },
+        { provide: SearchService, useValue: {} },
+        { provide: RouteService, useValue: mockRouteService },
+        { provide: BrowseDefinitionDataService, useValue: BrowseDefinitionDataServiceStub },
+        { provide: APP_CONFIG, useValue: environment },
+        { provide: APP_DATA_SERVICES_MAP, useValue: {}  },
+      ],
+      schemas: [NO_ERRORS_SCHEMA],
+    }).overrideComponent(PublicationComponent, {
+      add: { changeDetection: ChangeDetectionStrategy.Default },
+      remove: {
+        imports: [ThemedResultsBackButtonComponent, MiradorViewerComponent, ThemedItemPageTitleFieldComponent, DsoEditMenuComponent, MetadataFieldWrapperComponent, ThemedThumbnailComponent, ThemedMediaViewerComponent, ThemedFileSectionComponent, ItemPageDateFieldComponent, ThemedMetadataRepresentationListComponent, GenericItemPageFieldComponent, RelatedItemsComponent, ItemPageAbstractFieldComponent, ItemPageUriFieldComponent, CollectionsComponent,
+        ],
+      },
+    });
+  }));
+
+  describe('default view', () => {
+    beforeEach(waitForAsync(() => {
+      TestBed.compileComponents();
+      fixture = TestBed.createComponent(PublicationComponent);
+      comp = fixture.componentInstance;
+      comp.object = getItem(noMetadata);
+      fixture.detectChanges();
+    }));
+
+    it('should contain a component to display the date', () => {
+      const fields = fixture.debugElement.queryAll(By.css('ds-item-page-date-field'));
+      expect(fields.length).toBeGreaterThanOrEqual(1);
+    });
+
+    it('should not contain a metadata only author field', () => {
+      const fields = fixture.debugElement.queryAll(By.css('ds-item-page-author-field'));
+      expect(fields.length).toBe(0);
+    });
+
+    it('should contain a mixed metadata and relationship field for authors', () => {
+      const fields = fixture.debugElement.queryAll(By.css('.ds-item-page-mixed-author-field'));
+      expect(fields.length).toBe(1);
+    });
+
+    it('should contain a component to display the abstract', () => {
+      const fields = fixture.debugElement.queryAll(By.css('ds-item-page-abstract-field'));
+      expect(fields.length).toBeGreaterThanOrEqual(1);
+    });
+
+    it('should contain a component to display the uri', () => {
+      const fields = fixture.debugElement.queryAll(By.css('ds-item-page-uri-field'));
+      expect(fields.length).toBeGreaterThanOrEqual(1);
+    });
+
+    it('should contain a component to display the collections', () => {
+      const fields = fixture.debugElement.queryAll(By.css('ds-item-page-collections'));
+      expect(fields.length).toBeGreaterThanOrEqual(1);
+    });
+  });
+
+  describe('with IIIF viewer', () => {
+
+    beforeEach(waitForAsync(() => {
+      const iiifEnabledMap: MetadataMap = {
+        'dspace.iiif.enabled': [getIIIFEnabled(true)],
+        'iiif.search.enabled': [getIIIFSearchEnabled(false)],
+      };
+      TestBed.compileComponents();
+      fixture = TestBed.createComponent(PublicationComponent);
+      comp = fixture.componentInstance;
+      comp.object = getItem(iiifEnabledMap);
+      fixture.detectChanges();
+    }));
+
+    it('should contain an iiif viewer component', () => {
+      const fields = fixture.debugElement.queryAll(By.css('ds-mirador-viewer'));
+      expect(fields.length).toBeGreaterThanOrEqual(1);
+    });
+    it('should not retrieve the query term for previous route', fakeAsync((): void => {
+      //tick(10)
+      expect(comp.iiifQuery$).toBeFalsy();
+    }));
+
+  });
+
+  describe('with IIIF viewer and search', () => {
+
+    const localMockRouteService = {
+      getPreviousUrl(): Observable<string> {
+        return of('/search?query=test%20query&fakeParam=true');
+      },
+    };
+    beforeEach(waitForAsync(() => {
+      const iiifEnabledMap: MetadataMap = {
+        'dspace.iiif.enabled': [getIIIFEnabled(true)],
+        'iiif.search.enabled': [getIIIFSearchEnabled(true)],
+      };
+      TestBed.overrideProvider(RouteService, { useValue: localMockRouteService });
+      TestBed.compileComponents();
+      fixture = TestBed.createComponent(PublicationComponent);
+      comp = fixture.componentInstance;
+      comp.object = getItem(iiifEnabledMap);
+      fixture.detectChanges();
+    }));
+
+    it('should contain an iiif viewer component', () => {
+      const fields = fixture.debugElement.queryAll(By.css('ds-mirador-viewer'));
+      expect(fields.length).toBeGreaterThanOrEqual(1);
+    });
+
+    it('should retrieve the query term for previous route', fakeAsync((): void => {
+      expect(comp.iiifQuery$.subscribe(result => expect(result).toEqual('test query')));
+    }));
+
+  });
+
+  describe('with IIIF viewer and search but no previous search query', () => {
+    const localMockRouteService = {
+      getPreviousUrl(): Observable<string> {
+        return of('/item');
+      },
+    };
+    beforeEach(waitForAsync(() => {
+      const iiifEnabledMap: MetadataMap = {
+        'dspace.iiif.enabled': [getIIIFEnabled(true)],
+        'iiif.search.enabled': [getIIIFSearchEnabled(true)],
+      };
+      TestBed.overrideProvider(RouteService, { useValue: localMockRouteService });
+      TestBed.compileComponents();
+      fixture = TestBed.createComponent(PublicationComponent);
+      comp = fixture.componentInstance;
+      comp.object = getItem(iiifEnabledMap);
+      fixture.detectChanges();
+    }));
+
+    it('should contain an iiif viewer component', () => {
+      const fields = fixture.debugElement.queryAll(By.css('ds-mirador-viewer'));
+      expect(fields.length).toBeGreaterThanOrEqual(1);
+    });
+
+    it('should not retrieve the query term for previous route', fakeAsync( () => {
+      let emitted;
+      comp.iiifQuery$.subscribe(result => emitted = result);
+      tick(10);
+      expect(emitted).toBeUndefined();
+    }));
+
+  });
+});
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/publication/publication.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  NgIf,
+} from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+} from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { Context } from '../../../../../../../app/core/shared/context.model';
+import { ViewMode } from '../../../../../../../app/core/shared/view-mode.model';
+import { CollectionsComponent } from '../../../../../../../app/item-page/field-components/collections/collections.component';
+import { ThemedMediaViewerComponent } from '../../../../../../../app/item-page/media-viewer/themed-media-viewer.component';
+import { MiradorViewerComponent } from '../../../../../../../app/item-page/mirador-viewer/mirador-viewer.component';
+import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/themed-file-section.component';
+import { ItemPageAbstractFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
+import { ItemPageDateFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
+import { GenericItemPageFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
+import { ItemPageUriFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
+import { ItemComponent } from '../../../../../../../app/item-page/simple/item-types/shared/item.component';
+import { ThemedMetadataRepresentationListComponent } from '../../../../../../../app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
+import { TabbedRelatedEntitiesSearchComponent } from '../../../../../../../app/item-page/simple/related-entities/tabbed-related-entities-search/tabbed-related-entities-search.component';
+import { RelatedItemsComponent } from '../../../../../../../app/item-page/simple/related-items/related-items-component';
+import { DsoEditMenuComponent } from '../../../../../../../app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
+import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
+import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
+import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
+import { ThemedItemPageTitleFieldComponent } from '../../field-components/specific-field/title/themed-item-page-field.component';
+
+/**
+ * Component that represents a publication Item page
+ */
+
+@listableObjectComponent('Publication', ViewMode.StandalonePage, Context.Any, 'elte')
+@Component({
+  selector: 'ds-publication',
+  styleUrls: ['./publication.component.scss'],
+  templateUrl: './publication.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [NgIf, ThemedResultsBackButtonComponent, MiradorViewerComponent, ThemedItemPageTitleFieldComponent, DsoEditMenuComponent, MetadataFieldWrapperComponent, ThemedThumbnailComponent, ThemedMediaViewerComponent, ThemedFileSectionComponent, ItemPageDateFieldComponent, ThemedMetadataRepresentationListComponent, GenericItemPageFieldComponent, RelatedItemsComponent, ItemPageAbstractFieldComponent, ItemPageUriFieldComponent, CollectionsComponent, RouterLink, AsyncPipe, TranslateModule, TabbedRelatedEntitiesSearchComponent],
+})
+export class PublicationComponent extends ItemComponent {
+
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/simple-item/simple-item.component.html
+================================================================================
+<ds-results-back-button *ngIf="showBackButton$ | async" [back]="back"></ds-results-back-button>
+<div class="row" *ngIf="iiifEnabled">
+  <div class="col-12">
+    <ds-mirador-viewer id="iiif-viewer" [object]="object" [searchable]="iiifSearchEnabled" [query]="iiifQuery$ | async">
+    </ds-mirador-viewer>
+  </div>
+</div>
+<div class="d-flex flex-row">
+  <ds-item-page-title-field [item]="object" class="mr-auto">
+  </ds-item-page-title-field>
+  <ds-dso-edit-menu></ds-dso-edit-menu>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-md-4">
+    <ng-container *ngIf="!(mediaViewer.image || mediaViewer.video)">
+      <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
+        <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
+      </ds-metadata-field-wrapper>
+    </ng-container>
+    <div *ngIf="mediaViewer.image || mediaViewer.video" class="mb-2">
+      <ds-media-viewer [item]="object"></ds-media-viewer>
+    </div>
+    <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+    <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
+    <ds-item-page-collections [item]="object"></ds-item-page-collections>
+  </div>
+  <div class="col-xs-12 col-md-7">
+    <ds-generic-item-page-field [item]="object" [fields]="['dc.description']" [label]="'learningobject.description'">
+    </ds-generic-item-page-field>
+    <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
+    </ds-item-page-uri-field>
+    <div>
+      <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']" tabindex="0">
+        <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/simple-item/simple-item.component.scss
+================================================================================
+@import '../../../../../../../../src/styles/_variables.scss';
+
+:host ::ng-deep ds-metadata-representation-list ds-metadata-field-wrapper .simple-view-element,
+:host ::ng-deep ds-item-page-collections ds-metadata-field-wrapper .simple-view-element,
+:host ::ng-deep ds-metadata-values ds-metadata-field-wrapper .simple-view-element,
+:host ::ng-deep ds-base-item-page-file-section ds-metadata-field-wrapper .simple-view-element,
+:host ::ng-deep ds-metadata-uri-values ds-metadata-field-wrapper .simple-view-element {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    column-gap: .5rem;
+    align-items: start;
+}
+
+:host ::ng-deep ds-metadata-representation-list ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header,
+:host ::ng-deep ds-item-page-collections ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header,
+:host ::ng-deep ds-metadata-values ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header,
+:host ::ng-deep ds-base-item-page-file-section ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header,
+:host ::ng-deep ds-metadata-uri-values ds-metadata-field-wrapper .simple-view-element>h2.simple-view-element-header {
+    grid-column: 1;
+    margin: 0;
+    font-weight: 500;
+    color: #012850;
+}
+
+:host ::ng-deep ds-metadata-representation-list ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body,
+:host ::ng-deep ds-item-page-collections ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body,
+:host ::ng-deep ds-metadata-values ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body,
+:host ::ng-deep ds-base-item-page-file-section ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body,
+:host ::ng-deep ds-metadata-uri-values ds-metadata-field-wrapper .simple-view-element>.simple-view-element-body {
+    grid-column: 2;
+    min-width: 0;
+    margin-top: 0 !important;
+}
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/item-page/simple/item-types/simple-item/simple-item.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  NgIf,
+} from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+} from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { ViewMode } from 'src/app/core/shared/view-mode.model';
+import { CollectionsComponent } from 'src/app/item-page/field-components/collections/collections.component';
+import { ThemedMediaViewerComponent } from 'src/app/item-page/media-viewer/themed-media-viewer.component';
+import { MiradorViewerComponent } from 'src/app/item-page/mirador-viewer/mirador-viewer.component';
+import { ThemedFileSectionComponent } from 'src/app/item-page/simple/field-components/file-section/themed-file-section.component';
+import { ItemPageAbstractFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
+import { ItemPageCcLicenseFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/cc-license/item-page-cc-license-field.component';
+import { ItemPageDateFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
+import { GenericItemPageFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
+import { ItemPageUriFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
+import { ItemComponent } from 'src/app/item-page/simple/item-types/shared/item.component';
+import { ThemedMetadataRepresentationListComponent } from 'src/app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
+import { DsoEditMenuComponent } from 'src/app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
+import { MetadataFieldWrapperComponent } from 'src/app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
+import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { ThemedResultsBackButtonComponent } from 'src/app/shared/results-back-button/themed-results-back-button.component';
+import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
+
+import { ThemedItemPageTitleFieldComponent } from '../../field-components/specific-field/title/themed-item-page-field.component';
+
+@listableObjectComponent('Faculty', ViewMode.StandalonePage)
+@listableObjectComponent('Language', ViewMode.StandalonePage)
+@listableObjectComponent('License', ViewMode.StandalonePage)
+@listableObjectComponent('AccessLevel', ViewMode.StandalonePage)
+@listableObjectComponent('EducationLevel', ViewMode.StandalonePage)
+@listableObjectComponent('Format', ViewMode.StandalonePage)
+@listableObjectComponent('TeachingMethod', ViewMode.StandalonePage)
+@listableObjectComponent('Type', ViewMode.StandalonePage)
+@Component({
+  selector: 'ds-simple-item',
+  styleUrls: ['./simple-item.component.scss'],
+  templateUrl: './simple-item.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [
+    NgIf,
+    ThemedResultsBackButtonComponent,
+    MiradorViewerComponent,
+    ThemedItemPageTitleFieldComponent,
+    DsoEditMenuComponent,
+    MetadataFieldWrapperComponent,
+    ThemedThumbnailComponent,
+    ThemedMediaViewerComponent,
+    ThemedFileSectionComponent,
+    ItemPageDateFieldComponent,
+    ThemedMetadataRepresentationListComponent,
+    GenericItemPageFieldComponent,
+    ItemPageAbstractFieldComponent,
+    ItemPageUriFieldComponent,
+    CollectionsComponent,
+    RouterLink,
+    AsyncPipe,
+    TranslateModule,
+    ItemPageCcLicenseFieldComponent,
+  ],
+})
+export class SimpleItemComponent extends ItemComponent {}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/login-page/login-page.component.html
+================================================================================
+<div class="container w-100 h-100">
+  <div class="text-center mt-5 row justify-content-center">
+    <div>
+      <ds-log-in [isStandalonePage]="true"></ds-log-in>
+    </div>
+  </div>
+</div>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/login-page/login-page.component.ts
+================================================================================
+import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { ThemedLogInComponent } from 'src/app/shared/log-in/themed-log-in.component';
+
+import { LoginPageComponent as BaseComponent } from '../../../../app/login-page/login-page.component';
+
+/**
+ * This component represents the login page
+ */
+@Component({
+  selector: 'ds-themed-login-page',
+  // styleUrls: ['./login-page.component.scss'],
+  styleUrls: ['../../../../app/login-page/login-page.component.scss'],
+  templateUrl: './login-page.component.html',
+  // templateUrl: '../../../../app/login-page/login-page.component.html',
+  standalone: true,
+  imports: [ThemedLogInComponent, TranslateModule],
+})
+export class LoginPageComponent extends BaseComponent {
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/navbar/navbar.component.scss
+================================================================================
+nav.navbar {
+  align-items: baseline;
+  border-bottom: 0;
+  padding-bottom: 0;
+  background-color: var(--ds-navbar-bg);
+
+  ::ng-deep {
+    .ds-menu-item-wrapper {
+      .ds-menu-item {
+        color: var(--ds-navbar-link-color);
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+
+        &:hover {
+          text-decoration: none;
+          color: var(--ds-navbar-link-color-hover);
+        }
+      }
+    }
+
+    #expandable-navbar-section-browse_global {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+
+      .ds-menu-item {
+        padding: 0;
+      }
+
+      a {
+        color: var(--ds-navbar-link-color);
+      }
+
+      #browseDropdown {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .dropdown-menu {
+        div {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+/** Mobile menu styling **/
+@media screen and (max-width: (map-get($grid-breakpoints, md)-0.02)) {
+  .navbar {
+    width: 100%;
+    background-color: var(--elte-blue);
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+
+    &.open {
+      top: 4rem;
+      right: 0;
+      height: auto;
+      min-height: 100vh; //doesn't matter because wrapper is sticky
+      z-index: 999;
+
+      .navbar-nav {
+        row-gap: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, md)) {
+  .reset-padding-md {
+    margin-left: calc(var(--bs-spacer) / -2);
+    margin-right: calc(var(--bs-spacer) / -2);
+  }
+}
+
+.navbar-expand-md.navbar-container {
+  @media screen and (max-width: (map-get($grid-breakpoints, md)-0.02)) {
+    > .navbar-inner-container {
+      padding: 0 var(--bs-spacer);
+    }
+    padding: 0;
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/navbar/navbar.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  NgClass,
+  NgComponentOutlet,
+  NgFor,
+  NgIf,
+} from '@angular/common';
+import { Component } from '@angular/core';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule } from '@ngx-translate/core';
+import { ThemedUserMenuComponent } from 'src/app/shared/auth-nav-menu/user-menu/themed-user-menu.component';
+
+import { NavbarComponent as BaseComponent } from '../../../../app/navbar/navbar.component';
+import { slideMobileNav } from '../../../../app/shared/animations/slide';
+
+/**
+ * Component representing the public navbar
+ */
+@Component({
+  selector: 'ds-themed-navbar',
+  styleUrls: ['./navbar.component.scss'],
+  // styleUrls: ['../../../../app/navbar/navbar.component.scss'],
+  // templateUrl: './navbar.component.html',
+  templateUrl: '../../../../app/navbar/navbar.component.html',
+  animations: [slideMobileNav],
+  standalone: true,
+  imports: [NgbDropdownModule, NgClass, NgIf, ThemedUserMenuComponent, NgFor, NgComponentOutlet, AsyncPipe, TranslateModule],
+})
+export class NavbarComponent extends BaseComponent {
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/shared/auth-nav-menu/auth-nav-menu.component.html
+================================================================================
+<div
+  class="navbar-nav mr-auto"
+  *ngIf="(isMobile$ | async) !== true; else mobileButtons"
+  data-test="auth-nav"
+>
+  <div
+    *ngIf="(isAuthenticated$ | async) !== true && (showAuth$ | async)"
+    class="nav-item"
+    (click)="$event.stopPropagation()"
+  >
+    <div
+      ngbDropdown
+      #loginDrop="ngbDropdown"
+      display="dynamic"
+      placement="bottom-right"
+      class="d-inline-block"
+      @fadeInOut
+    >
+      <a
+        href="javascript:void(0);"
+        class="dropdownLogin px-0.5"
+        [attr.aria-label]="'nav.login' | translate"
+        (click)="$event.preventDefault()"
+        [attr.data-test]="'login-menu' | dsBrowserOnly"
+        role="menuitem"
+        aria-haspopup="menu"
+        aria-controls="loginDropdownMenu"
+        [attr.aria-expanded]="loginDrop.isOpen()"
+        ngbDropdownToggle
+        >{{ "nav.login" | translate }}</a
+      >
+      <div
+        id="loginDropdownMenu"
+        [ngClass]="{ 'pl-3 pr-3': (loading | async) }"
+        ngbDropdownMenu
+        role="menu"
+        [attr.aria-label]="'nav.login' | translate"
+      >
+        <ds-log-in [isStandalonePage]="false"></ds-log-in>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="(isAuthenticated$ | async) && (showAuth$ | async)" class="nav-item">
+    <div
+      ngbDropdown
+      display="dynamic"
+      placement="bottom-right"
+      class="d-inline-block"
+      @fadeInOut
+    >
+      <a
+        href="javascript:void(0);"
+        role="menuitem"
+        [attr.aria-label]="'nav.user-profile-menu-and-logout' | translate"
+        aria-controls="user-menu-dropdown"
+        (click)="$event.preventDefault()"
+        [title]="'nav.user-profile-menu-and-logout' | translate"
+        class="dropdownLogout px-1"
+        [attr.data-test]="'user-menu' | dsBrowserOnly"
+        ngbDropdownToggle
+      >
+        <img src="/assets/elte/images/userIcon.svg"
+      /></a>
+      <div id="logoutDropdownMenu" ngbDropdownMenu>
+        <ds-user-menu [inExpandableNavbar]="false"></ds-user-menu>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #mobileButtons>
+  <div data-test="auth-nav">
+    <a
+      *ngIf="(isAuthenticated$ | async) !== true"
+      routerLink="/login"
+      routerLinkActive="active"
+      class="loginLink px-0.5"
+      role="button"
+    >
+      {{ "nav.login" | translate }}<span class="sr-only">(current)</span>
+    </a>
+    <a
+      *ngIf="isAuthenticated$ | async"
+      role="button"
+      [attr.aria-label]="'nav.logout' | translate"
+      [title]="'nav.logout' | translate"
+      routerLink="/logout"
+      routerLinkActive="active"
+      class="logoutLink px-1"
+    >
+      <i class="fas fa-sign-out-alt fa-lg fa-fw"></i>
+      <span class="sr-only">(current)</span>
+    </a>
+  </div>
+</ng-template>
+
+<!-- Do not use ul/li in this menu as it breaks e2e accessibility tests -->
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/shared/auth-nav-menu/auth-nav-menu.component.ts
+================================================================================
+import {
+  AsyncPipe,
+  NgClass,
+  NgIf,
+} from '@angular/common';
+import { Component } from '@angular/core';
+import {
+  RouterLink,
+  RouterLinkActive,
+} from '@angular/router';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule } from '@ngx-translate/core';
+import { ThemedUserMenuComponent } from 'src/app/shared/auth-nav-menu/user-menu/themed-user-menu.component';
+import { ThemedLogInComponent } from 'src/app/shared/log-in/themed-log-in.component';
+
+import {
+  fadeInOut,
+  fadeOut,
+} from '../../../../../app/shared/animations/fade';
+import { AuthNavMenuComponent as BaseComponent } from '../../../../../app/shared/auth-nav-menu/auth-nav-menu.component';
+import { BrowserOnlyPipe } from '../../../../../app/shared/utils/browser-only.pipe';
+
+/**
+ * Component representing the {@link AuthNavMenuComponent} of a page
+ */
+@Component({
+  selector: 'ds-themed-auth-nav-menu',
+  templateUrl: './auth-nav-menu.component.html',
+  // templateUrl: '../../../../../app/shared/auth-nav-menu/auth-nav-menu.component.html',
+  // styleUrls: ['./auth-nav-menu.component.scss'],
+  styleUrls: ['../../../../../app/shared/auth-nav-menu/auth-nav-menu.component.scss'],
+  animations: [fadeInOut, fadeOut],
+  standalone: true,
+  imports: [NgClass, NgIf, NgbDropdownModule, ThemedLogInComponent, RouterLink, RouterLinkActive, ThemedUserMenuComponent, AsyncPipe, TranslateModule, BrowserOnlyPipe],
+})
+export class AuthNavMenuComponent extends BaseComponent {
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/shared/lang-switch/lang-switch.component.html
+================================================================================
+<div
+  ngbDropdown
+  class="navbar-nav"
+  *ngIf="moreThanOneLanguage"
+  display="dynamic"
+  placement="bottom-right"
+>
+  <a
+    href="javascript:void(0);"
+    role="menuitem"
+    [attr.aria-label]="'nav.language' | translate"
+    aria-controls="language-menu-list"
+    aria-haspopup="menu"
+    [title]="'nav.language' | translate"
+    (click)="$event.preventDefault()"
+    data-toggle="dropdown"
+    ngbDropdownToggle
+    tabindex="0"
+  >
+    <div [ngSwitch]="currentLang">
+      <img *ngSwitchCase="'hu'" src="/assets/elte/images/huFlagIcon.svg" />
+      <img *ngSwitchCase="'en'" src="/assets/elte/images/enFlagIcon.svg" />
+      <i *ngSwitchDefault class="fas fa-globe-asia fa-lg fa-fw"></i>
+    </div>
+  </a>
+  <ul
+    ngbDropdownMenu
+    class="dropdown-menu"
+    [attr.aria-label]="'nav.language' | translate"
+    id="language-menu-list"
+    role="menu"
+  >
+    <li
+      class="dropdown-item"
+      tabindex="0"
+      #langSelect
+      *ngFor="let lang of translate.getLangs()"
+      role="menuitem"
+      (keyup.enter)="useLang(lang)"
+      (click)="useLang(lang)"
+      [class.active]="lang === translate.currentLang"
+    >
+      {{ langLabel(lang) }}
+    </li>
+  </ul>
+</div>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/shared/lang-switch/lang-switch.component.ts
+================================================================================
+import {
+  NgFor,
+  NgIf,
+  NgSwitch,
+  NgSwitchCase,
+  NgSwitchDefault,
+} from '@angular/common';
+import { Component } from '@angular/core';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { LangSwitchComponent as BaseComponent } from '../../../../../app/shared/lang-switch/lang-switch.component';
+
+@Component({
+  selector: 'ds-themed-lang-switch',
+  // styleUrls: ['./lang-switch.component.scss'],
+  styleUrls: ['../../../../../app/shared/lang-switch/lang-switch.component.scss'],
+  templateUrl: './lang-switch.component.html',
+  // templateUrl: '../../../../../app/shared/lang-switch/lang-switch.component.html',
+  standalone: true,
+  imports: [NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, NgbDropdownModule, NgFor, TranslateModule],
+})
+export class LangSwitchComponent extends BaseComponent {
+  currentLang = this.translate.currentLang;
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/shared/metadata-representation/metadata-representation.decorator.ts
+================================================================================
+import { InjectionToken } from '@angular/core';
+import { Context } from 'src/app/core/shared/context.model';
+import { GenericConstructor } from 'src/app/core/shared/generic-constructor';
+import { MetadataRepresentationType } from 'src/app/core/shared/metadata-representation/metadata-representation.model';
+import { OrgUnitItemMetadataListElementComponent } from 'src/app/entity-groups/research-entities/metadata-representations/org-unit/org-unit-item-metadata-list-element.component';
+import { PersonItemMetadataListElementComponent } from 'src/app/entity-groups/research-entities/metadata-representations/person/person-item-metadata-list-element.component';
+import { ProjectItemMetadataListElementComponent } from 'src/app/entity-groups/research-entities/metadata-representations/project/project-item-metadata-list-element.component';
+import {
+  hasNoValue,
+  hasValue,
+} from 'src/app/shared/empty.util';
+import {
+  DEFAULT_CONTEXT,
+  DEFAULT_THEME,
+  resolveTheme,
+} from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { BrowseLinkMetadataListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/browse-link/browse-link-metadata-list-element.component';
+import { ItemMetadataListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/item/item-metadata-list-element.component';
+import { PlainTextMetadataListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/plain-text/plain-text-metadata-list-element.component';
+
+import { GenericItemMetadataListElementComponent } from '../../entity-groups/research-entities/metadata-representations/generic-item/generic-item-metadata-list-element.component';
+
+export const METADATA_REPRESENTATION_COMPONENT_FACTORY = new InjectionToken<(entityType: string, mdRepresentationType: MetadataRepresentationType, context: Context, theme: string) => GenericConstructor<any>>('getMetadataRepresentationComponent', {
+  providedIn: 'root',
+  factory: () => getMetadataRepresentationComponent,
+});
+
+
+export const DEFAULT_ENTITY_TYPE = 'Publication';
+export const DEFAULT_REPRESENTATION_TYPE = MetadataRepresentationType.PlainText;
+
+export type MetadataRepresentationComponent =
+  typeof BrowseLinkMetadataListElementComponent |
+  typeof PlainTextMetadataListElementComponent |
+  typeof ItemMetadataListElementComponent |
+  typeof OrgUnitItemMetadataListElementComponent |
+  typeof PersonItemMetadataListElementComponent |
+  typeof ProjectItemMetadataListElementComponent |
+  typeof GenericItemMetadataListElementComponent;
+
+export const METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP =
+  new Map<string, Map<MetadataRepresentationType, Map<Context, Map<string, MetadataRepresentationComponent>>>>([
+    ['Publication', new Map([
+      [MetadataRepresentationType.PlainText, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, PlainTextMetadataListElementComponent as any]])]])],
+      [MetadataRepresentationType.AuthorityControlled, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, PlainTextMetadataListElementComponent]])]])],
+      [MetadataRepresentationType.BrowseLink, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, BrowseLinkMetadataListElementComponent]])]])],
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, ItemMetadataListElementComponent]])]])],
+    ])],
+    ['Person', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, PersonItemMetadataListElementComponent]])]])],
+    ])],
+    ['LearningObject', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Language', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['EducationLevel', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Type', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Format', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['TeachingMethod', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['License', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['FieldOfScience', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['FieldOfStudy', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Program', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['DoctoralSchool', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Faculty', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Department', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Institute', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['Course', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['CourseInstance', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['AccessLevel', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, GenericItemMetadataListElementComponent]])]])],
+    ])],
+    ['OrgUnit', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, OrgUnitItemMetadataListElementComponent]])]])],
+    ])],
+    ['Project', new Map([
+      [MetadataRepresentationType.Item, new Map([
+        [DEFAULT_CONTEXT, new Map([[DEFAULT_THEME, ProjectItemMetadataListElementComponent]])]])],
+    ])],
+  ]);
+/**
+ * Decorator function to store metadata representation mapping
+ * @param entityType The entity type the component represents
+ * @param mdRepresentationType The metadata representation type the component represents
+ * @param context The optional context the component represents
+ * @param theme The optional theme for the component
+ */
+export function metadataRepresentationComponent(entityType: string, mdRepresentationType: MetadataRepresentationType, context: Context = DEFAULT_CONTEXT, theme = DEFAULT_THEME) {
+  return function decorator(component: any) {
+    if (hasNoValue(METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP.get(entityType))) {
+      METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP.set(entityType, new Map());
+    }
+    if (hasNoValue(METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP.get(entityType).get(mdRepresentationType))) {
+      METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP.get(entityType).set(mdRepresentationType, new Map());
+    }
+
+    if (hasNoValue(METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP.get(entityType).get(mdRepresentationType).get(context))) {
+      METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP.get(entityType).get(mdRepresentationType).set(context, new Map());
+    }
+
+    if (hasValue(METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP.get(entityType).get(mdRepresentationType).get(context).get(theme))) {
+      throw new Error(`There can't be more than one component to render Entity of type "${entityType}" in MetadataRepresentation "${mdRepresentationType}" with context "${context}"`);
+    }
+    METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP.get(entityType).get(mdRepresentationType).get(context).set(theme, component);
+  };
+}
+
+/**
+ * Getter to retrieve a matching component by entity type, metadata representation and context
+ * @param entityType The entity type to match
+ * @param mdRepresentationType The metadata representation to match
+ * @param context The context to match
+ * @param theme the theme to match
+ */
+export function getMetadataRepresentationComponent(entityType: string, mdRepresentationType: MetadataRepresentationType, context: Context = DEFAULT_CONTEXT, theme = DEFAULT_THEME) {
+  const mapForEntity = METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP.get(entityType);
+  if (hasValue(mapForEntity)) {
+    const entityAndMDRepMap = mapForEntity.get(mdRepresentationType);
+    if (hasValue(entityAndMDRepMap)) {
+      const contextMap = entityAndMDRepMap.get(context);
+      if (hasValue(contextMap)) {
+        const match = resolveTheme(contextMap, theme);
+        if (hasValue(match)) {
+          return match;
+        }
+        if (hasValue(contextMap.get(DEFAULT_THEME))) {
+          return contextMap.get(DEFAULT_THEME);
+        }
+      }
+      if (hasValue(entityAndMDRepMap.get(DEFAULT_CONTEXT)) &&
+        hasValue(entityAndMDRepMap.get(DEFAULT_CONTEXT).get(DEFAULT_THEME))) {
+        return entityAndMDRepMap.get(DEFAULT_CONTEXT).get(DEFAULT_THEME);
+      }
+    }
+    if (hasValue(mapForEntity.get(DEFAULT_REPRESENTATION_TYPE)) &&
+      hasValue(mapForEntity.get(DEFAULT_REPRESENTATION_TYPE).get(DEFAULT_CONTEXT)) &&
+      hasValue(mapForEntity.get(DEFAULT_REPRESENTATION_TYPE).get(DEFAULT_CONTEXT).get(DEFAULT_THEME))) {
+      return mapForEntity.get(DEFAULT_REPRESENTATION_TYPE).get(DEFAULT_CONTEXT).get(DEFAULT_THEME);
+    }
+  }
+  return METADATA_REPRESENTATION_COMPONENT_DECORATOR_MAP.get(DEFAULT_ENTITY_TYPE).get(DEFAULT_REPRESENTATION_TYPE).get(DEFAULT_CONTEXT).get(DEFAULT_THEME);
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/shared/object-list/community-list-element/community-list-element.component.html
+================================================================================
+<div>
+  <div *ngIf="layout === 'cards'" class="d-flex flex-row community-card">
+    <div class="image-container" *ngVar="isLoading$ | async as isLoading">
+      <div *ngIf="isLoading" class="thumbnail-loading">
+        <ds-loading [spinner]="true"></ds-loading>
+      </div>
+      <ng-container *ngVar="src$ | async as src">
+        <img
+          *ngIf="src !== null"
+          class="thumbnail-content img-fluid"
+          [ngClass]="{ 'd-none': isLoading }"
+          [src]="src | dsSafeUrl"
+          alt="Logo"
+          (load)="successHandler()"
+        />
+      </ng-container>
+    </div>
+    <div class="name">{{ dsoNameService.getName(object) }}</div>
+    <div class="description">{{ description }}</div>
+    <a
+      *ngIf="linkType !== linkTypes.None"
+      [target]="linkType === linkTypes.ExternalLink ? '_blank' : '_self'"
+      [attr.rel]="
+        linkType === linkTypes.ExternalLink ? 'noopener noreferrer' : null
+      "
+      [routerLink]="['/communities/' + object.id]"
+    >
+      <button class="btn btn-primary">Megtekintés</button>
+    </a>
+  </div>
+</div>
+<div *ngIf="layout === 'list'" class="d-flex flex-row community-list-element">
+  <a *ngIf="linkType !== linkTypes.None" [target]="linkType === linkTypes.ExternalLink ? '_blank' : '_self'"
+    [attr.rel]="linkType === linkTypes.ExternalLink ? 'noopener noreferrer' : null"
+    [routerLink]="['/communities/' + object.id]" class="lead">
+    <svg class="icon-elte mx-2" width="33" height="33" viewBox="0 0 33 33" aria-hidden="true" focusable="false">
+      <rect class="icon-elte-bg" x="0.489" y="0.0127" width="32" height="32" rx="4" />
+      <path class="icon-elte-arrow"
+        d="M13.1052 8.05769C12.8709 8.2921 12.7393 8.60999 12.7393 8.94144C12.7393 9.2729 12.8709 9.59078 13.1052 9.82519L19.2927 16.0127L13.1052 22.2002C12.8775 22.4359 12.7515 22.7517 12.7544 23.0794C12.7572 23.4072 12.8887 23.7207 13.1205 23.9525C13.3522 24.1842 13.6657 24.3157 13.9935 24.3185C14.3212 24.3214 14.637 24.1954 14.8727 23.9677L21.944 16.8964C22.1783 16.662 22.31 16.3441 22.31 16.0127C22.31 15.6812 22.1783 15.3634 21.944 15.1289L14.8727 8.05769C14.6383 7.82336 14.3204 7.69171 13.989 7.69171C13.6575 7.69171 13.3397 7.82336 13.1052 8.05769Z" />
+    </svg>
+    {{ dsoNameService.getName(object) }}
+  </a>
+  <span *ngIf="linkType === linkTypes.None" class="lead">
+    {{ dsoNameService.getName(object) }}
+  </span>
+  <span
+    *ngIf="object.archivedItemsCount >= 0"
+    class="badge badge-pill badge-secondary align-self-center archived-items-lead"
+    >{{ object.archivedItemsCount }}</span
+  >
+</div>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/shared/object-list/community-list-element/community-list-element.component.scss
+================================================================================
+.community-list-element {
+  a {
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    color: #4b4b4b;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+}
+
+.community-card {
+  display: grid !important;
+  grid-template-rows: 15rem auto 1fr auto;
+  height: 35rem;
+  width: 16rem;
+  padding: 0.5rem;
+  background-color: var(--elte-blue);
+  gap: 1rem;
+
+  .image-container {
+    width: 100%;
+
+    .thumbnail-loading {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      ::ng-deep {
+        .spinner {
+          color: var(--primary);
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: "Varela", system-ui;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary);
+  }
+
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: justify;
+    color: #4b4b4b;
+  }
+
+  a {
+    button {
+      width: 100%;
+    }
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/shared/object-list/community-list-element/community-list-element.component.ts
+================================================================================
+import { CommonModule } from '@angular/common';
+import {
+  HttpClient,
+  HttpClientModule,
+} from '@angular/common/http';
+import { Component, OnChanges } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import {
+  BehaviorSubject,
+  firstValueFrom,
+} from 'rxjs';
+import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
+import { ThemedLoadingComponent } from 'src/app/shared/loading/themed-loading.component';
+import { SafeUrlPipe } from 'src/app/shared/utils/safe-url-pipe';
+import { VarDirective } from 'src/app/shared/utils/var.directive';
+import { environment } from 'src/environments/environment';
+
+import { Community } from '../../../../../../app/core/shared/community.model';
+import { Context } from '../../../../../../app/core/shared/context.model';
+import { ViewMode } from '../../../../../../app/core/shared/view-mode.model';
+import { listableObjectComponent } from '../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { CommunityListElementComponent as BaseComponent } from '../../../../../../app/shared/object-list/community-list-element/community-list-element.component';
+
+@listableObjectComponent(Community, ViewMode.ListElement, Context.Any, 'elte')
+
+@Component({
+  selector: 'ds-community-list-element',
+  styleUrls: ['./community-list-element.component.scss'],
+  // styleUrls: ['../../../../../../app/shared/object-list/community-list-element/community-list-element.component.scss'],
+  templateUrl: './community-list-element.component.html',
+  // templateUrl: '../../../../../../app/shared/object-list/community-list-element/community-list-element.component.html',
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterLink,
+    HttpClientModule,
+    ThemedLoadingComponent,
+    SafeUrlPipe,
+    VarDirective,
+  ],
+})
+/**
+ * Component representing a list element for a community
+ */
+@listableObjectComponent(Community, ViewMode.ListElement)
+export class CommunityListElementComponent extends BaseComponent implements OnChanges {
+
+  src$ = new BehaviorSubject<string>(undefined);
+  isLoading$ = new BehaviorSubject(true);
+  layout = environment.homePage.topLevelCommunityList.layout;
+  description: string;
+
+  constructor(private http: HttpClient, dsoNameService: DSONameService) {
+    super(dsoNameService);
+  }
+
+  ngOnChanges(): void {
+    this.description = this.object.metadata?.['dc.description.abstract']?.[0]?.value;
+    this.getLogoUrl().then(logoUrl => {
+      if (logoUrl) {
+        this.src$.next(logoUrl);
+      } else {
+        this.src$.next('/assets/elte/images/default.svg');
+      }
+    });
+  }
+
+  async getLogoUrl(): Promise<string | undefined> {
+    try {
+      const response = await firstValueFrom(this.http.get<any>(this.object._links.logo.href));
+      return response?._links.content.href;
+    } catch (error) {
+      return undefined;
+    }
+  }
+
+  /**
+   * Stop the loading animation once the thumbnail is successfully loaded
+   */
+  successHandler() {
+    this.isLoading$.next(false);
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/shared/object-list/object-list.component.html
+================================================================================
+<ds-pagination
+  [paginationOptions]="config"
+  [collectionSize]="objects?.payload?.totalElements"
+  [objects]="objects"
+  [sortOptions]="sortConfig"
+  [hideGear]="hideGear"
+  [hidePagerWhenSinglePage]="hidePagerWhenSinglePage"
+  [hidePaginationDetail]="hidePaginationDetail"
+  [showPaginator]="showPaginator"
+  (pageChange)="onPageChange($event)"
+  (pageSizeChange)="onPageSizeChange($event)"
+  (sortDirectionChange)="onSortDirectionChange($event)"
+  (sortFieldChange)="onSortFieldChange($event)"
+  (paginationChange)="onPaginationChange($event)"
+  (prev)="goPrev()"
+  (next)="goNext()"
+>
+  <ul
+    *ngIf="objects?.hasSucceeded"
+    class="list-unstyled"
+    [ngClass]="{ 'ml-4': selectable }"
+    [ngClass]="layout"
+    data-test="objects"
+  >
+    <li
+      *ngFor="
+        let object of objects?.payload?.page;
+        let i = index;
+        let last = last
+      "
+      class="mt-4 mb-4 d-flex"
+      [class.border-bottom]="hasBorder && !last"
+      [attr.data-test]="'list-object' | dsBrowserOnly"
+    >
+      <ds-selectable-list-item-control
+        *ngIf="selectable"
+        [index]="i"
+        [object]="object"
+        [selectionConfig]="selectionConfig"
+        (deselectObject)="deselectObject.emit($event)"
+        (selectObject)="selectObject.emit($event)"
+      ></ds-selectable-list-item-control>
+      <ds-importable-list-item-control
+        *ngIf="importable"
+        [object]="object"
+        [importConfig]="importConfig"
+        (importObject)="importObject.emit($event)"
+      ></ds-importable-list-item-control>
+      <ds-listable-object-component-loader
+        [object]="object"
+        [viewMode]="viewMode"
+        [index]="i"
+        [context]="context"
+        [linkType]="linkType"
+        [listID]="selectionConfig?.listId"
+        (contentChange)="contentChange.emit($event)"
+      ></ds-listable-object-component-loader>
+    </li>
+  </ul>
+</ds-pagination>
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/shared/object-list/object-list.component.scss
+================================================================================
+ds-selectable-list-item-control {
+  z-index: 1;
+}
+
+::ng-deep {
+  ::ng-deep {
+    #p-tl {
+      ul {
+        &.cards {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.75rem;
+
+          li {
+            &.mb-4 {
+              margin-bottom: 0.5rem !important;
+              margin-top: 0.5rem !important;
+            }
+          }
+        }
+
+        &.list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          padding: 2rem 4rem;
+
+          li {
+            &.mb-4 {
+              margin-bottom: 0.5rem !important;
+              margin-top: 0.5rem !important;
+            }
+          }
+        }
+      }
+    }
+
+    ngb-pagination {
+      .pagination {
+        .page-item {
+          margin: 0 0.25rem;
+
+          .page-link {
+            border: none;
+            border-radius: 50%;
+            background-color: transparent;
+            color: #FFFFFF;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          &.active {
+            .page-link {
+              background-color: var(--elte-tan);
+              color: var(--elte-blue);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/** Mobile menu styling **/
+@media screen and (max-width: (map-get($grid-breakpoints, md)-0.02)) {
+  ::ng-deep {
+    ::ng-deep {
+      #p-tl {
+        ul {
+          &.list-unstyled {
+            display: grid;
+            grid-template-columns: none;
+            justify-content: center;
+
+            li {
+              &.mb-4 {
+                margin-bottom: 0.5rem !important;
+                margin-top: 0.5rem !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/shared/object-list/object-list.component.ts
+================================================================================
+import {
+  NgClass,
+  NgFor,
+  NgIf,
+} from '@angular/common';
+import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
+
+import { ImportableListItemControlComponent } from '../../../../../app/shared/object-collection/shared/importable-list-item-control/importable-list-item-control.component';
+import { ListableObjectComponentLoaderComponent } from '../../../../../app/shared/object-collection/shared/listable-object/listable-object-component-loader.component';
+import { SelectableListItemControlComponent } from '../../../../../app/shared/object-collection/shared/selectable-list-item-control/selectable-list-item-control.component';
+import { ObjectListComponent as BaseComponent } from '../../../../../app/shared/object-list/object-list.component';
+import { PaginationComponent } from '../../../../../app/shared/pagination/pagination.component';
+import { BrowserOnlyPipe } from '../../../../../app/shared/utils/browser-only.pipe';
+
+/**
+ * A component to display the "Browse By" section of a Community or Collection page
+ * It expects the ID of the Community or Collection as input to be passed on as a scope
+ */
+@Component({
+  selector: 'ds-themed-object-list',
+  styleUrls: ['./object-list.component.scss'],
+  // styleUrls: ['../../../../../app/shared/object-list/object-list.component.scss'],
+  templateUrl: './object-list.component.html',
+  // templateUrl: '../../../../../app/shared/object-list/object-list.component.html',
+  imports: [PaginationComponent, NgIf, NgClass, NgFor, SelectableListItemControlComponent, ImportableListItemControlComponent, ListableObjectComponentLoaderComponent, BrowserOnlyPipe],
+  standalone: true,
+})
+
+export class ObjectListComponent extends BaseComponent {
+  layout = environment.homePage.topLevelCommunityList.layout;
+
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/app/shared/theme-support/theme-meta.service.ts
+================================================================================
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class ThemeMetaService {
+
+  getMetaContent(name: string): string | null {
+    return document.querySelector(`meta[name="${name}"]`)?.getAttribute('content') ?? null;
+  }
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/eager-theme.module.ts
+================================================================================
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { Context } from 'src/app/core/shared/context.model';
+import { MetadataRepresentationType } from 'src/app/core/shared/metadata-representation/metadata-representation.model';
+import {
+  getMetadataRepresentationComponent as defaultGet,
+  METADATA_REPRESENTATION_COMPONENT_FACTORY,
+} from 'src/app/shared/metadata-representation/metadata-representation.decorator';
+
+import { RootModule } from '../../app/root.module';
+import { GenericItemMetadataListElementComponent } from './app/entity-groups/research-entities/metadata-representations/generic-item/generic-item-metadata-list-element.component';
+// Your themed components
+import { PersonComponent } from './app/entity-groups/research-entities/item-pages/person/person.component';
+import { FooterComponent } from './app/footer/footer.component';
+import { HeaderComponent } from './app/header/header.component';
+import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-navbar-wrapper.component';
+import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
+import { ElteRelatedItemsComponent } from './app/item-page/simple/elte-related-items/elte-related-items.component';
+import { LearningObjectComponent } from './app/item-page/simple/item-types/learning-object/learning-object.component';
+import { CourseInstanceComponent } from './app/item-page/simple/item-types/course-instance/course-instance.component';
+import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
+import { SimpleItemComponent } from './app/item-page/simple/item-types/simple-item/simple-item.component';
+import { NavbarComponent } from './app/navbar/navbar.component';
+import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
+import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
+import { MetadataValuesComponent } from './app/item-page/simple/field-components/specific-field/metadata-values/metadata-values.component';
+
+const THEME = 'elte';
+
+function themedGet(
+  entityType: string,
+  mdType: MetadataRepresentationType,
+  context: Context,
+  theme: string,
+) {
+  if (theme === THEME && mdType === MetadataRepresentationType.Item) {
+    return GenericItemMetadataListElementComponent as any;
+  }
+  return defaultGet(entityType, mdType, context, theme);
+}
+
+const DECLARATIONS = [
+];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    RootModule,
+    PublicationComponent,
+    ElteRelatedItemsComponent,
+    LearningObjectComponent,
+    CourseInstanceComponent,
+    SimpleItemComponent,
+    GenericItemMetadataListElementComponent,
+    HeaderComponent,
+    HeaderNavbarWrapperComponent,
+    NavbarComponent,
+    HomeNewsComponent,
+    CommunityListElementComponent,
+    FooterComponent,
+    LangSwitchComponent,
+    PersonComponent,
+    MetadataValuesComponent,
+  ],
+  declarations: DECLARATIONS,
+  providers: [
+    {
+      provide: METADATA_REPRESENTATION_COMPONENT_FACTORY,
+      useFactory: () => themedGet,
+    },
+  ],
+})
+export class EagerThemeModule {}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/lazy-theme.module.ts
+================================================================================
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { StoreModule } from '@ngrx/store';
+import { TranslateModule } from '@ngx-translate/core';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+
+import { RootModule } from '../../app/root.module';
+import { PersonComponent } from './app/entity-groups/research-entities/item-pages/person/person.component';
+import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
+import { HomePageComponent } from './app/home-page/home-page.component';
+import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
+import { ElteRelatedItemsComponent } from './app/item-page/simple/elte-related-items/elte-related-items.component';
+import { ThemedItemPageTitleFieldComponent } from './app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
+import { MetadataValuesComponent } from './app/item-page/simple/field-components/specific-field/metadata-values/metadata-values.component';
+import { GenericItemPageFieldComponent } from './app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
+import { LearningObjectComponent } from './app/item-page/simple/item-types/learning-object/learning-object.component';
+import { CourseInstanceComponent } from './app/item-page/simple/item-types/course-instance/course-instance.component';
+import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
+import { SimpleItemComponent } from './app/item-page/simple/item-types/simple-item/simple-item.component';
+import { LoginPageComponent } from './app/login-page/login-page.component';
+import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
+import { ObjectListComponent } from './app/shared/object-list/object-list.component';
+
+const DECLARATIONS = [
+  HomePageComponent,
+  LoginPageComponent,
+  AdminSidebarComponent,
+  ObjectListComponent,
+  AuthNavMenuComponent,
+  FullItemPageComponent,
+  PublicationComponent,
+  PersonComponent,
+];
+
+@NgModule({
+  imports: [
+    RootModule,
+    CommonModule,
+    DragDropModule,
+    FormsModule,
+    HttpClientModule,
+    NgbModule,
+    RouterModule,
+    ScrollToModule,
+    StoreModule,
+    StoreRouterConnectingModule,
+    TranslateModule,
+    FormsModule,
+    NgxGalleryModule,
+    PublicationComponent,
+    ElteRelatedItemsComponent,
+    LearningObjectComponent,
+    CourseInstanceComponent,
+    SimpleItemComponent,
+    ThemedItemPageTitleFieldComponent,
+    GenericItemPageFieldComponent,
+    MetadataValuesComponent,
+    ...DECLARATIONS,
+  ],
+})
+
+/**
+   * This module serves as an index for all the components in this theme.
+   * It should import all other modules, so the compiler knows where to find any components referenced
+   * from a component in this theme
+   * It is purposefully not exported, it should never be imported anywhere else, its only purpose is
+   * to give lazily loaded components a context in which they can be compiled successfully
+   */
+class LazyThemeModule {
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/styles/theme.scss
+================================================================================
+// This file combines the other scss files in to one. You usually shouldn't edit this file directly
+
+@import './_theme_sass_variable_overrides.scss';
+@import '../../../styles/_variables.scss';
+@import '../../../styles/_mixins.scss';
+@import '../../../styles/helpers/font_awesome_imports.scss';
+@import '../../../styles/_vendor.scss';
+@import '../../../styles/_custom_variables.scss';
+@import './_theme_css_variable_overrides.scss';
+@import '../../../styles/bootstrap_variables_mapping.scss';
+@import '../../../styles/_truncatable-part.component.scss';
+@import './_global-styles.scss';
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/styles/_global-styles.scss
+================================================================================
+// Add any global css for the theme here
+
+// imports the base global style
+@import "../../../styles/_global-styles.scss";
+
+.form-control:focus {
+  outline: none;
+}
+
+.btn.btn-secondary:focus,
+.btn.btn-primary:focus,
+.btn:focus,
+*:focus-visible,
+*:focus {
+  outline: none !important;
+}
+
+.lead {
+  font-weight: 400;
+}
+
+.badge {
+  font-weight: 500;
+}
+
+a,
+.btn-link {
+  color: var(--primary);
+}
+
+.btn-primary {
+  background-color: var(--elte-tan);
+  border-color: var(--elte-tan);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.show>.btn-primary.dropdown-toggle {
+  background-color: darken(#CEAF87, 7%);
+  border-color: darken(#CEAF87, 9%);
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  background-color: var(--elte-tan);
+  border-color: var(--elte-tan);
+}
+
+.btn.btn-outline-secondary {
+  background-color: #FFFFFF;
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+.btn.btn-outline-secondary:hover {
+  border-color: var(--elte-tan) !important;
+  background-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+}
+
+ds-themed-home-page .community-list-wrapper,
+ds-themed-home-page .community-list-wrapper.bg-light {
+  background-color: var(--elte-blue) !important;
+}
+
+ds-themed-home-page .community-list-wrapper>.container,
+ds-themed-home-page .community-list-wrapper>.container.bg-light {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none;
+}
+
+ds-themed-home-page .community-list-wrapper .form-control {
+  background-color: #fff;
+  color: #212529;
+}
+
+ds-themed-home-page .community-list-wrapper .align-middle.hidden-xs-down {
+  color: #fff !important;
+}
+
+ds-themed-home-page .community-list-wrapper .align-middle {
+  color: #fff !important;
+}
+
+ds-themed-home-page .community-list-wrapper h2 {
+  color: var(--elte-tan);
+}
+
+ds-themed-home-page .community-list-wrapper .community-list-element a.lead {
+  color: #fff;
+  text-decoration: none;
+  transition: color .15s ease-in-out;
+}
+
+ds-themed-home-page .community-list-wrapper .community-list-element a.lead:hover,
+ds-themed-home-page .community-list-wrapper .community-list-element a.lead:focus-visible {
+  color: var(--elte-tan);
+}
+
+ds-themed-home-page .community-list-wrapper .community-list-element .icon-elte .icon-elte-bg {
+  fill: #FFFFFF;
+}
+
+ds-themed-home-page .community-list-wrapper .community-list-element .icon-elte .icon-elte-arrow {
+  fill: var(--elte-blue);
+}
+
+ds-themed-home-page .community-list-wrapper .community-list-element a.lead:hover .icon-elte .icon-elte-bg,
+ds-themed-home-page .community-list-wrapper .community-list-element a.lead:focus-visible .icon-elte .icon-elte-bg {
+  fill: var(--elte-tan);
+}
+
+ds-themed-home-page .community-list-wrapper ds-rss .btn.btn-secondary {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-blue);
+}
+
+ds-themed-home-page .community-list-wrapper ds-rss .btn.btn-secondary:hover,
+ds-themed-home-page .community-list-wrapper ds-rss .btn.btn-secondary:focus,
+ds-themed-home-page .community-list-wrapper ds-rss .btn.btn-secondary:active,
+ds-themed-home-page .community-list-wrapper ds-rss .btn.btn-secondary.active,
+ds-themed-home-page .community-list-wrapper ds-rss .show>.btn.btn-secondary.dropdown-toggle {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+}
+
+ds-base-results-back-button .btn.btn-secondary {
+  background-color: var(--elte-tan);
+  border-color: var(--elte-tan);
+}
+
+ds-base-results-back-button .btn.btn-secondary:hover {
+  background-color: darken($elte-tan, 7%);
+  border-color: darken($elte-tan, 9%);
+}
+
+ds-base-dso-edit-metadata .btn.btn-success {
+  background-color: var(--elte-tan);
+  border-color: var(--elte-tan);
+}
+
+ds-base-dso-edit-metadata .btn.btn-success:hover {
+  background-color: darken($elte-tan, 7%);
+  border-color: darken($elte-tan, 9%);
+}
+
+ds-edit-item-page .btn.btn-outline-secondary {
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-edit-item-page .btn.btn-outline-secondary:hover {
+  border-color: var(--elte-tan) !important;
+  background-color: var(--elte-tan) !important;
+  color: #FFFFFF!important;
+}
+
+ds-base-search-form .btn.btn-outline-secondary {
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-base-search-form .btn.btn-outline-secondary:hover {
+  border-color: var(--elte-tan) !important;
+  background-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+}
+
+.badge-secondary {
+  background-color: var(--elte-tan);
+}
+
+.badge-info {
+  background-color: var(--elte-blue);
+}
+
+.nav-dropdown-menu.dropdown-menu {
+  background-color: var(--elte-blue) !important;
+  border: 0;
+  box-shadow: none;
+}
+
+.nav-dropdown-menu .ds-menu-item,
+.nav-dropdown-menu a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.nav-dropdown-menu .ds-menu-item:hover,
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu .ds-menu-item:focus-visible,
+.nav-dropdown-menu a:focus-visible {
+  color: var(--elte-tan) !important;
+  background: transparent !important;
+  outline: none;
+}
+
+nav.navbar .navbar-nav .dropdownLogin[ngbDropdownToggle] {
+  color: #fff !important;
+  text-decoration: none;
+  transition: color .15s ease-in-out;
+}
+
+nav.navbar .navbar-nav .dropdownLogin[ngbDropdownToggle]:hover,
+nav.navbar .navbar-nav .dropdownLogin[ngbDropdownToggle]:focus-visible {
+  color: var(--elte-tan) !important;
+}
+
+.navbar .loginLink {
+  color: #fff !important;
+  text-decoration: none;
+  transition: color .15s ease-in-out;
+}
+
+.navbar .loginLink:hover,
+.navbar .loginLink:focus-visible {
+  color: var(--elte-tan) !important;
+}
+
+ds-search-navbar ds-base-search-navbar button:hover {
+  color: var(--elte-tan) !important;
+}
+
+.breadcrumb-item {
+  color: #FFFFFF !important;
+}
+
+ds-community-list-page h1,
+ds-base-community-list-page h1,
+ds-comcol-page-header h1,
+ds-base-comcol-page-browse-by h2 {
+  color: var(--elte-blue);
+}
+
+ds-community-list .btn[data-test="expand-button"] {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: .5rem;
+
+  background-color: var(--elte-blue);
+  border-color: var(--elte-blue);
+  color: #fff;
+  border-radius: .375rem;
+  line-height: 1;
+  box-shadow: none;
+  transition: background-color .15s, border-color .15s, color .15s;
+}
+
+ds-community-list .btn[data-test="expand-button"]:hover,
+ds-community-list .btn[data-test="expand-button"]:focus-visible {
+  background-color: var(--elte-tan);
+  border-color: var(--elte-tan);
+  color: var(--elte-blue);
+}
+
+ds-community-list .btn-group>.btn[data-test="expand-button"] {
+  border-radius: .375rem !important;
+}
+
+ds-community-list .btn-group>.btn[data-test="expand-button"]:first-child {
+  border-top-right-radius: .375rem !important;
+  border-bottom-right-radius: .375rem !important;
+}
+
+ds-themed-home-page .community-list-wrapper ngb-pagination .page-link {
+  color: #fff !important;
+}
+
+ds-themed-home-page .community-list-wrapper ngb-pagination .page-item.active .page-link {
+  background-color: var(--elte-tan);
+  color: var(--elte-blue);
+}
+
+ds-object-list ngb-pagination .page-link,
+ds-themed-object-list ngb-pagination .page-link {
+  color: var(--elte-blue) !important;
+}
+
+ds-object-list ngb-pagination .page-item.active .page-link,
+ds-themed-object-list ngb-pagination .page-item.active .page-link {
+  background-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+}
+
+ds-rss .btn.btn-secondary {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+  box-shadow: none;
+}
+
+ds-rss .btn.btn-secondary:hover,
+ds-rss .btn.btn-secondary:focus-visible,
+ds-rss .btn.btn-secondary:active {
+  background-color: darken(#CEAF87, 7%) !important;
+  border-color: darken(#CEAF87, 9%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-view-mode-switch .btn.btn-secondary {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+  box-shadow: none;
+}
+
+ds-view-mode-switch .btn.btn-secondary:hover,
+ds-view-mode-switch .btn.btn-secondary:focus-visible,
+ds-view-mode-switch .btn.btn-secondary:active,
+ds-view-mode-switch .btn.btn-secondary.active {
+  background-color: darken(#CEAF87, 7%) !important;
+  border-color: darken(#CEAF87, 9%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-dynamic-form-control-container .btn.btn-secondary {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+  box-shadow: none;
+}
+
+ds-dynamic-form-control-container .btn.btn-secondary:hover,
+ds-dynamic-form-control-container .btn.btn-secondary:focus-visible,
+ds-dynamic-form-control-container .btn.btn-secondary:active,
+ds-dynamic-form-control-container .btn.btn-secondary.active {
+  background-color: darken(#CEAF87, 7%) !important;
+  border-color: darken(#CEAF87, 9%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-submission-form-footer #saveForLater {
+  background-color: var(--elte-tan);
+  border-color: var(--elte-tan);
+}
+
+ds-submission-form-footer #saveForLater:hover,
+ds-submission-form-footer #saveForLater:focus-visible,
+ds-submission-form-footer #saveForLater:active {
+  background-color: darken(#CEAF87, 7%) !important;
+  border-color: darken(#CEAF87, 9%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-submission-form-footer #deposit {
+  background-color: #A27842;
+  border-color: #A27842;
+}
+
+ds-submission-form-footer #deposit:hover,
+ds-submission-form-footer #deposit:focus-visible,
+ds-submission-form-footer #deposit:active {
+  background-color: darken(#A27842, 7%) !important;
+  border-color: darken(#A27842, 9%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-submission-form-footer #save {
+  background-color: #D5BEA0;
+  border-color: #D5BEA0;
+}
+
+ds-submission-form-footer #save:hover,
+ds-submission-form-footer #save:focus-visible,
+ds-submission-form-footer #save:active {
+  background-color: darken(#D5BEA0, 7%) !important;
+  border-color: darken(#D5BEA0, 9%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-dynamic-lookup-relation-modal .btn.btn-outline-secondary {
+  color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+}
+
+ds-dynamic-lookup-relation-modal .btn.btn-outline-secondary:hover {
+  color: #FFFFFF !important;
+  border-color: var(--elte-tan) !important;
+  background-color: var(--elte-tan) !important;
+}
+
+.comcol-browse-nav .list-group-item.active,
+.comcol-browse-nav .list-group-item.active:hover,
+.comcol-browse-nav .list-group-item.active:focus {
+  background-color: var(--elte-blue) !important;
+  border-color: var(--elte-blue) !important;
+  color: #fff !important;
+}
+
+ds-item-page .container .row {
+  align-items: flex-start !important;
+}
+
+ds-item-page .container .row>.col-md-4 {
+  background-color: #fff9f2;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+ds-base-item-page-title-field h1 {
+  color: var(--elte-blue);
+}
+
+ds-generic-item-page-field ds-metadata-values ds-metadata-field-wrapper h2,
+ds-item-page-uri-field ds-metadata-uri-values ds-metadata-field-wrapper h2,
+ds-item-page-collections ds-metadata-field-wrapper h2,
+ds-metadata-representation-list ds-base-metadata-representation-list ds-metadata-field-wrapper h2 {
+  color: var(--elte-blue);
+}
+
+.nav-breadcrumb .breadcrumb,
+.nav-breadcrumb .breadcrumb a,
+.nav-breadcrumb .breadcrumb-item,
+.nav-breadcrumb .breadcrumb-item.active {
+  color: #fff !important;
+}
+
+.nav-breadcrumb .breadcrumb a:hover,
+.nav-breadcrumb .breadcrumb a:focus {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+.nav-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+  color: #fff !important;
+}
+
+ds-dso-edit-metadata ds-base-dso-edit-metadata button {
+  background-color: var(--elte-blue);
+  border-color: var(--elte-blue);
+}
+
+ds-listable-object-component-loader ds-publication-sidebar-search-list-element ds-truncatable-part .text-secondary {
+  color: var(--elte-tan) !important;
+}
+
+ds-edit-relationship-list .btn.btn-success {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+}
+
+ds-notification .alert-success {
+  color: darken(#CEAF87, 20%) !important;
+  background-color: lighten(#CEAF87, 20%) !important;
+}
+
+ds-themed-auth-nav-menu .dropdown-toggle::after {
+  margin-left: 2px !important;
+  vertical-align: 0.125em;
+  color: #FFFFFF !important;
+}
+
+ds-pagination button {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+}
+
+ds-browse-by-taxonomy .input-group-append .btn.btn-outline-secondary {
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-browse-by-taxonomy .input-group-append .btn.btn-outline-secondary:hover,
+ds-browse-by-taxonomy .input-group-append .btn.btn-outline-secondary:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-metadata-schema-form .btn.btn-outline-secondary {
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-metadata-schema-form .btn.btn-outline-secondary:hover,
+ds-metadata-schema-form .btn.btn-outline-secondary:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-metadata-schema .btn.btn-outline-secondary {
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-metadata-schema .btn.btn-outline-secondary:hover,
+ds-metadata-schema .btn.btn-outline-secondary:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-create-community .btn.btn-outline-secondary {
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-create-community .btn.btn-outline-secondary:hover,
+ds-create-community .btn.btn-outline-secondary:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-create-collection .btn.btn-outline-secondary {
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-create-collection .btn.btn-outline-secondary:hover,
+ds-create-collection .btn.btn-outline-secondary:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-epeople-registry .btn.btn-success.addEPerson-button {
+  border-color: var(--elte-tan) !important;
+  background-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+}
+
+ds-epeople-registry .btn.btn-success.addEPerson-button:hover,
+ds-epeople-registry .btn.btn-success.addEPerson-button:focus {
+  border-color: darken($elte-tan, 7%) !important;
+  background-color: darken($elte-tan, 7%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-epeople-registry .search-button.btn.btn-secondary {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+}
+
+ds-epeople-registry .search-button.btn.btn-secondary:hover,
+ds-epeople-registry .search-button.btn.btn-secondary:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+  color: #FFFFFF !important;
+}
+
+ds-form .btn.btn-outline-secondary {
+  background-color: #FFFFFF;
+  border-color: var(--elte-tan) !important;
+  color: var(--elte-tan) !important;
+}
+
+ds-form .btn.btn-outline-secondary:hover,
+ds-form .btn.btn-outline-secondary:focus {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+  color: #FFFFFF !important;
+}
+
+ds-collection-metadata .btn.btn-success {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+}
+
+ds-collection-metadata .btn.btn-success:hover,
+ds-collection-metadata .btn.btn-success:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+}
+
+ds-item-bitstreams .btn.btn-success {
+  background-color: var(--elte-tan) !important;
+  border-color: var(--elte-tan) !important;
+}
+
+ds-item-bitstreams .btn.btn-success:hover,
+ds-item-bitstreams .btn.btn-success:focus {
+  background-color: darken($elte-tan, 7%) !important;
+  border-color: darken($elte-tan, 7%) !important;
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/styles/_theme_css_variable_overrides.scss
+================================================================================
+// Override or add CSS variables for your theme here
+
+:root {
+  --ds-dark-scrollbar-bg: #012850;
+  --ds-dark-scrollbar-alt-bg: #012850;
+  --ds-dark-scrollbar-fg: #b9956f;
+  --ds-navbar-link-color: #ffffff;
+  --ds-navbar-link-color-hover: #b9956f;
+  --ds-navbar-bg: #012850;
+  --ds-breadcrumb-bg: #b9956f !important;
+  --ds-expandable-navbar-bg: #012850;
+  --ds-header-icon-color: #ffffff;;
+  --ds-admin-sidebar-bg: #012850;
+  --ds-admin-sidebar-header-bg: #0d4480;
+  --ds-home-news-link-color: #012850;
+  --elte-blue: #012850;
+  --elte-tan: #CEAF87;
+}
+
+
+
+================================================================================
+FILE PATH: src/themes/elte/styles/_theme_sass_variable_overrides.scss
+================================================================================
+// DSpace works with CSS variables for its own components, and has a mapping of all bootstrap Sass
+// variables to CSS equivalents (see src/styles/_bootstrap_variables_mapping.scss). However Bootstrap
+// still uses Sass variables internally. So if you want to override bootstrap (or other sass
+// variables) you can do so here. Their CSS counterparts will include the changes you make here
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela&display=swap");
+
+// $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+//
+// $gray-700: #495057 !default;  // Bootstrap $gray-700
+// $gray-100: #f8f9fa !default;  //           $gray-100
+//
+// $blue:   #2B4E72 !default;
+// $green:  #94BA65 !default;
+// $cyan:   #006666 !default;
+// $yellow: #ec9433 !default;
+// $red:    #CF4444 !default;
+// $dark:   darken($blue, 17%) !default;
+
+$font-family-sans-serif: "Roboto", sans-serif;
+
+$gray-700: #495057 !default;
+$gray-100: #f6f7f9 !default;
+
+$blue: #174b85 !default;
+$green: #97b513 !default;
+$cyan: #174b85 !default;
+$yellow: #f4530e !default;
+$red: #cf4444 !default;
+$dark: #092e56 !default;
+$white: #ffffff;
+$elte-blue: #012850;
+$elte-tan: #CEAF87;
+// $theme-colors: (
+//   primary: $blue,
+//   secondary: $gray-700,
+//   success: $green,
+//   info: $cyan,
+//   warning: $yellow,
+//   danger: $red,
+//   light: $gray-100,
+//   dark: $dark
+// ) !default;
+
+$theme-colors: (
+  primary: $blue,
+  secondary: $green,
+  success: $green,
+  info: $blue,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $dark,
+) !default;
+
+// $link-color: map-get($theme-colors, info) !default;
+
+
+
