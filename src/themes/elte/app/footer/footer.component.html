@@ -1,11 +1,19 @@
-<footer class="text-lg-start qulto-footer">
-  <div class="footer-body">
-    <div class="side-element"></div>
-    <div class="middle-text">
-      © <span>{{ currentYear }}</span> Monguz Információtechnológiai Kft.
-    </div>
-    <div class="side-element">
-      <img class="mx-2" src="/assets/elte/images/qultoLogoWhite.svg" />
-    </div>
+<footer>
+  <div class="rrf-logo">
+    <img src="/assets/elte/images/rrf_logo.png" alt="RRF logo" />
+    {{ "footer.rrf" | translate }}
   </div>
+  <div>
+    © <span>{{ currentYear }} </span>{{ "footer.instituteName" | translate }}
+    <br />
+    {{ "footer.allRights" | translate }}
+  </div>
+  <a
+    href="https://qulto.eu/"
+    class="logo"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src="/assets/elte/images/qulto_logo.png" alt="Qulto logo" />
+  </a>
 </footer>
