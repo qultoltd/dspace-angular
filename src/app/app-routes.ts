@@ -12,6 +12,7 @@ import {
   ERROR_PAGE,
   FORBIDDEN_PATH,
   FORGOT_PASSWORD_PATH,
+  GRAPH_VIEWER_PATH,
   HEALTH_PAGE_PATH,
   INFO_MODULE_PATH,
   INTERNAL_SERVER_ERROR,
@@ -265,6 +266,12 @@ export const APP_ROUTES: Route[] = [
         loadChildren: () => import('./subscriptions-page/subscriptions-page-routes')
           .then((m) => m.ROUTES),
         canActivate: [authenticatedGuard],
+      },
+      {
+        path: GRAPH_VIEWER_PATH,
+        loadComponent: () => import('../themes/elte/app/graph-viewer/graph-viewer.component')
+          .then(m => m.GraphViewerComponent),
+        data: { title: 'graph-viewer.title' },
       },
       { path: '**', pathMatch: 'full', component: ThemedPageNotFoundComponent },
     ],

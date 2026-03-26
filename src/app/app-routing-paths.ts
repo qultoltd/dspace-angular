@@ -142,3 +142,4 @@ export function getEditItemPageRoute() {
 }
 export const CORRECTION_TYPE_PATH = 'corrections';
 
+export const GRAPH_VIEWER_PATH = 'graph-viewer';

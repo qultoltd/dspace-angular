@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  // Prevent the component from generating its own scrollbar
+  overflow: hidden; 
+}
+
+.graph-viewer-container {
+  /* Calculate available height: 100vh minus (Header + Footer + potential margins) */
+  /* 160px is a safe estimate for the header and footer; adjust if necessary */
+  height: calc(100vh - 160px); 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.graph-iframe {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Overwrite DSpace default container padding/max-width to ensure full-width layout */
+:host-context(ds-graph-viewer) .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
