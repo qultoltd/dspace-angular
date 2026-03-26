@@ -1,23 +1,31 @@
-.qulto-footer {
+footer {
+  display: grid;
+  min-height: 4rem;
+  padding: 0.25rem;
   background-color: var(--elte-blue);
-  border-top: 1px solid $primary;
-  height: 3rem;
-  width: 100%;
+  color: #ffff;
+  grid-template-columns: 2fr 1fr 2fr;
+  place-items: center;
+  text-align: center;
 
-  .footer-body {
+  .logo {
+    margin: 0 1rem;
+    justify-self: end;
+
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  .rrf-logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 100%;
+    font-size: 0.75rem;
+    margin: 0 1rem;
+    justify-self: end;
 
-    .side-element {
-      display: flex;
-      flex: 1;
-      justify-content: flex-end;
-    }
-
-    .middle-text {
-      color: #ffff;
+    img {
+      height: 3.5rem;
     }
   }
 }
