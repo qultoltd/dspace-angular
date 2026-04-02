@@ -27,3 +27,8 @@ a,
 .btn-link {
   color: var(--primary);
 }
+
+header .navbar-brand img {
+  max-height: 40px;
+  width: auto;
+}
