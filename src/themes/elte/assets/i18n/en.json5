@@ -439,9 +439,13 @@
 
   "search.filters.filter.courseFacet.head": "School subjects",
 
+  "search.filters.filter.courseInstanceFacet.head": "Course Instances",
+
   "search.filters.applied.f.programFacet": "Program",
 
   "search.filters.applied.f.courseFacet": "School subject",
+
+  "search.filters.applied.f.courseInstanceFacet": "Course Instance",
 
   "browse.comcol.by.program": "By Program",
 

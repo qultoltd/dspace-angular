@@ -486,9 +486,13 @@
 
   "search.filters.filter.courseFacet.head": "Tantárgyak",
 
+  "search.filters.filter.courseInstanceFacet.head": "Kurzusok",
+
   "search.filters.applied.f.programFacet": "Képzés",
 
   "search.filters.applied.f.courseFacet": "Tantárgy",
+
+  "search.filters.applied.f.courseInstanceFacet": "Kurzus",
 
   "browse.comcol.by.program": "Képzés szerint",
 
