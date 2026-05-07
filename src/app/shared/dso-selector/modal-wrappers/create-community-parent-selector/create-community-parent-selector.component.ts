@@ -11,6 +11,7 @@ import {
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
+import { ActionType } from 'src/app/core/resource-policy/models/action-type.model';
 
 import { environment } from '../../../../../environments/environment';
 import {
@@ -26,7 +27,7 @@ import { FeatureID } from '../../../../core/data/feature-authorization/feature-i
 import { DSpaceObject } from '../../../../core/shared/dspace-object.model';
 import { DSpaceObjectType } from '../../../../core/shared/dspace-object-type.model';
 import { hasValue } from '../../../empty.util';
-import { DSOSelectorComponent } from '../../dso-selector/dso-selector.component';
+import { AuthorizedCommunitySelectorComponent } from '../../dso-selector/authorized-community-selector/authorized-community-selector.component';
 import {
   DSOSelectorModalWrapperComponent,
   SelectorActionType,
@@ -43,10 +44,9 @@ import {
   selector: 'ds-base-create-community-parent-selector',
   styleUrls: ['./create-community-parent-selector.component.scss'],
   templateUrl: './create-community-parent-selector.component.html',
-  standalone: true,
   imports: [
     AsyncPipe,
-    DSOSelectorComponent,
+    AuthorizedCommunitySelectorComponent,
     TranslateModule,
   ],
 })
@@ -54,6 +54,7 @@ export class CreateCommunityParentSelectorComponent extends DSOSelectorModalWrap
   objectType = DSpaceObjectType.COMMUNITY;
   selectorTypes = [DSpaceObjectType.COMMUNITY];
   action = SelectorActionType.CREATE;
+  rpActionType = ActionType.ADD;
   defaultSort = new SortOptions(environment.comcolSelectionSort.sortField, environment.comcolSelectionSort.sortDirection as SortDirection);
   isAdmin$: Observable<boolean>;
 
