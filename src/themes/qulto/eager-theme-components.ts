@@ -6,7 +6,6 @@ import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-na
 import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
 import { NavbarComponent } from './app/navbar/navbar.component';
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
-import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
 
 export const COMPONENTS = [
   AdminSidebarComponent,
@@ -16,5 +15,4 @@ export const COMPONENTS = [
   NavbarComponent,
   FooterComponent,
   LangSwitchComponent,
-  PublicationComponent,
 ];

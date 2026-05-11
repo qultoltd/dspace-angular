@@ -7,6 +7,10 @@
 
 .community-list-wrapper {
   background: #f6f7f9;
+
+  > .container {
+    padding-top: 1.5rem;
+  }
 }
 
 .recent-item-list {
@@ -39,15 +43,9 @@
     }
   }
 
-  ::ng-deep {
-    ::ng-deep {
-      ::ng-deep {
-        .pagination-info {
-          font-size: 1rem;
-          font-weight: 400;
-          color: #7e7d7d;
-        }
-      }
-    }
+  .pagination-info {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #7e7d7d;
   }
 }

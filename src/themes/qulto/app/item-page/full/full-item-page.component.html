@@ -43,8 +43,8 @@
         <ds-item-page-collections [item]="item"></ds-item-page-collections>
         <ds-item-versions class="mt-2" [item]="item"></ds-item-versions>
         <div class="button-row bottom" *ngIf="fromSubmissionObject">
-          <div class="text-right">
-            <button class="btn btn-outline-secondary mr-1" (click)="back()">
+          <div class="text-end">
+            <button class="btn btn-outline-secondary me-1" (click)="back()">
               <i class="fas fa-arrow-left"></i>
               {{ "item.page.return" | translate }}
             </button>

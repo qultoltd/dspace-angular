@@ -29,7 +29,7 @@
 
       ::ng-deep {
         .spinner {
-          color: var(--primary);
+          color: var(--bs-primary);
         }
       }
     }
@@ -49,7 +49,7 @@
     font-family: "Varela", system-ui;
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--primary);
+    color: var(--bs-primary);
   }
 
   .description {
