@@ -1,0 +1,32 @@
+header {
+  nav {
+    gap: 0.25rem;
+
+    .navbar-toggler {
+      border: none;
+      color: var(--ds-header-icon-color);
+    }
+  }
+
+  ::ng-deep {
+    ds-navbar {
+      a, .nav-link {
+        color: var(--ds-navbar-link-color) !important;
+
+        &:hover {
+          color: var(--ds-navbar-link-color-hover) !important;
+        }
+      }
+    }
+
+    .navbar-nav {
+      a, .nav-link {
+        color: var(--ds-navbar-link-color) !important;
+
+        &:hover {
+          color: var(--ds-navbar-link-color-hover) !important;
+        }
+      }
+    }
+  }
+}

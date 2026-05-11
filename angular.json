@@ -59,6 +59,16 @@
                 "inject": false,
                 "bundleName": "dspace-theme"
               },
+              {
+                "input": "src/themes/qulto/styles/theme.scss",
+                "inject": false,
+                "bundleName": "qulto-theme"
+              },
+              {
+                "input": "src/themes/szerep/styles/theme.scss",
+                "inject": false,
+                "bundleName": "szerep-theme"
+              },
               "node_modules/leaflet/dist/leaflet.css",
               "node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css",
               "node_modules/leaflet.markercluster/dist/MarkerCluster.css"

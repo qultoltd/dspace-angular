@@ -1,0 +1,15 @@
+// Override or add CSS variables for your theme here
+
+:root {
+  --blue: #174b85;
+  --ds-dark-scrollbar-bg: #092e56;
+  --ds-dark-scrollbar-alt-bg: #092e56;
+  --ds-dark-scrollbar-fg: #97b513;
+  --ds-navbar-link-color: var(--blue);
+  --ds-navbar-link-color-hover: #092e56;
+  --ds-header-icon-color: var(--blue);
+  --ds-admin-sidebar-bg: var(--blue);
+  --ds-admin-sidebar-link-color: #ffffff;
+  --ds-admin-sidebar-link-hover-color: #97b513;
+  --ds-home-news-link-color: var(--blue);
+}

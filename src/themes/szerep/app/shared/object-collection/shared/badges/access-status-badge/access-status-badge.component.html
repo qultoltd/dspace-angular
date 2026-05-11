@@ -1,0 +1,10 @@
+<ng-container *ngIf="showAccessStatus">
+  <span *ngIf="accessStatus">
+    <span *ngIf="accessStatus === 'limited'" [class]="'badge limited'">
+      {{ "status.badge." + accessStatus | translate }}
+    </span>
+    <span *ngIf="accessStatus === 'public'" [class]="'badge public'">
+      {{ "status.badge." + accessStatus | translate }}
+    </span>
+  </span>
+</ng-container>

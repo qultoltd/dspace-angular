@@ -1,0 +1,79 @@
+{
+  "browse.startsWith.jump": "Jump to a point in the content",
+
+  "forgot-email.form.info": "If you have already registered but have forgotten your password, please enter the e-mail address used to log in.",
+
+  "home.top-level-communities.head": "Communities in SZERep",
+
+  "browse.search-form.placeholder": "Enter the first few characters",  
+
+  "qulto.home.welcome.title": "Welcome to the SZERep - Széchenyi István University Repository page!",
+
+  "qulto.home.welcome.description": "The Széchenyi István University Repository (hereinafter: SZERep) is a digital archive of the scientific activities of Széchenyi István University.",
+
+  "qulto.home.welcome.functions": "Its purpose is the storage and long-term preservation of documents created as a result of the scientific activity taking place at the institution, as well as ensuring the widest possible accessibility, taking into account copyright and the rules contained in publishing contracts.",
+
+  "home.top-level-communities.head": "Communities in SZERep",
+
+  "forgot-email.form.info": "If you have already registered but have forgotten your password, please enter the e-mail address used to log in.",
+
+  "browse.startsWith.jump": "Jump to a point in the content",
+
+  "browse.search-form.placeholder": "Enter the first few characters",
+
+  "dc.title.subtitle": "Subtitle",
+
+  "dc.title.other": "Other title",
+
+  "dc.title": "Title",
+
+  "dc.contributor.author": "Author",
+
+  "dc.contributor.advisor": "Advisor",
+
+  "dc.contributor.description": "Description",
+
+  "dc.contributor.extadvisor": "Extadvisor",
+
+  "dc.contributor.faculty": "Faculty",
+
+  "dc.contributor.inst": "Department",
+
+  "dc.contributor.org": "Institution",
+
+  "dc.contributor.workplace": "Foreign consular workplace",
+
+  "dc.date.accessioned": "Last access date",
+
+  "dc.date.available": "Availability date",
+
+  "dc.date.catalog": "Catalog date",
+
+  "dc.date.issued": "Date issued",
+
+  "dc.date.recordid": "Record id",
+
+  "dc.description.type": "Level",
+
+  "dc.identifier.uri": "URI",
+
+  "dc.language.iso": "Language",
+
+  "dc.rights.access": "Access",
+
+  "dc.subject": "Subject",
+
+  "dc.type": "Document type",
+
+  "dc.format.extent": "Extent",
+
+  "dc.identifier.doi": "DOI",
+
+  "dc.contributor.doctschool": "Doctoral school",
+
+  "dc.description.appendix": "Appendix",
+
+  "status.badge.limited": "Limited access",
+
+  "status.badge.public": "Free access",
+}
