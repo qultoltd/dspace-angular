@@ -13,6 +13,8 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { RootModule } from '../../app/root.module';
 import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
+import { CollectionPageComponent } from './app/collection-page/collection-page.component';
+import { CommunityPageComponent } from './app/community-page/community-page.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
 import { LoginPageComponent } from './app/login-page/login-page.component';
@@ -30,6 +32,8 @@ const DECLARATIONS = [
   FullItemPageComponent,
   RegisterEmailFormComponent,
   AccessStatusBadgeComponent,
+  CommunityPageComponent,
+  CollectionPageComponent,
 ];
 
 @NgModule({
