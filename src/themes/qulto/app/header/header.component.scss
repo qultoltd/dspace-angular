@@ -28,6 +28,11 @@ header {
         border-bottom: 0;
         border-left: 0.3em solid transparent;
       }
+
+      // Add spacing between the user icon and its dropdown caret
+      .dropdownLogout img {
+        margin-right: 0.25rem;
+      }
     }
 
     ds-navbar {

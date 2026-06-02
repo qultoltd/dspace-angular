@@ -42,23 +42,13 @@ nav.navbar {
       min-width: 200px;
       border: 1px solid #ddd;
 
-      .dropdown-item {
-        color: var(--ds-navbar-link-color) !important;
-        padding: 0.5rem 1rem;
-
-        &:hover, &:focus {
-          color: var(--ds-navbar-link-color-hover) !important;
-          background-color: #f8f9fa;
-        }
-      }
-
-      a {
+      .ds-menu-item {
         color: var(--ds-navbar-link-color) !important;
         display: block;
         padding: 0.5rem 1rem;
         text-decoration: none;
 
-        &:hover {
+        &:hover, &:focus {
           color: var(--ds-navbar-link-color-hover) !important;
           background-color: #f8f9fa;
         }
