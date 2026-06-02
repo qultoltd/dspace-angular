@@ -14,6 +14,11 @@ mediaViewer:
   video: true
 
 themes:
+  # Webinar theme: inherits everything from qulto and overrides only the home page banner.
+  # Listed first with no match rule, so it is the site-wide default theme.
+  # To deactivate (revert to plain qulto), comment out or remove this entry.
+  - name: dspace-lifebelt
+    extends: qulto
   - name: qulto
     headTags:
       - tagName: link

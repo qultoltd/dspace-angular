@@ -1,0 +1,120 @@
+// Webinar (Repository Lifebelt) home page banner.
+// Tunable brand values:
+$webinar-green: #8cc63f; // heading + date (slide green; qulto brand green is #97b513)
+$webinar-navy: #0e2c54; // subheading
+$mosaic-color: #cdd2da; // light grey diamond tiles
+$banner-min-height: 19rem; // on-screen band height
+
+:host {
+  display: block;
+  margin-top: calc(-1 * var(--ds-content-spacing));
+}
+
+.webinar-banner {
+  position: relative;
+  width: 100%;
+  min-height: $banner-min-height;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: inset 0 11px 8px -10px #ccc;
+}
+
+// Light grey isometric diamond mesh, densest at the top and fading downward.
+.mosaic {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.75;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='22'%3E%3Cpolygon points='18,1 35,11 18,21 1,11' fill='%23cdd2da'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: 36px 22px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.35) 45%, transparent 78%);
+  mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.35) 45%, transparent 78%);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  width: 100%;
+}
+
+.banner-text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-title {
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  color: $webinar-green;
+  font-size: clamp(1.8rem, 3.2vw, 2.75rem);
+}
+
+.banner-subtitle {
+  margin: 0 0 1rem;
+  max-width: 42ch;
+  font-weight: 700;
+  line-height: 1.25;
+  color: $webinar-navy;
+  font-size: clamp(1.05rem, 1.8vw, 1.5rem);
+}
+
+.banner-date {
+  margin: 0;
+  font-weight: 700;
+  color: $webinar-green;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+
+// Partner logos (repo + DSpace), pinned to the bottom-left of the text column.
+.banner-partners {
+  margin-top: auto;
+  padding-top: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  img {
+    width: auto;
+    height: 1.75rem;
+  }
+
+  .partner-dspace {
+    height: 1.5rem;
+  }
+}
+
+.banner-logo {
+  flex: 0 0 auto;
+  align-self: flex-start;
+
+  img {
+    width: clamp(110px, 11vw, 150px);
+    height: auto;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .banner-content {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .banner-logo {
+    display: none;
+  }
+}

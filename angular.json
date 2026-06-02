@@ -60,6 +60,11 @@
                 "bundleName": "dspace-theme"
               },
               {
+                "input": "src/themes/dspace-lifebelt/styles/theme.scss",
+                "inject": false,
+                "bundleName": "dspace-lifebelt-theme"
+              },
+              {
                 "input": "src/themes/qulto/styles/theme.scss",
                 "inject": false,
                 "bundleName": "qulto-theme"
