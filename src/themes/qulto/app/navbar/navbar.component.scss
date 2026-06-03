@@ -17,6 +17,18 @@ nav.navbar {
       }
     }
 
+    // On a dropdown toggler (e.g. "Böngészés") the label link is followed by the
+    // caret, so the link's right padding sits between the label and the caret and
+    // makes the gap look too wide. Drop the right padding there so the caret hugs
+    // the label.
+    // NOTE: the #expandable-navbar-section-browse_global override below no longer
+    // matches — since DSpace 10 the section id is auto-generated
+    // (`${menuProviderId}_${index}`), not "browse_global" — which is why that
+    // padding reset stopped working. This selector is id-independent on purpose.
+    .ds-menu-toggler-wrapper .ds-menu-item {
+      padding-right: 0;
+    }
+
     #expandable-navbar-section-browse_global {
       padding-right: 0.5rem;
       padding-left: 0.5rem;
