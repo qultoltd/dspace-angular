@@ -1,8 +1,15 @@
 // Override or add CSS variables for your theme here
 
 :root {
-  --ds-dark-scrollbar-bg: $dark;
-  --ds-dark-scrollbar-alt-bg: $dark;
+  // szerep component styles still reference the Bootstrap-4-era var(--primary)
+  // and a custom var(--blue); neither was defined here, so they resolved to
+  // nothing (e.g. the admin sidebar background fell back to white). Alias both
+  // to the Bootstrap-5 primary (= szerep navy #1d2441) so every usage resolves.
+  --blue: var(--bs-primary);
+  --primary: var(--bs-primary);
+
+  --ds-dark-scrollbar-bg: #{$dark}; // was `$dark` (a Sass var needs #{} interpolation in a CSS custom property)
+  --ds-dark-scrollbar-alt-bg: #{$dark};
   --ds-dark-scrollbar-fg: #97b513;
   --ds-navbar-link-color: #fff;
   --ds-navbar-link-color-hover: #fff;

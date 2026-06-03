@@ -17,34 +17,35 @@ nav.navbar {
       }
     }
 
-    #expandable-navbar-section-browse_global {
-      padding-right: 0.5rem;
-      padding-left: 0.5rem;
+    // Caret hugs the label. id-independent: in DSpace 10 the section id is
+    // auto-generated (not "browse_global"), so the old
+    // #expandable-navbar-section-browse_global selector no longer matched.
+    .ds-menu-toggler-wrapper .ds-menu-item {
+      padding-right: 0;
+    }
+
+    // The dropdown caret (▾) is a separate <i> that inherits the toggler link
+    // colour (not white by default) → it was invisible on the dark header.
+    .toggle-menu-icon {
+      color: var(--ds-navbar-link-color);
+    }
+
+    // Dropdown menu: dark background with visible white items. Previously the
+    // dark styling was scoped to #expandable-navbar-section-browse_global (no
+    // longer matches in DS10), so the dropdown fell back to a white background
+    // while the items used --ds-navbar-link-color (#fff) → white-on-white.
+    // .ds-menu-item is the DS10 dropdown item element (was a bare <a> in DS8).
+    .dropdown-menu {
+      background-color: #1d2441;
+      border: 0;
 
       .ds-menu-item {
-        padding: 0;
-      }
+        color: #fff !important;
+        padding: 0.5rem 1rem;
 
-      a {
-        color: var(--ds-navbar-link-color);
-      }
-
-      #browseDropdown {
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
-      .dropdown-menu {
-        background-color: #1d2441;
-        a {
-          color: white !important;
-          &:hover {
-            color: var(--ds-navbar-link-color-hover) !important;
-          }
-        }
-        div {
-          padding: 0.5rem;
+        &:hover, &:focus {
+          color: #fff !important;
+          background-color: rgba(255, 255, 255, 0.12);
         }
       }
     }

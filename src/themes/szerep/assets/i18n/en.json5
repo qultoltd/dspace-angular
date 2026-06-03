@@ -7,11 +7,15 @@
 
   "browse.search-form.placeholder": "Enter the first few characters",  
 
-  "qulto.home.welcome.title": "Welcome to the SZERep - Széchenyi István University Repository page!",
+  "qulto.home.welcome.title": "Welcome to SZERep, the institutional repository of Széchenyi István University!",
 
-  "qulto.home.welcome.description": "The Széchenyi István University Repository (hereinafter: SZERep) is a digital archive of the scientific activities of Széchenyi István University.",
+  "qulto.home.welcome.description": "SZERep serves as the digital archive for the university's scholarly and scientific output.",
 
-  "qulto.home.welcome.functions": "Its purpose is the storage and long-term preservation of documents created as a result of the scientific activity taking place at the institution, as well as ensuring the widest possible accessibility, taking into account copyright and the rules contained in publishing contracts.",
+  "qulto.home.welcome.functions": "Our mission is the long-term storage and preservation of the institution's research documents, while maximizing global accessibility in strict accordance with copyright laws and publisher agreements.",
+
+  "qulto.home.welcome.link": "For information about submission and access, please visit the <a href=\"https://lib.sze.hu/intezmenyi-repozitorium\" target=\"_blank\" rel=\"noopener noreferrer\">SZE University Library and Archives website</a>.",
+
+  "item.page.doi": "DOI",
 
   "home.top-level-communities.head": "Communities in SZERep",
 

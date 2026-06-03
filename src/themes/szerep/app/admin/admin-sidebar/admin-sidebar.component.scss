@@ -110,10 +110,13 @@
   /* SIDEBAR STYLE */
 
   nav#admin-sidebar {
+    // Clean solid background. The library.png image was painted over the bg
+    // colour without any overlay, so the washed-out campus photo (teal tint)
+    // showed instead of the intended sidebar colour. If a branded photo is
+    // wanted here, re-add it behind a navy overlay, e.g.:
+    //   background-image: linear-gradient(rgba(29,36,65,.92), rgba(29,36,65,.92)),
+    //                     url("/assets/szerep/images/library.png");
     background-color: var(--ds-admin-sidebar-bg);
-    background-image: url("/assets/szerep/images/library.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 
     ::ng-deep {
       color: white;

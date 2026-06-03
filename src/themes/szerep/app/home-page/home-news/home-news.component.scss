@@ -1,7 +1,9 @@
 :host {
   display: block;
   margin-top: calc(-1 * var(--ds-content-spacing));
-  margin-bottom: calc(-1 * var(--ds-content-spacing));
+  // Was a negative margin-bottom (pulled the search box up onto the banner).
+  // Now a small positive gap so the search sits a little below the banner.
+  margin-bottom: var(--ds-content-spacing);
 }
 
 .display-3 {

@@ -19,6 +19,10 @@
 
   "qulto.home.welcome.functions": "Célja az intézményben zajló tudományos tevékenység eredményeként született dokumentumok tárolása, hosszútávú megőrzése, valamint a minél szélesebb körű hozzáférhetőség biztosítása a szerzői jogok, valamint a kiadói szerződésekben foglalt szabályok figyelembevételével.",
 
+  "qulto.home.welcome.link": "A feltöltéssel és a hozzáféréssel kapcsolatos információk a <a href=\"https://lib.sze.hu/intezmenyi-repozitorium\" target=\"_blank\" rel=\"noopener noreferrer\">SZE Egyetemi Könyvtár és Levéltár honlapján</a> érhetők el.",
+
+  "item.page.doi": "DOI",
+
   "home.search-form.placeholder": "Keresés a repozitóriumban ...",
 
   "home.top-level-communities.head": "Kategóriák a SZERep-ben",
