@@ -2,8 +2,13 @@
 // Tunable brand values:
 $webinar-green: #8cc63f; // heading + date (slide green; qulto brand green is #97b513)
 $webinar-navy: #0e2c54; // subheading
-$mosaic-color: #cdd2da; // light grey diamond tiles
-$banner-min-height: 19rem; // on-screen band height
+$mosaic-color: #a3acb8; // grey diamond tiles (must match the fill in the .mosaic SVG data URI below)
+$banner-min-height: 23rem; // on-screen band height
+
+// Text/logo sizes below are taken from the designer's opening slide and expressed
+// in container query units (cqw = 1% of the .banner-content width). The slide is
+// 1280px wide, so a slide measurement of N px maps to (N / 12.8) cqw. This keeps
+// the text/logo proportions identical to the slide at any banner width.
 
 :host {
   display: block;
@@ -21,24 +26,69 @@ $banner-min-height: 19rem; // on-screen band height
   box-shadow: inset 0 11px 8px -10px #ccc;
 }
 
-// Light grey isometric diamond mesh, densest at the top and fading downward.
-.mosaic {
+// Constrains the mosaic to the content column (container width) instead of the
+// full banner width. It reuses Bootstrap's .container (responsive max-width +
+// auto side margins) but is absolutely positioned to span the full banner
+// height, so the diamond mesh lines up with the text column. `width: auto`
+// overrides .container's `width: 100%` so the auto side margins can centre it.
+.mosaic-layer {
   position: absolute;
   inset: 0;
+  width: auto;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.75;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='22'%3E%3Cpolygon points='18,1 35,11 18,21 1,11' fill='%23cdd2da'/%3E%3C/svg%3E");
+}
+
+// Isometric diamond mesh, rendered as two bands: a top band that is densest
+// at the top-left and fades down + to the right, and a bottom band that is
+// densest at the bottom-right and fades up + to the left. Positioned relative
+// to .mosaic-layer (= container width), not the full banner.
+.mosaic {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.9;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='22'%3E%3Cpolygon points='18,1 35,11 18,21 1,11' fill='%23a3acb8'/%3E%3C/svg%3E");
   background-repeat: repeat;
-  background-position: top center;
   background-size: 36px 22px;
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.35) 45%, transparent 78%);
-  mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.35) 45%, transparent 78%);
+}
+
+// Top band: dense top-left → fades downward AND to the right.
+.mosaic-top {
+  inset: 0 0 auto 0;
+  height: 40%;
+  background-position: top center;
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.3) 35%, transparent 72%),
+    linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.45) 38%, transparent 80%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.3) 35%, transparent 72%),
+    linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.45) 38%, transparent 80%);
+  mask-composite: intersect;
+}
+
+// Bottom band: dense bottom-right → fades upward AND to the left.
+.mosaic-bottom {
+  inset: auto 0 0 0;
+  height: 40%;
+  background-position: bottom center;
+  -webkit-mask-image:
+    linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.3) 35%, transparent 72%),
+    linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.45) 38%, transparent 80%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.3) 35%, transparent 72%),
+    linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.45) 38%, transparent 80%);
+  mask-composite: intersect;
 }
 
 .banner-content {
   position: relative;
   z-index: 1;
+  // Become a query container so children can size themselves in cqw and keep
+  // the slide's proportions regardless of the actual container/viewport width.
+  container-type: inline-size;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -55,47 +105,58 @@ $banner-min-height: 19rem; // on-screen band height
 }
 
 .banner-title {
-  margin: 0 0 0.75rem;
+  margin: 0 0 1.4cqw; // slide: ~18px
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.01em;
   line-height: 1.05;
   color: $webinar-green;
-  font-size: clamp(1.8rem, 3.2vw, 2.75rem);
+  font-size: clamp(1.8rem, 4.6cqw, 3.8rem); // slide: ~52px, bumped for stronger visual weight
 }
 
 .banner-subtitle {
-  margin: 0 0 1rem;
-  max-width: 42ch;
+  margin: 0 0 1.25cqw; // slide: ~16px
+  max-width: 60ch;
   font-weight: 700;
   line-height: 1.25;
   color: $webinar-navy;
-  font-size: clamp(1.05rem, 1.8vw, 1.5rem);
+  font-size: clamp(1.05rem, 2.34cqw, 1.6rem); // slide: ~30px
 }
 
 .banner-date {
   margin: 0;
   font-weight: 700;
   color: $webinar-green;
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-size: clamp(0.95rem, 1.72cqw, 1.3rem); // slide: ~22px
 }
 
-// Partner logos (repo + DSpace), pinned to the bottom-left of the text column.
-.banner-partners {
+// Partner block (repo + DSpace logos + tagline), pinned to the bottom-left.
+.banner-footer {
   margin-top: auto;
   padding-top: 1.75rem;
+}
+
+.banner-partners {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2cqw;
 
   img {
     width: auto;
-    height: 1.75rem;
+    height: clamp(26px, 3.2cqw, 44px); // repo logo — enlarged vs. slide
   }
 
   .partner-dspace {
-    height: 1.5rem;
+    height: clamp(20px, 2.4cqw, 34px); // DSpace — enlarged, keeps repo:dspace ratio
   }
+}
+
+.banner-tagline {
+  margin: 1.1cqw 0 0;
+  max-width: 34ch; // wraps to ~2 lines like the slide
+  color: #33373d;
+  line-height: 1.4;
+  font-size: clamp(0.92rem, 1.55cqw, 1.2rem);
 }
 
 .banner-logo {
@@ -103,7 +164,7 @@ $banner-min-height: 19rem; // on-screen band height
   align-self: flex-start;
 
   img {
-    width: clamp(110px, 11vw, 150px);
+    width: clamp(100px, 11.3cqw, 150px); // slide: ~145px
     height: auto;
   }
 }
