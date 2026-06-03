@@ -2,7 +2,6 @@
 // Tunable brand values:
 $webinar-green: #8cc63f; // heading + date (slide green; qulto brand green is #97b513)
 $webinar-navy: #0e2c54; // subheading
-$mosaic-color: #a3acb8; // grey diamond tiles (must match the fill in the .mosaic SVG data URI below)
 $banner-min-height: 23rem; // on-screen band height
 
 // Text/logo sizes below are taken from the designer's opening slide and expressed
@@ -22,65 +21,20 @@ $banner-min-height: 23rem; // on-screen band height
   display: flex;
   align-items: center;
   overflow: hidden;
+  // Designer's mosaic background (1920×288). Full-bleed: spans the whole banner
+  // width, anchored to the top so the dense top-left mesh sits at the top edge.
+  // The image is white outside the mesh, so it blends into the banner's own
+  // white where the banner is taller than the image.
   background-color: #fff;
-  box-shadow: inset 0 11px 8px -10px #ccc;
-}
-
-// Constrains the mosaic to the content column (container width) instead of the
-// full banner width. It reuses Bootstrap's .container (responsive max-width +
-// auto side margins) but is absolutely positioned to span the full banner
-// height, so the diamond mesh lines up with the text column. `width: auto`
-// overrides .container's `width: 100%` so the auto side margins can centre it.
-.mosaic-layer {
-  position: absolute;
-  inset: 0;
-  width: auto;
-  z-index: 0;
-  pointer-events: none;
-}
-
-// Isometric diamond mesh, rendered as two bands: a top band that is densest
-// at the top-left and fades down + to the right, and a bottom band that is
-// densest at the bottom-right and fades up + to the left. Positioned relative
-// to .mosaic-layer (= container width), not the full banner.
-.mosaic {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.9;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='22'%3E%3Cpolygon points='18,1 35,11 18,21 1,11' fill='%23a3acb8'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 36px 22px;
-}
-
-// Top band: dense top-left → fades downward AND to the right.
-.mosaic-top {
-  inset: 0 0 auto 0;
-  height: 40%;
+  background-image: url("/assets/dspace-lifebelt/images/mosaic_bg.png");
+  background-repeat: no-repeat;
   background-position: top center;
-  -webkit-mask-image:
-    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.3) 35%, transparent 72%),
-    linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.45) 38%, transparent 80%);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.3) 35%, transparent 72%),
-    linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.45) 38%, transparent 80%);
-  mask-composite: intersect;
-}
-
-// Bottom band: dense bottom-right → fades upward AND to the left.
-.mosaic-bottom {
-  inset: auto 0 0 0;
-  height: 40%;
-  background-position: bottom center;
-  -webkit-mask-image:
-    linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.3) 35%, transparent 72%),
-    linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.45) 38%, transparent 80%);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.3) 35%, transparent 72%),
-    linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.45) 38%, transparent 80%);
-  mask-composite: intersect;
+  background-size: 100% auto;
+  // Subtle inner shadow on the top AND bottom edges, so the banner separates
+  // cleanly from the header above and the content below.
+  box-shadow:
+    inset 0 11px 8px -10px #ccc,
+    inset 0 -11px 8px -10px #ccc;
 }
 
 .banner-content {
@@ -93,8 +47,8 @@ $banner-min-height: 23rem; // on-screen band height
   align-items: stretch;
   justify-content: space-between;
   gap: 2rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 2.0rem;
+  padding-bottom: 2.0rem;
   width: 100%;
 }
 
@@ -126,6 +80,7 @@ $banner-min-height: 23rem; // on-screen band height
 .banner-date {
   margin: 0;
   font-weight: 700;
+  line-height: 1.25; // keeps the two date lines tight as one block
   color: $webinar-green;
   font-size: clamp(0.95rem, 1.72cqw, 1.3rem); // slide: ~22px
 }
