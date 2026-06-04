@@ -15,7 +15,7 @@ import { ItemPageTitleFieldComponent } from './item-page-title-field.component';
   styleUrls: [],
   templateUrl: './themed.component.html',
   standalone: true,
-  imports: [ItemPageTitleFieldComponent],
+  imports: [],
 })
 export class ThemedItemPageTitleFieldComponent extends ThemedComponent<ItemPageTitleFieldComponent> {
 

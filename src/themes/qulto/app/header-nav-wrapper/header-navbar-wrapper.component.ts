@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
 
 import { ThemedHeaderComponent } from '../../../../app/header/themed-header.component';
 import { HeaderNavbarWrapperComponent as BaseComponent } from '../../../../app/header-nav-wrapper/header-navbar-wrapper.component';
-import { ThemedNavbarComponent } from '../../../../app/navbar/themed-navbar.component';
 
 /**
  * This component represents a wrapper for the horizontal navbar and the header
@@ -18,7 +17,7 @@ import { ThemedNavbarComponent } from '../../../../app/navbar/themed-navbar.comp
   templateUrl: './header-navbar-wrapper.component.html',
   // templateUrl: '../../../../app/header-nav-wrapper/header-navbar-wrapper.component.html',
   standalone: true,
-  imports: [NgClass, ThemedHeaderComponent, ThemedNavbarComponent, AsyncPipe],
+  imports: [NgClass, ThemedHeaderComponent, AsyncPipe],
 })
 export class HeaderNavbarWrapperComponent extends BaseComponent {
 }

@@ -1,8 +1,6 @@
 import {
   AsyncPipe,
   KeyValuePipe,
-  NgForOf,
-  NgIf,
 } from '@angular/common';
 import {
   ChangeDetectionStrategy,
@@ -25,35 +23,31 @@ import { ThemedLoadingComponent } from '../../../../../app/shared/loading/themed
 import { VarDirective } from '../../../../../app/shared/utils/var.directive';
 
 /**
- * This component renders a full item page.
- * The route parameter 'id' is used to request the item it represents.
+ * SZEREP full item page — identical to the base, but uses a local template that
+ * translates the metadata field keys in the table view. The labels come from the
+ * szerep i18n (e.g. dc.title → "Cím"); the base template shows the raw keys.
  */
-
 @Component({
   selector: 'ds-themed-full-item-page',
-  // styleUrls: ['./full-item-page.component.scss'],
   styleUrls: ['../../../../../app/item-page/full/full-item-page.component.scss'],
   templateUrl: './full-item-page.component.html',
-  // templateUrl: '../../../../../app/item-page/full/full-item-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut],
   standalone: true,
   imports: [
-    ErrorComponent,
-    ThemedLoadingComponent,
-    TranslateModule,
-    ThemedFullFileSectionComponent,
-    CollectionsComponent,
-    ItemVersionsComponent,
-    NgIf,
-    NgForOf,
     AsyncPipe,
+    CollectionsComponent,
+    DsoEditMenuComponent,
+    ErrorComponent,
+    ItemVersionsComponent,
+    ItemVersionsNoticeComponent,
     KeyValuePipe,
     RouterLink,
-    ThemedItemPageTitleFieldComponent,
-    DsoEditMenuComponent,
-    ItemVersionsNoticeComponent,
+    ThemedFullFileSectionComponent,
     ThemedItemAlertsComponent,
+    ThemedItemPageTitleFieldComponent,
+    ThemedLoadingComponent,
+    TranslateModule,
     VarDirective,
   ],
 })

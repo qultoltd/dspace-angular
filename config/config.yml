@@ -14,11 +14,23 @@ mediaViewer:
   video: true
 
 themes:
-  # Webinar theme: inherits everything from qulto and overrides only the home page banner.
-  # Listed first with no match rule, so it is the site-wide default theme.
-  # To deactivate (revert to plain qulto), comment out or remove this entry.
-  - name: dspace-lifebelt
+  # SZEREP theme — inherits everything from qulto (extends), overrides only colors
+  # and a few components. Listed first with no match rule, so it is the site-wide
+  # default (this lets us test the szerep refactor). Its own headTags override the
+  # logo/favicon (headTags are NOT merged with the parent — they fully replace).
+  # To revert qulto as the default, remove/comment this entry or move it below qulto.
+  - name: szerep
     extends: qulto
+    headTags:
+      - tagName: link
+        attributes:
+          rel: icon
+          href: /assets/szerep/images/qultoIcon.svg
+          sizes: image/svg+xml
+      - tagName: meta
+        attributes:
+          name: headerLogo
+          content: /assets/szerep/images/szerepLogo.png
   - name: qulto
     headTags:
       - tagName: link
