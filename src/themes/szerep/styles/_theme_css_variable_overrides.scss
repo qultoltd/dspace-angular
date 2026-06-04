@@ -13,6 +13,12 @@
   --ds-dark-scrollbar-fg: #97b513;
   --ds-navbar-link-color: #fff;
   --ds-navbar-link-color-hover: #fff;
+  // Dark dropdown + navy mobile menu — read by the (now inherited) qulto navbar.
+  // qulto's own var() fallbacks keep it white, so only szerep is affected.
+  --ds-navbar-dropdown-bg: #1d2441;
+  --ds-navbar-dropdown-border: 0;
+  --ds-navbar-dropdown-hover-bg: rgba(255, 255, 255, 0.12);
+  --ds-navbar-mobile-bg: #1d2441;
   --ds-header-icon-color: #fff;
   --ds-header-icon-color-hover: #fff;
   --ds-admin-sidebar-bg: var(--primary);

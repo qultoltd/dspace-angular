@@ -1,7 +1,6 @@
 import {
   AsyncPipe,
   NgClass,
-  NgFor,
   NgIf,
 } from '@angular/common';
 import { Component } from '@angular/core';
@@ -10,6 +9,7 @@ import { RouterLink } from '@angular/router';
 import { Context } from '../../../../../../../../../app/core/shared/context.model';
 import { ItemSearchResult } from '../../../../../../../../../app/core/shared/object-collection/item-search-result.model';
 import { ViewMode } from '../../../../../../../../../app/core/shared/view-mode.model';
+import { MetadataDirective } from '../../../../../../../../../app/shared/metadata.directive';
 import { ThemedBadgesComponent } from '../../../../../../../../../app/shared/object-collection/shared/badges/themed-badges.component';
 import { listableObjectComponent } from '../../../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
 import { ItemSearchResultListElementComponent as BaseComponent } from '../../../../../../../../../app/shared/object-list/search-result-list-element/item-search-result/item-types/item/item-search-result-list-element.component';
@@ -26,7 +26,7 @@ import { ThemedThumbnailComponent } from '../../../../../../../../../app/thumbna
   templateUrl: './item-search-result-list-element.component.html',
   // templateUrl: '../../../../../../../../../app/shared/object-list/search-result-list-element/item-search-result/item-types/item/item-search-result-list-element.component.html',
   standalone: true,
-  imports: [NgIf, RouterLink, ThemedThumbnailComponent, NgClass, ThemedBadgesComponent, TruncatableComponent, TruncatablePartComponent, NgFor, AsyncPipe],
+  imports: [NgIf, RouterLink, ThemedThumbnailComponent, NgClass, ThemedBadgesComponent, TruncatableComponent, TruncatablePartComponent, AsyncPipe, MetadataDirective],
 
 })
 export class ItemSearchResultListElementComponent extends BaseComponent {

@@ -48,11 +48,14 @@ nav.navbar {
       }
     }
 
-    // Global dropdown menu styles for navbar
+    // Global dropdown menu styles for navbar.
+    // Colours are themeable via CSS vars; the var() fallbacks are qulto's own
+    // values, so qulto is unchanged while a child theme (e.g. szerep) can make
+    // the dropdown dark by setting the variables.
     .dropdown-menu {
-      background-color: white;
+      background-color: var(--ds-navbar-dropdown-bg, white);
       min-width: 200px;
-      border: 1px solid #ddd;
+      border: var(--ds-navbar-dropdown-border, 1px solid #ddd);
 
       .ds-menu-item {
         color: var(--ds-navbar-link-color) !important;
@@ -62,7 +65,7 @@ nav.navbar {
 
         &:hover, &:focus {
           color: var(--ds-navbar-link-color-hover) !important;
-          background-color: #f8f9fa;
+          background-color: var(--ds-navbar-dropdown-hover-bg, #f8f9fa);
         }
       }
     }
@@ -73,7 +76,7 @@ nav.navbar {
 @media screen and (max-width: (map-get($grid-breakpoints, md)-0.02)) {
   .navbar {
     width: 100%;
-    background-color: var(--bs-white);
+    background-color: var(--ds-navbar-mobile-bg, var(--bs-white));
     position: absolute;
     overflow: hidden;
     height: 0;
