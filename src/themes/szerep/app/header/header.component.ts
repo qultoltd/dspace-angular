@@ -10,10 +10,10 @@ import { ThemedLangSwitchComponent } from 'src/app/shared/lang-switch/themed-lan
 
 import { ContextHelpToggleComponent } from '../../../../app/header/context-help-toggle/context-help-toggle.component';
 import { HeaderComponent as BaseComponent } from '../../../../app/header/header.component';
+import { ThemedNavbarComponent } from '../../../../app/navbar/themed-navbar.component';
 import { ThemedSearchNavbarComponent } from '../../../../app/search-navbar/themed-search-navbar.component';
 import { ThemedAuthNavMenuComponent } from '../../../../app/shared/auth-nav-menu/themed-auth-nav-menu.component';
 import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-navbar/impersonate-navbar.component';
-import { ThemedNavbarComponent } from '../../../../app/navbar/themed-navbar.component';
 
 /**
  * Represents the header with the logo and simple navigation
@@ -24,8 +24,19 @@ import { ThemedNavbarComponent } from '../../../../app/navbar/themed-navbar.comp
   // styleUrls: ['../../../../app/header/header.component.scss'],
   templateUrl: 'header.component.html',
   // templateUrl: '../../../../app/header/header.component.html',
-  standalone: true,
-  imports: [RouterLink, ThemedLangSwitchComponent, NgbDropdownModule, ThemedSearchNavbarComponent, ContextHelpToggleComponent, ThemedAuthNavMenuComponent, ImpersonateNavbarComponent, ThemedNavbarComponent, TranslateModule, AsyncPipe, NgIf],
+  imports: [
+    AsyncPipe,
+    ContextHelpToggleComponent,
+    ImpersonateNavbarComponent,
+    NgbDropdownModule,
+    NgIf,
+    RouterLink,
+    ThemedAuthNavMenuComponent,
+    ThemedLangSwitchComponent,
+    ThemedNavbarComponent,
+    ThemedSearchNavbarComponent,
+    TranslateModule,
+  ],
 })
 export class HeaderComponent extends BaseComponent {
 }

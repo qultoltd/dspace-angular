@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page/home-news/home-news.component';
-import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
@@ -10,8 +10,9 @@ import { TranslateModule } from '@ngx-translate/core';
   // styleUrls: ['../../../../../app/home-page/home-news/home-news.component.scss'],
   templateUrl: './home-news.component.html',
   // templateUrl: '../../../../../app/home-page/home-news/home-news.component.html',
-  standalone: true,
-  imports: [TranslateModule]
+  imports: [
+    TranslateModule,
+  ],
 })
 
 /**

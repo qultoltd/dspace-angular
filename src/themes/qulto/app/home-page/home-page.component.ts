@@ -20,8 +20,18 @@ import { ThemedSearchFormComponent } from '../../../../app/shared/search-form/th
   // styleUrls: ['../../../../app/home-page/home-page.component.scss'],
   templateUrl: './home-page.component.html',
   // templateUrl: '../../../../app/home-page/home-page.component.html',
-  standalone: true,
-  imports: [ThemedHomeNewsComponent, NgTemplateOutlet, NgIf, ThemedSearchFormComponent, ThemedTopLevelCommunityListComponent, RecentItemListComponent, TranslateModule, SuggestionsPopupComponent, ThemedConfigurationSearchPageComponent, HomeCoarComponent],
+  imports: [
+    HomeCoarComponent,
+    NgIf,
+    NgTemplateOutlet,
+    RecentItemListComponent,
+    SuggestionsPopupComponent,
+    ThemedConfigurationSearchPageComponent,
+    ThemedHomeNewsComponent,
+    ThemedSearchFormComponent,
+    ThemedTopLevelCommunityListComponent,
+    TranslateModule,
+  ],
 })
 export class HomePageComponent extends BaseComponent {
 

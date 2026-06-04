@@ -3,7 +3,10 @@ import {
   HttpClient,
   HttpClientModule,
 } from '@angular/common/http';
-import { Component } from '@angular/core';
+import {
+  Component,
+  OnChanges,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {
   BehaviorSubject,
@@ -29,13 +32,12 @@ import { CommunityListElementComponent as BaseComponent } from '../../../../../.
   // styleUrls: ['../../../../../../app/shared/object-list/community-list-element/community-list-element.component.scss'],
   templateUrl: './community-list-element.component.html',
   // templateUrl: '../../../../../../app/shared/object-list/community-list-element/community-list-element.component.html',
-  standalone: true,
   imports: [
     CommonModule,
-    RouterLink,
     HttpClientModule,
-    ThemedLoadingComponent,
+    RouterLink,
     SafeUrlPipe,
+    ThemedLoadingComponent,
     VarDirective,
   ],
 })
@@ -43,7 +45,7 @@ import { CommunityListElementComponent as BaseComponent } from '../../../../../.
  * Component representing a list element for a community
  */
 @listableObjectComponent(Community, ViewMode.ListElement)
-export class CommunityListElementComponent extends BaseComponent {
+export class CommunityListElementComponent extends BaseComponent implements OnChanges {
 
   src$ = new BehaviorSubject<string>(undefined);
   isLoading$ = new BehaviorSubject(true);

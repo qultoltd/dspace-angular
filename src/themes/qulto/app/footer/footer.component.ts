@@ -9,8 +9,9 @@ import { FooterComponent as BaseComponent } from '../../../../app/footer/footer.
   // styleUrls: ['../../../../app/footer/footer.component.scss'],
   templateUrl: './footer.component.html',
   // templateUrl: '../../../../app/footer/footer.component.html',
-  standalone: true,
-  imports: [TranslateModule],
+  imports: [
+    TranslateModule,
+  ],
 })
 export class FooterComponent extends BaseComponent {
   currentYear: number = new Date().getFullYear();

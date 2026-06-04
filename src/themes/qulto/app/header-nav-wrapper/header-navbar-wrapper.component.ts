@@ -16,8 +16,11 @@ import { HeaderNavbarWrapperComponent as BaseComponent } from '../../../../app/h
   styleUrls: ['../../../../app/header-nav-wrapper/header-navbar-wrapper.component.scss'],
   templateUrl: './header-navbar-wrapper.component.html',
   // templateUrl: '../../../../app/header-nav-wrapper/header-navbar-wrapper.component.html',
-  standalone: true,
-  imports: [NgClass, ThemedHeaderComponent, AsyncPipe],
+  imports: [
+    AsyncPipe,
+    NgClass,
+    ThemedHeaderComponent,
+  ],
 })
 export class HeaderNavbarWrapperComponent extends BaseComponent {
 }

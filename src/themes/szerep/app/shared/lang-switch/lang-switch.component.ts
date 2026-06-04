@@ -3,7 +3,7 @@ import {
   NgIf,
   NgSwitch,
   NgSwitchCase,
-  NgSwitchDefault
+  NgSwitchDefault,
 } from '@angular/common';
 import { Component } from '@angular/core';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
@@ -17,8 +17,15 @@ import { LangSwitchComponent as BaseComponent } from '../../../../../app/shared/
   styleUrls: ['../../../../../app/shared/lang-switch/lang-switch.component.scss'],
   templateUrl: './lang-switch.component.html',
   // templateUrl: '../../../../../app/shared/lang-switch/lang-switch.component.html',
-  standalone: true,
-  imports: [NgIf, NgSwitch, NgSwitchCase,NgSwitchDefault, NgbDropdownModule, NgFor, TranslateModule],
+  imports: [
+    NgbDropdownModule,
+    NgFor,
+    NgIf,
+    NgSwitch,
+    NgSwitchCase,
+    NgSwitchDefault,
+    TranslateModule,
+  ],
 })
 export class LangSwitchComponent extends BaseComponent {
   currentLang = this.translate.currentLang;

@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
+import { HostWindowService } from 'src/app/shared/host-window.service';
 import { ThemedLangSwitchComponent } from 'src/app/shared/lang-switch/themed-lang-switch.component';
+import { MenuService } from 'src/app/shared/menu/menu.service';
 
 import { ContextHelpToggleComponent } from '../../../../app/header/context-help-toggle/context-help-toggle.component';
 import { HeaderComponent as BaseComponent } from '../../../../app/header/header.component';
@@ -15,8 +17,6 @@ import { ThemedSearchNavbarComponent } from '../../../../app/search-navbar/theme
 import { ThemedAuthNavMenuComponent } from '../../../../app/shared/auth-nav-menu/themed-auth-nav-menu.component';
 import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-navbar/impersonate-navbar.component';
 import { ThemeMetaService } from '../shared/theme-support/theme-meta.service';
-import { MenuService } from 'src/app/shared/menu/menu.service';
-import { HostWindowService } from 'src/app/shared/host-window.service';
 
 /**
  * Represents the header with the logo and simple navigation
@@ -27,8 +27,19 @@ import { HostWindowService } from 'src/app/shared/host-window.service';
   // styleUrls: ['../../../../app/header/header.component.scss'],
   templateUrl: 'header.component.html',
   // templateUrl: '../../../../app/header/header.component.html',
-  standalone: true,
-  imports: [RouterLink, ThemedLangSwitchComponent, NgbDropdownModule, ThemedSearchNavbarComponent, ContextHelpToggleComponent, ThemedAuthNavMenuComponent, ImpersonateNavbarComponent, ThemedNavbarComponent, TranslateModule, AsyncPipe, NgIf],
+  imports: [
+    AsyncPipe,
+    ContextHelpToggleComponent,
+    ImpersonateNavbarComponent,
+    NgbDropdownModule,
+    NgIf,
+    RouterLink,
+    ThemedAuthNavMenuComponent,
+    ThemedLangSwitchComponent,
+    ThemedNavbarComponent,
+    ThemedSearchNavbarComponent,
+    TranslateModule,
+  ],
 })
 export class HeaderComponent extends BaseComponent {
   themeHeaderLogo = '/assets/qulto/images/logo.svg';

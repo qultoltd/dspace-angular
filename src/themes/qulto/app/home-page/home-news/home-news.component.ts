@@ -1,20 +1,21 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LocaleService } from '../../../../../app/core/locale/locale.service';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page/home-news/home-news.component';
 import { RootDataService } from '../../../../../app/core/data/root-data.service';
+import { LocaleService } from '../../../../../app/core/locale/locale.service';
 import { getFirstSucceededRemoteDataPayload } from '../../../../../app/core/shared/operators';
-import { Root } from 'src/app/core/data/root.model';
+import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page/home-news/home-news.component';
+
 @Component({
   selector: 'ds-themed-home-news',
   styleUrls: ['./home-news.component.scss'],
   // styleUrls: ['../../../../../app/home-page/home-news/home-news.component.scss'],
   templateUrl: './home-news.component.html',
   // templateUrl: '../../../../../app/home-page/home-news/home-news.component.html',
-  standalone: true,
-  imports: [TranslateModule],
+  imports: [
+    TranslateModule,
+  ],
 })
 
 /**
@@ -22,12 +23,12 @@ import { Root } from 'src/app/core/data/root.model';
  */
 export class HomeNewsComponent extends BaseComponent {
 
-  public dspaceName: String;
+  public dspaceName: string;
 
   constructor(
     protected rootService: RootDataService,
     protected route: ActivatedRoute,
-    locale: LocaleService
+    locale: LocaleService,
   ) {
     super(route, locale);
     this.setGenerator();

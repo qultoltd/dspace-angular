@@ -1,7 +1,10 @@
 import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
-import { LinkService } from 'src/app/core/cache/builders/link.service';
+import {
+  Component,
+  OnInit,
+} from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { LinkService } from 'src/app/core/cache/builders/link.service';
 import { AccessStatusBadgeComponent as BaseComponent } from 'src/app/shared/object-collection/shared/badges/access-status-badge/access-status-badge.component';
 
 @Component({
@@ -9,10 +12,12 @@ import { AccessStatusBadgeComponent as BaseComponent } from 'src/app/shared/obje
   styleUrls: ['./access-status-badge.component.scss'],
   templateUrl: './access-status-badge.component.html',
   // templateUrl: '../../../../../../../../app/shared/object-collection/shared/badges/access-status-badge/access-status-badge.component.html',
-  standalone: true,
-  imports: [NgIf, TranslateModule],
+  imports: [
+    NgIf,
+    TranslateModule,
+  ],
 })
-export class AccessStatusBadgeComponent extends BaseComponent {
+export class AccessStatusBadgeComponent extends BaseComponent implements OnInit {
   accessStatus: string;
 
   constructor(linkService: LinkService) {
@@ -21,21 +26,21 @@ export class AccessStatusBadgeComponent extends BaseComponent {
 
   ngOnInit(): void {
     super.ngOnInit();
-    const accessMetadata = this.object.metadata?.["dc.rights.access"]?.[0]?.value;
-    switch(accessMetadata){
-        case "SZE-EK meghatározott területén elérhető": {
-        this.accessStatus = "limited";
+    const accessMetadata = this.object.metadata?.['dc.rights.access']?.[0]?.value;
+    switch (accessMetadata){
+      case 'SZE-EK meghatározott területén elérhető': {
+        this.accessStatus = 'limited';
         break;
       }
-        case "Nyilvánosan hozzáférhető": {
-        this.accessStatus = "public";
+      case 'Nyilvánosan hozzáférhető': {
+        this.accessStatus = 'public';
         break;
       }
       default: {
         this.accessStatus = null;
         break;
       }
-      
+
     }
   }
 }

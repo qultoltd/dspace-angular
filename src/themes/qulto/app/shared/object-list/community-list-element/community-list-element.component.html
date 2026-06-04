@@ -1,53 +1,65 @@
 <div>
-  <div *ngIf="layout === 'cards'" class="d-flex flex-row community-card">
-    <div class="image-container" *ngVar="isLoading$ | async as isLoading">
-      <div *ngIf="isLoading" class="thumbnail-loading">
-        <ds-loading [spinner]="true"></ds-loading>
+  @if (layout === 'cards') {
+    <div class="d-flex flex-row community-card">
+      <div class="image-container" *ngVar="isLoading$ | async as isLoading">
+        @if (isLoading) {
+          <div class="thumbnail-loading">
+            <ds-loading [spinner]="true"></ds-loading>
+          </div>
+        }
+        <ng-container *ngVar="src$ | async as src">
+          @if (src !== null) {
+            <img
+              class="thumbnail-content img-fluid"
+              [ngClass]="{ 'd-none': isLoading }"
+              [src]="src | dsSafeUrl"
+              alt="Logo"
+              (load)="successHandler()"
+            />
+          }
+        </ng-container>
       </div>
-      <ng-container *ngVar="src$ | async as src">
-        <img
-          *ngIf="src !== null"
-          class="thumbnail-content img-fluid"
-          [ngClass]="{ 'd-none': isLoading }"
-          [src]="src | dsSafeUrl"
-          alt="Logo"
-          (load)="successHandler()"
-        />
-      </ng-container>
+      <div class="name">{{ dsoNameService.getName(object) }}</div>
+      <div class="description">{{ description }}</div>
+      @if (linkType !== linkTypes.None) {
+        <a
+          [target]="linkType === linkTypes.ExternalLink ? '_blank' : '_self'"
+          [attr.rel]="
+            linkType === linkTypes.ExternalLink ? 'noopener noreferrer' : null
+          "
+          [routerLink]="['/communities/' + object.id]"
+        >
+          <button class="btn btn-primary">Megtekintés</button>
+        </a>
+      }
     </div>
-    <div class="name">{{ dsoNameService.getName(object) }}</div>
-    <div class="description">{{ description }}</div>
-    <a
-      *ngIf="linkType !== linkTypes.None"
-      [target]="linkType === linkTypes.ExternalLink ? '_blank' : '_self'"
-      [attr.rel]="
-        linkType === linkTypes.ExternalLink ? 'noopener noreferrer' : null
-      "
-      [routerLink]="['/communities/' + object.id]"
-    >
-      <button class="btn btn-primary">Megtekintés</button>
-    </a>
+  }
+</div>
+@if (layout === 'list') {
+  <div class="d-flex flex-row community-list-element">
+    @if (linkType !== linkTypes.None) {
+      <a
+        [target]="linkType === linkTypes.ExternalLink ? '_blank' : '_self'"
+        [attr.rel]="
+          linkType === linkTypes.ExternalLink ? 'noopener noreferrer' : null
+        "
+        [routerLink]="['/communities/' + object.id]"
+        class="lead"
+      >
+        <img class="mx-2" src="/assets/qulto/images/communityIcon.svg" />
+        {{ dsoNameService.getName(object) }}
+      </a>
+    }
+    @if (linkType === linkTypes.None) {
+      <span class="lead">
+        {{ dsoNameService.getName(object) }}
+      </span>
+    }
+    @if (object.archivedItemsCount >= 0) {
+      <span
+        class="badge rounded-pill bg-secondary align-self-center archived-items-lead ps-2 pe-2"
+        >{{ object.archivedItemsCount }}</span
+      >
+    }
   </div>
-</div>
-<div *ngIf="layout === 'list'" class="d-flex flex-row community-list-element">
-  <a
-    *ngIf="linkType !== linkTypes.None"
-    [target]="linkType === linkTypes.ExternalLink ? '_blank' : '_self'"
-    [attr.rel]="
-      linkType === linkTypes.ExternalLink ? 'noopener noreferrer' : null
-    "
-    [routerLink]="['/communities/' + object.id]"
-    class="lead"
-  >
-    <img class="mx-2" src="/assets/qulto/images/communityIcon.svg" />
-    {{ dsoNameService.getName(object) }}
-  </a>
-  <span *ngIf="linkType === linkTypes.None" class="lead">
-    {{ dsoNameService.getName(object) }}
-  </span>
-  <span
-    *ngIf="object.archivedItemsCount >= 0"
-    class="badge rounded-pill bg-secondary align-self-center archived-items-lead ps-2 pe-2"
-    >{{ object.archivedItemsCount }}</span
-  >
-</div>
+}

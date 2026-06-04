@@ -18,8 +18,14 @@ import { BrowserOnlyPipe } from '../../../../../app/shared/utils/browser-only.pi
   // styleUrls: ['../../../../../app/shared/object-list/object-list.component.scss'],
   // templateUrl: './object-list.component.html'
   templateUrl: '../../../../../app/shared/object-list/object-list.component.html',
-  imports: [PaginationComponent, NgClass, SelectableListItemControlComponent, ImportableListItemControlComponent, ListableObjectComponentLoaderComponent, BrowserOnlyPipe],
-  standalone: true,
+  imports: [
+    BrowserOnlyPipe,
+    ImportableListItemControlComponent,
+    ListableObjectComponentLoaderComponent,
+    NgClass,
+    PaginationComponent,
+    SelectableListItemControlComponent,
+  ],
 })
 
 export class ObjectListComponent extends BaseComponent {}
