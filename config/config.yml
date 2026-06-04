@@ -14,23 +14,23 @@ mediaViewer:
   video: true
 
 themes:
-  # SZEREP theme — inherits everything from qulto (extends), overrides only colors
-  # and a few components. Listed first with no match rule, so it is the site-wide
-  # default (this lets us test the szerep refactor). Its own headTags override the
-  # logo/favicon (headTags are NOT merged with the parent — they fully replace).
-  # To revert qulto as the default, remove/comment this entry or move it below qulto.
-  - name: szerep
-    extends: qulto
-    headTags:
-      - tagName: link
-        attributes:
-          rel: icon
-          href: /assets/szerep/images/qultoIcon.svg
-          sizes: image/svg+xml
-      - tagName: meta
-        attributes:
-          name: headerLogo
-          content: /assets/szerep/images/szerepLogo.png
+  # ── Theme selection ────────────────────────────────────────────────────────
+  # The ACTIVE site-wide theme is the FIRST theme below that has NO match rule
+  # (no regex / handle / uuid) — see getDefaultThemeConfig() in config.util.ts.
+  # All themes are listed here with their inheritance; to switch which one is
+  # active, just MOVE it to the top of this list (or comment out the ones above).
+  #
+  # Inheritance:
+  #   - qulto           : the common base (does not extend anything)
+  #   - szerep          : extends qulto (own colors + a few components + own logo)
+  #   - dspace-lifebelt : extends qulto (webinar banner override only)
+  #
+  # headTags (favicon + header logo) are NOT merged — a theme either defines its
+  # own or inherits its parent's.
+  #
+  # Current active theme: qulto (first in the list).
+  # ───────────────────────────────────────────────────────────────────────────
+
   - name: qulto
     headTags:
       - tagName: link
@@ -42,6 +42,25 @@ themes:
         attributes:
           name: headerLogo
           content: /assets/qulto/images/logo.svg
+
+  # - name: szerep
+  #   extends: qulto
+  #   headTags:
+  #     - tagName: link
+  #       attributes:
+  #         rel: icon
+  #         href: /assets/szerep/images/qultoIcon.svg
+  #         sizes: image/svg+xml
+  #     - tagName: meta
+  #       attributes:
+  #         name: headerLogo
+  #         content: /assets/szerep/images/szerepLogo.png
+
+  # - name: dspace-lifebelt
+  #   extends: qulto
+  #   # No headTags → inherits qulto's favicon + header logo (the webinar branding
+  #   # lives in the banner / home-news, not in the header). Add a headTags block
+  #   # here to override the favicon/logo for the webinar if needed.
 
 homePage:
   topLevelCommunityList:
