@@ -19,6 +19,7 @@ __server_build__
 npm-debug.log.*
 
 # Angular files
+.angular
 *.ngfactory.ts
 *.css.shim.ts
 *.scss.shim.ts
