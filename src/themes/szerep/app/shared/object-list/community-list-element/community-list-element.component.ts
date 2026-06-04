@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
@@ -17,7 +16,6 @@ import { CommunityListElementComponent as BaseComponent } from '../../../../../.
   templateUrl: './community-list-element.component.html',
   // templateUrl: '../../../../../../app/shared/object-list/community-list-element/community-list-element.component.html',
   imports: [
-    NgIf,
     RouterLink,
   ],
 })

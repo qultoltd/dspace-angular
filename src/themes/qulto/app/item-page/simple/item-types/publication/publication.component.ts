@@ -1,7 +1,4 @@
-import {
-  AsyncPipe,
-  NgIf,
-} from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -50,7 +47,6 @@ import { ThemedItemPageTitleFieldComponent } from '../../field-components/specif
     ItemPageUriFieldComponent,
     MetadataFieldWrapperComponent,
     MiradorViewerComponent,
-    NgIf,
     RelatedItemsComponent,
     RouterLink,
     TabbedRelatedEntitiesSearchComponent,

@@ -1,7 +1,6 @@
 import {
   AsyncPipe,
   NgClass,
-  NgIf,
 } from '@angular/common';
 import { Component } from '@angular/core';
 import {
@@ -35,7 +34,6 @@ import { BrowserOnlyPipe } from '../../../../../app/shared/utils/browser-only.pi
     BrowserOnlyPipe,
     NgbDropdownModule,
     NgClass,
-    NgIf,
     RouterLink,
     RouterLinkActive,
     ThemedLogInComponent,

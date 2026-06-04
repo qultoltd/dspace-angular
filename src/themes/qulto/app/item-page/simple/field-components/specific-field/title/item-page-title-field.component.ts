@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import {
   Component,
   Input,
@@ -12,7 +11,6 @@ import { Item } from '../../../../../../../../app/core/shared/item.model';
   selector: 'ds-themed-base-item-page-title-field',
   templateUrl: './item-page-title-field.component.html',
   imports: [
-    NgIf,
     TranslateModule,
   ],
 })

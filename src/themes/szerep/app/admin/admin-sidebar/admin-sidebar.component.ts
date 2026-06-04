@@ -2,8 +2,6 @@ import {
   AsyncPipe,
   NgClass,
   NgComponentOutlet,
-  NgFor,
-  NgIf,
 } from '@angular/common';
 import { Component } from '@angular/core';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
@@ -25,8 +23,6 @@ import { AdminSidebarComponent as BaseComponent } from '../../../../../app/admin
     NgbDropdownModule,
     NgClass,
     NgComponentOutlet,
-    NgFor,
-    NgIf,
     TranslateModule,
   ],
 })

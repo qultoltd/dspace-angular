@@ -1,8 +1,4 @@
-import {
-  NgClass,
-  NgFor,
-  NgIf,
-} from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
@@ -28,8 +24,6 @@ import { BrowserOnlyPipe } from '../../../../../app/shared/utils/browser-only.pi
     ImportableListItemControlComponent,
     ListableObjectComponentLoaderComponent,
     NgClass,
-    NgFor,
-    NgIf,
     PaginationComponent,
     SelectableListItemControlComponent,
   ],

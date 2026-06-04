@@ -1,10 +1,3 @@
-import {
-  NgFor,
-  NgIf,
-  NgSwitch,
-  NgSwitchCase,
-  NgSwitchDefault,
-} from '@angular/common';
 import { Component } from '@angular/core';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
@@ -19,11 +12,6 @@ import { LangSwitchComponent as BaseComponent } from '../../../../../app/shared/
   // templateUrl: '../../../../../app/shared/lang-switch/lang-switch.component.html',
   imports: [
     NgbDropdownModule,
-    NgFor,
-    NgIf,
-    NgSwitch,
-    NgSwitchCase,
-    NgSwitchDefault,
     TranslateModule,
   ],
 })

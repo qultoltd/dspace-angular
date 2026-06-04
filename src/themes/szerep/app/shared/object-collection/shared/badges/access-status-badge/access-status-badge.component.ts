@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import {
   Component,
   OnInit,
@@ -13,7 +12,6 @@ import { AccessStatusBadgeComponent as BaseComponent } from 'src/app/shared/obje
   templateUrl: './access-status-badge.component.html',
   // templateUrl: '../../../../../../../../app/shared/object-collection/shared/badges/access-status-badge/access-status-badge.component.html',
   imports: [
-    NgIf,
     TranslateModule,
   ],
 })

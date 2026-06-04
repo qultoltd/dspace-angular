@@ -1,7 +1,4 @@
-import {
-  NgIf,
-  NgTemplateOutlet,
-} from '@angular/common';
+import { NgTemplateOutlet } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -22,7 +19,6 @@ import { ThemedSearchFormComponent } from '../../../../app/shared/search-form/th
   // templateUrl: '../../../../app/home-page/home-page.component.html',
   imports: [
     HomeCoarComponent,
-    NgIf,
     NgTemplateOutlet,
     RecentItemListComponent,
     SuggestionsPopupComponent,

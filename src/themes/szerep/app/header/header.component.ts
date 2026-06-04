@@ -1,7 +1,4 @@
-import {
-  AsyncPipe,
-  NgIf,
-} from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
@@ -29,7 +26,6 @@ import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-n
     ContextHelpToggleComponent,
     ImpersonateNavbarComponent,
     NgbDropdownModule,
-    NgIf,
     RouterLink,
     ThemedAuthNavMenuComponent,
     ThemedLangSwitchComponent,

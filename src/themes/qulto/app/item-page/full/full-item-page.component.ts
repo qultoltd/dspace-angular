@@ -1,8 +1,6 @@
 import {
   AsyncPipe,
   KeyValuePipe,
-  NgForOf,
-  NgIf,
 } from '@angular/common';
 import {
   ChangeDetectionStrategy,
@@ -45,8 +43,6 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
     ItemVersionsComponent,
     ItemVersionsNoticeComponent,
     KeyValuePipe,
-    NgForOf,
-    NgIf,
     RouterLink,
     ThemedFullFileSectionComponent,
     ThemedItemAlertsComponent,

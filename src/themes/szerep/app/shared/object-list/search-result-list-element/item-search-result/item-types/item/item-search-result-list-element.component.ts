@@ -1,7 +1,6 @@
 import {
   AsyncPipe,
   NgClass,
-  NgIf,
 } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
@@ -29,7 +28,6 @@ import { ThemedThumbnailComponent } from '../../../../../../../../../app/thumbna
     AsyncPipe,
     MetadataDirective,
     NgClass,
-    NgIf,
     RouterLink,
     ThemedBadgesComponent,
     ThemedThumbnailComponent,
