@@ -43,24 +43,24 @@ themes:
           name: headerLogo
           content: /assets/qulto/images/logo.svg
 
-  # - name: szerep
-  #   extends: qulto
-  #   headTags:
-  #     - tagName: link
-  #       attributes:
-  #         rel: icon
-  #         href: /assets/szerep/images/qultoIcon.svg
-  #         sizes: image/svg+xml
-  #     - tagName: meta
-  #       attributes:
-  #         name: headerLogo
-  #         content: /assets/szerep/images/szerepLogo.png
+  - name: szerep
+    extends: qulto
+    headTags:
+      - tagName: link
+        attributes:
+          rel: icon
+          href: /assets/szerep/images/qultoIcon.svg
+          sizes: image/svg+xml
+      - tagName: meta
+        attributes:
+          name: headerLogo
+          content: /assets/szerep/images/szerepLogo.png
 
-  # - name: dspace-lifebelt
-  #   extends: qulto
-  #   # No headTags → inherits qulto's favicon + header logo (the webinar branding
-  #   # lives in the banner / home-news, not in the header). Add a headTags block
-  #   # here to override the favicon/logo for the webinar if needed.
+  - name: dspace-lifebelt
+    extends: qulto
+    # No headTags → inherits qulto's favicon + header logo (the webinar branding
+    # lives in the banner / home-news, not in the header). Add a headTags block
+    # here to override the favicon/logo for the webinar if needed.
 
 homePage:
   topLevelCommunityList:
