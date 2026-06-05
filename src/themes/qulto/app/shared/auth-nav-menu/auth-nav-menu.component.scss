@@ -1,3 +1,28 @@
+// Minimum width so the login form fits comfortably inside the dropdown panel.
+// Without this the panel collapses to Bootstrap's default 10rem (160px).
+#loginDropdownMenu,
+#logoutDropdownMenu {
+  min-width: 330px;
+  z-index: 1002;
+}
+
+#loginDropdownMenu {
+  min-height: 75px;
+}
+
+#logoutDropdownMenu {
+  background-color: var(--ds-user-menu-bg);
+}
+
+.dropdown-item {
+  &.active,
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: transparent !important;
+  }
+}
+
 // Make the login link a flex container so the text and Bootstrap's auto-generated
 // dropdown caret (::after from .dropdown-toggle) are both centred on the same axis.
 // This avoids the vertical offset that occurs when the link is inline (unlike
@@ -5,6 +30,11 @@
 .dropdownLogin {
   display: inline-flex;
   align-items: center;
+}
+
+// Suppress extra spacing before the caret on dropdown toggles within this component.
+.dropdown-toggle::after {
+  margin-left: 0;
 }
 
 // User icon: CSS background so child themes can override the image via the
