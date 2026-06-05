@@ -14,12 +14,16 @@ import { MiradorViewerComponent } from '../../../../../../../app/item-page/mirad
 import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/themed-file-section.component';
 import { ItemPageAbstractFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
 import { ItemPageDateFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
+import { ItemPageDoiFieldComponent } from '../../field-components/specific-field/doi/item-page-doi-field.component';
 import { GenericItemPageFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
+import { GeospatialItemPageFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/geospatial/geospatial-item-page-field.component';
+import { ItemPageLicenseFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/license/item-page-license-field.component';
 import { ItemPageUriFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
 import { ItemComponent } from '../../../../../../../app/item-page/simple/item-types/shared/item.component';
 import { ThemedMetadataRepresentationListComponent } from '../../../../../../../app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
 import { TabbedRelatedEntitiesSearchComponent } from '../../../../../../../app/item-page/simple/related-entities/tabbed-related-entities-search/tabbed-related-entities-search.component';
 import { RelatedItemsComponent } from '../../../../../../../app/item-page/simple/related-items/related-items-component';
+import { AttachmentSectionComponent } from '../../../../../../../app/shared/bitstream-attachment/section/attachment-section.component';
 import { DsoEditMenuComponent } from '../../../../../../../app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
 import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
 import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
@@ -28,9 +32,13 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
 import { ThemedItemPageTitleFieldComponent } from '../../field-components/specific-field/title/themed-item-page-field.component';
 
 /**
- * Component that represents a publication Item page
+ * Qulto publication item page — synced with DS10 base publication template; adds:
+ * - Smart DOI field (bare `10.xxx` identifiers normalised to `https://doi.org/…`)
+ * - `ds-item-page-license-field` (generic licence display)
+ * - geospatial field guard (config-driven)
+ * - `showDownloadLinkAsAttachment` / attachment section support
+ * - `isPartOf` related-items block (in addition to the base DS10 relations)
  */
-
 @listableObjectComponent('Publication', ViewMode.StandalonePage, Context.Any, 'qulto')
 @Component({
   selector: 'ds-publication',
@@ -39,11 +47,15 @@ import { ThemedItemPageTitleFieldComponent } from '../../field-components/specif
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AsyncPipe,
+    AttachmentSectionComponent,
     CollectionsComponent,
     DsoEditMenuComponent,
     GenericItemPageFieldComponent,
+    GeospatialItemPageFieldComponent,
     ItemPageAbstractFieldComponent,
     ItemPageDateFieldComponent,
+    ItemPageDoiFieldComponent,
+    ItemPageLicenseFieldComponent,
     ItemPageUriFieldComponent,
     MetadataFieldWrapperComponent,
     MiradorViewerComponent,

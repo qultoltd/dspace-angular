@@ -23,4 +23,18 @@
   --ds-header-icon-color-hover: #fff;
   --ds-admin-sidebar-bg: var(--primary);
   --ds-home-news-link-color: var(--primary);
+
+  // ── Icon overrides ────────────────────────────────────────────────────────
+  // Override qulto's icon CSS variables with szerep-branded assets.
+  // These replace the five previously forked component overrides
+  // (admin-sidebar, lang-switch, auth-nav-menu, community-list-element,
+  // object-list) which have been deleted — szerep now inherits qulto's
+  // component HTML/TS and only swaps the images + hover colour here.
+
+  --ds-admin-sidebar-logo: url('/assets/szerep/images/qultoIcon.svg');
+  --ds-lang-flag-hu: url('/assets/szerep/images/huFlagIcon.svg');
+  --ds-lang-flag-en: url('/assets/szerep/images/enFlagIcon.svg');
+  --ds-user-icon: url('/assets/szerep/images/userIcon.svg');
+  --ds-community-icon: url('/assets/szerep/images/communityIcon.svg');
+  --ds-community-hover-bg: rgba(29, 36, 65, 0.06); // subtle szerep-navy tint
 }

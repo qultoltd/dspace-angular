@@ -12,7 +12,9 @@ import { NavbarComponent as BaseComponent } from '../../../../app/navbar/navbar.
 import { slideMobileNav } from '../../../../app/shared/animations/slide';
 
 /**
- * Component representing the public navbar
+ * Qulto navbar — uses the base HTML template but a custom SCSS that defines
+ * CSS variable-driven dropdown/mobile colours so child themes (szerep) can
+ * override navbar appearance without forking this component.
  */
 @Component({
   selector: 'ds-themed-navbar',

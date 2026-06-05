@@ -16,22 +16,12 @@ header {
   }
 
   ::ng-deep {
-    // Add spacing between dropdown text and caret (matches Bootstrap dropdown-toggle)
-    ds-themed-auth-nav-menu {
-      .dropdownLogin::after {
-        display: inline-block;
-        margin-left: 0.255em;
-        vertical-align: 0.255em;
-        content: "";
-        border-top: 0.3em solid;
-        border-right: 0.3em solid transparent;
-        border-bottom: 0;
-        border-left: 0.3em solid transparent;
-      }
 
-      // Add spacing between the user icon and its dropdown caret
-      .dropdownLogout img {
-        margin-right: 0.25rem;
+    // Vertically centre the search magnifier icon so it aligns with the
+    // language flag and the login/logout links in the same nav row.
+    ds-themed-search-navbar {
+      .submit-icon em {
+        vertical-align: middle;
       }
     }
 

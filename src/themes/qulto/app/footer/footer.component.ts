@@ -3,6 +3,10 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { FooterComponent as BaseComponent } from '../../../../app/footer/footer.component';
 
+/**
+ * Qulto footer — entirely replaces the DSpace footer with Monguz/qulto branding
+ * (company name, year, and the qulto logo). The base multi-column footer is not used.
+ */
 @Component({
   selector: 'ds-themed-footer',
   styleUrls: ['./footer.component.scss'],

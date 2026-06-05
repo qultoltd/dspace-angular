@@ -34,8 +34,11 @@
       @include dark-scrollbar;
     }
 
-    img#admin-sidebar-logo {
+    #admin-sidebar-logo {
+      display: block;
+      width: var(--ds-admin-sidebar-logo-height);
       height: var(--ds-admin-sidebar-logo-height);
+      background: var(--ds-admin-sidebar-logo) no-repeat center / contain;
     }
 
     ::ng-deep {

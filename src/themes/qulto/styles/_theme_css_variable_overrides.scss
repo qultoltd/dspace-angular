@@ -10,4 +10,22 @@
   --ds-header-icon-color: var(--blue);
   --ds-admin-sidebar-bg: var(--blue);
   --ds-home-news-link-color: var(--blue);
+
+  // ── Icon CSS variables ────────────────────────────────────────────────────
+  // Child themes (e.g. szerep) override these to swap icons without forking
+  // the component HTML.
+
+  // Admin sidebar header logo
+  --ds-admin-sidebar-logo: url('/assets/qulto/images/qultoIcon.svg');
+
+  // Language-switch flag icons
+  --ds-lang-flag-hu: url('/assets/qulto/images/huFlagIcon.svg');
+  --ds-lang-flag-en: url('/assets/qulto/images/enFlagIcon.svg');
+
+  // Auth nav user icon
+  --ds-user-icon: url('/assets/qulto/images/userIcon.svg');
+
+  // Community list icon + hover tint
+  --ds-community-icon: url('/assets/qulto/images/communityIcon.svg');
+  --ds-community-hover-bg: rgba(23, 75, 133, 0.06);
 }

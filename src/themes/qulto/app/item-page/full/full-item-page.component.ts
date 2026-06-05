@@ -23,8 +23,10 @@ import { ThemedLoadingComponent } from '../../../../../app/shared/loading/themed
 import { VarDirective } from '../../../../../app/shared/utils/var.directive';
 
 /**
- * This component renders a full item page.
- * The route parameter 'id' is used to request the item it represents.
+ * Qulto full item page — renders the metadata as a translated table:
+ * the metadata field keys (e.g. `dc.title`) are passed through the translate
+ * pipe so the table headers show localised labels from the qulto/szerep i18n.
+ * The base template shows raw metadata keys instead.
  */
 
 @Component({

@@ -46,7 +46,7 @@
         [routerLink]="['/communities/' + object.id]"
         class="lead"
       >
-        <img class="mx-2" src="/assets/qulto/images/communityIcon.svg" />
+        <span class="community-icon mx-2" aria-hidden="true"></span>
         {{ dsoNameService.getName(object) }}
       </a>
     }

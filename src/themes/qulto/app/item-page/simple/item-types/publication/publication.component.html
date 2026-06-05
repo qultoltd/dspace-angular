@@ -18,7 +18,7 @@
   <ds-dso-edit-menu></ds-dso-edit-menu>
 </div>
 <div class="row">
-  <div class="col-xs-12 col-md-4">
+  <div class="col-12 col-md-4">
     @if (!(mediaViewer.image || mediaViewer.video)) {
       <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
         <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
@@ -29,7 +29,9 @@
         <ds-media-viewer [item]="object"></ds-media-viewer>
       </div>
     }
-    <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+    @if (showDownloadLinkAsAttachment !== true) {
+      <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+    }
     <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
     <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
       [parentItem]="object"
@@ -53,22 +55,27 @@
       [fields]="['dc.publisher']"
       [label]="'publication.page.publisher'">
     </ds-generic-item-page-field>
+    <!-- Smart DOI: normalises bare 10.xxx identifiers to https://doi.org/… -->
+    <ds-item-page-doi-field [item]="object"></ds-item-page-doi-field>
   </div>
-  <div class="col-xs-12 col-md-7">
+  <div class="col-12 col-md-7">
+    @if (showDownloadLinkAsAttachment) {
+      <ds-item-page-attachment-section [item]="object"></ds-item-page-attachment-section>
+    }
     <ds-related-items
       [parentItem]="object"
       [relationType]="'isProjectOfPublication'"
-      [label]="'relationships.isProjectOf' | translate">
+      [label]="'item.page.projects' | translate">
     </ds-related-items>
     <ds-related-items
       [parentItem]="object"
       [relationType]="'isOrgUnitOfPublication'"
-      [label]="'relationships.isOrgUnitOf' | translate">
+      [label]="'item.page.org-units' | translate">
     </ds-related-items>
     <ds-related-items
       [parentItem]="object"
       [relationType]="'isJournalIssueOfPublication'"
-      [label]="'relationships.isJournalIssueOf' | translate">
+      [label]="'item.page.journal-issue' | translate">
     </ds-related-items>
     <ds-related-items
       [parentItem]="object"
@@ -111,6 +118,16 @@
       [fields]="['datacite.relation.isReferencedBy']"
       [label]="'item.page.referenced'">
     </ds-item-page-uri-field>
+    <ds-item-page-license-field [item]="object">
+    </ds-item-page-license-field>
+    @if (geospatialItemPageFieldsEnabled) {
+      <ds-geospatial-item-page-field [item]="object"
+                                     [label]="'item.page.places'"
+                                     [pointFields]="['dcterms.spatial']"
+                                     [bboxFields]="['dcterms.spatial']"
+                                     [cluster]="true">
+      </ds-geospatial-item-page-field>
+    }
     <div>
       <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']">
         <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
@@ -120,10 +137,10 @@
   <div class="mt-5 w-100">
     <ds-tabbed-related-entities-search  [item]="object"
       [relationTypes]="[{
-                                          label: 'isPartOf',
-                                          filter: 'isPartOf',
-                                          configuration: 'default-relationships'
-                                        }]">
+                          label: 'isPartOf',
+                          filter: 'isPartOf',
+                          configuration: 'default-relationships'
+                        }]">
     </ds-tabbed-related-entities-search>
   </div>
 </div>

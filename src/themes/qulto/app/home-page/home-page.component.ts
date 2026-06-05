@@ -11,6 +11,11 @@ import { SuggestionsPopupComponent } from '../../../../app/notifications/suggest
 import { ThemedConfigurationSearchPageComponent } from '../../../../app/search-page/themed-configuration-search-page.component';
 import { ThemedSearchFormComponent } from '../../../../app/shared/search-form/themed-search-form.component';
 
+/**
+ * Qulto home page — wraps the community list in an extra `.container` div and
+ * controls the discover-filters vs. static-search layout via the `showDiscoverFilters`
+ * flag. Otherwise structurally identical to the base home page.
+ */
 @Component({
   selector: 'ds-themed-home-page',
   styleUrls: ['./home-page.component.scss'],

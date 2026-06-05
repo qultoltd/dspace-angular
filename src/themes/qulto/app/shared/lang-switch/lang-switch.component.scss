@@ -1,0 +1,27 @@
+// Bootstrap 5 adds a ::after caret to every .dropdown-toggle element via
+// @include caret() in _dropdown.scss. The flag icon already communicates the
+// dropdown affordance, so we suppress the automatic caret here.
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+// Flag icons: rendered as CSS background images so child themes can override
+// the image URL via --ds-lang-flag-hu / --ds-lang-flag-en CSS variables without
+// forking this component.
+.lang-flag {
+  display: inline-block;
+  width: 25px;          // matches the SVG intrinsic width (huFlagIcon / enFlagIcon = 25 × 24 px)
+  height: 24px;         // matches the SVG intrinsic height
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &.lang-flag-hu {
+    background-image: var(--ds-lang-flag-hu);
+  }
+
+  &.lang-flag-en {
+    background-image: var(--ds-lang-flag-en);
+  }
+}

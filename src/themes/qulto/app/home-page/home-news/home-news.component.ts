@@ -7,6 +7,11 @@ import { LocaleService } from '../../../../../app/core/locale/locale.service';
 import { getFirstSucceededRemoteDataPayload } from '../../../../../app/core/shared/operators';
 import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page/home-news/home-news.component';
 
+/**
+ * Qulto home-news section — adds the `dspaceName` property (fetched from the REST
+ * root endpoint) and uses qulto-specific i18n keys (`qulto.home.welcome.*`) for the
+ * welcome banner. The base component has no welcome text; this override provides it.
+ */
 @Component({
   selector: 'ds-themed-home-news',
   styleUrls: ['./home-news.component.scss'],

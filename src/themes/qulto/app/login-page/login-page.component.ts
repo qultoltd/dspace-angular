@@ -5,7 +5,8 @@ import { ThemedLogInComponent } from 'src/app/shared/log-in/themed-log-in.compon
 import { LoginPageComponent as BaseComponent } from '../../../../app/login-page/login-page.component';
 
 /**
- * This component represents the login page
+ * Qulto login page — removes the DSpace logo and page-title header present in
+ * the base template, leaving only the centred login form.
  */
 @Component({
   selector: 'ds-themed-login-page',

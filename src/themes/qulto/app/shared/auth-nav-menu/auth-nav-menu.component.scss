@@ -1,0 +1,18 @@
+// Make the login link a flex container so the text and Bootstrap's auto-generated
+// dropdown caret (::after from .dropdown-toggle) are both centred on the same axis.
+// This avoids the vertical offset that occurs when the link is inline (unlike
+// <button> elements, inline <a> tags position ::after relative to the text baseline).
+.dropdownLogin {
+  display: inline-flex;
+  align-items: center;
+}
+
+// User icon: CSS background so child themes can override the image via the
+// --ds-user-icon CSS variable without forking this component.
+.user-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--ds-user-icon) no-repeat center / contain;
+  vertical-align: middle;
+}
