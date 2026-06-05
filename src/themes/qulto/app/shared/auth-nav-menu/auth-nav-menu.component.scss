@@ -32,10 +32,9 @@
   align-items: center;
 }
 
-// Suppress extra spacing before the caret on dropdown toggles within this component.
-.dropdown-toggle::after {
-  margin-left: 0;
-}
+// Bootstrap default margin-left for .dropdown-toggle::after is 0.255em, which
+// matches what the navbar browse menu uses. Keep the same spacing here so the
+// login caret visually aligns with browse-menu carets.
 
 // User icon: CSS background so child themes can override the image via the
 // --ds-user-icon CSS variable without forking this component.

@@ -11,6 +11,11 @@
   --ds-admin-sidebar-bg: var(--blue);
   --ds-home-news-link-color: var(--blue);
 
+  // ── Header logo ──────────────────────────────────────────────────────────
+  // Child themes override --ds-header-logo to swap the logo without forking
+  // the header component or duplicating qulto assets in their headTags config.
+  --ds-header-logo: url('/assets/qulto/images/logo.svg');
+
   // ── Icon CSS variables ────────────────────────────────────────────────────
   // Child themes (e.g. szerep) override these to swap icons without forking
   // the component HTML.

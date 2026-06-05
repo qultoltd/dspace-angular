@@ -1,0 +1,5 @@
+// KJK theme — extends qulto.
+// First load the full qulto theme (variables, vendor, Bootstrap, global styles),
+// then overlay KJK-specific CSS variable overrides on top.
+@import "../../../themes/qulto/styles/theme";
+@import "./theme_css_variable_overrides";

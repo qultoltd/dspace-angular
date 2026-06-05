@@ -1,6 +1,8 @@
 // import { COMPONENTS as CUSTOM_THEME_EAGER_COMPONENTS } from './custom/eager-theme-components';
 import { COMPONENTS as DSPACE_THEME_EAGER_COMPONENTS } from './dspace/eager-theme-components';
 import { COMPONENTS as DSPACE_LIFEBELT_THEME_EAGER_COMPONENTS } from './dspace-lifebelt/eager-theme-components';
+import { COMPONENTS as KJK_THEME_EAGER_COMPONENTS } from './kjk/eager-theme-components';
+import { COMPONENTS as PTE_THEME_EAGER_COMPONENTS } from './pte/eager-theme-components';
 import { COMPONENTS as QULTO_THEME_EAGER_COMPONENTS } from './qulto/eager-theme-components';
 import { COMPONENTS as SZEREP_THEME_EAGER_COMPONENTS } from './szerep/eager-theme-components';
 
@@ -15,6 +17,8 @@ export const EAGER_THEME_COMPONENTS = [
   // ...CUSTOM_THEME_EAGER_COMPONENTS,
   ...DSPACE_THEME_EAGER_COMPONENTS,
   ...DSPACE_LIFEBELT_THEME_EAGER_COMPONENTS,
+  ...KJK_THEME_EAGER_COMPONENTS,
+  ...PTE_THEME_EAGER_COMPONENTS,
   ...QULTO_THEME_EAGER_COMPONENTS,
   ...SZEREP_THEME_EAGER_COMPONENTS,
 ];

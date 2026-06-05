@@ -1,0 +1,9 @@
+{
+  // PTE-specific i18n overrides.
+  // Keys defined here override qulto's translations; all other keys fall back
+  // to qulto (and the DS10 base).
+  //
+  // Example: uncomment and edit to customise the home-page welcome section:
+  // "qulto.home.welcome.title": "Welcome to the PTE Repository!",
+  // "qulto.home.welcome.description": "...",
+}

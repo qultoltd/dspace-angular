@@ -1,0 +1,13 @@
+{
+  "qulto.home.welcome.title": "Üdvözöljük a Katona József Könyvtár digitális gyűjteményeinek oldalán!",
+
+  "qulto.home.welcome.description": "A Helyismereti gyűjteményünkből válogatott dokumentumokat tárjuk Önök elé elektronikus formában.",
+
+  "qulto.home.welcome.functions": "A keresési funkciók segítségével a kutatók és érdeklődők számára is könnyen és gyorsan hozzáférhetővé válnak közös múltunk emlékei.",
+
+  "item.page.doi": "DOI",
+
+  "relationships.isPartOf": "Része a következőnek",
+
+  "relationships.hasPart": "Tartalmazza a következőket",
+}

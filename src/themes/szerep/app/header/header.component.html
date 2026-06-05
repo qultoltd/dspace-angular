@@ -3,11 +3,11 @@
     <div class="d-flex flex-row justify-content-between">
       <div class="d-flex align-items-center">
         <a class="navbar-brand my-2" routerLink="/home">
-          <img
-            src="/assets/szerep/images/szerepLogo.png"
-            class="logo"
-            [attr.alt]="'menu.header.image.logo' | translate"
-          />
+          <span
+            class="header-logo"
+            role="img"
+            [attr.aria-label]="'menu.header.image.logo' | translate"
+          ></span>
         </a>
         <ds-navbar></ds-navbar>
       </div>

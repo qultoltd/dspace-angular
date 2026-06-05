@@ -24,12 +24,27 @@ themes:
   #   - qulto           : the common base (does not extend anything)
   #   - szerep          : extends qulto (own colors + a few components + own logo)
   #   - dspace-lifebelt : extends qulto (webinar banner override only)
+  #   - pte             : extends qulto (PEA logo; banner swap via --ds-home-news-banner var)
+  #   - kjk             : extends qulto (KJK logo + banner; hasPart/isPartOf publication relations)
   #
-  # headTags (favicon + header logo) are NOT merged — a theme either defines its
-  # own or inherits its parent's.
+  # headTags: only the favicon needs to be here — the header LOGO is now a CSS
+  # variable (--ds-header-logo) set in each theme's _theme_css_variable_overrides.scss.
+  # Child themes that use the qulto favicon can omit headTags entirely and inherit
+  # qulto's favicon via the DS10 headTags inheritance mechanism.
   #
   # Current active theme: qulto (first in the list).
   # ───────────────────────────────────────────────────────────────────────────
+  - name: kjk
+    extends: qulto
+    # No headTags → inherits qulto's favicon. Logo via --ds-header-logo CSS var.
+
+  - name: pte
+    extends: qulto
+    # No headTags → inherits qulto's favicon. Logo via --ds-header-logo CSS var.
+
+  - name: szerep
+    extends: qulto
+    # No headTags → inherits qulto's favicon. Logo via --ds-header-logo CSS var.
 
   - name: qulto
     headTags:
@@ -37,24 +52,8 @@ themes:
         attributes:
           rel: icon
           href: /assets/qulto/images/qultoIcon.svg
-          sizes: image/svg+xml
-      - tagName: meta
-        attributes:
-          name: headerLogo
-          content: /assets/qulto/images/logo.svg
+          type: image/svg+xml
 
-  - name: szerep
-    extends: qulto
-    headTags:
-      - tagName: link
-        attributes:
-          rel: icon
-          href: /assets/szerep/images/qultoIcon.svg
-          sizes: image/svg+xml
-      - tagName: meta
-        attributes:
-          name: headerLogo
-          content: /assets/szerep/images/szerepLogo.png
 
   - name: dspace-lifebelt
     extends: qulto

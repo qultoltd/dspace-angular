@@ -74,6 +74,16 @@
                 "inject": false,
                 "bundleName": "szerep-theme"
               },
+              {
+                "input": "src/themes/kjk/styles/theme.scss",
+                "inject": false,
+                "bundleName": "kjk-theme"
+              },
+              {
+                "input": "src/themes/pte/styles/theme.scss",
+                "inject": false,
+                "bundleName": "pte-theme"
+              },
               "node_modules/leaflet/dist/leaflet.css",
               "node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css",
               "node_modules/leaflet.markercluster/dist/MarkerCluster.css"

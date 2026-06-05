@@ -4,8 +4,13 @@ header {
   .navbar-brand {
     padding: 0;
 
-    .logo {
-      height: 3rem;
+    // Logo via CSS variable — same pattern as qulto header.
+    .header-logo {
+      display: inline-block;
+      height: var(--ds-header-logo-height, 40px);
+      width: var(--ds-header-logo-width, 160px);
+      background: var(--ds-header-logo) no-repeat left center / contain;
+      vertical-align: middle;
     }
   }
 

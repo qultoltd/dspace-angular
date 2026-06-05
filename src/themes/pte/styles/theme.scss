@@ -1,0 +1,5 @@
+// PTE theme — extends qulto.
+// First load the full qulto theme, then overlay PTE-specific CSS variable
+// overrides on top. Currently the overrides file is empty — kept as placeholder.
+@import "../../../themes/qulto/styles/theme";
+@import "./theme_css_variable_overrides";

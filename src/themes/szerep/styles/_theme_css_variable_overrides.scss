@@ -24,6 +24,9 @@
   --ds-admin-sidebar-bg: var(--primary);
   --ds-home-news-link-color: var(--primary);
 
+  // ── Header logo ──────────────────────────────────────────────────────────
+  --ds-header-logo: url('/assets/szerep/images/szerepLogo.png');
+
   // ── Icon overrides ────────────────────────────────────────────────────────
   // Override qulto's icon CSS variables with szerep-branded assets.
   // These replace the five previously forked component overrides

@@ -1,0 +1,8 @@
+// PTE theme CSS variable overrides.
+:root {
+  --ds-header-logo: url('/assets/pte/images/peaLogo.png');
+  --ds-header-logo-width: 100px; // PEA logo aspect ~2.15:1, at 40px height → ~86px
+
+  // To swap the home-news banner image:
+  // --ds-home-news-banner: url('/assets/pte/images/yourBanner.jpg');
+}

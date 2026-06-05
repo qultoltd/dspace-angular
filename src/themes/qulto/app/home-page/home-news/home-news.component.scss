@@ -21,7 +21,7 @@ h2 {
   display: grid;
   align-items: center;
   box-shadow: inset 0px 11px 8px -10px #ccc;
-  background-image: url("/assets/qulto/images/banners/library.png");
+  background-image: var(--ds-home-news-banner, url("/assets/qulto/images/banners/library.png"));
   background-size: cover;
   background-repeat: no-repeat;
 

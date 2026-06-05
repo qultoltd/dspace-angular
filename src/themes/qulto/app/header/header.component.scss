@@ -2,6 +2,16 @@ header {
   .navbar-brand {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
+
+    // Logo rendered as CSS background so child themes swap it via
+    // --ds-header-logo without forking the header component HTML.
+    .header-logo {
+      display: inline-block;
+      height: var(--ds-header-logo-height, 40px);
+      width: var(--ds-header-logo-width, 160px);
+      background: var(--ds-header-logo) no-repeat left center / contain;
+      vertical-align: middle;
+    }
   }
 
   nav {
