@@ -11,6 +11,11 @@ import { SuggestionsPopupComponent } from '../../../../app/notifications/suggest
 import { ThemedConfigurationSearchPageComponent } from '../../../../app/search-page/themed-configuration-search-page.component';
 import { ThemedSearchFormComponent } from '../../../../app/shared/search-form/themed-search-form.component';
 
+/**
+ * SZEREP home page — same as the qulto home page (extra `.container` wrapper around
+ * the community list + `showDiscoverFilters` layout switch). Kept separate so szerep
+ * can apply its own home-page SCSS; otherwise structurally identical to qulto.
+ */
 @Component({
   selector: 'ds-themed-home-page',
   styleUrls: ['./home-page.component.scss'],

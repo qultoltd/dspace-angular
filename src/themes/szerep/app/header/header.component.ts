@@ -13,7 +13,9 @@ import { ThemedAuthNavMenuComponent } from '../../../../app/shared/auth-nav-menu
 import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-navbar/impersonate-navbar.component';
 
 /**
- * Represents the header with the logo and simple navigation
+ * SZEREP header — same structure as the qulto header but with a navy background
+ * (set in header.component.scss). The logo comes from the `--ds-header-logo` CSS
+ * variable, so this override exists only for the navy background styling.
  */
 @Component({
   selector: 'ds-themed-header',

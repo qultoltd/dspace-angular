@@ -17,6 +17,12 @@ import { TruncatableComponent } from '../../../../../../../../../app/shared/trun
 import { TruncatablePartComponent } from '../../../../../../../../../app/shared/truncatable/truncatable-part/truncatable-part.component';
 import { ThemedThumbnailComponent } from '../../../../../../../../../app/thumbnail/themed-thumbnail.component';
 
+/**
+ * SZEREP search-result list element — mirrors the DS10 base markup (title/publisher/
+ * date/authors/abstract with `[dsMetadata]` highlighting and the `ds-badges` access
+ * status). Kept as an override only so szerep can apply its own list-element SCSS;
+ * functionally in sync with the base.
+ */
 @listableObjectComponent('PublicationSearchResult', ViewMode.ListElement, Context.Any, 'szerep')
 @listableObjectComponent(ItemSearchResult, ViewMode.ListElement, Context.Any, 'szerep')
 @Component({
