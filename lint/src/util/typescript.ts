@@ -97,7 +97,10 @@ export function isPartOfClassDeclaration(node: TSESTree.Identifier): boolean {
 }
 
 function fromSrc(path: string): string {
-  const m = path.match(/^.*(src\/.+)(\.(ts|json|js)?)$/);
+  // Normalise to forward-slash paths before matching so this works on Windows
+  // where the ESLint context may return a native backslash path.
+  const normalised = toUnixStylePath(path);
+  const m = normalised.match(/^.*(src\/.+)(\.(ts|json|js)?)$/);
 
   if (m) {
     return m[1];
