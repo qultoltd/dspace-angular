@@ -8,4 +8,8 @@
   "relationships.isPartOf": "Is part of",
 
   "relationships.hasPart": "Has part",
+
+  // Label for the Publication page author field (mixed-author-field). The qulto
+  // publication override uses this key instead of base "item.page.authors".
+  "relationships.isAuthorOf": "Authors",
 }

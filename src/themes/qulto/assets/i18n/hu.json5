@@ -9,5 +9,9 @@
 
   "relationships.hasPart": "Tartalmazza a következőket",
 
+  // A Publication oldal szerző-mezőjének címkéje (mixed-author-field). A qulto
+  // publication override ezt a kulcsot használja a base "item.page.authors" helyett.
+  "relationships.isAuthorOf": "Szerzők",
+
   "access-status.open.access.listelement.badge": "Szabadon hozzáférhető",
 }
