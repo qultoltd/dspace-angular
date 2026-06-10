@@ -1,7 +1,9 @@
 .community-icon {
   display: inline-block;
-  width: 1.25rem;
-  height: 1.25rem;
+  // ~32px, matching the natural size of the original 8.x communityIcon.svg
+  // (the DS10 port shrank it to 1.25rem). Tunable here for all inheriting themes.
+  width: 2rem;
+  height: 2rem;
   background: var(--ds-community-icon) no-repeat center / contain;
   vertical-align: middle;
   flex-shrink: 0;
