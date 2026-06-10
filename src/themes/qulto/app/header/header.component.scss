@@ -7,4 +7,10 @@ header {
       color: var(--ds-header-icon-color);
     }
   }
+
+  .navbar-brand {
+    img {
+      max-height: 40px;
+    }
+  }
 }
