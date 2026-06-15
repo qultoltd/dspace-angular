@@ -1,13 +1,29 @@
 import {
   AsyncPipe,
   KeyValuePipe,
+  Location,
 } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  Inject,
+  PLATFORM_ID,
 } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import {
+  ActivatedRoute,
+  Router,
+  RouterLink,
+} from '@angular/router';
+import { NotifyInfoService } from '@dspace/core/coar-notify/notify-info/notify-info.service';
+import { AuthorizationDataService } from '@dspace/core/data/feature-authorization/authorization-data.service';
+import { ItemDataService } from '@dspace/core/data/item-data.service';
+import { SignpostingDataService } from '@dspace/core/data/signposting-data.service';
+import { LinkHeadService } from '@dspace/core/services/link-head.service';
+import { ServerResponseService } from '@dspace/core/services/server-response.service';
+import {
+  TranslateModule,
+  TranslateService,
+} from '@ngx-translate/core';
 
 import { ThemedItemAlertsComponent } from '../../../../../app/item-page/alerts/themed-item-alerts.component';
 import { CollectionsComponent } from '../../../../../app/item-page/field-components/collections/collections.component';
@@ -51,4 +67,28 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
   ],
 })
 export class FullItemPageComponent extends BaseComponent {
+  constructor(
+    protected route: ActivatedRoute,
+    protected router: Router,
+    protected items: ItemDataService,
+    protected authorizationService: AuthorizationDataService,
+    protected _location: Location,
+    protected responseService: ServerResponseService,
+    protected signpostingDataService: SignpostingDataService,
+    protected linkHeadService: LinkHeadService,
+    protected notifyInfoService: NotifyInfoService,
+    @Inject(PLATFORM_ID) protected platformId: string,
+    protected translate: TranslateService,
+  ) {
+    super(route, router, items, authorizationService, _location, responseService, signpostingDataService, linkHeadService, notifyInfoService, platformId);
+  }
+
+  /**
+   * Returns the translation for the given key, or an empty string if no translation exists.
+   * @param key The metadata key to translate.
+   */
+  getTranslation(key: string): string {
+    const translation = this.translate.instant(key);
+    return translation === key ? '' : translation;
+  }
 }

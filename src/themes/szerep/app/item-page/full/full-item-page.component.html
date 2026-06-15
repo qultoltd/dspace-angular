@@ -24,10 +24,10 @@
                     @for (mdEntry of (metadata$ | async) | keyvalue; track mdEntry) {
                       @for (mdValue of mdEntry.value; track mdValue) {
                         <tr>
-                          <!-- Translate the metadata field key (label); keep the raw key as a tooltip. -->
-                          <td [title]="mdEntry.key">{{ mdEntry.key | translate }}</td>
-                          <td>{{mdValue.value}}</td>
-                          <td>{{mdValue.language}}</td>
+                          <td>{{ mdEntry.key }}</td>
+                          <td>{{ getTranslation(mdEntry.key) }}</td>
+                          <td>{{ mdValue.value }}</td>
+                          <td>{{ mdValue.language }}</td>
                         </tr>
                       }
                     }
