@@ -25,13 +25,12 @@
 
   "browse.search-form.placeholder": "Enter the first few characters",
 
+  // SZEREP-specific metadata labels that DIFFER from the qulto base or exist only
+  // here. Keys identical to qulto (dc.title, dc.contributor.author, dc.language.iso)
+  // were removed — they are inherited from the qulto theme i18n. (QREPO-413)
   "dc.title.subtitle": "Subtitle",
 
   "dc.title.other": "Other title",
-
-  "dc.title": "Title",
-
-  "dc.contributor.author": "Author",
 
   "dc.contributor.advisor": "Advisor",
 
@@ -60,8 +59,6 @@
   "dc.description.type": "Level",
 
   "dc.identifier.uri": "URI",
-
-  "dc.language.iso": "Language",
 
   "dc.rights.access": "Access",
 
