@@ -1,0 +1,9 @@
+:host {
+  // The full-item-page table has two label columns (raw metadata key + its
+  // translation). A long value cell (e.g. dc.description) would otherwise
+  // squeeze these, wrapping two-word labels like "Megjelenés dátuma". Keep the
+  // label columns on a single line; only the value column wraps. (QREPO-413)
+  td.metadata-label {
+    white-space: nowrap;
+  }
+}

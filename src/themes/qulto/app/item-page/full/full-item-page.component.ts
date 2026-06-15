@@ -1,29 +1,13 @@
 import {
   AsyncPipe,
   KeyValuePipe,
-  Location,
 } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  Inject,
-  PLATFORM_ID,
 } from '@angular/core';
-import {
-  ActivatedRoute,
-  Router,
-  RouterLink,
-} from '@angular/router';
-import { NotifyInfoService } from '@dspace/core/coar-notify/notify-info/notify-info.service';
-import { AuthorizationDataService } from '@dspace/core/data/feature-authorization/authorization-data.service';
-import { ItemDataService } from '@dspace/core/data/item-data.service';
-import { SignpostingDataService } from '@dspace/core/data/signposting-data.service';
-import { LinkHeadService } from '@dspace/core/services/link-head.service';
-import { ServerResponseService } from '@dspace/core/services/server-response.service';
-import {
-  TranslateModule,
-  TranslateService,
-} from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { ThemedItemAlertsComponent } from '../../../../../app/item-page/alerts/themed-item-alerts.component';
 import { CollectionsComponent } from '../../../../../app/item-page/field-components/collections/collections.component';
@@ -37,20 +21,22 @@ import { DsoEditMenuComponent } from '../../../../../app/shared/dso-page/dso-edi
 import { ErrorComponent } from '../../../../../app/shared/error/error.component';
 import { ThemedLoadingComponent } from '../../../../../app/shared/loading/themed-loading.component';
 import { VarDirective } from '../../../../../app/shared/utils/var.directive';
+import { MetadataLabelPipe } from '../../shared/utils/metadata-label.pipe';
 
 /**
- * Qulto full item page — renders the metadata as a translated table:
- * the metadata field keys (e.g. `dc.title`) are passed through the translate
- * pipe so the table headers show localised labels from the qulto/szerep i18n.
- * The base template shows raw metadata keys instead.
+ * Qulto full item page — renders the metadata table with an extra column.
+ * Each row shows the raw metadata key (e.g. `dc.title`) AND, in a separate
+ * column, its localised label resolved via the `dsMetadataLabel` pipe (empty
+ * when no translation exists). The base template shows only the raw key.
+ * (QREPO-413)
  */
-
 @Component({
   selector: 'ds-themed-full-item-page',
-  // styleUrls: ['./full-item-page.component.scss'],
-  styleUrls: ['../../../../../app/item-page/full/full-item-page.component.scss'],
+  styleUrls: [
+    '../../../../../app/item-page/full/full-item-page.component.scss',
+    './full-item-page.component.scss',
+  ],
   templateUrl: './full-item-page.component.html',
-  // templateUrl: '../../../../../app/item-page/full/full-item-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut],
   imports: [
@@ -61,6 +47,7 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
     ItemVersionsComponent,
     ItemVersionsNoticeComponent,
     KeyValuePipe,
+    MetadataLabelPipe,
     RouterLink,
     ThemedFullFileSectionComponent,
     ThemedItemAlertsComponent,
@@ -71,28 +58,4 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
   ],
 })
 export class FullItemPageComponent extends BaseComponent {
-  constructor(
-    protected route: ActivatedRoute,
-    protected router: Router,
-    protected items: ItemDataService,
-    protected authorizationService: AuthorizationDataService,
-    protected _location: Location,
-    protected responseService: ServerResponseService,
-    protected signpostingDataService: SignpostingDataService,
-    protected linkHeadService: LinkHeadService,
-    protected notifyInfoService: NotifyInfoService,
-    @Inject(PLATFORM_ID) protected platformId: string,
-    protected translate: TranslateService,
-  ) {
-    super(route, router, items, authorizationService, _location, responseService, signpostingDataService, linkHeadService, notifyInfoService, platformId);
-  }
-
-  /**
-   * Returns the translation for the given key, or an empty string if no translation exists.
-   * @param key The metadata key to translate.
-   */
-  getTranslation(key: string): string {
-    const translation = this.translate.instant(key);
-    return translation === key ? '' : translation;
-  }
 }
