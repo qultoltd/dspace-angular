@@ -14,4 +14,35 @@
   "relationships.isAuthorOf": "Szerzők",
 
   "access-status.open.access.listelement.badge": "Szabadon hozzáférhető",
+
+  // A full-item-page (teljes nézet) táblázat fordítás-oszlopa a metaadat-kulcsra
+  // (mdEntry.key) keres rá a getTranslation()-nel. Az alábbi kulcsok a traditional
+  // beküldő űrlap (traditionalpageone + traditionalpagetwo) alapmezői. (QREPO-413)
+  "dc.contributor.author": "Szerző",
+
+  "dc.title": "Cím",
+
+  "dc.title.alternative": "További címek",
+
+  "dc.date.issued": "Megjelenés dátuma",
+
+  "dc.publisher": "Kiadó",
+
+  "dc.identifier.citation": "Bibliográfiai hivatkozás",
+
+  "dc.relation.ispartofseries": "Sorozat / jelentésszám",
+
+  "dc.identifier": "Azonosítók",
+
+  "dc.type": "Típus",
+
+  "dc.language.iso": "Nyelv",
+
+  "dc.subject": "Tárgyszavak",
+
+  "dc.description.abstract": "Absztrakt",
+
+  "dc.description.sponsorship": "Támogatók",
+
+  "dc.description": "Leírás",
 }
