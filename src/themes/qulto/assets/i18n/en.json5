@@ -12,4 +12,35 @@
   // Label for the Publication page author field (mixed-author-field). The qulto
   // publication override uses this key instead of base "item.page.authors".
   "relationships.isAuthorOf": "Authors",
+
+  // The full-item-page table's translation column resolves the metadata key
+  // (mdEntry.key) via getTranslation(). The keys below are the basic fields of the
+  // traditional submission form (traditionalpageone + traditionalpagetwo). (QREPO-413)
+  "dc.contributor.author": "Author",
+
+  "dc.title": "Title",
+
+  "dc.title.alternative": "Other Titles",
+
+  "dc.date.issued": "Date of Issue",
+
+  "dc.publisher": "Publisher",
+
+  "dc.identifier.citation": "Citation",
+
+  "dc.relation.ispartofseries": "Series/Report No.",
+
+  "dc.identifier": "Identifiers",
+
+  "dc.type": "Type",
+
+  "dc.language.iso": "Language",
+
+  "dc.subject": "Subject Keywords",
+
+  "dc.description.abstract": "Abstract",
+
+  "dc.description.sponsorship": "Sponsors",
+
+  "dc.description": "Description",
 }

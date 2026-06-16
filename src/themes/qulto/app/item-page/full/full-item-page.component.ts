@@ -21,20 +21,22 @@ import { DsoEditMenuComponent } from '../../../../../app/shared/dso-page/dso-edi
 import { ErrorComponent } from '../../../../../app/shared/error/error.component';
 import { ThemedLoadingComponent } from '../../../../../app/shared/loading/themed-loading.component';
 import { VarDirective } from '../../../../../app/shared/utils/var.directive';
+import { MetadataLabelPipe } from '../../shared/utils/metadata-label.pipe';
 
 /**
- * Qulto full item page — renders the metadata as a translated table:
- * the metadata field keys (e.g. `dc.title`) are passed through the translate
- * pipe so the table headers show localised labels from the qulto/szerep i18n.
- * The base template shows raw metadata keys instead.
+ * Qulto full item page — renders the metadata table with an extra column.
+ * Each row shows the raw metadata key (e.g. `dc.title`) AND, in a separate
+ * column, its localised label resolved via the `dsMetadataLabel` pipe (empty
+ * when no translation exists). The base template shows only the raw key.
+ * (QREPO-413)
  */
-
 @Component({
   selector: 'ds-themed-full-item-page',
-  // styleUrls: ['./full-item-page.component.scss'],
-  styleUrls: ['../../../../../app/item-page/full/full-item-page.component.scss'],
+  styleUrls: [
+    '../../../../../app/item-page/full/full-item-page.component.scss',
+    './full-item-page.component.scss',
+  ],
   templateUrl: './full-item-page.component.html',
-  // templateUrl: '../../../../../app/item-page/full/full-item-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut],
   imports: [
@@ -45,6 +47,7 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
     ItemVersionsComponent,
     ItemVersionsNoticeComponent,
     KeyValuePipe,
+    MetadataLabelPipe,
     RouterLink,
     ThemedFullFileSectionComponent,
     ThemedItemAlertsComponent,

@@ -39,13 +39,12 @@
 
   "browse.search-form.placeholder": "Adja meg az első pár karaktert",
 
+  // SZEREP-specifikus metaadat-címkék, amelyek ELTÉRNEK a qulto alapfordításától
+  // vagy csak itt léteznek. A qulto-val azonos kulcsok (dc.title, dc.contributor.author,
+  // dc.language.iso) ki lettek véve — azok a qulto téma i18n-jéből öröklődnek. (QREPO-413)
   "dc.title.subtitle": "Alcím",
 
   "dc.title.other": "Egyéb cím",
-
-  "dc.title": "Cím",
-
-  "dc.contributor.author": "Szerző",
 
   "dc.contributor.advisor": "Konzulens/Témavezető",
 
@@ -75,17 +74,11 @@
 
   "dc.identifier.uri": "URI",
 
-  "dc.language.iso": "Nyelv",
-
   "dc.rights.access": "Hozzáférés",
 
   "dc.subject": "Tárgyszó",
 
   "dc.type": "Dokumentumtípus",
-
-  "dc.title": "Cím",
-
-  "dc.title.other": "Egyéb cím",
 
   "dc.format.extent": "Terjedelem",
 
