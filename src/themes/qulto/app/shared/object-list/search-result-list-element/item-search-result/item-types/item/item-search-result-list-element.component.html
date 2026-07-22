@@ -1,0 +1,92 @@
+<div class="row">
+  @if (showThumbnails) {
+    <div class="col-3 col-md-2">
+      @if (linkType !== linkTypes.None) {
+        <a [target]="(linkType === linkTypes.ExternalLink) ? '_blank' : '_self'" [attr.rel]="(linkType === linkTypes.ExternalLink) ? 'noopener noreferrer' : null"
+          [routerLink]="[itemPageRoute]" class="dont-break-out" tabindex="-1">
+          <ds-thumbnail [thumbnail]="dso?.thumbnail | async" [limitWidth]="true">
+          </ds-thumbnail>
+        </a>
+      }
+      @if (linkType === linkTypes.None) {
+        <span class="dont-break-out">
+          <ds-thumbnail [thumbnail]="dso?.thumbnail | async" [limitWidth]="true">
+          </ds-thumbnail>
+        </span>
+      }
+    </div>
+  }
+  <div [ngClass]="showThumbnails ? 'col-9' : 'col-md-12'">
+    <div class="d-flex">
+      @if (showLabel) {
+        <ds-badges [object]="dso" [context]="context" [showAccessStatus]="true"></ds-badges>
+      }
+    </div>
+
+      @if (object !== undefined && object !== null) {
+        <ds-truncatable [id]="dso.id">
+          @if (linkType !== linkTypes.None) {
+            <a [target]="(linkType === linkTypes.ExternalLink) ? '_blank' : '_self'" [attr.rel]="(linkType === linkTypes.ExternalLink) ? 'noopener noreferrer' : null"
+              [routerLink]="[itemPageRoute]" class="lead item-list-title dont-break-out"
+            [dsMetadata]="dsoTitle" role="link" tabindex="0"></a>
+          }
+          @if (linkType === linkTypes.None) {
+            <span class="lead item-list-title dont-break-out"
+            [dsMetadata]="dsoTitle"></span>
+          }
+          <span class="text-muted">
+            <ds-truncatable-part [id]="dso.id" [minLines]="1">
+              @if (getPresentFields(config.group).length > 0) {
+                {{ config.group.prefix }}@for (f of getPresentFields(config.group); track f; let last = $last) {
+              <span [class]="f.cssClass" [dsMetadata]="firstMetadata(f.fields)"></span>
+              @if (!last) {
+                <span>{{ config.group.separator }}</span>
+              }
+              }{{ config.group.suffix }}
+              }
+              @if (dso.allMetadataValues(authorMetadata, placeholderFilter).length > 0) {
+                <span [class]="config.authors.cssClass">
+                  @let collapsed = isCollapsed() | async;
+                  <ng-container>
+                    @if (collapsed) {
+                      @for (author of dso.limitedMetadata(authorMetadata, additionalMetadataLimit, placeholderFilter); track author; let last = $last) {
+                        <ds-metadata-link-view [metadata]="author"></ds-metadata-link-view>
+                        @if (!last) {
+                          <span>{{ config.authors.separator }}</span>
+                        }
+                      }
+                  }
+                  @if (!collapsed) {
+                    @for (author of dso.allMetadata(authorMetadata, placeholderFilter); track author; let last = $last) {
+                      <span>
+                        <ds-metadata-link-view [metadata]="author"></ds-metadata-link-view>
+                        @if (!last) {
+                          <span>{{ config.authors.separator }}</span>
+                        }
+                      </span>
+                    }
+                }
+                  </ng-container>
+                </span>
+              }
+              @if (getPresentFields(config.inlineFields).length > 0) {
+                {{ config.inlineFields.prefix }}@for (f of getPresentFields(config.inlineFields); track f; let last = $last) {
+              <span [class]="f.cssClass" [dsMetadata]="firstMetadata(f.fields)"></span>
+              @if (!last) {
+                <span>{{ config.inlineFields.separator }}</span>
+              }
+              }{{ config.inlineFields.suffix }}
+              }
+            </ds-truncatable-part>
+          </span>
+      @if (firstMetadataValue(config.abstract.fields); as abstract) {
+          <div [class]="config.abstract.cssClass">
+            <ds-truncatable-part [id]="dso.id" [minLines]="config.abstract.minLines">
+              <span [dsMetadata]="firstMetadata(config.abstract.fields)"></span>
+          </ds-truncatable-part>
+        </div>
+      }
+    </ds-truncatable>
+    }
+  </div>
+</div>
