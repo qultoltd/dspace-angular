@@ -270,24 +270,57 @@ ds-community-list .btn-group>.btn[data-test="expand-button"]:first-child {
   border-bottom-right-radius: .375rem !important;
 }
 
-ds-themed-home-page .community-list-wrapper ngb-pagination .page-link {
-  color: #fff !important;
+/**
+ * Pagination (ngb-pagination) styling for the whole theme.
+ *
+ * There is exactly one `ngb-pagination` in the application (in the shared
+ * ds-pagination component), so this rule intentionally covers every paginator:
+ * search results, browse lists, admin registries, access control, item versions, etc.
+ *
+ * Keep this here and NOT in a component stylesheet - an unanchored `::ng-deep` in a
+ * component escapes view encapsulation and leaks globally anyway, which is what
+ * previously made the non-active page links white and therefore invisible on the
+ * light backgrounds used by most pages.
+ */
+ngb-pagination .pagination .page-item {
+  margin: 0 0.25rem;
+
+  .page-link {
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--elte-blue);
+  }
+
+  &.active .page-link {
+    background-color: var(--elte-tan);
+    color: var(--elte-blue);
+  }
+
+  &.disabled .page-link {
+    background-color: transparent;
+    color: #6C757D;
+  }
 }
 
-ds-themed-home-page .community-list-wrapper ngb-pagination .page-item.active .page-link {
-  background-color: var(--elte-tan);
-  color: var(--elte-blue);
-}
+/**
+ * The top-level community list on the home page sits on the dark `--elte-blue`
+ * wrapper (see the `.community-list-wrapper` rule above), so its page links need
+ * light text instead of the theme default.
+ */
+ds-themed-home-page .community-list-wrapper ngb-pagination .pagination .page-item {
+  .page-link {
+    color: #FFFFFF;
+  }
 
-ds-object-list ngb-pagination .page-link,
-ds-themed-object-list ngb-pagination .page-link {
-  color: var(--elte-blue) !important;
-}
+  &.active .page-link {
+    background-color: var(--elte-tan);
+    color: var(--elte-blue);
+  }
 
-ds-object-list ngb-pagination .page-item.active .page-link,
-ds-themed-object-list ngb-pagination .page-item.active .page-link {
-  background-color: var(--elte-tan) !important;
-  color: #FFFFFF !important;
+  &.disabled .page-link {
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
 
 ds-rss .btn.btn-secondary {
@@ -461,6 +494,21 @@ ds-themed-auth-nav-menu .dropdown-toggle::after {
 ds-pagination button {
   background-color: var(--elte-tan) !important;
   border-color: var(--elte-tan) !important;
+}
+
+/**
+ * The rule above forces a tan background on EVERY button inside a paginated area.
+ * Bootstrap's outline variants keep their own foreground colour and stay readable on
+ * tan (primary blue, danger red, warning orange, success green) - but
+ * `.btn-outline-secondary` is given `color: var(--elte-tan)` near the top of this file,
+ * i.e. exactly the colour it is now sitting on, so its icon was invisible until hovered
+ * (e.g. the page-size gear in each bundle header on the "edit bitstreams" page).
+ * Give it the same blue as the `.btn-outline-primary` buttons next to it. Hover is left
+ * alone: `.btn-outline-secondary:hover` is more specific and turns it white, which is
+ * how the sibling buttons already behave.
+ */
+ds-pagination .btn.btn-outline-secondary {
+  color: var(--primary) !important;
 }
 
 ds-browse-by-taxonomy .input-group-append .btn.btn-outline-secondary {
