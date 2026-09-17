@@ -43,4 +43,73 @@
   "dc.description.sponsorship": "Sponsors",
 
   "dc.description": "Description",
+
+  // Further general DC fields. These mean the same on every installation, which
+  // is why they can live in the shared theme.
+  "dc.contributor.advisor": "Advisor",
+
+  "dc.contributor.extadvisor": "External advisor",
+
+  "dc.title.subtitle": "Subtitle",
+
+  "dc.title.paralleltitle": "Parallel title",
+
+  "dc.format": "Format",
+
+  "dc.format.extent": "Extent",
+
+  "dc.identifier.uri": "Permanent link",
+
+  "dc.identifier.doi": "DOI",
+
+  "dc.identifier.issn": "ISSN",
+
+  "dc.identifier.isbn": "ISBN",
+
+  "dc.identifier.original": "Original identifier",
+
+  "dc.identifier.recordid": "Record identifier",
+
+  "dc.identifier.inventorynumber": "Inventory number",
+
+  "dc.rights.access": "Access",
+
+  "dc.description.note": "Note",
+
+  "dc.description.appendix": "Appendix",
+
+  "dc.date.catalog": "Date catalogued",
+
+  "dc.date.accessioned": "Date accessioned",
+
+  "dc.description.provenance": "Provenance",
+
+  "dc.type.resrep": "Nature of the work",
+
+  // Shown only where the field exists: another installation never asks for these
+  // keys, so they cannot collide. Hierarchical subject trees:
+  "dc.subject.hierarchicalHU": "Hierarchical subject (Hungarian)",
+
+  "dc.subject.hierarchicalEN": "Hierarchical subject (English)",
+
+  "dc.subject.hierarchicalDE": "Hierarchical subject (German)",
+
+  // ...and the `education` schema, the fields of student theses:
+  "education.institution": "Institution",
+
+  "education.faculty": "Faculty",
+
+  "education.department": "Department",
+
+  // One key, two uses: the study programme on the thesis form, the doctoral
+  // school on the dissertation one.
+  "education.course": "Programme / doctoral school",
+
+  "education.level": "Level of study",
+
+  "education.advisor.institution": "Advisor – Institution",
+
+  "education.advisor.faculty": "Advisor – Faculty",
+
+  "education.advisor.department": "Advisor – Department",
 }

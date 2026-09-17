@@ -45,4 +45,73 @@
   "dc.description.sponsorship": "Támogatók",
 
   "dc.description": "Leírás",
+
+  // További általános DC-mezők. Ezek minden példányon ugyanazt jelentik, ezért
+  // állhatnak a közös témában.
+  "dc.contributor.advisor": "Témavezető",
+
+  "dc.contributor.extadvisor": "Külső konzulens",
+
+  "dc.title.subtitle": "Alcím",
+
+  "dc.title.paralleltitle": "Párhuzamos cím",
+
+  "dc.format": "Formátum",
+
+  "dc.format.extent": "Terjedelem",
+
+  "dc.identifier.uri": "Állandó hivatkozás",
+
+  "dc.identifier.doi": "DOI",
+
+  "dc.identifier.issn": "ISSN",
+
+  "dc.identifier.isbn": "ISBN",
+
+  "dc.identifier.original": "Eredeti azonosító",
+
+  "dc.identifier.recordid": "Rekordazonosító / Főnaplószám",
+
+  "dc.identifier.inventorynumber": "Leltári szám",
+
+  "dc.rights.access": "Hozzáférés",
+
+  "dc.description.note": "Megjegyzés",
+
+  "dc.description.appendix": "Melléklet",
+
+  "dc.date.catalog": "Állományba vétel ideje",
+
+  "dc.date.accessioned": "Rögzítés dátuma",
+
+  "dc.description.provenance": "Feldolgozási előzmények",
+
+  "dc.type.resrep": "Jelleg",
+
+  // Csak ott jelennek meg, ahol a mező létezik: egy másik példány soha nem kéri
+  // le ezeket a kulcsokat, tehát nem ütköznek. Hierarchikus tárgyszó-fák:
+  "dc.subject.hierarchicalHU": "Hierarchikus tárgyszó (magyar)",
+
+  "dc.subject.hierarchicalEN": "Hierarchikus tárgyszó (angol)",
+
+  "dc.subject.hierarchicalDE": "Hierarchikus tárgyszó (német)",
+
+  // ...és az `education` séma, a hallgatói dolgozatok mezői:
+  "education.institution": "Egyetem",
+
+  "education.faculty": "Kar",
+
+  "education.department": "Tanszék",
+
+  // Egy kulcs, két használat: a szakdolgozat-űrlapon a szak, a disszertációsban
+  // a doktori iskola kerül bele.
+  "education.course": "Szak / doktori iskola",
+
+  "education.level": "Képzési szint",
+
+  "education.advisor.institution": "Belső konzulens – Egyetem",
+
+  "education.advisor.faculty": "Belső konzulens – Kar",
+
+  "education.advisor.department": "Belső konzulens – Tanszék",
 }
