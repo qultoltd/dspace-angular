@@ -32,3 +32,11 @@ header .navbar-brand img {
   max-height: 40px;
   width: auto;
 }
+
+// A profiloldalon a Mentés gomb egy csupasz .col-12-ben ül, alsó térköz nélkül,
+// közvetlenül a következő kártya előtt -- a kártyáknak pedig csak mb-4-ük van,
+// felső margójuk nincs. Emiatt a gomb nekifekszik a következő keretnek.
+// A markup upstream-é, ezért a hiányzó térközt itt pótoljuk; 1.5rem = mb-4.
+ds-base-profile-page .col-12.text-end {
+  margin-bottom: 1.5rem;
+}
