@@ -45,6 +45,7 @@
       <div class="nav-item">
         <div
           ngbDropdown
+          #loggedInDrop="ngbDropdown"
           display="dynamic"
           placement="bottom-right"
           class="d-inline-block"
@@ -63,7 +64,11 @@
           >
             <span class="user-icon" aria-hidden="true"></span></a>
           <div id="logoutDropdownMenu" ngbDropdownMenu>
-            <ds-user-menu [inExpandableNavbar]="false"></ds-user-menu>
+            <!-- changedRoute closes the dropdown on a menu click, as in base. -->
+            <ds-user-menu
+              [inExpandableNavbar]="false"
+              (changedRoute)="loggedInDrop.close()"
+            ></ds-user-menu>
           </div>
         </div>
       </div>
