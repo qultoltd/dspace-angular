@@ -114,4 +114,34 @@
   "education.advisor.faculty": "Belső konzulens – Kar",
 
   "education.advisor.department": "Belső konzulens – Tanszék",
+
+  // ── Szűrők és böngészési szempontok (QREPO-460) ─────────────────────────────
+  // Ezek a kulcsok a discovery.xml-ben felvett szűrők NEVÉBŐL képződnek, és csak
+  // azon a példányon kérődnek le, ahol az adott szűrő létezik — más példánnyal
+  // tehát nem ütköznek. Fallback nincs: hiányzó kulcsnál a nyers kulcsszöveg
+  // jelenne meg a felületen.
+  "search.filters.filter.course.head": "Szak",
+  "search.filters.filter.course.placeholder": "Szak",
+  "search.filters.filter.course.label": "Keresés szak szerint",
+
+  "search.filters.filter.department.head": "Tanszék",
+  "search.filters.filter.department.placeholder": "Tanszék",
+  "search.filters.filter.department.label": "Keresés tanszék szerint",
+
+  "search.filters.filter.inventorynumber.head": "Azonosító",
+  "search.filters.filter.inventorynumber.placeholder": "Azonosító",
+  "search.filters.filter.inventorynumber.label": "Keresés azonosító szerint",
+
+  // A böngészőindexek a local.cfg `webui.browse.index.*` soraiból jönnek.
+  "browse.metadata.course": "Szak",
+  "browse.metadata.course.breadcrumbs": "Böngészés szak szerint",
+  "menu.section.browse_global_by_course": "Szak szerint",
+
+  "browse.metadata.department": "Tanszék",
+  "browse.metadata.department.breadcrumbs": "Böngészés tanszék szerint",
+  "menu.section.browse_global_by_department": "Tanszék szerint",
+
+  "browse.metadata.inventorynumber": "Azonosító",
+  "browse.metadata.inventorynumber.breadcrumbs": "Böngészés azonosító szerint",
+  "menu.section.browse_global_by_inventorynumber": "Azonosító szerint",
 }

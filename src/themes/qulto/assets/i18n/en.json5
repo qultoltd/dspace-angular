@@ -112,4 +112,34 @@
   "education.advisor.faculty": "Advisor – Faculty",
 
   "education.advisor.department": "Advisor – Department",
+
+  // ── Search filters and browse indexes (QREPO-460) ───────────────────────────
+  // These keys are derived from the filter NAME set in discovery.xml, and are
+  // only requested on an instance where that filter exists, so they cannot
+  // collide with another one. There is no fallback: a missing key renders as the
+  // raw key string.
+  "search.filters.filter.course.head": "Programme",
+  "search.filters.filter.course.placeholder": "Programme",
+  "search.filters.filter.course.label": "Search programme",
+
+  "search.filters.filter.department.head": "Department",
+  "search.filters.filter.department.placeholder": "Department",
+  "search.filters.filter.department.label": "Search department",
+
+  "search.filters.filter.inventorynumber.head": "Identifier",
+  "search.filters.filter.inventorynumber.placeholder": "Identifier",
+  "search.filters.filter.inventorynumber.label": "Search identifier",
+
+  // The browse indexes come from `webui.browse.index.*` in local.cfg.
+  "browse.metadata.course": "Programme",
+  "browse.metadata.course.breadcrumbs": "Browse by Programme",
+  "menu.section.browse_global_by_course": "By Programme",
+
+  "browse.metadata.department": "Department",
+  "browse.metadata.department.breadcrumbs": "Browse by Department",
+  "menu.section.browse_global_by_department": "By Department",
+
+  "browse.metadata.inventorynumber": "Identifier",
+  "browse.metadata.inventorynumber.breadcrumbs": "Browse by Identifier",
+  "menu.section.browse_global_by_inventorynumber": "By Identifier",
 }
