@@ -1,9 +1,9 @@
 {
   "qulto.home.welcome.title": "Welcome at the {{ dspaceName }} page!",
 
-  "qulto.home.welcome.description": "{{ dspaceName }} is a digital storage for electronic documents, designed for archiving and making documents accessible.",
+  "qulto.home.welcome.description": "{{ dspaceName }} is the institutional repository of the University of Pécs, collecting and organising in electronic form the theses, doctoral dissertations, academic staff publications, research data and documents relating to the University's history that originate at the University, ensuring their long-term preservation and accessibility.",
 
-  "qulto.home.welcome.functions": "Its purpose is to provide researchers, educators, and interested parties with easy access to scientific and professional materials, promoting the free flow of knowledge and the wider dissemination of the work of the academic community.",
+  "qulto.home.welcome.functions": "",
 
   "relationships.isPartOf": "Is part of",
 

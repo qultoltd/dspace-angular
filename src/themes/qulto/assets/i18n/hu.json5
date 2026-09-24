@@ -1,9 +1,9 @@
 {
   "qulto.home.welcome.title": "Üdvözöljük a {{ dspaceName }} oldalán!",
 
-  "qulto.home.welcome.description": "A {{ dspaceName }} elektronikus dokumentumok digitális tárhelye, archiválásra és a dokumentumok hozzáférhetővé tételére szolgál.",
+  "qulto.home.welcome.description": "A {{ dspaceName }} a Pécsi Tudományegyetem intézményi repozitóriuma, amely elektronikus formában gyűjti és rendszerezi az Egyetemen keletkezett szakdolgozatokat, doktori disszertációkat, oktatói publikációkat, kutatási adatokat és az Egyetem történetéhez kapcsolódó dokumentumokat, biztosítva azok hosszú távú megőrzését és hozzáférését.",
 
-  "qulto.home.welcome.functions": "Célja, hogy biztosítsa a kutatók, oktatók és érdeklődők számára a tudományos és szakmai anyagok könnyű elérhetőségét, elősegítve a tudás szabad áramlását és a tudományos közösség munkájának szélesebb körű terjesztését.",
+  "qulto.home.welcome.functions": "",
 
   "relationships.isPartOf": "Része a következőnek",
 
