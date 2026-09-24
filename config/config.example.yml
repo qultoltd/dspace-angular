@@ -805,3 +805,182 @@ addToAnyPlugin:
   showPlusButton: true
   showCounters: true
   title: DSpace demo
+
+# Config-driven item-page field layout (see resolveItemPageLayout / ItemPageFieldListComponent
+# under src/themes/qulto/app/item-page/simple/field-components/dynamic/). Keyed by entity type
+# (e.g. `Publication`, or `Item` for untyped items) — root-level rather than per-theme, since a
+# deployment only ever runs one active theme. Currently only the untyped-item ("Item") page
+# consumes this; Publication pages are not migrated yet and still render their field list from HTML.
+itemPage:
+  Item:
+    leftSide:
+      #- container: date
+      - container: metadata-representation-list
+        itemType: Person
+        fields: [ dc.contributor.author, dc.creator ]
+        label: item.page.authors
+      - container: generic
+        fields: [ dc.description.version ]
+        label: item.page.version
+      - container: generic
+        fields: [ journal.title ]
+        label: item.page.journal-title
+      - container: generic
+        fields: [ journal.identifier.issn ]
+        label: item.page.journal-issn
+      - container: generic
+        fields: [ journalvolume.identifier.name ]
+        label: item.page.volume-title
+      - container: generic
+        fields: [ dc.publisher ]
+        label: item.page.publisher
+      - container: doi
+    rightSide:
+      - container: abstract
+      - container: generic
+        fields: [ dc.publisher ]
+        label: item.page.publisher
+      - container: generic
+        fields: [ dc.description ]
+        label: item.page.description
+      - container: generic
+        fields: [ dc.subject ]
+        separator: ', '
+        label: item.page.subject
+      - container: generic
+        fields: [ dc.identifier.citation ]
+        label: item.page.citation
+      - container: geospatial
+        label: item.page.places
+        pointFields: [ dcterms.spatial ]
+        bboxFields: [ dcterms.spatial ]
+        cluster: true
+      - container: uri
+        fields: [ dc.identifier.uri ]
+        label: item.page.uri
+      - container: generic
+        fields: [ dc.description.version ]
+        label: item.page.version
+      - container: collections
+      - container: uri
+        fields: [ coar.notify.endorsedBy ]
+        label: item.page.endorsement
+      - container: uri
+        fields: [ datacite.relation.isReviewedBy ]
+        label: item.page.review
+      - container: uri
+        fields: [ datacite.relation.isSupplementedBy ]
+        label: item.page.supplemented
+      - container: uri
+        fields: [ datacite.relation.isReferencedBy ]
+        label: item.page.referenced
+      - container: cc-license
+        variant: full
+
+  Publication:
+    leftSide:
+      #- container: date
+      - container: metadata-representation-list
+        itemType: Person
+        fields: [ dc.contributor.author, dc.creator ]
+        label: relationships.isAuthorOf
+      - container: generic
+        fields: [ journal.title ]
+        label: publication.page.journal-title
+      - container: generic
+        fields: [ journal.identifier.issn ]
+        label: publication.page.journal-issn
+      - container: generic
+        fields: [ journalvolume.identifier.name ]
+        label: publication.page.volume-title
+      - container: generic
+        fields: [ dc.publisher ]
+        label: publication.page.publisher
+      - container: doi
+    rightSide:
+      - container: related-items
+        relationType: isProjectOfPublication
+        label: item.page.projects
+      - container: related-items
+        relationType: isOrgUnitOfPublication
+        label: item.page.org-units
+      - container: related-items
+        relationType: isJournalIssueOfPublication
+        label: item.page.journal-issue
+      - container: related-items
+        relationType: isPartOf
+        label: relationships.isPartOf
+      - container: abstract
+      - container: generic
+        fields: [ dc.publisher ]
+        label: item.page.publisher
+      - container: generic
+        fields: [ dc.description ]
+        label: publication.page.description
+      - container: generic
+        fields: [ dc.subject ]
+        separator: ', '
+        label: item.page.subject
+      - container: generic
+        fields: [ dc.identifier.citation ]
+        label: item.page.citation
+      - container: uri
+        fields: [ dc.identifier.uri ]
+        label: item.page.uri
+      - container: collections
+      - container: uri
+        fields: [ coar.notify.endorsedBy ]
+        label: item.page.endorsement
+      - container: uri
+        fields: [ datacite.relation.isReviewedBy ]
+        label: item.page.review
+      - container: uri
+        fields: [ datacite.relation.isSupplementedBy ]
+        label: item.page.supplemented
+      - container: uri
+        fields: [ datacite.relation.isReferencedBy ]
+        label: item.page.referenced
+      - container: license
+      - container: geospatial
+        label: item.page.places
+        pointFields: [ dcterms.spatial ]
+        bboxFields: [ dcterms.spatial ]
+        cluster: true
+    # fullWidth is disabled by default (this mirrors what used to be a commented-out block in
+    # publication.component.html) — uncomment to show the isPartOf tabbed related-entities
+    # search below the two columns:
+    # fullWidth:
+    #   - container: tabbed-related-entities-search
+    #     relationTypes:
+    #       - { label: isPartOf, filter: isPartOf, configuration: default-relationships }
+
+# Config-driven fields for the search-result list element's subtitle line (see
+# resolveItemSearchResultListElementConfig under src/themes/qulto/app/shared/object-list/
+# search-result-list-element/item-search-result/item-types/item/). Applies to both Publication
+# and generic Item search results — one shared layout, not per entity type. `authors.cssClass`/
+# `authors.separator` only control styling; WHICH fields count as "author" is still driven by
+# the existing `searchResult.authorMetadata` app config (default-app-config.ts;
+# not overridden in this file today).
+itemSearchResultListElement:
+  group:
+    prefix: '('
+    suffix: ')'
+    separator: ', '
+    fields:
+      - fields: [ dc.publisher ]
+        cssClass: item-list-publisher
+      - fields: [ dc.date.issued ]
+        cssClass: item-list-date
+  # Freestanding fields — same {fields, cssClass} shape as `group`, but NOT wrapped in
+  # parens/joined with publisher+date. Use this to add a new field without touching `group`.
+  inlineFields:
+    fields:
+      - fields: [ dc.description.version ]
+        cssClass: item-list-version
+  authors:
+    cssClass: item-list-authors
+    separator: '; '
+  abstract:
+    fields: [ dc.description.abstract ]
+    cssClass: item-list-abstract
+    minLines: 3

@@ -1,0 +1,3 @@
+@for (cfg of visibleConfigs; track $index) {
+  <ng-container *ngComponentOutlet="componentFor(cfg); inputs: inputsFor(cfg)"></ng-container>
+}
