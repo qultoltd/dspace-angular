@@ -13,7 +13,11 @@
   margin-top: 1.5rem;
 }
 
-::ng-deep {
+// NOTE: `::ng-deep` must be anchored with `:host`. Unanchored, Angular cannot attach
+// the `[_ngcontent-*]` scope attribute and emits these rules globally - which made
+// `p.lead` white app-wide (invisible on the import-external hint and the QA
+// project-entry-import modal) and stripped `.mt-4` margins on unrelated pages.
+:host ::ng-deep {
   h2 {
     font-family: "Varela", system-ui;
     font-weight: 400;
@@ -39,15 +43,9 @@
     }
   }
 
-  ::ng-deep {
-    ::ng-deep {
-      ::ng-deep {
-        .pagination-info {
-          font-size: 1rem;
-          font-weight: 400;
-          color: #7e7d7d;
-        }
-      }
-    }
+  .pagination-info {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #7e7d7d;
   }
 }
