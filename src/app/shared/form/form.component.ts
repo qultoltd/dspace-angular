@@ -389,6 +389,8 @@ export class FormComponent implements OnDestroy, OnInit {
 
     const control: UntypedFormControl = event.control;
     const fieldIndex: number = (event.context && event.context.index) ? event.context.index : 0;
+    // The user changed the field, so a previous server-side error no longer applies to its value
+    this.formService.clearServerErrorValidator(control);
     if (control.valid) {
       this.formService.removeError(this.formId, event.model.id, fieldIndex);
     }
