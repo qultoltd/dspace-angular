@@ -12,6 +12,7 @@ import {
   Output,
   ViewEncapsulation,
 } from '@angular/core';
+import { AuthService } from '@dspace/core/auth/auth.service';
 import { CookieService } from '@dspace/core/cookies/cookie.service';
 import { DragService } from '@dspace/core/drag.service';
 import {
@@ -154,6 +155,7 @@ export class UploaderComponent implements OnInit, AfterViewInit {
     private cdr: ChangeDetectorRef,
     private dragService: DragService,
     private tokenExtractor: HttpXsrfTokenExtractor,
+    private authService: AuthService,
     private cookieService: CookieService,
     private liveRegionService: LiveRegionService,
   ) {
@@ -197,6 +199,11 @@ export class UploaderComponent implements OnInit, AfterViewInit {
     this.uploader.onBeforeUploadItem = (item) => {
       if (item.url !== this.uploader.options.url) {
         item.url = this.uploader.options.url;
+      }
+      // Ensure the current auth token is used (it is captured when the uploader is built, and the upload bypasses the HTTP interceptors)
+      const authHeader = this.authService.buildAuthHeader();
+      if (isNotEmpty(authHeader)) {
+        this.uploader.authToken = authHeader;
       }
       // Ensure the current XSRF token is included in every upload request (token may change between items uploaded)
       // Ensure the behalf header is set if impersonating
