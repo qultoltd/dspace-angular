@@ -242,6 +242,16 @@ describe('FormService test suite', () => {
 
   });
 
+  it('should keep the own validators of a field after a server-side error is added and removed', () => {
+    const control = controls.title;   // declared with Validators.required and left empty
+    const model = formModel.find((mdl: DynamicFormControlModel) => mdl.id === 'title');
+
+    service.addErrorToField(control, model, 'Test error message');
+    service.removeErrorFromField(control, model, Object.keys(control.errors)[0]);
+
+    expect(control.hasError('required')).toBe(true);
+  });
+
   it('should remove error from field', () => {
     let control = controls.description;
     let model = formModel.find((mdl: DynamicFormControlModel) => mdl.id === 'description');
