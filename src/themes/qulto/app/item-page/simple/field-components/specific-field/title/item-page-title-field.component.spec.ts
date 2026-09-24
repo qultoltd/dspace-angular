@@ -7,6 +7,7 @@ import {
   TestBed,
   waitForAsync,
 } from '@angular/core/testing';
+import { TranslateLoaderMock } from '@dspace/core/testing/translate-loader.mock';
 import {
   TranslateLoader,
   TranslateModule,
@@ -14,7 +15,6 @@ import {
 
 import { DSONameService } from '../../../../../../../../app/core/breadcrumbs/dso-name.service';
 import { mockItemWithMetadataFieldsAndValue } from '../../../../../../../../app/item-page/simple/field-components/specific-field/item-page-field.component.spec';
-import { TranslateLoaderMock } from '../../../../../../../../app/shared/testing/translate-loader.mock';
 import { ItemPageTitleFieldComponent } from './item-page-title-field.component';
 
 let comp: ItemPageTitleFieldComponent;
