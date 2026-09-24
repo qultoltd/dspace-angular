@@ -12,6 +12,13 @@ import {
 } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
+import { APP_DATA_SERVICES_MAP } from '@dspace/core/data-services-map-type';
+import { NotificationsService } from '@dspace/core/notification-system/notifications.service';
+import { BrowseDefinitionDataServiceStub } from '@dspace/core/testing/browse-definition-data-service.stub';
+import { mockTruncatableService } from '@dspace/core/testing/mock-trucatable.service';
+import { TranslateLoaderMock } from '@dspace/core/testing/translate-loader.mock';
+import { createPaginatedList } from '@dspace/core/testing/utils.test';
+import { createSuccessfulRemoteDataObject$ } from '@dspace/core/utilities/remote-data.utils';
 import { Store } from '@ngrx/store';
 import {
   TranslateLoader,
@@ -39,7 +46,6 @@ import { Bitstream } from '../../../../../../../app/core/shared/bitstream.model'
 import { HALEndpointService } from '../../../../../../../app/core/shared/hal-endpoint.service';
 import { Item } from '../../../../../../../app/core/shared/item.model';
 import { MetadataMap } from '../../../../../../../app/core/shared/metadata.models';
-import { SearchService } from '../../../../../../../app/core/shared/search/search.service';
 import { UUIDService } from '../../../../../../../app/core/shared/uuid.service';
 import { WorkspaceitemDataService } from '../../../../../../../app/core/submission/workspaceitem-data.service';
 import { CollectionsComponent } from '../../../../../../../app/item-page/field-components/collections/collections.component';
@@ -61,24 +67,12 @@ import { ThemedMetadataRepresentationListComponent } from '../../../../../../../
 import { RelatedItemsComponent } from '../../../../../../../app/item-page/simple/related-items/related-items-component';
 import { DsoEditMenuComponent } from '../../../../../../../app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
 import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
-import { mockTruncatableService } from '../../../../../../../app/shared/mocks/mock-trucatable.service';
-import { TranslateLoaderMock } from '../../../../../../../app/shared/mocks/translate-loader.mock';
-import { NotificationsService } from '../../../../../../../app/shared/notifications/notifications.service';
-import { createSuccessfulRemoteDataObject$ } from '../../../../../../../app/shared/remote-data.utils';
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
-import { BrowseDefinitionDataServiceStub } from '../../../../../../../app/shared/testing/browse-definition-data-service.stub';
-import { createPaginatedList } from '../../../../../../../app/shared/testing/utils.test';
+import { SearchService } from '../../../../../../../app/shared/search/search.service';
 import { TruncatableService } from '../../../../../../../app/shared/truncatable/truncatable.service';
 import { TruncatePipe } from '../../../../../../../app/shared/utils/truncate.pipe';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
-/* import {
-  APP_CONFIG,
-  APP_DATA_SERVICES_MAP,
-} from '../../../../../config/app-config.interface'; */
-import {
-  APP_CONFIG,
-  APP_DATA_SERVICES_MAP,
-} from '../../../../../../../config/app-config.interface';
+import { APP_CONFIG } from '../../../../../../../config/app-config.interface';
 import { environment } from '../../../../../../../environments/environment.test';
 import { PublicationComponent } from './publication.component';
 
