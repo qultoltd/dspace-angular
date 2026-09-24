@@ -280,6 +280,7 @@ export const environment: BuildConfig = {
     },
     topLevelCommunityList: {
       pageSize: 5,
+      layout: 'list',
     },
     showDiscoverFilters: false,
   },
