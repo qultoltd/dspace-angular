@@ -1,0 +1,94 @@
+{
+  "browse.startsWith.jump": "Ugrás a tartalom egy pontjához",
+
+  "forgot-email.form.info": "Amennyiben Ön már regisztrált, de elfelejtette a jelszavát, kérjük adja meg a belépéshez használt e-mail címet.",
+
+  "home.search-form.placeholder": "Keresés a repozitóriumban ...",
+
+  "home.top-level-communities.head": "Kategóriák a SZERep-ben",
+
+  "item.truncatable-part.show-more": "Részletek",
+
+  "item.truncatable-part.show-less": "Kevesebb",
+
+  "vocabulary-treeview.load-more": "Továbbiak",
+
+  "qulto.home.welcome.title": "Köszöntjük a SZERep - Széchenyi István Egyetem Repozitórium oldalán!",
+
+  "qulto.home.welcome.description": "A Széchenyi István Egyetem Repozitórium (továbbiakban: SZERep) a Széchenyi István Egyetem tudományos tevékenységének digitális archívuma.",
+
+  "qulto.home.welcome.functions": "Célja az intézményben zajló tudományos tevékenység eredményeként született dokumentumok tárolása, hosszútávú megőrzése, valamint a minél szélesebb körű hozzáférhetőség biztosítása a szerzői jogok, valamint a kiadói szerződésekben foglalt szabályok figyelembevételével.",
+
+  "qulto.home.welcome.link": "A feltöltéssel és a hozzáféréssel kapcsolatos információk a <a href=\"https://lib.sze.hu/intezmenyi-repozitorium\" target=\"_blank\" rel=\"noopener noreferrer\">SZE Egyetemi Könyvtár és Levéltár honlapján</a> érhetők el.",
+
+  "item.page.doi": "DOI",
+
+  "home.search-form.placeholder": "Keresés a repozitóriumban ...",
+
+  "home.top-level-communities.head": "Kategóriák a SZERep-ben",
+
+  "item.truncatable-part.show-more": "Részletek",
+
+  "item.truncatable-part.show-less": "Kevesebb",
+
+  "vocabulary-treeview.load-more": "Továbbiak",
+
+  "forgot-email.form.info": "Amennyiben Ön már regisztrált, de elfelejtette a jelszavát, kérjük adja meg a belépéshez használt e-mail címet.",
+
+  "browse.startsWith.jump": "Ugrás a tartalom egy pontjához",
+
+  "browse.search-form.placeholder": "Adja meg az első pár karaktert",
+
+  // SZEREP-specifikus metaadat-címkék, amelyek ELTÉRNEK a qulto alapfordításától
+  // vagy csak itt léteznek. A qulto-val azonos kulcsok (dc.title, dc.contributor.author,
+  // dc.language.iso) ki lettek véve — azok a qulto téma i18n-jéből öröklődnek. (QREPO-413)
+  "dc.title.subtitle": "Alcím",
+
+  "dc.title.other": "Egyéb cím",
+
+  "dc.contributor.advisor": "Konzulens/Témavezető",
+
+  "dc.contributor.description": "Leírás",
+
+  "dc.contributor.extadvisor": "Külső konzulens",
+
+  "dc.contributor.faculty": "Kar",
+
+  "dc.contributor.inst": "Tanszék",
+
+  "dc.contributor.org": "Intézmény",
+
+  "dc.contributor.workplace": "Külső konzules munkahelye",
+
+  "dc.date.accessioned": "Utolsó hozzáférés ideje",
+
+  "dc.date.available": "Elérhetőség dátuma",
+
+  "dc.date.catalog": "Állományba vétel",
+
+  "dc.date.issued": "Megjelenés éve",
+
+  "dc.date.recordid": "Főnaplószám",
+
+  "dc.description.type": "Képzési szint",
+
+  "dc.identifier.uri": "URI",
+
+  "dc.rights.access": "Hozzáférés",
+
+  "dc.subject": "Tárgyszó",
+
+  "dc.type": "Dokumentumtípus",
+
+  "dc.format.extent": "Terjedelem",
+
+  "dc.identifier.doi": "DOI",
+
+  "dc.contributor.doctschool": "Doktori iskola",
+
+  "dc.description.appendix": "Melléklet",
+
+  "status.badge.limited": "Korlátozottan hozzáférhető",
+
+  "status.badge.public": "Szabadon hozzáférhető",
+}

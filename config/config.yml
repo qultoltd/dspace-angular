@@ -1,5 +1,87 @@
+ui:
+  ssl: false
+  host: localhost
+  port: 4000
+
 rest:
   ssl: true
   host: sandbox.dspace.org
   port: 443
   nameSpace: /server
+
+mediaViewer:
+  image: true
+  video: true
+
+themes:
+  # ── Theme selection ────────────────────────────────────────────────────────
+  # The ACTIVE site-wide theme is the FIRST theme below that has NO match rule
+  # (no regex / handle / uuid) — see getDefaultThemeConfig() in config.util.ts.
+  # All themes are listed here with their inheritance; to switch which one is
+  # active, just MOVE it to the top of this list (or comment out the ones above).
+  #
+  # Inheritance:
+  #   - qulto           : the common base (does not extend anything)
+  #   - szerep          : extends qulto (own colors + a few components + own logo)
+  #   - dspace-lifebelt : extends qulto (webinar banner override only)
+  #   - pte             : extends qulto (PEA logo; banner swap via --ds-home-news-banner var)
+  #   - kjk             : extends qulto (KJK logo + banner; hasPart/isPartOf publication relations)
+  #
+  # headTags: only the favicon needs to be here — the header LOGO is now a CSS
+  # variable (--ds-header-logo) set in each theme's _theme_css_variable_overrides.scss.
+  # Child themes that use the qulto favicon can omit headTags entirely and inherit
+  # qulto's favicon via the DS10 headTags inheritance mechanism.
+  #
+  # Current active theme: qulto (first in the list).
+  # ───────────────────────────────────────────────────────────────────────────
+  - name: kjk
+    extends: qulto
+    # No headTags → inherits qulto's favicon. Logo via --ds-header-logo CSS var.
+
+  - name: pte
+    extends: qulto
+    # No headTags → inherits qulto's favicon. Logo via --ds-header-logo CSS var.
+
+  - name: szerep
+    extends: qulto
+    # No headTags → inherits qulto's favicon. Logo via --ds-header-logo CSS var.
+
+  - name: qulto
+    headTags:
+      - tagName: link
+        attributes:
+          rel: icon
+          href: /assets/qulto/images/qultoIcon.svg
+          type: image/svg+xml
+
+
+  - name: dspace-lifebelt
+    extends: qulto
+    # No headTags → inherits qulto's favicon + header logo (the webinar branding
+    # lives in the banner / home-news, not in the header). Add a headTags block
+    # here to override the favicon/logo for the webinar if needed.
+
+homePage:
+  topLevelCommunityList:
+    # No. of communities to list per page on the home page
+    # This will always round to the nearest number from the list of page sizes. e.g. if you set it to 7 it'll use 10
+    pageSize: 4
+    # layout can be "cards" or "list"
+    layout: "list"
+
+item:
+  showAccessStatuses: true
+
+
+#  Default Language in which the UI will be rendered if the user's browser language is not an active language
+fallbackLanguage: hu
+
+# Languages. DSpace Angular holds a message catalog for each of the following languages.
+# When set to active, users will be able to switch to the use of this language in the user interface.
+languages:
+  - code: hu
+    label: Magyar
+    active: true
+  - code: en
+    label: English
+    active: true

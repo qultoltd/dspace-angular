@@ -1,0 +1,16 @@
+@if (showAccessStatus) {
+  @if (accessStatus) {
+    <span>
+      @if (accessStatus === 'limited') {
+        <span [class]="'badge limited'">
+          {{ 'status.badge.' + accessStatus | translate }}
+        </span>
+      }
+      @if (accessStatus === 'public') {
+        <span [class]="'badge public'">
+          {{ 'status.badge.' + accessStatus | translate }}
+        </span>
+      }
+    </span>
+  }
+}

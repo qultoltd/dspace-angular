@@ -1,0 +1,112 @@
+nav.navbar {
+  align-items: baseline;
+  border-bottom: 0;
+  padding-bottom: 0;
+
+  ::ng-deep {
+    .ds-menu-item-wrapper {
+      .ds-menu-item {
+        color: var(--ds-navbar-link-color);
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+
+        &:hover {
+          text-decoration: none;
+          color: var(--ds-navbar-link-color-hover);
+        }
+      }
+    }
+
+    // On a dropdown toggler (e.g. "Böngészés") the label link is followed by the
+    // caret, so the link's right padding sits between the label and the caret and
+    // makes the gap look too wide. Drop the right padding there so the caret hugs
+    // the label.
+    // NOTE: the #expandable-navbar-section-browse_global override below no longer
+    // matches — since DSpace 10 the section id is auto-generated
+    // (`${menuProviderId}_${index}`), not "browse_global" — which is why that
+    // padding reset stopped working. This selector is id-independent on purpose.
+    .ds-menu-toggler-wrapper .ds-menu-item {
+      padding-right: 0;
+    }
+
+    #expandable-navbar-section-browse_global {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+
+      .ds-menu-item {
+        padding: 0;
+      }
+
+      a {
+        color: var(--ds-navbar-link-color);
+      }
+
+      #browseDropdown {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    // Global dropdown menu styles for navbar.
+    // Colours are themeable via CSS vars; the var() fallbacks are qulto's own
+    // values, so qulto is unchanged while a child theme (e.g. szerep) can make
+    // the dropdown dark by setting the variables.
+    .dropdown-menu {
+      background-color: var(--ds-navbar-dropdown-bg, white);
+      min-width: 200px;
+      border: var(--ds-navbar-dropdown-border, 1px solid #ddd);
+
+      .ds-menu-item {
+        color: var(--ds-navbar-link-color) !important;
+        display: block;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+
+        &:hover, &:focus {
+          color: var(--ds-navbar-link-color-hover) !important;
+          background-color: var(--ds-navbar-dropdown-hover-bg, #f8f9fa);
+        }
+      }
+    }
+  }
+}
+
+/** Mobile menu styling **/
+@media screen and (max-width: (map-get($grid-breakpoints, md)-0.02)) {
+  .navbar {
+    width: 100%;
+    background-color: var(--ds-navbar-mobile-bg, var(--bs-white));
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+
+    &.open {
+      top: 4rem;
+      right: 0;
+      height: auto;
+      min-height: 100vh; //doesn't matter because wrapper is sticky
+      z-index: 999;
+
+      .navbar-nav {
+        row-gap: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, md)) {
+  .reset-padding-md {
+    margin-left: calc(var(--bs-spacer) / -2);
+    margin-right: calc(var(--bs-spacer) / -2);
+  }
+}
+
+.navbar-expand-md.navbar-container {
+  @media screen and (max-width: (map-get($grid-breakpoints, md)-0.02)) {
+    > .navbar-inner-container {
+      padding: 0 var(--bs-spacer);
+    }
+    padding: 0;
+  }
+}

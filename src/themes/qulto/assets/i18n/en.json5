@@ -1,0 +1,145 @@
+{
+  "qulto.home.welcome.title": "Welcome at the {{ dspaceName }} page!",
+
+  "qulto.home.welcome.description": "{{ dspaceName }} is a digital storage for electronic documents, designed for archiving and making documents accessible.",
+
+  "qulto.home.welcome.functions": "Its purpose is to provide researchers, educators, and interested parties with easy access to scientific and professional materials, promoting the free flow of knowledge and the wider dissemination of the work of the academic community.",
+
+  "relationships.isPartOf": "Is part of",
+
+  "relationships.hasPart": "Has part",
+
+  // Label for the Publication page author field (mixed-author-field). The qulto
+  // publication override uses this key instead of base "item.page.authors".
+  "relationships.isAuthorOf": "Authors",
+
+  // The full-item-page table's translation column resolves the metadata key
+  // (mdEntry.key) via getTranslation(). The keys below are the basic fields of the
+  // traditional submission form (traditionalpageone + traditionalpagetwo). (QREPO-413)
+  "dc.contributor.author": "Author",
+
+  "dc.title": "Title",
+
+  "dc.title.alternative": "Other Titles",
+
+  "dc.date.issued": "Date of Issue",
+
+  "dc.publisher": "Publisher",
+
+  "dc.identifier.citation": "Citation",
+
+  "dc.relation.ispartofseries": "Series/Report No.",
+
+  "dc.identifier": "Identifiers",
+
+  "dc.type": "Type",
+
+  "dc.language.iso": "Language",
+
+  "dc.subject": "Subject Keywords",
+
+  "dc.description.abstract": "Abstract",
+
+  "dc.description.sponsorship": "Sponsors",
+
+  "dc.description": "Description",
+
+  // Further general DC fields. These mean the same on every installation, which
+  // is why they can live in the shared theme.
+  "dc.contributor.advisor": "Advisor",
+
+  "dc.contributor.extadvisor": "External advisor",
+
+  "dc.title.subtitle": "Subtitle",
+
+  "dc.title.paralleltitle": "Parallel title",
+
+  "dc.format": "Format",
+
+  "dc.format.extent": "Extent",
+
+  "dc.identifier.uri": "Permanent link",
+
+  "dc.identifier.doi": "DOI",
+
+  "dc.identifier.issn": "ISSN",
+
+  "dc.identifier.isbn": "ISBN",
+
+  "dc.identifier.original": "Original identifier",
+
+  "dc.identifier.recordid": "Record identifier",
+
+  "dc.identifier.inventorynumber": "Inventory number",
+
+  "dc.rights.access": "Access",
+
+  "dc.description.note": "Note",
+
+  "dc.description.appendix": "Appendix",
+
+  "dc.date.catalog": "Date catalogued",
+
+  "dc.date.accessioned": "Date accessioned",
+
+  "dc.description.provenance": "Provenance",
+
+  "dc.type.resrep": "Nature of the work",
+
+  // Shown only where the field exists: another installation never asks for these
+  // keys, so they cannot collide. Hierarchical subject trees:
+  "dc.subject.hierarchicalHU": "Hierarchical subject (Hungarian)",
+
+  "dc.subject.hierarchicalEN": "Hierarchical subject (English)",
+
+  "dc.subject.hierarchicalDE": "Hierarchical subject (German)",
+
+  // ...and the `education` schema, the fields of student theses:
+  "education.institution": "Institution",
+
+  "education.faculty": "Faculty",
+
+  "education.department": "Department",
+
+  // One key, two uses: the study programme on the thesis form, the doctoral
+  // school on the dissertation one.
+  "education.course": "Programme / doctoral school",
+
+  "education.level": "Level of study",
+
+  "education.advisor.institution": "Advisor – Institution",
+
+  "education.advisor.faculty": "Advisor – Faculty",
+
+  "education.advisor.department": "Advisor – Department",
+
+  // ── Search filters and browse indexes (QREPO-460) ───────────────────────────
+  // These keys are derived from the filter NAME set in discovery.xml, and are
+  // only requested on an instance where that filter exists, so they cannot
+  // collide with another one. There is no fallback: a missing key renders as the
+  // raw key string.
+  "search.filters.filter.course.head": "Programme",
+  "search.filters.filter.course.placeholder": "Programme",
+  "search.filters.filter.course.label": "Search programme",
+
+  "search.filters.filter.department.head": "Department",
+  "search.filters.filter.department.placeholder": "Department",
+  "search.filters.filter.department.label": "Search department",
+
+  "search.filters.filter.inventorynumber.head": "Identifier",
+  "search.filters.filter.inventorynumber.placeholder": "Identifier",
+  "search.filters.filter.inventorynumber.label": "Search identifier",
+
+  // The browse indexes come from `webui.browse.index.*` in local.cfg.
+  "browse.metadata.course": "Programme",
+  "browse.metadata.course.breadcrumbs": "Browse by Programme",
+  "menu.section.browse_global_by_course": "By Programme",
+
+  "browse.metadata.department": "Department",
+  "browse.metadata.department.breadcrumbs": "Browse by Department",
+  "menu.section.browse_global_by_department": "By Department",
+
+  "browse.metadata.inventorynumber": "Identifier",
+  "browse.metadata.inventorynumber.breadcrumbs": "Browse by Identifier",
+  "menu.section.browse_global_by_inventorynumber": "By Identifier",
+}

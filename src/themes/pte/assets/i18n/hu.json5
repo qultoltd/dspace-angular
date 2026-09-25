@@ -1,0 +1,9 @@
+{
+  // PTE-specifikus fordítás-felülírások.
+  // Az itt megadott kulcsok felülírják a qulto fordításait; a többi kulcs a
+  // qulto-tól (és a DS10 base-től) öröklődik.
+  //
+  // Példa: vedd ki a megjegyzésből és szerkeszd a főoldal üdvözlőszövegéhez:
+  // "qulto.home.welcome.title": "Üdvözöljük a PTE repozitóriumában!",
+  // "qulto.home.welcome.description": "...",
+}

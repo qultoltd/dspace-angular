@@ -1,0 +1,80 @@
+{
+  "browse.startsWith.jump": "Jump to a point in the content",
+
+  "forgot-email.form.info": "If you have already registered but have forgotten your password, please enter the e-mail address used to log in.",
+
+  "home.top-level-communities.head": "Communities in SZERep",
+
+  "browse.search-form.placeholder": "Enter the first few characters",
+
+  "qulto.home.welcome.title": "Welcome to SZERep, the institutional repository of Széchenyi István University!",
+
+  "qulto.home.welcome.description": "SZERep serves as the digital archive for the university's scholarly and scientific output.",
+
+  "qulto.home.welcome.functions": "Our mission is the long-term storage and preservation of the institution's research documents, while maximizing global accessibility in strict accordance with copyright laws and publisher agreements.",
+
+  "qulto.home.welcome.link": "For information about submission and access, please visit the <a href=\"https://lib.sze.hu/intezmenyi-repozitorium\" target=\"_blank\" rel=\"noopener noreferrer\">SZE University Library and Archives website</a>.",
+
+  "item.page.doi": "DOI",
+
+  "home.top-level-communities.head": "Communities in SZERep",
+
+  "forgot-email.form.info": "If you have already registered but have forgotten your password, please enter the e-mail address used to log in.",
+
+  "browse.startsWith.jump": "Jump to a point in the content",
+
+  "browse.search-form.placeholder": "Enter the first few characters",
+
+  // SZEREP-specific metadata labels that DIFFER from the qulto base or exist only
+  // here. Keys identical to qulto (dc.title, dc.contributor.author, dc.language.iso)
+  // were removed — they are inherited from the qulto theme i18n. (QREPO-413)
+  "dc.title.subtitle": "Subtitle",
+
+  "dc.title.other": "Other title",
+
+  "dc.contributor.advisor": "Advisor",
+
+  "dc.contributor.description": "Description",
+
+  "dc.contributor.extadvisor": "Extadvisor",
+
+  "dc.contributor.faculty": "Faculty",
+
+  "dc.contributor.inst": "Department",
+
+  "dc.contributor.org": "Institution",
+
+  "dc.contributor.workplace": "Foreign consular workplace",
+
+  "dc.date.accessioned": "Last access date",
+
+  "dc.date.available": "Availability date",
+
+  "dc.date.catalog": "Catalog date",
+
+  "dc.date.issued": "Date issued",
+
+  "dc.date.recordid": "Record id",
+
+  "dc.description.type": "Level",
+
+  "dc.identifier.uri": "URI",
+
+  "dc.rights.access": "Access",
+
+  "dc.subject": "Subject",
+
+  "dc.type": "Document type",
+
+  "dc.format.extent": "Extent",
+
+  "dc.identifier.doi": "DOI",
+
+  "dc.contributor.doctschool": "Doctoral school",
+
+  "dc.description.appendix": "Appendix",
+
+  "status.badge.limited": "Limited access",
+
+  "status.badge.public": "Free access",
+}

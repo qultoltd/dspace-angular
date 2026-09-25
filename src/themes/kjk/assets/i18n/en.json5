@@ -1,0 +1,13 @@
+{
+  "qulto.home.welcome.title": "Welcome to the Digital Collections of Katona József Library!",
+
+  "qulto.home.welcome.description": "We present selected documents from our Local History Collection in digital form.",
+
+  "qulto.home.welcome.functions": "With the help of the search functions, the memories of our shared past become easily and quickly accessible to researchers and interested visitors alike.",
+
+  "item.page.doi": "DOI",
+
+  "relationships.isPartOf": "Is part of",
+
+  "relationships.hasPart": "Has part",
+}

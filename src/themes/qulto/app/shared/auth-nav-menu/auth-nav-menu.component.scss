@@ -1,0 +1,47 @@
+// Minimum width so the login form fits comfortably inside the dropdown panel.
+// Without this the panel collapses to Bootstrap's default 10rem (160px).
+#loginDropdownMenu,
+#logoutDropdownMenu {
+  min-width: 330px;
+  z-index: 1002;
+}
+
+#loginDropdownMenu {
+  min-height: 75px;
+}
+
+#logoutDropdownMenu {
+  background-color: var(--ds-user-menu-bg);
+}
+
+.dropdown-item {
+  &.active,
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: transparent !important;
+  }
+}
+
+// Make the login link a flex container so the text and Bootstrap's auto-generated
+// dropdown caret (::after from .dropdown-toggle) are both centred on the same axis.
+// This avoids the vertical offset that occurs when the link is inline (unlike
+// <button> elements, inline <a> tags position ::after relative to the text baseline).
+.dropdownLogin {
+  display: inline-flex;
+  align-items: center;
+}
+
+// Bootstrap default margin-left for .dropdown-toggle::after is 0.255em, which
+// matches what the navbar browse menu uses. Keep the same spacing here so the
+// login caret visually aligns with browse-menu carets.
+
+// User icon: CSS background so child themes can override the image via the
+// --ds-user-icon CSS variable without forking this component.
+.user-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--ds-user-icon) no-repeat center / contain;
+  vertical-align: middle;
+}

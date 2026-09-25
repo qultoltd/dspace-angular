@@ -1,0 +1,101 @@
+.community-icon {
+  display: inline-block;
+  // ~32px, matching the natural size of the original 8.x communityIcon.svg
+  // (the DS10 port shrank it to 1.25rem). Tunable here for all inheriting themes.
+  width: 2rem;
+  height: 2rem;
+  background: var(--ds-community-icon) no-repeat center / contain;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.community-list-element {
+  align-items: center;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover {
+    background-color: var(--ds-community-hover-bg, rgba(23, 75, 133, 0.06));
+  }
+
+  a {
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    color: #4b4b4b;
+    font-size: 1.25rem;
+    font-weight: 400;
+    transition: color 0.15s ease-in-out;
+
+    &:hover {
+      color: var(--blue);
+      text-decoration: none;
+    }
+  }
+
+  .archived-items-lead {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}
+
+.community-card {
+  display: grid !important;
+  grid-template-rows: 15rem auto 1fr auto;
+  height: 35rem;
+  width: 16rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  gap: 1rem;
+
+  .image-container {
+    width: 100%;
+
+    .thumbnail-loading {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      ::ng-deep {
+        .spinner {
+          color: var(--bs-primary);
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: "Varela", system-ui;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--bs-primary);
+  }
+
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: justify;
+    color: #4b4b4b;
+  }
+
+  a {
+    button {
+      width: 100%;
+    }
+  }
+}
