@@ -12,9 +12,11 @@ import {
 } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ConfigurationDataService } from '@dspace/core/data/configuration-data.service';
 import { APP_DATA_SERVICES_MAP } from '@dspace/core/data-services-map-type';
 import { NotificationsService } from '@dspace/core/notification-system/notifications.service';
 import { BrowseDefinitionDataServiceStub } from '@dspace/core/testing/browse-definition-data-service.stub';
+import { ConfigurationDataServiceStub } from '@dspace/core/testing/configuration-data.service.stub';
 import { mockTruncatableService } from '@dspace/core/testing/mock-trucatable.service';
 import { TranslateLoaderMock } from '@dspace/core/testing/translate-loader.mock';
 import { createPaginatedList } from '@dspace/core/testing/utils.test';
@@ -55,7 +57,6 @@ import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/s
 import { ItemPageAbstractFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
 import { ItemPageDateFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
 import { GenericItemPageFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
-import { ThemedItemPageTitleFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
 import { ItemPageUriFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
 import {
   createRelationshipsObservable,
@@ -74,6 +75,7 @@ import { TruncatePipe } from '../../../../../../../app/shared/utils/truncate.pip
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
 import { APP_CONFIG } from '../../../../../../../config/app-config.interface';
 import { environment } from '../../../../../../../environments/environment.test';
+import { ThemedItemPageTitleFieldComponent } from '../../field-components/specific-field/title/themed-item-page-field.component';
 import { PublicationComponent } from './publication.component';
 
 const noMetadata = new MetadataMap();
@@ -129,6 +131,7 @@ describe('PublicationComponent', () => {
         { provide: SearchService, useValue: {} },
         { provide: RouteService, useValue: mockRouteService },
         { provide: BrowseDefinitionDataService, useValue: BrowseDefinitionDataServiceStub },
+        { provide: ConfigurationDataService, useValue: new ConfigurationDataServiceStub() },
         { provide: APP_CONFIG, useValue: environment },
         { provide: APP_DATA_SERVICES_MAP, useValue: {}  },
       ],
@@ -213,6 +216,12 @@ describe('PublicationComponent', () => {
       getPreviousUrl(): Observable<string> {
         return of('/search?query=test%20query&fakeParam=true');
       },
+      storeUrlInSession(key: string, url: string): void {
+        // no-op
+      },
+      getUrlFromSession(key: string): string | null {
+        return null;
+      },
     };
     beforeEach(waitForAsync(() => {
       const iiifEnabledMap: MetadataMap = {
@@ -242,6 +251,12 @@ describe('PublicationComponent', () => {
     const localMockRouteService = {
       getPreviousUrl(): Observable<string> {
         return of('/item');
+      },
+      storeUrlInSession(key: string, url: string): void {
+        // no-op
+      },
+      getUrlFromSession(key: string): string | null {
+        return null;
       },
     };
     beforeEach(waitForAsync(() => {
