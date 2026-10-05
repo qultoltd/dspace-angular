@@ -213,22 +213,35 @@ export class FormService {
    * Replace the server-side error validator on a field, leaving its own validators in place.
    */
   private setServerErrorValidator(field: AbstractControl, validator: ValidatorFn): void {
-    this.clearServerErrorValidator(field, false);
+    this.removeServerErrorValidator(field);
     this.serverErrorValidators.set(field, validator);
     field.addValidators(validator);
   }
 
   /**
-   * Drop the server-side error validator from a field. Call this when the user edits the field: the
-   * error describes a value the server has already rejected, and the server revalidates on the next save.
+   * Take the server-side error validator off a field.
+   *
+   * @returns whether there was one to take off
    */
-  public clearServerErrorValidator(field: AbstractControl, revalidate = true): void {
+  private removeServerErrorValidator(field: AbstractControl): boolean {
     const validator = this.serverErrorValidators.get(field);
     if (hasValue(validator)) {
       this.serverErrorValidators.delete(field);
       field.removeValidators(validator);
+      return true;
     }
-    if (revalidate) {
+    return false;
+  }
+
+  /**
+   * Drop the server-side error validator from a field. Call this when the user edits the field: the
+   * error describes a value the server has already rejected, and the server revalidates on the next save.
+   *
+   * Revalidates only when a validator was actually dropped, so that editing a field the server never
+   * complained about does not emit a status change on every keystroke.
+   */
+  public clearServerErrorValidator(field: AbstractControl): void {
+    if (this.removeServerErrorValidator(field)) {
       field.updateValueAndValidity();
     }
   }
@@ -240,7 +253,9 @@ export class FormService {
     if (field.hasError(errorKey)) {
       error[errorKey] = null;
       field.setErrors(error);
-      this.clearServerErrorValidator(field);
+      this.removeServerErrorValidator(field);
+      // setErrors above leaves the field invalid even with a null error, so the status has to be recomputed
+      field.updateValueAndValidity();
     }
 
     // if the field in question is a concat group, clear the error from its fields
