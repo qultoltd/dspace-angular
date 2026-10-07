@@ -6,4 +6,8 @@
   // Example: uncomment and edit to customise the home-page welcome section:
   // "qulto.home.welcome.title": "Welcome to the PTE Repository!",
   // "qulto.home.welcome.description": "...",
+
+  "qulto.home.welcome.description": "{{ dspaceName }} is the institutional repository of the University of Pécs, collecting and organising in electronic form the theses, doctoral dissertations, academic staff publications, research data and documents relating to the University's history that originate at the University, ensuring their long-term preservation and accessibility.",
+
+  "qulto.home.welcome.functions": "",
 }

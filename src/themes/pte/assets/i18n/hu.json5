@@ -6,4 +6,8 @@
   // Példa: vedd ki a megjegyzésből és szerkeszd a főoldal üdvözlőszövegéhez:
   // "qulto.home.welcome.title": "Üdvözöljük a PTE repozitóriumában!",
   // "qulto.home.welcome.description": "...",
+
+  "qulto.home.welcome.description": "A {{ dspaceName }} a Pécsi Tudományegyetem intézményi repozitóriuma, amely elektronikus formában gyűjti és rendszerezi az Egyetemen keletkezett szakdolgozatokat, doktori disszertációkat, oktatói publikációkat, kutatási adatokat és az Egyetem történetéhez kapcsolódó dokumentumokat, biztosítva azok hosszú távú megőrzését és hozzáférését.",
+
+  "qulto.home.welcome.functions": "",
 }
