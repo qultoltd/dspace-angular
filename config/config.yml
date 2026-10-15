@@ -26,6 +26,7 @@ themes:
   #   - dspace-lifebelt : extends qulto (webinar banner override only)
   #   - pte             : extends qulto (PEA logo; banner swap via --ds-home-news-banner var)
   #   - kjk             : extends qulto (KJK logo + banner; hasPart/isPartOf publication relations)
+  #   - gfe             : extends qulto (GFE logo + Faculty of Theology banner)
   #
   # headTags: only the favicon needs to be here — the header LOGO is now a CSS
   # variable (--ds-header-logo) set in each theme's _theme_css_variable_overrides.scss.
@@ -34,6 +35,18 @@ themes:
   #
   # Current active theme: qulto (first in the list).
   # ───────────────────────────────────────────────────────────────────────────
+  - name: qulto
+    headTags:
+      - tagName: link
+        attributes:
+          rel: icon
+          href: /assets/qulto/images/qultoIcon.svg
+          type: image/svg+xml
+
+  - name: gfe
+    extends: qulto
+    # No headTags → inherits qulto's favicon. Logo via --ds-header-logo CSS var.
+
   - name: kjk
     extends: qulto
     # No headTags → inherits qulto's favicon. Logo via --ds-header-logo CSS var.
@@ -45,15 +58,6 @@ themes:
   - name: szerep
     extends: qulto
     # No headTags → inherits qulto's favicon. Logo via --ds-header-logo CSS var.
-
-  - name: qulto
-    headTags:
-      - tagName: link
-        attributes:
-          rel: icon
-          href: /assets/qulto/images/qultoIcon.svg
-          type: image/svg+xml
-
 
   - name: dspace-lifebelt
     extends: qulto

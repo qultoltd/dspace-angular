@@ -1,0 +1,11 @@
+{
+  // GFE-specific i18n overrides.
+  // Keys defined here override qulto's translations; all other keys fall back
+  // to qulto (and the DS10 base).
+  //
+  // The welcome text has not been provided yet — qulto's default text is shown
+  // until then. When it arrives, uncomment and edit:
+  // "qulto.home.welcome.title": "Welcome at the {{ dspaceName }} page!",
+  // "qulto.home.welcome.description": "...",
+  // "qulto.home.welcome.functions": "...",
+}

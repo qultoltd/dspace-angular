@@ -27,6 +27,7 @@ All custom themes **extend `qulto`** (single-level hierarchy):
 | **dspace-lifebelt** | qulto | Webinar banner (`home-news`) only. Minimal. |
 | **pte** | qulto | PEA logo (+ future banner). **No component overrides** — pure CSS-var + headTags. |
 | **kjk** | qulto | KJK logo + banner; publication page adds `hasPart`/`isPartOf` relations. |
+| **gfe** | qulto | GFE logo (64px tall) + Faculty of Theology banner. **No component overrides** — pure CSS-var. |
 
 `custom` and `dspace` are the stock DSpace example themes — **not used**.
 
@@ -55,7 +56,7 @@ Key variables:
 - `--ds-home-news-banner` — home-news jumbotron background image
 - `--blue`, `--primary` — primary-colour aliases (szerep maps these to its navy)
 
-Because of this pattern, szerep/pte/kjk **do not** fork the header, admin-sidebar, lang-switch, auth-nav-menu,
+Because of this pattern, szerep/pte/kjk/gfe **do not** fork the header, admin-sidebar, lang-switch, auth-nav-menu,
 community-list-element, or object-list — they only set variables.
 
 ## Registering a new theme (checklist)

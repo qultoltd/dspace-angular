@@ -1,0 +1,13 @@
+// GFE (Gál Ferenc Egyetem) theme CSS variable overrides.
+:root {
+  // Logo is trimmed to 678×371 (~1.83:1). Taller than the global 50px so the
+  // "GÁL FERENC EGYETEM" caption stays legible; width = 64px × 1.83 ≈ 117px.
+  --ds-header-logo: url('/assets/gfe/images/gfeLogo.png');
+  --ds-header-logo-height: 64px;
+  --ds-header-logo-width: 117px;
+
+  // Bookshelf photo (Faculty of Theology), cropped to the ~4.3:1 home-news band
+  // (4376×1018 from y=750 of the 4376×2917 original → 1920×446), so the book
+  // tops sit in the strip above the frosted welcome panel.
+  --ds-home-news-banner: url('/assets/gfe/images/gfeBanner.jpg');
+}

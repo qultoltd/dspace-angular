@@ -1,0 +1,11 @@
+{
+  // GFE-specifikus fordítás-felülírások.
+  // Az itt megadott kulcsok felülírják a qulto fordításait; a többi kulcs a
+  // qulto-tól (és a DS10 base-től) öröklődik.
+  //
+  // Az üdvözlő szöveg még nem érkezett meg — addig a qulto alapszövege látszik.
+  // Ha megjön, vedd ki a megjegyzésből és szerkeszd:
+  // "qulto.home.welcome.title": "Üdvözöljük a {{ dspaceName }} oldalán!",
+  // "qulto.home.welcome.description": "...",
+  // "qulto.home.welcome.functions": "...",
+}
