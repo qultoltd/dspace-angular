@@ -54,6 +54,8 @@ Key variables:
 - `--ds-user-icon` — auth-nav user icon
 - `--ds-community-icon`, `--ds-community-hover-bg` — community list element
 - `--ds-home-news-banner` — home-news jumbotron background image
+- `--ds-home-news-banner-position` — which part of that image stays in view when `cover` crops it on narrower
+  screens; default `0 0` (top left), gfe sets `center`
 - `--blue`, `--primary` — primary-colour aliases (szerep maps these to its navy)
 
 Because of this pattern, szerep/pte/kjk/gfe **do not** fork the header, admin-sidebar, lang-switch, auth-nav-menu,

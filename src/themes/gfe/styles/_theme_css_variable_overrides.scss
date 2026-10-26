@@ -10,4 +10,7 @@
   // (4376×1018 from y=750 of the 4376×2917 original → 1920×446), so the book
   // tops sit in the strip above the frosted welcome panel.
   --ds-home-news-banner: url('/assets/gfe/images/gfeBanner.jpg');
+  // Centred, so narrower screens keep the old leather bindings in the middle of
+  // the photo instead of the dark bookcase at its left edge.
+  --ds-home-news-banner-position: center;
 }
