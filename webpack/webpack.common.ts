@@ -1,4 +1,4 @@
-import { globalCSSImports, projectRoot, getFileHashes, calculateFileHash } from './helpers';
+import { globalCSSImports, projectRoot, getFileHashes, getThemeLanguages, calculateFileHash } from './helpers';
 import { EnvironmentPlugin } from 'webpack';
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -77,6 +77,7 @@ export const commonExports = {
   plugins: [
     new EnvironmentPlugin({
       languageHashes: getFileHashes(path.join(__dirname, '..', 'src', 'assets', 'i18n'), /.*\.json5/g),
+      themeLanguages: getThemeLanguages(path.join(__dirname, '..', 'src', 'themes')),
     }),
     new CopyWebpackPlugin(copyWebpackOptions),
   ],
