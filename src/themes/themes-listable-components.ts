@@ -1,6 +1,7 @@
 // import { LISTABLE_COMPONENTS as CUSTOM_LISTABLE_COMPONENTS } from './custom/lazy-listable-components';
 import { LISTABLE_COMPONENTS as DSPACE_LISTABLE_COMPONENTS } from './dspace/lazy-listable-components';
 import { LISTABLE_COMPONENTS as DSPACE_LIFEBELT_LISTABLE_COMPONENTS } from './dspace-lifebelt/lazy-listable-components';
+import { LISTABLE_COMPONENTS as GFE_LISTABLE_COMPONENTS } from './gfe/lazy-listable-components';
 import { LISTABLE_COMPONENTS as KJK_LISTABLE_COMPONENTS } from './kjk/lazy-listable-components';
 import { LISTABLE_COMPONENTS as PTE_LISTABLE_COMPONENTS } from './pte/lazy-listable-components';
 import { LISTABLE_COMPONENTS as QULTO_LISTABLE_COMPONENTS } from './qulto/lazy-listable-components';
@@ -16,6 +17,7 @@ export const THEME_LISTABLE_COMPONENTS = [
   // ...CUSTOM_LISTABLE_COMPONENTS,
   ...DSPACE_LISTABLE_COMPONENTS,
   ...DSPACE_LIFEBELT_LISTABLE_COMPONENTS,
+  ...GFE_LISTABLE_COMPONENTS,
   ...KJK_LISTABLE_COMPONENTS,
   ...PTE_LISTABLE_COMPONENTS,
   ...QULTO_LISTABLE_COMPONENTS,

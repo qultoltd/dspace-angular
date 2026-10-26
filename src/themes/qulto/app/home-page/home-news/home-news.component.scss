@@ -24,6 +24,10 @@ h2 {
   background-image: var(--ds-home-news-banner, url("/assets/qulto/images/banners/library.png"));
   background-size: cover;
   background-repeat: no-repeat;
+  // Which part of the image stays in view when `cover` has to crop it: on
+  // screens narrower than the image's ~4.3:1 band the sides are cut. Defaults to
+  // the top left corner, the browser default, so existing themes look the same.
+  background-position: var(--ds-home-news-banner-position, 0 0);
 
   .wrapper {
     position: relative;
