@@ -27,3 +27,7 @@ npm-debug.log.*
 # Webpack files
 webpack.records.json
 package-lock.json
+
+# Dev-server output (webpack devServer -> buildAppConfig). If built in, its stale
+# .gz/.br copies win over the config.json the server writes at startup.
+src/assets/config.json
