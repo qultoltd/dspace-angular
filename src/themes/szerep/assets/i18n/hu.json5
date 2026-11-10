@@ -98,4 +98,12 @@
   "status.badge.public": "Szabadon hozzáférhető",
 
   "item.page.doi": "DOI",
+
+  "menu.section.browse_global_by_advisor": "Konzulens szerint",
+
+  "browse.comcol.by.advisor": "Konzulens szerint",
+
+  "browse.metadata.advisor": "Konzulens",
+
+  "browse.metadata.advisor.breadcrumbs": "Böngészés konzulens szerint",
 }

@@ -80,4 +80,12 @@
   "status.badge.public": "Free access",
 
   "item.page.doi": "DOI",
+
+  "menu.section.browse_global_by_advisor": "By Advisor",
+
+  "browse.comcol.by.advisor": "By Advisor",
+
+  "browse.metadata.advisor": "Advisor",
+
+  "browse.metadata.advisor.breadcrumbs": "Browse by Advisor",
 }
