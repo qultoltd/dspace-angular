@@ -1,4 +1,4 @@
-import { globalCSSImports, projectRoot, getFileHashes, getThemeLanguages, calculateFileHash } from './helpers';
+import { globalCSSImports, projectRoot, getFileHashes, getThemeLanguageHashes, calculateFileHash } from './helpers';
 import { EnvironmentPlugin } from 'webpack';
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -49,6 +49,23 @@ export const copyWebpackOptions = {
       },
     },
     {
+      // theme i18n override files get a content hash as well, like the base files above
+      from: path.join(__dirname, '..', 'src', 'themes', '*', 'assets', 'i18n', '*.json5').replace(/\\/g, '/'),
+      noErrorOnMissing: true,
+      to({ absoluteFilename }) {
+        // use [\/|\\] to match both POSIX and Windows separators
+        const matches = absoluteFilename.match(/.*[\/|\\]themes[\/|\\]([^\/|^\\]+)[\/|\\]assets[\/|\\]i18n[\/|\\](.+)\.json5$/);
+        if (matches) {
+          const fileHash: string = process.env.NODE_ENV === 'production' ? `.${calculateFileHash(absoluteFilename)}` : '';
+          // e.g. themes/custom/assets/i18n/en.json5 will end up in assets/custom/i18n/en.<hash>.json
+          return path.join('assets', matches[1], 'i18n', `${matches[2]}${fileHash}.json`);
+        }
+      },
+      transform(content) {
+        return JSON.stringify(JSON5.parse(content.toString()));
+      },
+    },
+    {
       from: path.join(__dirname, '..', 'src', 'robots.txt.ejs'),
       to: 'assets/robots.txt.ejs'
     }
@@ -77,7 +94,7 @@ export const commonExports = {
   plugins: [
     new EnvironmentPlugin({
       languageHashes: getFileHashes(path.join(__dirname, '..', 'src', 'assets', 'i18n'), /.*\.json5/g),
-      themeLanguages: getThemeLanguages(path.join(__dirname, '..', 'src', 'themes')),
+      themeLanguageHashes: getThemeLanguageHashes(path.join(__dirname, '..', 'src', 'themes')),
     }),
     new CopyWebpackPlugin(copyWebpackOptions),
   ],
