@@ -1,11 +1,158 @@
 {
-  "qulto.home.welcome.title": "Welcome at the {{ dspaceName }} page!",
+  // Sorted by key. Most keys are only requested on an instance where the field,
+  // filter or browse index exists, so they cannot collide with another one:
+  //  - dc.*, education.*: the full-item-page table looks them up by field name
+  //    (getTranslation(mdEntry.key), QREPO-413);
+  //  - search.filters.*: derived from the filter names in discovery.xml; browse.*,
+  //    menu.section.browse_global_by_*: from webui.browse.index.* in local.cfg
+  //    (QREPO-460, QREPO-487). There is no fallback: a missing key shows raw;
+  //  - *hierarchical_subjects_*, subjectHU/EN/DE: the Baptud tree browses (QREPO-486).
+
+  "browse.comcol.by.hierarchical_subjects_de": "By hierarchical subject (German)",
+
+  "browse.comcol.by.hierarchical_subjects_en": "By hierarchical subject (English)",
+
+  "browse.comcol.by.hierarchical_subjects_hu": "By hierarchical subject (Hungarian)",
+
+  "browse.metadata.course": "Programme",
+
+  "browse.metadata.course.breadcrumbs": "Browse by Programme",
+
+  "browse.metadata.department": "Department",
+
+  "browse.metadata.department.breadcrumbs": "Browse by Department",
+
+  "browse.metadata.hierarchical_subjects_de": "Hierarchical subject (German)",
+
+  "browse.metadata.hierarchical_subjects_de.breadcrumbs": "Browse by hierarchical subject (German)",
+
+  "browse.metadata.hierarchical_subjects_de.tree.description": "Select a subject to add as search filter",
+
+  "browse.metadata.hierarchical_subjects_en": "Hierarchical subject (English)",
+
+  "browse.metadata.hierarchical_subjects_en.breadcrumbs": "Browse by hierarchical subject (English)",
+
+  "browse.metadata.hierarchical_subjects_en.tree.description": "Select a subject to add as search filter",
+
+  "browse.metadata.hierarchical_subjects_hu": "Hierarchical subject (Hungarian)",
+
+  "browse.metadata.hierarchical_subjects_hu.breadcrumbs": "Browse by hierarchical subject (Hungarian)",
+
+  "browse.metadata.hierarchical_subjects_hu.tree.description": "Select a subject to add as search filter",
+
+  "browse.metadata.inventorynumber": "Identifier",
+
+  "browse.metadata.inventorynumber.breadcrumbs": "Browse by Identifier",
+
+  "dc.contributor.advisor": "Advisor",
+
+  "dc.contributor.author": "Author",
+
+  "dc.contributor.extadvisor": "External advisor",
+
+  "dc.date.accessioned": "Date accessioned",
+
+  "dc.date.catalog": "Date catalogued",
+
+  "dc.date.issued": "Date of Issue",
+
+  "dc.description": "Description",
+
+  "dc.description.abstract": "Abstract",
+
+  "dc.description.appendix": "Appendix",
+
+  "dc.description.note": "Note",
+
+  "dc.description.provenance": "Provenance",
+
+  "dc.description.sponsorship": "Sponsors",
+
+  "dc.format": "Format",
+
+  "dc.format.extent": "Extent",
+
+  "dc.identifier": "Identifiers",
+
+  "dc.identifier.citation": "Citation",
+
+  "dc.identifier.doi": "DOI",
+
+  "dc.identifier.inventorynumber": "Inventory number",
+
+  "dc.identifier.isbn": "ISBN",
+
+  "dc.identifier.issn": "ISSN",
+
+  "dc.identifier.original": "Original identifier",
+
+  "dc.identifier.recordid": "Record identifier",
+
+  "dc.identifier.uri": "Permanent link",
+
+  "dc.language.iso": "Language",
+
+  "dc.publisher": "Publisher",
+
+  "dc.relation.ispartofseries": "Series/Report No.",
+
+  "dc.rights.access": "Access",
+
+  "dc.subject": "Subject Keywords",
+
+  "dc.subject.hierarchicalDE": "Hierarchical subject (German)",
+
+  "dc.subject.hierarchicalEN": "Hierarchical subject (English)",
+
+  "dc.subject.hierarchicalHU": "Hierarchical subject (Hungarian)",
+
+  "dc.title": "Title",
+
+  "dc.title.alternative": "Other Titles",
+
+  "dc.title.paralleltitle": "Parallel title",
+
+  "dc.title.subtitle": "Subtitle",
+
+  "dc.type": "Type",
+
+  "dc.type.resrep": "Nature of the work",
+
+  "education.advisor.department": "Advisor – Department",
+
+  "education.advisor.faculty": "Advisor – Faculty",
+
+  "education.advisor.institution": "Advisor – Institution",
+
+  // One key, two uses: the study programme on the thesis form, the doctoral
+  // school on the dissertation one.
+  "education.course": "Programme / doctoral school",
+
+  "education.department": "Department",
+
+  "education.faculty": "Faculty",
+
+  "education.institution": "Institution",
+
+  "education.level": "Level of study",
+
+  "menu.section.browse_global_by_course": "By Programme",
+
+  "menu.section.browse_global_by_department": "By Department",
+
+  "menu.section.browse_global_by_hierarchical_subjects_de": "Hierarchical subject (German)",
+
+  "menu.section.browse_global_by_hierarchical_subjects_en": "Hierarchical subject (English)",
+
+  "menu.section.browse_global_by_hierarchical_subjects_hu": "Hierarchical subject (Hungarian)",
+
+  "menu.section.browse_global_by_inventorynumber": "By Identifier",
 
   "qulto.home.welcome.description": "{{ dspaceName }} is a digital storage for electronic documents, designed for archiving and making documents accessible.",
 
   "qulto.home.welcome.functions": "Its purpose is to provide researchers, educators, and interested parties with easy access to scientific and professional materials, promoting the free flow of knowledge and the wider dissemination of the work of the academic community.",
 
-  "relationships.isPartOf": "Is part of",
+  "qulto.home.welcome.title": "Welcome at the {{ dspaceName }} page!",
 
   "relationships.hasPart": "Has part",
 
@@ -13,168 +160,53 @@
   // publication override uses this key instead of base "item.page.authors".
   "relationships.isAuthorOf": "Authors",
 
-  // The full-item-page table's translation column resolves the metadata key
-  // (mdEntry.key) via getTranslation(). The keys below are the basic fields of the
-  // traditional submission form (traditionalpageone + traditionalpagetwo). (QREPO-413)
-  "dc.contributor.author": "Author",
+  "relationships.isPartOf": "Is part of",
 
-  "dc.title": "Title",
+  "search.filters.applied.f.subjectDE": "Hierarchical subject (German)",
 
-  "dc.title.alternative": "Other Titles",
-
-  "dc.date.issued": "Date of Issue",
-
-  "dc.publisher": "Publisher",
-
-  "dc.identifier.citation": "Citation",
-
-  "dc.relation.ispartofseries": "Series/Report No.",
-
-  "dc.identifier": "Identifiers",
-
-  "dc.type": "Type",
-
-  "dc.language.iso": "Language",
-
-  "dc.subject": "Subject Keywords",
-
-  "dc.description.abstract": "Abstract",
-
-  "dc.description.sponsorship": "Sponsors",
-
-  "dc.description": "Description",
-
-  // Further general DC fields. These mean the same on every installation, which
-  // is why they can live in the shared theme.
-  "dc.contributor.advisor": "Advisor",
-
-  "dc.contributor.extadvisor": "External advisor",
-
-  "dc.title.subtitle": "Subtitle",
-
-  "dc.title.paralleltitle": "Parallel title",
-
-  "dc.format": "Format",
-
-  "dc.format.extent": "Extent",
-
-  "dc.identifier.uri": "Permanent link",
-
-  "dc.identifier.doi": "DOI",
-
-  "dc.identifier.issn": "ISSN",
-
-  "dc.identifier.isbn": "ISBN",
-
-  "dc.identifier.original": "Original identifier",
-
-  "dc.identifier.recordid": "Record identifier",
-
-  "dc.identifier.inventorynumber": "Inventory number",
-
-  "dc.rights.access": "Access",
-
-  "dc.description.note": "Note",
-
-  "dc.description.appendix": "Appendix",
-
-  "dc.date.catalog": "Date catalogued",
-
-  "dc.date.accessioned": "Date accessioned",
-
-  "dc.description.provenance": "Provenance",
-
-  "dc.type.resrep": "Nature of the work",
-
-  // Shown only where the field exists: another installation never asks for these
-  // keys, so they cannot collide. Hierarchical subject trees:
-  "dc.subject.hierarchicalHU": "Hierarchical subject (Hungarian)",
-
-  "dc.subject.hierarchicalEN": "Hierarchical subject (English)",
-
-  "dc.subject.hierarchicalDE": "Hierarchical subject (German)",
-
-  // ...and the `education` schema, the fields of student theses:
-  "education.institution": "Institution",
-
-  "education.faculty": "Faculty",
-
-  "education.department": "Department",
-
-  // One key, two uses: the study programme on the thesis form, the doctoral
-  // school on the dissertation one.
-  "education.course": "Programme / doctoral school",
-
-  "education.level": "Level of study",
-
-  "education.advisor.institution": "Advisor – Institution",
-
-  "education.advisor.faculty": "Advisor – Faculty",
-
-  "education.advisor.department": "Advisor – Department",
-
-  // ── Search filters and browse indexes (QREPO-460) ───────────────────────────
-  // These keys are derived from the filter NAME set in discovery.xml, and are
-  // only requested on an instance where that filter exists, so they cannot
-  // collide with another one. There is no fallback: a missing key renders as the
-  // raw key string.
-  "search.filters.filter.course.head": "Programme",
-  "search.filters.filter.course.placeholder": "Programme",
-  "search.filters.filter.course.label": "Search programme",
-
-  "search.filters.filter.department.head": "Department",
-  "search.filters.filter.department.placeholder": "Department",
-  "search.filters.filter.department.label": "Search department",
-
-  "search.filters.filter.inventorynumber.head": "Identifier",
-  "search.filters.filter.inventorynumber.placeholder": "Identifier",
-  "search.filters.filter.inventorynumber.label": "Search identifier",
-
-  // The browse indexes come from `webui.browse.index.*` in local.cfg.
-  "browse.metadata.course": "Programme",
-  "browse.metadata.course.breadcrumbs": "Browse by Programme",
-  "menu.section.browse_global_by_course": "By Programme",
-
-  "browse.metadata.department": "Department",
-  "browse.metadata.department.breadcrumbs": "Browse by Department",
-  "menu.section.browse_global_by_department": "By Department",
-
-  "browse.metadata.inventorynumber": "Identifier",
-  "browse.metadata.inventorynumber.breadcrumbs": "Browse by Identifier",
-  "menu.section.browse_global_by_inventorynumber": "By Identifier",
-
-  // Baptud: tree browses for the hierarchical_subjects_hu/en/de vocabularies, and
-  // their subjectHU/EN/DE facets (discovery.xml).
-  "menu.section.browse_global_by_hierarchical_subjects_hu": "Hierarchical subject (Hungarian)",
-  "browse.metadata.hierarchical_subjects_hu": "Hierarchical subject (Hungarian)",
-  "browse.metadata.hierarchical_subjects_hu.breadcrumbs": "Browse by hierarchical subject (Hungarian)",
-  "browse.metadata.hierarchical_subjects_hu.tree.description": "Select a subject to add as search filter",
-  "browse.comcol.by.hierarchical_subjects_hu": "By hierarchical subject (Hungarian)",
-  "vocabulary-treeview.tree.description.hierarchical_subjects_hu": "Hierarchical subjects (Hungarian)",
-  "search.filters.filter.subjectHU.head": "Hierarchical subject (Hungarian)",
-  "search.filters.filter.subjectHU.placeholder": "Hierarchical subject (Hungarian)",
-  "search.filters.filter.subjectHU.label": "Search by hierarchical subject (Hungarian)",
-  "search.filters.applied.f.subjectHU": "Hierarchical subject (Hungarian)",
-
-  "menu.section.browse_global_by_hierarchical_subjects_en": "Hierarchical subject (English)",
-  "browse.metadata.hierarchical_subjects_en": "Hierarchical subject (English)",
-  "browse.metadata.hierarchical_subjects_en.breadcrumbs": "Browse by hierarchical subject (English)",
-  "browse.metadata.hierarchical_subjects_en.tree.description": "Select a subject to add as search filter",
-  "browse.comcol.by.hierarchical_subjects_en": "By hierarchical subject (English)",
-  "vocabulary-treeview.tree.description.hierarchical_subjects_en": "Hierarchical subjects (English)",
-  "search.filters.filter.subjectEN.head": "Hierarchical subject (English)",
-  "search.filters.filter.subjectEN.placeholder": "Hierarchical subject (English)",
-  "search.filters.filter.subjectEN.label": "Search by hierarchical subject (English)",
   "search.filters.applied.f.subjectEN": "Hierarchical subject (English)",
 
-  "menu.section.browse_global_by_hierarchical_subjects_de": "Hierarchical subject (German)",
-  "browse.metadata.hierarchical_subjects_de": "Hierarchical subject (German)",
-  "browse.metadata.hierarchical_subjects_de.breadcrumbs": "Browse by hierarchical subject (German)",
-  "browse.metadata.hierarchical_subjects_de.tree.description": "Select a subject to add as search filter",
-  "browse.comcol.by.hierarchical_subjects_de": "By hierarchical subject (German)",
-  "vocabulary-treeview.tree.description.hierarchical_subjects_de": "Hierarchical subjects (German)",
+  "search.filters.applied.f.subjectHU": "Hierarchical subject (Hungarian)",
+
+  "search.filters.filter.course.head": "Programme",
+
+  "search.filters.filter.course.label": "Search programme",
+
+  "search.filters.filter.course.placeholder": "Programme",
+
+  "search.filters.filter.department.head": "Department",
+
+  "search.filters.filter.department.label": "Search department",
+
+  "search.filters.filter.department.placeholder": "Department",
+
+  "search.filters.filter.inventorynumber.head": "Identifier",
+
+  "search.filters.filter.inventorynumber.label": "Search identifier",
+
+  "search.filters.filter.inventorynumber.placeholder": "Identifier",
+
   "search.filters.filter.subjectDE.head": "Hierarchical subject (German)",
-  "search.filters.filter.subjectDE.placeholder": "Hierarchical subject (German)",
+
   "search.filters.filter.subjectDE.label": "Search by hierarchical subject (German)",
-  "search.filters.applied.f.subjectDE": "Hierarchical subject (German)",
+
+  "search.filters.filter.subjectDE.placeholder": "Hierarchical subject (German)",
+
+  "search.filters.filter.subjectEN.head": "Hierarchical subject (English)",
+
+  "search.filters.filter.subjectEN.label": "Search by hierarchical subject (English)",
+
+  "search.filters.filter.subjectEN.placeholder": "Hierarchical subject (English)",
+
+  "search.filters.filter.subjectHU.head": "Hierarchical subject (Hungarian)",
+
+  "search.filters.filter.subjectHU.label": "Search by hierarchical subject (Hungarian)",
+
+  "search.filters.filter.subjectHU.placeholder": "Hierarchical subject (Hungarian)",
+
+  "vocabulary-treeview.tree.description.hierarchical_subjects_de": "Hierarchical subjects (German)",
+
+  "vocabulary-treeview.tree.description.hierarchical_subjects_en": "Hierarchical subjects (English)",
+
+  "vocabulary-treeview.tree.description.hierarchical_subjects_hu": "Hierarchical subjects (Hungarian)",
 }

@@ -1,11 +1,160 @@
 {
-  "qulto.home.welcome.title": "Üdvözöljük a {{ dspaceName }} oldalán!",
+  // Kulcs szerint ábécérendben. A kulcsok többsége csak azon a példányon kérődik le,
+  // ahol a mező, a szűrő vagy a böngészőindex létezik, ezért más példánnyal nem ütközik:
+  //  - dc.*, education.*: a teljes nézet táblázata a mező nevével keres rájuk
+  //    (getTranslation(mdEntry.key), QREPO-413);
+  //  - search.filters.*: a discovery.xml szűrőneveiből képződnek; browse.*,
+  //    menu.section.browse_global_by_*: a local.cfg webui.browse.index.* soraiból
+  //    (QREPO-460, QREPO-487). Fallback nincs: hiányzó kulcsnál a nyers kulcs látszik;
+  //  - *hierarchical_subjects_*, subjectHU/EN/DE: a Baptud fás böngészői (QREPO-486).
+
+  "access-status.open.access.listelement.badge": "Szabadon hozzáférhető",
+
+  "browse.comcol.by.hierarchical_subjects_de": "Hierarchikus tárgyszó szerint (németül)",
+
+  "browse.comcol.by.hierarchical_subjects_en": "Hierarchikus tárgyszó szerint (angolul)",
+
+  "browse.comcol.by.hierarchical_subjects_hu": "Hierarchikus tárgyszó szerint (magyarul)",
+
+  "browse.metadata.course": "Szak",
+
+  "browse.metadata.course.breadcrumbs": "Böngészés szak szerint",
+
+  "browse.metadata.department": "Tanszék",
+
+  "browse.metadata.department.breadcrumbs": "Böngészés tanszék szerint",
+
+  "browse.metadata.hierarchical_subjects_de": "Hierarchikus tárgyszó (németül)",
+
+  "browse.metadata.hierarchical_subjects_de.breadcrumbs": "Böngészés hierarchikus tárgyszó szerint (németül)",
+
+  "browse.metadata.hierarchical_subjects_de.tree.description": "Válasszon ki egy tárgyszót keresési szűrőként.",
+
+  "browse.metadata.hierarchical_subjects_en": "Hierarchikus tárgyszó (angolul)",
+
+  "browse.metadata.hierarchical_subjects_en.breadcrumbs": "Böngészés hierarchikus tárgyszó szerint (angolul)",
+
+  "browse.metadata.hierarchical_subjects_en.tree.description": "Válasszon ki egy tárgyszót keresési szűrőként.",
+
+  "browse.metadata.hierarchical_subjects_hu": "Hierarchikus tárgyszó (magyarul)",
+
+  "browse.metadata.hierarchical_subjects_hu.breadcrumbs": "Böngészés hierarchikus tárgyszó szerint (magyarul)",
+
+  "browse.metadata.hierarchical_subjects_hu.tree.description": "Válasszon ki egy tárgyszót keresési szűrőként.",
+
+  "browse.metadata.inventorynumber": "Azonosító",
+
+  "browse.metadata.inventorynumber.breadcrumbs": "Böngészés azonosító szerint",
+
+  "dc.contributor.advisor": "Témavezető",
+
+  "dc.contributor.author": "Szerző",
+
+  "dc.contributor.extadvisor": "Külső konzulens",
+
+  "dc.date.accessioned": "Rögzítés dátuma",
+
+  "dc.date.catalog": "Állományba vétel ideje",
+
+  "dc.date.issued": "Megjelenés dátuma",
+
+  "dc.description": "Leírás",
+
+  "dc.description.abstract": "Absztrakt",
+
+  "dc.description.appendix": "Melléklet",
+
+  "dc.description.note": "Megjegyzés",
+
+  "dc.description.provenance": "Feldolgozási előzmények",
+
+  "dc.description.sponsorship": "Támogatók",
+
+  "dc.format": "Formátum",
+
+  "dc.format.extent": "Terjedelem",
+
+  "dc.identifier": "Azonosítók",
+
+  "dc.identifier.citation": "Bibliográfiai hivatkozás",
+
+  "dc.identifier.doi": "DOI",
+
+  "dc.identifier.inventorynumber": "Leltári szám",
+
+  "dc.identifier.isbn": "ISBN",
+
+  "dc.identifier.issn": "ISSN",
+
+  "dc.identifier.original": "Eredeti azonosító",
+
+  "dc.identifier.recordid": "Rekordazonosító / Főnaplószám",
+
+  "dc.identifier.uri": "Állandó hivatkozás",
+
+  "dc.language.iso": "Nyelv",
+
+  "dc.publisher": "Kiadó",
+
+  "dc.relation.ispartofseries": "Sorozat / jelentésszám",
+
+  "dc.rights.access": "Hozzáférés",
+
+  "dc.subject": "Tárgyszavak",
+
+  "dc.subject.hierarchicalDE": "Hierarchikus tárgyszó (német)",
+
+  "dc.subject.hierarchicalEN": "Hierarchikus tárgyszó (angol)",
+
+  "dc.subject.hierarchicalHU": "Hierarchikus tárgyszó (magyar)",
+
+  "dc.title": "Cím",
+
+  "dc.title.alternative": "További címek",
+
+  "dc.title.paralleltitle": "Párhuzamos cím",
+
+  "dc.title.subtitle": "Alcím",
+
+  "dc.type": "Típus",
+
+  "dc.type.resrep": "Jelleg",
+
+  "education.advisor.department": "Belső konzulens – Tanszék",
+
+  "education.advisor.faculty": "Belső konzulens – Kar",
+
+  "education.advisor.institution": "Belső konzulens – Egyetem",
+
+  // Egy kulcs, két használat: a szakdolgozat-űrlapon a szak, a disszertációsban
+  // a doktori iskola kerül bele.
+  "education.course": "Szak / doktori iskola",
+
+  "education.department": "Tanszék",
+
+  "education.faculty": "Kar",
+
+  "education.institution": "Egyetem",
+
+  "education.level": "Képzési szint",
+
+  "menu.section.browse_global_by_course": "Szak szerint",
+
+  "menu.section.browse_global_by_department": "Tanszék szerint",
+
+  "menu.section.browse_global_by_hierarchical_subjects_de": "Hierarchikus tárgyszó (németül)",
+
+  "menu.section.browse_global_by_hierarchical_subjects_en": "Hierarchikus tárgyszó (angolul)",
+
+  "menu.section.browse_global_by_hierarchical_subjects_hu": "Hierarchikus tárgyszó (magyarul)",
+
+  "menu.section.browse_global_by_inventorynumber": "Azonosító szerint",
 
   "qulto.home.welcome.description": "A {{ dspaceName }} elektronikus dokumentumok digitális tárhelye, archiválásra és a dokumentumok hozzáférhetővé tételére szolgál.",
 
   "qulto.home.welcome.functions": "Célja, hogy biztosítsa a kutatók, oktatók és érdeklődők számára a tudományos és szakmai anyagok könnyű elérhetőségét, elősegítve a tudás szabad áramlását és a tudományos közösség munkájának szélesebb körű terjesztését.",
 
-  "relationships.isPartOf": "Része a következőnek",
+  "qulto.home.welcome.title": "Üdvözöljük a {{ dspaceName }} oldalán!",
 
   "relationships.hasPart": "Tartalmazza a következőket",
 
@@ -13,170 +162,53 @@
   // publication override ezt a kulcsot használja a base "item.page.authors" helyett.
   "relationships.isAuthorOf": "Szerzők",
 
-  "access-status.open.access.listelement.badge": "Szabadon hozzáférhető",
+  "relationships.isPartOf": "Része a következőnek",
 
-  // A full-item-page (teljes nézet) táblázat fordítás-oszlopa a metaadat-kulcsra
-  // (mdEntry.key) keres rá a getTranslation()-nel. Az alábbi kulcsok a traditional
-  // beküldő űrlap (traditionalpageone + traditionalpagetwo) alapmezői. (QREPO-413)
-  "dc.contributor.author": "Szerző",
+  "search.filters.applied.f.subjectDE": "Hierarchikus tárgyszó (németül)",
 
-  "dc.title": "Cím",
-
-  "dc.title.alternative": "További címek",
-
-  "dc.date.issued": "Megjelenés dátuma",
-
-  "dc.publisher": "Kiadó",
-
-  "dc.identifier.citation": "Bibliográfiai hivatkozás",
-
-  "dc.relation.ispartofseries": "Sorozat / jelentésszám",
-
-  "dc.identifier": "Azonosítók",
-
-  "dc.type": "Típus",
-
-  "dc.language.iso": "Nyelv",
-
-  "dc.subject": "Tárgyszavak",
-
-  "dc.description.abstract": "Absztrakt",
-
-  "dc.description.sponsorship": "Támogatók",
-
-  "dc.description": "Leírás",
-
-  // További általános DC-mezők. Ezek minden példányon ugyanazt jelentik, ezért
-  // állhatnak a közös témában.
-  "dc.contributor.advisor": "Témavezető",
-
-  "dc.contributor.extadvisor": "Külső konzulens",
-
-  "dc.title.subtitle": "Alcím",
-
-  "dc.title.paralleltitle": "Párhuzamos cím",
-
-  "dc.format": "Formátum",
-
-  "dc.format.extent": "Terjedelem",
-
-  "dc.identifier.uri": "Állandó hivatkozás",
-
-  "dc.identifier.doi": "DOI",
-
-  "dc.identifier.issn": "ISSN",
-
-  "dc.identifier.isbn": "ISBN",
-
-  "dc.identifier.original": "Eredeti azonosító",
-
-  "dc.identifier.recordid": "Rekordazonosító / Főnaplószám",
-
-  "dc.identifier.inventorynumber": "Leltári szám",
-
-  "dc.rights.access": "Hozzáférés",
-
-  "dc.description.note": "Megjegyzés",
-
-  "dc.description.appendix": "Melléklet",
-
-  "dc.date.catalog": "Állományba vétel ideje",
-
-  "dc.date.accessioned": "Rögzítés dátuma",
-
-  "dc.description.provenance": "Feldolgozási előzmények",
-
-  "dc.type.resrep": "Jelleg",
-
-  // Csak ott jelennek meg, ahol a mező létezik: egy másik példány soha nem kéri
-  // le ezeket a kulcsokat, tehát nem ütköznek. Hierarchikus tárgyszó-fák:
-  "dc.subject.hierarchicalHU": "Hierarchikus tárgyszó (magyar)",
-
-  "dc.subject.hierarchicalEN": "Hierarchikus tárgyszó (angol)",
-
-  "dc.subject.hierarchicalDE": "Hierarchikus tárgyszó (német)",
-
-  // ...és az `education` séma, a hallgatói dolgozatok mezői:
-  "education.institution": "Egyetem",
-
-  "education.faculty": "Kar",
-
-  "education.department": "Tanszék",
-
-  // Egy kulcs, két használat: a szakdolgozat-űrlapon a szak, a disszertációsban
-  // a doktori iskola kerül bele.
-  "education.course": "Szak / doktori iskola",
-
-  "education.level": "Képzési szint",
-
-  "education.advisor.institution": "Belső konzulens – Egyetem",
-
-  "education.advisor.faculty": "Belső konzulens – Kar",
-
-  "education.advisor.department": "Belső konzulens – Tanszék",
-
-  // ── Szűrők és böngészési szempontok (QREPO-460) ─────────────────────────────
-  // Ezek a kulcsok a discovery.xml-ben felvett szűrők NEVÉBŐL képződnek, és csak
-  // azon a példányon kérődnek le, ahol az adott szűrő létezik — más példánnyal
-  // tehát nem ütköznek. Fallback nincs: hiányzó kulcsnál a nyers kulcsszöveg
-  // jelenne meg a felületen.
-  "search.filters.filter.course.head": "Szak",
-  "search.filters.filter.course.placeholder": "Szak",
-  "search.filters.filter.course.label": "Keresés szak szerint",
-
-  "search.filters.filter.department.head": "Tanszék",
-  "search.filters.filter.department.placeholder": "Tanszék",
-  "search.filters.filter.department.label": "Keresés tanszék szerint",
-
-  "search.filters.filter.inventorynumber.head": "Azonosító",
-  "search.filters.filter.inventorynumber.placeholder": "Azonosító",
-  "search.filters.filter.inventorynumber.label": "Keresés azonosító szerint",
-
-  // A böngészőindexek a local.cfg `webui.browse.index.*` soraiból jönnek.
-  "browse.metadata.course": "Szak",
-  "browse.metadata.course.breadcrumbs": "Böngészés szak szerint",
-  "menu.section.browse_global_by_course": "Szak szerint",
-
-  "browse.metadata.department": "Tanszék",
-  "browse.metadata.department.breadcrumbs": "Böngészés tanszék szerint",
-  "menu.section.browse_global_by_department": "Tanszék szerint",
-
-  "browse.metadata.inventorynumber": "Azonosító",
-  "browse.metadata.inventorynumber.breadcrumbs": "Böngészés azonosító szerint",
-  "menu.section.browse_global_by_inventorynumber": "Azonosító szerint",
-
-  // Baptud: fás böngészők a hierarchical_subjects_hu/en/de szótárakhoz, és a
-  // hozzájuk tartozó subjectHU/EN/DE facetek (discovery.xml).
-  "menu.section.browse_global_by_hierarchical_subjects_hu": "Hierarchikus tárgyszó (magyarul)",
-  "browse.metadata.hierarchical_subjects_hu": "Hierarchikus tárgyszó (magyarul)",
-  "browse.metadata.hierarchical_subjects_hu.breadcrumbs": "Böngészés hierarchikus tárgyszó szerint (magyarul)",
-  "browse.metadata.hierarchical_subjects_hu.tree.description": "Válasszon ki egy tárgyszót keresési szűrőként.",
-  "browse.comcol.by.hierarchical_subjects_hu": "Hierarchikus tárgyszó szerint (magyarul)",
-  "vocabulary-treeview.tree.description.hierarchical_subjects_hu": "Hierarchikus tárgyszavak (magyarul)",
-  "search.filters.filter.subjectHU.head": "Hierarchikus tárgyszó (magyarul)",
-  "search.filters.filter.subjectHU.placeholder": "Hierarchikus tárgyszó (magyarul)",
-  "search.filters.filter.subjectHU.label": "Keresés hierarchikus tárgyszó szerint (magyarul)",
-  "search.filters.applied.f.subjectHU": "Hierarchikus tárgyszó (magyarul)",
-
-  "menu.section.browse_global_by_hierarchical_subjects_en": "Hierarchikus tárgyszó (angolul)",
-  "browse.metadata.hierarchical_subjects_en": "Hierarchikus tárgyszó (angolul)",
-  "browse.metadata.hierarchical_subjects_en.breadcrumbs": "Böngészés hierarchikus tárgyszó szerint (angolul)",
-  "browse.metadata.hierarchical_subjects_en.tree.description": "Válasszon ki egy tárgyszót keresési szűrőként.",
-  "browse.comcol.by.hierarchical_subjects_en": "Hierarchikus tárgyszó szerint (angolul)",
-  "vocabulary-treeview.tree.description.hierarchical_subjects_en": "Hierarchikus tárgyszavak (angolul)",
-  "search.filters.filter.subjectEN.head": "Hierarchikus tárgyszó (angolul)",
-  "search.filters.filter.subjectEN.placeholder": "Hierarchikus tárgyszó (angolul)",
-  "search.filters.filter.subjectEN.label": "Keresés hierarchikus tárgyszó szerint (angolul)",
   "search.filters.applied.f.subjectEN": "Hierarchikus tárgyszó (angolul)",
 
-  "menu.section.browse_global_by_hierarchical_subjects_de": "Hierarchikus tárgyszó (németül)",
-  "browse.metadata.hierarchical_subjects_de": "Hierarchikus tárgyszó (németül)",
-  "browse.metadata.hierarchical_subjects_de.breadcrumbs": "Böngészés hierarchikus tárgyszó szerint (németül)",
-  "browse.metadata.hierarchical_subjects_de.tree.description": "Válasszon ki egy tárgyszót keresési szűrőként.",
-  "browse.comcol.by.hierarchical_subjects_de": "Hierarchikus tárgyszó szerint (németül)",
-  "vocabulary-treeview.tree.description.hierarchical_subjects_de": "Hierarchikus tárgyszavak (németül)",
+  "search.filters.applied.f.subjectHU": "Hierarchikus tárgyszó (magyarul)",
+
+  "search.filters.filter.course.head": "Szak",
+
+  "search.filters.filter.course.label": "Keresés szak szerint",
+
+  "search.filters.filter.course.placeholder": "Szak",
+
+  "search.filters.filter.department.head": "Tanszék",
+
+  "search.filters.filter.department.label": "Keresés tanszék szerint",
+
+  "search.filters.filter.department.placeholder": "Tanszék",
+
+  "search.filters.filter.inventorynumber.head": "Azonosító",
+
+  "search.filters.filter.inventorynumber.label": "Keresés azonosító szerint",
+
+  "search.filters.filter.inventorynumber.placeholder": "Azonosító",
+
   "search.filters.filter.subjectDE.head": "Hierarchikus tárgyszó (németül)",
-  "search.filters.filter.subjectDE.placeholder": "Hierarchikus tárgyszó (németül)",
+
   "search.filters.filter.subjectDE.label": "Keresés hierarchikus tárgyszó szerint (németül)",
-  "search.filters.applied.f.subjectDE": "Hierarchikus tárgyszó (németül)",
+
+  "search.filters.filter.subjectDE.placeholder": "Hierarchikus tárgyszó (németül)",
+
+  "search.filters.filter.subjectEN.head": "Hierarchikus tárgyszó (angolul)",
+
+  "search.filters.filter.subjectEN.label": "Keresés hierarchikus tárgyszó szerint (angolul)",
+
+  "search.filters.filter.subjectEN.placeholder": "Hierarchikus tárgyszó (angolul)",
+
+  "search.filters.filter.subjectHU.head": "Hierarchikus tárgyszó (magyarul)",
+
+  "search.filters.filter.subjectHU.label": "Keresés hierarchikus tárgyszó szerint (magyarul)",
+
+  "search.filters.filter.subjectHU.placeholder": "Hierarchikus tárgyszó (magyarul)",
+
+  "vocabulary-treeview.tree.description.hierarchical_subjects_de": "Hierarchikus tárgyszavak (németül)",
+
+  "vocabulary-treeview.tree.description.hierarchical_subjects_en": "Hierarchikus tárgyszavak (angolul)",
+
+  "vocabulary-treeview.tree.description.hierarchical_subjects_hu": "Hierarchikus tárgyszavak (magyarul)",
 }
