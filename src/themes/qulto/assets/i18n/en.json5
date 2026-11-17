@@ -8,11 +8,23 @@
   //    (QREPO-460, QREPO-487). There is no fallback: a missing key shows raw;
   //  - *hierarchical_subjects_*, subjectHU/EN/DE: the Baptud tree browses (QREPO-486).
 
+  "browse.comcol.by.advisordepartment": "By Advisor's Department",
+
+  "browse.comcol.by.course": "By Programme",
+
+  "browse.comcol.by.department": "By Department",
+
   "browse.comcol.by.hierarchical_subjects_de": "By hierarchical subject (German)",
 
   "browse.comcol.by.hierarchical_subjects_en": "By hierarchical subject (English)",
 
   "browse.comcol.by.hierarchical_subjects_hu": "By hierarchical subject (Hungarian)",
+
+  "browse.comcol.by.inventorynumber": "By Identifier",
+
+  "browse.metadata.advisordepartment": "Advisor's department",
+
+  "browse.metadata.advisordepartment.breadcrumbs": "Browse by Advisor's Department",
 
   "browse.metadata.course": "Programme",
 
@@ -136,6 +148,8 @@
 
   "education.level": "Level of study",
 
+  "menu.section.browse_global_by_advisordepartment": "By Advisor's Department",
+
   "menu.section.browse_global_by_course": "By Programme",
 
   "menu.section.browse_global_by_department": "By Department",
@@ -167,6 +181,12 @@
   "search.filters.applied.f.subjectEN": "Hierarchical subject (English)",
 
   "search.filters.applied.f.subjectHU": "Hierarchical subject (Hungarian)",
+
+  "search.filters.filter.advisordepartment.head": "Advisor's department",
+
+  "search.filters.filter.advisordepartment.label": "Search advisor's department",
+
+  "search.filters.filter.advisordepartment.placeholder": "Advisor's department",
 
   "search.filters.filter.course.head": "Programme",
 

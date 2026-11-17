@@ -10,11 +10,23 @@
 
   "access-status.open.access.listelement.badge": "Szabadon hozzáférhető",
 
+  "browse.comcol.by.advisordepartment": "Konzulens tanszéke szerint",
+
+  "browse.comcol.by.course": "Szak szerint",
+
+  "browse.comcol.by.department": "Tanszék szerint",
+
   "browse.comcol.by.hierarchical_subjects_de": "Hierarchikus tárgyszó szerint (németül)",
 
   "browse.comcol.by.hierarchical_subjects_en": "Hierarchikus tárgyszó szerint (angolul)",
 
   "browse.comcol.by.hierarchical_subjects_hu": "Hierarchikus tárgyszó szerint (magyarul)",
+
+  "browse.comcol.by.inventorynumber": "Azonosító szerint",
+
+  "browse.metadata.advisordepartment": "Konzulens tanszéke",
+
+  "browse.metadata.advisordepartment.breadcrumbs": "Böngészés konzulens tanszéke szerint",
 
   "browse.metadata.course": "Szak",
 
@@ -138,6 +150,8 @@
 
   "education.level": "Képzési szint",
 
+  "menu.section.browse_global_by_advisordepartment": "Konzulens tanszéke szerint",
+
   "menu.section.browse_global_by_course": "Szak szerint",
 
   "menu.section.browse_global_by_department": "Tanszék szerint",
@@ -169,6 +183,12 @@
   "search.filters.applied.f.subjectEN": "Hierarchikus tárgyszó (angolul)",
 
   "search.filters.applied.f.subjectHU": "Hierarchikus tárgyszó (magyarul)",
+
+  "search.filters.filter.advisordepartment.head": "Konzulens tanszéke",
+
+  "search.filters.filter.advisordepartment.label": "Keresés konzulens tanszéke szerint",
+
+  "search.filters.filter.advisordepartment.placeholder": "Konzulens tanszéke",
 
   "search.filters.filter.course.head": "Szak",
 
